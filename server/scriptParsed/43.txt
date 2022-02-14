@@ -1,0 +1,134 @@
+- Ever since the keynote my hands smell of chocolate which is a bit difficult now just before lunch.
+Welcome, thank you very much for coming to my talk, Nurturing Constructive Disagreement Agonistic Design with Neurodiverse Children.
+That is a paper by myself and Katta Spiel, Laura Scheepmaker and Irene Pasch.
+I wanna give you a little bit of context first, say a little bit about the project.
+This research is coming out of a project that's called Social Play Technologies, which is a follow-on project to a project that we've done in the past, which was called Outside The Box, in which we designed technology with autistic children, and the premise there was to formulate a little bit of a critique in terms of what kinds of technologies are being designed in this space which almost exclusively kinda target deficits or perceived deficits of autistic children and in Outside The Box we kind of went in and tried to start a process where we could design meaningful technologies with these children without having our own agenda in terms of intervention and it was a three-year project and it was really amazing.
+All kind of different things came out.
+But that was working with individual children and with Social Play Technologies we kind of extended on that and we tried to kind of involve groups of very different children and we were trying to kind of see how could we possibly design with these very diverse groups and develop technology or explore technology that would scaffold their social interaction.
+In particular, we were interested in can we find roles for technology that would scaffold their social play.
+So this, of course, posed a few really interesting new challenges to us.
+In the beginning our processes were tailored towards kind of working with one child and we could really kind of adapt our processes, our methods, to kind of really tap into the interests of that particular child and all of a sudden we had a very diverse group of children that in themselves had group dynamics going on and we had to kind of adapt our methodology.
+We looked at the PD literature and found that, of course, PD was always about involving different stakeholders and it was always, historically at least, about conflict and that maybe in a more pragmatic sense kind of got lost a little bit while nowadays we have a lot of very different stakeholders still, but it's more about finding a consensus and a compromise in what technology would be built.
+Also historically in participatory design you might find that the lines between adversity so to say would be more clearly drawn in terms of there's the employees or their companies and their labor unions and stuff like that.
+So it was much more visible in terms of how, where the conflicts may arise.
+While nowadays if you do PD, you have various stakeholders and you need some time to kind of find out where everybody's coming from and their agendas, their intentions and their ideas about what needs to be built.
+So we thought about this idealistic quest of participatory design, of giving everybody a voice.
+That is all important, but we thought what do you do with that voice and how do you actually then work with these voices, and that is what this paper is about.
+We wanna look closer about very different ideas about what needs to be built and see how we can use this conflict as a resource, not only for the process, but also for the design outcomes.
+So in the literature we found a very interesting, inspiring concept, that was agonistic design and it was first kind of used by Bjergsen and colleagues who have done a really amazing participatory design work in Malmedy, mainly with immigrant groups, NGOs and other stakeholders and we found this really inspiring sentence there in one of their papers, and it's: Design thinking that wants to make a difference cannot ignore the challenge of passionate engagement in controversial design things.
+Note the capital T in design things, which is their way to say that, of course, it's not only the thing that you design, but you design something in its socio-technical context and a lot of social structures, a lot of social infrastructures kind of go alongside the actual object that you are designing.
+They referred to a Belgian political theorist named Chantal Mouffe, who is writing a lot about radical democracy and agonism as a way of re-framing our political discourse, and I find that this is a very interesting and effective way of thinking about politics, which is also what PD processes are.
+They're political arenas.
+Where she writes that essentially it's maybe not so much finding concrete solutions or compromises or consensus within political arenas, but we need to make sure that we have an arena in which we agree the forms of that collaboration and the forms of this agnostic debate and she kind of separates this out between antagonism is like the violent, unwanted fight between two adversaries and in contrast, agonism she defines is something that is still very passionate, everybody's very passionate about their agendas and has their intentions, but you provide a frame within which these agonistic positions can play out in a more constructive way.
+So she argues that in a very pluralistic and diverse society we will never kind of get rid of this agonism and we need to kind of actually look towards kind of creating frames for having these conflicts more productively.
+So with this paper we're trying to make three contributions.
+The first is really this idea, how do you design with groups that have very different ideas about what should be designed? I said earlier Social Play Technology is about finding roles of technologies in social play and the kind of children, the groups of children that we worked with not only have very different needs in terms of play, but also very different conceptions of what successful play might mean in the beginning and we didn't want to kind of impose our own meaning of play on them, but we really wanted to work with that difference.
+So how do you do this? The second contribution is around grounding this question in a series of case studies and analysis of instances of conflict that we had in our processes, and then really kind of tease out what was this conflict about, how did it come about, how could we possibly pick it up and use it as a resource for design.
+Then by the end of the paper we kind of look across these cases and then think, can we learn something about conflict in design more generally and how can you.
+So in terms of the actual process with the children, we worked in two schools in Vienna.
+One of them is a integrative main school where we worked with a smaller group that already existed as a group before we kind of came in.
+You see they have different characteristics, some of them are neurodiverse, some of them are neurotypical.
+It's a very heterogeneous group and we also kinda had a teacher there who participated in the sessions.
+The other school is a special school where the teacher wasn't present during the sessions, but in both cases we conducted 13 workshops.
+It's a kind of really longterm engagement at the beginning of the school year, counting all holidays and other ways in which you can't work.
+It's about every second week.
+So it's a lot of work to kind of do these workshops, prepare them, analyze them and go in again.
+We have videotaped all the sessions and all the researchers who went in kind of kept reflective research diaries and documented all other outcomes like prototypes or design objects that were created during these sessions.
+So we've done this over a year and the theory was that it would roughly follow the same principal as in Outside The Box.
+You would kind of create a good working relationship.
+We'd get to know each other.
+We kind of think about basic interests and characteristics of the children and then we would work towards concepts for play technologies and then we would also involve them in actually making them, and in a separate case, in a following year, then also in evaluating them.
+So in terms of methods, we kind of drew on what we've developed in Outside The Box, which is a concept called (speaking in foreign language) and it kind of has this idea of like creating a space for children in which they can unfold their creative potentials by providing them with freedoms and structures.
+These structures can be of three different kinds.
+Social structures in terms of our own roles or the roles that we give our children.
+Physical structures as in the materials that we bring or mentality/methodological structures in terms of what are the activities that we're actually doing.
+That's become a really very powerful lens for us to kind of plan our sessions and in the past we've kind of really used it very successfully in finding the sweet spot between this overwhelming white page and this over biasing structuring of activities.
+So with groups, of course, that is a lot more difficult and we kind of struggled for a bit to find ways in which that lens would be applicable to groups.
+So we found that we needed to kind of provide very different structures for different children in that group.
+There was almost like different structures on offer and different freedoms on offer for children to kind of draw on and we found that this (speaking in foreign language) in and by itself became a negotiation space.
+Also we kind of needed to kind of build on connecting points session to session and that was also something that we took from Outside The Box, but then found that working with groups you also kinda have to provide different entry points for different children.
+So I just wanna quickly go through some of the conflicts that we've seen in school.
+This is a group in school A, where we kind of, immediately kind of perceived that they were about movement, about music, they had a game going on that where you had to kind of run around stools and when the music kind of shut down, there's one seat less than people.
+You know that game.
+But we want to kind of take this as an interest and see how we could work with this in participatory design and we found some really interesting conflicts that then became resources for design for us.
+So they're more in the paper, but I want to talk about one specific here which was difference between sensory play and strategic play.
+So for some of the children there, they found that stepping onto these pads on the floor would trigger some sort of like musical event or change some characteristic of some sound and they really wanted to know what this pad was doing.
+That was really difficult in a group, we had to be quite strategic and say everybody off the pads and you step onto one pad and it's like, okay what's this doing, this doing.
+So there's an awful lot of coordination going on in the group.
+Other children just wanted to play it as a musical instrument.
+There was just a sensory feel of like I don't really care what it does as long as I'm kind of playing it as an instrument and enjoying the sensations.
+So this was really interesting conflict.
+So we took this and tried to kind of implement that into our first prototypes and we played around with this and it became a central feature of what we actually built.
+This is a picture of the final research prototype that we've done, or research product.
+Where you see one of the pads out there with some LEDs.
+You can step on it, it would tell you roughly where in which direction you would be leaning.
+There are 10 of them and there's a base station with a really bright red button on top of it and as soon as you press that, the mappings are changed.
+This is this idea of kind of taking a conflict that you've seen in the process and then building it into the design and preserving it for the children to actually have that space and have that conflict, have that difference and negotiate how they would actually play.
+I'm gonna show you just quickly two short videos about how that worked out.
+This is a video that was taken just only recently in the evaluation studies.
+The sound is not coming out.
+You don't really need the sound.
+(children speaking in foreign language) Notice how very cheekily one runs over and kind of resets the mechanism, the mappings, and it's really funny 'cause you really see how different children kind of play very differently with this, and how one says like, no we're gonna change the mapping here and one is like no, oh God I still don't know what this pad is doing.
+There's also, this is another short sequence.
+(children speaking in foreign language) Did you hear any of that? I don't know.
+A little bit.
+So this sequence is really interesting because they're starting to kind of invent a new game.
+These little figures, the red and yellow ones, were just there by accident and they started to kind of combine this and they're providing new structures to their play and re-inventing a game on top of that platform.
+This is how we like to think about the technology that we make as a platform for children to kind of develop their play activities.
+We were really happy to kind of see this.
+In the interest of time, this is our second project where we created light spaces.
+Again, we saw a lot of conflicts there where in particular two boys were having quite a bit of a struggle with each other and became relatively aggressive and needed some distance, but also they were also seeking each other out to kind of have this fight and the technology that we designed around this conflict was a set of smart textiles that you could produce, that you could use to kind of build small caves, like little places where you could hide yourself and take yourself out, but then they also had lights with little squeezes attached and you could squeeze a color into that light.
+The problem was, or the intention was, that everybody was squeezing their color into the lights and they were all triggering all the lights.
+So if you squeezed yellow in and somebody else would squeeze blue in, all the lights would go green.
+So there was the need to kind of, again, it would open up this agonistic space for children to negotiate what to do with it and we saw a really amazing use of that because it allowed children to kind of come together while still kind of having a space for their own, they had contact points that allowed them to kind of, or required them, to kind of have this conflict.
+So four takeaways.
+What we found is that if you do participatory design with very diverse groups, allow conflicts to surface and emerge.
+I think our own impulses are sometimes to kind of keep them under the carpet, so to say, so that everybody's happy and everybody's feeling that they're contributing and that might not always be the right thing to do.
+It's a call to resist your, or the designer's, temptation to solve things.
+But rather work with the conflict and then maybe think about how you can use that conflict, not only for the process, which is really enlightening, but also in the outcome.
+Don't solve a conflict, just put it into your design.
+I think that's the main message.
+Of course, not every conflict is there for you to kind of take up and use in your design there.
+Many conflicts that we needed to kind of solve immediately or maybe couldn't work with or was not in our hands at all there's a lot of micro ethical judgements and Katta has written a really excellent paper on these small little judgements in the process and there's no real kind of right thing to do, but there is a lot of implicit and on-the-go judgment that you will need to kind of make these decisions which conflicts to kind of scaffold and use in design and which ones to kind of actually may be regulate in more ways.
+I'll end with that.
+I wanna thank, of course, all the children that participated in that research and continue to participate in that research.
+All the teachers, also the local education department of the city of Vienna, who are supporting us.
+Our funding body is up there and, of course, I wanna thank my incredible team.
+In this case, it was a collaboration of myself, and Katta Spiel, Irene Pasch and Laura Scheepmaker, but since then the team kinda has expanded and it includes Katarina Werner, Johanna Pichilbauer and Kay Kender.
+Also I wanna kinda call our Katta Spiel, she just finished her PhD, defended it in December and she's now looking for new opportunities.
+So you wanna have her.
+If you're in need of a wonderful colleague and a sharp mind, kinda go and talk to her.
+I think she might be persuaded.
+Thank you very much.
+I'm open for questions.
+(audience applauding) - If you've got a question, if you could raise your hand clearly and we will get a microphone to you.
+But just in the meantime.
+Oh we've got a question down at the front here.
+(faint speaking) If not you can use mine.
+- Hi, is this working? - Hi.
+- [Julie] Julie Keans, University of Washington.
+Really great talk.
+I was curious if you have a sense how much training would be required of design facilitators who wanted to run sessions? - Sorry, say that, how much will? - [Julie] How much training would be required for design facilitators who may be are designers, but not special education teachers to be able to facilitate those sessions.
+'Cause I can imagine that knowing which conflicts are okay to let go and which ones could be problematic or safety risks or could escalate and so I'm just wondering about this balance between trying to identify what training needs to help for design facilitators.
+- That's a really interesting question.
+I think since this is our second project we've kind of become seasoned in what we're doing and we have our ways in what we're doing and we have run so many workshops that obviously you kind of underestimate the experience that mainly my team has to go in in these situations, but in the beginning we also kind of received some training by special needs educators and just got basic kind of skills.
+We're trained in basic skills to kind of recognize meltdowns, for example, or know what to do or what not to do in these cases So we also made a conscious choice to always work in schools and not at anyone's home or in other contexts and that is one of the reasons is is that we have teachers that we can actually lean on when things go amiss.
+In one case the teacher was actually part of the group, but in the other case, the teacher was just next door.
+So if we felt that something was getting out of hand, we could always, we never really needed it, but it gives you some confidence.
+But I would also say, the experience here certainly is key.
+We have some turnover in our team and it was great to see how people who haven't done that before kinda walked in with other people and kind of leaned on their experience and it was almost like an apprentice model.
+So you need to get used to that idea to work with conflicts.
+I think the more insecure you are about your own role, the more you're kind of falling into that pattern of solving something immediately.
+Keep it down.
+It's like everybody calm.
+So that's difficult, yeah.
+- [Man] One more quick question? - [Linda] Hi, I'm Linda Schazaomi from the University of Washington, and my question is for the agonism design, do you think you can insert conflict that may be is something that you wanna explore rather than waiting to see the conflict emerge from the participants? - You mean whether you would want to be actively provocative? - [Linda] And it's not to create conflict amongst the participants, but that to introduce may be a societal barrier that the participants might be encountering in the outside world.
+- Yeah, in the paper we have a few other conflicts that we identified between us and them and the process and the children.
+Obviously, we're there too.
+We have a certain agenda, although we're trying to kinda of keep that as small as possible, but we're there.
+We were academics, we wanna do research.
+We had a certain idea about the kind of social play technology that we wanna build and children had other ideas.
+So these are certainly conflicts that you need to kind of work with too.
+In our experience there was no shortage of conflict.
+It was more like picking the ones that you could work with.
+- [Man] We're gonna wrap things up there.

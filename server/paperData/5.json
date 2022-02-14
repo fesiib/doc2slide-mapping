@@ -1,0 +1,1249 @@
+{
+  "abstractText": {
+    "page": 0,
+    "region": {
+      "x1": 53.79800033569336,
+      "x2": 295.73883056640625,
+      "y1": 432.8778076171875,
+      "y2": 573.7999877929688
+    },
+    "text": "ABSTRACT Centuries of development in optics have given us passive devices (i.e. lenses, mirrors and filters) to enrich audience immersivity with light effects, but there is nothing similar for sound. Beam-forming in concert halls and outdoor gigs still requires a large number of speakers, while headphones are still the state-of-the-art for personalized audio immersivity in VR. In this work, we show how 3D printed acoustic metasurfaces, assembled into the equivalent of optical systems, may offer a different solution. We demonstrate how to build them and how to use simple design tools, like the thin-lens equation, also for sound. We present some key"
+  },
+  "figures": [{
+    "caption": "Figure 3: Simulated focal lenghts for a 10 × 10 unit cells, 104 mm Type B lens used at 5.6 kHz (j = 2), as a function of the lens curvatureA. Focal lenghts are reported as a distance from the center of the lens. For each value of the curvature, COMSOL simulationswere used to predict the resulting field with an input plane wave at normal incidence. The graph also reports the measured focal lenghts of the two Type B lenses we realised for this study (see below).",
+    "captionBoundary": {
+      "x1": 53.44898986816406,
+      "x2": 295.1268615722656,
+      "y1": 248.43838500976562,
+      "y2": 330.7899169921875
+    },
+    "figType": "Figure",
+    "imageText": [],
+    "name": "3",
+    "page": 5,
+    "regionBoundary": {
+      "x1": 81.0,
+      "x2": 267.0,
+      "y1": 92.0,
+      "y2": 235.0
+    }
+  }, {
+    "caption": "Figure 8: Acoustic telescope configuration, using two converging lenses of the same focal length: (a) side view and (b) a potential application, connecting acoustically with a single person in a crowd. Front view in Figure 1.",
+    "captionBoundary": {
+      "x1": 53.7979736328125,
+      "x2": 558.1802978515625,
+      "y1": 273.2784118652344,
+      "y2": 289.87701416015625
+    },
+    "figType": "Figure",
+    "imageText": ["(a)", "(b)"],
+    "name": "8",
+    "page": 10,
+    "regionBoundary": {
+      "x1": 69.0,
+      "x2": 543.0,
+      "y1": 102.0,
+      "y2": 256.0040283203125
+    }
+  }, {
+    "caption": "Figure 4: Measurements for testing the thin-lens equation: (a) outdoor set-up for positioning themicrophone at fixed distances from the loudspeaker; (b) results for two different lenses,comparing fsim (directly obtained from COMSOL simulations) with fmis (obtained by fitting measurements with (3)). Reporting the results in terms of 1/p and 1/q allows to obtain the focal length from a linear fit (from equation (3)).",
+    "captionBoundary": {
+      "x1": 53.798004150390625,
+      "x2": 558.199462890625,
+      "y1": 300.525390625,
+      "y2": 339.0419921875
+    },
+    "figType": "Figure",
+    "imageText": ["(a)", "(b)"],
+    "name": "4",
+    "page": 6,
+    "regionBoundary": {
+      "x1": 96.0,
+      "x2": 516.0,
+      "y1": 102.0,
+      "y2": 283.2510070800781
+    }
+  }, {
+    "caption": "Figure 5: Results for the telescope configuration: dependence of the back focal length on the mustual distance between the lenses (COMSOL simulations for two Type B lenses (f = 53 mm).",
+    "captionBoundary": {
+      "x1": 53.79800033569336,
+      "x2": 295.63787841796875,
+      "y1": 519.4754028320312,
+      "y2": 557.9920043945312
+    },
+    "figType": "Figure",
+    "imageText": [],
+    "name": "5",
+    "page": 6,
+    "regionBoundary": {
+      "x1": 74.0,
+      "x2": 274.0,
+      "y1": 357.0,
+      "y2": 506.0
+    }
+  }, {
+    "caption": "Figure 6: Effect of a collimator on the emission from a computer speaker, when a lens is positioned at the focal length from it: (a) intensity at different distances and (b) angular emission at 4.24m from the speaker. Also reported are two conceptual drawing detailing the use of a collimator (c) in an auditorium and (d) to correct the emission of two speakers mounted back to back, to cover holes in their emission.",
+    "captionBoundary": {
+      "x1": 53.798004150390625,
+      "x2": 558.4585571289062,
+      "y1": 443.7483825683594,
+      "y2": 482.26495361328125
+    },
+    "figType": "Figure",
+    "imageText": ["(c)", "(d)", "(a)", "(b)"],
+    "name": "6",
+    "page": 7,
+    "regionBoundary": {
+      "x1": 102.0,
+      "x2": 510.0,
+      "y1": 102.0,
+      "y2": 426.4739990234375
+    }
+  }, {
+    "caption": "Figure 7: Applications of a single metamaterial lens: (a) our realisation of the device, using a low-cost speaker; (b) an acoustic lens creating acoustic objects for end-users; (c) an acoustic lens used to extend the range of mid-air haptics; (d) an acoustic lens used to increase sensitivity to certain parts of a machinery; (e) two equally-sized screws separated by 100 mm and observed two different types of optical lenses.",
+    "captionBoundary": {
+      "x1": 53.798004150390625,
+      "x2": 558.1804809570312,
+      "y1": 433.5743713378906,
+      "y2": 472.0909423828125
+    },
+    "figType": "Figure",
+    "imageText": ["(c)", "(d)", "(e)", "(a)", "(b)"],
+    "name": "7",
+    "page": 8,
+    "regionBoundary": {
+      "x1": 68.0,
+      "x2": 544.0,
+      "y1": 102.0,
+      "y2": 416.29998779296875
+    }
+  }, {
+    "caption": "Figure 2: Key moments of the design process used in this work: (a) comparison of two different phase profiles, with A1 < A2, highlighting how the unit cells encode the phase distribution φ(x,y) (each color corresponds to a different phase); (b) COMSOL simulation for the transmission of unit cell #15 from [35], scaled so that its base is 10.4 mm, highlighting the resonances described by equation (2); (c) working principle of a Type B unit cell, highlighting the delay the input wave experiences in its presence (COMSOL simulation at 5.6 kHz, base size 10.4 mm); .",
+    "captionBoundary": {
+      "x1": 53.79791259765625,
+      "x2": 559.2955932617188,
+      "y1": 284.6163635253906,
+      "y2": 334.0919189453125
+    },
+    "figType": "Figure",
+    "imageText": ["(a)", "(b)", "(c)"],
+    "name": "2",
+    "page": 4,
+    "regionBoundary": {
+      "x1": 79.0,
+      "x2": 528.0,
+      "y1": 102.0,
+      "y2": 267.34197998046875
+    }
+  }],
+  "sections": [{
+    "paragraphs": [{
+      "page": 0,
+      "region": {
+        "x1": 53.24800109863281,
+        "x2": 294.192626953125,
+        "y1": 595.5426025390625,
+        "y2": 712.3289794921875
+      },
+      "text": "Permission to make digital or hard copies of all or part of this work for personal or classroom use is granted without fee provided that copies are not made or distributed for profit or commercial advantage and that copies bear this notice and the full citation on the first page. Copyrights for components of this work owned by others than ACMmust be honored. Abstracting with credit is permitted. To copy otherwise, or republish, to post on servers or to redistribute to lists, requires prior specific permission and/or a fee. Request permissions from permissions@acm.org. CHI 2019, May 4–9, 2019, Glasgow, Scotland Uk © 2019 Association for Computing Machinery. ACM ISBN 978-1-4503-5970-2/19/05. . . $15.00 https://doi.org/10.1145/3290605.3300713"
+    }, {
+      "page": 0,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 559.898681640625,
+        "y1": 432.79815673828125,
+        "y2": 511.0350036621094
+      },
+      "text": "acoustic devices, like a “collimator”, to transform a standard computer speaker into an acoustic “spotlight”; and a “magnifying glass”, to create sound sources coming from distinct locations than the speaker itself. Finally, we demonstrate an acoustic varifocal lens, discussing applications equivalent to auto-focus cameras and VR headsets and the limitations of the technology."
+    }]
+  }, {
+    "paragraphs": [{
+      "page": 0,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 558.8334350585938,
+        "y1": 540.6011352539062,
+        "y2": 582.9719848632812
+      },
+      "text": "• Human-centered computing→ Sound-based input / output; Laboratory experiments; •Hardware→ Emerging technologies; Emerging tools and methodologies; Emerging interfaces; • Applied computing→ Physics."
+    }],
+    "title": {
+      "page": 0,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 392.6675109863281,
+        "y1": 525.73681640625,
+        "y2": 532.1629638671875
+      },
+      "text": "CCS CONCEPTS"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 0,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 559.309326171875,
+        "y1": 612.5381469726562,
+        "y2": 630.9990234375
+      },
+      "text": "Metamaterials, Microstructures, Fabrication, Spatial Audio, 3D Printing."
+    }],
+    "title": {
+      "page": 0,
+      "region": {
+        "x1": 317.95501708984375,
+        "x2": 375.5511169433594,
+        "y1": 597.673828125,
+        "y2": 604.0999755859375
+      },
+      "text": "KEYWORDS"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 0,
+      "region": {
+        "x1": 317.6409912109375,
+        "x2": 559.2548828125,
+        "y1": 651.67919921875,
+        "y2": 712.3289794921875
+      },
+      "text": "Gianluca Memoli, Letizia Chisari, Jonathan P. Eccles, Mihai Caleap, BruceW. Drinkwater, and Sriram Subramanian. 2019. VARI-SOUND: A Varifocal Lens for Sound. In CHI Conference on Human Factors in Computing Systems Proceedings (CHI 2019), May 4–9, 2019, Glasgow, Scotland Uk. ACM, New York, NY, USA, 14 pages. https: //doi.org/10.1145/3290605.3300713"
+    }, {
+      "page": 0,
+      "region": {
+        "x1": 54.0,
+        "x2": 558.0009765625,
+        "y1": 750.914794921875,
+        "y2": 756.7197875976562
+      },
+      "text": "Paper 483 Page 1"
+    }],
+    "title": {
+      "page": 0,
+      "region": {
+        "x1": 317.62298583984375,
+        "x2": 415.4867858886719,
+        "y1": 640.9354248046875,
+        "y2": 646.5750122070312
+      },
+      "text": "ACM Reference Format:"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 1,
+      "region": {
+        "x1": 53.43000030517578,
+        "x2": 295.74072265625,
+        "y1": 111.05318450927734,
+        "y2": 595.7659912109375
+      },
+      "text": "The shaping of acoustic fields is a major technological advance which underpins high-fidelity sound reproduction [60], tactile feedback in consumer electronic devices [6], particle manipulation [10], non-destructive testing [24] and noninvasive therapies (e.g. for essential tremor [43] and cancer [65]). Traditionally, this is achieved by controlling the intensity or the phase of the generating source through phased arrays [36, 57, 58]. Phased arrays offer real-time control of sound, but are often bulky and expensive, with cost and complexity scaling with the number of channels [37]. Despite these limitations, phased arrays are in widespread use. In the human-computer interaction (HCI) community, in particular, they have paved the path towards applications like acoustic levitation [23, 33, 39] and mid-air haptics [6]. The way we manage light, however, is different: in theatres, videogames and virtual reality (VR) audience’s immersivity can easily be augmented by using passive devices, like lenses and filters. When the properties of lenses and filters can be changed on demand, we get devices like autofocus cameras, liquid crystal displays and VR headsets. This is still not possible for sound: arrays of speakers are used for applications like surround sound because acoustic lenses [23] are bulky, with a physical size far thicker than the wavelength (i.e. which is ∼35 cm at 1 kHz, the peak frequency for human hearing perception). This technological difference could explain in part the prevalence of visual (optical) technologies over acoustic ones in our modern, space-hungry world. Acoustic metamaterials may offer a way forward [11, 31]. These are normal materials (i.e. glass, wood, 3D printer plastic), but engineered to control, direct, and manipulate waves in uncommon ways. However, their use in HCI is currently impeded by three key limitations: acoustic metamaterial devices are thick (e.g. one wavelength in [27, 28, 35, 41, 59, 66]), static and often operate over a limited frequency range (e.g. 10% of the central frequency in [35]). In this work, we propose a method to design metasurfaces that behave like converging lenses for sound. We address two of the limitations mentioned above, showing how these lenses can be fabricated to be as thin as 1/3rd of their wavelength of operation and how they can be combined in user-controllable devices that can be mechanically adjusted."
+    }, {
+      "page": 1,
+      "region": {
+        "x1": 53.429779052734375,
+        "x2": 295.7386474609375,
+        "y1": 601.2151489257812,
+        "y2": 703.3619995117188
+      },
+      "text": "In particular, having demonstrated that some design tools commonly used in optics are also valid in acoustics when using metasurfaces, we build the acoustic equivalent of some key optical devices (i.e., a collimator, a magnifying glass, a telescope and a vari-focal lens) and test them at 5-6 kHz, where each lens is 2 cm thick. We discuss real-life applications based on these devices, how to overcome their remaining limitations (e.g. bandwidth) and the potential ways to use them in innovative, sound-based interfaces. We want"
+    }, {
+      "page": 1,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 558.213623046875,
+        "y1": 96.1091537475586,
+        "y2": 138.48101806640625
+      },
+      "text": "to share with the HCI community how we believe acoustic metamaterials may revolutionize the way we think, design and experience sound, hoping to excite others into using them."
+    }],
+    "title": {
+      "page": 1,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 146.90223693847656,
+        "y1": 96.18885803222656,
+        "y2": 102.614990234375
+      },
+      "text": "1 INTRODUCTION"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 1,
+      "region": {
+        "x1": 333.427001953125,
+        "x2": 559.898193359375,
+        "y1": 163.60220336914062,
+        "y2": 278.510986328125
+      },
+      "text": "• We show how to design metamaterial lenses for sound that are sufficiently small to be of practical use for the HCI community (Figure 1a). • Coupling our acoustic lenses with a generic speaker, we demonstrate and test devices equivalent to optical ones i.e. magnifying glasses, telescopes, lighthouses. . . for sound (Figure 1b). • We design and test the first dynamic metamaterial device: the equivalent of a zoom objective - i.e. a varifocal lens, but for sound (Figure 1c)."
+    }],
+    "title": {
+      "page": 1,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 390.31622314453125,
+        "y1": 150.941162109375,
+        "y2": 156.635009765625
+      },
+      "text": "Our contributions."
+    }
+  }, {
+    "paragraphs": [{
+      "page": 1,
+      "region": {
+        "x1": 317.5870056152344,
+        "x2": 559.898681640625,
+        "y1": 323.0361633300781,
+        "y2": 568.64501953125
+      },
+      "text": "The design of rooms and public spaces has a binary approach to acoustics: in a cinema or a concert hall there is either the same sound for everyone or none. In practice, current sound design does not have a personal component, without headphones. Light, however, is managed differently: a theatre director or an architect can populate a scene with focused or diffused light, a spotlight that follows a character, alternation of light and shadows. Light engineers can create experiences targeted to different users with light, either by shaping light beams through passive devices (e.g. lenses, holographic filters) or by direct beamforming (e.g. spatial light modulators). Acoustics, however, is catching up: the quests for 3D spatial audio (which creates the illusion of localised sources for the audience) and localised audio (which uses highly directional sources to deliver different sounds to parts of the audience) are moving our everyday lives towards localised, high quality audio messages beyond headphones. A world like the one imagined by Philip K. Dick in “Minority Report” (later a movie directed by Steven Spielberg), where the main character received personalised, directional audio adverts while walking in the street, does not seem so far away."
+    }],
+    "title": {
+      "page": 1,
+      "region": {
+        "x1": 317.95501708984375,
+        "x2": 417.35589599609375,
+        "y1": 293.22784423828125,
+        "y2": 314.5979919433594
+      },
+      "text": "2 RELATEDWORKS Designing for sound"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 1,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 559.8978881835938,
+        "y1": 598.2261352539062,
+        "y2": 712.3289794921875
+      },
+      "text": "Sound is all around us, with no direction having precedence over the others, but acoustic cues have a profound directional nature. This is evident, for instance, with the sound of a car approaching from behind. Digital content, conversely, is broadcasted from sources (either headphones of loudspeakers) which have a fixed position relative to the audience. “Spatial sound” is a method of filling this need-gap [49]: playing with piloted delays and intensity differences in the real sources, this technique gives to a specific audience the illusion that sounds come from different locations around."
+    }, {
+      "page": 1,
+      "region": {
+        "x1": 54.0,
+        "x2": 558.0009765625,
+        "y1": 750.914794921875,
+        "y2": 756.7197875976562
+      },
+      "text": "Paper 483 Page 2"
+    }, {
+      "page": 2,
+      "region": {
+        "x1": 52.672000885009766,
+        "x2": 295.74285888671875,
+        "y1": 96.1091537475586,
+        "y2": 449.31500244140625
+      },
+      "text": "Using spatial sound techniques, creative designers can now populate scenes with numerous virtual sources, each with its own location and attributes , relying on their position (relative to the audience) for narrative (e.g. the movie “Pearl” [12]) and immersive purposes [63]. They can design soundscapes using object-oriented toolkits, commonly found in packages like Unity 3D (e.g. Season Traveller [47]) or Unreal. The first method of delivering spatial sound is through headphones. The main advantage here is that the sound can be adjusted to move with the listener, which is ideal for sound-based navigation systems (e.g. gpsTunes [54] and SWAN [15]) and one-to-one interactions with learners (e.g. AudioChile [50]) or visually-impaired listeners [55]. The user, however, needs to be completely removed from the real space, with interactions (e.g. comments among co-workers attending the same VR meeting) only possible in the virtual world. The second method, based on deploying arrays of speakers where needed, is at the basis of the surround sound systems in cinemas and home theatres (e.g. Dolby Digital, Sony SDDS). These applications marry with the room in creating the audio experience, which can affect multiple users, but the “surround” effect is restricted to a narrow listening area (i.e. a “sweet spot”) and sometimes does not provide for up-down cues [1]. This is not sufficient for audio-visual VR [21]. A way forward is offered by Wave Field Synthesis [2], which aims at local reproduction of “virtual sources” near the listener using speakers in a linear array (e.g. modern soundbars). This method leads to better immersivity (as it reacts to where the listener is), but the finite distance between the speakers and their physical size introduce effects of spatial aliasing."
+    }],
+    "title": {
+      "page": 1,
+      "region": {
+        "x1": 317.95501708984375,
+        "x2": 379.1876220703125,
+        "y1": 583.3618774414062,
+        "y2": 589.7880249023438
+      },
+      "text": "Spatial sound"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 2,
+      "region": {
+        "x1": 53.45000076293945,
+        "x2": 295.7410888671875,
+        "y1": 478.6751708984375,
+        "y2": 712.3289794921875
+      },
+      "text": "An alternative towards personalised multi-user audio experiences, which minimises spatial aliasing, comes from directional speakers [3]. Directional speakers have been used in HCI for multi-sensorial art displays (e.g. Tate Sensorium [38]) or to send audio messages to a specific individual or region of space (e.g. Holographic Whisper [40] or Project Telepathy [5]). Themost common type (e.g. Acouspade, SoundLazer) exploits an array of ultrasonic transducers to produce a highly directional carrier wave, which is then modulated with audible signals [13]. Other speakers (i.e. Holosonics) produce the ultrasonic beam through a vibrating plate. All these speakers exploit the nonlinear effects of air to produce audible sounds [45] and can be used as audio spotlights [62], but steering the beam requires physically moving the speaker. Audio spotlights are not low-cost technology (costs are typically around 2,000 USD for a decent-sized system) and come with a main limitation i.e. the bandwidth of the sound they can transmit. This is typically ∼10-20% of the driving ultrasonic frequency of operation – e.g. 4 kHz for a parametric speaker operating at 40 kHz - and typically lacks the"
+    }, {
+      "page": 2,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 559.8978271484375,
+        "y1": 96.1091537475586,
+        "y2": 162.3909912109375
+      },
+      "text": "low-frequency components: it is therefore sufficient to pass public announcements and badly reproduced music [22], but not high-quality sounds. Furthermore, as most applications involving phase control of multiple speakers, audio spotlights are prone to thermal losses and therefore have a poor response to high sound volume."
+    }],
+    "title": {
+      "page": 2,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 134.91676330566406,
+        "y1": 463.81085205078125,
+        "y2": 470.23699951171875
+      },
+      "text": "Directional sound"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 2,
+      "region": {
+        "x1": 317.6059875488281,
+        "x2": 559.8905029296875,
+        "y1": 192.30616760253906,
+        "y2": 354.22900390625
+      },
+      "text": "Acoustic lenses appeared for the first time in 1930s, as a by-product of the Bell labs. They used to be inserted in loudspeakers to spread their high-frequency directional emission, but gradually fell out of favor through the 1970s and 1980s. Lens designs at the time were in fact fragile and cumbersome i.e. an accident-waiting-to-happen for the music industry, always on the move. Today, however, the technology is reemerging: acoustic lenses can be found to help beam-shaping in ultrasonic transducers and in some high-end home audio systems (e.g. Bang &Olufsen). These lenses, however, are still designed to be much larger than the wavelength (i.e. 1 metre at 340 Hz): their use is therefore confined to the higher part of the acoustic spectrum. More compact solutions, usable at lower frequencies, are highly desirable."
+    }],
+    "title": {
+      "page": 2,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 386.5303955078125,
+        "y1": 177.4418487548828,
+        "y2": 183.86798095703125
+      },
+      "text": "Acoustic lenses"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 2,
+      "region": {
+        "x1": 317.5870056152344,
+        "x2": 559.8988647460938,
+        "y1": 384.1441650390625,
+        "y2": 712.3289794921875
+      },
+      "text": "Acoustic metamaterials [11, 31] are normal materials (i.e. made of glass, wood, paper, plastic, LEGO bricks), but with an internal structure engineered to control, direct, and manipulate waves in uncommon ways [16, 17, 35, 41]. They are made of a collection of sub-wavelength structures (i.e. “unit cells”), each capable of locally manipulating the impinging wave in terms of its phase and/or intensity [11, 35]. There are many unit cell designs in the literature, either based on labyrinthine structures [59], helical structures [66], space-coiling [27, 28], multi-slits [34], or Helmholtz resonators. Selecting the right one depends on design constraints, like the available space to deploy them, the manufacturing techniques and the desired frequency response. This is because most unit cells typically operate over a small bandwidth1 ∆f2dB on both sides of their design frequency f0 (with ∆f2dB ≤ 0.2f0). In addition, unit cells’ dimensions increase as f0 gets lower, with thicknesses2 as large as ∼ 1 m at 340 Hz. Of these two limitations, we believe size to be the most crucial for the HCI community. Narrow-band devices, in fact, are sufficient for many applications. In audio reproduction, for instance, it is normal to cascade speakers optimised for different frequency ranges to cover the audible spectrum, even if well known songs 1The bandwidth is here defined as the frequency range ∆f2dB over which the impinging sound loses no more than 2 dB going through the metamaterial (i.e. transmission ≥ 80 %). 2Here and in the following, “thickness” is the dimension of the unit cell along the direction of propagation of the sound."
+    }, {
+      "page": 2,
+      "region": {
+        "x1": 54.0,
+        "x2": 558.0009765625,
+        "y1": 750.914794921875,
+        "y2": 756.7197875976562
+      },
+      "text": "Paper 483 Page 3"
+    }, {
+      "page": 3,
+      "region": {
+        "x1": 53.430442810058594,
+        "x2": 295.74176025390625,
+        "y1": 94.249755859375,
+        "y2": 329.76300048828125
+      },
+      "text": "like “Nessun dorma” often span little more than 1 octave3. In buildings and factories, with human hearing perception peaked at 1-2 kHz, controlling the delivery of one octave may be sufficient to quench annoyance due to an air conditioning unit or to deliver personalised alarm messages. Furthermore, the literature already presents acoustic metamaterials with larger bandwidths [20, 26, 29, 52], obtained combining unit cells of different sizes. Li et al. [26], for instance, used basic 3D-printed cuboids as unit cells (i.e. Acoustic Voxels), scaled and joined to create wind instruments spanning ∼2 octaves. Additional solutions will be discussed in section 6. Unit cells are then assembled into larger 3D structures, with a bottom-up “metamaterial design” concept recently used to create mechanical actuators (i.e. Metamaterial Devices [16, 17]) and user-controllable 3D-printed structures (e.g. Coded Skeleton [18]). Particularly interesting for beamshaping applications is the case of metasurfaces: closelypacked structures of phase shifters whose thickness is smaller than or comparable to the wavelength of operation and can therefore considered to be 2D [25, 56, 64]."
+    }, {
+      "page": 3,
+      "region": {
+        "x1": 53.499000549316406,
+        "x2": 295.73834228515625,
+        "y1": 335.2131652832031,
+        "y2": 497.135986328125
+      },
+      "text": "Once a metamaterial device is designed, however, its function is fixed, while speaker arrays can change on demand. This is another key limitation for HCI applications, which has been addressed so far using hybrid systems (devices where phased arrays are used to manipulate shapes created using metasurfaces [37]) or motorised belts (to position metasurfaces in front of a directional speaker and steer its emission [19]). Both these solutions, however, rely on a phased array to begin with. Different dynamical metamaterials have been proposed (e.g. [7, 46]), with some solutions as large as a room [30], but none has the simplicity of a system of lenses. Here, we demonstrate a method to design compact acoustic devices, inspired by optics, that can be used with standard, low cost, computer-sized audio speakers."
+    }],
+    "title": {
+      "page": 2,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 423.9314880371094,
+        "y1": 369.27984619140625,
+        "y2": 375.70599365234375
+      },
+      "text": "Acoustic metamaterials"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 3,
+      "region": {
+        "x1": 53.499000549316406,
+        "x2": 295.7414245605469,
+        "y1": 530.4671630859375,
+        "y2": 644.5689697265625
+      },
+      "text": "There are four key steps in designing a metasurface: 1) choosing its function (i.e. what it does to the input field); 2) transforming this information into an analogic phase/ intensity distribution on the metasurface (Figure 2a); 3) selecting the unit cells to use; 4) fabricate the metasurface, taking into account constraints in terms of space and frequency response (Figure 2b). In this section, we show how to design acoustic metasurfaces to be used in transmission. Some of our more general considerations, however, apply also to reflecting metasurfaces and other types of waves [8, 9, 14]."
+    }, {
+      "page": 3,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 294.1933898925781,
+        "y1": 675.514404296875,
+        "y2": 713.5239868164062
+      },
+      "text": "3To visualise the frequency response ∆f2dB of a metamaterial, the reader should keep inmind the 12 keys on a piano keyboard that form an octave. For reference, a typical piano has 7 octaves and a minor third, from A0 = 27.5 Hz toC8 = 4186 Hz, while most human voices span a maximum of 3 octaves."
+    }, {
+      "page": 3,
+      "region": {
+        "x1": 317.5870056152344,
+        "x2": 558.5848388671875,
+        "y1": 96.18885803222656,
+        "y2": 249.06597900390625
+      },
+      "text": "Steps 1 & 2: From the desired field to a phase distribution Assigning a function to a metasurface means deciding how the distribution of the acoustic pressure will look like after passing through it, both in terms of geometry and of intensity distribution. Li et al. [28] suggest to address this step as a problem of acoustic ray tracing [51]: the desired far-away field gets back-propagated to the metasurface itself, thus giving a required phase/intensity distribution at its exit. This will be the phase/intensity distribution to be encoded by the unit cells on the input wave. More details on this step for a generic field have been given elsewhere [37], so in this work we will only discuss the case of a converging lens."
+    }, {
+      "page": 3,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 558.2114868164062,
+        "y1": 254.51515197753906,
+        "y2": 344.7070007324219
+      },
+      "text": "A converging lens is characterised by two quantities: its focal length and its physical extension (i.e. how many unit cells it contains). Once the desired focal length f is set along the axis of the lens (ẑ), the phase distribution φ(x,y) on the metasurface (assumed to be in the z = 0 plane) is obtained by imposing that all the contributions from the unit cells arrive in phase at (0, 0, f ). In this work, we choose to design our lenses using a parabolic phase profile [42]:"
+    }, {
+      "page": 3,
+      "region": {
+        "x1": 390.66998291015625,
+        "x2": 558.2017822265625,
+        "y1": 357.052734375,
+        "y2": 367.4110107421875
+      },
+      "text": "φ(r ) = φ0 −A2(x2 + y2) (1)"
+    }, {
+      "page": 3,
+      "region": {
+        "x1": 317.5870056152344,
+        "x2": 559.7442016601562,
+        "y1": 379.8121643066406,
+        "y2": 458.8559875488281
+      },
+      "text": "where φ(x,y) is local phase (assigned to a unit cell), A is a constant (related to the local curvature of the phase profile), λ0 is the design wavelength and φ0 is an arbitrary constant. In optics, this choice leads to more compact lenses (i.e. GRIN lenses [61]) and, as shown in Figures 2a and 3, allows the parameter A to be easily related to the “curvature” of the lens: a larger value of A corresponds to a more focusing lens."
+    }, {
+      "page": 3,
+      "region": {
+        "x1": 317.605712890625,
+        "x2": 559.742919921875,
+        "y1": 475.7658386230469,
+        "y2": 712.3289794921875
+      },
+      "text": "Step 3: Unit cell selection Once φ(x,y) is known, the designer has to choose the unit cells to implement it. As mentioned above, many designs are available in the literature, but all of them have one point in common: the smaller the frequency, the larger is the cell. The same applies to the 16 unit cell designs proposed by Memoli et al. [35]: rectangular cuboids, ∼ 4.3× 4.3× 8.6 mm in size, designed to have maximum transmission (∼97% of the input sound) at f0 ±∆f2dB = 40± 1 kHz. A simple way to use these designs at a different frequency f̄ is to scale each cuboid until its thickness is equal to the new wavelength λ̄ = c0/ f̄ (where c0 ∼ 343 m/s is the speed of sound in air). At the new frequency, each of the 16 scaled unit cells will encode the same phase delay (between 0 and 2π ) and have the same transmission and bandwidth they had at f0. With this method, Jackowski-Ashley et al. [19] manipulated the emission of a parametric speaker operating at 64 kHz. The cell design in [35], however, offers a possibility not fully explored by the authors: a cuboid designed for f0 also has the same transmission at other frequencies (see Figure"
+    }, {
+      "page": 3,
+      "region": {
+        "x1": 54.0,
+        "x2": 558.0009765625,
+        "y1": 750.914794921875,
+        "y2": 756.7197875976562
+      },
+      "text": "Paper 483 Page 4"
+    }, {
+      "page": 4,
+      "region": {
+        "x1": 53.79791259765625,
+        "x2": 213.91331481933594,
+        "y1": 355.78009033203125,
+        "y2": 362.2859191894531
+      },
+      "text": "2b). These frequencies will be given by:"
+    }, {
+      "page": 4,
+      "region": {
+        "x1": 134.8559112548828,
+        "x2": 294.04461669921875,
+        "y1": 374.9330749511719,
+        "y2": 383.8589172363281
+      },
+      "text": "fj = f0 − j · c0/Lef f (2)"
+    }, {
+      "page": 4,
+      "region": {
+        "x1": 53.429901123046875,
+        "x2": 295.7384033203125,
+        "y1": 394.8940734863281,
+        "y2": 498.32501220703125
+      },
+      "text": "where j = 0, 1, 2 · · ·N are integers, Lef f is a design parameter of the specific unit cell4 and N = round(Lef f /λ0) is the (integer) number of times Lef f contains the wavelength. It is therefore possible to operate the unit cells at one of the frequencies fj (see Figure 2c), maintaining a similar transmission to the one in f0, but considering that the phase encoded at fj is different from the one at f0: a look-up table is necessary. In particular, our simulations show that the maximum phase these sub-resonant structures can achieve is 2π/2j ."
+    }, {
+      "page": 4,
+      "region": {
+        "x1": 53.79798889160156,
+        "x2": 295.7420654296875,
+        "y1": 514.639892578125,
+        "y2": 595.7860107421875
+      },
+      "text": "Step 4: Lens fabrication In this work, we operate at f0 = 5, 600 Hz (i.e. a frequency close to F8, with a wavelength of ∼6 cm). We selected this frequency due to restrictions in our manufacturing capabilities (i.e. it was the largest size that could be made on our 3D-printer) but, since everything can be scaled, this choice does not limit the conclusions. We use two type of lenses:"
+    }, {
+      "page": 4,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 294.0552978515625,
+        "y1": 609.0321044921875,
+        "y2": 676.8989868164062
+      },
+      "text": "Type A lenses. Obtained by scaling the unit cells fromMemoli et al. [35], so that their first resonance (j = 0) is 5.6 kHz and the thickness is equivalent to λ0 (i.e. 60 mm). Each of this lenses is made by a 8×8 array of unit cells and is 240×240×60 mm in size (see Figure 1a, left). Their bandwidth is the same as in [35] i.e. 2 · ∆f2dB ∼ 0.05 · f0 or 2 piano keys."
+    }, {
+      "page": 4,
+      "region": {
+        "x1": 53.65599822998047,
+        "x2": 294.0459899902344,
+        "y1": 694.4284057617188,
+        "y2": 712.3289794921875
+      },
+      "text": "4Related to the length of the maze-like structure, Lef f sets by how much the sound is delayed going through the cell [31]"
+    }, {
+      "page": 4,
+      "region": {
+        "x1": 317.656005859375,
+        "x2": 558.2117919921875,
+        "y1": 355.7801818847656,
+        "y2": 411.6009826660156
+      },
+      "text": "Type B lenses. Obtained by scaling the unit cells fromMemoli et al. [35], so that their second resonance - i.e. f2 in equation (2) - is equal to 5,600 Hz. Each of this lenses is made by 10×10 array of unit cells and is 104 × 104 mm in size and 20.8 mm (i.e. ∼ λ0/3) in thickness (see Figure 1a, right)."
+    }, {
+      "page": 4,
+      "region": {
+        "x1": 317.5870361328125,
+        "x2": 559.7455444335938,
+        "y1": 421.22515869140625,
+        "y2": 559.238037109375
+      },
+      "text": "Type 2 lenses also have a larger bandwidth: our COMSOL simulations (see e.g. Figure 2b) show that the width of the peak with j = 2 is larger than the one for j = 0: by definition, 2 ·∆f2dB ∼ 0.28 · f0 i.e. 5 piano keys. The major disadvantage with Type B lenses is that, since the 16 cell designs now only span a limited part of the phase space, only a limited number of focal lenghts can be realised with a lens of a fixed size. Simulations in Figure 3 show, for instance, that in the case of a 10× 10 Type B lens with radial phase profile from equation (1), the maximum focal length is 57 mm. To achieve larger focal lengths, it is necessary either to extend the lens (e.g. to 12 × 12 unit cells) or to use the techniques in section 5."
+    }],
+    "title": {
+      "page": 3,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 180.03921508789062,
+        "y1": 515.6028442382812,
+        "y2": 522.0289916992188
+      },
+      "text": "3 METASURFACE DESIGN"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 4,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 559.8905639648438,
+        "y1": 593.412109375,
+        "y2": 647.739013671875
+      },
+      "text": "In this section, we find that the basic design tools available in optics are also valid in acoustics, when metamaterial lenses are involved. This discovery simplifies the realisation ofmetamaterial based devices (section 5) and leads to solving some of the limitations of the metamaterials described so far."
+    }],
+    "title": {
+      "page": 4,
+      "region": {
+        "x1": 317.95501708984375,
+        "x2": 499.4609680175781,
+        "y1": 578.5478515625,
+        "y2": 584.9739990234375
+      },
+      "text": "4 BASIC TOOLS FOR DEVICE DESIGN"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 4,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 558.21142578125,
+        "y1": 681.912109375,
+        "y2": 712.3289794921875
+      },
+      "text": "Optical devices typically require a lens to be placed between the source and the receiver, until the former is imaged on the latter. For most applications, mutual distances are calculated"
+    }, {
+      "page": 4,
+      "region": {
+        "x1": 54.0,
+        "x2": 558.0009765625,
+        "y1": 750.914794921875,
+        "y2": 756.7197875976562
+      },
+      "text": "Paper 483 Page 5"
+    }, {
+      "page": 5,
+      "region": {
+        "x1": 53.79798889160156,
+        "x2": 185.05056762695312,
+        "y1": 363.30108642578125,
+        "y2": 369.8069152832031
+      },
+      "text": "using the thin-lens equation [4]:"
+    }, {
+      "page": 5,
+      "region": {
+        "x1": 140.81597900390625,
+        "x2": 294.044677734375,
+        "y1": 384.3150939941406,
+        "y2": 391.6279296875
+      },
+      "text": "1/p + 1/q = 1/f (3)"
+    }, {
+      "page": 5,
+      "region": {
+        "x1": 53.43000030517578,
+        "x2": 294.0552062988281,
+        "y1": 406.9441833496094,
+        "y2": 473.2250061035156
+      },
+      "text": "where f is the focal length of the lens, p is the distance between the source and the lens, q the distance between the lens and the image of the source. Equation (3) is based on the same hypotheses used to design the metasurface and should directly apply when the thickness is much smaller than the wavelength [4], but its validity has not been tested before."
+    }, {
+      "page": 5,
+      "region": {
+        "x1": 53.43000030517578,
+        "x2": 295.7362976074219,
+        "y1": 478.6751708984375,
+        "y2": 712.3289794921875
+      },
+      "text": "To do this, we run the following experiment: (a) we design a lens ans simulate (COMSOL) its focal length (Figure 3); (b) we mount the set-up in Figure 4a measure the acoustic sound pressure (SPL) in 1/3rd octaves at different distances from a speaker emitting a tone at 5.6 kHz, without the lens; (c) we repeat the measurements, after inserting the lens in the acoustic path, at a distance p from the speaker; (d) we look for the “image” of the speaker, defined as the position where the intensity changes the most due to the lens and record the distance as q ; (e) we plot 1/q vs. 1/p (see Figure 4b) and fit with a line of angular coefficient -1 from equation (3) to find the focal length f . As shown in Figure 4a (inset), the selected type B lens was held in a mask during the tests, at different distances from the speaker. Measurements at large distances (Figure 4a) were conducted in a non-reverberant environment outdoors, using a Norsonic 121 class I sound-level meter and a ¼” microphone (Norsonic, Nor-1225). More detailed 2D scans of the area in front of metasurfaces (120 × 300 mm) were taken using a modified 3D-printer, a 1/8” microphone"
+    }, {
+      "page": 5,
+      "region": {
+        "x1": 317.656005859375,
+        "x2": 559.8905029296875,
+        "y1": 96.1091537475586,
+        "y2": 150.43597412109375
+      },
+      "text": "(B&K, model 4138) and an amplifier (B&K, Nexus conditioning amplifier) directly connected to a Picoscope and then to the PC. The 5.6 kHz signal originated from a .wav file prepared in-house (using Audacity) and was amplified using a car stereo amplifier."
+    }, {
+      "page": 5,
+      "region": {
+        "x1": 317.5870056152344,
+        "x2": 559.7408447265625,
+        "y1": 155.88514709472656,
+        "y2": 246.0770263671875
+      },
+      "text": "Figure 4b reports the results for two acoustic metasurfaces, designed to have different focal lengths (A1 = 0.44 mm−1 for f1 = 53 mm and A2 = 0.75 mm−1 for f2 = 38 mm). We found a very good agreement between design and experiments for fsim=53 mm, but 16% difference for the smaller focal length. In the optical case, the accuracy decreases when the focal length gets smaller, as lenses cannot be considered “thin”: we will therefore limit this study to f > 53mm."
+    }, {
+      "page": 5,
+      "region": {
+        "x1": 317.9547424316406,
+        "x2": 559.8944091796875,
+        "y1": 251.52613830566406,
+        "y2": 281.9429931640625
+      },
+      "text": "Having verified the thin-lens equation leads naturally to designing systems of two lenses, like telescopes and microscopes. The focal length F of such a system is given by [4]:"
+    }, {
+      "page": 5,
+      "region": {
+        "x1": 317.4765930175781,
+        "x2": 559.8938598632812,
+        "y1": 291.0391540527344,
+        "y2": 529.9549560546875
+      },
+      "text": "1/F = 1/f1 + 1/f2 − D/(f1 · f2) (4) where f1 and f2 are the focal lengths of the two lenses and D is the distance between the two lenses. This equation has been largely exploited to design zoom objectives and, by the HCI community, in designing the first models of VR headsets (see references in [53]). Once F is known, equation (3) can be applied, in the form 1/P + 1/Q = 1/F where all the distances (i.e. P,Q and F ) are measured from two known reference planes, called “principal planes” [4]. To test the validity of equation (4) in the acoustic case, using metasurfaces, we simulated a system of two lenses (both with f = 53 mm) using finite elements (COMSOL Multiphysics) and adjusted the mutual distance D, recording the position of the image relative to the last lens. Figure 5 shows that this quantity, known as the “Back Focal Length”, increases with the distance between the two lenses5 as predicted from equation (4). Experimentally, we realised the two lenses and positioned the first at 50 mm from the speaker. We then changed D, noting the position of the maximum intensity. Good agreement was found with equation (4)."
+    }],
+    "title": {
+      "page": 4,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 446.6073303222656,
+        "y1": 667.0478515625,
+        "y2": 673.4739990234375
+      },
+      "text": "The thin lens approximation"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 5,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 558.4005737304688,
+        "y1": 559.443115234375,
+        "y2": 601.8150024414062
+      },
+      "text": "Here, we exploit the capabilities acquired in the previous sections to prototype three lens-based acoustic devices. For these, we describe conceptual application scenarios, to be evaluated in future works through user studies."
+    }],
+    "title": {
+      "page": 5,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 437.3117370605469,
+        "y1": 544.578857421875,
+        "y2": 551.0050048828125
+      },
+      "text": "5 DEVICE REALISATION"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 5,
+      "region": {
+        "x1": 317.656005859375,
+        "x2": 559.8944091796875,
+        "y1": 631.3031616210938,
+        "y2": 712.3289794921875
+      },
+      "text": "The possibility of designing an acoustic lens with a selected focal length (and the validity of equation (3)) allowed us to build a collimator: a system that corrects the geometric divergence of a source, so that the output sound is spatially contained in a directional beam (Figure 1b). Collimators are 5Intuitively, when the lenses are further apart, the focal point is further away."
+    }, {
+      "page": 5,
+      "region": {
+        "x1": 54.0,
+        "x2": 558.0009765625,
+        "y1": 750.914794921875,
+        "y2": 756.7197875976562
+      },
+      "text": "Paper 483 Page 6"
+    }, {
+      "page": 6,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 295.7409973144531,
+        "y1": 598.2261352539062,
+        "y2": 664.5079956054688
+      },
+      "text": "used in optics after the lamp in a slide projector (i.e. to make rays parallel) or in lighthouses (i.e. to project the light over larger distances). They are also used in theatres for producing spotlights. In these applications, a converging lens is positioned at a distance from the source equal to its focal length, transforming the impinging wave into a parallel beam."
+    }, {
+      "page": 6,
+      "region": {
+        "x1": 53.430458068847656,
+        "x2": 295.728271484375,
+        "y1": 669.9571533203125,
+        "y2": 712.3289794921875
+      },
+      "text": "In our realisation, we used a Type A lens (f = 150 mm) positioned at 150±2 mm from the speaker. Figure 6a shows that, while the decrease with distance typical of a spherical source is maintained (i.e. – 6 dB when doubling the distance), the"
+    }, {
+      "page": 6,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 559.89794921875,
+        "y1": 360.73016357421875,
+        "y2": 618.2940063476562
+      },
+      "text": "acoustic pressure measured at different distances is consistently larger than the one in absence of the lens. The angular emission, sampled at 4.24 m (Figure 6b), shows that the angle of divergence of the speaker (defined as the width 10 dB below the peak) was reduced from 60 ± 1° to 27 ± 1°. The metamaterial lens modified the emission of our lowcost speaker, making it comparable with the top-of-the-range audio spotlight by HolosonicsTM, which has an emission angle of ∼ 30° [44, 48]. In our tests outdoors (Figure 1b), we also found that the sound, which could only be heard up to 10 m away without the lens, was perceived up to 40 m away when the collimator was present (test conducted with passer-bys, in a local green area). Theoretical predictions based on equation (3) suggest that the divergence angle could be further reduced by finer adjustments to the mutual position of the speaker and the lens (e.g. provided by an automated positioning system). As detailed in section 2, the HCI community has used expensive audio spotlights for many applications: our method hints to the same applications, in a more costeffective way. In addition, as shown by Norasikin et al. [37], metamaterials can be used to give non-conventional shapes to sound, and this opens to additional usage scenarios, like:"
+    }, {
+      "page": 6,
+      "region": {
+        "x1": 317.70599365234375,
+        "x2": 559.89794921875,
+        "y1": 634.0921630859375,
+        "y2": 712.3289794921875
+      },
+      "text": "Personalised experiences in shared spaces. These include sending specific sounds only to parts of an audience (see Figure 6c); having different acoustic cues depending on the location in a space (e.g. with large real-walking virtual reality experiences confined to limited tracking volumes [32], a few metamaterial corrected speakers may be able to map whole virtual mansions); creating different sound zones in cars or"
+    }, {
+      "page": 6,
+      "region": {
+        "x1": 54.0,
+        "x2": 558.0009765625,
+        "y1": 750.914794921875,
+        "y2": 756.7197875976562
+      },
+      "text": "Paper 483 Page 7"
+    }, {
+      "page": 7,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 294.05438232421875,
+        "y1": 503.95318603515625,
+        "y2": 522.4140014648438
+      },
+      "text": "on a sofa (so that passengers and driver can listen to different sounds); sending sound behind corners."
+    }, {
+      "page": 7,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 295.73828125,
+        "y1": 539.1341552734375,
+        "y2": 665.1920166015625
+      },
+      "text": "Increase the spatial performance of sound systems. At concerts, or in cinemas, speakers are arranged to minimize the spatial changes in level and tonality, but there is always a minority of the audience who does not have an optimal acoustic experience. Figure 6d reports the example of two speakers mounted in a symmetrical coupled point source arrangement, highlighting the gap in front of them: a dedicated speaker, made directional by a collimating lens, may be used to fill such gaps. Similar considerations can be applied to smart speakers, like Google Home or Amazon Echo, whose 360° emission is due to an array of speakers."
+    }, {
+      "page": 7,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 294.0567321777344,
+        "y1": 681.912109375,
+        "y2": 712.3289794921875
+      },
+      "text": "Modify the spatial sensitivity of acoustic sensors. Collimators can also be used in detection, transforming generic acoustic sensors into highly directional ones."
+    }],
+    "title": {
+      "page": 5,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 405.9482727050781,
+        "y1": 616.4388427734375,
+        "y2": 622.864990234375
+      },
+      "text": "Acoustic collimator"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 7,
+      "region": {
+        "x1": 317.4570007324219,
+        "x2": 559.89794921875,
+        "y1": 518.8971557617188,
+        "y2": 704.72998046875
+      },
+      "text": "The art of glass blowing introduced the concept of magnifying glasses in the 13th century: an application where the distance between the observer and the sample to be observed is fixed, and the user positions the lens in between until the image is “in focus”. In our realisation (Figure 7a), we positioned the speaker and the microphone along a line and inserted a lens in between, adjusting its position until the signal on the microphone was maximised. According to equation (3), for a lens of fixed focal length f there is only one optimal distance from the source p̄ where this happens. In this configuration, the lateral extension of the image (a.k.a. the magnificationM) also depends on the value of p̄: real images with |M | > 1 are formed when f < p̄ < 2f , while |M | < 1 when p̄ > 2f (i.e. the magnification depends on the position of the lens: the farther is the lens, the smaller the image)."
+    }, {
+      "page": 7,
+      "region": {
+        "x1": 54.0,
+        "x2": 558.0009765625,
+        "y1": 750.914794921875,
+        "y2": 756.7197875976562
+      },
+      "text": "Paper 483 Page 8"
+    }, {
+      "page": 8,
+      "region": {
+        "x1": 53.499000549316406,
+        "x2": 294.0580749511719,
+        "y1": 493.7791748046875,
+        "y2": 524.196044921875
+      },
+      "text": "The possibility of creating the real image of an acoustic source and to vary its size according to the position of a lens (between the source and the listener) allows:"
+    }, {
+      "page": 8,
+      "region": {
+        "x1": 53.42951965332031,
+        "x2": 294.30938720703125,
+        "y1": 540.025146484375,
+        "y2": 618.261962890625
+      },
+      "text": "Modifying the apparent position of the source. One possibility would be to create the image of a speaker in front of the user (imagine him/her seating on a sofa, with the original speaker where the television is) and thus the feeling that the sound is coming from a localised source (see Figure 7b). This effect has some similarity to spatial sound (1D, so far), and should be evaluated by user studies in comparison to that."
+    }, {
+      "page": 8,
+      "region": {
+        "x1": 53.499000549316406,
+        "x2": 295.74176025390625,
+        "y1": 634.0921630859375,
+        "y2": 712.3289794921875
+      },
+      "text": "Extending the range of haptic devices. The HCI community is familiar with using ultrasonic transducer arrays for midair haptics [6] and levitation [33], even behind objects [37]. These effects, however, lose in definition as the distance from the source increases. Using an appropriate lens may help moving these effects at larger distances, so that the source array may be located far from the end-user (see Figure 7c)."
+    }, {
+      "page": 8,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 558.2139282226562,
+        "y1": 493.7791748046875,
+        "y2": 524.196044921875
+      },
+      "text": "Similar methods have been used in holographic trapping [42] and there is no reason why they should not be applicable to 3D shapes made of sound."
+    }, {
+      "page": 8,
+      "region": {
+        "x1": 317.5870056152344,
+        "x2": 559.8980102539062,
+        "y1": 538.4501342773438,
+        "y2": 712.3289794921875
+      },
+      "text": "Augmenting reception. A lens may also be used on the receiver side, to modify the spatial performance of a microphone. As shown in Figure 7d, using the lens to image certain areas instead of others may help detecting alarming noises from certain parts of a machine (e.g. the cog that tends to break all the time, or the hissing sound of a gas leak) or from selected areas of the house (e.g. a burglar breaking a window instead of a dog barking in the background). Similar arrangements may make personal assistants (e.g. Amazon Echo) sensitive only to orders issued in certain areas of the house, with advantages over background noise. The change of magnification with distance may be an issue when the source is very small or very far from the detector. In addition, sources located at the periphery of the lens may appear distorted, when imaged. A solution to these"
+    }, {
+      "page": 8,
+      "region": {
+        "x1": 54.0,
+        "x2": 558.0009765625,
+        "y1": 750.914794921875,
+        "y2": 756.7197875976562
+      },
+      "text": "Paper 483 Page 9"
+    }, {
+      "page": 9,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 295.7374267578125,
+        "y1": 96.1091537475586,
+        "y2": 222.1669921875
+      },
+      "text": "two issues, often used in optics (e.g. machine vision), is offered by telecentric systems [4]: an additional entrance pupil, positioned at the focal length of the lens, allows to select only the central rays and maintain the image size with object displacement, provided the object stays within the “depth of field”. In the acoustic case, a telecentric system would allow the user to listen to two different sources (e.g. two audience members in an auditorium) with the same intensity, even if they are located at different distances, without changing the lens. In a conference, it may reduce the need to fetch around the microphone during questions time."
+    }],
+    "title": {
+      "page": 7,
+      "region": {
+        "x1": 317.95501708984375,
+        "x2": 436.0464782714844,
+        "y1": 504.0328674316406,
+        "y2": 510.4590148925781
+      },
+      "text": "Acoustic magnifying glass"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 9,
+      "region": {
+        "x1": 53.45000076293945,
+        "x2": 295.7422790527344,
+        "y1": 251.52613830566406,
+        "y2": 401.4939880371094
+      },
+      "text": "The introduction of the refracting telescope, in the 16th century, allowed scientists and explorers to monitor objects at much larger distances. Unique telescope designs have been developed over the centuries, in the effort of increasing the field of view and the magnification, but all are based on the combination of two lenses at a mutual distance D. In our realisation (see Figure 1c), we demonstrated a Keplerian telescope (1611) for sound, based on two convergent lenses positioned at a (variable) distance D (see Figure 8). The lenses, that we picked of the same focal length for simplicity (f = 53 mm), were mounted on a rail and their mutual distance could be adjusted (with 1 mm precision) using an Arduino Nano and a stepper motor."
+    }, {
+      "page": 9,
+      "region": {
+        "x1": 53.42951965332031,
+        "x2": 295.73583984375,
+        "y1": 406.9441833496094,
+        "y2": 712.3289794921875
+      },
+      "text": "Telescopes solve the main limitation of Type B lenses: the focal lengths that cannot be achieved with one lens will be achieved with two, at an appropriate distance D. Applications then include those of magifying glasses, but without the need of deploying the lens in the field. A telescope, in fact, is a vari-focal lens: the distance D can be changed to create a lens of the desired focal length. One user scenario would be listening to a source among others (e.g. zooming on a single person in a crowd - see Figure 8b - to either deliver or receive acoustic messages). Other applications of our telescope include acoustic displays (e.g. dancers following an acoustic spot in a disco like a cat would follow a laser pointer) or music with a dynamic spatial component. Modern cameras, however, all feature auto-zooming objectives. A similar solution for sound would be capable of following a source in the field of view and, in VR, the same speaker could be used to deliver location-specific sounds to multiple users moving in the same virtual world, without headphones. As a first step towards an auto-zoom lens (see supplemental video), we positioned a receiving microphone at an unknown position in front of the speaker and adjusted the distance between the lenses (with 1 mm precision) using an Arduino Nano and a stepper motor until the signal on it was maximised (i.e. using the reading of the sound-level meter as feedback for the positioning system). We found that, when the speaker was imaged on the microphone, the meter"
+    }, {
+      "page": 9,
+      "region": {
+        "x1": 317.5867614746094,
+        "x2": 558.2111206054688,
+        "y1": 96.1091537475586,
+        "y2": 150.43597412109375
+      },
+      "text": "measured 7 dB more than the level it would have measured in the same position without metamaterials. User studies and an automatic feedback loop will be needed to decide whether this increase is sufficient, especially in otherwise noisy environments."
+    }],
+    "title": {
+      "page": 9,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 137.04885864257812,
+        "y1": 236.66188049316406,
+        "y2": 243.0880126953125
+      },
+      "text": "Acoustic telescope"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 9,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 559.8927612304688,
+        "y1": 185.9301300048828,
+        "y2": 240.25701904296875
+      },
+      "text": "In the previous sections we have described many conceptual applications of converging metasurfaces, highlighting how our prototype devices can be used to advance their realisation. Here we summarise the advantages of our approach, and describe how remaining limitations can be overcome."
+    }, {
+      "page": 9,
+      "region": {
+        "x1": 317.47698974609375,
+        "x2": 559.8978881835938,
+        "y1": 257.8181457519531,
+        "y2": 431.6960144042969
+      },
+      "text": "Bandwidth. As mentioned earlier (section 2), metamaterials have a limited bandwidth (5 piano keys for our Type B lenses). While this may be already sufficient for delivering alarms and conveying personal audio messages, the human audible range cover 11 octaves: larger bandwidths are highly desirable for consumer audio. This is a hot research topic: more and more solutions are appearing on the horizon. In this work, we have shown how using unit cells at subresonance frequencies extends the bandwidth. This observation hints to a “rule-of-thumb”, connecting the transmission of single unit cells and their bandwidth, suggesting that larger bandwidths may be obtained already at the single cell level by accepting a certain amount of transmission loss6. With visual LCD displays only requiring a 20% transmission, this may be a minor issue for some applications."
+    }, {
+      "page": 9,
+      "region": {
+        "x1": 317.70599365234375,
+        "x2": 559.8988037109375,
+        "y1": 437.1451721191406,
+        "y2": 622.97900390625
+      },
+      "text": "The possibility of using smaller Type B cells, however, can be exploited also by designing multi-frequency structures that occcupy the same space as a Type A cell (e.g. a unit cell made of Type B cells, mounted in a 2 × 2 array, like the RGB crystals forming pixels in a LCD display). This is the route followed by Jiménez et al. [20], who have reached a very high absorption over a broad frequency band in deepsubwavelength thickness panels by stacking side-by-side unit cells of different size, with close frequency response. Finally, the problem of a limited bandwidth can be tackled at the device level. Achromatic lenses, for instance, are realised by stacking two different lenses (in the direction of propagation), so that two wavelengths (typically red & blue) focus on the same plane. Having proven that the thin-lens equation also applies to acoustics, when metamaterials are involved, similar solutions may be imagined for sound7."
+    }, {
+      "page": 9,
+      "region": {
+        "x1": 317.81298828125,
+        "x2": 559.0780029296875,
+        "y1": 665.8214111328125,
+        "y2": 712.3289794921875
+      },
+      "text": "6Type B lenses, for instance, cover 1 octave for applications where a 6 dB loss is acceptable. 7Cascading different acoustic filters, each with different frequency response, is not a novel idea: the first sound-level meters used just this method to apply the A-weighting and take into account perception."
+    }, {
+      "page": 9,
+      "region": {
+        "x1": 54.0,
+        "x2": 558.001953125,
+        "y1": 750.914794921875,
+        "y2": 756.7197875976562
+      },
+      "text": "Paper 483 Page 10"
+    }, {
+      "page": 10,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 301.59307861328125,
+        "y1": 311.565185546875,
+        "y2": 401.7569885253906
+      },
+      "text": "Comparison with speaker arrays. Acousticmetamaterials which shape sound are not a competing, but a complementing approach compared with traditional sound emitters [37]. Metamaterials are smaller, cheaper and easier to manufacture than phased arrays: they can even be fabricated in recyclable materials. Metamaterial devices lead to less aberrations than speaker arrays, even over limited bandwidths. Metamaterials solutions, however, are static."
+    }, {
+      "page": 10,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 295.73590087890625,
+        "y1": 407.2061767578125,
+        "y2": 521.3089599609375
+      },
+      "text": "Hybrid systems [37], mechanically actuated metamaterial devices (like our zooming lens or [19]) and fully active metamaterials [30] will be the future, but require further study. Our varifocal lens, for instance, could be integrated with a motion tracking system (e.g. LeapmotionTM or a RGB-D camera) to keep the object is “in focus” while it moves. The limitation due to the 1D mechanical actuation will be easily exceeded thanks to the integration of multiple actuators: not only on the second lens that makes up the telescope system, but also on the speaker-first lens component."
+    }, {
+      "page": 10,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 294.05682373046875,
+        "y1": 532.6041259765625,
+        "y2": 610.8410034179688
+      },
+      "text": "Combination of metasurfaces. As shown byMemoli et al. [35] and reinforced in this work, acoustic metasurfaces may be layered into unique devices to obtain a detailed shaping of the sound, with each layer adding complexity and functionalities to the end-user experience. This work is only a first step into multi-layered acoustic metamaterials, that needs to be further addressed in future studies."
+    }, {
+      "page": 10,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 295.7337341308594,
+        "y1": 622.1371459960938,
+        "y2": 712.3289794921875
+      },
+      "text": "Scalability and Compactness. Scalability is an important issue, as the size of a metasurface may vary from small to very large. While we have demonstrated the possibility of making compact, sub-wavelength thick metasurfaces, the challenge of meeting user-defined space constraints is still open. Due to their compactness metamaterial structures could be incorporated into speakers or headphones for example, paving the way for multiple applications."
+    }],
+    "title": {
+      "page": 9,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 393.0062255859375,
+        "y1": 171.06581115722656,
+        "y2": 177.491943359375
+      },
+      "text": "6 DISCUSSION"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 10,
+      "region": {
+        "x1": 317.70599365234375,
+        "x2": 560.3522338867188,
+        "y1": 326.5091857910156,
+        "y2": 548.2080078125
+      },
+      "text": "Designing experiences based on sound delivery is challenging: not only sound is invisible, so taht “holes” in the delivery cannot be easily spotted, but it is difficult to have an “eagle view” i.e. the perception of how the sound is “felt” at all points of the space at the same time. While metamaterials cannot shape sound on demand yet, our approach adds simple, but powerful tools to the ones available to acoustic designers, presenting them in a way that builds on centuries of visual design in the HCI community. Next steps include on the technical side more complex shapes (e.g. Zhu et al. [66]), larger bandwidths and on-demand sound control (i.e. a “space sound modulator”). In terms of experiential design, user studies (in collaboration with musicians and psychologists) will be needed to determine the potential effects of personal sound on audiences. Our prototypes, while simple, lower the access threshold to designing novel sound experiences: devices based on acoustic metamaterials will lead to new ways of delivering, experiencing and even thinking of sound."
+    }],
+    "title": {
+      "page": 10,
+      "region": {
+        "x1": 317.95501708984375,
+        "x2": 405.0415954589844,
+        "y1": 311.6448669433594,
+        "y2": 318.0710144042969
+      },
+      "text": "7 CONCLUSIONS"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 10,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 559.8977661132812,
+        "y1": 577.9341430664062,
+        "y2": 668.1259765625
+      },
+      "text": "GM, LC and JPE acknowledge funding from the Engineering and Physical Sciences Research Council (EPSRC-UKRI) through grant EP/S001832/1. SS acknowledges funding from the Royal Academy of Engineeringhrough their Chair in Emerging Technology grant CiET1718/14. MC acknowledges funding from the Royal Academy of Engineeringhrough grant The authors would also like to thank the anonymous referees for the useful comments."
+    }],
+    "title": {
+      "page": 10,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 425.7048645019531,
+        "y1": 563.06982421875,
+        "y2": 569.4959716796875
+      },
+      "text": "ACKNOWLEDGMENTS"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 10,
+      "region": {
+        "x1": 321.6609802246094,
+        "x2": 559.4228515625,
+        "y1": 697.1615600585938,
+        "y2": 702.365966796875
+      },
+      "text": "[1] Armando Barreto, Kenneth John Faller, and Malek Adjouadi. 2009."
+    }, {
+      "page": 10,
+      "region": {
+        "x1": 335.0270080566406,
+        "x2": 558.1953125,
+        "y1": 707.1245727539062,
+        "y2": 712.3289794921875
+      },
+      "text": "3D Sound for Human-computer Interaction: Regions with Different"
+    }, {
+      "page": 10,
+      "region": {
+        "x1": 54.0,
+        "x2": 558.001953125,
+        "y1": 750.914794921875,
+        "y2": 756.7197875976562
+      },
+      "text": "Paper 483 Page 11"
+    }, {
+      "page": 11,
+      "region": {
+        "x1": 57.503997802734375,
+        "x2": 295.26861572265625,
+        "y1": 97.41058349609375,
+        "y2": 222.1669921875
+      },
+      "text": "Limitations in Elevation Localization. In Proceedings of the 11th International ACM SIGACCESS Conference on Computers and Accessibility (Assets ’09). ACM, New York, NY, USA, 211–212. https: //doi.org/10.1145/1639642.1639680 [2] A. J. Berkhout, D. de Vries, and P. Vogel. 1993. Acoustic control by wave field synthesis. The Journal of the Acoustical Society of America 93, 5 (1993), 2764–2778. https://doi.org/10.1121/1.405852 [3] Marinus M. Boone, Edwin N. G. Verheijen, and G. Jansen. 1996. Virtual Reality by Sound Reproduction Based on Wave Field Synthesis. In Audio Engineering Society Convention 100. http://www.aes.org/e-lib/ browse.cfm?elib=7624 [4] K. Born and W. Wolf. 1970. Principles of Optics. Pergamon Press. [5] Anne-Claire Bourland, Peter Gorman, Jess McIntosh, and Asier Marzo."
+    }, {
+      "page": 11,
+      "region": {
+        "x1": 53.797996520996094,
+        "x2": 295.3918151855469,
+        "y1": 226.92559814453125,
+        "y2": 710.3359985351562
+      },
+      "text": "2018. Project Telepathy. Interactions 25, 5 (Aug. 2018), 16–17. https: //doi.org/10.1145/3241945 [6] Tom Carter, Sue Ann Seah, Benjamin Long, Bruce Drinkwater, and Sriram Subramanian. 2013. UltraHaptics: Multi-point Mid-air Haptic Feedback for Touch Surfaces. In Proceedings of the 26th Annual ACM Symposium on User Interface Software and Technology (UIST ’13). ACM, NewYork, NY, USA, 505–514. https://doi.org/10.1145/2501988.2502018 [7] Jordan Cheer, Stephen Daley, and Cameron McCormick. 2017. Feedforward control of sound transmission using an active acoustic metamaterial. Smart Materials and Structures 26, 2 (2017), 025032. http: //stacks.iop.org/0964-1726/26/i=2/a=025032 [8] Andrea Colombi, Victoria Ageeva, Richard J. Smith, Adam Clare, Rikesh Patel, Matt Clark, Daniel Colquitt, Philippe Roux, Sebastien Guenneau, and Richard V. Craster. 2017. Enhanced sensing and conversion of ultrasonic Rayleigh waves by elastic metasurfaces. Scientific Reports 7 (2017). Issue 1. https://doi.org/10.1038/s41598-017-07151-6 [9] Andrea Colombi, Daniel Colquitt, Philippe Roux, Sebastien Guenneau, and Richard V. Craster. 2016. A seismic metamaterial: The resonant metawedge. Scientific Reports 6 (2016). https://doi.org/10. 1038/srep27717 [10] Charles R. P. Courtney, Christine E. M. Demore, Hongxiao Wu, Alon Grinenko, Paul D. Wilcox, Sandy Cochran, and Bruce W. Drinkwater. 2014. Independent trapping and manipulation of microparticles using dexterous acoustic tweezers. Applied Physics Letters 104, 15 (2014), 154103. https://doi.org/10.1063/1.4870489 [11] Steven A. Cummer, Johan Christensen, and Andrea Alù. 2016. Controlling sound with acoustic metamaterials. Nature Reviews Materials 1 (2016), 16001. https://doi.org/10.1038/natrevmats.2016.1 [12] Cassidy Curtis, David Eisenmann, Rachid El Guerrab, and Scot Stafford. 2016. The Making of Pearl, a 360&Deg; Google Spotlight Story. In ACM SIGGRAPH 2016 VR Village (SIGGRAPH ’16). ACM, New York, NY, USA, Article 21, 1 pages. https://doi.org/10.1145/2929490.2956565 [13] Woon-Seng Gan, Jun Yang, and Tomoo Kamakura. 2012. A review of parametric acoustic array in air. Applied Acoustics 73, 12 (2012), 1211 – 1219. https://doi.org/10.1016/j.apacoust.2012.04.001 [14] Stanislav B. Glybovski, Sergei A. Tretyakov, Pavel A. Belov, Yuri S. Kivshar, and Constantin R. Simovski. 2016. Metasurfaces: From microwaves to visible. Physics Reports 634 (2016), 1 – 72. https: //doi.org/10.1016/j.physrep.2016.04.004 [15] Simon Holland, David R. Morse, and Henrik Gedenryd. 2002. AudioGPS: Spatial Audio Navigation with a Minimal Attention Interface. Personal Ubiquitous Comput. 6, 4 (Jan. 2002), 253–259. https: //doi.org/10.1007/s007790200025 [16] Alexandra Ion, Johannes Frohnhofen, Ludwig Wall, Robert Kovacs, Mirela Alistar, Jack Lindsay, Pedro Lopes, Hsiang-Ting Chen, and Patrick Baudisch. 2016. Metamaterial Mechanisms. In Proceedings of the 29th Annual Symposium on User Interface Software and Technology (UIST ’16). ACM, New York, NY, USA, 529–539. https://doi.org/10. 1145/2984511.2984540"
+    }, {
+      "page": 11,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 559.5497436523438,
+        "y1": 97.41058349609375,
+        "y2": 710.3359985351562
+      },
+      "text": "[17] Alexandra Ion, Ludwig Wall, Robert Kovacs, and Patrick Baudisch. 2017. Digital Mechanical Metamaterials. In Proceedings of the 2017 CHI Conference on Human Factors in Computing Systems (CHI ’17). ACM, New York, NY, USA, 977–988. https://doi.org/10.1145/3025453.3025624 [18] Miyu Iwafune, Taisuke Ohshima, and Yoichi Ochiai. 2016. Coded Skeleton: Programmable Deformation Behaviour for Shape Changing Interfaces. In SIGGRAPH ASIA 2016 Emerging Technologies (SA ’16). ACM, New York, NY, USA, Article 1, 2 pages. https://doi.org/10.1145/ 2988240.2988252 [19] Louis Jackowski-Ashley, GianlucaMemoli, Mihai Caleap, Nicolas Slack, Bruce W. Drinkwater, and Sriram Subramanian. 2017. Haptics and Directional Audio Using Acoustic Metasurfaces. In Proceedings of the 2017 ACM International Conference on Interactive Surfaces and Spaces (ISS ’17). ACM, New York, NY, USA, 429–433. https://doi.org/10.1145/ 3132272.3132285 [20] Noé Jiménez, Vicent Romero-García, Vincent Pagneux, and JeanPhilippe Groby. 2017. Rainbow-trapping absorbers: Broadband, perfect and asymmetric sound absorption by subwavelength panels for transmission problems. Scientific Reports 7 (2017). Issue 1. https: //doi.org/10.1038/s41598-017-13706-4 [21] Toshiyuki Kimura, Munenori Naoe, Yoko Yamakata, and Michiaki Katsumoto. 2009. Subjective Effect of Synthesis Conditions in 3D Sound Field Reproduction System Using a Few Transducers and Wave Field Synthesis. In Proceedings of the 3rd International Universal Communication Symposium (IUCS ’09). ACM, New York, NY, USA, 215–220. https://doi.org/10.1145/1667780.1667825 [22] Jussi Kuutti, Juhana Leiwo, and Raimo E. Sepponen. 2014. Local Control of Audio Environment: A Review of Methods and Applications. Technologies 2, 1 (2014), 31–53. https://doi.org/10.3390/ technologies2010031 [23] R. J. Lalonde, A. Worthington, and J. W. Hunt. 1993. Field conjugate acoustic lenses for ultrasound hyperthermia. IEEE Transactions on Ultrasonics, Ferroelectrics, and Frequency Control 40, 5 (1993), 592–602. https://doi.org/10.1109/58.238113 [24] C. J. L. Lane, A. K. Dunhill, B. W. Drinkwater, and P. D. Wilcox. 2010. The inspection of anisotropic single-crystal components using a 2- D ultrasonic array. IEEE Transactions on Ultrasonics, Ferroelectrics, and Frequency Control 57, 12 (December 2010), 2742–2752. https: //doi.org/10.1109/TUFFC.2010.1748 [25] Fabrice Lemoult, Nadège Kaina, Mathias Fink, and Geoffroy Lerosey. 2016. Soda Cans Metamaterial: A Subwavelength-Scaled Phononic Crystal. Crystals 6, 7 (2016). https://doi.org/10.3390/cryst6070082 [26] Dingzeyu Li, David I. W. Levin, Wojciech Matusik, and Changxi Zheng. 2016. Acoustic Voxels: Computational Optimization of Modular Acoustic Filters. ACM Trans. Graph. 35, 4, Article 88 (July 2016), 12 pages. https://doi.org/10.1145/2897824.2925960 [27] Yong Li, Xue Jiang, Rui-qi Li, Bin Liang, Xin-ye Zou, Lei-lei Yin, and Jian-chun Cheng. 2014. Experimental Realization of Full Control of Reflected Waves with Subwavelength Acoustic Metasurfaces. Phys. Rev. Applied 2 (Dec 2014), 064002. Issue 6. https://doi.org/10.1103/ PhysRevApplied.2.064002 [28] Yong Li, Bin Liang, Zhong-ming Gu, Xin-ye Zou, and Jian-chun Cheng. 2013. Reflected wavefront manipulation based on ultrathin planar acoustic metasurfaces. Scientific Reports 3 (2013). https://doi.org/10. 1038/srep02546 [29] Chenkai Liu, Jie Luo, and Yun Lai. 2018. Acoustic metamaterials with broadband and wide-angle impedance matching. Phys. Rev. Materials 2 (Apr 2018), 045201. Issue 4. https://doi.org/10.1103/PhysRevMaterials. 2.045201 [30] Guancong Ma, Xiying Fan, Ping Sheng, and Mathias Fink. 2018. Shaping reverberating sound fields with an actively tunable metasurface. Proceedings of the National Academy of Sciences 115,"
+    }, {
+      "page": 11,
+      "region": {
+        "x1": 54.0,
+        "x2": 558.0020141601562,
+        "y1": 750.914794921875,
+        "y2": 756.7197875976562
+      },
+      "text": "Paper 483 Page 12"
+    }, {
+      "page": 12,
+      "region": {
+        "x1": 53.797996520996094,
+        "x2": 295.3900146484375,
+        "y1": 97.41058349609375,
+        "y2": 710.3359985351562
+      },
+      "text": "26 (2018), 6638–6643. https://doi.org/10.1073/pnas.1801175115 arXiv:https://www.pnas.org/content/115/26/6638.full.pdf [31] Guancong Ma and Ping Sheng. 2016. Acoustic metamaterials: From local resonances to broad horizons. Science Advances 2, 2 (2016). https: //doi.org/10.1126/sciadv.1501595 [32] Sebastian Marwecki and Patrick Baudisch. 2018. Scenograph: Fitting Real-Walking VR Experiences into Various Tracking Volumes. In Proceedings of the 31st Annual ACM Symposium on User Interface Software and Technology (UIST ’18). ACM, New York, NY, USA, 511–520. https://doi.org/10.1145/3242587.3242648 [33] Asier Marzo, Sue Ann Seah, Bruce W. Drinkwater, Deepak Ranjan Sahoo, Benjamin Long, and Sriram Subramanian. 2015. Holographic acoustic elements for manipulation of levitated objects. Nature Communications 6 (2015). https://doi.org/10.1038/ncomms9661 [34] Jun Mei and Ying Wu. 2014. Controllable transmission and total reflection through an impedance-matched acoustic metasurface. New Journal of Physics 16, 12 (2014), 123007. http://stacks.iop.org/1367-2630/ 16/i=12/a=123007 [35] Gianluca Memoli, Mihai Caleap, Michihiro Asakawa, Deepak R. Sahoo, Bruce W. Drinkwater, and Sriram Subramanian. 2017. Metamaterial bricks and quantization of meta-surfaces. Nature Communications 8 (2017). https://doi.org/10.1038/ncomms14608 [36] S. C. Mondal, P. D. Wilcox, and B. W. Drinkwater. 2005. Design and Evaluation of Two Dimensional Phased Array Ultrasonic Transducers. AIP Conference Proceedings 760, 1 (2005), 899–905. https://doi.org/10. 1063/1.1916769 [37] Mohd Adili Norasikin, Diego Martinez Plasencia, Spyros Polychronopoulos, Gianluca Memoli, Yutaka Tokuda, and Sriram Subramanian. 2018. SoundBender: Dynamic Acoustic Control Behind Obstacles. In Proceedings of the 31st Annual ACM Symposium on User Interface Software and Technology (UIST ’18). ACM, New York, NY, USA, 247–259. https://doi.org/10.1145/3242587.3242590 [38] Marianna Obrist, Grace Boyle, Marcel van Brakel, and Frederik Duerinck. 2017. Multisensory Experiences & Spaces. In Proceedings of the 2017 ACM International Conference on Interactive Surfaces and Spaces (ISS ’17). ACM, New York, NY, USA, 469–472. https://doi.org/10.1145/ 3132272.3135086 [39] Yoichi Ochiai, Takayuki Hoshi, and Jun Rekimoto. 2014. Pixie Dust: Graphics Generated by Levitated and Animated Objects in Computational Acoustic-potential Field. In ACM SIGGRAPH 2014 Posters (SIGGRAPH ’14). ACM, New York, NY, USA, Article 83, 1 pages. https://doi.org/10.1145/2614217.2614219 [40] Yoichi Ochiai, Takayuki Hoshi, and Ippei Suzuki. 2017. Holographic Whisper: Rendering Audible Sound Spots in Three-dimensional Space by Focusing Ultrasonic Waves. In Proceedings of the 2017 CHI Conference on Human Factors in Computing Systems (CHI ’17). ACM, New York, NY, USA, 4314–4325. https://doi.org/10.1145/3025453.3025989 [41] Johannes T.B. Overvelde, Twan A. de Jong, Yanina Shevchenko, Sergio A. Becerra, George M. Whitesides, James C. Weaver, Chuck Hoberman, and Katia Bertoldi. 2016. A three-dimensional actuated origamiinspired transformable metamaterial with multiple degrees of freedom. Nature Communications 7 (2016). https://doi.org/10.1038/ ncomms10929 [42] Giuseppe Pesce, Giorgio Volpe, Onofrio M. Maragó, Philip H. Jones, Sylvain Gigan, Antonio Sasso, and Giovanni Volpe. 2015. Step-by-step guide to the realization of advanced optical tweezers. J. Opt. Soc. Am. B 32, 5 (May 2015), B84–B98. https://doi.org/10.1364/JOSAB.32.000B84 [43] Rory J. Piper, Mark A. Hughes, Carmel M. Moran, and Jothy Kandasamy. 2016. Focused ultrasound as a non-invasive intervention for neurological disease: a review. British Journal of Neurosurgery 30, 3 (2016), 286–293. https://doi.org/10.3109/02688697.2016.1173189 arXiv:https://doi.org/10.3109/02688697.2016.1173189 PMID: 27101792."
+    }, {
+      "page": 12,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 559.550048828125,
+        "y1": 97.41058349609375,
+        "y2": 710.3359985351562
+      },
+      "text": "[44] F. Pokorny and F. Graf. 2014. Akustische Vermessung parametrischer Lautsprecherarrays im Kontext der Transauraltechnik (in German). In Annual meeting of the German Acoustical Society (DAGA’14). http: //pub.dega-akustik.de/DAGA_2014/data/articles/000129.pdf [45] F. Joseph Pompei. 1998. The Use of Airborne Ultrasonics for Generating Audible Sound Beams. In Audio Engineering Society Convention 105. http://www.aes.org/e-lib/browse.cfm?elib=8327 [46] Bogdan-Ioan Popa, Durvesh Shinde, Adam Konneker, and Steven A. Cummer. 2015. Active acoustic metamaterials reconfigurable in real time. Phys. Rev. B 91 (Jun 2015), 220303. Issue 22. https://doi.org/10. 1103/PhysRevB.91.220303 [47] Nimesha Ranasinghe, Pravar Jain, Nguyen Thi Ngoc Tram, Koon Chuan Raymond Koh, David Tolley, Shienny Karwita, Lin Lien-Ya, Yan Liangkun, Kala Shamaiah, Chow Eason Wai Tung, Ching Chiuan Yen, and Ellen Yi-Luen Do. 2018. Season Traveller: Multisensory Narration for Enhancing the Virtual Reality Experience. In Proceedings of the 2018 CHI Conference on Human Factors in Computing Systems (CHI ’18). ACM, New York, NY, USA, Article 577, 13 pages. https://doi.org/10.1145/3173574.3174151 [48] Jaime Reis. 2016. Short overview in parametric loudspeakers array technology and its implications in spatialization in electronic music. In International Computer Music Conference 2016. Michigan Publishing, 241–248. https://quod.lib.umich.edu/i/icmc/bbp2372.2016.047/1 [49] Francis Rumsey. 2013. Spatial Audio (Music Technology) 3rd ed. Focal Press. [50] Jaime Sánchez and Mauricio Sáenz. 2005. 3D Sound Interactive Environments for Problem Solving. In Proceedings of the 7th International ACM SIGACCESS Conference on Computers and Accessibility (Assets ’05). ACM, New York, NY, USA, 173–179. https://doi.org/10.1145/ 1090785.1090817 [51] Lauri Savioja and U. Peter Svensson. 2015. Overview of geometrical room acoustic modeling techniques. The Journal of the Acoustical Society of America 138, 2 (2015), 708–730. https://doi.org/10.1121/1. 4926438 [52] Gang Yong Song, Qiang Cheng, Bei Huang, Hui YuanDong, and Tie Jun Cui. 2016. Broadband fractal acoustic metamaterials for low-frequency sound attenuation. Applied Physics Letters 109, 13 (2016), 131901. https: //doi.org/10.1063/1.4963347 arXiv:https://doi.org/10.1063/1.4963347 [53] Robert E. Stevens, Thomas N. L. Jacoby, Ilinca S. Aricescu, and Daniel P. Rhodes. 2017. A review of adjustable lenses for head mounted displays. , 10335 pages. https://doi.org/10.1117/12.2276677 [54] Steven Strachan, Parisa Eslambolchilar, Roderick Murray-Smith, Stephen Hughes, and Sile O’Modhrain. 2005. GpsTunes: Controlling Navigation via Audio Feedback. In Proceedings of the 7th International Conference on Human Computer Interaction with Mobile Devices &Amp; Services (MobileHCI ’05). ACM, New York, NY, USA, 275–278. https://doi.org/10.1145/1085777.1085831 [55] Yutaka Takase and Shoichi Hasegawa. 2012. Presentation of Directional Information by Sound Field Control. In Proceedings of the 3rd Augmented Human International Conference (AH ’12). ACM, New York, NY, USA, Article 32, 3 pages. https://doi.org/10.1145/2160125.2160157 [56] Kun Tang, Chunyin Qiu, Manzhu Ke, Jiuyang Lu, Yangtao Ye, and Zhengyou Liu. 2014. Anomalous refraction of airborne sound through ultrathin metasurfaces. Scientific Reports 4 (2014). https://doi.org/10. 1038/srep06517 [57] D. H. Turnbull and F. S. Foster. 1991. Beam steering with pulsed two-dimensional transducer arrays. IEEE Transactions on Ultrasonics, Ferroelectrics, and Frequency Control 38, 4 (July 1991), 320–333. https: //doi.org/10.1109/58.84270 [58] Shi-Chang Wooh and Yijun Shi. 1998. Influence of phased array element size on beam steering behavior. Ultrasonics 36, 6 (1998), 737 – 749. https://doi.org/10.1016/S0041-624X(97)00164-9"
+    }, {
+      "page": 12,
+      "region": {
+        "x1": 54.0,
+        "x2": 558.001953125,
+        "y1": 750.914794921875,
+        "y2": 756.7197875976562
+      },
+      "text": "Paper 483 Page 13"
+    }, {
+      "page": 13,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 295.3877258300781,
+        "y1": 97.41058349609375,
+        "y2": 271.97998046875
+      },
+      "text": "[59] Yangbo Xie, Wenqi Wang, Huanyang Chen, Adam Konneker, BogdanIoan Popa, and Steven A. Cummer. 2014. Wavefront modulation and subwavelength diffractive acoustics with an acoustic metasurface. Nature Communications 5 (2014). https://doi.org/10.1038/ncomms6553 [60] Jun Yang, Woon-Seng Gan, Khim-Sia Tan, and Meng-Hwa Er. 2005. Acoustic beamforming of a parametric speaker comprising ultrasonic transducers. Sensors and Actuators A: Physical 125, 1 (2005), 91 – 99. https://doi.org/10.1016/j.sna.2005.04.037 [61] Chunfang Ye and Robert R. McLeod. 2008. GRIN lens and lens array fabrication with diffusion-driven photopolymer. Opt. Lett. 33, 22 (Nov 2008), 2575–2577. https://doi.org/10.1364/OL.33.002575 [62] Masahide Yoneyama, Jun-ichiroh Fujimoto, Yu Kawamo, and Shoichi Sasabe. 1983. The audio spotlight: An application of nonlinear interaction of sound waves to a new type of loudspeaker design. The Journal of the Acoustical Society of America 73, 5 (1983), 1532–1536. https://doi.org/10.1121/1.389414 [63] Seraphina Yong and Hao-Chuan Wang. 2018. Using Spatialized Audio to Improve Human Spatial Knowledge Acquisition in Virtual Reality."
+    }, {
+      "page": 13,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 559.5443115234375,
+        "y1": 97.41058349609375,
+        "y2": 271.97998046875
+      },
+      "text": "In Proceedings of the 23rd International Conference on Intelligent User Interfaces Companion (IUI ’18 Companion). ACM, New York, NY, USA, Article 51, 2 pages. https://doi.org/10.1145/3180308.3180360 [64] Nanfang Yu, Patrice Genevet, Mikhail A. Kats, Francesco Aieta, JeanPhilippe Tetienne, Federico Capasso, and Zeno Gaburro. 2011. Light Propagation with Phase Discontinuities: Generalized Laws of Reflection and Refraction. 334 (2011), 333–337. https://doi.org/10.1126/ science.1210713 [65] Bertram Yuh, An Liu, Robert Beatty, Alexander Jung, and Jeffrey Y C Wong. 2016. Focal therapy using magnetic resonance image-guided focused ultrasound in patients with localized prostate cancer. Journal of therapeutic ultrasound 4 (2016). Issue 8. https://doi.org/10.1186/ s40349-016-0054-y [66] Xuefeng Zhu, Kun Li, Peng Zhang, Jie Zhu, Jintao Zhang, Chao Tian, and Shengchun Liu. 2016. Implementation of dispersion-free slow acoustic wave propagation and phase engineering with helicalstructured metamaterials. Nature Communications 7 (2016). https: //doi.org/10.1038/ncomms11731"
+    }, {
+      "page": 13,
+      "region": {
+        "x1": 54.0,
+        "x2": 558.001953125,
+        "y1": 750.914794921875,
+        "y2": 756.7197875976562
+      },
+      "text": "Paper 483 Page 14"
+    }],
+    "title": {
+      "page": 10,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 380.7218933105469,
+        "y1": 682.9888305664062,
+        "y2": 689.4149780273438
+      },
+      "text": "REFERENCES"
+    }
+  }]
+}

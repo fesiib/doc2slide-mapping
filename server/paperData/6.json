@@ -1,0 +1,1717 @@
+{
+  "abstractText": {
+    "page": 0,
+    "region": {
+      "x1": 54.0,
+      "x2": 294.1781311035156,
+      "y1": 197.51925659179688,
+      "y2": 420.0
+    },
+    "text": "ABSTRACT Interferi is an on-body gesture sensing technique using acoustic interferometry. We use ultrasonic transducers resting on the skin to create acoustic interference patterns inside the wearer’s body, which interact with anatomical features in complex, yet characteristic ways. We focus on two areas of the body with great expressive power: the hands and face. For each, we built and tested a series of worn sensor configurations, which we used to identify useful transducer arrangements and machine learning features. We created final prototypes for the hand and face, which our study results show can support eleven- and nineclass gestures sets at 93.4% and 89.0% accuracy, respectively. We also evaluated our system in four continuous tracking tasks, including smile intensity and weight estimation, which never exceed 9.5% error. We believe these results show great promise and illuminate an interesting sensing technique for HCI applications."
+  },
+  "figures": [{
+    "caption": "Figure 8. Performance of different sensor geometries.",
+    "captionBoundary": {
+      "x1": 54.2400016784668,
+      "x2": 271.3431701660156,
+      "y1": 196.61375427246094,
+      "y2": 202.55999755859375
+    },
+    "figType": "Figure",
+    "imageText": [],
+    "name": "8",
+    "page": 5,
+    "regionBoundary": {
+      "x1": 54.0,
+      "x2": 294.0,
+      "y1": 72.0,
+      "y2": 188.0
+    }
+  }, {
+    "caption": "Figure 9. Performance of different transducer pairings.",
+    "captionBoundary": {
+      "x1": 319.44000244140625,
+      "x2": 542.76318359375,
+      "y1": 216.2937469482422,
+      "y2": 222.239990234375
+    },
+    "figType": "Figure",
+    "imageText": [],
+    "name": "9",
+    "page": 5,
+    "regionBoundary": {
+      "x1": 321.0,
+      "x2": 557.0,
+      "y1": 72.0,
+      "y2": 208.0
+    }
+  }, {
+    "caption": "Figure 10. Final transducer firing pairings. On the armband, each color represents a transducer firing pair. On the facemask, the orange dotted line refers to transducers within the same “island”, blue and red lines refer to vertical and diagonal firing pairs, respectively.",
+    "captionBoundary": {
+      "x1": 318.239990234375,
+      "x2": 557.6162719726562,
+      "y1": 665.3338012695312,
+      "y2": 712.5599975585938
+    },
+    "figType": "Figure",
+    "imageText": [],
+    "name": "10",
+    "page": 5,
+    "regionBoundary": {
+      "x1": 318.0,
+      "x2": 558.0,
+      "y1": 594.0,
+      "y2": 657.0
+    }
+  }, {
+    "caption": "Figure 21. Interferi could be integrated into future smartwatch wristbands and AR/VR headset liners, as seen in these hardware mock-ups.",
+    "captionBoundary": {
+      "x1": 54.2400016784668,
+      "x2": 293.6509094238281,
+      "y1": 169.01377868652344,
+      "y2": 195.5999755859375
+    },
+    "figType": "Figure",
+    "imageText": [],
+    "name": "21",
+    "page": 10,
+    "regionBoundary": {
+      "x1": 54.0,
+      "x2": 294.0,
+      "y1": 72.0,
+      "y2": 160.0
+    }
+  }, {
+    "caption": "Figure 12. Our final prototypes for the arm and face.",
+    "captionBoundary": {
+      "x1": 54.2400016784668,
+      "x2": 266.9618225097656,
+      "y1": 709.9737548828125,
+      "y2": 715.9199829101562
+    },
+    "figType": "Figure",
+    "imageText": [],
+    "name": "12",
+    "page": 6,
+    "regionBoundary": {
+      "x1": 54.0,
+      "x2": 293.0,
+      "y1": 627.0,
+      "y2": 701.0
+    }
+  }, {
+    "caption": "Figure 11. Performance of different phase offsets.",
+    "captionBoundary": {
+      "x1": 54.2400016784668,
+      "x2": 255.7426300048828,
+      "y1": 243.6537322998047,
+      "y2": 249.5999755859375
+    },
+    "figType": "Figure",
+    "imageText": [],
+    "name": "11",
+    "page": 6,
+    "regionBoundary": {
+      "x1": 55.0,
+      "x2": 292.0,
+      "y1": 72.0,
+      "y2": 235.0
+    }
+  }, {
+    "caption": "Figure 19. Our coarse hand pose task evaluated tracking of the thumb (A → B) and four other fingers (A → C). We used a Leap Motion controller for ground truth.",
+    "captionBoundary": {
+      "x1": 54.2400016784668,
+      "x2": 293.5596923828125,
+      "y1": 133.73374938964844,
+      "y2": 162.239990234375
+    },
+    "figType": "Figure",
+    "imageText": [],
+    "name": "19",
+    "page": 9,
+    "regionBoundary": {
+      "x1": 54.0,
+      "x2": 294.0,
+      "y1": 72.0,
+      "y2": 125.0
+    }
+  }, {
+    "caption": "Figure 20. Example thumb (left) and four-finger (right) tracking from one participant, five rounds of data collection. Leap Motion predictions shown in green; Interferi plotted in purple.",
+    "captionBoundary": {
+      "x1": 318.239990234375,
+      "x2": 557.543212890625,
+      "y1": 155.8137664794922,
+      "y2": 192.47998046875
+    },
+    "figType": "Figure",
+    "imageText": [],
+    "name": "20",
+    "page": 9,
+    "regionBoundary": {
+      "x1": 318.0,
+      "x2": 558.0,
+      "y1": 72.0,
+      "y2": 147.0
+    }
+  }, {
+    "caption": "Figure 1. We ran software and physical simulations of ultrasonic propagation in a column of water (seen from above here as four circles). Bright green is high pressure and dark blue is low pressure; active 40 kHz transducers shown in red. See text for experiment setup details.",
+    "captionBoundary": {
+      "x1": 318.239990234375,
+      "x2": 557.6019287109375,
+      "y1": 294.7737731933594,
+      "y2": 341.760009765625
+    },
+    "figType": "Figure",
+    "imageText": [],
+    "name": "1",
+    "page": 2,
+    "regionBoundary": {
+      "x1": 325.0,
+      "x2": 551.0,
+      "y1": 72.0,
+      "y2": 290.0
+    }
+  }, {
+    "caption": "Figure 14. Confusion matrices (within-session) for the complete set, eyes set, and mouth set on the face.",
+    "captionBoundary": {
+      "x1": 54.959999084472656,
+      "x2": 475.37451171875,
+      "y1": 709.9737548828125,
+      "y2": 715.9199829101562
+    },
+    "figType": "Figure",
+    "imageText": [],
+    "name": "14",
+    "page": 7,
+    "regionBoundary": {
+      "x1": 54.0,
+      "x2": 559.0,
+      "y1": 567.0,
+      "y2": 704.0
+    }
+  }, {
+    "caption": "Figure 13. Confusion matrices (within-session) for the complete set, hand set and pinch set on the arm.",
+    "captionBoundary": {
+      "x1": 54.2400016784668,
+      "x2": 471.6212158203125,
+      "y1": 216.2937469482422,
+      "y2": 222.239990234375
+    },
+    "figType": "Figure",
+    "imageText": [],
+    "name": "13",
+    "page": 7,
+    "regionBoundary": {
+      "x1": 54.0,
+      "x2": 558.0,
+      "y1": 72.0,
+      "y2": 210.0
+    }
+  }, {
+    "caption": "Figure 4. The four geometries for the arm and face.",
+    "captionBoundary": {
+      "x1": 317.760009765625,
+      "x2": 524.9117431640625,
+      "y1": 712.1337890625,
+      "y2": 718.0800170898438
+    },
+    "figType": "Figure",
+    "imageText": [],
+    "name": "4",
+    "page": 3,
+    "regionBoundary": {
+      "x1": 317.0,
+      "x2": 556.0,
+      "y1": 618.0,
+      "y2": 708.0
+    }
+  }, {
+    "caption": "Figure 2. Custom Interferi sensor board. A) DC-DC converter, B) Teensy 3.6, C) high voltage amplifiers, D) multiplexer, and E) filter and amplification stage.",
+    "captionBoundary": {
+      "x1": 51.36009979248047,
+      "x2": 290.66064453125,
+      "y1": 691.4937744140625,
+      "y2": 717.8399658203125
+    },
+    "figType": "Figure",
+    "imageText": [],
+    "name": "2",
+    "page": 3,
+    "regionBoundary": {
+      "x1": 82.0,
+      "x2": 259.0,
+      "y1": 595.0,
+      "y2": 682.0
+    }
+  }, {
+    "caption": "Figure 3. A schematic view of Interferi’s hardware.",
+    "captionBoundary": {
+      "x1": 318.239990234375,
+      "x2": 523.877685546875,
+      "y1": 192.5337371826172,
+      "y2": 198.47998046875
+    },
+    "figType": "Figure",
+    "imageText": [],
+    "name": "3",
+    "page": 3,
+    "regionBoundary": {
+      "x1": 318.0,
+      "x2": 558.0,
+      "y1": 72.0,
+      "y2": 191.0
+    }
+  }, {
+    "caption": "Figure 15. Our smile intensity task included four levels of smile. Examples shown here, left to right: mouth neutral, small smile, medium smile, and large smile.",
+    "captionBoundary": {
+      "x1": 54.2400016784668,
+      "x2": 293.5467529296875,
+      "y1": 152.6937713623047,
+      "y2": 179.03997802734375
+    },
+    "figType": "Figure",
+    "imageText": [],
+    "name": "15",
+    "page": 8,
+    "regionBoundary": {
+      "x1": 54.0,
+      "x2": 294.0,
+      "y1": 72.0,
+      "y2": 144.0
+    }
+  }, {
+    "caption": "Figure 18. Example wrist-angle tracking from one participant, five rounds of data collection. Leap Motion prediction shown in green; Interferi prediction in purple.",
+    "captionBoundary": {
+      "x1": 318.239990234375,
+      "x2": 557.6408081054688,
+      "y1": 689.8137817382812,
+      "y2": 716.1600341796875
+    },
+    "figType": "Figure",
+    "imageText": [],
+    "name": "18",
+    "page": 8,
+    "regionBoundary": {
+      "x1": 318.0,
+      "x2": 558.0,
+      "y1": 577.0,
+      "y2": 681.0
+    }
+  }, {
+    "caption": "Figure 16. Our lifted weights task included five weights.",
+    "captionBoundary": {
+      "x1": 54.0,
+      "x2": 280.4806823730469,
+      "y1": 710.2138061523438,
+      "y2": 716.1600341796875
+    },
+    "figType": "Figure",
+    "imageText": [],
+    "name": "16",
+    "page": 8,
+    "regionBoundary": {
+      "x1": 54.0,
+      "x2": 294.0,
+      "y1": 618.0,
+      "y2": 701.0
+    }
+  }, {
+    "caption": "Figure 17. Our wrist angle task used a Leap Motion controller to provide ground truth. Participants swept their wrist from left to right (with all intermediate angles recorded).",
+    "captionBoundary": {
+      "x1": 318.239990234375,
+      "x2": 557.5742797851562,
+      "y1": 133.97373962402344,
+      "y2": 160.55999755859375
+    },
+    "figType": "Figure",
+    "imageText": [],
+    "name": "17",
+    "page": 8,
+    "regionBoundary": {
+      "x1": 318.0,
+      "x2": 558.0,
+      "y1": 72.0,
+      "y2": 125.0
+    }
+  }, {
+    "caption": "Figure 5. Hand gesture set: A) Relaxed, B) Fist, C) Stretch, D) Right, E) Left, F) Thumbs Up, G) Spider-Man, H) Index Pinch, I) Middle Pinch, J) Ring Pinch, and K) Little Pinch. “Coarse hand” subset underscored in green; “pinch” subset in yellow.",
+    "captionBoundary": {
+      "x1": 54.2400016784668,
+      "x2": 558.4783325195312,
+      "y1": 132.7737274169922,
+      "y2": 148.79998779296875
+    },
+    "figType": "Figure",
+    "imageText": [],
+    "name": "5",
+    "page": 4,
+    "regionBoundary": {
+      "x1": 54.0,
+      "x2": 559.0,
+      "y1": 72.0,
+      "y2": 131.0
+    }
+  }, {
+    "caption": "Figure 6. Facial gesture set: A) Relaxed, B) Left Eye Closed, C) Right Eye Closed, D) Both Eyes Closed, E) Eyebrows Raised, F) Smile, G) Frown, H) Mouth Open, and I) Kissy Face. “Eye” gesture subset underscored in pink; “mouth” subset in blue.",
+    "captionBoundary": {
+      "x1": 54.2400016784668,
+      "x2": 558.478759765625,
+      "y1": 230.4537811279297,
+      "y2": 246.719970703125
+    },
+    "figType": "Figure",
+    "imageText": [],
+    "name": "6",
+    "page": 4,
+    "regionBoundary": {
+      "x1": 54.0,
+      "x2": 559.0,
+      "y1": 161.0,
+      "y2": 228.0
+    }
+  }, {
+    "caption": "Figure 7. Example waveforms from a single receiver (same emitter configuration). Top: hand gestures (Relaxed, Right, Left). Bottom: face gestures (Relaxed, Smile, Kissy Face).",
+    "captionBoundary": {
+      "x1": 318.239990234375,
+      "x2": 557.5894775390625,
+      "y1": 689.5737915039062,
+      "y2": 716.1600341796875
+    },
+    "figType": "Figure",
+    "imageText": [],
+    "name": "7",
+    "page": 4,
+    "regionBoundary": {
+      "x1": 318.0,
+      "x2": 546.0,
+      "y1": 522.0,
+      "y2": 686.0
+    }
+  }],
+  "sections": [{
+    "paragraphs": [{
+      "page": 0,
+      "region": {
+        "x1": 53.99998474121094,
+        "x2": 294.1652526855469,
+        "y1": 436.07257080078125,
+        "y2": 467.52142333984375
+      },
+      "text": "CCS CONCEPTS Human-centered computing → Human computer interaction (HCI) → Interaction techniques → Gestural input."
+    }, {
+      "page": 0,
+      "region": {
+        "x1": 54.0,
+        "x2": 294.0859069824219,
+        "y1": 483.353515625,
+        "y2": 512.40283203125
+      },
+      "text": "KEYWORDS Biosensing; Hand Input; Hand Gesture; Face Gesture; Acoustic Interferometry; Acoustic; Interaction Techniques; Wearables"
+    }, {
+      "page": 0,
+      "region": {
+        "x1": 53.99205017089844,
+        "x2": 294.07501220703125,
+        "y1": 527.876220703125,
+        "y2": 582.2469482421875
+      },
+      "text": "ACM Reference format: Yasha Iravantchi, Yang Zhang, Evi Bernitsas, Mayank Goel and Chris Harrison. 2019. Interferi: Gesture Sensing using On-Body Acoustic Interferometry. In 2019 CHI Conference on Human Factors in Computing Systems Proceedings (CHI 2019), May 4–9, 2019, Glasgow, Scotland, UK. ACM, New York, NY, USA. Paper 276, 13 pages. https://doi.org/10.1145/3290605.3300506"
+    }]
+  }, {
+    "paragraphs": [{
+      "page": 0,
+      "region": {
+        "x1": 317.760009765625,
+        "x2": 557.9461059570312,
+        "y1": 213.61129760742188,
+        "y2": 319.6781311035156
+      },
+      "text": "Sensing expressive hand and face gestures using a minimally-invasive, worn system has proven challenging, despite numerous immediate applications, including gesturedriven interfaces and social VR experiences. Many approaches have been explored in the Human-Computer Interaction literature, including electromyography [35][36], bio-acoustics [14][22], electrical impedance tomography [45][46], contour and pressure sensing [8], and worn computer vision systems [21]."
+    }, {
+      "page": 0,
+      "region": {
+        "x1": 317.760009765625,
+        "x2": 557.93310546875,
+        "y1": 332.0815734863281,
+        "y2": 488.6289367675781
+      },
+      "text": "In this work, we introduce Interferi, a new approach for on-body sensing that uses acoustic interferometry. We use ultrasonic transducers resting on the skin to project structured acoustic interference patterns inside a wearer’s body. These patterns interact with anatomical features, such as fat, muscles and bones, in complex and characteristic ways. These interactions can be learned by classifiers to power interactive applications. We built and tested a series of armworn bands that can sense hand gestures (i.e., pose), which could be integrated into e.g., a smartwatch to enable input beyond the touchscreen. We also built a facial expression sensing mask, which could be integrated into e.g., AR/VR headsets to enable more expressive social experiences."
+    }, {
+      "page": 0,
+      "region": {
+        "x1": 54.71302795410156,
+        "x2": 557.9351196289062,
+        "y1": 501.59686279296875,
+        "y2": 713.998291015625
+      },
+      "text": "We iteratively developed Interferi, starting with software and physical simulations to confirm the basic operating principle. We then developed custom hardware and software to drive eight acoustic transducers (40 kHz) and connected in different arrangements for arm-band and face-mask form factors. We then ran a user study with four participants to evaluate these designs and different transducer configurations. From these results, we selected a final set of features, as well as our best performing arm band and face mask. Using these two final designs, we ran a second user study to assess discrete gesture recognition performance for the hands and face, demonstrating classification accuracies of 93.4% and 89.0%, respectively. We performed a third and final user study to assess continuous tracking performance, which included four tasks: smile intensity, lifted-weight estimation, wrist angle, and hand pose, which never exceed 9.5% error. Permission to make digital or hard copies of all or part of this work for personal or classroom use is granted without fee provided that copies are not made or distributed for profit or commercial advantage and that copies bear this notice and the full citation on the first page. Copyrights for components of this work owned by others than ACM must be honored. Abstracting with credit is permitted. To copy otherwise, or republish, to post on servers or to redistribute to lists, requires prior specific permission and/or a fee. Request permissions from permissions@acm.org). CHI 2019, May 4-9, 2019, Glasgow, Scotland, UK. © 2019 Copyright is held by the owner/author(s). Publication rights licensed to ACM. ACM ISBN 978-1-4503-5970-2/19/05...$15.00. DOI: https://doi.org/10.1145/3290605.3300506"
+    }, {
+      "page": 0,
+      "region": {
+        "x1": 54.0,
+        "x2": 558.001953125,
+        "y1": 750.914794921875,
+        "y2": 756.7197875976562
+      },
+      "text": "Paper 276 Page 1"
+    }],
+    "title": {
+      "page": 0,
+      "region": {
+        "x1": 317.760009765625,
+        "x2": 415.12066650390625,
+        "y1": 197.51351928710938,
+        "y2": 204.0
+      },
+      "text": "1 INTRODUCTION"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 1,
+      "region": {
+        "x1": 53.979827880859375,
+        "x2": 294.1358337402344,
+        "y1": 90.73605346679688,
+        "y2": 159.36578369140625
+      },
+      "text": "We first review prior sensing systems that enable similar hand and face sensing capabilities as Interferi. We focus on self-contained worn systems as opposed to those deployed in the environment. We then cover work that more closely aligns with our technical approach of ultrasound acoustometry, both reflectometry and interferometry."
+    }],
+    "title": {
+      "page": 1,
+      "region": {
+        "x1": 54.0,
+        "x2": 152.59349060058594,
+        "y1": 74.63827514648438,
+        "y2": 81.124755859375
+      },
+      "text": "2 RELATED WORK"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 1,
+      "region": {
+        "x1": 53.959716796875,
+        "x2": 294.1459045410156,
+        "y1": 190.57852172851562,
+        "y2": 309.12445068359375
+      },
+      "text": "One of the most popular approaches for detecting hand gestures is to attach sensors to the hands. For example, Perng et al. [32] developed a glove with accelerometers at the fingertips to detect static hand poses. ThumbRing’s fingerborne accelerometer [41] can track fine grained movements for discrete input tasks. Beyond accelerometers, Whitmire et al. [43] developed a glove that uses conductive fabric to detect finger and thumb interactions, and thus gestures. BackHand [24] used strain gauges on the back of hand to detect the movement of finger tendons for gesture sensing."
+    }, {
+      "page": 1,
+      "region": {
+        "x1": 54.00004577636719,
+        "x2": 294.17218017578125,
+        "y1": 321.8504333496094,
+        "y2": 453.1171569824219
+      },
+      "text": "To avoid directly instrumenting the fingers or hands, researchers have considered many approaches that relocate sensing to the wrist or arm. Optical methods are popular for this goal, for example, WristWhirl [11] detects the angle of a hand using an array of infrared proximity sensors. Cameras have been used to recognize discrete hand gestures [42] and even reconstruct a 3D model of the hand [21]. There is also a body of research that leverages the fact that the arm’s contour deforms when a user performs hand gestures, which can be captured using pressure [8][19], infrared proximity [30], and capacitive sensors [34]."
+    }, {
+      "page": 1,
+      "region": {
+        "x1": 53.98997497558594,
+        "x2": 294.1600036621094,
+        "y1": 465.8431701660156,
+        "y2": 597.1099243164062
+      },
+      "text": "Instead of relying on external signals, researchers have also investigated internal signals (i.e., inside the body) to reveal hand state. Most prevalent in the literature is Electromyography (EMG), which passively detects electrical signals generated by muscle movement [20][35][36][39]. Electrical Impedance Tomography is an example active approach, which has been used to sense changes in the interior anatomy of the arm for hand gesture sensing [45][46]. This research shows great promise, but has been shown to be sensitive to skin contact condition and environmental EM interference."
+    }, {
+      "page": 1,
+      "region": {
+        "x1": 54.00004959106445,
+        "x2": 294.2164611816406,
+        "y1": 609.8359375,
+        "y2": 715.9027099609375
+      },
+      "text": "Most related to Interferi are approaches that use acoustic signals. One approach is to passively listen to the microvibrations generated by hand gestures. For example, Amento et al. [2], Hambone [9] and Skinput [14] placed acoustic sensors on the skin to detect finger taps, flicks and pinches. More recent research has shown that the motion sensors in smartwatches can be used for similar purposes [22][44][47]. Active acoustic approaches are also possible, for example, the “Sound of Touch” [29] uses a transmitter-"
+    }, {
+      "page": 1,
+      "region": {
+        "x1": 317.7834777832031,
+        "x2": 557.9385375976562,
+        "y1": 75.35397338867188,
+        "y2": 168.94183349609375
+      },
+      "text": "receiver armband to detect grasping gestures on an arm. FingerPing [48] places a transmitter on the wrist and uses a ring receiver to detect gestures on the hand. Perhaps most technically sophisticated is EchoFlex [28], which used an off-the-shelf medical ultrasound machine to resolve a highresolution interior image of an arm for computer-visiondriven hand gesture sensing. This method requires the use of acoustic gel, making it cumbersome for everyday use."
+    }],
+    "title": {
+      "page": 1,
+      "region": {
+        "x1": 53.98992919921875,
+        "x2": 213.54522705078125,
+        "y1": 174.48074340820312,
+        "y2": 180.96722412109375
+      },
+      "text": "2.1 Hand/Arm Gesture Sensing"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 1,
+      "region": {
+        "x1": 317.75323486328125,
+        "x2": 557.9453735351562,
+        "y1": 200.15457153320312,
+        "y2": 406.55902099609375
+      },
+      "text": "Digitization of facial expressions has been a long-standing research topic. The most common approach is to use cameras and computer vision operating in the environment (see [7] for a survey). More relevant to Interferi are headsetmounted camera approaches, for example, EyeSpyVR [1], which uses the front facing camera on a smartphone to capture eye blinks and coarse gaze direction by looking through the VR headset lens. In [23], a camera on the underside of a VR headset was used to capture mouth pose. Camera based methods require line of sight, which can be challenging with e.g., a worn headset that occludes much of the face. For this reason, other non-visual methods have been considered, such as measuring facial muscle movement with EMG [12][13]. It is also possible to infer face pose by measuring skin contour changes, using e.g., infrared proximity [25][26][38] and pressure sensors [23][37]. Deformations in the ear canal have also been used [3][27]."
+    }],
+    "title": {
+      "page": 1,
+      "region": {
+        "x1": 317.79351806640625,
+        "x2": 455.5093994140625,
+        "y1": 184.05679321289062,
+        "y2": 190.54327392578125
+      },
+      "text": "2.2 Facial Gesture Sensing"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 1,
+      "region": {
+        "x1": 317.7462158203125,
+        "x2": 557.9384765625,
+        "y1": 437.771728515625,
+        "y2": 619.196533203125
+      },
+      "text": "Ultrasonic sensing has been used in many domains, from oceanography [5] to applied physics [4][18]. A common class of ultrasound sensing is reflectometry, where an acoustic signal is emitted, and reflections are recorded. Sonar (and echolocation in the animal world) emits pulses of ultrasound and use the time-of-flight of reflections to determine distance. More complex is medical ultrasound, which uses an array of small ultrasonic transducers to create a steerable focal point of acoustic energy (i.e., beamforming) to reveal interior structures [4][16]. To effectively beamform in a liquid medium, megahertz-scale frequencies must be used, which also necessitates the use of impedancematching gels on the body, impractical for consumer use. Finally, we note that ultrasound in the body has been found to be safe in many comprehensive studies [15][16]."
+    }],
+    "title": {
+      "page": 1,
+      "region": {
+        "x1": 317.7563781738281,
+        "x2": 459.23126220703125,
+        "y1": 421.6739807128906,
+        "y2": 428.16046142578125
+      },
+      "text": "2.3 Acoustic Reflectometry"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 1,
+      "region": {
+        "x1": 317.75634765625,
+        "x2": 557.9125366210938,
+        "y1": 650.1673583984375,
+        "y2": 706.3179931640625
+      },
+      "text": "Interferometry differs from the above techniques in several key ways. Foremost, it diverges from sonar reflectometry in that time-of-flight is not the value of interest, as well as the fact it uses multiple emitters/receivers surrounding an area of interest. Secondly, although both techniques rely on"
+    }, {
+      "page": 1,
+      "region": {
+        "x1": 54.0,
+        "x2": 558.0020141601562,
+        "y1": 750.914794921875,
+        "y2": 756.7197875976562
+      },
+      "text": "Paper 276 Page 2"
+    }, {
+      "page": 2,
+      "region": {
+        "x1": 54.0,
+        "x2": 294.2043762207031,
+        "y1": 75.37411499023438,
+        "y2": 244.32012939453125
+      },
+      "text": "interference effects, beamforming is used to create a coherent wavefront, as opposed to a distributed pattern. Acoustic beamforming is most often used in a reflectometry-like manner, with focused “beams” reflecting signals back to a source. Indeed, while reflectometry naturally lends itself to imaging and depth sensing, the low spatial frequency and overlapping signals of our kilohertz-scale interferometry make it a poor technique for such applications. However, the signal is perfect for projecting nodes and troughs of acoustic pressure at gross-anatomy-scale inside the body. Even small movements can cause a node to shift from muscle to bone, creating a large reflection, and also create secondary interference effects, all of which radiate back out to the skin where they can be captured by many sensors."
+    }, {
+      "page": 2,
+      "region": {
+        "x1": 54.040279388427734,
+        "x2": 294.26995849609375,
+        "y1": 257.0461120605469,
+        "y2": 350.63385009765625
+      },
+      "text": "Despite an extensive literature search, we were unable to find any HCI work that takes advantage of active acoustic interferometry as a sensing technique. The closest we could find are systems that use a grid of ultrasonic transmitters to create acoustic interference to provide in-air haptics [6] and also levitate small objects [17]. Thus, we hope this work can draw attention to this interesting sensing technique and encourage future use."
+    }],
+    "title": {
+      "page": 1,
+      "region": {
+        "x1": 317.7663879394531,
+        "x2": 462.59796142578125,
+        "y1": 634.3115234375,
+        "y2": 640.7979736328125
+      },
+      "text": "2.4 Acoustic Interferometry"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 2,
+      "region": {
+        "x1": 54.05039978027344,
+        "x2": 294.2406921386719,
+        "y1": 391.68463134765625,
+        "y2": 573.1094360351562
+      },
+      "text": "Before developing our system, we conducted a series of small-scale tests to confirm our theory-based understanding of the propagation of compressive ultrasonic waves in a liquid medium. For this, we use a 120 mm diameter column of water at 20°C (i.e., 1482 m/s propagation speed) as a rough approximation of a human limb. We started with software simulations, testing both single and multi-emitter configurations, and confirmed a wide variety of interference patterns could be generated by varying position and relative phase of transducers. Figure 1, top, shows the output of two such simulations – a single transmitter and two transmitters (in phase). Of course, the real world is more variable, with e.g., transducer impedance mismatches and multipath interference. For this reason, we also ran tests using an actual 120 mm, water-filled, acrylic cylinder."
+    }, {
+      "page": 2,
+      "region": {
+        "x1": 54.080657958984375,
+        "x2": 294.2477722167969,
+        "y1": 585.83544921875,
+        "y2": 717.1022338867188
+      },
+      "text": "Using this setup, we tested different transducer arrangements, angles and relative phase offsets. In order to create a comprehensive view of ultrasonic waveforms propagating and interfering, we used a sensor attached to a CNC gantry and scanned the water bath. For any given emitter configuration (e.g., two emitters, at a right angle, 0° phase offset), the sensor would be moved to 113 points inside the bath (on a 5 mm grid). At each point in the bath, the same emitter sequence was fired and the acoustic interaction at the sensor was recorded. After waveforms at all points were captured, they could be synchronously replayed (see Video"
+    }, {
+      "page": 2,
+      "region": {
+        "x1": 317.84405517578125,
+        "x2": 558.00390625,
+        "y1": 358.0677185058594,
+        "y2": 389.0183410644531
+      },
+      "text": "Figure) to visualize the acoustics inside the bath. Figure 1, bottom, shows the physical results for a single transmitter and two transmitters (in phase)."
+    }, {
+      "page": 2,
+      "region": {
+        "x1": 317.76171875,
+        "x2": 558.0360107421875,
+        "y1": 401.7443542480469,
+        "y2": 582.9570922851562
+      },
+      "text": "Our software and physical models closely matched and helped ground our understanding of the operating principle. More specifically, it allowed us to test and verify a wide variety of transducer arrangements and signals that would be difficult understand by collecting data on the body alone (which can only be sensed at the circumference, i.e., on the skin, but not inside the body). We also used these experiments to test over a dozen different ultrasonic transducers with different resonant frequencies (40-200 kHz), power ratings (5-140 V), physical size (10-18 mm diameter), and beam width (7-70°). We tested transducers by driving them at their maximum rated voltage and measuring Vpp at a matching transducer placed 1cm away in the water bath. This led us to select [33] – a 16 mm diameter, 40 kHz transducer with a 70° beam width and 140 V max rating."
+    }],
+    "title": {
+      "page": 2,
+      "region": {
+        "x1": 54.05039978027344,
+        "x2": 146.09994506835938,
+        "y1": 375.5868835449219,
+        "y2": 382.0733642578125
+      },
+      "text": "3 PILOT MODELS"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 2,
+      "region": {
+        "x1": 317.751708984375,
+        "x2": 557.9076538085938,
+        "y1": 623.292236328125,
+        "y2": 716.8800048828125
+      },
+      "text": "Interferi consists of three main components. First is our custom driver board (Figure 2), which generates, captures, and processes ultrasonic signals. Next are the worn sensors themselves, which contain ultrasonic transducers that emit and receive signals. Finally, we have laptop-based software that receives data from the hardware and performs additional processing and machine learning. We now describe these elements in greater detail."
+    }, {
+      "page": 2,
+      "region": {
+        "x1": 54.0,
+        "x2": 558.001953125,
+        "y1": 750.914794921875,
+        "y2": 756.7197875976562
+      },
+      "text": "Paper 276 Page 3"
+    }],
+    "title": {
+      "page": 2,
+      "region": {
+        "x1": 317.76177978515625,
+        "x2": 427.5872802734375,
+        "y1": 607.1945190429688,
+        "y2": 613.6809692382812
+      },
+      "text": "4 IMPLEMENTATION"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 3,
+      "region": {
+        "x1": 53.98992919921875,
+        "x2": 294.2138977050781,
+        "y1": 90.73605346679688,
+        "y2": 259.67724609375
+      },
+      "text": "Our worn sensors incorporate eight piezoelectric transducers (identified in the previous study) that can emit and receive ultrasonic acoustic signal. To overcome the acoustic impedance mismatch between transducer and skin, we selected a high-voltage transducer (140 Vpp max), which obviates the need for coupling agents such as acoustic gel. To drive these transducers with software-defined waveforms, we built a custom board (Figures 2 & 3) with three main components: a high voltage EMCO SIP100 DC-DC power regulator [10], high voltage amplifiers, and multiplexed analog frontend. Our board can configure any number of transducers as input or output. We used a Teensy 3.6 [39] (overclocked to 240 MHz) for generating drive signals, reading transducers, and USB communication."
+    }],
+    "title": {
+      "page": 3,
+      "region": {
+        "x1": 54.0,
+        "x2": 149.97869873046875,
+        "y1": 74.63827514648438,
+        "y2": 81.124755859375
+      },
+      "text": "4.1 Sensor Board"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 3,
+      "region": {
+        "x1": 54.01164245605469,
+        "x2": 294.170654296875,
+        "y1": 290.88995361328125,
+        "y2": 421.9147644042969
+      },
+      "text": "Since acoustic signals propagate at high speed (~1500 meters per second under water, and even faster in semi-solid mediums like the body), generating highly synchronized drive signals is crucial for controlled interferometry. In order to control the offset and phase of each transducer interpedently at a granularity of ~0.1° at 40 kHz (the equivalent of a single clock cycle on our 240 MHz microcontroller), it is necessary to pre-generate waveforms and save them to memory. We then load patterns sequentially into a I/O map register, which allows us to toggle 8 output pins simultaneously in a single clock cycle (i.e., 4.17 ns)."
+    }],
+    "title": {
+      "page": 3,
+      "region": {
+        "x1": 54.02174377441406,
+        "x2": 191.74072265625,
+        "y1": 274.7922058105469,
+        "y2": 281.2786865234375
+      },
+      "text": "4.2 Waveform Generation"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 3,
+      "region": {
+        "x1": 54.000640869140625,
+        "x2": 294.19708251953125,
+        "y1": 453.1274719238281,
+        "y2": 571.6751708984375
+      },
+      "text": "The I/O map register toggles its digital pins to generate a 3.3 Vpp 40 kHz square wave signal. This signal is then amplified to 100 Vpp to drive the transducers. To reduce amplification lag and reduce crosstalk, each transducer has a dedicated amplifier. To ensure smooth transitions between transducer combinations, we clamp transducers to ground for 5 µs after each firing, which reduces transducer ringing and improves setting time. During this idle period is also when we perform waveform generation, described in the previous section."
+    }],
+    "title": {
+      "page": 3,
+      "region": {
+        "x1": 54.02177429199219,
+        "x2": 181.48135375976562,
+        "y1": 437.02972412109375,
+        "y2": 443.5162048339844
+      },
+      "text": "4.3 Waveform Emission"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 3,
+      "region": {
+        "x1": 317.75390625,
+        "x2": 557.9574584960938,
+        "y1": 232.81076049804688,
+        "y2": 338.8790283203125
+      },
+      "text": "On the receiving side, the circuit has an active high pass filter with a fixed gain (fc=39 kHz, G= 5) and a secondary amplification stage with adjustable gain up to 40x. We multiplex the analog frontend to connect to the transducers, one at a time. The amplified signal is DC biased to 1.67 V (i.e., VADC/2) and sampled by the microcontroller’s 12-bit ADC at 480 kHz. For each transducer configuration, we record 250 µs worth of data (i.e., 120 samples), which is transmitted to a laptop over USB for further computation."
+    }],
+    "title": {
+      "page": 3,
+      "region": {
+        "x1": 317.75390625,
+        "x2": 433.06402587890625,
+        "y1": 216.71298217773438,
+        "y2": 223.199462890625
+      },
+      "text": "4.4 Analog Front End"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 3,
+      "region": {
+        "x1": 317.7742004394531,
+        "x2": 557.9364013671875,
+        "y1": 370.09173583984375,
+        "y2": 488.63751220703125
+      },
+      "text": "In total, configuring and reading 120 samples of data for a single transducer configuration takes 255 µs (including the 5 µs clamping period). Thus, our board can capture 3922 transducer configurations per second at full rate (not including e.g., USB communication). As we will discuss later, our final design for hand gesture sensing utilizes 30 transducers configurations, yielding a raw sensing frame rate of 133 FPS (51 FPS with communication overhead). Our face sensor uses 48 configurations, yielding a raw sensing frame rate of 82 FPS (32 FPS in practice)."
+    }],
+    "title": {
+      "page": 3,
+      "region": {
+        "x1": 317.774169921875,
+        "x2": 399.7688293457031,
+        "y1": 353.9939880371094,
+        "y2": 360.48046875
+      },
+      "text": "4.5 Framerate"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 3,
+      "region": {
+        "x1": 317.7742614746094,
+        "x2": 557.9728393554688,
+        "y1": 519.8502197265625,
+        "y2": 600.7169799804688
+      },
+      "text": "We generated worn designs for the hands and face using basic taxonomies, informed in part by our pilot modeling study. For the arms, one design axis was whether the transducers were arranged together (contiguous) or split into two groups (split). On the other axis, the transducers either ran down the length of the arm (linear) or wrapped around the arm (ring). For the face, we explored horizontally"
+    }, {
+      "page": 3,
+      "region": {
+        "x1": 54.0,
+        "x2": 558.001953125,
+        "y1": 750.914794921875,
+        "y2": 756.7197875976562
+      },
+      "text": "Paper 276 Page 4"
+    }, {
+      "page": 4,
+      "region": {
+        "x1": 54.0,
+        "x2": 294.141845703125,
+        "y1": 265.3720397949219,
+        "y2": 296.4033203125
+      },
+      "text": "symmetric vs. asymmetric transducer arrangements, and also brow-centric vs. distributed. This yielded four arm designs and four face designs, illustrated in Figure 4."
+    }],
+    "title": {
+      "page": 3,
+      "region": {
+        "x1": 317.7944030761719,
+        "x2": 471.7069091796875,
+        "y1": 503.7524719238281,
+        "y2": 510.23895263671875
+      },
+      "text": "4.6 Transducer Arrangements"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 4,
+      "region": {
+        "x1": 53.99995422363281,
+        "x2": 294.1458740234375,
+        "y1": 327.61602783203125,
+        "y2": 408.7247009277344
+      },
+      "text": "We did not optimize power consumption in our proof-ofconcept hardware, which is powered by 5V over USB. Nonetheless, we did measure power draw: ~400mA total, of which 250mA is from our overclocked Teeny 3.6 board. Our DC-DC converter consumes ~140mA, most of which is conversion loss. All other components, including our transducers, consume ~10mA."
+    }],
+    "title": {
+      "page": 4,
+      "region": {
+        "x1": 54.0201416015625,
+        "x2": 182.44338989257812,
+        "y1": 311.5182800292969,
+        "y2": 318.0047607421875
+      },
+      "text": "4.7 Power Consumption"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 4,
+      "region": {
+        "x1": 54.01005172729492,
+        "x2": 294.2145080566406,
+        "y1": 439.9374084472656,
+        "y2": 533.283203125
+      },
+      "text": "Our machine learning pipeline, running on a laptop, converts incoming waveform data as captured by our hardware into features. For discrete classification, we use Scikitlearn’s Random Forest Classifier (default parameters, 200 trees) and for continuous classification we use Scikitlearn’s Extra Trees Regressor (default parameters, 200 trees) [31]. All of these tasks were performed on a standard configuration 2017 15” MacBook Pro."
+    }],
+    "title": {
+      "page": 4,
+      "region": {
+        "x1": 54.01005554199219,
+        "x2": 172.22323608398438,
+        "y1": 423.83966064453125,
+        "y2": 430.3261413574219
+      },
+      "text": "4.8 Machine Learning"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 4,
+      "region": {
+        "x1": 54.02014923095703,
+        "x2": 294.2013854980469,
+        "y1": 574.575927734375,
+        "y2": 706.0846557617188
+      },
+      "text": "Our aforementioned software and physical simulations informed our understanding of the sensing principle, but not how well our technique worked in practice for sensing gestures on the human body. Thus, our first user study sought to quantify the value of different worn sensor geometries (Figure 4), transducer pairings, and phase offsets. Specifically, from our 8 transducers, we generated 56 single-transmitter/single-receiver combinations, 336 dualtransmitter/single-receiver combinations at each of the 4 phase offsets between transmitters (0°, 15°, 30°, 45°); resulting in (56 + 336 ´ 4 = 1400 possible combinations)."
+    }],
+    "title": {
+      "page": 4,
+      "region": {
+        "x1": 54.03025817871094,
+        "x2": 287.43060302734375,
+        "y1": 558.4782104492188,
+        "y2": 564.9646606445312
+      },
+      "text": "5 STUDY 1: SENSOR GEOMETRIES AND MODES"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 4,
+      "region": {
+        "x1": 317.75238037109375,
+        "x2": 557.9063720703125,
+        "y1": 283.9245300292969,
+        "y2": 402.71221923828125
+      },
+      "text": "We adopted the two hand gesture sets defined in [45], which permits direct accuracy comparison in our later studies: seven “coarse” gestures (Figure 5, green) and five “pinch” gestures (Figure 5, yellow), which share a common gesture (Relaxed). We could not find a suitable face gesture set in the literature, and so we defined our own nine classes, containing both an “eye” gesture set (Figure 6, pink) and “mouth” gesture set (Figure 6, blue) with a common Relaxed gesture. Note these gestures are static, which are alternatively called pose in the HCI literature."
+    }],
+    "title": {
+      "page": 4,
+      "region": {
+        "x1": 317.7524108886719,
+        "x2": 405.0653991699219,
+        "y1": 268.0686950683594,
+        "y2": 274.55517578125
+      },
+      "text": "5.1 Gesture Set"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 4,
+      "region": {
+        "x1": 317.75238037109375,
+        "x2": 557.9141845703125,
+        "y1": 433.9249267578125,
+        "y2": 514.7916870117188
+      },
+      "text": "We recruited 4 participants (1 female, mean age 25) who wore each of our four arm bands and four face masks (Figure 4). While wearing each design, participants performed every gesture, ten times each, in a random order. While holding the gesture, the hardware captured data for each transducer combination and phase offset. For experimentation, we extended the recording period to 1325 µs (Figure 7"
+    }, {
+      "page": 4,
+      "region": {
+        "x1": 54.0,
+        "x2": 558.001953125,
+        "y1": 750.914794921875,
+        "y2": 756.7197875976562
+      },
+      "text": "Paper 276 Page 5"
+    }, {
+      "page": 5,
+      "region": {
+        "x1": 53.99992370605469,
+        "x2": 294.1499328613281,
+        "y1": 224.41696166992188,
+        "y2": 267.8466796875
+      },
+      "text": "offers several example waveforms). Capturing all 1400 waveforms, including transmission over USB, took our sensor board approximately 4 seconds per full frame (i.e., 0.25 FPS; which we improve subsequently)."
+    }],
+    "title": {
+      "page": 4,
+      "region": {
+        "x1": 317.75238037109375,
+        "x2": 399.6241760253906,
+        "y1": 417.8271789550781,
+        "y2": 424.31365966796875
+      },
+      "text": "5.2 Procedure"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 5,
+      "region": {
+        "x1": 53.9797477722168,
+        "x2": 294.1720275878906,
+        "y1": 299.05938720703125,
+        "y2": 417.60516357421875
+      },
+      "text": "Our first goal was to identify transducer geometries that captured the most useful signals on the arm and face. Due to the large number of transducer configurations we captured, it was important to limit the feature space to prevent overfitting. For this, we use mean absolute z-scored amplitude to quantify how different a received waveform is from its relaxed state. Though basic, we found this metric to be a highly descriptive feature, and we use it to produce a more manageable 1400-length feature vector (one feature per transducer configuration) for information power analysis."
+    }, {
+      "page": 5,
+      "region": {
+        "x1": 53.96971130371094,
+        "x2": 294.1376953125,
+        "y1": 430.3311462402344,
+        "y2": 599.2769165039062
+      },
+      "text": "We then ran a leave-one-user-out cross-validation to get a rough estimate of gesture classification accuracy (Figure 8). On the arm, Ring Contiguous clearly out-performed all other geometries across gestures. We also found a horseshoe shaped array centered on the extensor digitorum provided better contact, and so we moved to this design for future experiments. On the face, the two Brow-Centric designs were superior on tasks that involved movement of the eyes and forehead, but performed poorly on mouth movements. The two Distributed geometries performed more evenly across gestures. The Distributed Symmetric arrangement slightly outperformed its Asymmetric counterpart, and so we selected this design for our future face experiments."
+    }],
+    "title": {
+      "page": 5,
+      "region": {
+        "x1": 53.989837646484375,
+        "x2": 220.60821533203125,
+        "y1": 282.9616394042969,
+        "y2": 289.4481201171875
+      },
+      "text": "5.3 Results: Worn Sensor Design"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 5,
+      "region": {
+        "x1": 53.98979949951172,
+        "x2": 294.1437683105469,
+        "y1": 632.4048461914062,
+        "y2": 713.2716064453125
+      },
+      "text": "Having selected a worn sensor design for the arm and face, we next sought to identify strong transducer pairings and phase offsets. For these analyses, we also use the mean absolute z-scored amplitudes for features. Instead of using classification accuracy as a measure of success, we performed a feature selection analysis (InfoGainAttributeEval with Ranker attribute selection, default parameters, Weka)"
+    }, {
+      "page": 5,
+      "region": {
+        "x1": 317.7733154296875,
+        "x2": 557.9191284179688,
+        "y1": 244.79861450195312,
+        "y2": 263.0283203125
+      },
+      "text": "on all 1400 transducer combinations, which allowed us to assess families of configurations by relative merit."
+    }, {
+      "page": 5,
+      "region": {
+        "x1": 317.7630615234375,
+        "x2": 557.9209594726562,
+        "y1": 275.7442321777344,
+        "y2": 419.50006103515625
+      },
+      "text": "5.4.1 Transmit Mode – We first investigated the performance difference between the single-transmitter/single-receiver and dual-transmitter/single-receiver drive modes. Single-transmitter configurations offered a mean information power of 0.030 while dual-transmitter configurations scored 0.044. Although interference patterns are also created with just a single emitter (due to multipath and scattering in the body), this result served to further underscore the value of controlled interference patterns created by multiple emitters. Thus, we selected dual-transmitter/single-receiver as our sole operation mode for the remainder of our experiments."
+    }, {
+      "page": 5,
+      "region": {
+        "x1": 317.77313232421875,
+        "x2": 557.9434204101562,
+        "y1": 432.2159729003906,
+        "y2": 563.4927978515625
+      },
+      "text": "5.4.2 Transducer Pairings – Once we selected the dualtransmitter drive mode, the next question was which transducer pairings were most effective. On our arm band, eight transducers were spaced apart at roughly 15° intervals. This allowed us to test pairings with spacing from 15° (adjacent transducers) to 105° (transducers 1 and 8). The results are shown in Figure 9, with 45° and 90° spacing offering the most information power. Closer examination found these spacings to be largely rudiment in terms of information power, and so we selected 45° as our sole angular spacing on the arm. Figure 10, left, illustrates these combinations."
+    }, {
+      "page": 5,
+      "region": {
+        "x1": 54.0,
+        "x2": 558.001953125,
+        "y1": 750.914794921875,
+        "y2": 756.7197875976562
+      },
+      "text": "Paper 276 Page 6"
+    }, {
+      "page": 6,
+      "region": {
+        "x1": 53.99998474121094,
+        "x2": 294.1660461425781,
+        "y1": 263.7693176269531,
+        "y2": 419.9941101074219
+      },
+      "text": "On the face, the transducer geometry is not linear like the arm. Instead of angular spacing, we grouped transmitters into one of four “islands” (above left eye, below left eye, above right eye, below right eye). We then tested four types of pairings: whether the transmitters were located in the same island (e.g., the two transmitters above the left eye), or on islands separated horizontally, vertically, or diagonally. The results, shown in Figure 9, shows that diagonal pairings have the highest mean feature merit, followed by vertical pairings. To limit combinatoric explosion, which affects sensor framerate, we selected representative pairings from the two families of combinations, four diagonal pairings and four vertical pairings, seen in Figure 10, right."
+    }, {
+      "page": 6,
+      "region": {
+        "x1": 54.0201416015625,
+        "x2": 294.1872863769531,
+        "y1": 432.95196533203125,
+        "y2": 551.5078125
+      },
+      "text": "5.4.3 Phase Offset – We next investigated phase offset, which refer to the relative pulse delay between two transducers. In evaluating phase offset, we focused on the performance within our previously identified pairing arrangements. On the arm, using 45° transducer spacing, we found 0° phase offset (i.e., synchronous firing) performed the best. On the face, with diagonal pairings, 15° had a slight edge over other phase offsets. For vertical pairings, 45° was a clear winner. See Figure 11, for a full breakdown of feature merit results."
+    }],
+    "title": {
+      "page": 5,
+      "region": {
+        "x1": 53.98980712890625,
+        "x2": 245.44735717773438,
+        "y1": 616.30712890625,
+        "y2": 622.7935791015625
+      },
+      "text": "5.4 Results: Transducer Configuration"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 6,
+      "region": {
+        "x1": 54.040374755859375,
+        "x2": 294.1741943359375,
+        "y1": 576.712890625,
+        "y2": 607.6635131835938
+      },
+      "text": "To summarize, we selected the dual-transmitter configuration for the arm and face. For the arm, we use all 5 possible transducer combinations with 45° spacing, firing with a 0°"
+    }, {
+      "page": 6,
+      "region": {
+        "x1": 317.8037109375,
+        "x2": 557.959716796875,
+        "y1": 75.35385131835938,
+        "y2": 131.26263427734375
+      },
+      "text": "phase offset, and capture data on the 6 remaining transducers, for a total of 30 waveforms. For the face, we use the 4 diagonal transducer pairings (15° phase offset) and the 4 vertical transducer pairings (45° phase offset), receiving on the 6 unused transducers, for a total of 48 waveforms."
+    }, {
+      "page": 6,
+      "region": {
+        "x1": 317.81378173828125,
+        "x2": 557.9838256835938,
+        "y1": 143.98861694335938,
+        "y2": 250.29742431640625
+      },
+      "text": "As noted in our procedure, our software captured 1325 µs of waveform data for this study. However, we found that the first 250 µs contained most of the information power, and so we limited future measurements to this interval, which boosted our sensor’s framerate over five-fold, to 51 FPS on the arm and 32 FPS on the face (including USB transmission). Finally, we decimate these 250 µs waveforms into 20 bins of mean and standard deviation, which we use as features for machine learning."
+    }],
+    "title": {
+      "page": 6,
+      "region": {
+        "x1": 54.06053161621094,
+        "x2": 294.19635009765625,
+        "y1": 564.2237548828125,
+        "y2": 569.9844970703125
+      },
+      "text": "5.4.4 Final Waveforms and Machine Learning Features –"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 6,
+      "region": {
+        "x1": 317.843994140625,
+        "x2": 558.010986328125,
+        "y1": 290.390625,
+        "y2": 396.4573669433594
+      },
+      "text": "In Study 1, we identified strongly performing worn sensor designs for the arm and face, and selected the strongest transducer configurations. In Study 2, we evaluate the gesture classification performance of our final prototypes (Figure 12) on a larger set of users. Specifically, we recruited 10 participants (3 female, mean age 30), which had a mean arm diameter of 9.7 cm (SD=1.8) and a mean face width (measured at the eyes) of 11.5 cm (SD=1.6). The study took approximately one hour and participants were paid $10 USD."
+    }],
+    "title": {
+      "page": 6,
+      "region": {
+        "x1": 317.8338928222656,
+        "x2": 482.18328857421875,
+        "y1": 274.2928771972656,
+        "y2": 280.77935791015625
+      },
+      "text": "6 STUDY 2: DISCRETE GESTURES"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 6,
+      "region": {
+        "x1": 317.843994140625,
+        "x2": 558.0363159179688,
+        "y1": 427.6700744628906,
+        "y2": 571.4158325195312
+      },
+      "text": "The study was broken into two phases: arm and face gestures. For the arm, participants wore the armband on their non-dominant hand – as all ten of our participants were right handed, this meant the armband was always worn on the left arm. We used the same arm and face gesture sets as Study 1 (Figures 5 and 6). A single round of data collection consisted of each gesture being performed once, in a random order. Each gesture was held for approximately two seconds, during which time 50 sensor frames were recorded. A session consisted of ten rounds of data collection. To add realism, we collected two sessions of data for each user, with the worn sensor being removed in between."
+    }, {
+      "page": 6,
+      "region": {
+        "x1": 317.75445556640625,
+        "x2": 557.8992919921875,
+        "y1": 584.141845703125,
+        "y2": 640.3200073242188
+      },
+      "text": "In total, this procedure yielded 110,000 sensor frames (50 sensor frames ´ 11 gestures ´ 10 rounds ´ 2 sessions ´ 10 participants) for the arm gesture set and 90,000 sensor frames (50 sensor frames ´ 9 gestures ´ 10 rounds ´ 2 sessions ´ 10 participants) for the face gesture set."
+    }],
+    "title": {
+      "page": 6,
+      "region": {
+        "x1": 317.86419677734375,
+        "x2": 399.7359924316406,
+        "y1": 411.57232666015625,
+        "y2": 418.0588073730469
+      },
+      "text": "6.1 Procedure"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 6,
+      "region": {
+        "x1": 317.75506591796875,
+        "x2": 557.9552612304688,
+        "y1": 671.5327758789062,
+        "y2": 714.96240234375
+      },
+      "text": "To simulate the performance of gesture recognition when the system is calibrated when initially worn, we perform a leave-one-round-out cross validation, where we train on nine rounds within a session and test on a tenth (all"
+    }, {
+      "page": 6,
+      "region": {
+        "x1": 54.0,
+        "x2": 558.001953125,
+        "y1": 750.914794921875,
+        "y2": 756.7197875976562
+      },
+      "text": "Paper 276 Page 7"
+    }, {
+      "page": 7,
+      "region": {
+        "x1": 54.0,
+        "x2": 294.12774658203125,
+        "y1": 243.60934448242188,
+        "y2": 261.83905029296875
+      },
+      "text": "combinations). We repeated this for both sessions independently and combined the results."
+    }, {
+      "page": 7,
+      "region": {
+        "x1": 54.01006317138672,
+        "x2": 294.15399169921875,
+        "y1": 274.8069763183594,
+        "y2": 380.87371826171875
+      },
+      "text": "For the arm, the average within-session accuracy across all participants on the full, eleven-class hand gesture set was 93.4% (SD = 4.0%). A significant source of error was confusion in the Index Pinch gesture, contributing 25.5% of misclassifications. In the “coarse” hand gesture subset (7 classes) the average within-session accuracy was 98.0% (SD=1.8), and in the “pinch” gesture subset (5 classes) the average within-session accuracy was 90.6% (SD = 7.5%). The confusion matrices can be found in Figure 13."
+    }, {
+      "page": 7,
+      "region": {
+        "x1": 53.989898681640625,
+        "x2": 294.15386962890625,
+        "y1": 393.5997009277344,
+        "y2": 474.4664611816406
+      },
+      "text": "For the face, the average within-session accuracy across all participants on the full, 9-class gesture set was 89.0% (SD = 5.7%). The Relax gesture contributed 22.3% of misclassification. In the “eye” gesture subset, the average withinsession accuracy was 92.7% (SD = 4.7%). In the “mouth” subset, the average within-session accuracy was 91.1% (SD = 5.1%). The confusion matrices can be found in Figure 14."
+    }],
+    "title": {
+      "page": 6,
+      "region": {
+        "x1": 317.75506591796875,
+        "x2": 466.772705078125,
+        "y1": 655.4349975585938,
+        "y2": 661.9214477539062
+      },
+      "text": "6.2 Within-Session Accuracy"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 7,
+      "region": {
+        "x1": 53.98997497558594,
+        "x2": 294.14599609375,
+        "y1": 505.6791687011719,
+        "y2": 549.1088256835938
+      },
+      "text": "Maintaining performance across worn sessions. (i.e., reworn at a late time) is a challenge for almost all bio-sensing systems, as even slight misalignments can result in significant signal change. To quantify Interferi’s drop in"
+    }, {
+      "page": 7,
+      "region": {
+        "x1": 317.733154296875,
+        "x2": 557.8670043945312,
+        "y1": 243.59915161132812,
+        "y2": 287.0288391113281
+      },
+      "text": "performance when reworn, we ran a leave-one-session-out cross validation for each of our participants. Specifically, we train on all data from session one and test on all data from session two, and vice versa."
+    }, {
+      "page": 7,
+      "region": {
+        "x1": 317.73309326171875,
+        "x2": 557.9134521484375,
+        "y1": 299.7548522949219,
+        "y2": 443.5006103515625
+      },
+      "text": "In the arm condition (11 classes), our participants had a mean across-session accuracy of 65.7% (SD=19.2). It is worth noting that Interferi’s performance is not uniform across all gestures, as some gestures performed well acrosssession, such as Left and Right, with 96.4% and 94.2% accuracy, respectively. Broken out into the “coarse” and “pinch” subsets, participants had a mean across-session accuracy of 80.0% (SD=16.4) and 60.5% (SD=21.6), respectively. For the face (9 classes), mean across-session accuracy across all ten participants was 64.2% (SD=17.2). In the “eyes” and “mouth” subsets, participants had a mean across-session accuracy of 74.4% (SD=17.5) and 68.4% (SD=18.3), respectively."
+    }],
+    "title": {
+      "page": 7,
+      "region": {
+        "x1": 53.989959716796875,
+        "x2": 200.75173950195312,
+        "y1": 489.8233337402344,
+        "y2": 496.309814453125
+      },
+      "text": "6.3 Across-Session Accuracy"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 7,
+      "region": {
+        "x1": 317.7333984375,
+        "x2": 557.8823852539062,
+        "y1": 486.7085266113281,
+        "y2": 555.0962524414062
+      },
+      "text": "In addition to investigating Interferi’s performance in detecting discrete gestures, we also wished to explore our system’s ability to provide continuous hand and face tracking. For this evaluation, we recruited 10 participants (2 female, mean age 22), with a mean arm diameter of 7.6 cm (SD=0.7), and mean face width of 10.3 cm (SD=1.3). The study took"
+    }, {
+      "page": 7,
+      "region": {
+        "x1": 54.0,
+        "x2": 558.001953125,
+        "y1": 750.914794921875,
+        "y2": 756.7197875976562
+      },
+      "text": "Paper 276 Page 8"
+    }, {
+      "page": 8,
+      "region": {
+        "x1": 53.99998474121094,
+        "x2": 294.14599609375,
+        "y1": 196.57601928710938,
+        "y2": 290.1638488769531
+      },
+      "text": "approximately 30 minutes and participants were paid $10. Participants completed four continuous tasks, three for the arms and one for the face, using the same worn sensors as Study 2. All tasks followed the same general procedure, collecting ten rounds of data (task-specific details below). We then performed a leave-one-round-out cross validation, where we trained on nine rounds and test on the tenth (all combinations, results averaged)."
+    }],
+    "title": {
+      "page": 7,
+      "region": {
+        "x1": 317.74346923828125,
+        "x2": 504.92510986328125,
+        "y1": 470.61077880859375,
+        "y2": 477.0972595214844
+      },
+      "text": "7 STUDY 3: CONTINUOUS TRACKING"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 8,
+      "region": {
+        "x1": 54.010040283203125,
+        "x2": 294.204345703125,
+        "y1": 321.3765563964844,
+        "y2": 477.6013488769531
+      },
+      "text": "In this task, we defined four smile intensities on a linear scale: mouth neutral (which we defined as 0%), small smile (33%), medium smile (lips closed; 66%), and large smile (with teeth showing; 100%). As there is no universal smile ground truth, we let our participants practice and define four smile levels they found comfortable and repeatable. Figure 15 shows an example of these smile intensities. A single round of data collection captured each smile level once, in a random order, during which time 50 frames of sensor data was recorded. In total, participants completed ten rounds. Using our leave-one-round-out cross validation procedure, we found a mean smile intensity error of 8.6% (SD=2.6)."
+    }],
+    "title": {
+      "page": 8,
+      "region": {
+        "x1": 54.01008605957031,
+        "x2": 157.8280487060547,
+        "y1": 305.27880859375,
+        "y2": 311.7652893066406
+      },
+      "text": "7.1 Smile Intensity"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 8,
+      "region": {
+        "x1": 53.94956970214844,
+        "x2": 294.1197509765625,
+        "y1": 508.8140563964844,
+        "y2": 602.4017944335938
+      },
+      "text": "In our next task, participants were asked to hold an exercise weight in their non-dominant arm, with their elbow placed on a table. Figure 16 shows an example of this task. Participants were handed one of five weights – 0, 6, 9, 12 and 15 lbs. – once per round (ten rounds collected total). Once the arm was stable, 50 frames of sensor data were recorded. Using our leave-one-round-out cross validation procedure, the mean lifted weight error was 0.04 lbs. (SD=0.04)."
+    }, {
+      "page": 8,
+      "region": {
+        "x1": 317.702880859375,
+        "x2": 557.9091186523438,
+        "y1": 178.08926391601562,
+        "y2": 371.99322509765625
+      },
+      "text": "Error was so low that we suspected these results might be the product of overfitting to the four weights we tested and did not operate like a true continuous regression. To overcome this experimental limitation, we ran a second, leave-one-weight-out cross validation, where the model was trained on all-but-one weight and tested on the holdout weight (all combinations). Scikit-learn’s Extra Trees Regressor only provides interpolation and not extrapolation, which we need when e.g., training on 6, 9 and 12 lbs. and testing on 15 lbs. Thus, for this one experiment, we use Scikit-learn’s MLPRegressor (default parameters, identity activation, “LBFGS” solver) to produce estimates. Using this evaluation scheme, trying to predict a weight the classifier had never seen before, we found an average error of 1.59 lbs. (SD=0.44), which we believe is a more realistic estimation of performance."
+    }],
+    "title": {
+      "page": 8,
+      "region": {
+        "x1": 54.01008605957031,
+        "x2": 156.88856506347656,
+        "y1": 492.71630859375,
+        "y2": 499.2027893066406
+      },
+      "text": "7.2 Lifted Weights"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 8,
+      "region": {
+        "x1": 317.68267822265625,
+        "x2": 557.8589477539062,
+        "y1": 403.2059326171875,
+        "y2": 546.7097778320312
+      },
+      "text": "In Study 2, we evaluated discrete left- and right-bent wrist gestures. In this task, we investigated continuous tracking of the wrist angle. To provide a high-quality ground truth, and also facilitate rapid collection of participant data, we used a Leap Motion controller for wireless tracking of the hand (see setup in Figure 17). Each round of data collection consisted of a slow ~3 second sweep the wrist from roughly -60 to +60° (a range found to be comfortable in pilots), pausing at far left, center, and far right. While participants performed this motion, we recorded 50 sensor frames per second, labeled with the wrist angle reported by the Leap. This procedure was repeated for ten rounds in total."
+    }, {
+      "page": 8,
+      "region": {
+        "x1": 54.0,
+        "x2": 558.001953125,
+        "y1": 750.914794921875,
+        "y2": 756.7197875976562
+      },
+      "text": "Paper 276 Page 9"
+    }, {
+      "page": 9,
+      "region": {
+        "x1": 54.00001525878906,
+        "x2": 294.15704345703125,
+        "y1": 181.69796752929688,
+        "y2": 225.127685546875
+      },
+      "text": "Using the same leave-one-round-out cross validation procedure, we found a mean wrist angular error of 5.3° (SD=1.0). Figure 18 offers an example plot of Interferi’s predicted values tracking against the Leap Motion’s output."
+    }],
+    "title": {
+      "page": 8,
+      "region": {
+        "x1": 317.7231140136719,
+        "x2": 407.7577819824219,
+        "y1": 387.1081848144531,
+        "y2": 393.59466552734375
+      },
+      "text": "7.3 Wrist Angle"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 9,
+      "region": {
+        "x1": 54.00006866455078,
+        "x2": 294.1833190917969,
+        "y1": 256.3404235839844,
+        "y2": 450.0023498535156
+      },
+      "text": "In our final task, we focus on Interferi’s ability to estimate hand pose. Individual digit tracking is not possible, and so we track two values: the position of the thumb, and the position of the four other fingers as a single unit. Participants were asked to place their hand above a Leap Motion controller, palm facing down, thumb extended and other four fingers held together (Figure 19). One round of data collection consisted of bringing the thumb to the center of the palm and returning it to full extension, followed by the other four fingers dropping to form a 90° angle with the palm and then returning to full extension. We briefly trained participants to perform this motion slowly, taking roughly 5 seconds to complete, with our system capturing 50 frames per second of sensor data. As in the previous task, a Leap Motion was used to provide the ground truth labels. In total, ten rounds of data were captured per participant."
+    }, {
+      "page": 9,
+      "region": {
+        "x1": 54.00010681152344,
+        "x2": 294.1672058105469,
+        "y1": 462.97027587890625,
+        "y2": 518.8789672851562
+      },
+      "text": "Using the same leave-one-round-out cross validation procedure, we found Interferi had a mean tracking error of 1.7° (SD = 0.8°) for the thumb and 6.5° (SD = 1.2°) for the four fingers. Figure 20 offers example plots of Interferi’s predicted values tracking against the Leap Motion’s output."
+    }],
+    "title": {
+      "page": 9,
+      "region": {
+        "x1": 54.01011657714844,
+        "x2": 171.2142791748047,
+        "y1": 240.24264526367188,
+        "y2": 246.7291259765625
+      },
+      "text": "7.4 Coarse Hand Pose"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 9,
+      "region": {
+        "x1": 54.01020812988281,
+        "x2": 294.1661682128906,
+        "y1": 559.9298095703125,
+        "y2": 603.3594360351562
+      },
+      "text": "Our within-session results compare favorably to other biosensing gesture recognition systems with respect to accuracy and number of gestures supported. We now briefly review prior results to help contextualize Interferi’s accuracy."
+    }, {
+      "page": 9,
+      "region": {
+        "x1": 53.97993469238281,
+        "x2": 294.1470642089844,
+        "y1": 616.08544921875,
+        "y2": 709.6732177734375
+      },
+      "text": "Starting first with static hand gesture classification, Saponas et al. [36] and WristFlex [8] supported a four-class hand gesture set at 77.0% and 69.0% accuracy respectively. On the high end, Jung et al. [19] reports 95.4% accuracy across six gestures. We specifically adopted Tomo’s [45] two gesture sets so as to directly compare results. The latter system achieved accuracies of 93.1% and 80.9% on the hand and pinch gesture sets, respectively. Later work by Zhang"
+    }, {
+      "page": 9,
+      "region": {
+        "x1": 317.7432861328125,
+        "x2": 557.8943481445312,
+        "y1": 210.1638641357422,
+        "y2": 266.39520263671875
+      },
+      "text": "et al. [46] achieved 94.3% on the combined set, 94.7% on the hand gesture set, and 94.3% on the pinch gesture set. For reference, Interferi achieves 93.4%, 98.0%, and 90.6% on the same gesture sets. We also note that Tomo does not investigate continuous tracking, nor sensing on the face."
+    }, {
+      "page": 9,
+      "region": {
+        "x1": 317.74334716796875,
+        "x2": 557.903564453125,
+        "y1": 279.1211853027344,
+        "y2": 385.18792724609375
+      },
+      "text": "Few systems report across-session accuracy, as this is particularly challenging in worn sensing systems, where even slight alignment variations can lead to large signal changes. The best we found in the literature is Tomo [45], which reports across-session accuracies of 83.4% and 62.6% on its hand and pinch gesture sets, respectively. Interferi is comparable, achieving 80.0% and 60.5% on the hand and pinch gesture sets, respectively (and 65.7% across all eleven hand gestures, which [45][46] do not report)."
+    }, {
+      "page": 9,
+      "region": {
+        "x1": 317.73870849609375,
+        "x2": 557.919677734375,
+        "y1": 397.9139099121094,
+        "y2": 554.1561279296875
+      },
+      "text": "With regards to continuous hand pose tracking, the most comparable wearable system we found is Digits [21], which can track individual fingers with a mean error of < 9° (6.7° for the thumb specifically). Interferi cannot perform individual finger tracking, except for the thumb, which had a mean angular error of 1.7°. Interferi can track the other four fingers (moving together as a unit) with a mean angular error of 6.5°. For discrete facial gestures, the closest worn system with a comparable facial gesture set is EarFieldSensing [27], which demonstrates 5 head and face related gestures at 85.3%. Using EMG, Gruebler et al. [13] supported smile/frown detection at 88.3%. Interferi achieves 89.0% across 9 face gestures."
+    }, {
+      "page": 9,
+      "region": {
+        "x1": 317.7587890625,
+        "x2": 557.8866577148438,
+        "y1": 567.1240844726562,
+        "y2": 597.832763671875
+      },
+      "text": "Unfortunately, we could not find worn systems that reported accuracies with which to compare our smile intensity, lifted weight and wrist angle study results."
+    }],
+    "title": {
+      "page": 9,
+      "region": {
+        "x1": 54.01020812988281,
+        "x2": 236.16989135742188,
+        "y1": 543.83203125,
+        "y2": 550.3184814453125
+      },
+      "text": "8 COMPARISON TO PRIOR RESULTS"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 9,
+      "region": {
+        "x1": 317.7587890625,
+        "x2": 557.9630126953125,
+        "y1": 636.000732421875,
+        "y2": 717.1094360351562
+      },
+      "text": "Like most biosensing systems, Interferi needs per-user calibration to perform well. Moreover, although our reworn (i.e., across-session) accuracies compare favorably to prior work, it is not yet sufficiently robust for end user applications. Thus, it is likely a rapid calibration will be needed each time the sensor is worn, similar to commercial products such as the Myo EMG armband [39]. It may also be"
+    }, {
+      "page": 9,
+      "region": {
+        "x1": 54.0,
+        "x2": 558.0040283203125,
+        "y1": 750.914794921875,
+        "y2": 756.7197875976562
+      },
+      "text": "Paper 276 Page 10"
+    }, {
+      "page": 10,
+      "region": {
+        "x1": 53.98991394042969,
+        "x2": 294.156005859375,
+        "y1": 212.89553833007812,
+        "y2": 243.60430908203125
+      },
+      "text": "possible to avoid calibration gestures, and instead virtually rotate the sensors to compensate for placement variation, allowing for an existing machine learning model to be used."
+    }, {
+      "page": 10,
+      "region": {
+        "x1": 53.9798583984375,
+        "x2": 294.123779296875,
+        "y1": 256.5722351074219,
+        "y2": 387.5970764160156
+      },
+      "text": "Another challenge is achieving good acoustic coupling to the body, which is vital for robust performance. We designed our sensors as one-size-fits-most wearables, which worked well enough to complete our user studies. While participant arms were reasonably easy to accommodate, different face morphologies required extra time to ensure a proper fit (by adjusting the head band and resting position). In a real product, it seems likely many sizes would have to be produced. It might also be possible to use more transducers in a denser arrangement, and have software automatically select a subset based on fit."
+    }, {
+      "page": 10,
+      "region": {
+        "x1": 53.97984313964844,
+        "x2": 294.1458435058594,
+        "y1": 400.56500244140625,
+        "y2": 519.1107788085938
+      },
+      "text": "Another drawback is that our implementation uses relatively large ultrasonic transducers (16 mm diameter, 10 mm thick), produced chiefly for the automotive market (backup parking sensors). These transducers would be challenging to integrate into a thin, smartwatch band. However, the face liner of AR/VR headsets should be feasible. Mockups of these two form factors appear in Figure 21. That said, thinner and smaller transducers are available at other resonant frequencies, which could enable integration into smaller form factors."
+    }, {
+      "page": 10,
+      "region": {
+        "x1": 54.010093688964844,
+        "x2": 294.15692138671875,
+        "y1": 531.8367919921875,
+        "y2": 587.7454833984375
+      },
+      "text": "Finally, there are immediate avenues to improve our machine learning pipeline, potentially enabling fully continuous pose tracking. We envision using techniques like Hidden Markov Models (HMMs) or Recurrent Neural Networks (RNNs), which take advantage of temporality."
+    }],
+    "title": {
+      "page": 9,
+      "region": {
+        "x1": 317.75872802734375,
+        "x2": 487.8970031738281,
+        "y1": 619.9029541015625,
+        "y2": 626.389404296875
+      },
+      "text": "9 LIMITATIONS & FUTURE WORK"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 10,
+      "region": {
+        "x1": 53.95973205566406,
+        "x2": 294.1761474609375,
+        "y1": 625.9134521484375,
+        "y2": 707.0221557617188
+      },
+      "text": "We have presented Interferi, a novel worn sensing technique that uses acoustic interferometry for on-body gesture recognition. It generates and measures ultrasonic interference patterns using an array of transducers placed on the arm or face. We investigated many worn sensor designs, transducer pairings and phase offsets to identify successful configurations. We evaluated our best designs for the arm"
+    }, {
+      "page": 10,
+      "region": {
+        "x1": 317.72308349609375,
+        "x2": 557.877197265625,
+        "y1": 75.35391235351562,
+        "y2": 106.3045654296875
+      },
+      "text": "and face for discrete and continuous sensing. Results are promising and competitive with prior worn systems, which we hope spurs interest in acoustic interferometry in HCI."
+    }],
+    "title": {
+      "page": 10,
+      "region": {
+        "x1": 54.0101318359375,
+        "x2": 139.45423889160156,
+        "y1": 609.815673828125,
+        "y2": 616.3021240234375
+      },
+      "text": "10 CONCLUSION"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 10,
+      "region": {
+        "x1": 317.74322509765625,
+        "x2": 557.9406127929688,
+        "y1": 144.47250366210938,
+        "y2": 187.9022216796875
+      },
+      "text": "This work was generously supported with funds from Oculus Research Pittsburgh / Facebook Reality Labs, the Packard Foundation and Sloan Foundation. We are also indebted to Prof. Robert Xiao for his help with firmware."
+    }],
+    "title": {
+      "page": 10,
+      "region": {
+        "x1": 317.74322509765625,
+        "x2": 426.90350341796875,
+        "y1": 128.37472534179688,
+        "y2": 134.8612060546875
+      },
+      "text": "ACKNOWLEDGMENTS"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 10,
+      "region": {
+        "x1": 317.760009765625,
+        "x2": 557.8071899414062,
+        "y1": 217.4816436767578,
+        "y2": 222.0
+      },
+      "text": "[1] Karan Ahuja, Rahul Islam, Varun Parashar, Kuntal Dey, Chris Harri-"
+    }, {
+      "page": 10,
+      "region": {
+        "x1": 317.7578125,
+        "x2": 557.9038696289062,
+        "y1": 226.6016387939453,
+        "y2": 714.719970703125
+      },
+      "text": "son, and Mayank Goel. 2018. EyeSpyVR: Interactive Eye Sensing Using Off-the-Shelf, Smartphone-Based VR Headsets. Proc. ACM Interact. Mob. Wearable Ubiquitous Technol. 2, 2, Article 57 (July 2018), 10 pages. DOI: https://doi.org/10.1145/3214260 [2] Brian Amento, Will Hill, and Loren Terveen. 2002. The sound of one hand: a wrist-mounted bio-acoustic fingertip gesture interface. In CHI '02 Extended Abstracts on Human Factors in Computing Systems (CHI EA '02). ACM, New York, NY, USA, 724-725. DOI=http://dx.doi.org/10.1145/506443.506566 [3] Toshiyuki Ando, Yuki Kubo, Buntarou Shizuki, and Shin Takahashi. 2017. CanalSense: Face-Related Movement Recognition System based on Sensing Air Pressure in Ear Canals. In Proceedings of the 30th Annual ACM Symposium on User Interface Software and Technology (UIST '17). ACM, New York, NY, USA, 679-689. DOI: https://doi.org/10.1145/3126594.3126649 [4] E. H. Brandt (2001). Acoustic physics: Suspended by Sound. Nature, 413(6855), 474-475. [5] Laura A. Brooks and Peter Gerstoft. Ocean acoustic interferometry. The Journal of the Acoustical Society of America 121, no. 6 (2007): 3377-3385. [6] Tom Carter, Sue Ann Seah, Benjamin Long, Bruce Drinkwater, and Sriram Subramanian. 2013. UltraHaptics: multi-point mid-air haptic feedback for touch surfaces. In Proceedings of the 26th annual ACM symposium on User interface software and technology (UIST '13). ACM, New York, NY, USA, 505-514. DOI: https://doi.org/10.1145/2501988.2502018 [7] Ciprian Adrian Corneanu, Marc Oliu Simón, Jeffrey F. Cohn, and Sergio Escalera Guerrero. Survey on RGB, 3D, thermal, and multimodal approaches for facial expression recognition: History, trends, and affect-related applications. IEEE transactions on pattern analysis and machine intelligence 38, no. 8 (2016): 1548-1568. DOI: 10.1109/TPAMI.2016.2515606 [8] Artem Dementyev and Joseph A. Paradiso. 2014. WristFlex: lowpower gesture input with wrist-worn pressure sensors. In Proceedings of the 27th annual ACM symposium on User interface software and technology (UIST '14). ACM, New York, NY, USA, 161-166. DOI: https://doi.org/10.1145/2642918.2647396 [9] Travis Deyle, Szabolcs Palinko, Erika Shehan Poole, and Thad Starner. 2007. Hambone: A Bio-Acoustic Gesture Interface. In Proceedings of the 2007 11th IEEE International Symposium on Wearable Computers (ISWC '07). IEEE Computer Society, Washington, DC, USA, 1-8. DOI: https://doi.org/10.1109/ISWC.2007.4373768 [10] EMCO SIP100 DC-DC Converter, http://www.eie-ic.com/Images/EMCO/EMCO/sipseries.pdf [11] Jun Gong, Xing-Dong Yang, and Pourang Irani. 2016. WristWhirl: One-handed Continuous Smartwatch Input using Wrist Gestures. In Proceedings of the 29th Annual Symposium on User Interface Software and Technology (UIST '16). ACM, New York, NY, USA, 861-872. DOI: https://doi.org/10.1145/2984511.2984563 [12] Anna Gruebler, and Kenji Suzuki. Measurement of distal EMG signals using a wearable device for reading facial expressions. In Engineering in Medicine and Biology Society (EMBC), 2010 Annual International Conference of the IEEE, pp. 4594-4597. IEEE, 2010. DOI: 10.1109/IEMBS.2010.5626504"
+    }, {
+      "page": 10,
+      "region": {
+        "x1": 54.0,
+        "x2": 558.0040283203125,
+        "y1": 750.914794921875,
+        "y2": 756.7197875976562
+      },
+      "text": "Paper 276 Page 11"
+    }, {
+      "page": 11,
+      "region": {
+        "x1": 53.97404479980469,
+        "x2": 294.12115478515625,
+        "y1": 74.92164611816406,
+        "y2": 709.1227416992188
+      },
+      "text": "[13] Anna Gruebler, and Kenji Suzuki. Design of a wearable device for reading positive expressions from facial EMG signals. IEEE Transactions on affective computing 5, no. 3 (2014): 227-237. DOI: 10.1109/TAFFC.2014.2313557 [14] Chris Harrison, Desney Tan, and Dan Morris. 2010. Skinput: appropriating the body as an input surface. In Proceedings of the SIGCHI Conference on Human Factors in Computing Systems (CHI '10). ACM, New York, NY, USA, 453-462. DOI: https://doi.org/10.1145/1753326.1753394 [15] Claude F. Harbarger, Paul M. Weinberger, Jack C. Borders, and Charles A. Hughes. \"Prenatal ultrasound exposure and association with postnatal hearing outcomes.\" Journal of Otolaryngology-Head & Neck Surgery 42, no. 1 (2013): 3. [16] Reli Hershkovitz, Eyal Sheiner, and Moshe Mazor. \"Ultrasound in obstetrics: a review of safety.\" European Journal of Obstetrics & Gynecology and Reproductive Biology101, no. 1 (2002): 15-18. [17] Takeshi Ide, James Friend, Kentaro Nakamura, and Sadayuki Ueha. A non-contact linear bearing and actuator via ultrasonic levitation. Sensors and Actuators A: Physical 135, no. 2 (2007): 740-747. [18] N. Inoue, et al. A new ultrasonic interferometer for velocity measurement in liquids using optical diffraction 1986 J. Phys. D: Appl. Phys. 1 [19] Pyeong-Gook Jung, Gukchan Lim, Seonghyok Kim, and Kyoungchul Kong. A wearable gesture recognition device for detecting muscular activities based on air-pressure sensors. IEEE Transactions on Industrial Informatics 11, no. 2 (2015): 485-494. DOI: 10.1109/TII.2015.2405413 [20] Frederic Kerber, Michael Puhl, and Antonio Krüger. 2017. User-independent real-time hand gesture recognition based on surface electromyography. In Proceedings of the 19th International Conference on Human-Computer Interaction with Mobile Devices and Services (MobileHCI '17). ACM, New York, NY, USA, Article 36, 7 pages. DOI: https://doi.org/10.1145/3098279.3098553 [21] David Kim, Otmar Hilliges, Shahram Izadi, Alex D. Butler, Jiawen Chen, Iason Oikonomidis, and Patrick Olivier. 2012. Digits: freehand 3D interactions anywhere using a wrist-worn gloveless sensor. In Proceedings of the 25th annual ACM symposium on User interface software and technology (UIST '12). ACM, New York, NY, USA, 167- 176. DOI: https://doi.org/10.1145/2380116.2380139 [22] Gierad Laput, Robert Xiao, and Chris Harrison. 2016. ViBand: HighFidelity Bio-Acoustic Sensing Using Commodity Smartwatch Accelerometers. In Proceedings of the 29th Annual Symposium on User Interface Software and Technology (UIST '16). ACM, New York, NY, USA, 321-333. DOI: https://doi.org/10.1145/2984511.2984582 [23] Hao Li, Laura Trutoiu, Kyle Olszewski, Lingyu Wei, Tristan Trutna, Pei-Lun Hsieh, Aaron Nicholls, and Chongyang Ma. 2015. Facial performance sensing head-mounted display. ACM Trans. Graph. 34, 4, Article 47 (July 2015), 9 pages. DOI: https://doi.org/10.1145/2766939 [24] Jhe-Wei Lin, Chiuan Wang, Yi Yao Huang, Kuan-Ting Chou, HsuanYu Chen, Wei-Luan Tseng, and Mike Y. Chen. 2015. BackHand: Sensing Hand Gestures via Back of the Hand. In Proceedings of the 28th Annual ACM Symposium on User Interface Software & Technology (UIST '15). ACM, New York, NY, USA, 557-564. DOI: https://doi.org/10.1145/2807442.2807462 [25] Katsutoshi Masai, Yuta Sugiura, Masa Ogata, Kai Kunze, Masahiko Inami, and Maki Sugimoto. 2016. Facial Expression Recognition in Daily Life by Embedded Photo Reflective Sensors on Smart Eyewear. In Proceedings of the 21st International Conference on Intelligent User Interfaces (IUI '16). ACM, New York, NY, USA, 317-326. DOI: https://doi.org/10.1145/2856767.2856770 [26] Katsutoshi Masai, Kai Kunze, Yuta Sugiura, Masa Ogata, Masahiko Inami, and Maki Sugimoto. 2017. Evaluation of Facial Expression Recognition by a Smart Eyewear for Facial Direction Changes, Repeatability, and Positional Drift. ACM Trans. Interact. Intell. Syst. 7, 4, Article 15 (December 2017), 23 pages. DOI: https://doi.org/10.1145/3012941 [27] Denys J. C. Matthies, Bernhard A. Strecker, and Bodo Urban. 2017. EarFieldSensing: A Novel In-Ear Electric Field Sensing to Enrich Wearable Gesture Input through Facial Expressions. In Proceedings of the 2017 CHI Conference on Human Factors in Computing"
+    }, {
+      "page": 11,
+      "region": {
+        "x1": 317.72589111328125,
+        "x2": 557.9078979492188,
+        "y1": 75.08314514160156,
+        "y2": 599.3836669921875
+      },
+      "text": "Systems (CHI '17). ACM, New York, NY, USA, 1911-1922. DOI: https://doi.org/10.1145/3025453.3025692 [28] Jess McIntosh, Asier Marzo, Mike Fraser, and Carol Phillips. 2017. EchoFlex: Hand Gesture Recognition using Ultrasound Imaging. In Proceedings of the 2017 CHI Conference on Human Factors in Computing Systems (CHI '17). ACM, New York, NY, USA, 1923-1934. DOI: https://doi.org/10.1145/3025453.3025807 [29] Adiyan Mujibiya, Xiang Cao, Desney S. Tan, Dan Morris, Shwetak N. Patel, and Jun Rekimoto. 2013. The sound of touch: on-body touch and gesture sensing based on transdermal ultrasound propagation. In Proceedings of the 2013 ACM international conference on Interactive tabletops and surfaces (ITS '13). ACM, New York, NY, USA, 189-198. DOI: https://doi.org/10.1145/2512349.2512821 [30] Masa Ogata and Michita Imai. 2015. SkinWatch: skin gesture interaction for smart watch. In Proceedings of the 6th Augmented Human International Conference (AH '15). ACM, New York, NY, USA, 21-24. DOI: http://dx.doi.org/10.1145/2735711.2735830 [31] Fabian Pedregosa, Gaël Varoquaux, Alexandre Gramfort, Vincent Michel, Bertrand Thirion, Olivier Grisel, Mathieu Blondel et al. Scikit-learn: Machine learning in Python. Journal of machine learning research 12, no. Oct (2011): 2825-2830. [32] John Kangchun Perng, Brian Fisher, Seth Hollar, and Kristofer SJ Pister. Acceleration sensing glove (ASG). In Wearable Computers, 1999. Digest of Papers. The Third International Symposium on, pp. 178-180. IEEE, 1999. DOI: 10.1109/ISWC.1999.806717 [33] PUI Audio 40 kHz Ultrasonic Transducer, http://www.puiaudio.com/pdf/UTR-1440K-TT-R.pdf [34] Jun Rekimoto. Gesturewrist and gesturepad: Unobtrusive wearable interaction devices. In Wearable Computers, 2001. Proceedings. Fifth International Symposium on, pp. 21-27. IEEE, 2001. DOI: 10.1109/ISWC.2001.962092 [35] T. Scott Saponas, Desney S. Tan, Dan Morris, and Ravin Balakrishnan. 2008. Demonstrating the feasibility of using forearm electromyography for muscle-computer interfaces. In Proceedings of the SIGCHI Conference on Human Factors in Computing Systems (CHI '08). ACM, New York, NY, USA, 515-524. DOI: https://doi.org/10.1145/1357054.1357138 [36] T. Scott Saponas, Desney S. Tan, Dan Morris, Ravin Balakrishnan, Jim Turner, and James A. Landay. 2009. Enabling always-available input with muscle-computer interfaces. In Proceedings of the 22nd annual ACM symposium on User interface software and technology (UIST '09). ACM, New York, NY, USA, 167-176. DOI: https://doi.org/10.1145/1622176.1622208 [37] Jocelyn Scheirer, Raul Fernandez, and Rosalind W. Picard. 1999. Expression glasses: a wearable device for facial expression recognition. In CHI '99 Extended Abstracts on Human Factors in Computing Systems (CHI EA '99). ACM, New York, NY, USA, 262-263. DOI=http://dx.doi.org/10.1145/632716.632878 [38] Katsuhiro Suzuki, Fumihiko Nakamura, Jiu Otsuka, Katsutoshi Masai, Yuta Itoh, Yuta Sugiura, and Maki Sugimoto. 2016. Facial Expression Mapping inside Head Mounted Display by Embedded Optical Sensors. In Proceedings of the 29th Annual Symposium on User Interface Software and Technology (UIST '16 Adjunct). ACM, New York, NY, USA, 91-92. DOI: https://doi.org/10.1145/2984751.2985714 [39] Teensy 3.6 Microcontroller, PJRC, https://www.pjrc.com/store/teensy36.html [40] Thalmic Lab, Inc. http://www.thalmic.com/myo/ [41] Hsin-Ruey Tsai, Cheng-Yuan Wu, Lee-Ting Huang, and Yi-Ping"
+    }, {
+      "page": 11,
+      "region": {
+        "x1": 317.7499694824219,
+        "x2": 557.8515625,
+        "y1": 603.9891967773438,
+        "y2": 699.9835205078125
+      },
+      "text": "Hung. 2016. ThumbRing: private interactions using one-handed thumb motion input on finger segments. In Proceedings of the 18th International Conference on Human-Computer Interaction with Mobile Devices and Services Adjunct (MobileHCI '16). ACM, New York, NY, USA, 791-798. DOI: https://doi.org/10.1145/2957265.2961859 [42] David Way and Joseph Paradiso. 2014. A Usability User Study Concerning Free-Hand Microgesture and Wrist-Worn Sensors. In Proceedings of the 2014 11th International Conference on Wearable and Implantable Body Sensor Networks (BSN '14). IEEE Computer Society, Washington, DC, USA, 138-142. DOI=http://dx.doi.org/10.1109/BSN.2014.32"
+    }, {
+      "page": 11,
+      "region": {
+        "x1": 54.0,
+        "x2": 558.0039672851562,
+        "y1": 750.914794921875,
+        "y2": 756.7197875976562
+      },
+      "text": "Paper 276 Page 12"
+    }, {
+      "page": 12,
+      "region": {
+        "x1": 54.0,
+        "x2": 294.08551025390625,
+        "y1": 74.92164611816406,
+        "y2": 225.3599853515625
+      },
+      "text": "[43] Eric Whitmire, Mohit Jain, Divye Jain, Greg Nelson, Ravi Karkar, Shwetak Patel, and Mayank Goel. 2017. DigiTouch: Reconfigurable Thumb-to-Finger Input and Text Entry on Head-mounted Displays. Proc. ACM Interact. Mob. Wearable Ubiquitous Technol. 1, 3, Article 113 (September 2017), 21 pages. DOI: https://doi.org/10.1145/3130978 [44] Chao Xu, Parth H. Pathak, and Prasant Mohapatra. 2015. Finger-writing with Smartwatch: A Case for Finger and Hand Gesture Recognition using Smartwatch. In Proceedings of the 16th International Workshop on Mobile Computing Systems and Applications (HotMobile '15). ACM, New York, NY, USA, 9-14. DOI: https://doi.org/10.1145/2699343.2699350 [45] Yang Zhang and Chris Harrison. 2015. Tomo: Wearable, Low-Cost Electrical Impedance Tomography for Hand Gesture Recognition. In Proceedings of the 28th Annual ACM Symposium on User Interface Software & Technology (UIST '15). ACM, New York, NY, USA, 167- 173. DOI: https://doi.org/10.1145/2807442.2807480"
+    }, {
+      "page": 12,
+      "region": {
+        "x1": 317.760009765625,
+        "x2": 557.885986328125,
+        "y1": 74.92164611816406,
+        "y2": 243.5999755859375
+      },
+      "text": "[46] Yang Zhang, Robert Xiao, and Chris Harrison. 2016. Advancing Hand Gesture Recognition with High Resolution Electrical Impedance Tomography. In Proceedings of the 29th Annual Symposium on User Interface Software and Technology (UIST '16). ACM, New York, NY, USA, 843-850. DOI: https://doi.org/10.1145/2984511.2984574 [47] Cheng Zhang, AbdelKareem Bedri, Gabriel Reyes, Bailey Bercik, Omer T. Inan, Thad E. Starner, and Gregory D. Abowd. 2016. TapSkin: Recognizing On-Skin Input for Smartwatches. In Proceedings of the 2016 ACM International Conference on Interactive Surfaces and Spaces (ISS '16). ACM, New York, NY, USA, 13-22. DOI: https://doi.org/10.1145/2992154.2992187 [48] Cheng Zhang, Qiuyue Xue, Anandghan Waghmare, Ruichen Meng, Sumeet Jain, Yizeng Han, Xinyu Li, Kenneth Cunefare, Thomas Ploetz, Thad Starner, Omer Inan, and Gregory D. Abowd. 2018. FingerPing: Recognizing Fine-grained Hand Poses using Active Acoustic On-body Sensing. In Proceedings of the 2018 CHI Conference on Human Factors in Computing Systems (CHI '18). ACM, New York, NY, USA, Paper 437, 10 pages. DOI: https://doi.org/10.1145/3173574.3174011"
+    }, {
+      "page": 12,
+      "region": {
+        "x1": 54.0,
+        "x2": 558.0040283203125,
+        "y1": 750.914794921875,
+        "y2": 756.7197875976562
+      },
+      "text": "Paper 276 Page 13"
+    }],
+    "title": {
+      "page": 10,
+      "region": {
+        "x1": 317.74322509765625,
+        "x2": 380.369140625,
+        "y1": 204.21670532226562,
+        "y2": 210.70318603515625
+      },
+      "text": "REFERENCES"
+    }
+  }]
+}

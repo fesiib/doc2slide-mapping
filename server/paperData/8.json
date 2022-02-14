@@ -1,0 +1,1118 @@
+{
+  "abstractText": {
+    "page": 0,
+    "region": {
+      "x1": 53.79800033569336,
+      "x2": 294.65069580078125,
+      "y1": 210.4398956298828,
+      "y2": 399.1820068359375
+    },
+    "text": "ABSTRACT In this paper, we investigate the use of mobile technology in an underexplored context, the bed that couples share. Despite large amounts of research on the impact of pre-bedtime technology use on our sleep and mental state, scant research in the HCI field focuses on the physical bed as a negotiated site of technology use by couples. This paper explores (a) the meaning of the bed accessed by mobile technology and (b) the strategies of both individual and shared technology use in bed, in the context of couple’s relationships. We investigate the effects of mobile technology to couples’ bed-sharing practices through in-depth interviews (n = 12) and an online survey (n = 117). We report on creative and negotiated bodily practices of mobile technology use by couples in bed, and the perceived effects on couples’ verbal and physical interaction and the intimacy of the bed."
+  },
+  "figures": [{
+    "caption": "Table 2: Survey responses: Thematic analysis, number of mentions ( n = 117)",
+    "captionBoundary": {
+      "x1": 53.50199890136719,
+      "x2": 294.03277587890625,
+      "y1": 94.68436431884766,
+      "y2": 111.282958984375
+    },
+    "figType": "Table",
+    "imageText": [],
+    "name": "2",
+    "page": 5,
+    "regionBoundary": {
+      "x1": 53.0,
+      "x2": 295.0,
+      "y1": 115.0,
+      "y2": 329.0
+    }
+  }, {
+    "caption": "Figure 3: Survey responses: Reasons and consequences of using a smartphone in bed (%) n = 117",
+    "captionBoundary": {
+      "x1": 317.9549865722656,
+      "x2": 559.7949829101562,
+      "y1": 231.77139282226562,
+      "y2": 248.3699951171875
+    },
+    "figType": "Figure",
+    "imageText": [],
+    "name": "3",
+    "page": 5,
+    "regionBoundary": {
+      "x1": 317.0,
+      "x2": 559.0,
+      "y1": 92.0,
+      "y2": 218.0
+    }
+  }, {
+    "caption": "Figure 1: Survey responses: Individual and shared use of smartphones in bed (%) n = 117. ‘Never’ is interpreted as ‘less than once a week’.",
+    "captionBoundary": {
+      "x1": 53.79800033569336,
+      "x2": 294.03302001953125,
+      "y1": 188.42636108398438,
+      "y2": 215.98394775390625
+    },
+    "figType": "Figure",
+    "imageText": [],
+    "name": "1",
+    "page": 4,
+    "regionBoundary": {
+      "x1": 53.0,
+      "x2": 295.0,
+      "y1": 92.0,
+      "y2": 174.0
+    }
+  }, {
+    "caption": "Figure 2: Survey responses: Disturbed sleep because of a mobile phone (%) n = 117",
+    "captionBoundary": {
+      "x1": 317.9549865722656,
+      "x2": 559.7949829101562,
+      "y1": 171.07937622070312,
+      "y2": 187.677978515625
+    },
+    "figType": "Figure",
+    "imageText": [],
+    "name": "2",
+    "page": 4,
+    "regionBoundary": {
+      "x1": 317.0,
+      "x2": 559.0,
+      "y1": 92.0,
+      "y2": 157.0
+    }
+  }, {
+    "caption": "Table 1: Participant couples in the in-depth interviews",
+    "captionBoundary": {
+      "x1": 63.702999114990234,
+      "x2": 283.836181640625,
+      "y1": 94.68436431884766,
+      "y2": 100.323974609375
+    },
+    "figType": "Table",
+    "imageText": ["living", "at", "home", "3", "F:", "42,", "M:", "43.", "Domestic", "partnership,", "children", "moved", "out", "4", "F:", "33,", "M:", "35.", "Married,", "one", "child", "5", "F:", "35,", "M:", "36.", "Married,", "two", "children", "6", "F:", "30,", "M:", "36.", "Married,", "no", "children", "#", "Age", "&", "Relationship", "1", "F:", "35,", "M:", "35.", "Married,", "three", "children", "2", "F:", "49,", "M:", "47.", "Domestic", "partnership,", "one", "grown", "up", "child"],
+    "name": "1",
+    "page": 3,
+    "regionBoundary": {
+      "x1": 53.0,
+      "x2": 295.0,
+      "y1": 110.0,
+      "y2": 207.0
+    }
+  }, {
+    "caption": "Figure 4: Survey responses: Reasons for using smartphone/tablet together in bed ( n = 117)",
+    "captionBoundary": {
+      "x1": 53.79800033569336,
+      "x2": 295.63787841796875,
+      "y1": 184.71737670898438,
+      "y2": 201.31597900390625
+    },
+    "figType": "Figure",
+    "imageText": [],
+    "name": "4",
+    "page": 6,
+    "regionBoundary": {
+      "x1": 53.0,
+      "x2": 295.0,
+      "y1": 92.0,
+      "y2": 171.0
+    }
+  }],
+  "sections": [{
+    "paragraphs": [{
+      "page": 0,
+      "region": {
+        "x1": 53.79798889160156,
+        "x2": 295.8323669433594,
+        "y1": 429.2295837402344,
+        "y2": 448.0690002441406
+      },
+      "text": "•Human-centered computing→Human computer interaction (HCI)."
+    }],
+    "title": {
+      "page": 0,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 128.51052856445312,
+        "y1": 414.7438659667969,
+        "y2": 421.1700134277344
+      },
+      "text": "CCS CONCEPTS"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 0,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 295.7337646484375,
+        "y1": 478.1165771484375,
+        "y2": 496.9570007324219
+      },
+      "text": "Bedroom, bed, smartphones, couple relationships, sleep, intimacy, mobile technology, disconnecting."
+    }],
+    "title": {
+      "page": 0,
+      "region": {
+        "x1": 53.79798889160156,
+        "x2": 111.39408874511719,
+        "y1": 463.630859375,
+        "y2": 470.0570068359375
+      },
+      "text": "KEYWORDS"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 0,
+      "region": {
+        "x1": 53.52899932861328,
+        "x2": 295.0241394042969,
+        "y1": 519.1024780273438,
+        "y2": 569.134033203125
+      },
+      "text": "Tarja Salmela, Ashley Colley, and Jonna Häkkilä. 2019. Together in Bed? Couples’ Mobile Technology Use in Bed. In CHI Conference on Human Factors in Computing Systems Proceedings (CHI 2019), May 4–9, 2019, Glasgow, Scotland UK. ACM, New York, NY, USA, 12 pages. https://doi.org/10.1145/3290605.3300732"
+    }, {
+      "page": 0,
+      "region": {
+        "x1": 53.24800109863281,
+        "x2": 295.0179748535156,
+        "y1": 585.2767333984375,
+        "y2": 712.3289794921875
+      },
+      "text": "Permission to make digital or hard copies of all or part of this work for personal or classroom use is granted without fee provided that copies are not made or distributed for profit or commercial advantage and that copies bear this notice and the full citation on the first page. Copyrights for components of this work owned by others than the author(s) must be honored. Abstracting with credit is permitted. To copy otherwise, or republish, to post on servers or to redistribute to lists, requires prior specific permission and/or a fee. Request permissions from permissions@acm.org. CHI 2019, May 4–9, 2019, Glasgow, Scotland UK © 2019 Copyright held by the owner/author(s). Publication rights licensed to ACM. ACM ISBN 978-1-4503-5970-2/19/05. . . $15.00 https://doi.org/10.1145/3290605.3300732"
+    }],
+    "title": {
+      "page": 0,
+      "region": {
+        "x1": 53.465999603271484,
+        "x2": 151.3298797607422,
+        "y1": 508.6993713378906,
+        "y2": 514.3389892578125
+      },
+      "text": "ACM Reference Format:"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 0,
+      "region": {
+        "x1": 317.70599365234375,
+        "x2": 559.8980712890625,
+        "y1": 224.92556762695312,
+        "y2": 710.0169677734375
+      },
+      "text": "Couples’ shared sleep, and the practice of sharing a bed, is a realm of everyday life within homes that is based on intimacy [51, 61]. Couple’s sleep is a sensory practice, which holds affective elements related to safety, affection, love, trust and sexuality. Bodies close to each other, holding each other, facing each other — or alternatively turned away from each other, avoiding contact with each other — illustrates the embodied and social nature of sleep [61]. Today, the intimacy of couple’s sleep seems to be tensioned by technological devices, especially smartphones, that have accessed our bedrooms and beds. Media and communication technology has emerged to all sectors of our (urban) life, and today it is hard to find a context where smartphones, social media, or other means of interactive media is not used [5]. However, despite the vast amount of media articles and blog posts related to the topic of smartphone usage in the domestic context and in couple’s relationships, scant research focuses on the physical bed and the bedroom as a particular space for mobile technology usage by couples. The only study that does [31], focuses on the effects of forced non-use rather than focusing on couple’s real sleep-related mobile practices or on their perceptions of the effects on their relationships. Existing research does not take into account the intimate nature of the bed as a domestic space, or other embodied aspects of relationship communication that relate to the bed, such as bedroom discussions and bodily communication through different positions taken in the bed with the partner. Much of the current technology related research in this use context is focused on sleep tracking, health and wellness [8, 11, 38, 49], not on the social aspects of communication technology use in bed. This paper focuses on the use of mobile devices, such as smartphones and tablets, in bed by couples. We address the intimate and dyadic bedtime interaction that has commonly taken place between two partners, which now might include third parties sharing the bed virtually, for example through the use of social media in bed. This work makes two main contributions: • Empirical findings from qualitative interviews and a survey reveal a plurality of experiences from couples,"
+    }, {
+      "page": 0,
+      "region": {
+        "x1": 54.0,
+        "x2": 558.0009765625,
+        "y1": 750.914794921875,
+        "y2": 756.7197875976562
+      },
+      "text": "Paper 502 Page 1"
+    }, {
+      "page": 1,
+      "region": {
+        "x1": 53.499000549316406,
+        "x2": 295.7403869628906,
+        "y1": 95.73056030273438,
+        "y2": 293.89801025390625
+      },
+      "text": "and provide insights into how technology is integrated and ritualized in intimate spaces. As the first sociotechnical investigation into technology use by couples in bed, our work contributes thick descriptions, highlighting areas of consensus and diversity. • Empirical findings on negotiation and coping strategies between couples, through which a balance between smartphone integration and dis-integration [25] is struck, creating what we call a manageable static state of tension. The main takeaway of our paper is that, today, smartphone usage in bed both supports and distracts from couples’ shared time there. Smartphones facilitate shared ‘cozy time’ and discussion, but also cause feelings of neglect and frustration. Although behavioral strategies to avoid disturbing a partner’s sleep are applied, sleep interruptions caused by smartphones are common, and generally accepted as part of normal life."
+    }],
+    "title": {
+      "page": 0,
+      "region": {
+        "x1": 317.95501708984375,
+        "x2": 411.0592346191406,
+        "y1": 210.43983459472656,
+        "y2": 216.865966796875
+      },
+      "text": "1 INTRODUCTION"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 1,
+      "region": {
+        "x1": 53.000999450683594,
+        "x2": 295.7342224121094,
+        "y1": 337.0875549316406,
+        "y2": 475.47900390625
+      },
+      "text": "Our research focuses on technology usage, co-located social interaction between partners, and the bed as a use context for technology (smartphones and tablets). The everyday intimacy of sleeping between couples [51, 61] as well as the social aspects of sleep in general [60, 62] are used as a lens to approach the topic of mobile technology use in couples’ beds. Within this sociocultural tradition, Taylor’s [60] division of ‘doing’ sleep and ‘being’ asleep guides us to focus on the social, shared, negotiated, debated, and material aspects of sleep which do not focus on the actual state of being asleep, but to the way it is constantly done. The research questions are:"
+    }, {
+      "page": 1,
+      "region": {
+        "x1": 69.27000427246094,
+        "x2": 295.73638916015625,
+        "y1": 484.5801696777344,
+        "y2": 599.489990234375
+      },
+      "text": "• RQ1:What kinds of strategies/practices do people in committed relationships have for both individual and shared mobile technology use in bed? • RQ2: How do couples perceive the influences of mobile technology use on their verbal and physical interaction in bed? • RQ3:What perceived effects does the presence of mobile technology in bed have to the meaning of the bed as a domestic sphere, characterized by intimacy and privacy?"
+    }],
+    "title": {
+      "page": 1,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 285.5373840332031,
+        "y1": 310.6468505859375,
+        "y2": 329.0279846191406
+      },
+      "text": "2 POSITIONING OF THE PAPER AND RESEARCH QUESTIONS"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 1,
+      "region": {
+        "x1": 53.31999969482422,
+        "x2": 295.7363586425781,
+        "y1": 645.6685180664062,
+        "y2": 712.3289794921875
+      },
+      "text": "With the estimated 4.5+ billion mobile phone users in the world in 2018 [15], mobile technology has become an integral part of our society, adopted in virtually all sectors of everyday life. Research on communication technology usage and social relationships has a strong history of focusing on technology as an enabler for social interaction over distance"
+    }, {
+      "page": 1,
+      "region": {
+        "x1": 317.95465087890625,
+        "x2": 559.898193359375,
+        "y1": 95.73056030273438,
+        "y2": 544.9559936523438
+      },
+      "text": "[26, 36]. Prior research in HCI that focused on designing for the bed context, presented concepts that fostered awareness of a distant partner. Goodman and Misilim [21] prototyped sensing beds, where two remote beds sense the presence of a person, and heat up the remote bed accordingly. Dodge [12] and Schiphorst et al. [54] developed sensored and interactive bed and pillows, respectively, where objects act as intimate and emotional communication channels. Communication technology and social media usage has penetrated numerous different sectors of everyday life. The use of smartphones and apps now absorbs significant portions of time, and creates distractions and checking behavior [44]. The heavy use of smartphones in frequent bursts of interaction has been reported in large scale studies logging mobile phone usage [5, 24]. Problematic smartphone usage can affect both social and health aspects of users’ lives [56], and ‘Fear of missing out’ (FOMO) and nomophobia (no mobile phobia) are recognized phenomena [6]. Extensive smartphone use creates stress, tension, and depression [14], causing negative effects not only for the user, but also on people around them. Smartphones have been found to play a central role in creating stress in domestic spheres, e.g., as a channel for work tasks [7], and their mere presence reduces willingness to help others [3]. Some feel that technology is replacing situated interaction and face-to-face conversations [42]. Smartphones seem less appropriate in certain contexts and situations, such as at the dining table [29], or in nature [23]. The user’s agency to disconnect has been discussed by Baumer et al. [4] who highlight the importance of studying non-use. Prior research investigated perceptions of problematic smartphone use between co-located people [9, 42, 45, 58], but has not focused on co-located couples. As people spend more time online [43], we need to better understand practices of mobile technology use that might change how couples interact. More study is needed to understand how couple’s use of mobile technology in bed can support individual preferences and provide a sense of independence for partners."
+    }],
+    "title": {
+      "page": 1,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 224.9324493408203,
+        "y1": 616.2388916015625,
+        "y2": 637.6090087890625
+      },
+      "text": "3 LITERATURE REVIEW Technology as a Constant Companion"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 1,
+      "region": {
+        "x1": 317.5870056152344,
+        "x2": 559.3035278320312,
+        "y1": 573.9375610351562,
+        "y2": 712.3289794921875
+      },
+      "text": "Research on the domestic use of mobile phones has pointed out that mobile phone use at home builds on the same needs as in many other contexts: mobility, quick access, and ease of use [41]. The spatial expansion of the rooms in which technology is used was described in 2013 by Kawsar and Brush [33], who reported on growing mobile phone usage in bathrooms and bedrooms. Gaming and video watching were reported as bedroom computing activities, especially among young users. Odour et al. report on how mobile phone use in the presence of other family members causes frustration, and to lessen that, people develop strategies, e.g. describing what they are doing with their phone, to increase others’"
+    }, {
+      "page": 1,
+      "region": {
+        "x1": 54.0,
+        "x2": 558.0009765625,
+        "y1": 750.914794921875,
+        "y2": 756.7197875976562
+      },
+      "text": "Paper 502 Page 2"
+    }, {
+      "page": 2,
+      "region": {
+        "x1": 53.000999450683594,
+        "x2": 295.74102783203125,
+        "y1": 95.73056030273438,
+        "y2": 353.67401123046875
+      },
+      "text": "awareness [42]. Currently, family rules and practices related to smartphone and tablet usage are gaining increasing attention in the context of children’s and teenager’s technology usage [20, 29]. Popular media has taken an active role in the dialog, and media posts on the harmful effects of excessive usage of smartphones and ICT to couples’ relationships are a regular occurrence e.g. [48]. A Mobile Consumer Habit survey in 2013 discovered that 12% of the 2021 US respondents (of which 1102 respondents were smartphone users) in a relationship for more than 18 years, considered their smartphone ‘getting in the way’ of their relationship. 9% of the respondents informed that they even used their smartphone during sex, the number doubling to 20% for adults between 18-34 years of age. A term to describe the negative effects of technology to social relations has emerged: phubbing. Phubbing means ‘to be snubbed by someone using their cell phone when in your company’, including also a relationship partner [50]. There are also positive effects of ICT to couple’s relationships [27]. Text messaging and chat, between partners can enrich and increase communication and intimacy in their relationship [10, 46]."
+    }],
+    "title": {
+      "page": 1,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 534.8297729492188,
+        "y1": 559.4518432617188,
+        "y2": 565.8779907226562
+      },
+      "text": "Effects of Technology on Couple’s Relationships"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 2,
+      "region": {
+        "x1": 53.45000076293945,
+        "x2": 295.58868408203125,
+        "y1": 382.6545715332031,
+        "y2": 509.09100341796875
+      },
+      "text": "Research on technology’s effect on sleep is abundant. In a large scale survey based study, Exelmans and Bulck [16] report that bedtime mobile phone use caused later rise time, more insomnia, and increased fatigue in adults. In a diary study with college students, 47% reported night-time waking to answer text messages and 40% to answer phone calls. Analysis showed that higher levels of technology use after going to sleep predicted poorer sleep quality, which then caused symptoms of depression and anxiety [1]. Negative effects on sleep have also been reported due to high levels of social media use [39] and mobile phone use in bed [18]."
+    }],
+    "title": {
+      "page": 2,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 212.1698760986328,
+        "y1": 368.1688537597656,
+        "y2": 374.5950012207031
+      },
+      "text": "Technology Usage’s Effect on Sleep"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 2,
+      "region": {
+        "x1": 53.43000030517578,
+        "x2": 295.7410583496094,
+        "y1": 550.0275268554688,
+        "y2": 712.3289794921875
+      },
+      "text": "Following a socio-cultural approach to sleep [52, 63], sleep and the bed-sharing lives of couples are considered as negotiated practices that are constantly reshaped. Directing the focus elsewhere from medically oriented viewpoints on sleep health and sleep problems, a socio-cultural approach to sleep highlights the reflection of cultural norms, habits and values in the ways we sleep. Following this approach, the bed may also be considered as a cultural product. In western thought, the bed is a sphere of domestic space that is typically considered as private, intimate and separated from the other functions of the home [61]. The bed and the bedroom are also accompanied by sensorial elements such as darkness and silence, or at least a delicate soundscape [61]. The intimate nature of the bed is further approachable"
+    }, {
+      "page": 2,
+      "region": {
+        "x1": 317.5870056152344,
+        "x2": 558.4031372070312,
+        "y1": 95.73056030273438,
+        "y2": 150.43597412109375
+      },
+      "text": "with the help of sociologically oriented research focusing on the shared sleeping space [30, 51]. This strand of research reflects on the strongly embodied, affective and gendered elements of bed-sharing, providing valuable insights to our study on couples’ mobile technology use in bed."
+    }],
+    "title": {
+      "page": 2,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 289.73187255859375,
+        "y1": 523.5858154296875,
+        "y2": 541.968017578125
+      },
+      "text": "A Socio-Cultural Approach to the Bed-Sharing Lives of Couples"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 2,
+      "region": {
+        "x1": 317.656005859375,
+        "x2": 559.8930053710938,
+        "y1": 181.40957641601562,
+        "y2": 236.114990234375
+      },
+      "text": "Two complementary research methods, resulting in two empirical datasets, were utilized to gain insight to couples’ use of mobile technology in bed: in-depth field interviews and an online survey. The field interviews were conducted first, and the findings used to develop the online survey questions."
+    }, {
+      "page": 2,
+      "region": {
+        "x1": 317.5870056152344,
+        "x2": 559.898193359375,
+        "y1": 252.6028594970703,
+        "y2": 501.1210021972656
+      },
+      "text": "In-Depth Interviews Participant Selection. For the interviews, we advertised for couples living in a committed relationship who used mobile devices in bed. Additionally we expressed interest in couples who considered mobile technology use as a part of everyday life in their relationship. The recruitment process was gender-neutral, aiming to equally attract both mixed and same gender couples. The recruitment messages were distributed both through the university’s e-mail lists and via the university’s communication department to national media. Based on the recruitment, eight couples expressed interest to participate and, as an initial set, we were able to arrange interview times with six (Table 1). By focusing on the richness of the interviews, we aimed to identify main themes with a relatively small number of interviews [22], thickness of data being added through the complementary survey [19]. All of the interviews were agreed to be conducted in the couples’ homes with their approval. Before the interviews, an informed consent form was sent to the participants. Both partners were present in all of the interviews and were each given a movie ticket as compensation."
+    }, {
+      "page": 2,
+      "region": {
+        "x1": 317.6059875488281,
+        "x2": 559.899169921875,
+        "y1": 514.1615600585938,
+        "y2": 712.3289794921875
+      },
+      "text": "Interview Process. The interviews were semi-structured, conducted by a single researcher, and lasted between 1 hour 10 minutes and 1 hour 43 minutes. We deliberately wanted to conduct the interviews at couples’ homes to enable reflection on the content of the interview with the physical premises of their homes and bedrooms. All of the couples invited the researcher to visit their bedroom when the topic was raised at the beginning of the interview. Thus, the interviews began in the bedroom, adding contextual validity to the discussions. All but one of the interviews then continued in the couples’ kitchen or living room. The interview questions began with general background questions, and then moved on to guiding themes: sleeping arrangements and sleep-wake rhythm; current mobile technology use at home; current level of satisfaction towards the couple’s use of mobile technology; current mobile technology use in bed; visual and auditory environment with mobile"
+    }, {
+      "page": 2,
+      "region": {
+        "x1": 54.0,
+        "x2": 558.0009765625,
+        "y1": 750.914794921875,
+        "y2": 756.7197875976562
+      },
+      "text": "Paper 502 Page 3"
+    }, {
+      "page": 3,
+      "region": {
+        "x1": 53.429779052734375,
+        "x2": 295.7410583496094,
+        "y1": 224.17160034179688,
+        "y2": 434.29400634765625
+      },
+      "text": "technology in bed; motivations to use mobile technology in bed; bodily positions for mobile technology use in bed and; the effects of mobile technology use in bed to partner intimacy and verbal communication. The interviewees were encouraged to be relaxed and conversational, allowing space for the couple to discuss the topics also as a dialogue between themselves. The interviews were audio recorded and the researcher also took notes. A high level of privacy was applied to the collected data: the interviewing researcher transcribed the relevant portions of the audio and anonymized the participants details, before making the transcriptions available to other members of the research group. During the transcription process, a preliminary thematic analysis of the interview data was made, based on the theoretical framework from which the interview was structured. This was further iterated within the research group. Our analysis utilized open coding, following the guidelines of Strauss [57]."
+    }],
+    "title": {
+      "page": 2,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 382.6846008300781,
+        "y1": 166.92384338378906,
+        "y2": 173.3499755859375
+      },
+      "text": "4 METHODS"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 3,
+      "region": {
+        "x1": 53.45000076293945,
+        "x2": 295.7410583496094,
+        "y1": 464.29656982421875,
+        "y2": 542.9119873046875
+      },
+      "text": "An online survey gained insight from a larger sample of couples. The survey included demographics, rating scale questions on smartphone use in bed and its effects (see Figures 1-4) and open questions exploring motivations to use the smartphone in bed, strategies to avoid partner disturbance and positive and negative effects from the use (see Table 2)."
+    }, {
+      "page": 3,
+      "region": {
+        "x1": 53.43000030517578,
+        "x2": 295.7337951660156,
+        "y1": 554.9825439453125,
+        "y2": 669.4639892578125
+      },
+      "text": "Participant Recruitment. Participants for the survey were recruited via Amazon Mechanical Turk and best practices were applied to ensure the reliability of the survey responses [13, 34]. Participants were sourcedwith the following criteria: HIT Approval Rate greater than 95%, location US, Number of approved HITs > 1000, marital Status = married. Participants were paid 0.60$ to complete the task. Prior to releasing the final survey, it was piloted and iterated. The participant recruitment was gender-neutral and the survey itself supported both mixed and same gender couples."
+    }, {
+      "page": 3,
+      "region": {
+        "x1": 53.797996520996094,
+        "x2": 295.7369689941406,
+        "y1": 681.5335083007812,
+        "y2": 712.3289794921875
+      },
+      "text": "Survey Participants. Of the 125 participants that started the survey, there were 117 complete responses which were further analyzed. Altogether 62 of the respondents were female"
+    }, {
+      "page": 3,
+      "region": {
+        "x1": 317.72601318359375,
+        "x2": 563.1809692382812,
+        "y1": 95.73056030273438,
+        "y2": 365.6289978027344
+      },
+      "text": "and 55 male. All respondents reported being in a heterosexual relationship. The participants’ ages ranged between 23 and 69 years, and were distributed; 23-29 years (20 persons), 30-39 years (64), 40-49 years (23) and 50-69 years (10). The mean age difference between partners was 0.3 years (SD = 4.5). All the participants had been with their current partner for more than a year with 34% being together for 5 to 10 years, and a further 50% for more than 10 years. Considering the sleeping arrangements of the participants and their partners, 8% slept in different rooms, 1% in different beds in the same room and the remaining 91% in the same bed, 61% reporting sleeping close together. The participants’ own and reported partner’s daily smartphone use was similar, with altogether 47% using their phone once an hour or less, 33% once every 15 minutes and 20% every few minutes. Respondents’ free text responses to open questions were analyzed using an open coding approach [57]: One researcher defined the codebook, and two coders independently evaluated each response. A third researcher then arbitrated disagreements between the coders. Answers were coded such that each answer could produce codes in multiple categories, howevermultiplementions in the same categorywere counted as only a single code."
+    }],
+    "title": {
+      "page": 3,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 118.79661560058594,
+        "y1": 449.81085205078125,
+        "y2": 456.23699951171875
+      },
+      "text": "Online Survey"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 3,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 558.4697875976562,
+        "y1": 406.5655822753906,
+        "y2": 449.31500244140625
+      },
+      "text": "In this section, we combine findings from our online survey and the field interviews. Couple#1, Couple#2 are referred to as C1, C2, etc. The survey dataset is included as auxiliary material to this paper."
+    }],
+    "title": {
+      "page": 3,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 380.5226135253906,
+        "y1": 392.079833984375,
+        "y2": 398.5059814453125
+      },
+      "text": "5 FINDINGS"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 3,
+      "region": {
+        "x1": 317.656005859375,
+        "x2": 559.8907470703125,
+        "y1": 490.2515563964844,
+        "y2": 712.3289794921875
+      },
+      "text": "The interviewed couples were representative of varying habits of mobile technology use, related to the devices that they used and the places and rhythm of their use. In one couple only one partner owned a smartphone, whilst in the other couples both partners owned a smartphone. All the individuals except one utilized social media. For the two who chose to abstain from technology use, their decisions were based on perceived negative effects of social media and smartphone addiction. For the other couples, the presence and use of smartphones at home and at work was a normal part of their everyday life, and their use habits only caused minor tensions within the couple. As noted by C5 F: \"If the other would not use [their smartphone] almost at all, then it could of course disturb them if the other is attached to her phone. But we use it in rather similar situations, and certain situations are the ones where we don’t use it, and that’s it.\" However, for one couple, one partner’s excessive smartphone use was considered an addiction, especially by the user himself, causing challenges in the relationship, which we discuss later."
+    }, {
+      "page": 3,
+      "region": {
+        "x1": 54.0,
+        "x2": 558.0009765625,
+        "y1": 750.914794921875,
+        "y2": 756.7197875976562
+      },
+      "text": "Paper 502 Page 4"
+    }],
+    "title": {
+      "page": 3,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 467.3403015136719,
+        "y1": 475.765869140625,
+        "y2": 482.1920166015625
+      },
+      "text": "Habits of Mobile Technology Use"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 4,
+      "region": {
+        "x1": 53.429779052734375,
+        "x2": 295.74102783203125,
+        "y1": 243.74954223632812,
+        "y2": 585.3779907226562
+      },
+      "text": "Moving to Bed with Technology. The survey revealed that three quarters (74%) of the respondents used mobile technology, i.e. a smartphone or tablet, in the shared bed at least once a week (Figure 1). This included both one partner using a device whilst the other was not, and both partners individually using their own devices at the same time. However, only 18% reported using a shared smartphone or tablet together in bed. In all of the interviewed couples, smartphones were routinely taken to the bed, and charged beside the bed during the night. A charged phone allowed more comfortable unplugged use in bed. One couple had even purchased longer charging cables to make using the smartphone in bed more comfortable. Additionally, one couple kept a tablet permanently in the bedroom, whilst another occasionally brought a tablet into the bedroom. Five of the six couples preferred to go to bed at approximately the same time. Thus, beginning to use their own smartphones in bed at the same time and either stopping at same time, or one continuing use and adapting their use to enable their partner’s sleep. More individualistic ways to move to bed with technology were tightly connected with different bedtime rhythms, division of home chores and different motives for smartphone use. This was the case especially with one couple: \"Many times he is in the bedroom with his phone, and I am here on this side [outside the bedroom] during the evenings when the washing machine is still running...\" (C1 F). Our survey returned similar findings, with 61% of respondents reporting that they usually go to bed at the same time as their partner."
+    }, {
+      "page": 4,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 295.74102783203125,
+        "y1": 597.8475341796875,
+        "y2": 712.3289794921875
+      },
+      "text": "Falling Asleep with Technology. From the interviews, the couples’ rhythms of technology use in bed were dependent on the nature of the use: whether they were independent or shared. For the majority of the interviewed couples, the actual phase of falling asleep in bed was guided by individual rhythms. This meant that usually one partner might continue their technology use for a short time when their partner had already started to sleep. C2’s rhythm included an extra phase, starting from individual smartphone use, continuing to shared tablet use, and, when one partner started"
+    }, {
+      "page": 4,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 559.8910522460938,
+        "y1": 201.62454223632812,
+        "y2": 244.375
+      },
+      "text": "sleeping, the other continuing with individual use. The couples’ rhythms were different at weekends when one partner might go to bed earlier whilst the other stayed up in the living room."
+    }],
+    "title": {
+      "page": 4,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 246.4724884033203,
+        "y1": 229.26380920410156,
+        "y2": 235.68994140625
+      },
+      "text": "Rhythms of Mobile Technology Use in Bed"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 4,
+      "region": {
+        "x1": 317.5865173339844,
+        "x2": 559.8980102539062,
+        "y1": 275.0585632324219,
+        "y2": 712.3289794921875
+      },
+      "text": "Our survey identified that mobile technology is perceived to cause negative effects to sleep (Figure 2). Of the respondents, 44% had been woken up by the noise, and 41% by the light from a mobile phone in the bedroom, and, for one in five participants, this was happening on weekly basis. These were surely contributors to the reported general smartphone use related issues of disturbed sleep, causing conflicts between the partners, and reducing the amount of face-to-face conversation (Table 2). The interviews revealed similar stories. Many of the couples had needed to ask their partner to reduce the volume of their smartphone, or urge them to start to sleep as well: \"And it’s every night: Put the volume down. Could you please put the volume down. And then he puts the volume down.\" (C2, F). Sleep was reported as being disrupted by sounds, light, or the partner’s verbal and/or physical outbursts when viewing something on their smartphones (e.g. giggling). Sometimes, one partner might wake the other up from light sleep (when just falling asleep), assuming they were still awake, to share some media content with them. Still, there was a general sense of respect towards the partner’s sleep, and targeting not to disrupt the partner’s sleep. Based on both the survey and the interviews, the partners either adjusted their use of technology to enable the other’s sleep, or the one starting to sleep earlier invented strategies to enable their sleep. The reported strategies to avoid disturbing the partner were similar in both sets of empirical data. The most common strategies (Table 2) were turning the volume down or silent, and dimming the screen light. Additionally, partners used headphones, turned away to shield the phone with their body, or even used the phone under the blanket. Other approaches were to limit the technology use to as short a duration as possible, or moving to another room to use the phone. The sleeping partners’ strategies to avoid being disturbed included the use of earplugs (as part of a more general effort to get good night’s sleep), or a blindfold to mask light coming from any devices with illuminated"
+    }, {
+      "page": 4,
+      "region": {
+        "x1": 54.0,
+        "x2": 558.0009765625,
+        "y1": 750.914794921875,
+        "y2": 756.7197875976562
+      },
+      "text": "Paper 502 Page 5"
+    }, {
+      "page": 5,
+      "region": {
+        "x1": 53.43000030517578,
+        "x2": 295.1461181640625,
+        "y1": 349.86456298828125,
+        "y2": 512.166015625
+      },
+      "text": "screens. For many couples, starting to sleep at the same time avoided potential problems with sleep disturbance. Together with tolerance for their partner’s habits in bed, practices of care were also reported. For example, waking the partner up if they were about to strangle themselves with their phone charger cable when falling asleep, or urging the partner to stop using their phone so both could get a good night’s sleep. For one couple, one partner might fall asleep while using their phone while laying on their stomach, their partner reacting: \"I might wake up to your snoring and push you to say you have fallen asleep there\" (C6, F). For another couple, one partner might turn their partner’s phone so its screen was face down, to avoid either of them being woken by its notification light."
+    }],
+    "title": {
+      "page": 4,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 455.6935729980469,
+        "y1": 260.5728759765625,
+        "y2": 266.9990234375
+      },
+      "text": "Disturbance and its Avoidance"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 5,
+      "region": {
+        "x1": 53.43000030517578,
+        "x2": 295.7425842285156,
+        "y1": 542.5985717773438,
+        "y2": 609.259033203125
+      },
+      "text": "The bedroom and the bed had diverse meanings for the interviewed couples, as well as for the partners individually. These meanings varied from the bedroom and the bed being an important site both for sleeping and intimate interaction with the partner, to a site of joint and individual entertainment."
+    }, {
+      "page": 5,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 295.7428283691406,
+        "y1": 621.758544921875,
+        "y2": 712.3289794921875
+      },
+      "text": "Bed(room) as Sanctuary. For some couples, the bedroom was a place of sanctuary. For these couples, the bedroom was a particularly clean and neat area of the home: \"When you start vacuuming, the bedroom is vacuumed first. Every time this room.\" (C4 M) This ‘ideology’ was however sometimes disrupted by piles of laundry or other stuff on the bedroom floor. For others, the bedroom was a sanctuary without a particularly aesthetic emphasis; the bed might remain unmade the"
+    }, {
+      "page": 5,
+      "region": {
+        "x1": 317.5870056152344,
+        "x2": 559.893798828125,
+        "y1": 267.4995422363281,
+        "y2": 441.7569885253906
+      },
+      "text": "whole day, with the door shut if it disturbed somebody. Moreover, even if the bedroom was an aesthetic sanctuary, it did not mean that it could not include technology: in one of the couples, one partner had beautifully designed the bedroom with calming elements to support a good night’s sleep, yet she carried her smartphone into the bed for entertainment during the evenings if there was battery left. Conversely, she felt reluctant to charge her phone in the bedroom, and it was usually left out of the bedroom to charge during the night. Treating the bedroom as a sanctuary from technology was reported by some participants in the survey: \"We don’t allow them [mobile phone or tablet] in the bedroom at all\" (survey respondent #77). Also, moving to use technology elsewhere than the bedroom was reported, e.g. \"We leave the room [to use smartphone or tablet] if the other is sleeping.\" (#107)."
+    }, {
+      "page": 5,
+      "region": {
+        "x1": 317.5867614746094,
+        "x2": 559.89501953125,
+        "y1": 454.38555908203125,
+        "y2": 712.3289794921875
+      },
+      "text": "Bed(room) as a Site for Entertainment with Technology. Interviewees also used the bedroom as a site for entertainment, which was also physically noticeable in the bedroom’s features. For example, there were power extension cords by the bed that were used to charge the smartphones and tablet, in addition to bedside lamps or other technical devices (such as a sleep apnea device). Also survey responses supported the notion of using mobile technology for relaxation and entertainment in bed (Table 2, Figure 3). The social aspect of using the bed as a site for entertainment was enabled by one couple’s bedtime rhythm: going to bed early to use it as a space for watching series and movies together on a tablet. Yet, this did not happen before individual use of smartphones, which, especially for one partner, meant also dealing with work tasks. For him, the bedroom and the bed acted as a site for mixing work-related duties with socializing with friends, as well as the use of mobile technology for (complete) relaxation and entertainment. This was a way of use that his partner did not completely understand, but had learned to tolerate and was happy with her own situation of not having to deal with work-related topics at home: \"(M) It is not a problem, we have agreed about it..."
+    }, {
+      "page": 5,
+      "region": {
+        "x1": 54.0,
+        "x2": 558.0009765625,
+        "y1": 750.914794921875,
+        "y2": 756.7197875976562
+      },
+      "text": "Paper 502 Page 6"
+    }, {
+      "page": 6,
+      "region": {
+        "x1": 53.191001892089844,
+        "x2": 295.7408752441406,
+        "y1": 210.0162811279297,
+        "y2": 490.9880065917969
+      },
+      "text": "(F) Yeah, and it’s your job! I close the workplace door at four or whatsoever and that’s it. I have a work time so why would I deal with work-related stuff at home.\" (C2). For some interviewed couples, the bedroom had many individual meanings related to entertainment, such as being a site for socializing with friends through social media, entertaining oneself sexually (e.g. watching porn alone), and generally as a place for gaining private space and time with the bedroom door closed. As some of these meanings were individual, partners’ preferences regarding the time spent and activities taken into the bedroom might be rather different and require tolerance from their partner: \"Sometimes it annoys me and sometimes I nag to him about spending so much time in the bedroom alone, but I know he needs it and I have tried to learn to understand it.\" (C1, F). For this couple, one partner enjoyed his time in the bedroom alone (especially during the daytime after work), while the other partner did not even sleep in the couple’s bed while her partner was away but instead built a joint bed with the kids on the living room sofa. In the case of another couple, only one partner took naps on the bed. For most of the couples though the bedroom had rather similar meanings. Both partners entered the bed at almost the same time, or just after one another, and did not take naps in the bed."
+    }, {
+      "page": 6,
+      "region": {
+        "x1": 53.797996520996094,
+        "x2": 295.5854797363281,
+        "y1": 502.2065734863281,
+        "y2": 712.3289794921875
+      },
+      "text": "Bed(room) as a Site for Excessive Phone Use. The bedroom and the bed can also be sites of phone or Internet addiction. For one couple, one partner’s craving for information did not stop at bedtime. The other partner would wake up at five or six in the morning and realize that her partner was still browsing the Internet. The practices of excessive Internet use that previously took place in a separate room with a computer had entered the shared sleeping space, enabled by the smartphone. Yet, an addiction to constantly gather new information also kept the addicted partner away from the bed and the bedroom if his partner was away: \"It’s constantly like I seem to avoid going to bed, also when I’m alone. If I go to bed, there might be a danger that I will fall asleep and miss something.\" (C6 M). In another couple, one partner had suffered from anxiousness, stress and negative effects on her sleep stemming from her excessive use of her smartphone in bed: \"You can’t get to sleep in peace because there is something beeping all the time. There comes a Facebook message, another,"
+    }, {
+      "page": 6,
+      "region": {
+        "x1": 317.1579895019531,
+        "x2": 559.3009033203125,
+        "y1": 96.6122817993164,
+        "y2": 258.031982421875
+      },
+      "text": "you have to check it many times a day. When you go to sleep, it was there, I checked it a lot. I couldn’t get to sleep, to relax. Now I have made a stop for myself. It’s been like that for around two years now.\" (C4 F). The previous situation had also caused tension between the couple, as well as between the addicted partner and their child. With this background and ‘the lessons learned’, the bedroom had become a protected site from excessive technology interference. The survey answers also revealed that technology usage created tension between partners, suggesting that excessive technology use was present in some couples. 16% of the respondents agreed that their partner got annoyed by the respondent’s mobile technology use when trying to sleep (Figure 3)."
+    }],
+    "title": {
+      "page": 5,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 174.04147338867188,
+        "y1": 528.11279296875,
+        "y2": 534.5389404296875
+      },
+      "text": "Meaning of the Bed(room)"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 6,
+      "region": {
+        "x1": 317.5870056152344,
+        "x2": 559.890625,
+        "y1": 287.0135803222656,
+        "y2": 712.3289794921875
+      },
+      "text": "Strategies for Asking and Gaining Attention. In the interviews, notions were raised that some (male) partners tightly focused their attention when using their smartphones or reading a book. In this situation, their partner found it hard to get their attention. In one relationship, one partner found herself often saying: \"Honey, listen\" several times, continued with poking her partner \"Look, look\", to which her partner might answer \"Mm-mm\", while still watching the screen (C1). Both partners knew it was useless to try to talk to the technology-focused partner in ‘that mode’. One interviewee related how his partner sometimes woke him up from his light sleep if she was still watching a documentary with her headphones in bed, saying: \"Guess what, guess what!\", without realizing that he had already fallen asleep (C4). The partner did respect her husband’s sleep and knew from his breathing when he had fallen asleep, after which she would not purposefully disturb him. Another strategy reported for getting attention from a smartphone using partner in bed was to get really close to the them: \"If I continue to watch the video or message, if you want my attention, you get irritatingly close to my skin, and then you just... F: You just have to stop what you’re doing... M: ...or just move to the edge here.\" (C2). These were situations that the couple shared with a comical twist, after which they explained how they find it natural to put their devices away if the other wants to talk, and then continue if they wish after the discussion. For many couples, a relaxed, easy-going discussion around the topics that they individually dealt with their phones in bed was common. Also, a verbal plea for attention/physical proximity was generally acted on by their partners, even though the partner’s attention was ‘nailed’ to their smartphone: \"If I’m there (using the smartphone) my attention is directed so tightly that I have to be really asked for attention... also in bed\" (C6 M). In case of this couple, the partner who was asked for attention speculated that the plea for attention/cuddling was only a way to get him put his"
+    }, {
+      "page": 6,
+      "region": {
+        "x1": 54.0,
+        "x2": 558.0009765625,
+        "y1": 750.914794921875,
+        "y2": 756.7197875976562
+      },
+      "text": "Paper 502 Page 7"
+    }, {
+      "page": 7,
+      "region": {
+        "x1": 53.797996520996094,
+        "x2": 294.0541687011719,
+        "y1": 95.73056030273438,
+        "y2": 138.48101806640625
+      },
+      "text": "phone away: \"When I put the phone away and take her to be cuddled, I hear that ‘well turn [to your side)], let’s start sleeping’, and I’m like ‘Well not yet! Let’s be here now.’\" (C6 M). His partner did not agree with this interpretation."
+    }, {
+      "page": 7,
+      "region": {
+        "x1": 53.43000030517578,
+        "x2": 295.1127624511719,
+        "y1": 161.48458862304688,
+        "y2": 359.6510009765625
+      },
+      "text": "Shared Cozy Time With(out) Technology. The interviewed couples spent shared time in bed with and without their smartphones. For one couple, their shared cozy time was device-free during weekends or holidays when they relaxed in the bed. For another, their shared cozy time involved a tablet, with which they watch series and movies in bed in the evenings. For this practice, they negotiated roles and turns who holds a ‘support pillow’ under the tablet. Other shared bodily practices were playing an online game in bed together with the other’s smartphone : \"(M) Candy Crush... I don’t remember where we found this quality game. (...) Together we swear if we can’t successfully complete a field. ‘This is shit.’ N: Yeah, ‘now we stop’.\" (C3). Another practice was the ‘petting’ of one partner by the other, when the former was ready to sleep earlier. The couple would go to bed at the same time and one partner would watch a documentary from a tablet with headphones on whilst petting the other."
+    }, {
+      "page": 7,
+      "region": {
+        "x1": 53.499000549316406,
+        "x2": 294.0580749511719,
+        "y1": 364.7215576171875,
+        "y2": 455.2929992675781
+      },
+      "text": "The survey responses also showed that a large portion of participants found positive aspects of using a smartphone or tablet together in bed. 32% of participants claimed that this helped them to relax, and that the shared use of mobile technology also facilitated discussions between the partners (33%) (Figure 4). Individual use of mobile technology was also seen to facilitate positive discussion between the partners by 35% of the respondents (Figure 3)."
+    }, {
+      "page": 7,
+      "region": {
+        "x1": 53.43000030517578,
+        "x2": 295.588623046875,
+        "y1": 478.29656982421875,
+        "y2": 712.3289794921875
+      },
+      "text": "Sexual Intimacy in Bed with(out) Technology. With four of the six couples interviewed the effects of technology in bed to their sex lives was discussed. From these, three considered the use of technology in bed had no effect to their intimate life. For example, one couple stated that their intimate life is separate from smartphone or tablet use: there were no problems in lighting up the atmosphere in bed. For another, who spent limited time with smartphones in bed, they did not consider phones replacing anything in their relationship. They remember it being previously more difficult to ‘make it happen’ when one partner was using her phone excessively in bed, but it never prevented sex. Her partner would simply say \"Would you put the phone the f*** away now\" (C4 M). The first partner reported sometimes putting the phone under the pillow so as to not to allow it disturb them in any way. For another couple, a verbal indication of the desire to be intimate with one’s partner was considered easy and natural, and the technology wasn’t considered as an obstacle in any way: \"It can be said straightforwardly that put Facebook away now... there is some other stuff to do here.\" (C5 F)."
+    }, {
+      "page": 7,
+      "region": {
+        "x1": 317.5870056152344,
+        "x2": 559.8978881835938,
+        "y1": 95.73056030273438,
+        "y2": 616.68701171875
+      },
+      "text": "In contrast, for one couple there was a clear effect of technology to their intimate lives: \"(M) It might be so that, nowadays, when one goes to sleep, it is just browsing the phone and then going to sleep. (F) Yeah, you do not even think about there would be something else to do.\" (C6). This an undesired situation that the couple is aware of, but which is not discussed. The technology-focused partner considered smartphones being in many ways a substitute for human relationships. Three couples discussed the role of porn in their bedsharing relationships. All three had tried watching porn together, two in bed through smartphones or tablet and one in the living room through TV. Two of the couples did not find joint porn watching as a sexual enhancer for their relationship, but rather comical. The practices of watching porn individually were also discussed. One couple saw solo porn watching in bed as bizarre: F: \"If your partner is sleeping next to you, I wouldn’t even consider that as an option.\"(C4 F). The couple speculated on a worrying situation in relationships where porn has replaced physical interaction between a couple: \"It’s worrying to hear that you prefer to sit by your smartphone, your partner is sleeping next to you, and you sit with your smartphone and check some porn hub. That is something I don’t understand.\" (C4 F). For two other couples, individual watching of porn was something that one or both partners occasionally practiced in bed and/or by TV. For one couple, the watching of porn in bed was something that both partners did. They had previously watched porn together in bed, but nowadays they watch it individually through their smartphones. While one partner seldom watched porn in bed individually when her partner was present, the other regularly watched porn while his partner was next to him in bed. For his partner this did not create a problem. The watching of porn did not affect the couple’s physical position in the bed as they did not have to hide it from their partner. For the porn-viewing partner, porn was a very normal and even essential part of smartphone use. The survey responses brought up some comments related to the couples’ sex lives and the use of mobile technology in bed, affecting either positively or negatively. It was commented that \"Well, a couple of times it ruined ‘the mood’.\" (#52), or that the use of mobile technology had resulted in them \"missing out on sex\" (#59). On the other hand, one participant (#69) commented that \"We usually use [smartphones or tablets] to read or view sexually related material before sex.\"."
+    }],
+    "title": {
+      "page": 6,
+      "region": {
+        "x1": 317.95501708984375,
+        "x2": 454.9463195800781,
+        "y1": 272.52783203125,
+        "y2": 278.9539794921875
+      },
+      "text": "Physical and Bodily Dynamics"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 7,
+      "region": {
+        "x1": 317.656005859375,
+        "x2": 558.2150268554688,
+        "y1": 657.62353515625,
+        "y2": 676.4630126953125
+      },
+      "text": "The key takeaways from our findings are firstly summarized and then discussed in detail:"
+    }, {
+      "page": 7,
+      "region": {
+        "x1": 333.427001953125,
+        "x2": 559.895263671875,
+        "y1": 681.1051025390625,
+        "y2": 712.3289794921875
+      },
+      "text": "• Using technology in bed is normal and relatively frequent, with three quarters of our survey participants doing so at least once a week."
+    }, {
+      "page": 7,
+      "region": {
+        "x1": 54.0,
+        "x2": 558.0009765625,
+        "y1": 750.914794921875,
+        "y2": 756.7197875976562
+      },
+      "text": "Paper 502 Page 8"
+    }, {
+      "page": 8,
+      "region": {
+        "x1": 69.2699966430664,
+        "x2": 295.73883056640625,
+        "y1": 95.3021469116211,
+        "y2": 269.98797607421875
+      },
+      "text": "• Couples integrated mobile technology use into their daily rhythms. Most had simultaneous in bed use, with some continuing after one partner began sleeping. • Sleep interruptions caused by smartphones were common and accepted as normal. Strategies to avoid such disturbances were applied. • The bed and bedroom held multiple contradictory meanings: as a sanctuary, a site for excessive phone use, and site for entertainment. • Couples made use of physicality to gain attention from their partners. • Most reported that their sex lives were unaffected by technology, though a few reported missing out on sex due to technology. Some used mobile devices for porn, whilst others rejected that use."
+    }],
+    "title": {
+      "page": 7,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 393.0062255859375,
+        "y1": 643.1378173828125,
+        "y2": 649.56396484375
+      },
+      "text": "6 DISCUSSION"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 8,
+      "region": {
+        "x1": 53.31999969482422,
+        "x2": 295.7420654296875,
+        "y1": 308.3927917480469,
+        "y2": 712.3289794921875
+      },
+      "text": "Physical Interaction (RQ2) Our studies revealed a wide spectrum of practices of both individual and shared mobile technology use in bed (RQ1). We found that smartphone use in bed is currently considered a normal part of bedtime routines. The particular practices of use are characterized in part by the bedtime rhythm of the couple and the motives for technology use in bed. The primary practices focused on individual use of mobile technology in bed as a means of relaxation, entertainment and socializing. Handling work-related tasks in bed was not common or desirable, but there were exceptions, and in these cases the behavior was tolerated by the partner. This individual use of smartphones in bed seems to be part of a shared practice within couples, for example triggering discussion before sleep (RQ2). Our studies provide insight on the shared use of mobile technology in bed by couples, and its ability to foster verbal and physical interaction between couples in bed. A few couples reported using a single shared device in bed, this naturally bringing physical proximity, coupled with verbal interaction. Here, for example, a couple would negotiate turns of holding the pillow to support the device. This kind of technology-mediated practice can ‘invite’ the couple to enter the bed together early in the evening and act as an enabler for physical and verbal interaction. However, there were also negative aspects to technology use in bed. Sleep disturbance by mobile devices appears to be commonplace, e.g., from our survey 20% of respondents reporting this as a weekly occurrence. Here we note agreement with prior work reporting that bedtime technology use negatively affects sleep quality [16]. Interestingly, there were surprisingly few negative comments to this, indicating that this sleep disturbance has become an accepted element of modern life. A key element arising from our findings was that of mutual respect for a partner’s sleep. Here, a variety"
+    }, {
+      "page": 8,
+      "region": {
+        "x1": 317.95465087890625,
+        "x2": 559.8978881835938,
+        "y1": 95.73056030273438,
+        "y2": 269.98797607421875
+      },
+      "text": "of accommodation strategies take place to avoid disturbing a sleeping partner, e.g., sound levels were decreased or silenced, screens were dimmed, or the bodily position adjusted to shield the partner from screen light. A few respondents even reported using the device under the blanket to avoid disturbing their partner. We were surprised how common the use of headphones in bed was among our survey respondents, with 13% of mentioning their use. Yet this did not mean that the individual use of technology in bed while a partner was sleeping is unproblematic: tensions occurred and requests were made. Our findings revealed strategies for asking and gaining attention in bed by couples, which rather than creating problems, seemed to form a natural part of the negotiation of individual and shared needs characteristic to any relationship."
+    }],
+    "title": {
+      "page": 8,
+      "region": {
+        "x1": 53.797996520996094,
+        "x2": 294.0556945800781,
+        "y1": 284.4828186035156,
+        "y2": 302.86395263671875
+      },
+      "text": "Practices for Mobile Technology Use in Bed (RQ1) and their Perceived Influence on Couples’ Verbal and"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 8,
+      "region": {
+        "x1": 317.5870056152344,
+        "x2": 559.8981323242188,
+        "y1": 322.8785705566406,
+        "y2": 712.3289794921875
+      },
+      "text": "Our findings introduced three different meanings of the bed(room) for couples using mobile technology in bed, the bed(room) as a sanctuary, as a site for entertainment and as a site for excessive phone use. The ease of Internet and social media use in bed, enabled by smartphones, may be considered an enabler for the re-construction of the bed as a site for technologically driven entertainment. For example, considering the earlier fascination of having TVs in bedrooms, the technologically featured bed(room) is not unheard of. Smartphones are enablers for more individually interactive practices, conducted in bed with the presence of the partner. For one couple in our study, this led to the transferring of an Internet addiction from a separate room with a computer, to the bed, beside a loved one. When, as reported in our studies, the smartphone is used as a tool for individual socializing with friends, colleagues, relatives or strangers, it allows other people a virtual entrance to the bed together with the couple, whilst generally excluding the other partner. However, we found little evidence of an explicit dissatisfaction between partners caused by this behavior, with little interest expressed in the actual content of the partner’s technology. Thus, any dissatisfaction towards use seems to stem more from the lack of attention when desired. Here we find alignment with prior research on mobile phone usage at homes, reporting frustration by co-located family members [42]. Despite the entrance of mobile technology to an intimate domestic space, the bedroom still represents a sanctuary that enables relaxation and getting a good night’s sleep. Our findings suggest that couples were able to reconcile their use of the bed for technology based entertainment with that of its still primary function. Though some boundaries remain, such as not handling work emails from the bed."
+    }, {
+      "page": 8,
+      "region": {
+        "x1": 54.0,
+        "x2": 558.0009765625,
+        "y1": 750.914794921875,
+        "y2": 756.7197875976562
+      },
+      "text": "Paper 502 Page 9"
+    }],
+    "title": {
+      "page": 8,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 525.0361328125,
+        "y1": 296.4378356933594,
+        "y2": 314.8189697265625
+      },
+      "text": "Perceived Effects of Mobile Technology to the Meaning of the Bed (RQ3)"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 9,
+      "region": {
+        "x1": 53.43000030517578,
+        "x2": 295.7418212890625,
+        "y1": 110.67459106445312,
+        "y2": 595.7659912109375
+      },
+      "text": "Prior work examining the use of (smart)phones in social situations demonstrated an ongoing redefinition of socially acceptable behavior [2, 37]. Based on our findings, this definition has now changed such that using a smartphone in bed has become the social norm, including behavior patterns to reduce the impact on a partner’s sleep. Recent works reported on the disruptive effects of surreptitious smartphone use in parallel with social interaction e.g. in pubs [47], and further quantified by Mayer et al. [40]. Similarly to findings in the context of videochat [59], lack of reciprocity of attention between our participants was highlighted as a potential source of conflicts. Others have identified the phenomenon where people desire technology non-use [4, 53], wishing to dis-integrate the smartphone from everyday life [25]. Harmon and Mazmanian [25] highlighted how smartphone users experience an internal conflict, seeking on one hand to be a master of the technology, whilst, on the other striving to be an authentic human by dis-integrating from the technology. Our interviews indicated signs of this conflict, verbalized either by the party engaging in excessive technology use or by their less-integrated partner. We observed supportive practices within couples to enable an individual’s agency to disconnect [25], e.g., agreeing on limiting smartphone usage in bed. We also observed frustrations with a smartphone addicted partner and a range of actions employed to gain attention. The HCI community has proposed tools to manage addiction and disruption in social situations e.g. [28, 35]; these are primarily individual focused, and would benefit from a more negotiation-based approach to suit couple’s relationships. Hiniker et al. [29] and Ferdous et al. [17] report on smartphone use at family mealtimes, highlighting difficulty in adhering to non-use rules even if the desire to do so exists. Our study participants reported successful cases where couples had managed to set rules for non-use of the mobile technology in bed, and less successful attempts leading to friction in the relationship. Our findings parallel those of Oduor et al. [42], who report that families experience frustration due to lack of visibility of what the others are doing on smartphones, but also experience relaxation and positive disengagement from family when needed."
+    }],
+    "title": {
+      "page": 9,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 177.11007690429688,
+        "y1": 96.18885803222656,
+        "y2": 102.614990234375
+      },
+      "text": "Reflections vs. Prior Works"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 9,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 295.7410888671875,
+        "y1": 645.6685180664062,
+        "y2": 712.3289794921875
+      },
+      "text": "Interesting future work includes investigating how mobile technology affects intimacy in the bed, and how smartphone use entwines with the romantic and sexual relationship of the couple. This may offer interesting insights to the underexplored domain of HCI at the cross-section of sex and technology [32]. As much smartphone usage now happens in"
+    }, {
+      "page": 9,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 558.21142578125,
+        "y1": 95.73056030273438,
+        "y2": 114.57000732421875
+      },
+      "text": "bed, it would be beneficial to investigate the bodily practices and ergonomics of using mobile technology in bed."
+    }],
+    "title": {
+      "page": 9,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 111.51365661621094,
+        "y1": 631.182861328125,
+        "y2": 637.6090087890625
+      },
+      "text": "Future Work"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 9,
+      "region": {
+        "x1": 317.47698974609375,
+        "x2": 559.8980102539062,
+        "y1": 143.55154418945312,
+        "y2": 401.4939880371094
+      },
+      "text": "Whilst both our interview and survey participant recruitment processes were gender-neutral, i.e., designed to equally engage heterosexual, homosexual and all romantic couples, a limitation of this work is that all of the participant couples were in a heterosexual relationship. Our research is an opening of the topic at the moment where technology has quickly penetrated intimate spaces and social norms are emerging. More research will be needed addressing diverse users, different facets of identity, and intersectional HCI [55]. Due to the intimate nature of the topic, some interviewees may not have been fully forthcoming on the topics discussed, especially as both partners were present in our interview protocol. Although concerns have been expressed about the quality of survey responses achieved from participants recruited through Mechanical Turk, we noted that our results had rather high internal validity, with the majority of participants providing short but well thought out responses to open text based questions.We acknowledge that the transferability of our work is limited due to the geographic location of our studies and their limited sample sizes. However we feel the combination of rich in-depth interviews plus a larger sample survey provides both depth and breadth to our findings."
+    }],
+    "title": {
+      "page": 9,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 370.01171875,
+        "y1": 129.0658721923828,
+        "y2": 135.49200439453125
+      },
+      "text": "Limitations"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 9,
+      "region": {
+        "x1": 317.47698974609375,
+        "x2": 559.8978271484375,
+        "y1": 430.4755554199219,
+        "y2": 652.552978515625
+      },
+      "text": "Through in the field interviews with couples (n = 12) and an online survey (n = 117) we identified key characteristics of the use of smartphones and tablets in a shared bed. Individual use of smartphones in bed was found to be the normal practice amongst a majority of our participants, being largely used to aid relaxation, in preparation for sleep. Wake ups, caused by smartphones in the bedroom, seem to be accepted as normal, even if occurring frequently. A wide variety of coping strategies were applied by partners in the case when one starts to sleep whilst the other continues to use a smartphone in the shared bed. Our findings suggest that both individual use, and especially shared use, of smartphones and tablets in bed has the potential to enhance and detract from a couple’s relationship, both though fostering conversation and physical closeness. We argue that the practices of mobile technology use in bed by couples are creative and negotiated, and the emergence of technology in bed(rooms) does not straightforwardly change the meaning of the bed as an intimate domestic space."
+    }],
+    "title": {
+      "page": 9,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 405.04156494140625,
+        "y1": 415.9898376464844,
+        "y2": 422.4159851074219
+      },
+      "text": "7 CONCLUSIONS"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 9,
+      "region": {
+        "x1": 317.656005859375,
+        "x2": 558.2135620117188,
+        "y1": 681.5335083007812,
+        "y2": 712.3289794921875
+      },
+      "text": "This research has been partially supported by a grant from Business Finland as part of the Varpu and Towards Digital Paradise projects."
+    }, {
+      "page": 9,
+      "region": {
+        "x1": 54.0,
+        "x2": 558.001953125,
+        "y1": 750.914794921875,
+        "y2": 756.7197875976562
+      },
+      "text": "Paper 502 Page 10"
+    }],
+    "title": {
+      "page": 9,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 425.7048645019531,
+        "y1": 667.0478515625,
+        "y2": 673.4739990234375
+      },
+      "text": "ACKNOWLEDGMENTS"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 10,
+      "region": {
+        "x1": 57.50400161743164,
+        "x2": 294.1927185058594,
+        "y1": 110.05974578857422,
+        "y2": 115.5670166015625
+      },
+      "text": "[1] Sue K Adams and Tiffani S Kisler. 2013. Sleep quality as a mediator"
+    }, {
+      "page": 10,
+      "region": {
+        "x1": 53.797996520996094,
+        "x2": 295.392333984375,
+        "y1": 120.02172088623047,
+        "y2": 711.4439697265625
+      },
+      "text": "between technology-related sleep quality, depression, and anxiety. Cyberpsychology, Behavior, and Social Networking 16, 1 (2013), 25–30. [2] Morgan G Ames. 2013. Managing mobile multitasking: The culture of iPhones on Stanford campus. In Proceedings of the 2013 conference on Computer supported cooperative work. ACM, 1487–1498. [3] Omotayo Banjo, Yifeng Hu, and S Shyam Sundar. 2008. Cell phone usage and social interaction with proximate others: Ringing in a theoretical model. The Open Communication Journal 2, 1 (2008). [4] Eric P. S. Baumer, Jenna Burrell, Morgan G. Ames, Jed R. Brubaker, and Paul Dourish. 2015. On the Importance and Implications of Studying Technology Non-use. interactions 22, 2 (Feb. 2015), 52–56. https: //doi.org/10.1145/2723667 [5] Matthias Böhmer, Brent Hecht, Johannes Schöning, Antonio Krüger, and Gernot Bauer. 2011. Falling Asleep with Angry Birds, Facebook and Kindle: A Large Scale Study on Mobile Application Usage. In Proceedings of the 13th International Conference on Human Computer Interaction with Mobile Devices and Services (MobileHCI ’11). ACM, New York, NY, USA, 47–56. https://doi.org/10.1145/2037373.2037383 [6] Laila A Chaudhry. 2015. Can you please put your phone away? Examining how the FOMO phenomenon and mobile phone addiction affect human relationships. (2015). [7] Noelle Chesley. 2005. Blurring boundaries? Linking technology use, spillover, individual distress, and family satisfaction. Journal of Marriage and Family 67, 5 (2005), 1237–1248. [8] Eun Kyoung Choe, Bongshin Lee, Matthew Kay, Wanda Pratt, and Julie A. Kientz. 2015. SleepTight: Low-burden, Self-monitoring Technology for Capturing and Reflecting on Sleep Behaviors. In Proceedings of the 2015 ACM International Joint Conference on Pervasive and Ubiquitous Computing (UbiComp ’15). ACM, New York, NY, USA, 121–132. https://doi.org/10.1145/2750858.2804266 [9] Karen Church, Antony Cousin, and Nuria Oliver. 2012. I wanted to settle a bet!: understanding why and how people use mobile search in social settings. In Proceedings of the 14th international conference on Human-computer interaction with mobile devices and services. ACM, 393–402. [10] Sarah M Coyne, Laura Stockdale, Dean Busby, Bethany Iverson, and David M Grant. 2011. \"I luv u:)!\": A descriptive study of the media use of individuals in romantic relationships. Family Relations 60, 2 (2011), 150–162. [11] Nediyana Daskalova, Danaë Metaxa-Kakavouli, Adrienne Tran, Nicole Nugent, Julie Boergers, John McGeary, and Jeff Huang. 2016. SleepCoacher: A Personalized Automated Self-Experimentation System for Sleep Recommendations. In Proceedings of the 29th Annual Symposium on User Interface Software and Technology (UIST ’16). ACM, New York, NY, USA, 347–358. https://doi.org/10.1145/2984511.2984534 [12] Chris Dodge. 1997. The bed: a medium for intimate communication. In CHI’97 Extended Abstracts on Human Factors in Computing Systems. ACM, 371–372. [13] Julie S. Downs, Mandy B. Holbrook, Steve Sheng, and Lorrie Faith Cranor. 2010. Are Your Participants Gaming the System?: Screening Mechanical Turk Workers. In Proceedings of the SIGCHI Conference on Human Factors in Computing Systems (CHI ’10). ACM, New York, NY, USA, 2399–2402. https://doi.org/10.1145/1753326.1753688 [14] Jon D Elhai, Robert D Dvorak, Jason C Levine, and Brian J Hall. 2017. Problematic smartphone use: A conceptual overview and systematic review of relations with anxiety and depression psychopathology. Journal of affective disorders 207 (2017), 251–259. [15] emarketer. 2017. Number of mobile phone users worldwide 2015- 2020. https://www.emarketer.com/Chart/Mobile-Phone-UsersPenetration-Worldwide-2015-2020-billions-of-population-change/"
+    }, {
+      "page": 10,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 558.195068359375,
+        "y1": 97.10771942138672,
+        "y2": 112.5780029296875
+      },
+      "text": "196278 Accessed: 2019-01-01. [16] Liese Exelmans and Jan Van den Bulck. 2016. Bedtime mobile phone"
+    }, {
+      "page": 10,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 559.0732421875,
+        "y1": 117.03270721435547,
+        "y2": 132.50299072265625
+      },
+      "text": "use and sleep in adults. Social Science & Medicine 148 (2016), 93–101. [17] Hasan Shahid Ferdous, Frank Vetere, Hilary Davis, Bernd Ploderer,"
+    }, {
+      "page": 10,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 559.5489501953125,
+        "y1": 136.958740234375,
+        "y2": 710.3359985351562
+      },
+      "text": "Kenton O’hara, Rob Comber, and Geremy Farr-Wharton. 2017. Celebratory technology to orchestrate the sharing of devices and stories during family mealtimes. In Proceedings of the 2017 CHI Conference on Human Factors in Computing Systems. ACM, 6960–6972. [18] Ingrid Nesdal Fossum, Linn Tinnesand Nordnes, Sunniva Straume Storemark, Bjørn Bjorvatn, and Ståle Pallesen. 2014. The association between use of electronic media in bed before going to sleep and insomnia symptoms, daytime sleepiness, morningness, and chronotype. Behavioral sleep medicine 12, 5 (2014), 343–357. [19] Patricia I Fusch and Lawrence R Ness. 2015. Are we there yet? Data saturation in qualitative research. The qualitative report 20, 9 (2015), 1408–1416. [20] Arup Kumar Ghosh, Karla Badillo-Urquiola, Mary Beth Rosson, Heng Xu, John M. Carroll, and Pamela J. Wisniewski. 2018. A Matter of Control or Safety?: Examining Parental Use of Technical Monitoring Apps on Teens’ Mobile Devices. In Proceedings of the 2018 CHI Conference on Human Factors in Computing Systems (CHI ’18). ACM, New York, NY, USA, Article 194, 14 pages. https://doi.org/10.1145/3173574.3173768 [21] Elizabeth Goodman and Marion Misilim. 2003. The sensing beds. In UbiComp 2003 Workshop. Citeseer, 40–42. [22] Greg Guest, Arwen Bunce, and Laura Johnson. 2006. How Many Interviews Are Enough?: An Experiment with Data Saturation and Variability. Field Methods 18, 1 (2006), 59–82. https://doi.org/10.1177/ 1525822X05279903 arXiv:https://doi.org/10.1177/1525822X05279903 [23] Jonna Häkkilä, Keith Cheverst, Johannes Schöning, Nicola J Bidwell, Simon Robinson, and Ashley Colley. 2016. NatureCHI: Unobtrusive User Experiences with Technology in Nature. In Proceedings of the 2016 CHI Conference Extended Abstracts on Human Factors in Computing Systems. ACM, 3574–3580. [24] Marian Harbach, Emanuel Von Zezschwitz, Andreas Fichtner, Alexander De Luca, and Matthew Smith. 2014. ItâĂŹsa hard lock life: A field study of smartphone (un) locking behavior and risk perception. In Symposium on usable privacy and security (SOUPS). 213–230. [25] Ellie Harmon and Melissa Mazmanian. 2013. Stories of the Smartphone in Everyday Discourse: Conflict, Tension &#38; Instability. In Proceedings of the SIGCHI Conference on Human Factors in Computing Systems (CHI ’13). ACM, New York, NY, USA, 1051–1060. https://doi.org/10.1145/2470654.2466134 [26] Marc Hassenzahl, Stephanie Heidecker, Kai Eckoldt, Sarah Diefenbach, and Uwe Hillmann. 2012. All You Need is Love: Current Strategies of Mediating Intimate Relationships Through Technology. ACM Trans. Comput.-Hum. Interact. 19, 4, Article 30 (Dec. 2012), 19 pages. https: //doi.org/10.1145/2395131.2395137 [27] Katherine M Hertlein and Katrina Ancheta. 2014. Advantages and disadvantages of technology in relationships: Findings from an openended survey. The Qualitative Report 19, 11 (2014), 1–11. [28] Alexis Hiniker, Sungsoo Ray Hong, Tadayoshi Kohno, and Julie A Kientz. 2016. MyTime: designing and evaluating an intervention for smartphone non-use. In Proceedings of the 2016 CHI Conference on Human Factors in Computing Systems. ACM, 4746–4757. [29] Alexis Hiniker, Sarita Y. Schoenebeck, and Julie A. Kientz. 2016. Not at the Dinner Table: Parents’ and Children’s Perspectives on Family Technology Rules. In Proceedings of the 19th ACM Conference on Computer-Supported Cooperative Work & Social Computing (CSCW ’16). ACM, New York, NY, USA, 1376–1389. https://doi.org/10.1145/ 2818048.2819940 [30] Jenny Hislop and Sara Arber. 2003. Sleepers wake! The gendered nature of sleep disruption among mid-life women. Sociology 37, 4"
+    }, {
+      "page": 10,
+      "region": {
+        "x1": 54.0,
+        "x2": 558.001953125,
+        "y1": 750.914794921875,
+        "y2": 756.7197875976562
+      },
+      "text": "Paper 502 Page 11"
+    }, {
+      "page": 11,
+      "region": {
+        "x1": 53.797996520996094,
+        "x2": 294.9812927246094,
+        "y1": 97.10771942138672,
+        "y2": 112.5780029296875
+      },
+      "text": "(2003), 695–711. [31] Nicola Hughes and Jolanta Burke. 2018. Sleeping with the frenemy:"
+    }, {
+      "page": 11,
+      "region": {
+        "x1": 53.79798889160156,
+        "x2": 295.3878173828125,
+        "y1": 117.03270721435547,
+        "y2": 710.3359985351562
+      },
+      "text": "How restricting ’bedroom use’ of smartphones impacts happiness and wellbeing. Computers in Human Behavior 85 (2018), 236–244. [32] Gopinaath Kannabiran, Jeffrey Bardzell, and Shaowen Bardzell. 2011. HowHCI Talks About Sexuality: Discursive Strategies, Blind Spots, and Opportunities for Future Research. In Proceedings of the SIGCHI Conference on Human Factors in Computing Systems (CHI ’11). ACM, New York, NY, USA, 695–704. https://doi.org/10.1145/1978942.1979043 [33] Fahim Kawsar and A.J. Bernheim Brush. 2013. Home Computing Unplugged: Why, Where and when People Use Different Connected Devices at Home. In Proceedings of the 2013 ACM International Joint Conference on Pervasive and Ubiquitous Computing (UbiComp ’13). ACM, New York, NY, USA, 627–636. https://doi.org/10.1145/ 2493432.2493494 [34] Aniket Kittur, Ed H. Chi, and Bongwon Suh. 2008. Crowdsourcing User Studies with Mechanical Turk. In Proceedings of the SIGCHI Conference on Human Factors in Computing Systems (CHI ’08). ACM, New York, NY, USA, 453–456. https://doi.org/10.1145/1357054.1357127 [35] Minsam Ko, Seungwoo Choi, Koji Yatani, and Uichin Lee. 2016. Lock n’LoL: group-based limiting assistance app to mitigate smartphone distractions in group activities. In Proceedings of the 2016 CHI Conference on Human Factors in Computing Systems. ACM, 998–1010. [36] Hong Li, Jonna Häkkilä, and Kaisa Väänänen. 2018. Review of Unconventional User Interfaces for Emotional Communication Between Long-distance Partners. In Proceedings of the 20th International Conference on Human-Computer Interaction with Mobile Devices and Services (MobileHCI ’18). ACM. https://doi.org/10.1145/3229434.3229467 [37] Rich Ling. 1996. \" One Can Talk about Common Manners!\": The Use of Mobile Telephones in Inappropriate Situations. Telenor. [38] Wanyu Liu, Bernd Ploderer, and Thuong Hoang. 2015. In bed with technology: challenges and opportunities for sleep tracking. In Proceedings of the Annual Meeting of the Australian Special Interest Group for Computer Human Interaction. ACM, 142–151. [39] X Long Xu, RZ Zhu, M Sharma, and Y Zhao. 2015. The influence of social media on sleep quality: a study of undergraduate students in Chongqing. China. J Nurs Care 4, 253 (2015), 2167–1168. [40] Sven Mayer, Lars Lischke, Pawel W Wozniak, and Niels Henze. 2018. Evaluating the Disruptiveness of Mobile Interactions: AMixed-Method Approach. In Proceedings of the 2018 CHI Conference on Human Factors in Computing Systems. ACM, 406. [41] Stina Nylander, Jenny Fådal, and Saman Mottaghy. 2012. Couch Mobility: The Cell Phone’s Most Important Feature at Home is Mobility. In CHI ’12 Extended Abstracts on Human Factors in Computing Systems (CHI EA ’12). ACM, New York, NY, USA, 1973–1978. https://doi.org/10.1145/2212776.2223738 [42] Erick Oduor, Carman Neustaedter, William Odom, Anthony Tang, Niala Moallem, Melanie Tory, and Pourang Irani. 2016. The Frustrations and Benefits of Mobile Device Usage in the Home when Co-Present with Family Members. In Proceedings of the 2016 ACM Conference on Designing Interactive Systems (DIS ’16). ACM, New York, NY, USA, 1315–1327. https://doi.org/10.1145/2901790.2901809 [43] Ofcom. 2018. UK Communications Market Report 2018. Technical Report. UK. https://www.ofcom.org.uk/research-and-data/multisector-research/cmr/cmr-2018 [44] Antti Oulasvirta, Tye Rattenbury, Lingyi Ma, and Eeva Raita. 2012. Habits make smartphone use more pervasive. Personal and Ubiquitous Computing 16, 1 (2012), 105–114. [45] Leysia Palen, Marilyn Salzman, and Ed Youngs. 2000. Going Wireless: Behavior &Amp; Practice of New Mobile Phone Users. In Proceedings of the 2000 ACM Conference on Computer Supported Cooperative Work (CSCW ’00). ACM, New York, NY, USA, 201–210. https://doi.org/"
+    }, {
+      "page": 11,
+      "region": {
+        "x1": 317.95501708984375,
+        "x2": 558.2008056640625,
+        "y1": 97.10771942138672,
+        "y2": 112.5780029296875
+      },
+      "text": "10.1145/358916.358991 [46] Jonathan Pettigrew. 2009. Text messaging and connectedness within"
+    }, {
+      "page": 11,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 559.546875,
+        "y1": 117.03270721435547,
+        "y2": 710.3359985351562
+      },
+      "text": "close interpersonal relationships. Marriage & Family Review 45, 6-8 (2009), 697–716. [47] Martin Porcheron, Joel E Fischer, and Sarah Sharples. 2016. Using mobile phones in pub talk. In Proceedings of the 19th ACM conference on computer-supported cooperative work & social computing. ACM, 1649–1661. [48] Julia Pugachevsky. 2017. 6 Sneaky Ways Your Phone Is Ruining Your Relationship. https://www.cosmopolitan.com/sex-love/a13787438/ smart-phone-relationship-problems/ [49] Ruth Ravichandran, Sang-Wha Sien, Shwetak N Patel, Julie A Kientz, and Laura R Pina. 2017. Making Sense of Sleep Sensors: How Sleep Sensing Technologies Support and Undermine Sleep Health. In Proceedings of the 2017 CHI Conference on Human Factors in Computing Systems. ACM, 6864–6875. [50] James A Roberts and Meredith E David. 2016. My life has become a major distraction from my cell phone: Partner phubbing and relationship satisfaction among romantic partners. Computers in Human Behavior 54 (2016), 134–141. [51] Paul C Rosenblatt. 2012. Two in a bed: The social system of couple bed sharing. SUNY Press. [52] Tarja Salmela, Anu Valtonen, and Susan Meriläinen. 2018. Accessing uncolonized terrains of organizations: uncanny force of sleep and dreaming. Culture and Organization (2018), 1–15. [53] Nithya Sambasivan, Leena Ventä, Jani Mäntyjärvi, Minna Isomursu, and Jonna Häkkilä. 2009. Rhythms of non-use of device ensembles. In CHI’09 Extended Abstracts on Human Factors in Computing Systems. ACM, 4531–4536. [54] Thecla Schiphorst, Frank Nack, Michiel KauwATjoe, Simon De Bakker, Lora Aroyo, Angel Perez Rosillio, Hielke Schut, Norm Jaffe, et al. 2007. PillowTalk: Can we afford intimacy?. In Proceedings of the 1st international conference on Tangible and embedded interaction. ACM, 23–30. [55] Ari Schlesinger, W. Keith Edwards, and Rebecca E. Grinter. 2017. Intersectional HCI: Engaging Identity Through Gender, Race, and Class. In Proceedings of the 2017 CHI Conference on Human Factors in Computing Systems (CHI ’17). ACM, New York, NY, USA, 5412–5427. https://doi.org/10.1145/3025453.3025766 [56] Choonsung Shin and Anind K. Dey. 2013. Automatically Detecting Problematic Use of Smartphones. In Proceedings of the 2013 ACM International Joint Conference on Pervasive and Ubiquitous Computing (UbiComp ’13). ACM, New York, NY, USA, 335–344. https: //doi.org/10.1145/2493432.2493443 [57] Anselm L Strauss. 1987. Qualitative analysis for social scientists. Cambridge University Press. [58] Norman Makoto Su and Lulu Wang. 2015. From Third to Surveilled Place: The Mobile in Irish Pubs. In Proceedings of the 33rd Annual ACM Conference on Human Factors in Computing Systems. ACM, 1659–1668. [59] Minhyang (Mia) Suh, Frank Bentley, and Danielle Lottridge. 2018. \"It’s Kind of Boring Looking at Just the Face\": How Teens Multitask During Mobile Videochat. Proc. ACM Hum.-Comput. Interact. 2, CSCW, Article 167 (Nov. 2018), 23 pages. https://doi.org/10.1145/3274436 [60] Brian Taylor. 1993. Unconsciousness and society: The sociology of sleep. International Journal of Politics, Culture, and Society 6, 3 (1993), 463–471. [61] Anu Valtonen and Elina Närvänen. 2016. The everyday intimacy of sleeping: an embodied analysis of intimate practices. Consumption Markets & Culture 19, 4 (2016), 370–386. [62] Simon J Williams. 2005. Sleep and society: sociological ventures into the un (known). Routledge. [63] Simon Johnson Williams and Nick Crossley. 2008. Introduction: sleeping bodies. Sociologica 4 (2008), 46–54."
+    }, {
+      "page": 11,
+      "region": {
+        "x1": 54.0,
+        "x2": 558.0020141601562,
+        "y1": 750.914794921875,
+        "y2": 756.7197875976562
+      },
+      "text": "Paper 502 Page 12"
+    }],
+    "title": {
+      "page": 10,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 116.56490325927734,
+        "y1": 96.18885803222656,
+        "y2": 102.614990234375
+      },
+      "text": "REFERENCES"
+    }
+  }]
+}

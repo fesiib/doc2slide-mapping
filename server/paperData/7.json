@@ -1,0 +1,1508 @@
+{
+  "abstractText": {
+    "page": 0,
+    "region": {
+      "x1": 53.499000549316406,
+      "x2": 295.7410888671875,
+      "y1": 253.48805236816406,
+      "y2": 478.0950012207031
+    },
+    "text": "ABSTRACT Hierarchy structures such as file systems are widespread interfaces for item retrieval and selection tasks. Some hierarchies can be modified by end-users, such as application launchers on smartphones or pictures in a file folder. These modifiable hierarchies cannot benefit from an optimization made beforehand as their content, unknown during the design process, is constantly evolving. We hence propose an analytic model which designers can integrate in their system to recommend a range of local structure modifications (e.g., creating new folders) to end-users. Proposing a range of modifications gives flexibility to end-users regarding their own meaningful grouping and labeling choices to follow a recommendation. A first experiment confirms that the recommendations built on our model can lead to modified hierarchies resulting in faster theoretical selection times. A second experiment confirms that the theoretical selection times fit empirical selection times in different hierarchy visual layouts: linear, radial, and grid."
+  },
+  "figures": [{
+    "caption": "Figure 4: Left: Average item selection time (s). Right: Total number of nodes. Error bars show 95% CI (N=16).",
+    "captionBoundary": {
+      "x1": 53.79800033569336,
+      "x2": 294.03302001953125,
+      "y1": 165.56980895996094,
+      "y2": 182.54498291015625
+    },
+    "figType": "Figure",
+    "imageText": [],
+    "name": "4",
+    "page": 5,
+    "regionBoundary": {
+      "x1": 60.0,
+      "x2": 288.0,
+      "y1": 92.0,
+      "y2": 159.0
+    }
+  }, {
+    "caption": "Figure 1: Approach’s workflow. The user adds new movies in the ’Comical’ folder (left), which increases the average selection time of items in the folder. Our model considers this specific group of items to propose a range of recommendations regarding the number of folders to create and/or the number of files to transfer to reduce this selection time (center). If the user has a grouping and labeling structure in mind that fits a recommendation, the resulting hierarchy (right) will lead to a faster average selection time.",
+    "captionBoundary": {
+      "x1": 53.52000045776367,
+      "x2": 295.6378173828125,
+      "y1": 238.93980407714844,
+      "y2": 332.62786865234375
+    },
+    "figType": "Figure",
+    "imageText": [],
+    "name": "1",
+    "page": 1,
+    "regionBoundary": {
+      "x1": 60.0,
+      "x2": 288.0,
+      "y1": 94.0,
+      "y2": 233.0
+    }
+  }, {
+    "caption": "Figure 5: Linear (2 levels of 8 items each), radial, and grid layouts. Blue elements indicate mouse cursor hover states.",
+    "captionBoundary": {
+      "x1": 53.79800033569336,
+      "x2": 294.0329895019531,
+      "y1": 194.9268035888672,
+      "y2": 211.9019775390625
+    },
+    "figType": "Figure",
+    "imageText": [],
+    "name": "5",
+    "page": 6,
+    "regionBoundary": {
+      "x1": 60.0,
+      "x2": 288.0,
+      "y1": 92.0,
+      "y2": 189.0
+    }
+  }, {
+    "caption": "Figure 2: Illustrative example. The model considers a group of nodes (left). The model then simulates and predict the selection time of modified groupings (center). Groupings with a faster selection time can then be proposed to the user (right) for her to make a decision (highlighted row).",
+    "captionBoundary": {
+      "x1": 317.6769714355469,
+      "x2": 559.7949829101562,
+      "y1": 260.21484375,
+      "y2": 310.06695556640625
+    },
+    "figType": "Figure",
+    "imageText": [],
+    "name": "2",
+    "page": 2,
+    "regionBoundary": {
+      "x1": 337.0,
+      "x2": 539.0,
+      "y1": 94.0,
+      "y2": 254.0
+    }
+  }, {
+    "caption": "Table 1: Regression analysis results for both pointing (Fitts) and visual search (Search) calibrations, the resulting delays, and regression analysis results for the model absolute prediction (Pred.) and the visual search ordering of items (Order).",
+    "captionBoundary": {
+      "x1": 317.6260070800781,
+      "x2": 559.99609375,
+      "y1": 97.32483673095703,
+      "y2": 151.8310546875
+    },
+    "figType": "Table",
+    "imageText": ["Delays", "D1", "=", "0.25", ",", "D2", "=", "0.53,", "D3", "=", "0.53", "Pred.", "-1.69.", "1.77", ".98", "231.3", "<", ".001", "Order", "31.95", "22.5", ".96", "385.8", "<", ".001", "Grid", "Search", "0.0", "0.23", ".99", "13690", "<", ".001", "Fitts", "0.24", "0.2", ".77", "17.49", "<", ".05", "Delays", "D1", "=", "0.11", ",", "D2", "=", "0.53,", "D3", "=", "0.0", "Pred.", "-0.22", "1.93", ".93", "68.62", "<", ".001", "Order", "105.72", "0.35", "-.05", "0.29", "0.60", "Radial", "Search", "0.45", "0.09", ".98", "174.2", "<", ".01", "Fitts", "0.44", "0.01", ".86", "32.21", "<", ".001", "Delays", "D1", "=", "0.12", ",", "D2", "=", "0.76,", "D3", "=", "0.95", "Pred.", "-3.33", "1.9", ".91", "53.07", "<", ".01", "Order", "58.25", "11.32", ".98", "879.9", "<", ".001", "Layout", "a", "b", "adj.", "R2", "F-Stat.", "p", "Linear", "Search", "0.33", "0.11", ".99", "2782", "<", ".001", "Fitts", "0.25", "0.14", ".61", "8.88", "<", ".05"],
+    "name": "1",
+    "page": 7,
+    "regionBoundary": {
+      "x1": 317.0,
+      "x2": 556.0,
+      "y1": 160.0,
+      "y2": 344.0
+    }
+  }, {
+    "caption": "Figure 3: Original (left) and modified (right) hierarchies.",
+    "captionBoundary": {
+      "x1": 324.4930114746094,
+      "x2": 551.655517578125,
+      "y1": 191.1448211669922,
+      "y2": 197.1610107421875
+    },
+    "figType": "Figure",
+    "imageText": [],
+    "name": "3",
+    "page": 3,
+    "regionBoundary": {
+      "x1": 349.0,
+      "x2": 527.0,
+      "y1": 94.0,
+      "y2": 185.0
+    }
+  }, {
+    "caption": "Figure 6: Top to bottom: Linear, Radial, Grid. Left to right: Visual search, pointing, absolute prediction, and visual search ordering.",
+    "captionBoundary": {
+      "x1": 53.79800033569336,
+      "x2": 558.1812744140625,
+      "y1": 311.72882080078125,
+      "y2": 328.7039794921875
+    },
+    "figType": "Figure",
+    "imageText": [],
+    "name": "6",
+    "page": 8,
+    "regionBoundary": {
+      "x1": 53.0,
+      "x2": 559.0,
+      "y1": 94.0,
+      "y2": 306.0
+    }
+  }],
+  "sections": [{
+    "paragraphs": [{
+      "page": 0,
+      "region": {
+        "x1": 53.79798889160156,
+        "x2": 294.05230712890625,
+        "y1": 507.581787109375,
+        "y2": 526.2219848632812
+      },
+      "text": "•Human-centered computing→HCI theory, concepts and models; Graphical user interfaces;"
+    }],
+    "title": {
+      "page": 0,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 128.51052856445312,
+        "y1": 492.8968505859375,
+        "y2": 499.322998046875
+      },
+      "text": "CCS CONCEPTS"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 0,
+      "region": {
+        "x1": 53.79798889160156,
+        "x2": 292.6111755371094,
+        "y1": 555.878173828125,
+        "y2": 581.1480102539062
+      },
+      "text": "Hierarchy; Recommendation; Predictive Model; Modifiable ∗JSPS International Research Fellows"
+    }, {
+      "page": 0,
+      "region": {
+        "x1": 53.24800109863281,
+        "x2": 294.192626953125,
+        "y1": 595.381591796875,
+        "y2": 712.176025390625
+      },
+      "text": "Permission to make digital or hard copies of all or part of this work for personal or classroom use is granted without fee provided that copies are not made or distributed for profit or commercial advantage and that copies bear this notice and the full citation on the first page. Copyrights for components of this work owned by others than ACMmust be honored. Abstracting with credit is permitted. To copy otherwise, or republish, to post on servers or to redistribute to lists, requires prior specific permission and/or a fee. Request permissions from permissions@acm.org. CHI 2019, May 4–9, 2019, Glasgow, Scotland UK © 2019 Association for Computing Machinery. ACM ISBN 978-1-4503-5970-2/19/05. . . $15.00 https://doi.org/10.1145/3290605.3300598"
+    }],
+    "title": {
+      "page": 0,
+      "region": {
+        "x1": 53.79798889160156,
+        "x2": 111.39408874511719,
+        "y1": 541.0238037109375,
+        "y2": 547.449951171875
+      },
+      "text": "KEYWORDS"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 0,
+      "region": {
+        "x1": 317.5249938964844,
+        "x2": 559.5750732421875,
+        "y1": 265.00921630859375,
+        "y2": 325.6669921875
+      },
+      "text": "William Delamare, Ali Neshati, Pourang Irani, and Xiangshi Ren. 2019. An Analytic Model for Time Efficient Personal Hierarchies. In CHI Conference on Human Factors in Computing Systems Proceedings (CHI 2019), May 4–9, 2019, Glasgow, Scotland UK. ACM, New York, NY, USA, Article 4, 11 pages. https://doi.org/10.1145/3290605. 3300598"
+    }],
+    "title": {
+      "page": 0,
+      "region": {
+        "x1": 317.6230163574219,
+        "x2": 415.48681640625,
+        "y1": 253.89781188964844,
+        "y2": 259.91400146484375
+      },
+      "text": "ACM Reference Format:"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 0,
+      "region": {
+        "x1": 317.5870056152344,
+        "x2": 559.8980102539062,
+        "y1": 358.61419677734375,
+        "y2": 711.8289794921875
+      },
+      "text": "From audio menus with telephone services to application launchers on wearable devices, file folders and software menus, hierarchical organizations are now widespread to allow for item retrieval and selection. In a hierarchy, the top-level gives access to lower-level groups, which in turn also give access to lower-level groups, and so on until a final option is reached. Hierarchy navigation is still users’ preferred information retrieval method, which is consistent, and relies on a recognition task instead of a recall process such as with a search engine [7]. Some hierarchies, such as software menus, have a static content that can be optimized during the design process for fast item selection [6, 23], a critical factor for any retrieval method [13, 15, 19]. Despite the omnipresence of hierarchies with modifiable content, such as digital files and folders, no help is provided to enhance selection times while creating personal hierarchical organizations. This results in end-users having to deal with potentially inefficient hierarchies, or to rely on external features only, such as the ‘most frequent items’ feature on Microsoft Windows OS for instance. Let’s consider a concrete example. Jane just legally got a new set of digital comical movies (Figure 1). Current optimization approaches mostly consider hierarchies with static content [13, 16, 23]. They can hence assume known constraints, such as item selection frequencies [15, 22, 23] and groupings [12, 13]. This is not the case with modifiable hierarchies and in Jane’s situation. Modifying a hierarchy also implies that a familiar structure is already in place [7, 9]. Thus, current approaches involving the complete hierarchy can interfere with any existing mental model and habits of"
+    }, {
+      "page": 0,
+      "region": {
+        "x1": 54.0,
+        "x2": 558.0009765625,
+        "y1": 750.914794921875,
+        "y2": 756.7197875976562
+      },
+      "text": "Paper 368 Page 1"
+    }, {
+      "page": 1,
+      "region": {
+        "x1": 53.31999969482422,
+        "x2": 295.7410583496094,
+        "y1": 355.71319580078125,
+        "y2": 577.4219970703125
+      },
+      "text": "end-users. For Jane, this means that she might want to add these new movies in the existing ’Comical’ sub-folder without changing the complete structure of the ’Movie’ folder and the other sub-folders. Our model can help end-users optimize their modifiable hierarchies without interfering with their already existing hierarchy structure. For instance, if a designer integrates our model in her interface, it can advise Jane to create between two and four new sub-folders in the ’Comical’ folder. She then might be able to find two categories in order to follow this recommendation according to her decision (e.g., ’Dark Humor’ and ’Satyr’, or ’Cringe’ and ’Absurd’), giving Jane flexibility regarding grouping and semantic constraints. Our approach suggests local recommendations to help users organize a part of the hierarchywith newly added items. We focus on modifications following new items addition as it does not interfere with already existing hierarchy parts, and fits with the storing and growing of information content trend [8]."
+    }, {
+      "page": 1,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 295.74114990234375,
+        "y1": 582.8612060546875,
+        "y2": 708.9290161132812
+      },
+      "text": "We propose amodel to optimize a group of items anywhere in a hierarchy. We then validate two practical aspects of our theoretical approach: its usefulness during hierarchy creation, and its prediction accuracy during item selection. The first experiment confirms that the flexible recommendations built on the model can help users create more time-efficient hierarchies than without recommendations. Participants also expressed their wish to have such recommendations for their personal hierarchies. The second experiment confirms that our theoretical approach fits empirical selection times with different visual hierarchical layouts: linear, radial, and grid."
+    }, {
+      "page": 1,
+      "region": {
+        "x1": 317.5870056152344,
+        "x2": 559.89697265625,
+        "y1": 96.09918975830078,
+        "y2": 234.12200927734375
+      },
+      "text": "Designers and practitioners offering tools dealing with hierarchies to end-users can now also propose efficient recommendations by integrating our model to their platform. Previous approaches consider the complete hierarchy structure, with static content. Our model can help for local structure reorganizations of personal hierarchies with evolving content. In addition, our model allows a system to propose not only one (i.e., the optimum), but a range of recommendations to give end-users flexibility regarding the new structure to create. End-users are still in control of the grouping and labeling of the modified hierarchy. This ensures meaningful choices for future item retrieval."
+    }],
+    "title": {
+      "page": 0,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 411.0592041015625,
+        "y1": 343.7598571777344,
+        "y2": 350.1860046386719
+      },
+      "text": "1 INTRODUCTION"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 1,
+      "region": {
+        "x1": 317.47698974609375,
+        "x2": 558.211669921875,
+        "y1": 263.47216796875,
+        "y2": 293.89801025390625
+      },
+      "text": "Wepresent algorithmic and analytic optimization approaches designed for static menus as none considered modifiable hierarchies."
+    }],
+    "title": {
+      "page": 1,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 411.9559326171875,
+        "y1": 248.6178741455078,
+        "y2": 255.04400634765625
+      },
+      "text": "2 RELATEDWORK"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 1,
+      "region": {
+        "x1": 317.9544982910156,
+        "x2": 559.8983764648438,
+        "y1": 323.2471923828125,
+        "y2": 556.9119873046875
+      },
+      "text": "Early work proposed a recursive algorithm to determine an optimized hierarchy according to a priori defined hierarchies to constrain automatic tree transformations [13]. Matsui et al. proposed a genetic algorithm to optimize hierarchical menus [23]. Their optimization function considers the frequencies of items selection in order to propose item rearrangement. Their model also takes into account the semantic relationships between items and favors balanced hierarchies. Another avenue is to propose design tools based on multi-objective optimization function [6, 22]. The optimization algorithm can then consider several factors such as item position in the menu, groupings, items size, users’ expertise, menu learnability, and semantics constraints [22]. These approaches require pre-supposed knowledge, such as example hierarchies [13], or aim to help knowledgeable designers create established software menus [6], allowing control of optimization parameters [27]. These approaches are hence best suited for creating static hierarchies and enhancing menu designs via visual features (e.g., grouping and labeling)."
+    }],
+    "title": {
+      "page": 1,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 419.52783203125,
+        "y1": 308.3928527832031,
+        "y2": 314.8190002441406
+      },
+      "text": "Algorithmic Approach"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 1,
+      "region": {
+        "x1": 317.5870056152344,
+        "x2": 560.7036743164062,
+        "y1": 586.2611694335938,
+        "y2": 712.3289794921875
+      },
+      "text": "Analyticmodels can help understand the depth/breadth tradeoff of hierarchies highlighted by a broad range of empirical work [10, 18, 19, 25, 28, 33]. The first analytic model concerned hierarchies with homogeneous tree structures, i.e. having a constant breadth, hence the same number of items in each group [19]. The mathematical simulation revealed that groups should contain between 4 and 8 items for ideal selection time. The model has been later revised by considering users experience and menu learnability [28], showing ideal groupings of 16 to 78 items depending on simulation values (e.g. reading time). Further analytic models consider"
+    }, {
+      "page": 1,
+      "region": {
+        "x1": 54.0,
+        "x2": 558.0009765625,
+        "y1": 750.914794921875,
+        "y2": 756.7197875976562
+      },
+      "text": "Paper 368 Page 2"
+    }, {
+      "page": 2,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 295.5787658691406,
+        "y1": 96.09918975830078,
+        "y2": 138.48101806640625
+      },
+      "text": "item selection frequencies [15] or semantic constraints [12]. However, these works are also restricted to uniform trees, i.e. groupings with the same number of children leading to the same frequency distributions."
+    }, {
+      "page": 2,
+      "region": {
+        "x1": 53.499000549316406,
+        "x2": 295.739013671875,
+        "y1": 143.920166015625,
+        "y2": 281.9429931640625
+      },
+      "text": "These models are restricted to specific hierarchy types and concern the whole hierarchical tree structure. In addition, they focus on menus and their broad range of design factors [4]. Finally, and importantly, analytic approaches have not been evaluated to show that the theoretical performance gain fits actual empirical time selection or if end-users would choose these new hierarchies. Instead, our approach involves local part(s) of modifiable hierarchies, without limitations regarding the hierarchy type (e.g., homogeneous trees). In addition, we empirically validate our approach by demonstrating its usefulness (recommendations) and its generalization (predictions)."
+    }],
+    "title": {
+      "page": 1,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 402.56085205078125,
+        "y1": 571.4068603515625,
+        "y2": 577.8330078125
+      },
+      "text": "Analytic Approach"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 2,
+      "region": {
+        "x1": 53.54899978637695,
+        "x2": 295.739501953125,
+        "y1": 327.232177734375,
+        "y2": 704.3590087890625
+      },
+      "text": "For readers not interested in the mathematical aspects of this work, a plain text explanation of our approach is necessary. We consider a node (e.g., a folder) and its children (e.g., movie files) (Figure 2, left). We then simulate the creation of new sub-folders (e.g., ’Satyr’) in which some children will be transferred (Figure 2, center). To simplify mathematical manipulations, we consider the number of transferred children constant across sub-folders (e.g., ’Satyr’ and ’Absurd’) in a given folder (e.g., ’Comical’). We can then compute the difference between the new average selection time and the previous one (without considering errors). This results in an equation depending on 6 parameters: 3 delays (search, select, and transition times), and 3 hierarchy structure values (the original number of children, the number of new sub-folder(s), and their corresponding children). Delays can be obtained via previous work [11]. For instance, pointing selection time can be modeled using Fitts’ law [14]. We can then formally analyze when the new structure can lead to faster selection times and propose these options to the user (Figure 2, right) - and not only the theoretical optimum. Users can then choose the solution which corresponds to their own grouping and labeling preferences (Figure 2, highlighted row), and proceed to the reorganization of their hierarchy. With this flexibility, Jane has several options to choose from depending on her own grouping and labeling preferences, hence meaningful to her, and potentially helping further browsing [24]. In addition, folders are modeled independently from each other, potentially resulting in specific optimized structures for each of them. For instance, Janemight watch ’Action’ movies more often than ’Comical’ movies. Thus, the system can consider the expert search time prediction for the ’Action’ movies, and the novice one for ’Comical’ movies."
+    }],
+    "title": {
+      "page": 2,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 180.15870666503906,
+        "y1": 312.37884521484375,
+        "y2": 318.80499267578125
+      },
+      "text": "3 APPROACH OVERVIEW"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 2,
+      "region": {
+        "x1": 317.656005859375,
+        "x2": 559.8928833007812,
+        "y1": 345.8101806640625,
+        "y2": 388.1910095214844
+      },
+      "text": "This section introduces the main mathematical aspects relevant to recommendations the system can provide. We provide supplementary materials for reader interested in the mathematical details of equations derivations."
+    }],
+    "title": {
+      "page": 2,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 503.5856628417969,
+        "y1": 330.955810546875,
+        "y2": 337.3819580078125
+      },
+      "text": "4 ANALYTIC APPROACH ANDMODEL"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 2,
+      "region": {
+        "x1": 317.47698974609375,
+        "x2": 558.211181640625,
+        "y1": 418.9711608886719,
+        "y2": 462.14898681640625
+      },
+      "text": "We consider any node at a level j − 1 in the hierarchy with nj children at level j representing items to select, i.e. leaves in the tree. We define three different delays potentially required to browse a hierarchy (Figure 3, left):"
+    }, {
+      "page": 2,
+      "region": {
+        "x1": 317.8559875488281,
+        "x2": 559.3101196289062,
+        "y1": 466.7921447753906,
+        "y2": 711.2150268554688
+      },
+      "text": "• D1: the delay to search a node while browsing. This can be the time to read file names in a directory for instance. • D2: the delay to select a node. This can be the time to move the cursor and click on the desired file for instance. • D3: the delay to proceed from the current level to the next one. This can be the steering time (i.e. the time to navigate through a constrained trajectory such as nested-menu levels) between two folders’ names when displayed as lists for instance. Our approach is flexible regarding these delays. For instance, D1 is related to the time to browse the current hierarchy level. Novice users will perform a visual search, with a time linear with the number of items [31]. Expert users will take a decision, with a time modeled by the Hick-Hyman law, logarithmic with the number of items [11]. Our model can then be adapted to every specific situations. In addition, these delays could also embed additional information. For instance, if Jane does not like to go through a lot a sub-folders to reach an item (i.e. Jane prefers breadth over depth in the"
+    }, {
+      "page": 2,
+      "region": {
+        "x1": 54.0,
+        "x2": 558.0009765625,
+        "y1": 750.914794921875,
+        "y2": 756.7197875976562
+      },
+      "text": "Paper 368 Page 3"
+    }, {
+      "page": 3,
+      "region": {
+        "x1": 53.43000030517578,
+        "x2": 294.0542907714844,
+        "y1": 96.09918975830078,
+        "y2": 138.48101806640625
+      },
+      "text": "hierarchy), she could define a cost factor αD3 > 1 applied to the transition time, leading to D ′3 = αD3 × D3. The system would then consider Jane’s preferences when proposing to create new sub-folders."
+    }],
+    "title": {
+      "page": 2,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 368.8659973144531,
+        "y1": 404.9138488769531,
+        "y2": 411.3399963378906
+      },
+      "text": "Definitions"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 3,
+      "region": {
+        "x1": 53.45000076293945,
+        "x2": 294.0511779785156,
+        "y1": 190.02618408203125,
+        "y2": 208.49700927734375
+      },
+      "text": "A group of nj leaves (Figure 3, state 1) will lead to an average selection time of:"
+    }, {
+      "page": 3,
+      "region": {
+        "x1": 107.40499877929688,
+        "x2": 205.93380737304688,
+        "y1": 210.22021484375,
+        "y2": 225.66705322265625
+      },
+      "text": "T1(j) = T (j − 1) + nj + 1"
+    }, {
+      "page": 3,
+      "region": {
+        "x1": 191.61300659179688,
+        "x2": 294.0447082519531,
+        "y1": 217.6572265625,
+        "y2": 231.00701904296875
+      },
+      "text": "2 D1 + D2 (1)"
+    }, {
+      "page": 3,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 295.1433410644531,
+        "y1": 233.35821533203125,
+        "y2": 276.31097412109375
+      },
+      "text": "If this average selection time of nj leaves can be reduced, themodified level j will haven′j nodes, withn ′ j1 newly created nodes with ci children each (Figure 3, state 2). The new average selection time is then:"
+    }, {
+      "page": 3,
+      "region": {
+        "x1": 75.88899993896484,
+        "x2": 271.1571350097656,
+        "y1": 265.5114440917969,
+        "y2": 312.7229919433594
+      },
+      "text": "T2(j) = T (j − 1) + 1 nj n′j∑ i=1 [ max(ci , 1)(i .D1 + D2)+"
+    }, {
+      "page": 3,
+      "region": {
+        "x1": 125.52099609375,
+        "x2": 294.04473876953125,
+        "y1": 298.4184265136719,
+        "y2": 346.2819519042969
+      },
+      "text": "max(ci , 0)D3 + ci∑ k=1 (k .D1 + D2) ] (2)"
+    }, {
+      "page": 3,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 295.7417297363281,
+        "y1": 349.68218994140625,
+        "y2": 597.1839599609375
+      },
+      "text": "To simplify computations, we consider the number of children ci constant: ci = c,∀i = 1..n′j1 . This is obviously not the case in real situations. However, we simplify our computations in one group of nodes only. Individual groups can still have a different number of children from each other, thus allowing completely unconstrained tree structures. In addition, with unbalanced node groups, a simple heuristic consists in positioning more frequent groups of nodes before less frequent groups in the hierarchy. If frequencies are unknown - such as with newly added movies - we can assume all items as being equiprobable, and just focus on the number of nodes in each group. Thus, positioning larger groups at the top of the current level reduces the overall selection time. Frequencies can still be represented in our model. For instance, if an item is twice as likely to be selected than others, we can then represent this item with two distinct nodes in its current sub-group, without including any additional mathematical variable. Ordering based on the number of nodes then becomes equivalent to ordering based on item frequencies. We can now analyze ∆T = T2(j) −T1(j):"
+    }, {
+      "page": 3,
+      "region": {
+        "x1": 76.57102966308594,
+        "x2": 161.45547485351562,
+        "y1": 599.1166381835938,
+        "y2": 625.416015625
+      },
+      "text": "∆T = D1 2 n′j1 2c nj (c − 1)"
+    }, {
+      "page": 3,
+      "region": {
+        "x1": 53.79764175415039,
+        "x2": 295.74072265625,
+        "y1": 610.7724609375,
+        "y2": 701.2310180664062
+      },
+      "text": "+ n′j1 nj ( c D1 2 + D2 + D3 + D1 2 c2 + njD1(1 − c) ) (3) First, we explore the theoretical optimum of equation 3. However, the theoretical optimum might not be feasible - nor even be desirable. We hence describe additional recommendations based on different scenarios."
+    }],
+    "title": {
+      "page": 3,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 82.66081237792969,
+        "y1": 175.17189025878906,
+        "y2": 181.5980224609375
+      },
+      "text": "Model"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 3,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 559.2948608398438,
+        "y1": 233.8812713623047,
+        "y2": 312.00299072265625
+      },
+      "text": "Jane just added nj new movies and wants to organize them. The system can suggest what is the best option in this situation. D1, D2, and D3 are constants defined by the hierarchy layout and interface in use. For a given node to process, the number of children nj is also constant. Thus, Equation 3 can be seen as a function of only two variables:n′j1 and c , defining a surface. The theoretical optimum is hence obtained when:"
+    }, {
+      "page": 3,
+      "region": {
+        "x1": 389.4580078125,
+        "x2": 558.2017822265625,
+        "y1": 318.26458740234375,
+        "y2": 341.1159973144531
+      },
+      "text": "∂∆T ∂c = 0 and ∂∆T ∂n′j1 = 0 (4)"
+    }, {
+      "page": 3,
+      "region": {
+        "x1": 317.656005859375,
+        "x2": 558.2066650390625,
+        "y1": 343.7751770019531,
+        "y2": 366.4100036621094
+      },
+      "text": "To propose an optimal solution to the user, equation 4 has to have a solution (c0,n′j10), with c0 > 1, and n ′ j10 ≥ 1."
+    }],
+    "title": {
+      "page": 3,
+      "region": {
+        "x1": 317.95501708984375,
+        "x2": 416.0208740234375,
+        "y1": 218.5138702392578,
+        "y2": 224.94000244140625
+      },
+      "text": "Theoretical Optimum"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 3,
+      "region": {
+        "x1": 317.1579895019531,
+        "x2": 559.74072265625,
+        "y1": 392.76361083984375,
+        "y2": 452.65997314453125
+      },
+      "text": "Jane wants to move N movies into n′j1 new sub-folders. The system can tell if it is worth it. In this case, we can simply replace c (with c ≈ N /n′j1 ) and n′j1 in equation 3: if the resulting value is negative (i.e. T2 < T1), the current idea is validated."
+    }, {
+      "page": 3,
+      "region": {
+        "x1": 317.5870056152344,
+        "x2": 558.4041748046875,
+        "y1": 456.6051940917969,
+        "y2": 595.0159912109375
+      },
+      "text": "In case of a positive value (T2 > T1), we can go one step further by providing insight to the user about why the idea is not worth it given the current number of nodes considered in the group. This extra-information is possible if we consider the current number of nodes nj flexible [6, 28]. Indeed, some nodes could be categorized in more than one group (e.g., a movie can be in ’Action’ and ’Comical’). If one or more extra nodes could have been part of the current group, the user knows that she can revise her current categorization. With c and n′j1 set as constant in equation 3, we can now determine what would be the minimum number of nodes nj that the level should have for the idea to be validated:"
+    }, {
+      "page": 3,
+      "region": {
+        "x1": 348.0690002441406,
+        "x2": 381.70062255859375,
+        "y1": 602.9165649414062,
+        "y2": 616.1619873046875
+      },
+      "text": "nj > c"
+    }, {
+      "page": 3,
+      "region": {
+        "x1": 370.57501220703125,
+        "x2": 558.2017822265625,
+        "y1": 575.7424926757812,
+        "y2": 621.5020141601562
+      },
+      "text": "1 − c ( n′j1 2 (1 − c) − c 2 − D1 2 + D2 + D3 D1 ) (5)"
+    }],
+    "title": {
+      "page": 3,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 400.0401306152344,
+        "y1": 380.34783935546875,
+        "y2": 386.77398681640625
+      },
+      "text": "Validating an Idea"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 3,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 558.2113647460938,
+        "y1": 653.1055908203125,
+        "y2": 686.4530029296875
+      },
+      "text": "Jane wants to createn′j1 new sub-folders to organize some of her newly added movies. The system can suggest a range regarding how many movies should be in each one."
+    }, {
+      "page": 3,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 558.2089233398438,
+        "y1": 689.45361328125,
+        "y2": 710.7520141601562
+      },
+      "text": "By fixing n′j1 in Equation 4, we can find the theoretical best option for c as we did for the theoretical optimum, defined"
+    }, {
+      "page": 3,
+      "region": {
+        "x1": 54.0,
+        "x2": 558.0009765625,
+        "y1": 750.914794921875,
+        "y2": 756.7197875976562
+      },
+      "text": "Paper 368 Page 4"
+    }, {
+      "page": 4,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 66.19197082519531,
+        "y1": 96.09918975830078,
+        "y2": 102.614990234375
+      },
+      "text": "by:"
+    }, {
+      "page": 4,
+      "region": {
+        "x1": 95.1780014038086,
+        "x2": 132.9296112060547,
+        "y1": 111.68658447265625,
+        "y2": 125.6240234375
+      },
+      "text": "c0 = nj"
+    }, {
+      "page": 4,
+      "region": {
+        "x1": 116.05000305175781,
+        "x2": 143.1038055419922,
+        "y1": 122.110595703125,
+        "y2": 135.22998046875
+      },
+      "text": "n′j1 + 1"
+    }, {
+      "page": 4,
+      "region": {
+        "x1": 145.09600830078125,
+        "x2": 294.0447082519531,
+        "y1": 88.13148498535156,
+        "y2": 132.4580078125
+      },
+      "text": "( n′j1 2nj + 1 − D1 2 + D2 + D3 D1nj ) (6)"
+    }, {
+      "page": 4,
+      "region": {
+        "x1": 53.31999969482422,
+        "x2": 294.2403869628906,
+        "y1": 137.88922119140625,
+        "y2": 205.675048828125
+      },
+      "text": "We can go one step further and propose a range of values for the number of children the newly created nodes should have to make the new hierarchy more time efficient. By re-writing equation 3 as a second degree polynomial function, we can then compute the roots c1 and c2 of the polynomial function to find a range of values for which ∆T < 0."
+    }],
+    "title": {
+      "page": 3,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 464.6701965332031,
+        "y1": 640.6908569335938,
+        "y2": 647.1170043945312
+      },
+      "text": "Finding the Number of Children"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 4,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 295.0500793457031,
+        "y1": 237.2242889404297,
+        "y2": 291.4360046386719
+      },
+      "text": "Jane wants to move N movies from the current folder. The system can suggest a range regarding how many new subfolders should be created. Let k ∈ [0; 1], so that N = n′j1c = knj . In this case, the optimum number of groups is obtained for:"
+    }, {
+      "page": 4,
+      "region": {
+        "x1": 89.14700317382812,
+        "x2": 117.1180191040039,
+        "y1": 302.4696044921875,
+        "y2": 315.5879821777344
+      },
+      "text": "n′j1 = k"
+    }, {
+      "page": 4,
+      "region": {
+        "x1": 117.86499786376953,
+        "x2": 294.0447082519531,
+        "y1": 274.9564514160156,
+        "y2": 318.7569885253906
+      },
+      "text": "√ nj 2 − k giving: c = √ (2 − k)nj (7)"
+    }, {
+      "page": 4,
+      "region": {
+        "x1": 53.43000030517578,
+        "x2": 295.73419189453125,
+        "y1": 322.773193359375,
+        "y2": 438.9519958496094
+      },
+      "text": "It has been previously shown that the optimal number of groups to divide nj nodes is to create n′j1 = √ nj new nodes [28]. This is true only if we consider that users want to send all nj nodes to the next level, i.e. when k = 1. Our analysis provides more flexibility to users by considering only a subsample of nodes, i.e. 0 < k ≤ 1. In other words, in a given folder, sub-folders can co-exist with files. We can go one step further if we consider the number of nodes nj flexible again [6, 28]. We can then find njn for which ∆T < 0:"
+    }, {
+      "page": 4,
+      "region": {
+        "x1": 87.6929931640625,
+        "x2": 137.72645568847656,
+        "y1": 435.0294494628906,
+        "y2": 483.4039611816406
+      },
+      "text": "njn = ©« D1 +"
+    }, {
+      "page": 4,
+      "region": {
+        "x1": 139.9399871826172,
+        "x2": 250.19366455078125,
+        "y1": 421.80841064453125,
+        "y2": 459.1579895019531
+      },
+      "text": "√ D1 2 + 2D1(D12 + D2 + D3)"
+    }, {
+      "page": 4,
+      "region": {
+        "x1": 164.91600036621094,
+        "x2": 202.73300170898438,
+        "y1": 458.9101257324219,
+        "y2": 476.1729736328125
+      },
+      "text": "D1 √ 2 − k"
+    }, {
+      "page": 4,
+      "region": {
+        "x1": 251.3889923095703,
+        "x2": 259.2539367675781,
+        "y1": 435.0914611816406,
+        "y2": 483.4659729003906
+      },
+      "text": "ª®®¬ 2"
+    }, {
+      "page": 4,
+      "region": {
+        "x1": 283.4750061035156,
+        "x2": 294.04571533203125,
+        "y1": 459.19915771484375,
+        "y2": 465.7149658203125
+      },
+      "text": "(8)"
+    }, {
+      "page": 4,
+      "region": {
+        "x1": 53.499000549316406,
+        "x2": 295.7370910644531,
+        "y1": 485.84918212890625,
+        "y2": 528.22998046875
+      },
+      "text": "This is again motivated by potentially flexible semantic constraints. Thus, we can give further suggestions regarding the number of nodes in the current group to ensure the proposed modification will lead to time efficient selections."
+    }],
+    "title": {
+      "page": 4,
+      "region": {
+        "x1": 53.798004150390625,
+        "x2": 193.40953063964844,
+        "y1": 221.8568878173828,
+        "y2": 228.28302001953125
+      },
+      "text": "Finding the Number of Groups"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 4,
+      "region": {
+        "x1": 53.31999969482422,
+        "x2": 295.7410583496094,
+        "y1": 560.7601928710938,
+        "y2": 710.7379760742188
+      },
+      "text": "We want to know if our approach can be applied with restrictions such as semantic constraints and personal preferences: can users follow recommendations, and if so, to which extent? We provided two interfaces: with and without help. With both interfaces, participants had to create hierarchies represented in a tree-like structure with node displayed as circles and labels, and the hierarchy by links between nodes. Participants were able to create and to name new nodes, to delete created nodes (not the nodes from the data sets), to move node, and to transfer nodes as children using drag-and-drop mouse interactions. A red link indicated that either (i) a group node had no children, or (ii) a node containing a word"
+    }, {
+      "page": 4,
+      "region": {
+        "x1": 317.5870056152344,
+        "x2": 559.890380859375,
+        "y1": 96.09918975830078,
+        "y2": 198.25701904296875
+      },
+      "text": "from the data set had a child. Participants could not validate a design with red links. Both interfaces displayed a legend, the average selection time of the current hierarchy, a button to sort the tree (large groups positioned first), a button to reset the tree, and links directing users to the definition of the words used in the experiment. The only difference between with and without help concerned recommendations. With help, groups of nodes that could be optimized had green links, and recommendations involved:"
+    }, {
+      "page": 4,
+      "region": {
+        "x1": 333.427001953125,
+        "x2": 559.8904418945312,
+        "y1": 202.89920043945312,
+        "y2": 509.09100341796875
+      },
+      "text": "• Theoretical optimum (label based on equation 4). The system displays how many new nodes should be created and how many existing nodes should be transferred on each of them to obtain the ideal hierarchy. • Idea validation (form based on equations 3 and 5). Users can input the number of node(s) they want to create and the number of children. If the idea is not validated (i.e. longer selection time than with the current hierarchy), the system displays the minimum number of nodes the group should have for the idea to be worth it. • Number of children (form based on equation 6). Users can input the number of groups they think about creating. The system displays the optimal number of children each new group should have and the range of valid solutions. • Number of groups (form based on equations 7 and 8). Users can input the number of nodes they consider sending to a new level. The system displays the optimal number of group to create or the number of nodes the current level should have for this idea to be worth it. • Overall performance (table based on equation 2). A color-coded table showed users all combination of number of groups/children and expected gain of time. The table was sync to results from input forms to ease the navigation."
+    }],
+    "title": {
+      "page": 4,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 244.78872680664062,
+        "y1": 545.9068603515625,
+        "y2": 552.3330078125
+      },
+      "text": "5 VALIDATION 1: RECOMMENDATIONS"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 4,
+      "region": {
+        "x1": 317.47698974609375,
+        "x2": 559.3050537109375,
+        "y1": 538.440185546875,
+        "y2": 640.5980224609375
+      },
+      "text": "We asked participants to create hierarchies with and without help. We proposed two data sets of words by considering 170 animals, 100 house items, 70 movies, and 126 famous people, which explicitly enforced unbalanced hierarchies. We then randomly generated 2 data sets of 60 unique words each and random delays. Recommendations would help participants to recursively optimize newly created group of nodes until no group could be optimized anymore, or until participants decided to not follow the remaining recommendations."
+    }],
+    "title": {
+      "page": 4,
+      "region": {
+        "x1": 317.95501708984375,
+        "x2": 338.5783996582031,
+        "y1": 523.5858154296875,
+        "y2": 530.011962890625
+      },
+      "text": "Task"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 4,
+      "region": {
+        "x1": 317.47698974609375,
+        "x2": 558.2137451171875,
+        "y1": 669.9472045898438,
+        "y2": 712.3289794921875
+      },
+      "text": "We recruited 16 participants (8 females), aged 18 to 56 (M = 26.7, SD = 9.3). We gave participants $15 gift cards. All had experience with hierarchical organization on desktop computer - the example we used to describe the task. The"
+    }, {
+      "page": 4,
+      "region": {
+        "x1": 54.0,
+        "x2": 558.0009765625,
+        "y1": 750.914794921875,
+        "y2": 756.7197875976562
+      },
+      "text": "Paper 368 Page 5"
+    }, {
+      "page": 5,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 294.0541687011719,
+        "y1": 202.35321044921875,
+        "y2": 220.823974609375
+      },
+      "text": "online tool ran on a 3.6 GHz Intel Core i7 computer via Chrome Web Browser on a 24′′ desktop screen."
+    }],
+    "title": {
+      "page": 4,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 441.0379943847656,
+        "y1": 655.0928955078125,
+        "y2": 661.51904296875
+      },
+      "text": "Participants and Apparatus"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 5,
+      "region": {
+        "x1": 53.499000549316406,
+        "x2": 295.7411193847656,
+        "y1": 250.418212890625,
+        "y2": 352.57501220703125
+      },
+      "text": "The experiment lasted between 45min and 1h30 depending on the participant’s knowledge of the words used in the data sets, after which participants filled a questionnaire for qualitative results. The session started with an introduction to hierarchies (e.g., menu and file folders) and both tools. Without recommendation, we instructed participants to create hierarchies as they would do on their own. With recommendations, we instructed participants to try to follow the recommendations while considering meaningful grouping."
+    }],
+    "title": {
+      "page": 5,
+      "region": {
+        "x1": 53.798004150390625,
+        "x2": 100.36505889892578,
+        "y1": 235.56385803222656,
+        "y2": 241.989990234375
+      },
+      "text": "Procedure"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 5,
+      "region": {
+        "x1": 53.43000030517578,
+        "x2": 294.057373046875,
+        "y1": 382.169189453125,
+        "y2": 484.32598876953125
+      },
+      "text": "The task used a within-participants design with System (No Help, Help) as an independent variable and counterbalanced across participants. Each participant used one version of the system with only one dataset once. To fully control the learning effect, we also counterbalanced the presentation of the pairs System/Dataset. The experiment was divided into 2 blocks: one for each pair System/Dataset. Each block started with a 8-item data set practice trial. The 60 words were sorted alphabetically in order to avoid any explicit grouping."
+    }],
+    "title": {
+      "page": 5,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 148.90480041503906,
+        "y1": 367.31488037109375,
+        "y2": 373.74102783203125
+      },
+      "text": "Experimental Design"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 5,
+      "region": {
+        "x1": 53.29999923706055,
+        "x2": 295.74102783203125,
+        "y1": 513.9202270507812,
+        "y2": 592.1669921875
+      },
+      "text": "Our data did not satisfy both the normality and the homogeneity of variances assumptions.We performed our analysis with Wilcoxon non-parametric tests. We made sure there was no significant effect of Dataset [W = 58, Z = −0.52, p = 0.63] on the average selection time. We hence aggregated the data by System and participants to complete our statistical analysis."
+    }, {
+      "page": 5,
+      "region": {
+        "x1": 53.797821044921875,
+        "x2": 295.7346496582031,
+        "y1": 603.8281860351562,
+        "y2": 682.0750122070312
+      },
+      "text": "Average Selection Time. We found a significant effect of System on the average selection time with a large effect size [W = 133, Z = 3.36, p < 0.001, r = 0.59]: Without recommendation, the resulting average selection time is 9.9% slower than with recommendations (Figure 4, left). This indicates that participants could benefit from recommendations even with practical constraints."
+    }, {
+      "page": 5,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 296.37646484375,
+        "y1": 693.7362060546875,
+        "y2": 712.20703125
+      },
+      "text": "Hierarchy Structure. Participants created significantlymore nodes with recommendations than without [W = 17, Z ="
+    }, {
+      "page": 5,
+      "region": {
+        "x1": 317.656005859375,
+        "x2": 559.74951171875,
+        "y1": 95.3021469116211,
+        "y2": 222.1669921875
+      },
+      "text": "−2.45, p < 0.05, r = 0.45] (Figure 4, right). This was to be expected, as we built the theoretical model to help create new nodes. Note that participants also chose to sometimes not to follow recommendations. The average gain of time not followed by participants was 0.89s without help (unknown), and 0.03s with help (known). 12 out 16 participants created hierarchies in which leaves cohabited with sub-groups of nodes at various depth levels. This validates that providing a flexible way to arrange nodes (k , 1 in Equation 7) is actually useful in scenarios with semantic constraints."
+    }, {
+      "page": 5,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 559.8988037109375,
+        "y1": 234.91217041015625,
+        "y2": 325.114013671875
+      },
+      "text": "Qualitative Results. 11/16 participants would like such a recommendation system to organize their files. 12 participants still realized the recommendation system could be \"useful\" and \"helpful\" (P4, P5, P6, P13), and the experimental tool \"easy to use\" (P3, P14), even if some participants felt the recommendation system was \"slowing them down\" (P5) or interfering with their own categorization scheme (P4, P6, P14)."
+    }],
+    "title": {
+      "page": 5,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 86.49657440185547,
+        "y1": 499.06585693359375,
+        "y2": 505.49200439453125
+      },
+      "text": "Results"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 5,
+      "region": {
+        "x1": 317.47698974609375,
+        "x2": 558.396728515625,
+        "y1": 355.7922058105469,
+        "y2": 457.9490051269531
+      },
+      "text": "We showed that our approach can successfully reduce the theoretical selection time. We next want to investigate if our approach is conform to real empirical selection times. More specifically, we are interested in (1) validating the selection time prediction of the model with different common item layouts (i.e. linear, radial, and grid), and (2) investigating the feasibility of our heuristic to overcome unbalanced nodes groups. We hence collect pointing and gaze data while users perform item selections."
+    }],
+    "title": {
+      "page": 5,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 467.04132080078125,
+        "y1": 340.9378662109375,
+        "y2": 347.364013671875
+      },
+      "text": "6 VALIDATION 2: PREDICTION"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 5,
+      "region": {
+        "x1": 317.47698974609375,
+        "x2": 559.8964233398438,
+        "y1": 488.627197265625,
+        "y2": 650.5599975585938
+      },
+      "text": "We consider three common item layouts: linear, radial, and grid (Figure 5). Linear layouts are widespread in software applications (e.g., menus) [5, 6, 21]. Radial layouts are also a well-known layout (e.g., pie-menus) [29, 33]. Grid layouts are also common [3], especially on mobile devices [9]. We focus on 2-levels hierarchies, as our approach considers only a level and its children (equation 3). The sub-level (i) appears on the right of the selected item with the linear layout, the top of the sub-level aligned with the previously selected item, (ii) appears centered around the cursor position with the radial layout, and (iii) replaces the previous level with the 2 by 2 grid layout. Users can navigate between panels by clicking on arrows at the top and bottom of the screen."
+    }],
+    "title": {
+      "page": 5,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 376.72674560546875,
+        "y1": 473.7728576660156,
+        "y2": 480.1990051269531
+      },
+      "text": "Item Layouts"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 5,
+      "region": {
+        "x1": 317.70599365234375,
+        "x2": 559.8870239257812,
+        "y1": 681.2382202148438,
+        "y2": 713.1589965820312
+      },
+      "text": "Recall that our model requires the delays associated with visual search (D1), selection (D2), and transition between levels (D3). Fortunately, previous works provide several models"
+    }, {
+      "page": 5,
+      "region": {
+        "x1": 54.0,
+        "x2": 558.0009765625,
+        "y1": 750.914794921875,
+        "y2": 756.7197875976562
+      },
+      "text": "Paper 368 Page 6"
+    }, {
+      "page": 6,
+      "region": {
+        "x1": 53.43000030517578,
+        "x2": 295.74139404296875,
+        "y1": 232.7772216796875,
+        "y2": 370.79998779296875
+      },
+      "text": "to do so [5, 11, 18, 20]. We chose to determine D1, D2, and D3 using the Search, Decision, and Pointing model (SDP) [11], which has been proven effective to model selection times in different menu types [3, 10]. The SDP model is built on other low-level models, such as Fitts’ Law to predict the pointing time [14], the Hick-Hyman law to predict the decision time [17], and the steering law to predict the navigation time between menu levels [1]. OnceD1,D2, andD3 are calibrated via the SDP model, we can assess how well equation 2, the core basis of our approach, fits empirical data based on structural parameters: the original number of children, the number of new sub-folder(s), and their corresponding children."
+    }, {
+      "page": 6,
+      "region": {
+        "x1": 53.43000030517578,
+        "x2": 295.7411193847656,
+        "y1": 384.59619140625,
+        "y2": 573.385986328125
+      },
+      "text": "D1: Delay to Process a Node. D1 is related to the time to browse the current hierarchy level while looking for the desired item. For novice users, this browsing time corresponds to a visual search time, linear with the number of items [31]. For expert users, this browsing time corresponds to a decision time modeled by the Hick-Hyman law, logarithmic with the number of items [11]. In our experiment, participants will be novices. We hence use the novice linear relationship between the visual search time Tvis and the number of items Nk in the kth level: Tvis = avis + bvis × Nk , with avis and bvis empirically determined constants. Since D1 is the time to process one item, we define D1 = TvisNk . However, we want D1 to be specific to a layout type, not a hierarchy level k . We hence chose to approximate D1 - the delay to process any node in the hierarchy - by considering the average number of nodes Navg:"
+    }, {
+      "page": 6,
+      "region": {
+        "x1": 140.11199951171875,
+        "x2": 294.0447082519531,
+        "y1": 576.4415893554688,
+        "y2": 596.52197265625
+      },
+      "text": "D1 = avis Navg + bvis (9)"
+    }, {
+      "page": 6,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 295.7409362792969,
+        "y1": 600.5592041015625,
+        "y2": 620.5239868164062
+      },
+      "text": "Note that this approximation might lead to over- and underestimation in case a level has less / more nodes than Navg."
+    }, {
+      "page": 6,
+      "region": {
+        "x1": 53.47001647949219,
+        "x2": 295.58551025390625,
+        "y1": 632.826171875,
+        "y2": 714.5759887695312
+      },
+      "text": "D2: Delay to Select a Node. In our case, users select an item by pointing and clicking at it. The pointing task is commonly modeled using Fitts’ Law, stating that the timeTp required to point at a target is linear with the Index of Difficulty ID:Tp = ap+bp×ID, with ap andbp empirically determined constants. For most layouts, ID depends upon the target width W and the movement amplitude A: ID = log( AW + 1). However, for"
+    }, {
+      "page": 6,
+      "region": {
+        "x1": 317.43701171875,
+        "x2": 558.4666748046875,
+        "y1": 96.09918975830078,
+        "y2": 201.8790283203125
+      },
+      "text": "radial layouts, the pointing time follows a linear function of the number of items Nk in the kth level [3]: ID = Nk . Tp represents the average pointing selection time, but depends upon W and A, or k. We want D2 to be independent of any other factors than the empirically determined factors ap and bp to characterize the layout. We hence approximate D2 - the delay to select any node - by: D2 = ap + bp ×mean(ID) (10) As for D1, this can also lead to over- and under-estimation."
+    }, {
+      "page": 6,
+      "region": {
+        "x1": 317.1579895019531,
+        "x2": 559.8906860351562,
+        "y1": 212.2841796875,
+        "y2": 388.83099365234375
+      },
+      "text": "D3: Delay to Transition Between Hierarchy Levels. Navigating through multiple levels in linear layouts is often modeled via the steering law, which predicts the transition time Ttr of a movement of amplitude At in a tunnel of widthWt as Ttr = atr + btr × AtWt , with atr and btr empirically determined constants. For radial layouts, we consider the transition time to beTtr = 0, as the next level appears centered on the cursor position, removing the need for any steering movement. This illustrates how different layout properties are reflected in our model. For our grid layout, the sub-level replaces the current level. We hypothesize that the average transition cursor movement can be approximated by an average pointing time Ttr = atr + btr ×mean(ID). For all layouts, we approximate the steering task with the pointing parameters (i.e. atr = ap , btr = bp ), and then consider:"
+    }, {
+      "page": 6,
+      "region": {
+        "x1": 421.51904296875,
+        "x2": 558.20263671875,
+        "y1": 393.7721862792969,
+        "y2": 401.781982421875
+      },
+      "text": "D3 = Ttr (11)"
+    }],
+    "title": {
+      "page": 5,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 454.7171630859375,
+        "y1": 666.3838500976562,
+        "y2": 672.8099975585938
+      },
+      "text": "Calibration: Delay Parameters"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 6,
+      "region": {
+        "x1": 317.47698974609375,
+        "x2": 559.8928833007812,
+        "y1": 430.12017822265625,
+        "y2": 520.322021484375
+      },
+      "text": "We recruited 21 participants (10 females), aged 18 to 56 (M=25.3, SD=7.8). We gave participants $15 gift cards. We carried out our experiment on a 3.6GHz Intel Core i7 desktop computer, with a 24” (1920 × 1080) screen. We used an Eye Tribe eye tracker, with a 60Hz sampling rate and a gaze estimation error between 0.5° and 1° according to the manufacturer. The software was implemented in C# with the Unity3D 5.3 game engine."
+    }],
+    "title": {
+      "page": 6,
+      "region": {
+        "x1": 317.95501708984375,
+        "x2": 441.03802490234375,
+        "y1": 415.2658386230469,
+        "y2": 421.6919860839844
+      },
+      "text": "Participants and Apparatus"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 6,
+      "region": {
+        "x1": 317.5870056152344,
+        "x2": 559.8977661132812,
+        "y1": 550.1541748046875,
+        "y2": 712.0870361328125
+      },
+      "text": "The experiment lasted around 1h per participant. The session started with a 9-points calibration for the eye tracker. Each participant was assigned to one layout (linear, radial, or grid). The session was divided into two blocks: one for a Fitts task, and one for an item selection task. The Fitts task ensured we captured data to derive the pointing selection delay D2 without visual search. Participants started a Fitts trial by clicking a grey ’start’ button to make the green target appear. Participants had to select the green target as fast and as accurately as possible. The trial stopped when the target was clicked. The item selection task consisted in two consecutive selections in a specific layout. Participants could read the sequence of items to find and select in the menu (e.g., \"plant > chinchilla\", Figure 5-left) as long as they wanted."
+    }, {
+      "page": 6,
+      "region": {
+        "x1": 54.0,
+        "x2": 558.0009765625,
+        "y1": 750.914794921875,
+        "y2": 756.7197875976562
+      },
+      "text": "Paper 368 Page 7"
+    }, {
+      "page": 7,
+      "region": {
+        "x1": 53.499000549316406,
+        "x2": 295.73675537109375,
+        "y1": 96.09918975830078,
+        "y2": 174.34600830078125
+      },
+      "text": "They could then press the start button to display the first hierarchy level. If participants clicked the correct first item (e.g., ’plant’), the second level appeared. If participants selected an incorrect item, the trial stopped and was counted as an error. If the eye tracker lost the gaze for more than 2.5s, the cursor disappeared and participants had to re-position themselves."
+    }],
+    "title": {
+      "page": 6,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 364.5220642089844,
+        "y1": 535.2998046875,
+        "y2": 541.7259521484375
+      },
+      "text": "Procedure"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 7,
+      "region": {
+        "x1": 53.43000030517578,
+        "x2": 295.7394714355469,
+        "y1": 207.68118286132812,
+        "y2": 549.738037109375
+      },
+      "text": "The linear layout used 230px × 35px labels. For both Fitts and the item selection tasks, the start button was positioned at the top-left of the invisible first level. For the Fitts task, participants selected the first, middle and last items of both levels, creating 6 IDs: 2.93, 3.46, 3.83, 4.02, 4.21, and 4.45. The radial layout used labels centered in 220px radius slices. For both Fitts and the item selection tasks, the start button was positioned at the center of the circular layout. For the Fitts task, we were primarily interested in the number of slices instead of the actual Fitts ID [3]. Thus, participants had to select 6 targets, i.e. a random single slice in a layout corresponding to a discretization of 4, 6, 8, 10, 12, and 16 slices. The grid layout used 275px × 275px labels and 110px × 110px navigation arrows buttons. For the Fitts task, we considered the 6 combinations of movement between the four layout elements, an extra center button (184px × 60px), and the bottom navigation arrow, leading to the IDs 1.14, 1.16, 1.59, 1.72, 1.77, and 2.17. For the item selection task, the start button was in the center of the screen. For all layouts, we considered first levels of 8, 12, and 16 items. We randomly generated two second levels for each first levels, leading to 6 different instances of each layout. Each first level node could have 4, 8, or 12 children. We chose multiple of 4 to avoid any side-effect due to potential gap in the grid layout. We used labels from the first experiment categories (animals, etc), but only considered single words, which were ±2 letters from the average word length to avoid any side-effect due to potential salience."
+    }],
+    "title": {
+      "page": 7,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 138.97169494628906,
+        "y1": 193.6238555908203,
+        "y2": 200.04998779296875
+      },
+      "text": "Layout Parameters"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 7,
+      "region": {
+        "x1": 53.54899978637695,
+        "x2": 295.7410888671875,
+        "y1": 583.8701782226562,
+        "y2": 711.4320068359375
+      },
+      "text": "Data from each layout (Linear, Radial, Grid) were analyzed separately. Fitts’ Law parameters (for D2 and D3) were calibrated using Fitts’ block data. The dependent pointing time variable Tp corresponds to the time between the start button click and the green target click. Visual search time parameters (for D1) were calibrated using the item selection task block data. The dependent visual search time variable Tvis corresponds to the time between the level appearance and the time the gaze reached the item (averaged across all gaze hits on the item during the trial). We then used the determined D1, D2, and D3 to estimate how well our approach"
+    }, {
+      "page": 7,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 558.215087890625,
+        "y1": 357.8811950683594,
+        "y2": 448.0840148925781
+      },
+      "text": "can model item selection times via regression analyses of Equation 2 across layout instances. During the Fitts block, participants had to perform 15 selections of each target, leading to 6 targets× 15 selections× 21 participants = 1890 acquisitions. During the item selection block, participants had to perform 50 correct selections in each layout instance, leading to 50 selections × 6 instances × 21 participants = 6300 acquisitions."
+    }],
+    "title": {
+      "page": 7,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 148.90480041503906,
+        "y1": 569.015869140625,
+        "y2": 575.4420166015625
+      },
+      "text": "Experimental Design"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 7,
+      "region": {
+        "x1": 317.47698974609375,
+        "x2": 559.898681640625,
+        "y1": 480.31719970703125,
+        "y2": 546.6090087890625
+      },
+      "text": "We first discuss the visual search and pointing times calibrations, and the resulting delays associated with each layout. We then focus on the accuracy of the model prediction, and the visual search ordering. We removed 694 trials for which the system lost the gaze and froze the mouse cursor. Numerical data can be found in Table 1."
+    }, {
+      "page": 7,
+      "region": {
+        "x1": 317.5870056152344,
+        "x2": 559.30517578125,
+        "y1": 560.7398071289062,
+        "y2": 710.8870239257812
+      },
+      "text": "Calibration. Visual search results hold a strong linear correlation between the visual search time and the number of items (all adjusted R2 > .98), which is in line with previous work [3, 11, 30]. Pointing results are not as strong as in previous work for the Linear layout [11] (adjusted R2 = .61), compared to the grid layout (adjusted R2 = .77). However, results confirm the linear relationship between the pointing selection time and the number of slices in the radial layout (adjusted R2 = .86) [3]. Results for the linear layout might be explained by the fact that we considered only the targets height [2], or the fact that we did not apply any adjustment for accuracy [32] to name a few. However, the delays of our model are based on approximations of human-motor models,"
+    }, {
+      "page": 7,
+      "region": {
+        "x1": 54.0,
+        "x2": 558.0009765625,
+        "y1": 750.914794921875,
+        "y2": 756.7197875976562
+      },
+      "text": "Paper 368 Page 8"
+    }, {
+      "page": 8,
+      "region": {
+        "x1": 53.499000549316406,
+        "x2": 295.5873718261719,
+        "y1": 341.4151916503906,
+        "y2": 539.2139892578125
+      },
+      "text": "themselves approximations of the reality. We hence want to validate our model even with rough empirical parameters estimates. Delays reveal differences between layouts. D1 shows that the Grid layout imposes a longer processing time than others. This can be explained by the navigation through different panels limited to 4 items per panel. D2 shows that the linear layout imposes a slower selection time than the others. This results is most likely due to the fact that the linear layout uses smaller labels compared to the others, combined to the fact that other layouts appear centered around the cursor. Note that although we found a correlation between eye-movement and cursor movements - confirming that the cursor moves as participants look for a label [5] - this selection time remains slower for the Linear layout. D3 shows that the transition time between hierarchy levels is higher for Linear than Grid, most likely because of the tunneling action of the cursor."
+    }, {
+      "page": 8,
+      "region": {
+        "x1": 53.4990119934082,
+        "x2": 295.5871887207031,
+        "y1": 566.4141845703125,
+        "y2": 704.43701171875
+      },
+      "text": "Prediction. Our model successfully predicts performance trends across hierarchy instances, with an adjusted R2 of 0.95 for Linear, 0.82 for Radial, and 0.98 for Grid (Table 1, Figure 6). This validates the fact that Equation 2 can be used to predict the selection time of items in a two-levels hierarchy. Thus, the root of other equations (such as Equation 3) is empirically validated. Prediction made from these equations are then in line with empirical data. However, the absolute prediction is not perfect: Linear regressions show that Treal = a + b × Tpred, with a , 0 and b , 1. We discuss this underestimation of empirical data in the next section, but we note that our model is used"
+    }, {
+      "page": 8,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 558.2083129882812,
+        "y1": 341.4151916503906,
+        "y2": 359.8869934082031
+      },
+      "text": "to compare hierarchies relatively to each other, not in an absolute way."
+    }, {
+      "page": 8,
+      "region": {
+        "x1": 317.7060546875,
+        "x2": 559.8978881835938,
+        "y1": 371.1861877441406,
+        "y2": 580.9400024414062
+      },
+      "text": "Visual Search Ordering. Our model uses a simplification by considering the number of children constant. A simple heuristic - assuming equiprobable item selection - consists in positioning larger groups of nodes ’at the top’ of the hierarchy level. We hence want to verify if such ’top’ concept exists for our hierarchy layouts. We found a strong linear correlation between item position and gaze path for the Linear (adjusted R2 = .98) and Grid (adjusted R2 = .96) layouts, with the gaze going from top-to-bottom, left-to-right. However, we did not find any correlation for the Radial layout (adjusted R2 = −.05) when considering a clockwise order of slices, 0 starting at 12h. Previous work found a correlation with a succession of left/right alternations. However, we could not replicate this result (adjusted R2 = −.06). We found a pattern which consisted in a broad exploration of the left side, followed by sequences of 2 items on the right / 1 item on the left, but this result remains to be further explored."
+    }],
+    "title": {
+      "page": 7,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 350.653564453125,
+        "y1": 465.4628601074219,
+        "y2": 471.8890075683594
+      },
+      "text": "Results"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 8,
+      "region": {
+        "x1": 317.47698974609375,
+        "x2": 559.8976440429688,
+        "y1": 610.1712036132812,
+        "y2": 712.3289794921875
+      },
+      "text": "We showed that our model could effectively lead to timeefficient hierarchies (experiment 1). We further validated our approach by showing that predicted trends in theoretical selection times between hierarchies had a strong correlation to actual empirical data with different hierarchy layouts (linear, radial, and grid) (experiment 2). We now discuss findings and implications of the present work. Recommendations: We provide evidence that recommendations can be useful, but several interesting questions"
+    }, {
+      "page": 8,
+      "region": {
+        "x1": 54.0,
+        "x2": 558.0009765625,
+        "y1": 750.914794921875,
+        "y2": 756.7197875976562
+      },
+      "text": "Paper 368 Page 9"
+    }, {
+      "page": 9,
+      "region": {
+        "x1": 53.31999969482422,
+        "x2": 296.68084716796875,
+        "y1": 96.09918975830078,
+        "y2": 712.3289794921875
+      },
+      "text": "still remain. For instance, we did not evaluate how recommendations could be presented or how would users adapt their behavior to such system. In-vivo longitudinal studies could provide answers regarding the actual impact of recommendations and their presentation. Predictions: We showed that our model could provide a good prediction of selection time performances in hierarchies relatively to each other. This was the goal of our approach in order to provide recommendations to end-users when modifying these hierarchies. However, the absolute prediction is off by approximately 1s, like in previous work [3], which hypothesized that this absolute underestimation could be attributed to their experimental protocol and/or their use of a timeout trigger method. The fact that our work also shows an offset of ∼1s makes us think that the problem might be reproducible, and hence investigated and explained. Frequency and visual ordering: We considered subgroups with a constant number of children for a given group of nodes. These sub-groups have different selection frequency. In our experiments with equiprobable items, this frequency was determined by the number of nodes in the sub-group. If frequencies are available, the model can include this aspect by duplicating each node according to their frequency. We hypothesized that more frequent sub-groups should be positioned ’first’ in the hierarchy. However, we could determine such ordering concept only for the linear and grid layouts, not for the radial one. Although this does not prevent accurate relative predictions, users still need to position frequently accessed sub-groups ’first’ by themselves (e.g., to not scroll every time to access a frequent sub-folder). Delays (reverse approach): We showed that calibrating our model and the delays via SDP could induce comparisons between hierarchy layouts. We could reverse our approach. In this work, we empirically determine delays to analyze our equation based on our three parameters of interests regarding the hierarchy structure (namely the original number of children, the number of new sub-folder(s), and their corresponding children). Instead, we could fix the hierarchy structure, and analyze our model according to the delays. For instance, the system could determine which delays (and hence which corresponding layout) better fits a given hierarchy structure. Errors: There is still no clear model regarding errors probabilities during a selection task in a hierarchy [15, 26]. In addition, some works consider the probability of performing selection errors as level-independent [19], i.e. the same error probabilities in every levels of the hierarchy, while some other works consider it level-dependent [28]. If the later is true, then integrating extra cost time due to errors in our level-agnostic model will be difficult. We hence envision a modular approach: a module based on our model for time selections, and a module based on an error model - which"
+    }, {
+      "page": 9,
+      "region": {
+        "x1": 317.656005859375,
+        "x2": 559.7451171875,
+        "y1": 96.09918975830078,
+        "y2": 162.3909912109375
+      },
+      "text": "remains to be derived and experimentally validated. Both modules could then be combined to also anticipate delays due to memory errors after a modification of a hierarchy. These modules could both be added as a complementary part to previous work approaches, which focus on before-hand optimization of the complete hierarchy."
+    }],
+    "title": {
+      "page": 8,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 497.8867492675781,
+        "y1": 595.31787109375,
+        "y2": 601.7440185546875
+      },
+      "text": "7 LIMITATIONS AND FUTUREWORK"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 9,
+      "region": {
+        "x1": 317.47698974609375,
+        "x2": 559.8990478515625,
+        "y1": 194.58721923828125,
+        "y2": 499.98199462890625
+      },
+      "text": "We propose a model to help end-users optimize the selection time when adding new content such as new files in a directory. Despite the predominance of modifiable hierarchies in our everyday lives, no work considered a localized approach that could help end-users to optimize the newly added content only, without interfering with their existing hierarchy structure. Our model allows to recommend if, when, and how users can optimize any hierarchy in different scenarios. We validate our approach with two user experiments. The first one confirms that our flexible recommendations can effectively be used to design time-efficient hierarchies. In addition, such recommendation system is well-accepted by end-users. The second experiment confirms that our model can effectively predict the difference in selection time between hierarchies. The advantage of our approach compared to previous analytic models is that we do not constrain the overall tree structure to a specific type. The advantage of our approach compared to previous algorithmic approaches is that users are still in charge of the grouping and labeling process. This can enhance memorability for future browsing of the newly modified structure. Our model can be a complementary solution to previous approaches that consider the whole hierarchical structure at first. Designers can embed our model in their system to help end-users when the original hierarchy content is altered."
+    }],
+    "title": {
+      "page": 9,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 399.6416320800781,
+        "y1": 179.7328643798828,
+        "y2": 186.15899658203125
+      },
+      "text": "8 CONCLUSION"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 9,
+      "region": {
+        "x1": 317.47698974609375,
+        "x2": 559.3052978515625,
+        "y1": 532.1781616210938,
+        "y2": 574.5599975585938
+      },
+      "text": "We acknowledge the support from the NSERC CRC program, the NSERC Discovery grant, as well as the JSPS fellowship program. We also thank Antti Oulasvirta for his valuable comments, and Wang Chen for the video."
+    }],
+    "title": {
+      "page": 9,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 440.7888488769531,
+        "y1": 517.3238525390625,
+        "y2": 523.75
+      },
+      "text": "9 ACKNOWLEDGMENTS"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 9,
+      "region": {
+        "x1": 321.6609802246094,
+        "x2": 558.3510131835938,
+        "y1": 606.0665893554688,
+        "y2": 611.2789916992188
+      },
+      "text": "[1] Johnny Accot and Shumin Zhai. 1997. Beyond Fitts’ law: models for"
+    }, {
+      "page": 9,
+      "region": {
+        "x1": 321.6609802246094,
+        "x2": 559.5421142578125,
+        "y1": 616.0296020507812,
+        "y2": 710.906005859375
+      },
+      "text": "trajectory-based HCI tasks. In Proceedings of the SIGCHI conference on Human factors in computing systems - CHI ’97. ACM Press, New York, New York, USA, 295–302. https://doi.org/10.1145/258549.258760 [2] Johnny Accot and Shumin Zhai. 2003. Refining Fitts’ law models for bivariate pointing. In Proceedings of the conference on Human factors in computing systems - CHI ’03. ACM Press, New York, New York, USA, 193–200. https://doi.org/10.1145/642611.642646 [3] David Ahlström, Andy Cockburn, Carl Gutwin, and Pourang Irani. 2010. Why it’s quick to be square: Modelling new and existing hierarchical menu designs. In Proceedings of the 28th international conference"
+    }, {
+      "page": 9,
+      "region": {
+        "x1": 54.0,
+        "x2": 558.001953125,
+        "y1": 750.914794921875,
+        "y2": 756.7197875976562
+      },
+      "text": "Paper 368 Page 10"
+    }, {
+      "page": 10,
+      "region": {
+        "x1": 53.797996520996094,
+        "x2": 295.38995361328125,
+        "y1": 97.4026107788086,
+        "y2": 700.3740234375
+      },
+      "text": "on Human factors in computing systems - CHI ’10. ACM Press, New York, New York, USA, 1371–1380. https://doi.org/10.1145/1753326.1753534 [4] Gilles Bailly and Antti Oulasvirta. 2014. Toward Optimal Menu Design. ACM Interactions (2014), 40–45. https://doi.org/10.1145/2617814 [5] Gilles Bailly, Antti Oulasvirta, Duncan P Brumby, and Andrew Howes. 2014. Model of visual search and selection time in linear menus. In Proceedings of the 32nd annual ACM conference on Human factors in computing systems - CHI ’14. ACM Press, New York, New York, USA, 3865–3874. https://doi.org/10.1145/2556288.2557093 [6] Gilles Bailly, Antti Oulasvirta, Timo Kötzing, and Sabrina Hoppe. 2013. MenuOptimizer: Interactive Optimization of Menu Systems. In Proceedings of the 26th annual ACM symposium on User interface software and technology - UIST ’13. ACM Press, New York, New York, USA, 331–342. https://doi.org/10.1145/2501988.2502024 [7] Ofer Bergman, Ruth Beyth-Marom, Rafi Nachmias, Noa Gradovitch, and Steve Whittaker. 2008. Improved search engines and navigation preference in personal information management. ACM Transactions on Information Systems 26, 4 (sep 2008), 1–24. https://doi.org/10.1145/ 1402256.1402259 [8] Richard Boardman and M Angela Sasse. 2004. \"Stuff goes into the computer and doesn’t come out\" A Cross-tool Study of Personal Information Management. In Proceedings of the 2004 conference on Human factors in computing systems - CHI ’04, Vol. 6. ACM Press, New York, New York, USA, 583–590. https://doi.org/10.1145/985692.985766 [9] Matthias Böhmer and Antonio Krüger. 2013. A study on icon arrangement by smartphone users. In Proceedings of the SIGCHI Conference on Human Factors in Computing Systems - CHI ’13. ACM Press, New York, New York, USA, 2137–2146. https://doi.org/10.1145/2470654.2481294 [10] Andy Cockburn and Carl Gutwin. 2009. A Predictive Model of Human Performance With Scrolling and Hierarchical Lists. HumanComputer Interaction 24, 3 (jul 2009), 273–314. https://doi.org/10.1080/ 07370020902990402 [11] Andy Cockburn, Carl Gutwin, and Saul Greenberg. 2007. A predictive model of menu performance. In Proceedings of the SIGCHI conference on Human factors in computing systems - CHI ’07. ACM Press, New York, New York, USA, 627–636. https://doi.org/10.1145/1240624.1240723 [12] A I Danilenko and M V Goubko. 2013. Semantic-aware optimization of user interface menus. Automation and Remote Control 74, 8 (aug 2013), 1399–1411. https://doi.org/10.1134/S000511791308016X [13] Donald L Fisher, Erika J Yungkurth, and Stanley MMoss. 1990. Optimal Menu Hierarchy Design: Syntax and Semantics. Human Factors: The Journal of the Human Factors and Ergonomics Society 32, 6 (dec 1990), 665–683. https://doi.org/10.1177/001872089003200605 [14] P M Fitts. 1954. The information capacity of the human motor system in controlling the amplitude of movement. Journal of experimental psychology 47 (sep 1954), 381 – 391. https://doi.org/10.1037/h0055392 [15] Mikhail V Goubko and Alexander I Danilenko. 2010. An automated routine for menu structure optimization. In Proceedings of the 2nd ACM SIGCHI symposium on Engineering interactive computing systems - EICS ’10. ACM Press, New York, New York, USA, 67–76. https://doi.org/10. 1145/1822018.1822030 [16] M V Goubko and A I Danilenko. 2012. Mathematical model of hierarchical menu structure optimization. Automation and Remote Control 73, 8 (aug 2012), 1410–1423. https://doi.org/10.1134/S0005117912080140 [17] Ray Hyman. 1953. Stimulus information as a determinant of reaction time. Journal of Experimental Psychology 45, 3 (1953), 188–196. https: //doi.org/10.1037/h0056940 [18] T K Landauer and D W Nachbar. 1985. Selection from alphabetic and numeric menu trees using a touch screen. In Proceedings of the SIGCHI conference on Human factors in computing systems - CHI ’85. ACM Press, New York, New York, USA, 73–78. https://doi.org/10.1145/"
+    }, {
+      "page": 10,
+      "region": {
+        "x1": 317.95501708984375,
+        "x2": 558.2008056640625,
+        "y1": 97.4026107788086,
+        "y2": 110.8280029296875
+      },
+      "text": "317456.317470 [19] Eric Lee and James Macgregor. 1985. Minimizing User Search Time in"
+    }, {
+      "page": 10,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 559.5484619140625,
+        "y1": 115.5786361694336,
+        "y2": 688.6619873046875
+      },
+      "text": "Menu Retrieval Systems. Human Factors: The Journal of the Human Factors and Ergonomics Society 27, 2 (apr 1985), 157–162. https://doi. org/10.1177/001872088502700203 [20] Baili Liu, Gregory Francis, and Gavriel Salvendy. 2002. Applying models of visual search to menu design. International Journal of HumanComputer Studies 56, 3 (mar 2002), 307–330. https://doi.org/10.1006/ ijhc.2002.0527 [21] Wanyu Liu, Gilles Bailly, and Andrew Howes. 2017. Effects of Frequency Distribution on Linear Menu Performance. In Proceedings of the 2017 CHI Conference on Human Factors in Computing Systems - CHI ’17. ACM Press, New York, New York, USA, 1307–1312. https://doi.org/10.1145/3025453.3025707 [22] Zhengwu Lu. 2017. Optimization Approaches to Adaptive Menus. May (2017). [23] Shouichi Matsui and Seiji Yamada. 2008. Genetic algorithm can optimize hierarchical menus. In Proceeding of the twenty-sixth annual CHI conference on Human factors in computing systems - CHI ’08, Vol. 1. ACM Press, New York, New York, USA, 1385–1388. https: //doi.org/10.1145/1357054.1357271 [24] Craig S Miller and Roger W Remington. 2004. Modeling Information Navigation: Implications for Information Architecture. HumanâĂŞComputer Interaction 19, 3 (sep 2004), 225–271. https://doi.org/10.1207/ s15327051hci1903_2 [25] Dwight P. Miller. 1981. The Depth/Breadth Tradeoff in Hierarchical Computer Menus. Proceedings of the Human Factors Society Annual Meeting 25, 1 (oct 1981), 296–300. https://doi.org/10.1177/ 107118138102500179 [26] Kent Norman. 1992. The Psychology of Menu Selection: Designing Cognitive Control of the Human/Computer Interface. Displays 13 (1992). [27] Antti Oulasvirta. 2017. User Interface Design with Combinatorial Optimization. Computer 50, 1 (jan 2017), 40–47. https://doi.org/10. 1109/MC.2017.6 [28] Kenneth R Paap and Renate J. Roske-Hofstrand. 1986. The Optimal Number of Menu Options per Panel. Human Factors: The Journal of the Human Factors and Ergonomics Society 28, 4 (aug 1986), 377–385. https://doi.org/10.1177/001872088602800401 [29] Krystian Samp and Stefan Decker. 2010. Supporting menu design with radial layouts. In Proceedings of the International Conference on Advanced Visual Interfaces - AVI ’10. ACM Press, New York, New York, USA, 155–162. https://doi.org/10.1145/1842993.1843021 [30] Krystian Samp and Stefan Decker. 2011. Visual search in radial menus. In Lecture Notes in Computer Science (including subseries Lecture Notes in Artificial Intelligence and Lecture Notes in Bioinformatics), Vol. 6949 LNCS. 248–255. https://doi.org/10.1007/978-3-642-23768-3_21 [31] Andrew Sears and Ben Shneiderman. 1994. Split menus: effectively using selection frequency to organize menus. ACM Transactions on Computer-Human Interaction 1, 1 (mar 1994), 27–51. https://doi.org/ 10.1145/174630.174632 [32] R. William Soukoreff and I. Scott MacKenzie. 2004. Towards a standard for pointing device evaluation, perspectives on 27 years of Fitts’ law research in HCI. International Journal of Human-Computer Studies 61, 6 (dec 2004), 751–789. https://doi.org/10.1016/j.ijhcs.2004.09.001 [33] Shengdong Zhao, Maneesh Agrawala, and Ken Hinckley. 2006. Zone and polygon menus: using relative position to increase the breadth of multi-strokemarkingmenus. In Proceedings of the SIGCHI conference on Human Factors in computing systems - CHI ’06. ACM Press, New York, New York, USA, 1077–1086. https://doi.org/10.1145/1124772.1124933"
+    }, {
+      "page": 10,
+      "region": {
+        "x1": 54.0,
+        "x2": 558.001953125,
+        "y1": 750.914794921875,
+        "y2": 756.7197875976562
+      },
+      "text": "Paper 368 Page 11"
+    }],
+    "title": {
+      "page": 9,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 380.7218933105469,
+        "y1": 591.90185546875,
+        "y2": 598.3280029296875
+      },
+      "text": "REFERENCES"
+    }
+  }]
+}

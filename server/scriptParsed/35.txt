@@ -1,0 +1,151 @@
+- Afternoon everyone.
+My name is Gianluca Memoli and I'm from the University of Sussex.
+And today I will be telling you about metamaterials and acoustic lenses.
+So this talk starts from my experience as a auditorium theater director, pantomimes for those of you who are from this country.
+And when I am a director I can tell to my light person, I want a spotlight there.
+I want a light which follows a character.
+I can tell them I want some diffused light here, some shadow in the middle, and then some light there.
+But I cannot do that with my sound person.
+Well it turns out there is a fundamental difference between how we manage light and sound.
+With light, since the time of well, this sketch that you see here, it goes back to when, in the story Archimedes was burning ships by focusing sunlight.
+So for centuries we have had lenses and mirrors and filters.
+We are so familiar with the idea of holograms that if you look at one of the new five pounds note, you find an hologram there, for light.
+But that's not the case for sound.
+In auditoriums like this, you have multiple speakers.
+When you go to a concert, an outdoor concert, you have an array of speakers.
+For the tasks we do, ultrasonic speakers that you will be doing in the Imagine Technology sessions.
+Again, arrays of speakers.
+And all those speakers have been the same for a lot of time.
+So it's not that acoustic lenses are not there.
+In fact, what you see are two pictures from 1949 and 1961, what you see are two big circles of a material which are as big as a person.
+So basically, acoustic lenses are not in use, because they are bulky.
+And so actually, when I say they are not in use, you can find some acoustic lenses to change directivity in some speakers at high frequency.
+So what you want in that case is to diverge the sound more.
+But probably the most blocking part, so what blocks acoustic lenses is that they are static.
+Once you design one, well, that's what you have.
+Conversely, phased arrays change.
+You have full control on all the speakers, and, well, the CHI community has been on the forefront on using arrays to do manipulation and human-computer interaction.
+But in my examples here, I also have two, well, non-CHI examples, can you spot them? Well, one of them is Adobe, which is from 2012, and in that case you have up to 64, or sometimes 98 speakers to create the same acoustic experience to people in an auditorium.
+And what you have here there at the bottom is an example of a high-intensity focused ultrasound.
+So we heard from the first speaker today that ultrasound is used in many ways, is also used sometimes to do therapy, and believe it or not, they use hundreds of ultraspeakers to do that.
+What's the problem, then? The problem is that these systems do not scale up very well.
+The cost increases hugely.
+And more importantly, there is a physical limitation on the control that you can get in the field, which comes from the acoustic material, mainly, and the fact is that because technology creates speakers which are big, sometimes you have artifacts when you don't want.
+So in a space like that, then you need to control that, with the acoustics, do some work with the room, with the seats, with the carpets, et cetera.
+So in this work, the big question I want to start with is, can we make acoustic lenses smaller? And then can we treat acoustic lenses as we do with optical ones? So can we use the expertise that we have gained in so many years with optics to do acoustic systems? And if we could, how would they look like, and what could we do with them? So before I start, let me spend a word on an acoustic metamaterial.
+Acoustic metamaterial is a normal material.
+The trick is that you engineer it to the microscale so that it has some specific properties.
+So in this slide here, what you have is a model of a wave propagating from bottom to top.
+I'm describing what you see on the left-hand side, and what you see is a channel with nothing in-between, and a channel with a material, which has been bent as you can see to create a delay.
+And what you noticed is that the wave is delayed from passing from one side to the other.
+The story is very simple, so each of those, a metamaterial is an object which does phase engineering, and intensive engineering directly on the sound as it goes through.
+Now in 2017, it was shown that just 16 designs, or pre-fabricated LEGO-like bricks are necessary.
+That's all you need to design any type of shape or sound that you might want to do.
+Just like you have 26 letters to do any word, you just need 16 shapes to have control on sound.
+And so in 2017, you start with those shapes, and you assemble them, and you see that a pattern is coming out, and it's round, just like you would imagine a lens would be and that's what you would call the IKEA recipe for that.
+And if you take more than one layer, you can get more complex shapes.
+And what you have here is an example at 40 kilohertz, where you have one layer.
+And then another one, which is a lens, and on top of that you get levitation.
+So, why don't we have those in our houses already? Well in 2017, this example was very narrow in frequency.
+So if you could think of it like on a piano, so there are 11 octaves in our bodies that we can hear, from 20 hertz to 20 kilohertz.
+A piano normally has eight of them, and well, if you could make a parallel with a piano, then one of those bricks, one of those metamaterials, worked only with two notes of a piano.
+Wherever, but just two.
+So in this work, we expanded this, and we expanded it so we almost reached one octave.
+Why you want to go to one octave? Because melody goes through one octave.
+And what I'm not presenting today, but I'm happy to talk to you about later, is what we're doing now.
+So we are covering more bandwidth.
+So bandwidth is a problem.
+All the metamaterials that we tell you about work on five notes.
+But is also a design challenge, which now has been addressed all over the world.
+So maybe I'll spend some words on that in the end.
+The other bit I did in this work is to show that actually, you can take a metamaterial which is bulky, and make it smaller.
+And so we reduced not only smaller but also thinner.
+And this is important because, now with an object like that, which is as big as my hand, I can then control sound coming out from a speaker.
+The other bit that we realized in this work is that, if I have two of them, the distance between them plays a role.
+And if you think about that as a telescope or a microscope, it's normal, or if you think about your camera, it's normal to think that this as a distance, on the focus, or on the performance of two lenses.
+But it's not obvious for sound.
+Because the physics is different.
+But I don't want to spend too much on the physics, I want to tell you why I'm so excited, why I'm so excited to be here to share what we can do with this.
+And the first device is an acoustic collimator.
+What is an acoustic collimator? Well, you might be familiar with the idea that if you take a magnifying glass, and focus on a piece of paper, you might get sunburned.
+If it's an hot day, maybe not so much cloudy, as it was today.
+But you're also familiar with the idea that in a lighthouse you use a lens to project the light far away.
+This is what we did with sound.
+So, we took a speaker, we put in front of it a lens, and what we did is we took the emission of a speaker, and converged it in a channel.
+We made it directional.
+And the intensity went up around the area where into this channel by, well, as you can see from the plot, from about 10 dBs, which means that we could hear the same speaker three times away.
+So, what can we do with this? Well, we can transform a standard speaker into a directional one.
+This means that then, so, the HCR community knows already directional speakers, and we know that they can pass a lot through, but then what you can do with the directional speakers, maybe you can work with it, and transform its emission.
+But what if you could transform your own speaker into a directional one? So let me try this.
+So what I have here is a, well, you could call it a linear array.
+In reality it is a lot of speakers mounted in an array, and they all play the same note, which because of the big room, is an high-pitch note.
+And well, let me try that.
+(high pitched squeal) So, can you hear the note? Can you hear that at the back? Okay, what I'll do is I'll turn this, and you'll see that when I rotate it, your level doesn't change much.
+But if I...
+(high pitched squeal warbles) Use a lens, there is a moment when I'm actually taking this sound, collecting all of it, and transforming it in a directional one, which goes to the microphone.
+Or, I can use, so the source of this is always my phone or my laptop, and what I'm doing here this time is I'm taking a directional speaker.
+(orchestral music) And what I want you to notice is when I rotate it, you don't hear it anymore, like we were doing before.
+So this object emits in a very thin line.
+What we'll do now is we will use a lens...
+(orchestral music volume increases) And you can see that by the difference, or the distance from the lens and the microphone, I can put this object in focus or not.
+So in this way I can change the emission of the speaker, and I can also correct speakers.
+Now imagine you are in a theater, and everyone has done a fantastic job like here, but then there always spot where the sound is not exactly the same as you paid for.
+Then for this cases, you might instead correct the emissions of the speaker, or the gap that is between those two speaker by adding a small metamaterial which emits in that space.
+And I always demonstrated you the fact that there is -- (melodious music) That was my timer.
+That there is a perfect distance for between a source and the receiver to optimize the emission.
+Well it turns out that there is a simple low in optics, which is called the thin lens approximation, and we found that it also works for sound, when metamaterials are involved.
+What can you do when you have a lens that you can move and focus the sound on one of the speakers, or one of the people in the audience? Well, what you could do then is you could imagine that with a speaker and the lens placed in the right position you can create a virtual object made of sound.
+So a virtual speaker, just like we do nowadays using 3D audio and using a lot of speakers, creating a small object with less speakers.
+Or you could take a complex machinery like the one in the picture there, and decide that you just want to listen to the sound from a certain area.
+Or you might have an acoustic glass break detector, like the one that you have here, and make sure that you are just listening to the sound coming from the windows.
+Or you might create more complex shapes, and what you see there is visualization made by dry ice from a different filter.
+This is something that we presented, used in October last year.
+And combined with the lens, what you can do is you can take this and put it further away.
+So you can then create maybe optic objects, creating all the points at the same time, further away.
+But the problem is, you really don't want to put, so if I want to create sound down there in the auditorium, I don't want to put the lens midway.
+That's not practical, that's not what we do with light.
+What we do with light is we adjust the distance between two lenses.
+And so the other point is that, if I have only one lens, I can have operations, because I would need them to be so large to collect all the sound that is coming out.
+So what we did is we built a vari-focal lens, and I refer you to the paper for further details on the measurements which we use to test this.
+But the idea is basically that you have a speaker, and two lenses at different distances, and by changing the distance you might create focuses in different points, just like you do with a telescope.
+What you can do with that? Well, you can imagine that, I'm greatly inspired in this by Minority Report, and you might remember that at some point Tom Cruise is working through the hallway, and he gets recognized and gets signals and messages and cues just for him.
+So you can just then deliver sound to one person in a crowd, or maybe collect.
+So if I manage to leave space for questions, we'll do that with a microphone, or one day we'll be able to collect that directly from where you're sitting.
+But I would like to dream a bit more.
+I want to see, I want to try to create a world where headphones are not so cumbersome that you have to wear them all the time, even in VR.
+I want a world where sound moves with you in a space so that maybe if I'm in a disc jockey, I can create a spot of sound that moves on the terrain for people to dance the conga going following it.
+Or, I might want to create mid range, long range mid-air haptics, or localized audio cues.
+Where are we with this? So in the movie which accompanies the paper, we presented our first steps.
+That was this, let's see if the movie works.
+What you can see that as you move, as you change the distance.
+So we put the microphone 1.3 meters away, and we changed the distance between the lenses.
+And as you moved the distance, we measured a difference, an increase or a decrease of the sound pressure level at the microphone.
+Which that means that there is a weak spot, as you might expect from what I said before where you can actually determine and create a difference of 7 dBs.
+7 dBs is enough for us to say there is a difference.
+Actually, there are studies which says that 80%, or the people would say that 7 dBs difference, there is a difference with before.
+Obviously, we have to do better, we have to expand the bandwidth more.
+But I wanted to share with you guys my, the fact that at the moment, there is a chance for us to revolution the way we think, design, and deliver sound.
+And probably the future is not just metamaterial, the future is hybrid.
+And we can all take part in that.
+So, during the lunch break, we wrote a song on this, so let me try that, be patient.
+(exhales) ♪ Imagine we have control ♪ ♪ On sound like on lights ♪ ♪ I could send sound to you and you ♪ ♪ And in different language too ♪ ♪ Imagine all the people ♪ ♪ Hearing just what they need ♪ (audience member coos) ♪ You can say I'm a dreamer ♪ ♪ But I'm not the only one ♪ ♪ I hope someday we can work together ♪ ♪ And the world of sound will be a better one ♪ Thanks for your attention.
+(audience applauds) - [Announcer] So we have time for one question.
+If you could say your name and affiliation, and please find the student volunteer who will give you a microphone.
+- Well, while I wait for the microphone, let you thank my sponsor, which is UK Research and Innovation was funding my fellowship for exploring how we can use that in metamaterials in HCI and creative communities.
+- [Dan] Hi, my name's Dan Bennis, I'm from Bristol Attraction Group.
+Really, really fascinating idea, and great possibilities there, I think.
+I'm interested, you were saying that you've moved from sort of a range of two notes to roughly an octave.
+- Can you get your microphone closer? - [Dan] Sorry, yes, you're saying you've moved from being able to apply this technique on roughly two notes to applying it to roughly an octave.
+And obviously, a lot of the examples you're giving of the possibilities of this require full spectrum of human hearing, or something approaching that.
+How far off do you think we are from that, and do you think there are possibilities in the meantime for those smaller bandwidth applications? - Well...
+Directional speakers, which at the moment we use already, are not so good to cover all the spectrum.
+They don't cover well the low frequency, they don't cover well the high frequency.
+They cover, if you're lucky, three octaves.
+So in what we are doing now, which we are covering two, we have already shown that the directionality, we can reproduce directionality of a directional speaker.
+If we can cover the bandwidth in-between, then we're done.
+We have a directional speaker ready.
+Now you could then question, would that be good to send music around? And that is an interesting question, and obviously if I can distinguish well, no.
+But if I am in my car, and my son is listening to his nursery rhymes at the back, and I am not listening to them, then this is a success.
+I hope I answered your question, so, the answer is alarms, speech, melodies, for sure.
+The future, well, we'll see.
+- [Dan] Thank you very much.

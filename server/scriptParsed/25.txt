@@ -1,0 +1,171 @@
+- The introduction.
+(audience claps) Thanks! Okay, so I am speaking.
+Can you guys hear me okay? Microphones right there.
+All right, I am speaking today on behalf of both myself and Eliza, who's in the audience here with us.
+We have been working on Google Hangouts for a year now back and forth and making this work.
+So, what I want to introduce to you today is a little bit of background of the work of where we're coming from and what we're doing.
+Where I'm coming from because I'm actually an industry and what the workshops were that we did and also the outcome.
+So, first of all, I just completed a Ph.D in "Designing for Meaningfulness in Future Smart Products." So, today when I'm speaking about meaningfulness, it kind of takes either 230 pages to explain it, which you can go check out at meaningfuldevices.com, or you can check out this amazing chi paper which Eliza wrote and has actually won Best Paper Award.
+And it is being presented today at 2 o'clock.
+The UX Theory in Boisale 2.
+(chuckles) So, I'm not gonna get into exactly what we mean by meaningfulness cause otherwise, I'd be here for three hours.
+So, I'm coming from Force Technology.
+Force Technology is, it's headquarters are in Denmark.
+We're a worldwide company.
+It's a big engineering and assessments and certifications company.
+But, I am from a tiny department and my department is called IdemoLab.
+And IdemoLab is tiny but mighty and we do use center design hardware prototyping.
+So, I am a technology experience designer there and I help companies to develop new future smart products.
+We have been working with a group called Welfare Technology.
+They are a Danish national cluster and hub for innovation and business development in healthcare, home care, and social services.
+And they are the ones who actually funded our work to do these workshops.
+So, from my Ph.D, I explain meaningfulness in three framings.
+As people to people connections, as a person to their sense of self, and as people to a sense of time.
+Who have they been? Who are they now? And where are they becoming? And of course, there are a lot of different combinations of these, right? This is just the basics.
+But if we look at it, there's endless iterations that this could be.
+I'm interested in meaningfulness in technology because interaction design literature is increasingly pointing towards this as a very interesting area to explore.
+And also, we are living in a digital age.
+Technology is pervading our lives and I am asking the question both for myself and for the customers that I work with, should we only be looking at devices which increase our convenience? Right? And I think not.
+Hence, I wrote a page two about it.
+I'm gonna introduce some of the work that I've done just in the next two slides.
+And then some of Eliza's work.
+So, for me, I've defined these mechanics of meaningfulness, these characteristics.
+And these are value-based.
+So, this is about personal development.
+Who am I? Who do I wanna be? Something about moments of significance.
+This moment in the day when we say, "Aha!" Or we have that eureka moment where we discover something about ourselves or about our relationships.
+Something about value over function, right? So, if you think of a FitBit, everybody knows what a FitBit is, you know it counts the number of steps, but actually the value is in getting you to be a healthier you and, you know, taking more steps and enjoying nature or whatever it is.
+Whatever your goals are for using a FitBit.
+It's not about the function of counting steps, right? There's something about meaning in everyday life.
+What is meaningful to me is not necessarily meaningful to you and what is meaningful to you might not be meaningful in two minutes from now, right? And there's something about critical thinking.
+There is an endless accessibility to new sensors and actuators these days.
+And, of course, that means that people are making all sorts of really special things like smart hairbrushes and smart water bottles.
+And so, I'm asking people, design practitioners, to critically think about what they are making.
+And also, there might be something about offline artifacts.
+Does everything need to be connected? And I don't think so.
+And then there's the manifestations of meaningfulness.
+These are the physical characteristics.
+So, these are for me and I'm not gonna get into all of them.
+Maybe it can be non-screen.
+Maybe it can be tangible and to us in this room in this conference, this is, like, obviously, this is what we work with.
+Right? But for a lot of the people who are making smart products out there, they're doing what they know.
+And what they know is iPads, right? So, really, emphasizing non-screen and tangible.
+Looking into traditional craft.
+Could we include the traditional crafts maker in what we're making? And also looking at everyday objects.
+Not making more silicon encased white things, but actually making more everyday objects.
+So, Eliza's work, and I'm speaking about her work.
+Second hand.
+It is not my work.
+It is hers and Kasper Hornbaek's.
+I will introduce it briefly because it was part of our workshops as well.
+So, I'm sorry if I botch it up.
+I hope I do all right.
+She has introduced five things of framework for the "Experience of Meaning in Human Computer Interaction." One of them is connectedness.
+How we're connected to the world that we're in.
+The second one is purpose.
+What is our purpose? What are we striving towards? Then, we have coherence.
+Does all of this make sense? Does it all fit together, right? There's something about resonance.
+This is the unreflected immediate experience of something.
+Does it resonate with us? And of course, there's significance.
+Is what we're doing feeling important and worthwhile? So out of these, out of this framework, we took three of these.
+Purpose, coherence, and significance into the workshops that we did.
+And the workshops were done with Force Technology, Aalborg University, the University of Basel, and Welfare Technology.
+Welfare Tech, as I introduced, is an innovation network.
+They funded a "Designing for Meaningfulness" project for two years and they specialize in health care devices, products and services.
+They represent the companies who are working with these things.
+And what we did was we did a two-hour workshop with nine companies.
+So, in this workshop, we presented them with six worksheets.
+Some of these worksheets, as you can recognize, the first two were some of our own.
+"The Mechanics of Meaningfulness," "The Manifestations of Meaningfulness," and "The Components of the Experience of Meaning" which you'll learn later today, is the framework for "Experience of Meaning." Then, there's the "Better Things Meaningfulness Questions." This is another industry exploration of meaningfulness.
+Then, there's "Meaningfulness Experience Scale" by Huta and Ryan and "The Meaningful Experience Scale" by Huta.
+So, this is coming from more of a psychological, statistical background.
+The worksheets look like this.
+Some of them we did in an interview style and just a conversational interview, informal, asking how people related to these different values.
+And then, the first one here, the "Better Things" one, that was a silent reflective exercise where they can write down some answers to questions just to give them a break from being interviewed.
+And the last two were scales.
+Scales from one to 10.
+So, for instance, oh, I don't even remember them now.
+(chuckles) Yeah.
+How significant is this to you? For example.
+Then, when we started these workshops, there are typically three perspectives when we're talking about welfare technology and these are very important to keep in mind.
+So, I'll just mention them now.
+The citizen who is trying to lead a normal life, the caretaker who is having a high quality of work.
+Right? Because they're doing heavy lifting and dangerous work and work with people who are not able to take care of themselves.
+And the municipality who essentially is trying to build society but also save money whilst doing so.
+So, the outcome of these workshops, all these interviews and scales and worksheets that we did, was that there were four metrics which really stood out.
+These were the four metrics which people responded best to.
+They understood them inherently.
+They responded well to them.
+They spoke about them at length.
+And these were meaning in the everyday, right? Like I mentioned to you before.
+What's meaningful here and now and to me and to you? The thing about value over function.
+Something about purpose.
+What is my purpose? What am I striving towards? And significance.
+Is this important or worthwhile? And that's not to say that the other metrics were not meaningful, but it was a little bit more emphasis on these one where we really noticed that people engage with these.
+They were excited about these ones.
+So, I'm gonna explain each of these in series.
+So, "Meaning in the Everyday." How can it adapt to fit what we need in a given moment? It being the device, right? And we can ask the question, if we should focus on right now, instead of the past or future, how does it help us with our current selves? One example of this, one of the companies was Zibo Athene.
+And Zibo Athene makes this sense aid which is like a weighted vest. You guys might have heard of weighted blankets and stuff like that.
+And this is to help people with social anxiety or other things to be able to participate in the everyday, right? And basically, this makes it possible for people to be part of society, right? They can put this on, get a sense of relaxation and go out or go out and come home and then put this on.
+So for Zibo Athene, they really responded well to this meaning in the everyday, right? That this thing that they make, this product, is helping people with their everyday lives.
+Then, there's something about value over function.
+How does it offer more than just convenience? And here we ask, what are the emotional values that the function allows for? So, Brane is a thing which is a little patch that is put on dementia patients in care homes to measure their sleep because a lot of them are getting up to go to the restroom in the night, getting lost, and spending two hours wandering around and then having problems the next day.
+And they couldn't figure out why.
+So, once they monitored their sleep, they were able to see these different patterns.
+And here we have a graph which shows their sleep patterns.
+And of course, the function is simply to provide the data.
+Right? So, this graph is kind of, it's just a graph, right? And as with any graph, we have to, like, discern the values from it.
+And what this ends up doing is it allowed caregivers to make an educated decision on how to help people, right? So, it's not just the actual function of this thing which is measuring movement.
+That's kind of useless in itself, right? Then, we have purpose.
+Does the product help users to identify personally important goals? And here we ask, does the product support users, so supporting them, in reaching and achieving those goals? Right? So, here we have the Sarita Caretech "Pearl." And this one is like a broach that people wear and it's basically an alarm, right? So, if they fall, it goes off.
+If they're in an emergency, it goes off.
+It replaces this ugly red button that they wear around their neck, right? And then the idea here is that it's made with jewelry designers.
+People can choose their own designs.
+It's very personalized.
+And the function is simply an alarm.
+And maybe if we look at purpose, the purpose is that the person wants to maintain the status quo.
+They want to be a normal person.
+They wanna live their lives.
+They wanna go to birthday parties, they wanna go out for walks.
+They don't wanna feel like they have this big red button (chuckles) in the middle of their chest, right? But, they know they're gonna be okay.
+They know they have a connection to the caretaker.
+And then, there's significance.
+Does the product matter to users beyond the momentary interaction? So, how is it significant to the users in their lives? This Hopspots is programmable dots.
+They're about this big and you put them on the floor and hop on them and they're taken into schools where children are taught about programming and then they can program and then they can make games of these and there's all sorts of different things that this can do.
+But, one of the things that the CO of this company reflected about was that this really allows them to realize, them being the children, realize their impact on the world.
+That they program something and then they can see what happens as a result of that, right? It's something that all of us have experienced playing with art we know or whatever else, but when you have a kid who is sitting there programming and then they can play, they can make a game for themselves and their peers.
+Something that's physical in the real world, right? There's that magic in that and that significance in realizing your impact.
+So, one of the things that I thought was really interesting was that it is really difficult to get companies to spend their time on something for free.
+They're not getting paid to do this, right? But, all of these companies spent an average of 10 hours on these workshops and they were truly interested in "Designing for Meaningfulness." As soon as we asked them, do you wanna participate in this workshop? They said, "Yes, that is really interesting to us." And these four metrics were what they came out with, right? This is what they thought was most relevant for them.
+They couldn't necessarily easily relate to the Huta & Ryan or Huta because it's more a statistical analysis tool for psychology than it is something that you can just give to a company, right? And of course, all of this in the beginning stages.
+Our next step is to make worksheets which are more coherent.
+This is just an exploration of terms.
+And then, we had the "Better Things." And these ask some very interesting questions and it asks things like, how is it art? How does it add beauty to your life? How does it create a sense of wonder? How does it make me a better person? This is one of the questionnaires that we gave them.
+And we notice that people almost didn't answer these questions at all.
+They just left it blank.
+So, it was kinda of, like, why is this so difficult, right? So, that's something else we'd like to look into later on.
+So, meaningfulness, right? It's a really tough term.
+We ask companies, how meaningful is your product? And they said, "It's a 10 out of 10." (audience laughs) There was one.
+Like Humble Company.
+They're in the middle.
+So, it's really in these nuances when we ask them about purpose and significance and meaning in the everyday and value over function and personal development.
+This is where we start to get into the meaningfulness because if we just ask people how meaningful is it, we're gonna get this answer, right? So, as us in the room as academics and design practitioners and people working with this kind of stuff and also companies, I suggest that we ask ourselves if we should focus on right now instead of the past or the future, how does that help us with our current selves? How does whatever we're making offer more than just convenience? What are the emotional values that the function allows for? Does the product matter to users beyond the momentary attraction? And does the product help users identify their personally important goals? As part of this work, we made this handout for industry which has been handed out to 4,000-something companies now.
+Which goes through basically this presentation.
+And also gives them a set of design guidelines in the back asking questions like, does it really need a screen? Have you thought about purpose? Have you thought about significance? All these sort of things.
+So that companies can actually use this and get started in "Designing for Meaningfulness" and the products and services that they're creating.
+Industry has responded particularly well to this and one of the quotes that we got out of the workshops which I liked was, "It was a great pleasure and I look forward to hear what the future brings when meaningful design is a part of product development." Thank you so much.
+(audience clapping) - [Panelist] Is there any questions? Yes.
+- Can we just move that? - [Man 1] So, you mentioned that if you ask companies is their product meaningful, the answer's not very useful.
+I might suspect that asking consumers and customers if the product is meaningful, it also might be difficult just to ask them outright.
+So, this is kind of a framework for a design process.
+How would you go about validating whether a product actually was meaningful or actually was significant? - That's a very good question.
+And actually, something I spend a lot of time on in the Ph.D.
+And that's because I would say that there's no way I would do that.
+I cannot validate what is meaningful to you.
+There's no way that you're gonna answer the question two times the same way.
+There's no scientific method behind that.
+What is meaningful to us changes constantly depending on our mood, our circumstances, all sorts of different factors.
+So, is us asking this Q&A right now meaningful? Maybe it is right now, but in five minutes when you realize I gave this answer and you didn't get a really comprehensive scientific method out of it, you're like, "That was not meaningful at all," right? So, it's in the momentary experience as to whether or not it's meaningful and also the lasting experience of whether or not it leads to fulfillment in life.
+And that is entirely up to the individual.
+- [Man 2] Then, come to my talk for some alternative evaluation.
+(audience laughing) - Yes! At 2 o'clock! (laughs) Anyone else? Okay.

@@ -1,0 +1,183 @@
+- So welcome at the very last talk of your day.
+Let's make it a good one.
+I will present the paper.
+It's called Beyond Behavior: The Coach's Perspective on Technology in Health Coaching.
+And this is work within the broader topic of my PhD about domain experts interaction with intelligence systems.
+But today we will talk about health coaching.
+By the way, I collaborated with Martijn Willemsen and Wijnand Usselsteijn.
+And I'm from Eindhoven University of Technology.
+So, talking about health coaching, that is about a client seeking support for some health related goal, right? So it's really about having a problem and reaching out, hey, can something or someone help me with this.
+So this can either can be support from technologies, for example, the clients can download an app, or buy a wearable device.
+But he might as well go to a human coach, which might be a personal trainer or a dietician, or lifestyle coach.
+But in any case this is a client centered process where this question plays a central role, and someone seeking support and someone providing support.
+And then when we think about technology in health coaching it gets increasing attention, and it's also illustrated by many tracks here at Chi about health and technology.
+For example, in the fields of personal informatics and quantified self it's about, well, tracking, and by this tracking, giving insights.
+And in the fields of behavior change technology and persuasive technology even take one step further more towards e-coaching, towards proactively helping the user to reach certain goals.
+And these fields are mainly focused on the questions what are the clients' needs? And what is technically possible? Health coaching is an interpersonal process, at least it's always been.
+And now technology might take over; might step into this.
+But it is about two people, two persons one helping the other.
+At least originally.
+The means of the question like what is successful health coaching about anyway? And also what are the coaches needs? Are, in current literature, underexposed, and we believe that if we take one step back and look at the coaching process in general, and only then start to think about the place of technology in this process, we might get better understanding.
+So with this study we aim to move towards a better understanding of the social and the professional context of health coaching.
+And it might spark new insights into the development of technology in this field.
+So, we set out with these research questions.
+So in the beginning of the study we, without even talking about technology, wanted to understand what defines and influences successful health coaching.
+And then secondly, we wanted to know what the health coaches perceptions, attitudes, and, also needs were, towards technology in their practice.
+And then finally, we wanted to understand what these results would imply for the design of technology in health coaching.
+So in order to tackle these research questions we did three qualitative studies where in the beginning we aimed to explore the coaching process in general.
+So we deliberately did not talk about technology in this first study.
+We did interviews with nine coaches, which were either personal trainers or dieticians, so focusing on physical activity or nutrition.
+Mostly both, by the way.
+And only in the second study, where we did a focus group with four out of those nine coaches, we talked about technology.
+What can technology do for you? Basically, that was the main question.
+And then in the very last study we actually let coaches interact with technology.
+So we had this gradually approach where we let them interact with self-tracking data and clients, and see what happens.
+So I'd like to talk you through some highlights of the results, and not extensively, because I want to save enough time to discuss the results.
+I think that's the most interesting part.
+But to give you an idea, so we did the thematic analysis in all the three studies.
+And for the first study that result is in three main themes where coaching is about.
+And I will illustrate most of them through an illustrating quote.
+So the first thing we found that the coaches reflected on was that success goes often beyond achieving goals.
+For example, one of the subtheme's was that there's often a more profound issue underlying a stated goal.
+So for example, this coach explains that.
+She said, "the first impression is that "someone wants to lose weight.
+"But in my experience it's never about that.
+"It's really about somebody fighting "something within themselves.
+"So it's my role as a coach to understand "which emotions are there, and to be sensitive." So that really already gives an idea about what they think that health coaching is about.
+Secondly, they talked a lot about the value of the personal approach.
+And one of the subthemes there was the tailoring advice, and also the tailoring the coaching style is very important, and also implicit.
+So one of the coaches explained, "I'm always looking for the things that a clients needs.
+"What motivates him, helps him, triggers him, or maybe just "reassures him at this moment." And when we further probed, like okay, so what is it that you do? How do you tailor? What client features do you look for? And they said, "Well, "it's mostly just a gut feeling.
+"It's just years of experience, you know.
+"I know what to do, but I couldn't make this explicit." Which we thought was interesting.
+And they also talked a lot about adapting the advice to situational characteristics.
+And related to this they said that contextual information of the client is very informative to them.
+So this was, I think, very funny when coach explained that she asks her clients to make a food journal.
+And she said, "It says it all.
+"Some people forget it, then you know they're not motivated.
+"Some write it very sloppy, others very tidy, "including the times.
+"Others bring food to the consultation meeting, "or make pictures." So she said, "It's not only the information itself, "but also the way it's presented is very informative." Now this already highlights some implications for technology.
+But in the second study we also talked about this technology with the coaches.
+So we basically asked, what can technology do for you? What would you like to outsource, and what would you like to do yourselves, and why? And this result is in six themes, and I will discuss a few.
+So the first one is, well, not very surprising, you would say.
+They say, "Well, "technology can help me giving more "and better quality information." So they say, for example, "At the start "of a coaching process, I want to know many things "and I only get half of that.
+"So that would be something that technology "can support me with." On the other hand, they also said, "Well, I don't want technology to distract "from the interaction with the client, "because that's the main thing in the coaching process "and I don't want it to take over that, "or to distract from that." And related to this one coach, made this interesting quote.
+She said, "What makes us human's unique "and what makes us sensitive to each other, "and if we outsource that to technology "we lose a lot of human strength.
+"And that idea scares me." So she really was thinking about, well, I don't want to outsource everything, because there's something that I think is valuable to just do as a human.
+And then the last example from this study.
+They talked a lot about limitations of data, and negative psychological effects.
+So for example, they said, "clients tend to stare obsessively "at the numbers on their device, "But it is not about the data, "it's about what you do with it.
+"So it's our role as a coach "to learn them to listen to their bodies." So this illustrates that they basically saw themselves as a sort of gatekeeper.
+They wanted to be in control of when to use the data, and how to use the data, and also sometimes just hide it.
+They said, "Well I just want to use it effectively, "that it motivates, and not that it demotivates "over-excessively.
+And in the last study, we did more hands on work with technology with the coaches.
+So we had a large group of coaches, 21, and we invited two clients with their self-tracking data, just to give it a try, see what happens, if you actually work with it.
+And half of the coaches were talking to these clients, and the other half were consulting their self-tracking data.
+We asked all groups to come up with a coaching advice, and then in the end there was a group discussion with all coaches, and we reflected together on what is the added value of talking to the client and what's the added value of the self-tracking data, and how does it impact the coaching advice.
+And I want to give you one example that I think nicely illustrates what happened in the workshop.
+So there was one client that was aiming to run half the marathon.
+And the people looking at her data, the coaches looking at her data said, "Well, she's just not in balance.
+"That day, only 5,000 steps "and then the next day suddenly 18,000 steps.
+"It seems as if she's punishing herself for a lazy day." Parallel, at the other side of the room, the people were talking, the coaches were talking to her.
+And the coaches asked, "Well, why do you want to run the half marathon?" And the client started talking about very negative sports experience she had as a child, at school.
+She said, "Well, the education was like a push, you had to "and you were graded for it." So that revealed her sort of relation with doing sports.
+And later in the group discussion, the people consulting the data said, "Well, these stories explain "why she behaves like this." And the people talking with the client said, "It's nice to see this reflected in terms of behavior." So, it's basically two sides of the same coin, and the other sides, well, added value to their perspective based on one of these two things.
+So we concluded that, from this study that information is both hidden and revealed through behavioral data.
+And the coaches themselves concluded, more or less, they said, "Well, data helped the coach "to ask the right questions." Now let's see if I, oh yeah.
+That's fine.
+I will do this slide as well.
+I thought if I would be late then I would skip this one, but I think it's very relevant.
+So when we compare the coaching advice from the two parallel groups, we would see that from the coaches consulting the self-tracking data the coaching advice was much more specific.
+So, for example, they would say to this particular client, "Use your heart rate zones, in your trainings." Because they saw that she was going into the very highest heart rate zone, stayed there for the whole training, and then stop.
+So they could make it very specific because they knew this, they just see it in the data.
+And also quite situated.
+So, for example, they said, "Well, why don't you try this running trail? "Use the bridge here, for stretching, and then return." Because they could have a look in her GPS data.
+So, specific and situated that was typical for that group.
+And in the other group it was more empathic.
+So, hey, be kind to yourself; don't be too hard.
+And also thinking along, why didn't you switch from running to cycling? You like it more, apparently, and it's just as healthy.
+So this was a big difference.
+Okay, so we started with saying that currently technology in health coaching is focusing on understanding and supporting the clients.
+And this is fine, of course.
+Let's be honest, this is the main goal of health coaching.
+But, when you take one step back, and think about what constitutes good coaching, in the first place, and also, what are the coaches needs.
+This might shed new light on technology in health coaching, so let's see what the three studies have learned us, in this regard.
+We found that coaching is about sharing information on both behavior and experience.
+So we illustrated with a two channel communication, yeah, two channel communication, sorry.
+And the coaches stated, and I think we have to agree, is that technology typically provides more information on behavior, because it's simply easier to measure.
+And they said, "Well, it's not really sufficient.
+"Experience is also very important.
+"Behavior only is also often not meaningful, "especially in lifestyle, or wellbeing fields.
+"I mean, if you sleep six hours a night, "and you feel fine, then it's fine.
+"Or if you drink only one cup of water a day and you feel fine.
+"So it's much more about the experience that explains "which behavior is good or not.
+"But just looking at the behavior, we don't know.
+"It's hard to have a normative judgment, sort of." So they said this is really key to have this experience.
+And also the focus on behavior is not desirable, it may undermine intrinsic motivation and it also fosters obsessive behavior.
+So they say, "Well, this is not what we want." And therefore, a lot of times they reflected on I wanted to stay in the loop.
+I want to be in control on how to use this technology and the resulting data towards the clients.
+And most importantly, coaching goes beyond behavior.
+Now if this is the case, if coaching is indeed going beyond behavior, then you might ask yourself this question, which is a good question, I think.
+Okay, should technology act beyond behavior? Should it mingle in sharing the experiences between the coach and the clients? Should it, for example, automatically interpret behaviors in terms of experiences? We might also go measure experience explicitly through experience sampling methods, or whatever.
+And it might also be tempting for us as researchers, I think, and then especially given the key note we had this morning.
+Yeah, there are a lot of possibilities, and maybe there's an opportunity there.
+The coaches were very skeptical about this, and I will explain why.
+They said, "Well, interpreting this behavioral data "is a meaningful activity in itself.
+"Let me do that together with the clients." It's a nice trigger of sharing these experiences.
+It's also cue for meaningful interaction, which is very grounded in a daily context.
+If you do that automatically, then you also lose a lot of strengths of actually what the coaching is about.
+Remember the quotes about the dieticians? Saying that she was asking her clients to make a food journal.
+Not really for the information in the food journal, but only for the looks of the food journal.
+So if we would automate and standardize those things then also we lose a lot of value what makes health coaching work, and successful.
+So, ambiguity is not really a bad thing, it really has value in this process.
+So we shifted the focus, basically from what's technically possible to what's happening in this relation, and then from there started with what the added value of technology might be.
+And the shift, and it's very important, I think, to highlight, we did not look at the relation in order to mimic the relation in stand-alone e-coaching technology, is that a three? Or what is it? Oh, Okay.
+So we did not want to mimic this.
+but we wanted to start at relation to find the value of technology embedded in this process.
+And I think the main highlight here is that technology should not distract from what it's all about in health coaching.
+And that is that the client experiences a good and healthy life.
+And for sure, technology can play a very important role there.
+Only if you could take the process into account.
+Thank you very much for your attention.
+(audience applause) (mumbling) - Yes? Start? Hi.
+- Yeah.
+- MC, I'm really curious about what the qualifications, there's a bunch of questions I have.
+Qualifications of these coaches, their years of experience, and how they would actually claim success for their clients.
+- Yeah, good one.
+So it's about the qualification of the coaches, right? And what they- - Well, there's three questions.
+- Oh, three.
+Sorry, I only got two.
+- One is the qualifications.
+- Yeah? - So what are they? 'Cause just about anybody who wants to hang out a shingle can call themselves a health coach.
+- Yup. True.
+It was very various.
+I think we had between two and twenty years of experience.
+Let's say the majority had education that was one where I thought well, it was a little bit a course here and a course there.
+But they all were working on regular basis with individual clients, so in that case they had these experiences.
+I think in general, when clients seek help they also go to unqualified coaches.
+So I think when you're looking in this process...
+- Yeah, but, if you're looking at people who are not qualified.
+- Then you can get crap data.
+So, this is why I'm also wondering about how do you judge which coaches to talk to? Anybody can say I've worked with 100 clients, but how do they measure their success? To know that you're talking with coaches about whom you wish to build a model for the best interaction you can for your devices.
+I was alarmed when I heard you say that a coach was saying, "Well if they get six hours a night of sleep that's fine " as long as they feel okay." That's...
+- (laughs) I think that the aim of our study, was to understand the role of technology in coaching, so not to judge the coaching process, per say, and I'm not saying, therefore we included crap coaches, of course not, but I think this focus, we just wanted to have this health coaching as a context and then see what technology can contribute there.
+- Okay.
+My last point would be your quest in observation sharing with this group thinking about this space, is that, for instance, if a coach is saying, "I want control "of this data, or the quality of their food journal tells me something about their level of motivation.
+- Versus somebody who is qualified, who might say, "Actually, what's the most important part of "the coaching experience is the history "of the person coming in, "as opposed to what they're doing today.
+"And how I get that historically over time is a big deal "and also this sense of how do I know when my client "actually succeeds?" - Yeah.
+- Am I supposed to be with them forever? Those kids of things I would encourage you to consider.
+Speaking as a professional coach.
+- (chuckles) Yeah.
+- To think about, in terms of who you ask to be your role model.
+Or thinking about this space.
+- Yeah.
+- 'Cause there's a lot crap.
+- Yeah. (laughs) Thank you very much for this comment.
+We also got this, oh sorry. - We have.
+We also got this back.
+These comments are just, like the histories is important.
+So these were the things were addressed, but thanks for your comment anyway.
+It's good input.
+Thanks.
+- We have reached the end time for the session, but the speakers will still be around.
+So let's give them another round of applause.

@@ -1,0 +1,100 @@
+- So thank you, I'm Dave McGookin, from Ferratum, but this work was done when I was at Aalto University in Finland.
+You don't need me to tell you, though I'm going to anyway, that smartphones have changed the nature of how we do photography.
+Rather than just taking images of perhaps when you're on holiday to a nice place or you really need to, you know you're going to want to take pictures.
+Smartphones have been able to allow us to take pictures almost anywhere and that means that we've increased the number of photos that we take of some everyday and mundane things like in the supermarket.
+That's led to an explosion of the number of pictures that we actually have and if you look through your smartphone I'm sure you can find you've got a lot of them.
+And that's led to manufacturers like Apple and Google, there are no new manufacturers these days, building software technologies and toolkits to cloud back the photo library, so no more do you take pictures on an SD card and you transfer them, you take the picture and it automatically appears in the cloud and you just end up with this larger and larger kind of digital repository of images.
+And the question is, of course, what do we actually do with those images? Well, obviously one of the main things is that we share them on social media, maybe on Instagram or Twitter or Facebook, but when you share things on social media we tend to try to present an aspect of ourselves which is positive towards the audience that we are presenting.
+We're kind of tailoring content to the viewer we wish to project of ourselves.
+And this in many cases, with Instagram can be taken really quite far, with people going to specific places or getting professional photographers to take their images so that they look good on Instagram.
+But it does mean that in everyday life there are images that we probably don't share on Instagram and therefore we end up with these large amounts of images increasingly which never ever look at all, maybe you've got images on your phone you've never looked at since you've taken them.
+So the question is then, what can we do with that? And one core value of older images that we've taken is an ability to reminisce over them, so to help stimulate and help consider forgotten memories that maybe have fallen into the back of our mind.
+Now, XCI has, over the years, completed a significant amount of work into reminiscing.
+It's found that reminiscing is valuable at all ages and it's something that people wish they did more often.
+It's also found that people need to be prompted to reminisce you tend not to just do it, you need actually some kind of external prompt.
+And when giving external prompts, prompts which link now to then in someway or to the period that you're going to reminisce over are actually stronger, so they would be showing you what you were doing a year ago today or two years ago today are examples of that.
+Much of this work has been already embedded into mainstream applications, so Facebook have on this day, which will pop up previous posts that you made in previous years.
+Apple, in Apple's usual not really sure what we're doing way you'll create these sort of thematic photo galleries which might show stuff that had been going on a while ago, but they tend not to link it specifically to dates and then also things like Timehop as well.
+In all this work at particularly XCI, we really looked at temporal links between now and the media, so a year ago today.
+But we've also moved from diary studies by Van Eerde that what prompts people to reminisce is often location, location is a very important feature of reminiscing, but for images Whittaker found that a large number of people couldn't remember where they'd taken the image just by looking at the image, so location's important, but you don't really remember location very well.
+In addition, because we've got these sort of everyday photographs they happen in sort of everyday environments, therefore, multiple events may overlap.
+Maybe you went to the same bar every three months with some other people.
+Maybe your in city center many times in a month but there are different things going on.
+So we wanted to investigate this role of location for reminiscing over personal photo images and also because we've now got things like Google photos and Apple photos that have these Cloud back repositories, we can do it over the entire photo library we've created, rather than just those images that you've uploaded on social media, which, a lot of existing academic research, largely because of when it was done, uses.
+So we don't have that presentation view that you're trying to give.
+In this part I want to look at three research questions.
+First of all's the impact of a location-based relationship to support when reminiscing over personal digital photo collections.
+What's the value of supporting reminiscing beyond all those images that were previously uploaded onto social media, so looking at the entire photo library that was created.
+And then also how do users fit this kind of location-based reminiscing into their day-to-day lives, where does it work, where is it not an important addition to our day.
+So to do that, we created a technology called Reveal.
+Reveal is an iPhone application, 'cause it's actually really hard to do this on Android at the moment and it uses a standard location-based system research core, so as the user walks around in the environment the phone periodically searches over their photo collection for images taken in the nearby distance.
+In this case we're using 150 meter radius around the user's current location.
+And I should say we'll be using geo-tagged photos in this, we're not using anything particularly sophisticated over all of the images.
+If it finds images that the user hasn't seen before it sets one of these to be the primary image and it will then fire a notification to the user to tell them the image has been found nearby and prompts them to then open and look at them.
+The user can ignore this and walk away in which case the notification's cleared after a few meters or they can launch the notification and go in to be able to see what they've found.
+When they do this is sort of what they get.
+Out of all the images in the area, assuming there's more than one, we set one of the images to be called primary image and that's displayed immediately full screen.
+If there are more images they get this small button in the button right where they can then go to a grid view of all the images in that area sorted by year.
+And they can also access a large scale version of the image or they can flip around and see any metadata that might be existing on that image.
+We carried out a study with Reveal over 14 days, with 14 participants.
+The criteria for participants was that they had to have an iPhone, they had to use iCloud photos and they had to have geo-tagging of their images switched on if they didn't have geo-tagging of their images switched on, there wouldn't be any data for us to actually look at.
+And also because we think many of these everyday photographs are taken in everyday situations, we also asked that all participants had to have lived in their current area for about two years and we basically put this on the city level, so if they've lived in the same city for the last two years.
+They used the application as they wanted over 14 days and this is similar to other reminiscing work but in our case we had to have a lot more time between the creation of the media and when the reviewing took place.
+And we also did some meta-analysis of their photo libraries, so the shorter bit is that Reveal was largely accessing images that were taken over the previous two years, given that many of the images the participants had in their photo libraries did not have a geo-tag.
+I'm not going to go into the quantitative stuff very much, but this is just a little bit on what actually happened.
+Over the two weeks, there was a median number of 69 notifications presented, that's about five per day, there were slightly more at the beginning than there were towards the end.
+A mean media of eight were responded to over the study, so again the number of notification presented were quite a bit larger those that were actually responded to.
+We also had a higher ratio towards the start of the study.
+But when people did interact with Reveal, they did so in a deep way.
+The more images where people could access the other images that were seen were accessed about the same number of times as the notifications, so when people did respond they wanted to look at all the photos in that area.
+I want to go through the results now, just to relatively check the box of core issues as to why they've been a bit picky with them because there's quite a bit in here.
+But the first is a long list of practical implications of location.
+This is location-driven work, time-driven, so people had to be in the areas where they got notification and respond to it to get information from Reveal and what we found was that, obviously, people only respond if the really have time, if they were going somewhere or they were meeting somebody or they were in transit, they tended not to respond to the notification and those notifications were auto-cleared and they didn't see them.
+But what we did also find from the notifications that they got is that people began to develop a photographic landscape of their image taking, that they became aware quite early on where they had taken images, so the images they had taken at work and at home were two very obvious cases that we found.
+And this acted as a driver to respond to or not, so if people expected to find images in an area you got a notification for then they tended not to respond.
+On the other hand, if they were in an area where notifications were not expected or they haven't thought they'd been, they were actually much more motivated to respond when that happened.
+Where people got these notifications was actually and important factor for whether they were responded to or not.
+When we look then at the value of these images and the value of looking at the location roughly where they were taken, there were a number of things that we found.
+Obviously, these provided a new perspective to relive old memories, so this was an example that we had from a participant who had previously been in a different job and happened to find himself on the same bus he used to travel on and he found that the photographs that he saw on the bus when he got the notification actually helped take him back there and reflect.
+Also, interestingly, and probably expected with this kind of application is the way in which the environment changes all the time.
+So we obviously had this in cases where the physical environment had changed, maybe a building had been built or been knocked down and people could see the difference between when the photograph was taken.
+But it happened in much more smaller cases as well.
+The first example there is someone who had moved into their home, they'd been taking pictures over the last couple of years of them getting their house turned into their home and they could really see the progress they'd made over time.
+The ability to use Reveal meant that all the images were kind of cut down to the small subset just about area and they could see the progression over times how the environment they had created had changed.
+Also, because we did this in Finland, there's fairly significant season variations and we also saw the same kind of thing, we got notifications showing images in different seasons and people could begin to see how the environment had changed over and in a sense, this also reflected back on their thoughts on how they took photographs.
+So this participant here found that they taken lots of really nice images in the summer but hadn't really been doing so much in the winter and maybe they should consider visiting a little bit more.
+As I said, previous thing that's happened a lot, is a lot of this works been done on social media an existing core of images, but we wanted to look fully into our photo library and what we found was that these everyday images are actually valuable to participants.
+Images which are bad and I put bad in quotes there because they're photographically not very interesting by themselves, by putting them back into their location they're often cited as helping to provide reminiscing, so this is an example of a person taking an image which was just for notes, it was just a note, they had just taken this little reference for the future, but it actually generated this whole idea of a project they had done that they'd done when they were a freshman at university.
+Another thing that was valuable there was in how images might provoke more everyday event reminiscing, so the ability to think of these very much smaller events that had existed.
+A final thing that we found to be really interesting was the way in which this wasn't just reflections or reminiscing about their lives but also reflecting on their photo taking practice.
+So people, as I said before, because when they have this photo map began to become aware of where they'd been taking images and patterns in their life and how they took images.
+So, people began to become aware that they'd always taken this route because there were a larger number of images or there were a larger number of notifications versus other things.
+And also people began to reflect on the kind of photos they'd taken, maybe their taking images of just places and not enough of people or they weren't taking images that they thought might be in 20 years were going to help reflect on life as it was now.
+And then we also saw some examples where people wanted to move beyond just reminiscing and actually act on things.
+So, I mentioned at the beginning, we have these large repositories of images and we really don't know that we're going to actually manage them if they include things we don't want.
+But because we were doing this in a location-based sense, we cut down the number of images people saw, we actually were reverting to more energy use which was deleting lots of them.
+So, in conclusion, very quickly, working over the user's whole photo library does provide benefits.
+We getting reminiscing from images that people weren't posting on social media.
+Obviously, images that were posted on social media cropped up during our study.
+The location-based part supported contextual consideration.
+Then also, location acts as a filter to support viewing of related images, so images, as I said before, which were related to a place could be pulled together as a scene .
+Location though also brings challenges, because of what we learned through notifcations where they start to stop responding to them.
+This is not something we have a solution of how you do this.
+And also, as I said before, a lot of research has been done on temporal approaches, so a year ago from now versus location, so one of the things that we really want to look at in the future is how we might combine those approaches, temporal and location approaches.
+So, with that I will stop and listen to any questions you've got.
+(crowd applauds) - [Dan] Hey, Dan Cossly, Cornell University.
+I have lots of thoughts about this project to talk about offline.
+I want to say that I think you made an off-hand comment about change over time being expected, actually I think that's really interesting to think about pushing on how people all over time and as those photo collections get bigger it's gonna be more useful.
+The other thing I wanted to say is you post it almost as context versus time and then you said both, but really there's other kinds of context too that you might consider, associative memory, say, the more context added, the more likely it is that it's gonna be a useful and retrievable memory and so thinks like extracting people from places or objects or all the other kinds of things that you might play that you would context play might actually really push this forward.
+- Yeah.
+- [Dan] I guess that's a comment not a question, sorry.
+- Well, I'll just use it to debate where it's on, yes.
+One of the issues, obviously, with this is that we're looking at this in a location-based environment and we said people had to have been their for two years, well, people have been living in other places previous to those two years and then they never see those images or if you do go on holiday to a nice place then you don't see those images with this approach.
+So, I don't think I verse it as a temporal location thing, I think we need to kind of explore the different approaches here and find out which ones are good in different situations.
+But we're looking at also more of a kind of semantic location in future, so semantically, I'm in a bar, maybe I should see other images of being in a bar.
+Yeah, that's hard to approach (mumbles) - We can do one more.
+- [Pamela] Hi, I'm Pamela Gibbs, I'm University of Baltimore.
+I apologize, I came in a little late, so if you've already answered this I do apologize.
+Do you think culture or diverse demographics impacts the way they view this project? Like the way they view the picture, like pictures or react to the notifications or react to, you know.
+- I think the point being is that they're your pictures, so everybody's going to react differently, so in the project it's your own photo album, not a generic set of images.
+I didn't mention it but we definitely saw people that they changed their perception over timed images, so images that maybe weren't very interesting, obviously, images can become better if you've pictures of somebody and that person sadly dies, or whatever, that image becomes better, but we also saw it the other way, images we thought were very important for time became less important over time in a way.

@@ -1,0 +1,95 @@
+
+
+CCS CONCEPTS
+KEYWORDS
+ACM Reference Format:
+ACM Reference Format:
+1 INTRODUCTION
+1 INTRODUCTION
+1 INTRODUCTION
+Our contributions.
+2 RELATEDWORKS Designing for sound
+Spatial sound
+Spatial sound
+Spatial sound
+Directional sound
+Directional sound
+Acoustic lenses
+Acoustic metamaterials
+Acoustic metamaterials
+Acoustic metamaterials
+Acoustic metamaterials
+3 METASURFACE DESIGN
+3 METASURFACE DESIGN
+3 METASURFACE DESIGN
+3 METASURFACE DESIGN
+3 METASURFACE DESIGN
+3 METASURFACE DESIGN
+3 METASURFACE DESIGN
+3 METASURFACE DESIGN
+3 METASURFACE DESIGN
+3 METASURFACE DESIGN
+3 METASURFACE DESIGN
+3 METASURFACE DESIGN
+3 METASURFACE DESIGN
+3 METASURFACE DESIGN
+3 METASURFACE DESIGN
+3 METASURFACE DESIGN
+4 BASIC TOOLS FOR DEVICE DESIGN
+The thin lens approximation
+The thin lens approximation
+The thin lens approximation
+The thin lens approximation
+The thin lens approximation
+The thin lens approximation
+The thin lens approximation
+The thin lens approximation
+The thin lens approximation
+The thin lens approximation
+5 DEVICE REALISATION
+Acoustic collimator
+Acoustic collimator
+Acoustic collimator
+Acoustic collimator
+Acoustic collimator
+Acoustic collimator
+Acoustic collimator
+Acoustic collimator
+Acoustic collimator
+Acoustic collimator
+Acoustic magnifying glass
+Acoustic magnifying glass
+Acoustic magnifying glass
+Acoustic magnifying glass
+Acoustic magnifying glass
+Acoustic magnifying glass
+Acoustic magnifying glass
+Acoustic magnifying glass
+Acoustic magnifying glass
+Acoustic telescope
+Acoustic telescope
+Acoustic telescope
+6 DISCUSSION
+6 DISCUSSION
+6 DISCUSSION
+6 DISCUSSION
+6 DISCUSSION
+6 DISCUSSION
+6 DISCUSSION
+6 DISCUSSION
+6 DISCUSSION
+7 CONCLUSIONS
+ACKNOWLEDGMENTS
+REFERENCES
+REFERENCES
+REFERENCES
+REFERENCES
+REFERENCES
+REFERENCES
+REFERENCES
+REFERENCES
+REFERENCES
+REFERENCES
+REFERENCES
+REFERENCES
+REFERENCES

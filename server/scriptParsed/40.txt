@@ -1,0 +1,194 @@
+(laughter) - Thank you very much.
+My name's Helena, this is Jason, and we are going to present also on behalf of two colleagues who couldn't be here today, Louise and Marina.
+We're talking about an initiative that we developed that is designed to help address resource scarcity in STEM in Southern African countries.
+And we're going to describe the model and then talk about a pilot event that we ran last summer to test that model.
+- Okay, so I am going to carry you through what I call the easier part and Helena is going to do the harder part.
+Which works for me.
+The idea, to give you a bit of context of what we're trying to do is, this is kind of an example of the problem we're dealing with.
+Essentially, we need lab equipment to do, or people need lab equipment to do studies.
+You need to do teaching, you need to do research, but one of the problems, one of the significant problems facing some countries is that they don't have the lab equipment.
+So some of the examples that we have here of some of the challenges they've faced, for example, scientific equipment is just very expensive, and when it comes to importing it it's really even more expensive, so that kind of raises the cost.
+Then we have kind of repair and maintenance are some of the kind of key issues.
+Then we kind of, equipment comes from a variety of different companies, it sometimes comes proprietary so there's not much that you can do.
+And then in terms of the designs of some of the equipment just don't suit the global south.
+It just doesn't suit, it just doesn't work.
+So these are some of the challenges that we're trying to tackle in the context of this project, of this case study and this research.
+So what we decided to do was to combine three fairly popular ways to think about technology and use technology and kind of interface with technology I guess.
+One is open science, and the idea here is to basically make science accessible for all.
+You know, not about, closed door, only if - you can only do science if you can actually afford the equipment to do it.
+Open science tries to break open those barriers and say, no, science should be open.
+Science should be available for all.
+Design should be available for all.
+Everyone should be able to use and basically to do science.
+To do what they want to do.
+The next one is responsible innovation.
+And this is all about not doing stuff or doing research just for your purposes or to exploit society, but trying to involve society in everything that you're doing, and basically trying to ensure that what you design is good for them and it's good for you.
+And that's one of the key things here about responsible innovation, so kind of innovate responsibly.
+And then also, the last one being hackathons.
+And hackathons, as we've all heard about for quite a long period of time, the general idea is you have a specific amount of time, roughly, and you're set some task, and the aim is to address this challenge, address this task, come together in teams, and basically solve this problem in a limited amount of time.
+Generally speaking, that's the idea.
+So what we were thinking about is how do we kind of combine the three of these things potentially to address this problem of lab equipment shortages in a number of different countries.
+A number of different areas, actually, not only at the country level.
+So, what we did was kind of come up with this five step model, approach, framework, whatever you want to call it.
+But the general idea is, okay, let's say there is a need for some lab equipment.
+So there's a need for a microscope.
+Anything like that.
+Okay, so the first step would be, kind of starting on the right, the problem definition.
+So, what do we need.
+What do we need and how do we do it.
+So the first step at the top is thinking about design challenges, thinking about what is it that we want to set people to build, to have people to construct.
+That's the first bit.
+The next one is looking at what are the solution criteria.
+So, how are we going to judge what other people propose is a good or bad idea, or is a good or bad way of doing things.
+For example, one of the key things here is we need to be able to judge the frugalness of designs.
+The next step is about team formation.
+And the key thing is here, and one thing we tried to stress during the research really, and during the project was not to have a team of only computer scientists or even only economists or anything like that, but the point is to try to have an interdisciplinary team so that the approaches that are being developed kind of consider all of the different contexts, consider, um, basically are, let's say inspired by a number of different fields and not only one or two disciplines speaking to each other.
+So that's kind of the area about team formation and selecting the challenges.
+So the team forms and then the team selects a particular challenge.
+Then we have the idea of prototype creation.
+What's different here to traditional hackathons is that in the context of this work is we kind of actually let people - we set the challenge and allowed teams to form beforehand, and actually allowed them a fair amount of time to come up with and propose a solution, and to kind of go out prototyping a solution.
+Of course, this is very different to hackathons, or traditional hackathons, where you kind of get people in over a weekend or over a day just to come up with some solution, propose it, have some awards, maybe some people take it forward, maybe some people don't.
+We actually allow people to kind of, we allowed participants to spend a period of time thinking about their designs, working through their designs, prototyping their designs.
+And of course selecting the challenge that they were interested in.
+And then basically we actually had the LabHack event.
+And Helena's gonna talk you through it, basically an example of our pilot of the event.
+But the idea here is that teams come, they kind of compete, but they kind of present their designs.
+They present what they've been working on.
+They present what they're interested in.
+But also the key thing for us is that you have teams engage with each other.
+You have teams speaking with each other.
+Teams from a variety of different disciplines, backgrounds, actually coming together and saying, oh, that's what you did, okay, well here is what I did, this is something a bit different, oh well, maybe I'm a bit inspired by what you're doing, maybe that can be applied to solve my problem in this way.
+For us that was really, really, really important.
+And then one thing that we also emphasized as we were mentioning before, Open Hardware, responsible innovation, of course lab hackathons in general.
+These were the things we were interested in doing so we actually put on a number of different workshops to make people aware of, okay, what is Open Hardware? What is responsible innovation? What is ethics? So these are the things we focused on.
+We have here kind of engaging and then we also have at the end the awards for best solutions.
+The awards here are given according to the criteria set in stage number one.
+And then the last step which is really, really important, that emphasizes the point of what we're trying to do is publishing the prototype designs.
+So people come together, people present these designs, they present their research, they present their prototypes, take those prototypes and actually publishing them back in the space so other people can actually take up these prototypes and actually use them.
+And some of them are actually really, really quite cool, and Helena will show you those in a second.
+But roughly speaking, this is the general area of kind of what we did, what we came up with to combine responsible innovation, hackathons, and Open Hardware, Open Hardware environment, to come up with this, model this framework to get people thinking about how do we actually create appropriate lab equipment, laboratory equipment to address a real significant challenge.
+And essentially what we wanted to do is to move from the left to the right.
+That's kind of where we wanted to get.
+We wanted to do away with the bare laboratories and actually give people an environment where they can actually create their own laboratory equipment for their own use.
+And Helena's going to take over.
+- So that's the overall model, and then we had an opportunity to test to see whether it would work last summer.
+We won some money from the Global Challenges Research Fund, and we used this to run our first LabHack event.
+We ran this in Zimbabwe.
+We chose Zimbabwe as a country that really exemplified some of the resource scarcity that we were interested in.
+For instance, you have at universities maybe students sharing one centrifuge between sixty of them.
+And they have very few opportunities to get hands-on experience with the equipment, and so you can understand how science education can lag or suffer because of this resource scarcity.
+So we collaborated with the Harare Institute of Technology.
+He became our venue for the event.
+And then over the course of one weekend, a Friday to a Sunday, we had 11 teams who came and attended our event.
+They were from universities all around Zimbabwe.
+We also had school students who came in and observed what was going on as well.
+Most of the teams had prepared their prototypes in advance of the event, so they brought their prototypes with them, they gave presentations describing their work, what they'd done, the challenges that they'd faced doing the work, and they also gave demonstrations of their equipment to show it being used.
+And we had judges around who, as Jason said, made decisions based on the quality of design, the quality of documentation, the frugalness of the design, and certain other categories as well.
+All throughout the weekend we had a variety of interactive and educational sessions for the participants.
+We had sessions about open hardware, about responsible innovation.
+We had local businesses coming in and giving demonstrations of 3D printing, 3D scanning, the use of Arduino kits.
+We had a panel advising students how to set up their own start ups as well.
+So that was a basic overview of what happened.
+I can show you a bit more information by this video.
+Jason's going to press a button because I don't want to be responsible for it going wrong.
+- You can see I have all of the hard task.
+Let's hope that this works.
+I'm not sure if we want to do the full screen, that's probably a bit too risky.
+(laughter) - [Helena] Do we have sound? - And we don't have sound.
+(upbeat electronic music) Oh, we do have sound.
+- [Video Narrator] I've done a lot of embedded fieldwork in laboratories all over Africa, and a lot of this comes down to the fact that they just don't have enough equipment to be able to work efficiently, to be able to graduate their students on time, and to be able to really push themselves into the research areas they want.
+The idea for the LabHack came about from a conversation I had with my co-partner Helena where I was saying what we need to do is to set this as a challenge.
+The students are complaining that they don't have equipment, and we need to say, why can't you build your own equipment? So, putting the ball back in their courts and saying you have the expertise, you have the experience, you have the knowledge of the equipment, now you just have to sit down and make it.
+- Yeah I figured.
+- Me and Louise, we're the main organizers and we come over.
+Then we also have the people here in Zimbabwe who are really fantastic.
+It's been so inspiring to see how hard these people have worked, and how they deal with the limited resources they have and they don't see that as a setback, they just see it as a challenge to be creative about.
+- We're challenging students to create designs for low-cost versions of equipment that they would use in day-to-day work.
+So we're doing centrifuges, we're doing PCR machines, we're doing magnetic stirrers.
+Things that all the laboratories are lacking that are quite expensive that they really need.
+- Education should be equal for everyone, it should be a level playing field.
+- Once we started talking about it and we started pointing out the possibilities that you could have low-cost equipment in educational labs that was built by the students who were going to use it to learn their discipline of science people got really enthusiastic.
+- What's nice about working with a university like Oxford is feeling the information which they have which you find out that you're actually directly exposed to through the news.
+The world is now more connected.
+We all be talking about the same thing.
+Especially when you get the support from them, and encouragement from them, it does really bolster one's confidence.
+- It's a very big deal for us, and it's like a big opportunity for us to just inspire innovation within our students and other students around the whole country.
+We have a lot that we can learn from Oxford.
+So, definitely benefit from their mentorship in this program.
+- We're actually bringing in the local businesses as well to show that with the local businesses' and the students' creativity, we can make an amazing difference.
+- We are totally supporting the LabHack.
+We are a country where we don't have enough resources and enough network, so when we have people come and say look, we want to understand your problems and want to help you to solve them we're thrilled.
+- This is a collaboration.
+It's a collaboration between different people within Oxford, but then also it's a collaboration with people in Zimbabwe too.
+So there are people here who are really enthusiastic about this kind of thing, and they want to be involved with events like this.
+It's just been so inspiring to see how hard these people have worked, and how creative they've been.
+- I have to say I was impressed and excited.
+It showed that STEM has a really bright future in Zimbabwe.
+- So that's my job done.
+- So that was a short overview of our, whoop.
+Nooo.
+Make it work again.
+(laughter) That was a short overview of our pilot event for the LabHack.
+And overall, when we think about lessons learned, we have many positives that we can take from it.
+We really wanted to test out the model to see if it worked and we thought it was very successful.
+The students who participated genuinely created some working prototypes.
+So the video that's scrolling through on the left here shows the team that won the winning design.
+They made a centrifuge out of cardboard.
+It can also be made out of plywood.
+We gave all of the teams an Arduino kit and then they source all of the other materials themselves.
+And this centrifuge was made for less than 100 US dollars, when to buy it new in Zimbabwe would cost thousands of US dollars.
+And it works.
+It needs calibrating, but it works.
+It's a workable thing.
+And many of our teams created fantastic bits of equipment that were really workable in that sense.
+We also had a lot of positive feedback from our teams about how much they enjoyed the event, and how much it inspired them to keep working as a team as well and keep moving forward with these initiatives.
+The photograph on the right hand side shows another team, and they entered on an open stream of the competition, so they could build whatever they wanted.
+They chose to make a bioreactor because the bioreactor at their university had broken.
+So they made a bioreactor.
+They took it back to their university and we had an email from the faculty at the university a couple weeks ago to say the team have made their documentation available and now other students at the university are making more bioreactors and they're using them in their studies.
+So we can see that there is an opportunity for this kind of cycle to be sustainable, for it to work to create ways in which more and more equipment can be built through the documentation that people provide.
+In terms of some of the other lessons learned, we did experience quite a few challenges.
+I think we're running out of time so I'll just get through them very quickly.
+One was with timing.
+We could have put it at a better place in the academic year that would have better suited the students because they'd just finished their exams.
+They didn't have that much time to prepare beforehand as perhaps they would have liked.
+They also didn't have that much awareness of Open Hardware and the resources that were available to them, so in the future we would do more to show them about what was available.
+Organizing an event that's taking place in another part of the world is extremely difficult.
+And we learned that it was very, very valuable to have people with local knowledge.
+We had a variety of partners in Zimbabwe who were super helpful in getting the event organized.
+We also discovered that a place like Oxford is very slow and bureaucratic, and some of its procedures don't map on very well to things that go on in Southern African countries, places like Harare.
+And we had all kinds of issues, please ask me a question about the issues we had with the need for flexibility cause I would love to tell you.
+Similarly, we had some constraints put on us by our funding agency in terms of how and when we can spend our money as well, and that really kind of created challenges for us that we need to try to overcome.
+And, again, please ask me a question about that, because I would really love to tell you about those problems.
+Just very quickly to wrap up, since that pilot event we've been trying to move forward with the LabHack initiative.
+Some of our partners held a second LabHack in South Africa in November last year.
+We've also been presenting our students' design online and also at conferences and other engagements, events, to publicize what they've been doing.
+We're creating a network of contacts.
+We're putting people in contact with each other, maintaining contact with our teams as well to keep the LabHack idea going.
+And we're continuing to explore various opportunities to win funding to run more of these kind of events.
+So I just need to finish by showing some thanks to some of the partners who collaborated with us over in our event that we ran in Harare.
+And then the very last slide shows some information if you would like to contact us.
+Thank you very much indeed.
+(applause) - Questions for Helena and Jason? - [Audience member] Hello, great work.
+Great talk, thank you.
+I'm Lars from the IT University of Copenhagen.
+I'm just curious about the challenges you had, especially those with the funding agency.
+I sort of work within the same challenges I guess.
+- Jason has just reminded me that they're video recording, um, so...
+(laughter) Basically, we were funded ultimately by the EPSRC which is a UK research funding council.
+And as is quite standard in this country, I don't know if it is in other countries, you get given a pot of money and you have to spend it by a certain date.
+You can't extend beyond that date.
+So the original date we were given to spend our pot of money was March last year.
+So originally we planned to run our event in early March last year.
+And we started planning for it in November the year before.
+And I don't know if you remember what happened in Zimbabwe around October, November the year before was that President Mugabe got ousted from power in a coup that wasn't a coup.
+And it's very, very difficult to plan an event by making room bookings and buying flights and so on in a country that's going through that kind of change.
+And we weren't sure if we'd be able to go ahead and hold that event there.
+So what we did was thought, well, you know, maybe we can say this is quite an exceptional circumstance and we can ask for an extension to this very strict funding deadline.
+And we asked the university on our behalf to talk to the funding agency about it.
+And the funding agency said there are no exceptions for it.
+So even, you know, an ousting of, a change of power isn't enough.
+And I'm sure the EPSRC have very, very good reasons for not giving us that exception but it created a huge obstacle for us because you know our university won't let us buy tickets to countries where that kind of political situation is going on.
+So it created difficulties in planning, and in the end we were actually able to get a second pot of money and then we were able to move things around and that's why we held the event later, in June, because we just couldn't plan for things in a country that was in flux.
+And that was one of the things that I was thinking about when I say that sometimes the systems that we have here just don't map onto the ways that things are organized and the way things unfold in countries such as Zimbabwe.
+Was that okay? - Well that's our time, thank you to, let's thank our speakers.

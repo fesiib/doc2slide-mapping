@@ -1,0 +1,123 @@
+- A very good morning to everyone present here.
+I am Srinjita Bhaduri and I'm presenting this work on behalf of my co-authors.
+Tammy Sumner, who's present here in the audience, my advisor and Katie Vanhorn.
+So our pap is titled Designing an Informal Learning Curriculum to Develop 3D Modeling Knowledge and Improve Spatial Thinking Skills.
+Most of us know that maker spaces have become extremely popular in the recent years and it helps promote learning and interest in different fields.
+However, we do not know much about how to evaluate this learning and there's only a few published research or studies that discusses way to kind of double up the curriculum involving different maker technologies.
+Keeping this in mind, I would like to introduce the problem that we are trying to address in this case study.
+We are looking at how to design curriculum to provide youth with in-depth experiences of 3D modeling and printing.
+Our approach for designing this curriculum draws from both formal and informal education and one specific approach that we focused on in this case study is called storylining and I'll elaborate that in my future slides.
+So, now I would like to talk about the research questions that this case study kind of elaborates on.
+So, first question was to what degree and in what ways can 3D modeling and printing be made approachable to youth with different skillsets.
+As most of us know, that youth coming to these maker activities is they have varied skill sets.
+Some are good at, for example, 3D printing versus some might be good at laser cutting and whatnot.
+So we wanted to understand what are ways to introduce 3D modeling to them in a way that has enough scaffolding to be able to learn the necessary skills.
+Then, our second question looked at what technologies can be used to support youth understanding of the different strengths and weaknesses of the 3D models that they create.
+So, research shows that often novices face a lot of challenges with these 3D modeling softwares and it is important for them to understand the models before being able to print them.
+So, that's avoiding print failures and reducing frustrations from learning the complex 3D softwares.
+Finally, our last research question looks at how can learning 3D modeling skills help enhance youth spatial understanding.
+Prior research also shows that learning 3D modeling can help understand the 3D environment better so that is why we wanted to explore this idea as well.
+Now I would like to elaborate on the case study on the creative technologies academy.
+So this was a three week long summer camp in summer of 2018 and it was around 3D printing involving drones or unmanned aerial vehicles.
+We had 12 high school students of which five of them were female.
+Before diving deep into how we designed the curriculum, I would like to kind of discuss what are some of the pros and cons of 3D modeling, tools that's out there.
+As most of us know, there are some issues with existing 3D modeling tools.
+For example, like rotation and perspective changing and novices often tend to have issues when working with these 3D modeling software.
+For example, in the picture there, this was from a summer camp I taught a while ago, the student, when he tried creating a house, the top, the front and the back view looked okay and they were going to print it.
+I said can you show me the model? And they showed it and I was like why don't you rotate and show it to me.
+When they did that, they were like, "Oh no this wouldn't even print." So that's kind of one of the challenges that novices often face.
+The other challenge is dealing with difficult terminologies and the user interface.
+So, these are kind of some of the challenges that 3D modeling softwares have these days.
+But, there are also advantages to 3D modeling softwares and one of the advantage is 3D modeling softwares help enhance spatial thinking skills.
+We wanted to kind of understand all of these pros and cons of 3D modeling softwares and introduce novices to 3D modeling via different approaches.
+So now I would like to elaborate on the 3D modeling and printing that we focused on in the curriculum.
+When we were trying to develop the curriculum we couldn't anticipate the possible skill sets that the students would bring in to the program.
+So what we did was, we had four different ways to introduce them to 3D modeling.
+First was have them try multiple types of 3D softwares and allow them to choose the appropriate ones that match their skill set.
+For example, they use tools like Tinkercad or Sketch Up and others.
+Second, they explored other techniques to creating 3D models and not just using 3D CAD softwares.
+They use scanning, they scan 3D objects or they converted 2D images to 3D models.
+Next, we wanted to provide support to novice 3D modelers in debugging their models before printing them, so we created an augmented app which we called 3DARVisualizer.
+This allowed youth to kind of visualize and rotate 3D models before printing them.
+This allowed them to detect gaps or and alignment issues that would eventually lead to print failures.
+And finally, we allowed youth to engage in design by modification.
+So downloading pre-existing 3D models from online depositories like Thingiverse and modifying them or personalizing them.
+So this is what we did to introduce different approaches to 3D modeling.
+Now, I would like to move on to another approach that we used to design our curriculum and this comes from formal education.
+It is something called storylining.
+A storyline is generally defined as a way to represent a sequence of lessons where each lesson is kind of motivated by questions about a design challenge that the youth are trying to solve.
+During each lesson, the youth kind of engages in different signs and engineering practices.
+For example, they ask questions and define problems, plan and carryout investigations, test and iterate on their solutions.
+And when they're engaging in these practices, they come up with or generate different questions and one questions kind of motivates their understanding for the next activity in the learning sequence.
+The idea behind this is to help create and coherent curriculum and allow students to explore the learning environment they are in.
+So keeping this in mind, we came up with a central idea for our creative technologies academy curriculum.
+The idea was, how to mimic a town that has been damaged and isolated due to a natural disaster and use tools to survey and provide relief to the town.
+Over the three weeks, students were thinking of different questions to create or mimic a disaster town.
+Now I would like to elaborate on the driving questions for each of the three weeks which help contributing to the bigger picture, the bigger storyline question.
+In week one, as you can see here in week one, the youth were thinking of ways to design a UAV obstacle course that mimics a natural disaster.
+For this first, they learned how to fly drones and explore different 3D modeling and printing techniques.
+This is where they were understanding what all needs to be learned and explored to kind of create an obstacle course that mimics a disaster town.
+In week two, after they learned some of the basic concepts of UAVs and 3D modeling and printing, they started exploring the different criteria and constraints for designing an obstacle course.
+For example, they had to kind of explore what's the maximum weight drones can carry? What maximum 3D printed object weight can the UAVs carry as supplies or as payloads.
+And youth were designing and testing the solutions creating and testing their ideas using augmented geology app.
+Finally in the last week, with all these prior experiences that they gathered, they kind of worked on figuring out what works and what does not work for the UAV obstacle course.
+And they tested and iterated on their designs and at the end, each of them got to fly other's obstacle courses.
+So this is what our three week long curriculum looked like and we collected different forms of data.
+And they were categorized in two main categories.
+First is 3D modeling experience.
+So we collected different project artifacts, observations and surveys.
+And also, we collected spatial thinking skills.
+so we collected their spatial understanding at the beginning and at the end of the three weeks.
+Here are some instruments that we used to understand their spatial thinking skills.
+Our findings are categorized into three main areas.
+First, making 3D modeling and printing approachable.
+So we observed that by introducing youth to different 3D modeling techniques was definitely successful and youth worked on creating different personalized 3D models.
+For example, they added LEDs to their designs, they added moveable parts to their designs and other things.
+So this was also supported by the responses from the surveys we collected.
+For example, one youth mentioned, "the best thing was learning so many new techniques to 3D printing." They meant 3D modeling not 3D printing.
+We also saw that they created really nice partially printed obstacle courses.
+They made attachments for their drones like a sky hook, that's what they call it.
+This was attached to the drone to carry payload.
+So, overall, it helped spark their interest in learning and exploring these different tools.
+Next is, our next finding is around understand of the strengths and weaknesses of 3D models.
+Previous work suggests that failed 3D prints are often discouraging to students so we developed and augmented geology app that uses markers to kind of test 3D models so I'll play the video.
+(inaudible) - [First Female Student] Oh my gosh, there's so many gaps but I don't want to fix it.
+- [Second Female Student] You can see the gaps? - [First Female Student] Yeah, like right in there - [Second Female Student] Yeah, right in there.
+- So they were able to detect the gaps.
+This was a novice student who was testing her 3D model and she was able to understand that the shapes were not aligned properly.
+So testing the models before printing them resulted in successful prints and youth were able to test for gaps, alignment issues, and overall printability of the model.
+Even from the surveys, they mentioned that the app was useful.
+For example, one youth mentioned, "I was able to see many open spaces in my chess pieces in particular." Our last finding is around enhancement in spatial thinking skills.
+Even though it was a short period of three weeks but still we found that out of the 12 youth, five of them, for them there was an enhancement in their spatial thinking skills.
+They were creating spatially complex 3D models using different CAD programming languages.
+And they were also making complex sketches and other things.
+So, with this I would like to kind of focus on the two main ideas or the takeaways from this case study.
+First is, even though 3D printing is fun and a relatively new and innovative technology but it alone is not always enough to keep the youth engaged so there should be a minimum level of scaffolding in the lesson plans and tasks.
+So curriculum coherence is a key factor in keeping youth engaged.
+Next is when selecting 3D modeling softwares, educators and instructors should keep in mind about the personal experiences, expertise and abilities of the youth who come to the maker spaces.
+This helps reduce the level of frustration that a novices have often to deal with.
+So introducing different approaches to 3D modeling can definitely promote creativity in youth.
+With this I would like to talk about some of the future work we are thinking about.
+First is refining our storyline for future 3D printing workshops.
+Improving some of our instruments around spatial thinking and 3D modeling experience.
+And finally modifying the 3DARVisualizer app to not just help students detect the printability but also check for size and shape and other things.
+With that I would like to conclude my presentation.
+Thank you so much for being here and I'm happy to take questions.
+(applause) - [Moderator] Are there any questions, yes? - [Male Audience Member] Hi, thanks for the talk, I was just wondering, you said that five out of 12 students improved spatial skills, can you perhaps elaborate what was different? Maybe some insights about those who did and those who didn't, what was, some more about that? - Sure, so the five youth out of the 12 of them, the five particularly for whom it improved, they had little bit experience in 3D modeling before and for them, after going through this curriculum, it kind of enhanced and it got better.
+For the ones that did not have, were novices completely, they were just starting to kind of, so for them we did not see a significant change in pre and post.
+It was like, didn't get better, but they didn't get worse.
+So it was kind of positive, I would say.
+So, yeah.
+Does that answer your question? (inaudible) Yeah, exactly, yeah.
+- [Male Audience Member] Thank you.
+(cough) - [Moderator] Any other questions? - [Second Male Audience Member] Can I ask you, how do you feel about this approach from a perspective help students compared to the other technology things that we could teach them like programing.
+For example, coding, simple coding, or other technologies.
+- So, I mean can you.
+- [Second Male Audience Member] Yeah, like how do you compare like 3D modeling and the stuff that you did do compared, so we have limited time right so they can spend it learning, having a little time spent to learn some same aspects.
+Why should we focus on 3D modeling compared to other more basic stuff.
+It looks to me like programmable coding.
+- Yeah, so I mean I focused, we focused on 3D modeling because it's something like an out of school thing that they end up doing because always within the school they are learning to program and other things so we wanted to focus on something out of school time.
+And this allows for them to create their own things, take responsibility of their own designs and also come up with some tangible outcomes.
+So that is why we kind of focused on 3D modeling and I don't know if that answers your question.
+Thank you.
+- [Second Male Audience Member] Thank you very much.

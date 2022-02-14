@@ -1,0 +1,151 @@
+- Hello, thank you for interaction.
+My name is Shunichi Kasahara from Sony Computer Science Laboratory in Tokyo, Japan, and also together with Jun Nishida and Pedro Lopes, from the Human Computer Integration Lab at the University of Chicago.
+So we are very happy to have you in our talk, where I'm going to present new our paper, the Preemptive Action.
+So in this paper, we are looking at speeding up human reaction time.
+So this is -- (pen clatters to the floor) we call the pen drop test.
+So other person will be using the pen, and then you try to catch the pen.
+However, this is very hard to grab the pen, because the human visual reaction time, including the visual perception in combination with motor planning is not enough for us to get to this pen.
+So over the last years, there have been several solutions such as exoskeleton or electromuscle simulation to overcome this limitation.
+So here is one observed system using electromuscle stimulation.
+It can actuate your hand directly.
+Then you grab the pen.
+But however, we can imagine that is applying EMS, and have a very fast reaction time.
+But almost no sense of agency.
+It means we cannot feel this is my action.
+So here is the project, actually to be faster but no sense of agency.
+So here the question of today's talk is about, is this product even possible? Sorry, our research question is, can we accelerate human reaction time without fully compromising the user's sense of agency? So first, let's look at the sense of agency.
+The sense of agency is the feeling of having the control over the action and consequences.
+So it's fundamental for the way we interact with the world, and also it's linked with our self-awareness and consciousness.
+And from cognitive neuroscience view, disruption of the sense of agency is linked to neurological disorders, sorry about that.
+Sorry, I didn't.
+Disorders, and also it is also core value in our community.
+Like Schneiderman's rule seven says, a well-designed system has a user at the center of control.
+So usually, user interface is designed to have a proper sense of agency.
+When pointing that are bringing you here, using the keyboard or mouse or touchscreen or whatever, you have intention, you make some action, and you observe some reaction and consequences.
+But however, we will get some different situation with human actuation technology, such as exoskeleton, electromuscle stimulation, or even more complex exoskeleton.
+So they can actuate your body directly, and even involuntarily, and also faster than human.
+So if system actuate you in the way that you don't think, it feels very strange and disembodied.
+And it ends up like no sense of agency.
+But here, we run down into the specific situation where system can predict human emotion and intention, and then human and the system can have the same intention and action.
+Then we started wondering, do we have a sense of agency now? But probably not.
+Because it turns out that these systems also react very fast, very fast.
+It means system can actuate you much faster than you can do.
+So our approach is finding a certain time window by the changing actuation time.
+So let me show you some example with the pen drop test.
+If I actuate you too early, you will not feel like you did it.
+If I actuate you too late, you're gonna miss the pen.
+Then we started to think about what happened in the middle, is there any time window where you can get faster, still having a sense of agency? We expect the sense of agency will be kind of broad between you and the machine, and then ends up having a sense, some level of agency.
+So we created experiment system.
+So, here is how it looks like.
+So the user is looking at a screen, and the target field, the user taps the screen as fast as possible.
+Then they report the agency, and here finger, their finger was actuated by EMS, with various timing.
+Then let me explain with our experiment design.
+The first target show after zero millisecond, and some point, you tap the screen.
+Now usually, the reaction time would be around 300 milliseconds in system, but now if we apply the EMS little raises when target appears, then we shrink down the time, and your reaction time get faster.
+And then there's a temporal offset between visual stimuli, and the moment we actuate EMS.
+And we're gonna call this is EMS offset time.
+Alright, then we test it with various EMS offset time.
+Every single test, you will tap the different EMS offset, and then we ask them to rate how they felt in control, one to seven.
+One is they kind of, I don't feel in control, and seven is I felt I did it, okay? So here is the result.
+So this is the EMS offset axis, the S sense of agency score.
+About as we expected.
+If we actuate incredibly early, there is no agency.
+It's just like too fast.
+Even the zero millisecond, it means the moment of the visual stimuli appears, but then we don't have any, we have no agency.
+And here, the larger the EMS offset time means that your movement, also EMS actuation, get undistinguishable.
+So, interesting point here is eight of 12 participants mentioned that I did not realize that I had EMS.
+And then they rated the maximum agency score, seven, right? Okay, then we want to look at the middles.
+But we need to care about the individual reaction times.
+So that's the reason I show in the body around here.
+Some people are faster, some people are slow, so we needed to normalize it.
+So we needed their own reaction time, without any EMS, and before actual experiment.
+Then, now we know the number.
+What is your reaction time, original reaction time? And then, we can back up and calculate how much we can accelerate your reaction time preemptory.
+And then here, we call it the preemptive gain.
+So here, I'm gonna start talking in the preemptive gain, which just means how much we can accelerate your reaction time, alright? So here now we have a chart.
+I'm normalizing the into preemptive gain per participant process, the sense of agency.
+Which means for instance, the plus 100 millisecond means that 100 millisecond faster reaction time, right? So then we start to create a model here.
+Here we can see each participant modeled individually, from the logistic regression, which is what we use for the model of human sensation.
+And then here as you can see, of all the data, the preemptive gain for the 50 agency is located around 100 millisecond faster than usual reaction time.
+And then to generalize this model, we can aggregate every event data into a single model, to get one curve which allows the designer choose how to optimize for agency and reaction time for the different situations.
+So for instance, if you wanted to, equally optimize both agency and reaction time, then you should pick 80 preemptive gain, where we can expect 50% agency.
+But still there is still remaining question that you may think of.
+For instance, are we humans responsible for speeding up, or what happens if we don't have an intention to move? And is EMS tingling sensation also causing the loss of agency? So to investigate those questions, we did a second experiment, that is pretty much the same process on our first experiment except we added more control conditions.
+One is so we have a kind of preemptive action, the EMS, with 80 millisecond preemptive gain.
+And the second is that we have the same EMS time, but we ask the participant for each stage just relax.
+And that is kind of trying to remove their intentional moving.
+And the third condition, it's just like EMS or preemptive EMS condition, but we use another placed electrode with calibrated EMS, only provide some tingling sensation, but no induction of the motion.
+And as a last condition, we also added the very fast preemptive action EMS, with 240 millisecond.
+Its features dramatically accelerate you.
+Then here the participants were not aware of which condition is going on, except the relaxed condition, okay? So, here let me go into some of the individual, some of the findings briefly.
+The first one is that the human intention was not responsible for speeding up.
+So if you look at the preemptive EMS, which is both user and EMS move the finger, versus the relaxed condition, we have pretty much almost the same reaction time as we can see.
+And then it means that only EMS is causing acceleration, and it's not human's contribution.
+And then second one is if you look at the sense of agency score, there are much differences between the preemptive action, which was the intention versus relaxed EMS, which is without intention.
+It means that without our own intention, we cannot feel agency.
+So it's kind of obvious, but interesting point here is that, we got first the reaction time as same as EMS only condition, but we get much better agency if we have a congruent intention to move.
+So this is the core of our contribution.
+And the third is for people who know how the EMS feels like, so you are probably wondering how much can EMS tingling sensation affect the lose of the agency? But if you look at this first, you cannot completely ignore the effect of tingling, but the agency score between the user plus EMS tinglings, the agency score stays almost maximized.
+And then we compare with the preemptive EMS, like 80 millisecond and 240 millisecond and just tingling, we can see that time and movement seem to be a main reason for losing the agency, right? So right, so how we can use those findings? Let me talk the implication of that.
+First of all, as we see in the last experiment, human intention and machine intention has to be aligned to make this happen.
+And secondly, we originally expected that agency was gone when EMS is solely responsible speeding up.
+However, we found that some flexibility and time window before we completely lose agency where we can accelerate the human reaction time, also lets them feel I did it, right? So let me show some more application of the system.
+Of course, I have the pen-drop test, right? So, with our time window, we can feel like I did it.
+Also, the second application I want to highlight there is the speed photography.
+So as you can see here, this is when the ball is launched from the ball launcher, very high speed, and it's almost impossible usually.
+But if we integrate some sensor and also actuate our finger, we can apply our idea of preemptive action.
+Of course, if you apply too much fast, sorry, too much fast reaction time, we lose agency, but if we apply this time window design, we feel like we can shoot and also, I did shoot this photo.
+And also, lastly, there is more simplification.
+That is hitting a moving target, which is usually very difficult.
+Here, as you can see, the ball is launched, and if we can compute up the right direction to shoot, we can find our preemptive action.
+And then also, we can feel it, I did it.
+Okay, so let's play the slow motion.
+(ball clatters in slow motion) - That's the same idea, I guess.
+Okay, so I have to start conclusions.
+So let me give you some real summary.
+So we know how human-machine intention have to be aligned for preemptive action, and also, we now find some time window to speeding up human reaction time.
+Still, no compromising the three, compromising the sense of agency.
+Right, so now there are still a couple of open questions that we are very excited about.
+For instance, one of them is about alternate method to measure the sense of agency.
+This time, we directly ask the first participant, but there are some other techniques such as intentional bindings, which is using the passive timing as the measure of agency.
+And second, in this paper, we simply simplify the task as much as possible into the constrained task to investigate the specific parameter.
+But there are still many other open questions about what happen in complex situation? Cognitive loaded task, more complex motion, and incongruent intention between human and machines, right? And last open question is like, to understand how other factor, such as context, level of attention, or priming of devices will affect the preemptive action.
+Okay, so we are excited about this research in that.
+Alright, so thank you for listening, and I'm now happy to take a question.
+And also, one thing I want to let you know about is we are having a demo of the system at the SIGGRAPH eTech this year in LA, so if you are there, please come visit us, thank you so much.
+- [Announcer] Thank you for your presentation.
+(audience applauds) So we have two minutes for questions.
+- [Paul] Hi, Henning Paul from the University of Copenhagen.
+I have a comment and a question for this, so a comment first.
+I think there's something really misleading in the way you describe this.
+So you make a big point that this is improving human reaction times, but I don't think that's actually the case.
+Because certainly your system reacts, but human reaction time doesn't change at all, because the human isn't really doing anything.
+So I think you talk a lot about human reaction time and how it's better, but I see nothing to make me believe that that is the case.
+And I think there's another thing there that I find a bit odd, and that maybe you can explain a little bit, in that you basically make the assumption that you can perfectly predict intention.
+How is that the case? - So what are you saying? - [Paul] What happens if you can't predict intention? What's the limitation in that respect? - Sorry, I missed some second question, can you say again, your second question? - [Paul] Your system basically assumes that you can perfectly predict intention, and also the moment somebody intends to do something.
+Is that realistic, is that something, like, what kind of limitation does that bring for your system? - Okay, thank you, so first question.
+So in terms of reaction time.
+It's obvious, as you say.
+This is not our own reaction time speeding up.
+- [Paul] You say human reaction time on this slide.
+You say reaction time, you say human reaction time, and that's certainly not the same as just reaction time.
+- Yeah, that's true, that's not.
+It means in our paper, it means we can integrate the human reaction time, it means computer assisted reaction time.
+The second question is about like, sorry, I forgot the questions.
+Sorry, I forgot the second question, sorry. (laughs) - [Paul] It was about intention.
+Like, what's the limitation regarding intention? - Thank you, sorry.
+Of course the intention, the human, I think some prediction technology for the human action is the key.
+Now, we have some technology to predict some human emotion, human intention, based on some behavior of the senses.
+That is, if we have a technology science for predicting prediction of human intention, it's gonna be possible.
+- [Man] Thank you very much for your presentation.
+I want to ask you about the learning effect, after getting used to the slower timing of the signal, and then gradually shorten the speed.
+And finally, the person may acquire the sense of agency even in the really faster speed.
+Is it possible? - So you mean, can some possibility to kind of speeding, speeding up the effect of the learning using these technologies? I think that's a great question.
+We are not still have answered, but we believe that having agency for the action is some sort of the key to driving some learning effect as we said.
+Then with this system, we can computationally, computationally force to experience the successful experience.
+And I believe that it's gonna be accelerated, the learning of the process of the human.
+- [Man] Thank you.
+- Thank you very much, we need to move to the second talk.
+Do you have any questions while your second speaker is setting up, you can ask them.
+- [Hadaas] So just one last question.
+I'm Hadass from the Media Innovation Lab in Israel, and I wanted to say that I'm not sure that you're actually not improving reaction times, you just did not test it, and I was wondering, maybe you have training effects, if people will actually use the system long enough, and I think it will be super interesting to see if having a sense of agency influences training effects, if you will find some.

@@ -1,0 +1,134 @@
+- Thank you, and good morning.
+I'm really happy to see you all here after yesterday evening's parting.
+(audience chuckles) So you are great people (chuckles) Yes, I'm going to talk about cross-disciplinary research intertwined with design.
+And I'm going to talk about challenges in particular.
+And I've utilized this Nexus analysis as a theoretical framework, as well as research strategy.
+So I'm going to talk about that as well.
+So why should we be interested in our research practices intertwined with design? Well, generally design is at the heart of our research and design practices.
+Like we have this ability of elevating people's lives, augmenting people's lives, as well as making them miserable.
+And relating to research intermingled with design practices there has been reflective discussion around that during the past ten years.
+But still there is many ongoing discussions open issues relating to that.
+So it's not entirely clear how to do that, and what it contains.
+So this type of research practice is in HEI heavily inspired by design research tradition and methods and processes from design practice are seen as legitimate methods of inquiry and where the inquiry is about building some sort of artifact.
+But we should be generating knowledge if not even theory, along the way.
+But this type of research is clearly distinct from more traditional research approaches.
+We're dealing with generative discipline.
+We are changing the world, along of studying it.
+So there are many open issues, different terminology, different kinds of labels used.
+So we are arguing that there is still space to reflect on our design research.
+Inspired research practices, as well as research practices intermingled with design, more generally.
+And in this study we have interest in cross-disciplinary work.
+And cross-disciplinary is here used as umbrella term so it covers multi/inter transdisciplinary work multi-disciplinary work refers to different disciplines working in additive manner in parallel or sequentially.
+While in interdisciplinary work you are addressing shared problems and trying to integrate knowledge.
+And transdisciplinary work is the most challenging one, and in this study we haven't done that.
+Obviously, that should be transforming disciplinary boundaries even.
+So I'm saying that there are challenges even in multi and interdisciplinary work.
+And definitely relating to transdisciplinary ones one could identify those, too.
+Some studies have already been carried out.
+Also in HEI field, on cross-disciplinary work and challenges have been already identified.
+Even though not much research has been conducted.
+In design it has been argued that design goals, languages, assumptions, practices, may be divergent among designers.
+And for researchers different kinds of systems of accountability, legitimation, evaluation.
+Reward may be in use, making things challenging.
+And in both research and design very different kinds of anthological, epistemological, methodological, assumptions may be in use and this causes discussion, negotiation, and learning.
+So, so far there still is lack of empirical research examining in depth the complexities.
+So we say that cross-disciplinary research and design it is a necessity for us, as well as an ideal that we should be striving for.
+But we haven't really been studying our own practice in depth.
+And usually if we talk about challenges in this type of work we are talking about challenges and conflicts among users or among communities involved, or other disciplines then design.
+So, we should be more openly addressing the challenges relating to our own practice.
+And this study points out this confusion relating to design authority.
+There are situations in research projects, design projects, in which there are many design disciplines involved.
+So HEI is definitely not the only design discipline and in such a case there might be very different assumptions, method repertoires, epistemologies, involved.
+And in this study, this type of situation was examined.
+And this is where this study contributes understanding.
+So Nexus Analytic lens is used in this study to understand research intertwined with designer's social action.
+Nexus Analysis was developed in linguistics.
+Scollon and Scollon are the figures who developed it.
+And it offers a theoretical lens, as well, as well as research strategy.
+And in linguistics it was argued that you shouldn't be focusing only on language or text, but the central unit of analysis should always be social action.
+So in Nexus Analysis you are studying social action of various kinds, but Nexus Analysis emphasized that you should always be looking at the role discourses play in any social action.
+So discourses in place, you should be inquiring, how discourses relate to the social action you are studying.
+What is the role played by discourses? Those can be produced in situ by participants but you should be also looking at the societal, much broader discourses.
+Interaction Order, coined by Goffman, emphasizes that you should be looking at the social aspects, participants involved, and how they shape the social action.
+And you are again, looking at the situational interactions, encounters, but you can be also looking at broader norms, schools, conventions, and how those are shaping.
+And not only look at the participants in situ, but also most distanced stake-holders that might be heavily influencing what is actually happening in the situation.
+And historical body concept, coined by philosopher Nishida, comes close to Bourdieu's concept of habitus and it emphasizes that in any social action you should be also looking at participant's histories, backgrounds, experiences, skills, this type of issues.
+It's also shaping the social action.
+So this lens was used to study a multinationalic and cross-disciplinary research project.
+And it was a very distributed endeavor, people from many countries, many different organizations, and there were HEI researchers, educational science researchers, and IT researchers involved.
+And the date includes heavy, huge amount of documentation generated in the project.
+And with Nexus Analysis concepts this date have us examined.
+Looking at what was happening.
+What was the role of discourses played in this action? And how participants background, histories, social encounters, interactions, were shaping what was happening.
+Here are some empirical findings from this study.
+So first of all, it was clear in this case that there were different design discourses produced and reproduced in this study.
+Educational science researchers were engaged in one, and HEI specialists were producing the other one.
+So educational science specialists, because this was a learning application which was developed.
+It was quite obvious that they are heavily involved in this work and it was them who outlined the requirements for the learning application.
+But it was maybe somewhat surprising that they assumed also design authority so that they will define how it behaves, how it looks like, and they assumed authority to do so.
+For HEI specialists assumed that the requirements really are set by educational science researchers.
+But later on they invited users to develop the idea further and endure usability, user experience related issues.
+They were heavily relying on this user sent that and participatory designed discourse.
+And there emerged a lot of conflicts and challenges in the design process.
+Educational science specialists were influenced by educational science theories starting from Vygotsky and they were outlining how the application should be.
+Whereas HEI specialists tried with users to question some assumptions.
+Both of the specialists assumed that users really need a lot of support, kindness, and encouragement in their learning processes, but HEI people also brought in that users can be more self-confident and then that they would like to have more autonomy authority to use the application the way they wanted.
+And a lot of negotiation emerged, and the negotiation and challenging of each other's work.
+Relating to this historical body and interaction order related issues.
+One can say that these educational science theories were heavily shaping the work that educational science specialists were carrying out.
+So there were these scholars brought up in the texts.
+Educational science scholars.
+But HEI people with their Nielsen and Norman type of guidelines came in and challenged some of the things and with their user data they were emphasizing things that should be changed.
+Technology played a clear role in the design process, as well.
+There was a early version of the application which was kind of giving us basis from which to continue the work.
+Others were questioning it as a bad starting point.
+Some of these researchers were heavily technology savvy people who were continuously following developments in the field and wanting to integrate all fancy stuff into the application.
+And personal preferences were shaping the decisions as well, and personal experiences.
+But also software engineering played a role, because in this case HEI specialists and IT people had clearly shared background in software engineering methods and documentation and they were kind of collaborating.
+And educational science people were kind of marginalized, because they really didn't know about these methods or documents, what you are expected to do when and how.
+So this background from their point of view was missing, and caused problems for their participation.
+So, what can be said about this analysis? Overall, this study wants to highlight that there can be very different antithetical and epistemological assumptions involved in our research and design practices.
+So here, educational science researchers relied on this heavily theory driven view of design.
+Like in information systems research that's kind of a very common way of conducting research intertwined with design.
+But in design research community that type of research intertwined with design is not discussed a lot.
+But you can encounter this type of designers in your projects easily.
+For HEI researchers, in this case, they were heavily inspired by participatory design tradition wanted to bring in users, give them- have them to have a say, the ability to influence what is generated in the project.
+But this design research view, very creative, focused view, was kind of missing in this case.
+But I claim that even in this audience there are very different kind of assumptions you are having about design.
+Some of you are basing your work on design research tradition, but I'm sure that other kinds of understandings of design are likely also among you.
+So Nexus Analysis is valuable framework for conducting research on the topic.
+So it makes visible how we as researchers and designers and our subjectivities, bodies, work practices, tools, they are all heavily shaped by discourses.
+We should be actually acknowledging and inquiring how different kinds of discourses societal ones, academic ones, are shaping us.
+But we should also be reflecting on our backgrounds and also any interactions between us, among us, and how that is shaping everything.
+So that should be seen as valuable when we are planning for our projects, as well as conducting them, as well as evaluating them afterwards.
+To really consider, what kind of baggage we bring in, how discourses are involved in the work, how people in situ, as well as more distant ones are influencing our work.
+What kind of repertoires, epistemologies, we have.
+And also, Nexus Analysis heavily emphasizes that these keep on changing, they are complex, continuously changing constellations.
+Which should be acknowledged.
+So, I call for more in depth and critical studies on our own research practice.
+In HEI there hasn't been too many.
+These type of studies showing, revealing, these type of complexities.
+In design research there is this discussion that we don't want to discipline design research, and that's fine, but we should acknowledge that our own background is heavily disciplining us, anyway.
+And we should understand and acknowledge that better.
+And finally, we should celebrate and reveal the conflict to all agonistic nature of our own research and design practices.
+So, I'm not saying that conflicts are somehow harmful or problematic, but we maybe hide this type of issues from our own practice.
+So it's users or user communities or some other disciplines who are having these conflicts but actually we also are active agents in the struggles with vested interests, agendas, lot of baggage and this type of discussion could be more in HEI.
+Thank you. (audience applauds) [Announcer] Thank you very much.
+We have time for a few questions.
+[Man] Thanks very much for that met note it was great seeing that study being done in Gilbert Cockton, southern university in north Umbria.
+And the slide where you said there was resistance to being disciplined in design research I wasn't really sure what you meant there because- maybe resistance to being mis-disciplined (laughs) and having somebody else's disciplining imposed, but I would argue that there are very, very strong disciplines in design research, and always have been.
+But it's about critical reflection, not only about sort of anal pre-planning and sticking to a methodology.
+That's the trouble if you want to be creative you can't plan (laughs) - Yeah, I would say that in some discussions like even defining very strictly what is design research giving very clear kind of rules or descriptions there is maybe some resistance towards that and making it somehow formalized.
+I think, especially comparing to design science research discussing information systems that is totally different approach.
+But I would say that- or I have been reading some literature written by design researchers who maybe have titled their articles something against disciplined design research.
+So this type of discourse is there, but yeah.
+[Man] Okay, thanks.
+[Announcer] Another question? No? I do have one actually.
+I think the design field kind of has the like the habit of having this kind of mental reflection on our processes, but how do we empower people from other fields, from these other disciplines, to actually also engage in a mental reflection process.
+- Uh yes, I actually left this short sentence away from this presentation.
+But really we should consider like maybe designing even, some sort of support or some sort of self reflection, articulation work, negotiation work, with other disciplines.
+So, especially in practical research projects we are engaged in, we could be kind of encouraging others, but of course that's a different question.
+How to in general invite other disciplines, doing that.
+But in actual projects we could be considering arousing this type of- and this study shows that it's definitely needed, as well.
+[Announcer] Thank you.
+Let's thank our speaker.

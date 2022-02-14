@@ -1,0 +1,111 @@
+- Thank you.
+Yeah, thanks and welcome to my talk on Magnetips.
+This work was done by myself from the University of Copenhagen, my colleagues Jarrod Knibbe, University of Monash and Paul Strohmeier, Sebastian Boring, Kasper Hornback, also from the University of Copenhagen.
+Okay, so recent work has looked at increasing the interaction space of mobile devices.
+And in particular, this looks at kind of tracking the finger in a space surrounding the device.
+So in addition, people have also tested various ways to have output, such as digitally off the screen, also to match the input location.
+However, creating haptic devices that work around devices, in the air and so on, is challenging in a mobile setting.
+And so that's largely due to their size, and so difficulty in producing haptics with these techniques, like with the air ball seas, and with the ultrasound having a large array.
+And haptic feedback can be important for several interactions, digitalized reading, and also through the air.
+So we developed a solution to this, which we call Magnetips.
+And this enables simultaneous input and output around devices using magnetism.
+And we're sure that this technique can support a number of interesting interactions.
+So how does it work? Well, first let's look at the input.
+So there are different ways to do magnetic tracking.
+So there's active magnetic tracking, as Finexus showed by Chen et al.
+And then there's also passive magnetic tracking using permanent magnets.
+And a neat trick you can do is that you can actually actuate the magnet, the passive magnet as shown here, using an external coil.
+And here's a clip of this in slow motion, so you can see kind of how it would vibrate as you actuate it by a nearby coil.
+Okay, so looking deeper into the hardware, we've got a sensor board which consists of four magnetometers, a gyroscope and an accelerometer.
+And the actuating component is simply just a coil with some circuitry to drive it, which I'll show later on.
+And we made a conscious decision not to include a core to generate the magnetic field, since this is easier then to embed into where all the devices, mobile phones and so on.
+And we actually made a coil kind of a similar size to the Apple Watch 3, so you can fit it around the perimeter of the device.
+And the sensors are actually made to fit within the footprint of this device as well.
+But we can imagine Magnetips being sort of integrated with a number of different mobile form factors as well.
+So how does the tracking work? Well it has four magnetometers with a one kilohertz sampling rate, and that's actually quite crucial, as I'll talk about more in a bit.
+And it's quite similar setup actually to the setup used by Chen et al in Finexus.
+So we have in fact used that algorithm as a baseline implementation, which uses kind of the field strength to kind of work out and triangulate the position.
+So here's a clip of the tracking in action.
+So in this clip, the device is actually placed beneath the phone.
+So this demonstrates that it works through kind of ordinary devices.
+And now this device, sorry, this works when the device is static.
+However, I'm now going to show you a clip of what happens when the user moves their wrist.
+So what happens when the device moves is that the magnetometer values change.
+So if you pay attention to this bit here, you'll see in a minute that the values will shift around.
+And this is a bit tricky when it comes to calculating the position of the magnets, since the sort of baseline values of the magnetometer's skewed.
+So to get rid of this effect, we first calculate the orientation of the device, as you'll see on the left-hand side of the screen.
+And we do this using the accelerometer and the gyroscope data.
+And then that can be used to infer what the baseline magnetometer value should be.
+So that lets us cancel out the elements of geomagnetism, which can see the device in cases where the device is actually moving.
+And as you see when we turn it on, the values and magnetometers are close to zero.
+Okay, so we did an evaluation to test the performance of this, with and without our geomagnetism cancellation algorithm.
+So we used an Optitrack to track both the magnet and the sensor base.
+And in this case, we just simply did tracking of the magnet when the sensor base is static.
+And in this case, as you might expect, as the interaction volume increases, as the input space increases, the sort of average area between ground truth and the estimated position of the magnet gets larger as well.
+And then we tested a case where the magnet is fixed above the device, so it doesn't move.
+So the magnet is static in a way, in the way that it's always static relative to the sensor base.
+And in this case we can use our geomagnetism cancellation algorithm and, as shown in this graph, the darker bar shows when we turn our algorithm on, it improves the average error.
+And in the last case, we have a more realistic scenario, where you have been moving the base around.
+You don't usually have your wrist still, you keep it still for the interaction, and the magnet is moving too.
+And in all these cases, our algorithm showed an improvement.
+So now I'll explain quickly how the feedback mechanism works.
+So the circuitry is somewhat simple.
+Only requires a coil, some power, we use a battery, and a motor driver, and some sort of controller to input the signals.
+So what does the signal actually look like? So here's an example of such a signal that we would put into the coil.
+And it's this flip in polarity that creates a displacement of the magnet.
+So this kind of change in current is actually what creates this change in magnetic field.
+And we do this for a number of times, we call this a pulse burst, okay? And then we have some time in between where we enable tracking of the other magnet.
+And through our sort of evaluations, we've found that the minimum sort of time that you need to enable simultaneous haptic feedback and tracking is four milliseconds with our implementation, but this is at least a minimum bounds for future technology.
+And then we can carry on doing the sort of haptic pulse, and then so on and so forth.
+But we found that the haptic feedback's quite weak, and that's probably due to the fact that we're not using an ion coil.
+So it's just the coil by itself.
+So we wanted to kind of optimize the parameters of our signal to give us a stronger haptic feedback.
+So what variables can we use to optimize the haptic strength? Well we have the signal duration, so how long is a pulse burst? And also we have the length of a single pulse within that burst.
+And we had four different variations of the signal duration, but we made everything fit in within sort of 16 milliseconds, including the tracking, so that we have a minimum of 62.5 hertz tracking rate.
+So this is actually 62.5 hertz tracking and also continuous haptic feedback that is possible there.
+And also of course at the end we added a number of different pulse lengths to vary it.
+And for this study, we just simply had the user kind of put their finger in a static position above the coil, and gave different haptic signals.
+And the users gave their perceived strength as a rating.
+And so I've been a bit lazy, but this is a graph from the paper.
+I couldn't find a better way to put it there.
+But the important thing is that actually we just found out that the best parameters for maximizing perceived strength of feedback is a 12 millisecond duration with a four millisecond pulse length, which aligns with what people have actually found with vibration stimuli in previous work.
+And then we used these values to find what the range of feedback is.
+So how far can we go from the coil to actually still feel it? And for this study we had a blindfolded user, and a modified 3D printer. (audience chuckles) And here's another graph from the paper.
+It just shows the perceived strength versus the distance from the center of the coil.
+So this dotted line shows that it roughly kind of fits the inverse cubic relationship.
+That is, for magnetism, the magnetic field strength roughly falls off with an inverse cubic relationship.
+But we noticed that towards the closer to the coil there's some nonlinear behavior.
+And at up to about 56.6 millimeters the signal can be clearly distinguished from those ones further out, and we consider this to be the kind of working range of our haptic feedback.
+So what can we do with this? Well of course we can provide haptic feedback and tracking in three dimensions, so you can imagine you have virtual elements around the device, and you can feel them.
+And there's a lot of different interactions that may or may not be useful from that.
+We can also support interaction through materials.
+Even our own bodies, in fact.
+So we have an application where we envision that people can actually touch the skin on the other side of their wrist, and this is kind of like a bit of a strange see through slash on-skin interaction.
+And neither the haptic feedback or tracking is occluded by magnetometer materials.
+And this is one benefit of using magnetism for both things.
+I mean you don't have to use magnetism for both things, but if you ever actually, it aligns quite well.
+And this principle of working through materials can also be used to support interactions behind the device.
+And of course, such as materials such as clothing or bags.
+And the feedback's quite helpful to facilitate high screen interaction, which is particularly useful in cases where your device might be hidden away in your bag or something like that.
+So let's talk about some of the limitations and future work that we can do here.
+So the perceived strength of feedback varies across the body, okay? We saw that it kind of drops off as your finger moves away.
+So you might not want that.
+So we could look at having an error normalizing the strength of feedback across the volume.
+And once we've done that we could possibly try to have a varying levels of feedback strength.
+The coil, the design of the coil, we didn't really investigate changes in that very much.
+I think it's quite a complicated topic.
+There's various shapes and sizes that this could take, but we can imagine, you can have grids of them as well if you want to increase the power efficiency, or if you want to have a kind of stronger feedback in some areas.
+And in this case where we're thinkin' about maybe puttin' it inside of phones that you would have multiple coils within that.
+And we also kind of tried, anecdotally, using two charged coils.
+And you can feel similar but kind of weaker, more diminished sense of feedback with that.
+But in the future we could possibly think about designing coils that would accommodate both charging and haptic feedback.
+Thank you for listening, I'll take any questions you have.
+(audience applause) - [Moderator] Will you have comments or any questions? So in these machines there's walk towards this mic, and.
+- [Audience Member] Performance, yeah, I have a few questions then.
+So you mentioned the implementations of the coil design itself, but I don't really remember the number of loops in coil design would sort of have different effect on this trend.
+So what are your intentions on that? - Yeah, definitely.
+You'll find any optimization in sort of transformers and things like that, so creates sort of a return view, and a stronger focus.
+- [Audience Member] Okay.
+And yeah, second question that I have on when you mentioned the error, what was exactly it has? Like what error was actually measured? - Which value, the tracking evaluation? - [Audience Member] Yeah, the tracking evaluation, with your duo magnetic accuracies, and seeing the accuracy sort of improve.
+How did you measure it? - Yeah, so that was simply accumulated average error between the ground truth, which is the Optitrack position of the magnet, versus what we have basically with-- - [Audience Member] Okay, oh so the Optitrack tracks them so they're working just like that.
+Okay, yeah, well, thanks again for an interesting talk.

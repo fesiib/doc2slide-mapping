@@ -1,0 +1,115 @@
+- Let me start presentation.
+Hello, I am Naoki Kimura from the University of Tokyo.
+I am presenting on our research titled, SottoVoce: An Ultrasound Imaging-Based Silent Speech Interaction Using Deep Neural Networks.
+So we will begin with a demonstration video, which provides an overview of the study.
+(mouths words) - (robotic voice) Alexa, play music.
+- [Alexa] Here is a station you recently listened to, orchestral music from Amazon Music.
+- Okay, as seen in the video, when I move mouth, without actually emitting a voice, images from the oral cavity are obtained through ultrasound.
+A neural network then converts this image to speech.
+The generated voice operated Alexa.
+In this demonstration, the generated sound was amplified through a speaker.
+However, if you input the voice into Alexa...
+- (robotic voice) Alexa, play music.
+- ...you can operate Alexa without any voice.
+- [Alexa] Here is a station you recently listened to, orchestral music from Amazon Music.
+- So our research is for Science Speech Interaction, which operates a voice user interface, without a voice.
+So we start with the significance of Science Speech Interaction.
+We used advancement in speech processing technology.
+We can actually ask question to device and receive the answer from them.
+But nobody here right now would ask, "What is silent speech?" Moreover, it is also difficult to use voice user interface in public place, using information such as house addresses, or passwords because they may lead to a leak of privacy.
+So, and furthermore, and most importantly, those who can not speak, due to the physical reasons, such as those who do not have vocal cords, can not use voice interface.
+Thus the more wide spread the voice interface, the more of a struggle we appear.
+In fact, both these problems are codes about essential condition of voice interface: requiring speech.
+Sorry, so therefore we need to develop our voice interaction with other voice.
+Okay, I explain our basic idea for your eyes entire speech.
+The vocalizes and processes both broadly divided into two step.
+The vocal cords create a burst of sound and tone.
+In this case, pronunciation is created by the shape and movements of oral cavities.
+Finally, the sound is discharged outside as speech.
+(vocal sounds) Therefore, all pronunciations should be estimated from the shape and movements of a oral cavity.
+This video was captured by MRI, but MRI is not a variable for variable usage.
+So we used ultrasound.
+When ultrasound probe is attached in the direction from the chin to the mouth, we can capture these images.
+Alexa, play music. Alexa, play music.
+So, we want to estimate speech audio from the image and neural network.
+But to use network, we have to correct the dataset for training.
+So using microphone for recording voices and by speaking while holding ultrasound probe, we can correct the dataset with ultrasound image and voice.
+For example, we could obtain the sound and shape of the mouth, produced when "Alexa play music" was pronounced.
+- [Computerized Voice] Alexa, play music.
+- We then trained the Neural Network to estimate speech, using the ultrasound images only.
+After the training, we then produced the same mouth shape as that set in the data used in training, but with no sound.
+(whispering) Neural Network estimates sounds to be uttered from images.
+As a result, you can make speech without making sound outside.
+This is our approach.
+Various approaches are used to recognize speech, so far.
+For example, AlterEgo uses electromyography to estimate internal voice.
+However, this can be termed man detection instead of speech.
+And there's a word in there (mumbles).
+(coughs) Sorry.
+The Silent Voice study I particularly like uses ingressive speech and allows special recognition with a silent voice.
+However, it requires the user to hold a device in front of their mouth and it also requires special skills.
+With (mumbles), it tracks the user's lips with a front camera with a mobile device and guesses the command through a conversion willing to work. Other methods using the camera, are RG Camera, are very simple but you have to somehow locate the camera at the distance from the front of face so (mumbles) relies on the users hand to creating this distance. As more sound probes are mainly used in medical applications so they are often sold as a device like this. However, in fact they can be collapsed like this. That's the even existing products can be scale down to 6 inch meter visor centimeters. If it designed specifically, it could be even smaller.
+Okay. And the design with the sound probe is very flexible so with the sound it's compact and flexible.
+So, ultimately wearable devices like this can be designed using these features. It has a miniature visor with the sound probe and open-air earphone. This is just a prototype but completely feasible. This will allow you to always ask your smart assistance without being noticed by others.
+Although it is not the result of this study but in our ongoing one, the network can be driven by Google mobile TPU.
+Research on lip reading and synthesizing the audio from images uh images on face or lip lips using deep neural uh deep learning are similar to ours. There are a few but some combine..uh sorry...there are few but some combine with the sound emission playing. However, that combination of sound emission conversion neuro-network is the first as far as we know. And in addition to the variate, in addition to the variation on data set with the voice, it is unique that actual silent speech was performed.
+This is our system that makes audio using the images.
+The neural networks take a time series with the sonic images and outputs a sound of the presentation back to us.
+In our case, Mel-Scale spectrum. And finally then output vectors are converted to the actual sound waves by (mumbles). This conversion process involves two neural network: Net 2, and net net uh sorry, Net 1 and Net 2 call we call.
+The goal of Net 1 is image to audio feature translation.
+It consists of four convolutional net-layers and two free collected layers. Each to the convolutional networks was followed by a dropout and batch normalization to prevent overheating. Then each layers, uh each layer was activated using LeakyReLU. Finally, it generates 64 dimensional feature vector which restores to uh 20 milliseconds of audio.
+Net 1 was trained using a data set up approximately fifty hundred (inaudible) which were collected by (inaudible). The speech of the data fit was encoded into the spectrum and used as target data.
+Our system is user dependent and data sets should be corrected and networks trained for each users.
+We estimated each acquired piece as the window shift each generates an output of 64 dimensional feature vector.
+These were arranged to create a sequence of audio feature vectors. We then use the Griffin-Lim method to link up the speech. This graph shows the learning process when when it won. This is a (inaudible).
+- [Participant] Alexa, what's the weather like? - Sorry, too loud. And, uh as the learning pro...progresses the (mumbles) approaches the graphs to lips.
+(ultrasound beeps) (robotic sounds) - This is the output at work. And Net 2 improves the generated speech on per-command basis. The input is audio-feature vector output from Net 1 and the training data is audio-feature vectors of (inaudible).
+This is the difference between the Net 1 outputs and the Net 2 output.
+(output from Net 1) (output from Net 2) (output from GT) - Although the difference is, sorry. Although the difference is small to the human ear but probability of Alexa reacting increases.
+So this table shows how often Alexa reacted to the uh generated sounds.
+That this data used here were obtained during the audible speech so it's not silent speech. As we heard in the previous slide, the generated speech is understandable to humans; however, the generated speech is different from human's low voice so Alexa recognition rate is not very high. The recognition rate will be improved by talking to Alexa using generated speech.
+Since the speech generation test data was successful, the actual end to end silent speech was examined.
+In this case, a mouthed speech command without actually emitting the voice. At first, I could not speak well at all.
+(static) The sound is corrupted.
+(static) And by repeating the actions every time I recognized certain tips and began to generate it uh create create voice.
+(static with robotic voice) It said, "Alexa, play jazz." And finally, we confirmed that my device could be operated using almost silent speech.
+(static) - [Participant] Alexa, play music.
+- [Alexa] Here is a station you recently listened to orche...
+(static) - [Participant] Alexa, what time is it? - [Alexa] Its 7:52pm.
+- Okay, I will introduce some of these tips here.
+Th first is brea.. a exhale a little. When speaking completely without exhaling air what we usually imagine as a lip sync. It is difficult to lip produce the same mouth movements as that training data that allows emitting the voice. So we had to exhale little air to get close.
+(whispering and static) Instead of this uh voice is uh this is uh speech with exhaling little air.
+(whispering) Voice is emphasized more than earlier by processing for this presentation. The noise released by exhaling in this be uh supposed to...ah suppress, sorry suppress to 40 digital or less.
+Furthermore, it is necessary to exaggerate tongue movement when uttering consonants. So this is a basic...
+(whispering and static) Instead uh for example when saying, "Alexa, what's the weather like," we have to emphasize the movements of k in like in the end of the sentence. Don't worry, it does not require much tongue movement but when generating silent speech it's important. This time...
+uh so sorry could you hear? (whispering and static) So I exaggerated the k in like. Okay (clears throat), okay this time we could compensate the (inaudible) to some extent using these tips and in other words human training.
+However, the fact that system did not produce good results even if it succeeded with a tesselator leads to important implication. So that is that the difference between audible speech and silent speech. Machine learning requires the tesselator and trained data to be in the same distribution. So far it has been assumed that there is no difference in mouth movement between audible speech and silent speech so meaning that distributions match. Therefore, research on face to audio or lip to audio or to sound image to audio was applied to uh silent speech problem. But that may not be the case.
+At least in our experiment, we needed to hear humans to get clear voice.
+- [Participant] Alexa, play music.
+- This is the audio speech.
+- [Participant] Alexa, play music.
+- Although we have not yet (inaudible) what what our observations show is that the work from image to audio for silent speech may not actually go to the realization of silent speech (inaudible).
+Okay, these are the uh future work we have to do.
+Uh first, there is such unspeakable vocabulary now.
+Only 5 phrases, 14 words could be used in this study.
+Even in our ongoing research, we have been able to use approximately 15 phrases and 40 words.
+And secondly, in our case the gap between speech and silent speech was through the human training; however, this gap could be, could also be filled by developing new methods of creating a data set or by normalization with image processing.
+Finally, this research is not intended to exclude other modalities combining information from extra (mumbles) and now microphone may improve the quality.
+I did find the most useful combination of these modalities can be the subject of future research.
+Okay, in our ongoing study we have stopped using the second neural-network, Net 2. Since the Net 2 generated the speech on (inaudible) basis, so real time generation was not possible. The speed is now possible to operate almost in real time like this.
+(broken speech with static) - [Alexa] Here is spotify.
+- And then ultimately, we aim to create a system that enables the user to speak with their mouths closed.
+Uh actually only moving the mouth without making any sounds looks a bit strange so although I cannot speak clear was yet.
+(static) I had to be able to speak like this.
+Okay, thank you for listening. Uh it's a bit hard to hear, hard to hear the question because of the reaction...because of the echo and I'm not good at listening to the English so I'll be happy if you speak slowly question or have talk with me after the session. So, any questions? (clapping) Thank you.
+- [First Audience Member] Hi, we have time for one quick question so if you could state your name and affiliation um as the student volunteer will hand you a microphone for whoever wants to ask a question. Oh.
+- [Second Audience Member] Hi, um I'm Pesman from University of Manchester. Em I was just wondering is is the ultimate goal to sort of eh control your devices with silent speaking so there would be no image to audio you would just speak and somehow this would be converted to messages that your Alexa or whatever device would just understand what you're saying without actually any audio being there.
+- I'm sorry, I didn't understand question, sorry. Uh can we talk directly after the session? - [Second Audience Member] Yeah, sure.
+- Thank you.
+- [First Audience Member] We have time for one quick question I think.
+- [Third Audience Member] John Lucamemoley, University of Sussex. Thanks for your talk. So my question is did you use gel on top of the transfuser and if you didn't, did you consider using doppler imaging.
+- Sorry, did you use what? - [Third Audience Member] Gel.
+- Gem? - [Third Audience Member] Ultrasonic gel on top of the transfuser.
+- Yes, we have to use the ultrasonic gel.
+Okay.
+- [First Audience Member] Great, thank you very much.

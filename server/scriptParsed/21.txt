@@ -1,0 +1,134 @@
+- Okay, thanks everyone for coming, I'll be presenting Saliency Deficit and Motion Outlier Detection in Animated Scatterplots.
+My name is Rafael Veras.
+So in data visualization we map data variables to visual variables.
+And we combine this map in multi demential plots, so with this strategy, sort of having to create many plots with little information, we can create a few plots that contain a lot of information and then we can rely on our vision to extract only the information that we need to answer a given question.
+But for this to work, we need to be able to pick one or two variables and analyze them independently from other variables.
+For example in this plot we can see the size increase from left to right.
+And it's very easy to observe this dependency.
+But if we introduce another variable, and map it through vertical position, this relation becomes a little bit less clear.
+And it becomes a lot less evident if we introduce a color mapping to this plot.
+That's because color interferes with our perception of size so to be able to ignore color, requires a little bit of extra work.
+So these kinds of interactions between visual channels and how they impact task effectiveness is the topic of our paper.
+In particular, we focus on motion in animated scatterplots.
+So the animated scatterplots is a great plot to study this kind of effect, because it can hold many variables, and the more variables, the more presumed it is for interference between the visual channels.
+So we observed that in these plots, the points that stand out, are those with a unique size or color, those that move outside of the point cloud or those that move in unexpected directions.
+So for instance, in this sequence the highlighted points are likely to stand out.
+So China, China because it's large and moves along the edge of the point cloud, and the other countries, because they move into open space, but there are points that go unnoticed, even though they move faster than the others.
+So Emirates here is one of those points.
+It's inside the point cloud and it's small so it doesn't attract much attention.
+So that leads us to hypothesize that motion saliency in this plot, must depend on visual features, like size, color, and position.
+So more formally, once you find which dimensions, if any, influence our perception of motion.
+Are these dimensions misleading? So if I ask you to find the fastest point in a plot, are you more likely to miss it because it's in the middle of the point cloud.
+So in this question is important because the answer can determine whether or not we can rely on animated scatter plots to find certain kinds of information.
+So pay attention here to how we decompose motion into speed and direction, so in this paper we treat these properties separately.
+So we present the user study to answer this question.
+And we frame it around the task of motion outlier detection.
+So here's a speed outlier, which you can easily see if you practice speed distribution of this plot.
+So a strategy then is to present an outlier in a multi demential plot and manipulate it's visual properties while keeping motion constant.
+So here's the same outlier, in a multi demential plot, so here we vary color, direction and size.
+And we present it with average features, so it has average color, average size and average direction.
+And here's the same point presented with salient features, with more salient features, so it has a more salient color, more salient size, and is moving in a more salient direction.
+So we can measure if this changes influence people's ability to find the target.
+And we can do the same thing for direction outliers.
+So have direction outliers presented with average and with salient features.
+So in order to manipulate the saliency of the target with simple values from normal distributions.
+So when we need the targets or have an average visual property, we pick the mean of the distribution, but we knew the property should be salient, we pick the maximum value from the sample.
+So the outlier is always of value outside of the sample range.
+So we created this plot by simulation and we split them into two groups, so the first group contains average targets, with low visual saliency, so there's a base line, where the target has no salient features, and then five variations where we turn on one salient feature.
+So here is position, salient interaction, size, color, and data size, which is the growth between, the size growth between the two frames.
+And the other group contains salient targets.
+So we have a base line where all visual dimensions are salient, and five variations where a single dimension is average.
+So here is the base line, and then we turn off position, here's presented with average direction, average size, average color, and average data size.
+And this the overview of the experimental set up.
+So we have an average group and a salient group, and each has six conditions, so in total we have 12 conditions.
+And in addition to that, we created 10 scenes.
+So for each of these scenes we manipulated the target according to the 12 conditions that I described earlier.
+So what you see in this display is 10 scenes where the target is in the base line salient condition.
+So this introduce variation to the experiment, replication.
+This is the task page, so participants were allowed to play the animation up to three times before they selected the target and submitted the task.
+So here are some numbers about this experiment.
+So it had two tasks.
+To find the speed outlier and to find the direction outlier.
+So for each task we had 10 plots, and for each plot, 12 conditions, 12 target conditions.
+So in total we had 240 stimuli, and we collected 20 judgements per a stimuli, for a total of 48 hundred observations.
+We deployed this on Mechanical Turk, and we had 67 participants completing these tasks.
+So let's see the results.
+And let's start with speed.
+So the median accuracy in the average baseline, was approximately 23 percent.
+So that's when the target does not have any salient features.
+If you present the target out of the point cloud, the median accuracy jumps to over 50 percent.
+Increasing the size of the target didn't help much.
+And presenting the outlier with salient color, seemed to help a bit.
+And when the outlier moved in a salient direction, the effect was similar to that of having salient position.
+Increasing the size growth between the frames did not help.
+Okay so now lets see the salient group.
+So the base line where the target has all features salient achieved a much higher accuracy, around 80 percent.
+And turning off salient features did not cause much drop in accuracy.
+With direction, we see a similar pattern.
+So the base line in the average group had low median accuracy too.
+And here, position and speed made a difference, but not so much the other variables.
+So when the target was all salient, the accuracy was over 50 percent.
+And again, we see this consistent the fact of position and speed, the accuracy dropped when the target was inside the point cloud or had average speed.
+So we fit logistic regressions to this data.
+So this model basically takes all the visual properties of the outlier, and outputs a probability of correct detection.
+So it learns the influence of each variable on the odds of correct detection.
+So from this model it's clear that spacial dimensions have the most impact.
+So here direction, position for the speed test, and position and speed for the direction test.
+So our analysis showed that data outliers did not always correspond to visual outliers, for this reason, we state that motion outlier detection isn't reliable in animated scatter plots that present many variables.
+So to explain this failure, saliency deficit, which we define here as, a condition of imbalance between data and visual importance due to lack of saliency.
+And we characterize this as a violation of the Principle of Visual Data Correspondence from Kindimann and Scheidegger.
+So this principle states that important chains in data should yield salient changes in the visualization.
+So what does this mean in practice? Or in plane terms, we asked participants questions about motion outliers and half the time they were more likely to get it wrong.
+So we conclude that the animated scatter plots is not the best choice if the user need to make accurate judgements about motion or discover motion outliers.
+We encourage designers to consider alternative representations.
+So it's important to point out the limitations of this experiment.
+So first, we had a fixed value for outlierness.
+It's quite plausible, that beyond a certain level of outlierness there's probably not saliency deficit.
+Second, our scale ranges were informed by common practice.
+We can see for example that we used the color map.
+But the design space is huge, so for example with a different color map we could get more or less visual saliency, so the effect of color may have been underestimated.
+And we also text the outlierness in a single direction only, so all the outliers had, much higher value than the average.
+So in summery, we manipulated the saliency of motion outliers and we measured detection rates.
+And we find that motion outlier detection is influenced by features that are irrelevant to the task.
+And we conclude this non salient motion outliers can be hard to detect in animated scatter plots.
+So we invite you to read the paper and there you will find much more information.
+Besides all the technicalities there's an analysis of the patterns in wrong selections, analysis for the number of replays and much more theoretical discussion.
+Thanks and now I invite questions now.
+(audience clapping) - [Moderator] Questions? Again please state your name and affiliation.
+Oh.
+The microphone's, yeah.
+- [Kieth] Hey, Kieth Andrews, Gratz University of Technology, Austria.
+Great talk, thank you.
+Hans Rosining, when he's giving his performances he already knows what he wants to say, but he sort of the detective, the outliers, and he tends to sort of highlight them with labels or outlines in red, so that the audience can see them.
+And I think maybe what you're getting more at is not the presentation of the result, but for the analyst during the analysis phase, is that right? - That's correct.
+- [Kieth] So, for people making scatter plot visualizations for analysts, we shouldn't rely on motion, is the basic message.
+- That's correct. So, - [Kieth] Perfect.
+- For general purpose, if you want to enable discovery of motion patterns, not all motion patterns, so we're dealing, the scope here, is motion outliers.
+Then, it may be the best option.
+But it's important to point out that we tested up to three replace, so participants had opportunity to see the visualization three times, so it's possible that, if you see 10 times, maybe you will get the right answer.
+- [Kieth] Right.
+- But the guideline is, if you need fast and accurate, discovery of motion outliers then it may not be a good choice.
+- [Kieth] Perfect, thank you.
+- [Tim] Hi, Tim Harrison, DSTL.
+Really interesting work, I'm just curious, the animations you used, were like about a second long? - Right.
+- [Tim] And, it ran into the fact that they did get replays, have you thought about looking at things where there is either the animation took longer, so they had more chance to per viewings, and or just longer, maybe at the same speed, but longer duration - Right.
+- [Tim] And things, 'cus it's quite a short things in front of you that applies to other things.
+- So there are several reasons why we did a short.
+So first, we wanted the best chance to actually detect an effect, if we made it too easy, maybe there was a chance that we wouldn't detect a difference, because the task was too easy and then it wouldn't matter.
+But the other thing is that, you see we only have two frames, and these animations are quite long, so they are played in the context, for example, the got minder data, so you are seeing the yearly indicators of countries from the 1900's to 2000.
+So in that lone sequence, there is a huge number of these true frame transitions.
+So in practice, they are played really fast.
+This true sequence transitions between states.
+So it's also for a collage co validity.
+- [Tim] Can I ask a follow up on that? It it, - Yeah, sure.
+- [Tim] Since you're now saying it representative of that part in a longer animation, have you done anything where you looked at these things happening within that longer animation and where the people can pick it up within this, or whether it requires that it is this isolated bit that enables that detection.
+- We didn't but we do have a hypothesis for what happens.
+It seems like, if your eyes are caught by some of these outliers, they are really salient you may actually miss a bunch more outliers because, I don't know, it's a, you're attention is focused on one outlier and then it takes a while for you to release, for that mechanism to produce.
+So I think if this study is done with eye trackers, you may be able to get more insight into what kinds of things happen.
+But what's the actual visual mechanism.
+- [Moderator] So we have time for one more question while we're switching to.
+- [Samantha] Hi, Samantha Stolky, Ontario Tech.
+In your future work, are you looking at maybe using the predictor model that you have for assessing the probability of missed detection as say a tool tip that kind of users could turn on and then say have a range of, you know, I want to see any outliers that have over a 50 percent chance of missed detection, and kind of finding that balance between how much additional information you'd be giving them if you say, flag the points by pinging an animation on them, versus kind of the information gain they'd be getting just by having those additional points that they might otherwise miss? - Yeah this was actually the original idea, we wanted to have a model that would predict when the outlier was going to be missed, and then kind of like bump the saliency of the outlier by using trails or something like that.
+So yeah, that's quite an opportunity for future work.
+Thanks.
+- [Moderator] Great, let's thank Rafael again.

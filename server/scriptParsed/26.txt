@@ -1,0 +1,126 @@
+- Imagine that you are riding a motorcycle.
+And you start receiving a call.
+You have been waiting for your boss to call you all day long.
+And now your phone is in your pocket, vibrating, like (imitated buzzing).
+What if I tell you that you can use the chewing gum that you have inside your mouth in order to either answer or decline this call? What if someone who is in a wheelchair doesn't need anymore to use both hands to move their wheelchair? Or even just one to move the joystick? He or she can have free hands just by using the same chewing gum that I was talking about.
+What if even we can use the same chewing gum for complex tasks? Wait, sorry.
+(microphone buzzes) For complex tasks such as when you are using hands, feet, and it's not enough? You need an additional input channel.
+What if we use this chewing gum? Anyway, what's the solution of nowadays? The solution nowadays is, basically, interfaces that rely on just you such as head movement.
+Facial gestures, we can also find a lot of interfaces relying on the gestures.
+Even nowadays, an off-the-shell, off-the-cell, (corrective mumbling) off-the-shelf solution, which are voice assistants, or even in the last decades, the silent speech interfaces.
+But there is a problem with all of these interfaces.
+I spotted at least two. It doesn't apply to all of them, but they are really important.
+The first one...
+What's happening? (laughs) Give me a sec.
+(hums) Okay, the first one is the privacy.
+What if I want to make a personal appointment, and I'm in a public space such as the subway? I probably will stop using the interface because it's not an adequate context.
+Also, whenever I'm using these sorts of interfaces, I'm drawing undesired attention to me.
+Like if I'm talking with a person, why do I need to do a head movement? That is a really awkward position, and that's why I present ChewIt, which is a non-attached intra-oral interface.
+Basically, what it means is that it's an interface that goes inside the mouth, and it's not attached to any tissue.
+I ask the volunteers, I brought for all of you some candies.
+You have lollis, you have hard candies, different sorts.
+Just as a sample of appreciation that you all came here.
+Let me ask why ChewIt proposes a different a paradigm in contrast with the current...
+How is it called? Current interfaces.
+It's because ChewIt presents what I call dualistic behavior.
+Whenever...
+Now, look at me, whenever someone is not interacting with ChewIt, it becomes invisible for the people around you.
+Like right now, I don't know if anyone has noticed, but I'm wearing one of my prototypes.
+(plastic clanking) This one is pretty weak, actually.
+The model we are proposing is even smaller.
+The second one, well...
+This one here was (mumbles) for the visual.
+The second one is that when you're interacting with ChewIt, no one will know that you are interacting because you are basically having this natural behavior, which is having something in your mouth like an edible.
+And so, how do we even start to design an interface like this? First of all, you need to take into account that this interface needs to be natural-looking.
+So, we are gonna try to imitate gestures that we will do with edible objects.
+Like the gummies that...
+I don't know if you already have your gummy...
+That you can do with a gummy, such as biting it, such as rotating it, moving it around your mouth, or even putting it in the top of the tongue and playing with it.
+So, in order to perform all these gestures, first thing that you need to do is allow the user to have a perception of how the interface is positioned inside the mouth.
+And I'm gonna go with it, several experiments that you can find in our paper, but I'm gonna go through a really easy and simple explanation.
+About the form factor, about how you perceive this kind of interface inside your mouth.
+Okay, first thing, you start with a really basic, geometrical shape, like a rectangle or a prism, and the first thing that you need to take into account is that you will put this in someone's mouth.
+And it's gonna be in contact with soft tissues.
+So, the first thing that you want to do is remove the corners and smooth the surface.
+Which we get, basically, what I call an oboit.
+But now we have another problem.
+Like how the user knows where the oboit is pointing.
+Is it forward, backwards? So here, what I did is...
+Okay, let's introduce an assymetry.
+The first assymetry that I propose is the one that just gives a direction to the object.
+So, now the user knows if it's looking forward or backward.
+But again, we have a problem.
+The user doesn't know if it's looking downwards or upwards.
+So, here we need another assymetry.
+But at the same time, we also need to take into account where the interface is gonna be located.
+Within our experiments, we came to a conclusion that there are two different spots really optimal.
+In terms of (speaking quickly), Which you can see here, location 1 and location 2 next to the maxilla muscle.
+Basically, we end up choosing location 2 because it is closer to the cheekbone, and it proposes a coverage for which the...
+It allows for a much more discreet usage.
+So going back to our assymetry oboit, the next assymetry that we want to do is based on we having one side of hard, flat tissue, such as the gum, and on the other side, you have a cheek, which is a flexible tissue.
+So, in order to increase the grip for the cheek, you will want to maximize the surface having a round area.
+For the part of the gum, you want to have a flat area, because it will also maximize the area of, well, the surface of contact, which will also release tissue pressure.
+Next question in terms of design is, do we want to do a hard prototype or a soft prototype? For the hard prototype, we have a problem.
+It's really uncomfortable to bite hard objects.
+It's really, really, really uncomfortable.
+In terms of soft materials, the problem is technology limitation.
+If you bite electronics, you will probably break them.
+So, we want to find the middle-man, something in between these two, and for this we proposed for ChewIt, again something between.
+What we do, what we did, is we proposed a hard case, that in the future, it will be sufficiently biocompatible by insulating electronics in a case that will protect the body against the heavy metals inside the electronics.
+Also, on top of this, because it's hard and it's uncomfortable to bite, we propose the addition of a silicone liner, or maybe in the future another material.
+You have two layers of this, so you can wrap one against each other, and then we you stop using it, you are done, then you just peel it off.
+And then you can throw this into the trash but still have your prototype.
+This will allow for a much more hygienic prototype.
+During my research, I got two main questions.
+The first question is, "Can I choke on the device?" The answer is, "Yes, of course you can." But let me ask you something: from the candies that I just gave you, who of you was afraid of choking? Anyone? Alright, that's the answer.
+As humans, we have this so-called oral agnostic ability, and we are basically as good with the mouth as, well, near as good with the mouth that we are with our heads.
+Even though we cannot see what is happening inside the mouth.
+The second question is, Why don't you spend your time in something useful like tax interfaces? Like retainers? Like the one that you see here.
+There are already existing prototypes and research on these ones.
+My question is based in two parameters.
+The first one is tissue stress.
+If you have something attached to a soft tissue, it will produce a huge amount of stress in this soft tissue.
+That's why designers go to...
+Go and use the hard tissues inside the mouth, which are the teeth, and this brings me to the second parameter.
+If you use the teeth, everyone has a unique dental record, which means you will have to customize each one of these prototypes.
+With ChewIt, we found out with two sizes, you can...
+They can fit to most of our users.
+That was the end of my talk.
+I hope this is like a starting point for researchers to invest their time into...
+Keep on researching non-attached intra-oral interfaces.
+Thank you very much.
+(audience clapping) - [Host] So we have five minutes for questions.
+You can use the microphone to ask him here and now.
+- [Gilad] Thank you, I'm Gilad from Israel.
+Just wondering about tongue piercings and stuff like that, things that are more connected, like you can pierce your tongue? - Can you scream a little bit? It's a little hard to-- - [Gilad] You can put a piercing in your tongue? Do you know that? - What what? - [Gilad] Make a hole in your tongue and make like an earring in your tongue? Do you know this? - Yep.
+- [Gilad] So did you think about things that are connected to the body and not things that are eject-able? - So, of course I think of all this.
+The question is, do you users really want to go through a medical procedure? I said medical procedure, it's not like a huge one, it's just making a piercing, but does everyone want to wear a piercing? That's really a drawback for some users.
+That's why I even want to spend...
+That's why I want to find out the penalty for this.
+Thank you for the question.
+(microphone clicking) - [Fitzgerald] Hello. Thank you for your presentation.
+Fitzgerald Gavish from SONIC University.
+Have you thought about health and safety issues? You gave us an example of a motorbike.
+I find it an extremely bad example.
+You might swallow the device.
+Have you thought about this case, maybe some other cases? It's a nice interface, but in the example you gave us, I wouldn't try it because something might happen on the road, and you might swallow it.
+- It was not the best example, it was a clear example.
+(laughs) - [Fitzerald] Okay.
+- It's just a really classical example that you can leave every day...
+Like, even for me it was happening, like I was riding my motorcycle, and I had to pull over because I wanted to answer this, well, it was not a call it was a message.
+So, it's more to infer to daily things that can happen to you. We can find other, how do you call it, other examples.
+What if you are carrying your grocery bags? You have your groceries, you have one bag in each hand, why can I not use the chewing gum to talk with someone while I'm carrying my groceries, instead of pulling my phone out or having another interface doing that? Did that convince you a little bit more? (laughs) Awesome. (laughs) We can talk after work.
+- [Carreno] Hello. Carreno Ujaque, Carnegie Mellon University. Great talk.
+I have a question: when using this device, did you encounter any speech impediments? Or when you use this device, does it affect your speech in any way? Like the way you speak or your speech interactions with people? - I didn't understand that. (hushed whispering) - [Carreno] Ah, hell, so you used this device while giving your talk. So, when you're speaking, does this device affect it in any way? Like your speech patterns or the way you speak? - Oh, you can refer to the paper for this kind of information. I actually demonstrate in the paper that the shape, it's really important, in terms of speech affection.
+Mostly because you can even generate a second cavity within your cheek, so this will change the airflow.
+Also, you can have a...
+Even the facial expression can change.
+In terms of puffiness, your face becomes puffy.
+Also in terms of facial expression, like if you...
+Depending on the shape that you choose, it will limit the way you smile or the that way you use your mouth.
+- [Carreno] As a follow-up to that, when the facial expressions change, or when the speech changes, did you do any study to encounter the Midas touch problem? Like when in one-in-three gestures lead to involuntary actions on the interfaces.
+(mumbles in Foreign Language) - [Carreno] So, when people are speaking, or making facial expressions, did you ever encounter this Midas touch problem? Which is basically that involuntary gestures lead to involuntary action in your interfaces.
+- (mumbles) Did you understand? - I'm sorry because-- - [Carnegie] I guess I'll catch you after the talk.
+- My English is not super, extremely good.
+- [Carnegie] I guess I'll catch you after the talk, and we can chat then.
+- Yeah, we can catch up later if you want.

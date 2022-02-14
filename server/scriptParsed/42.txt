@@ -1,0 +1,68 @@
+- Okay, good afternoon everyone.
+Thank you for coming here.
+Today I will be presenting the topic which is entitled understanding abusive behavior between online and offline group discussions.
+So I would like to began by thanking the co-authors with the supervisor Tim Stoer and Joemon Jose and Andrew Hoskins and Catherine Happer.
+So what I'm going to do during this talk is to go over the case study that we have done over the last year among graduate students, to be able to understand the differences between two settings and sort of understand to hopefully find--slides there, okay.
+Okay, so the growth of online discussion in social platforms in recent decades has essentially reshaped the way we communicate with one another.
+However, this has encountered fundamental transformation, which has produced many advantages and also disadvantages including moderation or to be able to moderate online systems and to be able to keep up the velocity in the right directions among online communities.
+So a recent study, which was conducted by Perl Research, showed that at least one out of five people were victim of online abuse, most likely young ages from 18 to 24.
+So it's actually described a lot of main forms of online harassments including name calling and physical threats and stalking and sexual harassment as well.
+So one particular and significant aspect is understanding how people behave inside and outside the community.
+Recent tragic incidents were reported showing the hate violence attack during the last two months in New Zealand and Sri Lanka as well.
+So these attacks actually had some sort of communication through the social platforms, including 4chan or 8chan and Facebook as well.
+This is how we then decided to move on with the main reason that we chose to choose this direction.
+Finding the differences between online and offline, is that there is a definition found by or stated by the U.K. Home Office, which state that there is no differences between the online and offline discussions.
+They should behave similarly.
+So eventually what we wanted to do, we wanted to understand the differences between the online and offline.
+And we're aiming to find the coherence behavior between both settings to be able to at least prove that we can predict such behavior between both settings and try to also connect what factors can be understood from or be defined as abusive behavior or unusual behavior between both settings.
+So prior work characterized the differences between online and offline by conducting a study to understand the causes for accepting online invitation and offline invitation.
+Whereas the other part of this research was also conducted to find or characterize the anti-social behavior, which was either led by abnormal causes or was also proven to be due to the setting of or features of the platform.
+So in order to construct the experiment, we began with inviting the students to join the study, explaining the whole procedure and process so that they can join the study.
+And then during that we also added a pre-survey link which was meant to collect data from the participants, data including daily activities on social platforms or if they have ever witnessed or experienced such online abusive behavior.
+So we wanted to see whether the social has to do with the way that they communicate or try to at least get a sense of that perspective.
+So during the pre-survey, we also asked them to choose at least four or five topics to also help them to discuss something that they like because if they don't like the discussion, they will not be able to communicate with one another.
+So we wanted to make sure that we structured the group based on the gender ratio and background and so on.
+Yep, that's yours, thank you.
+That's all right, sorry about that.
+Thank you, should be working.
+Yep.
+Yeah, sure.
+Okay.
+Okay, this is the way that we were constructing the study to be able to collect the data from both settings, online and offline.
+The first step was to collect the data as I was explaining, then the second part was to structure the group based on what we have, the participants, based on the gender, based on academic level and age.
+So the topics were selected from Google trends and also from pros and cons to be able to stimulate the discussions.
+Each group discussion was also recorded offline, I mean, in person by the researcher.
+Then the online discussion was also conducted on our platform and synchronized right after the group was finished for each meeting.
+The meetings varied from 15 to 20 minutes for each discussion.
+After that, we sent a link as well, a questionnaire, to see how they'd reflect their discussions.
+What are the things that they liked, or just to give an example of something that was an abuse during the discussion.
+We had 15 participants.
+10 was male and the rest was female.
+And we split these 15 into four groups, either in a group of three or five.
+So, to also again to be able to structure the background.
+Okay, the topics that we selected was topic one and topic five.
+Topic one, it's a political topic, which is about the death penalty if it's allowed.
+Then they had to discuss that online and offline as well.
+The other topic was sort of technical and social topic.
+So it's about social networkers and how good is that to the society.
+The way that we structured this is to be able to allow each group to participate in one topic per setting.
+So if they, for example, did this online, the political topic, they should do the the other topic, which is Q5, and so on.
+So this is an example of both settings, online and offline.
+So on the right you can see the offline and the offline in-person group discussion whereas the left is the online, which was also about Q5, the social network effects on the societies.
+So the online discussions tend to show more, to stay off-topic most of the time, especially on political view and political discussions.
+I will show you some of the results in the following slides.
+It is also less engaging as well.
+To able to get the sense of the findings of what we had, we analyzed, we conducted a linguistic analysis during the co-signing and things like that to find the differences.
+Won't show you that since I'm running out of time.
+All the three that you see showed very significant results, negative emotion and subjectivity and then personalities between both settings for each group.
+We have realized at the end of the study that doing a study like this would be much better if we did it with a peer group, a group who work who have similar interests, similar projects, something like that, that would maybe help get the better sense of the behavior.
+So, the sample size was also not representative.
+It's a small sample size.
+So it was more about exploring whether we can get something out of this or not as a starting point.
+So, yes as I was saying, so that will be ahead of us to do, to conduct a longitudinal study for a larger group and see what other things, how they behave, and also provide further linguistics tools, analysis, as well as I told you.
+Okay, so we've showed the initial case study of this and we also showed you the methodology of how we did the data collection of that.
+We also shared with you some of the promising results that also need to be done on a larger scale in the future.
+Okay, that's all.
+Thank you so much.
+(applause) - All right, open it up to questions.
+Well, let's thank our speaker and thank you for moving forward without the slides for the technical difficulties.

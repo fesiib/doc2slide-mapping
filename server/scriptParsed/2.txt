@@ -1,0 +1,155 @@
+[Speaker] - Okay, so thank you for the introduction and thank you all for being here.
+So the speed-accuracy trade off is something we encounter a lot in each time.
+Often when you try to evaluate the quality of an interaction, we measure its speed and accuracy.
+Right? And want this to be as high as possible.
+And if we want to increase the speed and accuracy, we end up at the limit, above which, if we try to increase accuracy, we should decrease the speed, and vice versa.
+This is what's called the speed-accuracy trade off.
+And in this talk I'm interested about the speed-accuracy trade off in pointing movements.
+And now this has famously been studied by Fitts.
+And so what he did was, he made participants sit in front of a board, with two targets that have a certain size w.
+And he made them repeatedly point back and forth between them.
+And now, Fitts, manipulated accuracy by modifying the values of d and w.
+Which is summarized by the index of difficulty.
+So ID is the log of one plus the ratio d over w.
+And what he found was that the movement time was actually predicted by this index of difficulty, and they found the linear relationship between movement time and index of difficulty.
+Now what's important for us in HCI is that the parameters a and b of this linear relationship, they vary according to the participants and to the device.
+So what, if we estimate these values for a and b, then we can actually evaluate the performance of the device or user.
+And if we assume values for a and b, so we used old values from existing experiments for example, we can actually predict movement time for a pointing task or as part of a more complex interaction.
+So Fitts law is widely is used in HCI.
+I guess all of you have probably heard of it, but still it suffers from many issues.
+And in this presentation, I have selected three problems.
+So the first problem, is the problem of many different formulations.
+And now the question is, how many different formulation can you think of? And personally, I know about fifteen probably more.
+And now the second problem is that sometimes participants miss the targets.
+So typically what we do in HCI is we look at the actual distribution of endpoints, which are all the, all the black bullet points.
+We measure their standard deviation and then we multiply this by a constant factor.
+And this is our effective width, W, e, and we replace the width by this effective width.
+Now this was a solution, first given by Crossman in the experiment of psychology, then it was popularized by MacKenzie in HCI.
+And in the paper we have a critique of this solution.
+So I will refer you to the paper, it's a bit to long for this talk.
+But actually this issue with target misses points to, is that Fitts's experiment actually fails to measure correct accuracy in an accurate way, because of the target misses.
+The third problem, is a problem which I call the problem of regression.
+So this is empirical data, that you see all the time in Fit'z law.
+So on the y axis, you have movement time and on the x axis, you have the index of difficulty.
+And here, each blue dot is the outcome of a single movement.
+Now, according to Fitts law, you would expect that all these blue dots align quite nicely, onto a straight line.
+An you see, it's actually not really the case and we can actually compute the best straight line possible for this points, which is the orange line here, and you see the r squared value is quite low.
+It's much too low for a typical Fitts task for a task (muffled speaking).
+Because what we actually do in HCI, usually is we consider to average movement time per condition.
+So you can see here the blue scattered parts is the same as previously.
+Except here, a represented orange diamond which are the average movement time per condition.
+And in these align quite nicely actually, and if you compute the best straight line through this, you find typical values of r squared that you find in HCI.
+Except the parameters of the line are actually more or less the same as before.
+Now, I know some of you would tell me that this is normal.
+We are just re-using the noise that we have in the data by averaging the measures.
+But then the question is, what do you do with data like this? So this is, the data from the field study, which is very high variability.
+And of course, we can compute linear regression and this will give us the orange line that sits kind of in the middle.
+And you can see obviously, what can we do with this information? It's hard to interpret.
+So the goal of this work, is to provide the theoretical framework for the speed-accuracy trade off, that's simple but rigorous and not completely driven by empirical considerations and hopefully to help solve problems I've just shown.
+And now what we are going to use this information theory, for several reasons, is first because Fitts Law was actually originally conceived as an analogy with the Shannon capacity formula, and because the channel capacity theorem can actually be interpreted as a speed-accuracy trade off.
+So let's jump right into the, only result I'm going to present today of information theory which is the Capacity of the Gaussian Channel.
+So first of all, what's the channel? So a channel is just a pipe, it does an input, x, and an output, y.
+And in the case, this particular case of the Gaussian Channel, the model is that the output is a noisy observation of the input.
+For you see, y is the sum of x, the input plus sum gaussian symbol.
+And now we have a clever way of having a mathematical formula for the transmitted information in despite of the information theory which is called I.
+And what we try to do, is we try to maximize this transmitted information and this maximum transmitted information is called the capacity, C.
+And this maximum, you find it over all possible input distribution.
+So you look for all the x's that maximizes the transmitted information.
+And in the case of the Gaussian Channel, the input that maximize this is also the Gaussian distribution with variance P.
+Now if you look at the famous Shannon's Theorem Seventeen, it's just an evaluation of the C in the case of the Gaussian Channel.
+And so you see, it's simply the bandwidth times log of one plus p over n where p is the power of the input and n is the power of the noise.
+And this theorem expresses a trade off between time through the bandwidth parameter and bits.
+Now Fitts directly applied this formula, and he said well, in case of human movements, my signal is the average movement and the noise is just a moving variability.
+And then he said, because bandwidth is expressed in Hertz , which is the units are one over a time, he simply identified bandwidth to one over a time.
+And if you put all of this into Shannon Capacity formula, you actually find Fitts' first formula in 1954, and then he added later in intercept for Better Data '15.
+So if we look, take a step back, there are some questions that emerge.
+So first of all, why do you identify bandwidth with one over m,t? It's not that simple.
+And why would you equate a variance, which is suppose to be proportional or at least related to the square of the input, to the amplitude, which is, would be related to the input itself.
+And what's the channel model of the aiming task and what are the input and output's.
+And by this, we mean, basically what's the link between Channels Capacity formula and aiming.
+Cause to us, it's hard to draw a link just from this.
+So our model actually answers these questions.
+So this is the name of the model, A Formal Information-Theoretic Transmission Scheme.
+And so the first abstract model is very simple.
+So there's a, the user has the intention of aiming it towards the target and this intention is not to a signal that send it over a noisy channel to the muscle which prefer movement.
+And as we've seen just before, everything in this work relies on the Channel model.
+So what we are going to do, is were going to integrate the task constraints in the Channel model, okay.
+So let's do this.
+So if we loo at the task, or when we have to hit a target, what we are going to do is, we are going to aim at the center of the target and then we allow a variability that's the size of the targets.
+So this gives us first constraint on noise.
+And then the fact that the targets are separated by distance, D, gives us second constraint on input then if we take these two constraints together this gives us third constraint on the output.
+So now we have assumed basically, that the noise was bounded which we still have to choose a distribution for noise and this is not something that's easy.
+So what we do is, we use something that's used in physics, which is called the Principle of Maximum Entropy, which is basically says that if you don't know how to choose your distribution, your best bet is to go with the one that maximizes the entropy.
+So in our case, this is the uniform distribution.
+So we assume, so this is a recap of the channel model, so it outer bounds and the uniform distributed noise.
+And so in the paper, we actually show how we can compute the capacity of this channel so we express the transmitted information and then look for the best input.
+And we show that the capacity is actually log of one, plus d over w.
+Which is exactly the idea proposed by MacKenzie in '99.
+And what's interesting is if you look at the input that actually reaches the capacity, its the discreet uniform input.
+And I've represented it just here, so the input space are all the set of black bullet points.
+So its as if you see the entire available space was filled up with targets of size w and when you actually aim towards a target you actually choose the right target.
+And so we summered this in the paper with a catch phrase, which is that aiming is actually choosing.
+So this is an interpretation.
+So, I know some of you will have maybe a tough time accepting the uniform noise assumption, but the interesting thing here, is that if you look a what the uniform noise was given by the maximum entropy principle, so in our case it was actually the worse noise.
+Right.
+So this capacity is actually a lower bond.
+And now the question is, suppose the noise is not uniform, but for example Gaussian, which most of you will agree is likely, what is the error that we actually make by assuming this capacity with uniform noise.
+And now in the paper, we actually show that this difference is at most zero point two bits.
+So its actually quite small.
+And you can find more details about this in the paper.
+So now we presented a model for errorless task with uniform noise and then we show how it can be generalized to any abitrary noise and I just show you an evaluation with the Gaussian noise.
+And so what about target misses.
+So that's what I'm addressing now.
+So sometimes participants miss the target as I have said.
+And in the paper, to talk about misses, we distinguish errors from erasures.
+And what we mean by errors, if you look at how error, how the correction is computed it takes into account the standard deviation, and standard deviation basically considers the distance from each endpoint to the target center.
+So with in this definition, all movements involve metrical errors.
+So this is what we mean by errors.
+It's just that their amplitude varies.
+Now on the other hand, if we look at GUI, what matters is really whether or not the click falls inside of the intended area.
+So here, if I want to click on sponsors I can click anywhere inside this light gray orange box.
+And it doesn't matter where the click takes place.
+And this Dichotomous hit or miss notion corresponds to the notion of erasures.
+So in the paper, we treat the mistakes as erasures and we show that the calculation of the capacity is actually very simple.
+And it's simply one minus epsilon.
+So which is actually the success rate times the i,d.
+And you see that the i,d, corresponds to the accuracy as prescribed by w and the success rate is just the correction for the misses.
+If we compare the two corrections, so the Crossman- Mackenzie correction and the the one that comes from the erasure model an important difference is that the Crossman-Mackenzie correction assumes the Gaussian distribution for the errors, where as in our case, there's no such assumptions.
+So actually we have a non- parametric formulation here.
+Another nice thing is that if you look at the condition for null error rates the Crossman-Mackenzie correction is actually undefined.
+And in our case, it's simply reduces to the index of difficulty, so this is simply interpreted as the index of difficulty is the transmitted information when there are no errors.
+So it's very simple interpretation.
+So this is, I basically presented the complete model for movement time in Fitts task.
+But we never actually ask ourselves which movement time are we talking about.
+Cause, if we think about what channel capacity gives us, it should give us a minimum movement time, cause the channel capacity is expressed as a maximum.
+But what we do in HCI, is usually what we ask participants to work as rapidly as possible then we trust them to actually do it then we compute the average time.
+So this is something that's kind of like an average-minimum time.
+And so what we argue in the paper is that we, there's a lot to be gained if we separate these two metrics into an average time metrics, which would be given by the linear regression as usual and the minimum time metric, which would correspond to the information theoretic interpretation of Fitts law.
+And to show an example of how this looks like, so this is a data sample from a point in field study.
+So you see that the orange line is the one that you get from linear regression kind of sits in the middle, and the minimum time metric is given by the the black line.
+So you see this gives a lot more information.
+You can actually compare to different metrics and this gives a lot more useful information than just the orange line that sits in the middle.
+So to conclude, our model links the index of difficult to a channel capacity, where everything is defined and interpreted.
+Now on the downside, it's kind of a black box model for endpoints.
+It's only concern with movement time, it's not concerned about the full trajectories.
+It's not really based on any empirical findings about the nervous system and it's based on abstract information theory and we don't take feedback into account.
+Now a third problem is that we never actually tell you in the paper, how to compute the minimum time regression and, so actually this is, was work done in 2016, 2017 and it was published in 2018.
+So you can find the references here and since then, we've actually made a lot of progress.
+So we have come up with a new scheme, which we call Fitts 2.
+Which is basically a scheme for full trajectory with feedback control.
+So you can find most of it in the pre-print, or inside my thesis, which is online since December.
+And then we also provided recently, a new regression technique, which is a formal method to determine this minimum time metric.
+So again I refer you to pre-print for this.
+Thank you for your attention, and I will be taking questions.
+(Applause) [Announcer] - It's time for one quick question.
+[Interviewer] - I have a question for you, would you advise from now on if you want to characterize new input devices and you want to give like an index of difficulty or performance measure are you actually specifying that you should not normally compute minimum time but also average time, should we actually give two measures? [Speaker] - Yeah, I think there's a lot to be gained actually by separating these two measures and the difference between those two might give you interesting results, for example if I did this in a controlled, if I had shown you the same thing in a controlled study, the average time metric and the minimum time metric would be almost identical.
+In the field study, they are very far apart.
+And actually, just computing the two and looking at the difference can actually give you an idea of how much the participants actually invested their efforts during the experiments.
+Because sometimes we know participants, they get bored and especially in experiments like Fitts task and this actually, if you notice that the two lines are quite close it can give you some assurance that the participants were actually engaging the task and things like this.
+So this is one idea, of course there are probably other things that can be envisioned.
+[Interviewer] - Yeah, perhaps that a variance among participants or experiments, some input devices might just...
+[Speaker] - Yes.
+[Interviewer] - have more variance than others.
+[Speaker[ - Exactly, some Input devices might create more variance than others and this would also be noticeable with this.
+[Interviewer] - Okay, Thank you, very, very challenging (mumbles).
+(Applause) [Announcer] - Okay, with this we conclude the session on behavior monitoring.

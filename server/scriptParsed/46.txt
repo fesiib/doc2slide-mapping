@@ -1,0 +1,201 @@
+- Okay, good morning everyone.
+Thank you for joining me this morning, I appreciate it.
+I am Michael Van Waardhuizen.
+I am joining you from Microsoft where I am part of a UX research group associated with primarily Windows and other operating systems as are my colleagues Jennifer, Nancy and Joe.
+And today I'd like to be talking a little bit about what we have done with single usability metrics.
+So, first a little bit of background.
+We created a team a few years ago, a small team, focused on summative evaluation for usability, i.e. benchmarking.
+Why create a team for that? Well, of course, everybody should be doing validation sort of usability work but it's very time consuming, it's very expensive.
+If you have those properties, teams don't want to do it very often and if you don't do something often you tend to not get very good expertise and not consistent results.
+So, we had a team that was just focused on doing this and this alone with an intent to really focus on developing consistent methods and methodology and using consistent metrics over time to enable much better comparisons and consistent comparisons which is also hard to do.
+And as a nice side effect, after doing that for a couple of years, we developed a data set of over 500 tasks across 13 different platforms involving 800 or more participants over 8,000 data points and our data set's actually quite a bit larger today, the data we were using for this analysis was more than a year old.
+But for this talk, I'm going to focus mainly on metrics.
+If you have any questions around methods and things like that, we can do that afterwards.
+So, the metrics that I'm going to focus on for this talk are these six.
+We have collected other metrics over time.
+We do other things, SUS, MPS, frequency, importance, et cetera, but these are the metrics that are relevant for now.
+We have kind of a few categories here.
+There's objective metrics like success rates, time on task, error reporting.
+There's also subjective metrics.
+These are kind of post-task questions on Likert scales like perceived time, ease and satisfaction.
+So, why these metrics? These metrics were proposed by Jeff Sauro and Erica Kindlund in their 2005 paper that they proposed using a single usability metric.
+So what does that mean? Well, you take all these metrics and you do a statistical process to normalize them and average them together and the end result is a single number.
+Why would you ever want a single number? Isn't that awfully reductionist? Well, yes it is, but being a reductionist is good sometimes.
+It gives you a summary of a task so when somebody asks, hey, how good did we do? It's a simple answer to give.
+It also facilitates easier comparison so if you're trying to compare six metrics against six metrics, there's a lot of nuance there.
+It also helps rationalize when your metrics kind of disagree.
+We often say things, we're like oh the success rate was high but the satisfaction was low.
+What does that mean exactly? How are we doing? So single usability metric gives you somewhat of a temperature gauge which is nice.
+How do you compute it? Well, I don't really have time to go into all the specifics.
+Suffice to say there are some statistics involved and just to kind of call out a few important bits, one is that we have an error rate calculation that involves the number of errors over the number of error opportunities with a little statistical correction if a small sample size.
+That's gonna come up later.
+Another thing to call out is that both calculating time on task and satisfaction past rates, we involve a number that's called a spec limit.
+That is simply a number that is pre-chosen to be a objective measure of what a good score would be, so a good time on task or a good satisfaction rating.
+Another thing to call out is this equation in general.
+This is a Z-score, if you're familiar with statistics, and this is a way of identifying where in a normal distribution your data point lays or lies and then you can look that percentile using a z-table or a excel function pretty easily enough.
+And then the last thing I wanted to point out is that for a subjective metric we're actually averaging multiple metrics, the perceived time, ease and satisfaction, into one metric and then doing all the subsequent transforms on it.
+So what this looks like in an example, you might have a study where you have 20 users and you have a task.
+You average your satisfaction to get a column like this.
+You have your completion rate of whether they passed or failed, the number of errors that recurred during this and the time on task.
+Using those equations you might get something like a satisfaction rating of 20%.
+Well that seems awfully low but if you look at it, yeah these do look kinda low.
+They're definitely on a five point scale, not very high.
+Completion of 59%, mm, I believe that.
+Errors at 67%, uh, sure, I mean I see some errors that are really high but there's some that are zero so maybe so.
+Time on task of 70%, uh, sure, I have no idea (chuckles), based on this table.
+And that equals a sum of 55%.
+55%, 55% of what? (audience laughs softly) What are the units on this number exactly? (laughs) And what does it really mean? That's just one of a number of challenges that we ended up having, especially around communicating some.
+But let's go into a little more depth.
+So, challenges! The first one is counting errors.
+If you read usability literature, this is not a new problem, this is an old problem.
+But the old familiar one of inter-rater reliability, the fact that when you have two or more people trying to judge something as subjective as whether a user committed an error, they might disagree.
+Much more than if you have multiple platforms of devices.
+What's an error look like on a laptop computer versus an Xbox versus a HoloLens.
+Errors are extremely different in those scenarios.
+Even worse is that you could have a single person on a single platform on a single task and they'll change their mind.
+The problem with benchmarking is to get sufficient sample sizes, if you're having somebody watch everybody, they're human, they get bored, their brain starts dribbling out of their ears a little bit by the 20th, 25th participant and they might be noting things a little bit differently.
+So that's not great.
+The second issue is, I show this equation briefly earlier and I called your attention to it and I really want to call your attention to what are error opportunities? If you read Sauro and Kindlund's paper, they suggest uh, just take the number of errors and add one.
+(laughing) That's awfully convenient.
+In our struggle and quest for objective usability, that doesn't feel terribly objective.
+I dislike arbitrary numbers in objective metrics.
+And the net result of this is between the reliability of the raters and the kind of questionable sourcing of error opportunities, this is not a reliable metric, it just creates a lot of noise.
+And if you're trying to explain to a PM or a developer or a designer why you gave them the score that you gave them, you don't really want to go into some of the particulars here.
+(laughing) Second is averaging satisfaction.
+So, this is something maybe unique to what we were doing with our metrics but it's really important if you're going to do this to pay attention to your labels because here I've shown you two five point scale metrics.
+One is for perceived time and one is for perceived ease.
+Now, they look similar but in truth one is on an absolute scale and one is on a relative scale.
+And you note the relative scale says as expected versus faster than I expected.
+That's different than saying is it fast or is it slow? So what we see is being as expected for time, is that poor usability? Is that not good? Well, if I click a home button on something, it takes me one second and it's super fast but I'm like, yeah that's what I expected.
+So, that feels pretty usable, actually.
+On the contrary though, like, oh on the absolute scale, is a three good? Well, it's not easy, otherwise I would have picked easy.
+So that feels not quite good enough for a high standard usability.
+And this is born out in the data set that I mentioned earlier.
+So over thousands of thousands of data points, we see that the histogram of the perceived time question is actually super normal looking.
+That's kinda cool, don't see that with Liker scales very often.
+Whereas the satisfaction one is completely skewed to the right.
+But this also shows us that people are giving lots of five ratings for satisfaction and a lot of three ratings for perceived time at the same time and so we know that those are actually somewhat equivalent.
+That's handy.
+The third challenge and the one that's most difficult for working through is dealing with time on task and the question, the central question, is what is a good time on task? If you read Sauro and other source of recommendations, they'll say, here's what you should do, you should pick a good time, maybe an expert time, or maybe the fastest user or maybe pick some percentile of fastest users and that's the time you start with and multiply it by a constant.
+Sauro recommends three but I've seen other numbers in literature.
+And that anything bigger than that is not usable, that's a bad time.
+Well that's cool and all but we can find cases when it doesn't accurately describe usability that we can just tell from looking.
+So, here are a couple edge cases.
+One is very fast tasks.
+So, example I said earlier, navigate home.
+This is something that on an Xbox you do with a single button push, on a website you do by clicking in your masthead.
+These are things that are very lightweight tasks.
+It might take an expert one second.
+Whereas then, and so if I do the multiply by three, our spec limit's three seconds.
+Well then you have a user and you give them the task and they (imitates sneeze), oh, now at four seconds.
+Did that fail 'cause they sneezed? If they take a drink of water, is that bad usability? That seems irrational doesn't it? So, the objectiveness of taking expert time times three doesn't work very well for very fast times.
+On the contrary, it also doesn't work very well for very long tasks.
+Let's say you ask somebody to update an operating system and the fastest somebody could humanly do it was like 15 minutes, you know, hopefully faster but you know, things happen.
+That would make your spec limit 45 minutes which would mean that if you had a user and they could have their entire computer crash and they have to restart the entire process and it could take 44 minutes and that would still get a good rating.
+That doesn't really make sense either.
+So, you know, is there an objective spec limit we can do for time? We did a lot of explorations, you know, we looked, hey, maybe we can look at the range of times that we get, we use the data itself and have it be self-informing and we could look at the standard deviations and we'll cut anything off of, like, two standards or above.
+Well then you have a preordained failure rate and you're always gonna have 97% pass rate, is that what you wanted? No.
+Okay well, could we correlate it with our other metrics? We have all this data, maybe there's some really cool correlation.
+Yeah, that would be cool except time on task doesn't correlate with anything.
+It doesn't even correlate with perceived time, frustratingly enough. (audience laughs) So you can see here that it's quite the ugly scatterplot, it doesn't form well.
+Well what if we were trying to be really smart? We're like, let's take the Z-score and we'll only take successful tasks and things like that.
+Nope, still unfortunately it turns out Z-scores average zero at, you know, in general because that's by definition and so if you're trying to just do by success, the more successful you get, the closer things collapse in.
+So, at this time, and I'm perfectly happy to be wrong for whoever wants to stand up and shout me down, I don't believe there is an objective way to limit time on task for usability.
+An objective way, yes you can have many subjective ways.
+We still use time on task, it's great for comparison, but only in apples to apples comparisons when you can say, legitimately, like, well this thing is faster than that thing.
+But if you're trying to say, like, is this a good time? It's hard to say, especially when you know that some people take longer to be successful and people who fail might quit sooner, so what is good time? All these things add up into problems with communicating a single metric.
+So, what does the number mean is what I brought up earlier.
+Errors, time on task, satisfaction.
+What is this Z-score thing anyway? What are you doing? And then if you try to add in things like confidence intervals and trying to communicate, you know, statistical significance, you're creating a lot more dead weight in your meetings with product stakeholders than you want to be spending.
+You want to be focusing on the issues.
+And so, we wanted to try something a little simpler.
+So, back to these metrics.
+So, going to Tullis and Albert's textbook, Measuring the User Experience, they propose a simpler path so we try that.
+We get rid of time on task, we get rid of error rates, we do not average satisfaction scores.
+So we have four metrics, three of which is subjective, one of which is objective.
+How do we get to a single metric from these? Well, we still want to compare them to a spec limit, a threshold for good usability, but instead of averaging the results, we're just going to take it as a binary, yes, no.
+And if anything says no then the whole task gets a no.
+So its a bit more of a stringent criteria actually.
+But the key here is what are those spec limits? What are those thresholds? Well the nice thing about subjective ratings is that we get to use those labels that I mentioned earlier and we already kind of talked about a three is pretty good for perceived time and a four is good for satisfaction and so we can use these to generate the spec limits for given tasks.
+Completion is actually trivial because it's just whether or not you pass or fail.
+Well, but what about on average? What's a good time on task on average? What's a good satisfaction on average? And so we can use our data set to build some more intelligence about things on average as well.
+So, using our satisfaction of four, it's I'm somewhat satisfied, that seems like a good starting point.
+If you look a average satisfaction of four, it correlates to a completion rate of about 87%.
+That's a simple average.
+That's actually really high.
+We were using the lower number before we kind of did this analysis.
+And this is a pretty good correlation.
+A .64 correlation pretty similar and distance correlation, so it's not as flimsy as time on task.
+And then you're like, well, but a four average, I mean like is that really good for satisfaction? I was like, well, yeah, the data again bears that out.
+75% of people have to rate a task four or five to get an average of four and that feels pretty good.
+If you're using an adjusted walled interval for your success rate, it lowers things a bit 'cause you're adjusting the mean that's down to about an 80% threshold for good success.
+But in all regards, we feel like we feel pretty comfortable with knowing where our thresholds are.
+And then the nice thing is we can use those to aid in our communication.
+So, what I'm doing here is that we have a list of tasks from a study, now that I think about it, a year or two ago.
+And so what we can see is we used the overall rating, that's the Q-score or so we call the overall score and this is just a simple percentage and what this actually has is it has units.
+This is the percentage of participants that rated the task usable across all metrics.
+That's pretty simple to say to people.
+Much faster than explaining what a Z-score means.
+The other thing that we do here is we're using color, not to just show what the score is, but to actually show the confidence that we have in the score.
+So, with those thresholds we can success needs to be above 87% simple average or 80% for the adjusted wall.
+We using the adjusted wall number here.
+That's why nothing gets up to 100%.
+And so, these green numbers means that the entire confidence interval for that success is above our threshold for usability and anything that's red is completely below the threshold and anything that's white, we simply say, well we don't have enough sample to say for sure yet.
+So it's also a nice way of encapsulating how much sample you've gotten and how much reliability you feel like your numbers have.
+So, the important thing to note here is that I'm not presenting that single metric separately from the component metrics.
+In fact, the component metrics carry much more information.
+The simple metric is just used as a way of, like I said, a temperature gauge to kinda see, like, okay, where are we at? It helps you in aiding these comparisons of like, well I have some tasks that have some greens and some whites and I'm not really sure, like, this is interesting, here's a task that's all whites but there is a green below it, why is that? Well, you have more distribution of people giving lower ratings or a more concentration of people giving ratings.
+So, I'm not going to claim this is perfect.
+We do have reasonably complaints about what we see.
+One, it's overly focused on subjective measures, not objective measures.
+That's true but we also know that based on seeing that satisfaction, you have much higher success rate than a satisfaction pass rate for the same data.
+Then actually the subjective criteria is higher, you know, man is a measure of all things, it's okay.
+There is information lost from converting the data into a binary number in the single metric and so that does expand your confidence intervals which does make comparisons a little bit harder but, you know, trade-offs.
+And using that logical AND where, like, everything has to be a pass to get a pass instead of just averaging like the original does mean the score is lowered in comparison.
+So the overall scores we're showing are lower.
+That might require explanation but since we have units to actually put at the end of the number, it doesn't seem that difficult.
+So, in summary, we had some difficulties with SUM included error counting, averaging satisfaction, time on task and communication.
+We developed an alternative single metric that we only use metrics with clear thresholds for usability.
+We combine them in a way that is more binary and we use color for confidence instead of charting and graphs to aid in explanation.
+Thank you.
+(applause) - [Man] Awesome, thank you for your talk.
+Questions? Yes.
+- [Audience Member] Can you tell us what type of usability tests you use this on? I mean do you use it on, like when you're doing qualitative data analysis, what's wrong, when you're actually there thinking aloud and maybe you'll give them a hint because you're not getting anymore qualitative data when they're deep in a hole.
+When do you use these? - Absolutely, so we use this primarily towards the end of a development cycle when things are pretty well stable and baked.
+We use it for validation not for, kind of, iterative explorations.
+So it's primarily quantitative focus, we administer, that sounds grim, we give people tasks that they then are free to execute, they're not aided, it's not think aloud.
+It's meant to kind of, and we actually do a lot more online, sort of, unmoderated testing nowadays as well to get at scale.
+And then, we do still collect qualitative feedback, usually through verbatim comments along with other tasks that we can then use for further analysis but this is really meant to be a summative evaluation not a formative evaluation.
+So, we think a lot of protocol time on tasks aren't really compatible as far as metrics go so that's primarily when we do it.
+- [Audience Member] Thank you.
+- [Man] Other questions? Yes.
+- [Woman] Hi, this is great.
+So, are you allowed to disclose, like, a particular example in which you successfully used this? (laughs) - Hm, that's a good question.
+So, the way that I would...
+Yeah, so I developed a lot of certainly, like, the confidence interval communication.
+I was working on HoloLens and we were doing a lot of benchmarking as we were approaching our release and so we were able to use it in a way that when you're developing something that's getting close to release, often times you have a lot of meetings called like Shiproom or other sorts of late meetings whereas determining how important are the issues that we need to solve and what issues do we need to prioritize.
+And so, it's very easy to have charts and things like bug counts and glide path and severity ratings and priorities and dove T-shirt size and all these other things.
+And it was a unique experience that we were able to put our usability data on the same slide as the testers and the doves in a similar way that they could then reason about in these very high-impact meetings and say, like, oh we're red on this and we are green on that or we are other shades of the rainbow as you can imagine. (audience chuckles) And so we were able to use these sorts of things and be like, yes, well we can say with confidence that people were not satisfied with this aspect of the product and then could then make the trio decision on whether or not it was important to address before shipping.
+- [Woman] Got it, thanks.
+- Absolutely.
+- [Audience Member] Thanks, that was very useful.
+Just a short question, there's lot of things building on expectation or on the metrics that build around expected time or expected satisfaction.
+Have you tried either assessing or manipulating expectations of the users? - So that's a great question.
+The question is about manipulating expectations.
+So, one thing, not part of this work, but in a previous work that we had done was that there is this challenge is you have designers that they want to pursue principals and values that don't measure very easily sometimes.
+They want to know if something's fresh and clean and fast and fluid and things like that.
+And what is a useful thing is what we have tried is trying to kind of have people identify their baselines because if it is an expectation thing, it's an internal state and you don't really have a good window into that and so we did try to do some things.
+We're like, well tell us about what a five is for you and what a one is for you and try to calibrate the anchor points that way.
+The challenge is that you'd have to do that for every single metric because what is the fastest thing you've experienced is not the same as the easiest thing you've experienced which may not be the same thing as the most satisfying thing you've experienced.
+And so, also it changes across people and across time and so it was useful as a qualitative discussion actually but from a quantitative point of view it didn't really yield much fruit.
+And so, expectations are kind of the grand sum total of everything in a person's internal state, you know, in terms of their experiences with other products, how they're feeling that day, you know.
+It was actually very enlightening to test HoloLens because people don't come in with expectations for HoloLenses much, right? When you're testing Windows, Office, those things, people know what they're gonna get and any deviation from that they will tell you about it.
+But HoloLens, it's like, I don't even know what I expected, you know, you get those sorts of comments.
+And so, we don't do much of that.
+We don't do much calibration because everybody is a little bit different but I do think that it's worth calling out, if I can run back super quick, that even with that case, it turns out to be a useful scale.
+Having people's expectations in the middle and letting them deviate to and from it turns out to be a pretty salient way of getting data.
+- [Audience Member] Awesome.
+- [Man] Let's thank Michael.
+We don't have time for more questions but if you can find him around I suppose after the session.
+Thank you very much.
+- Thank you.

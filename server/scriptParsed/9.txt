@@ -1,0 +1,105 @@
+- Thank you for the introduction, I'm Jun Ishida from the University of Chicago, and this work has been done with the corrects from the University of Tsukuba in Japan, with the support of JSD and JSPS.
+So the title is Egocentric Smaller-person Experience through a Change in Visual Perspective.
+So the question in this research is, how can we share one's experience, in a daily life.
+A particularly smaller-person's experience, in more embodied, social, and egocentric manner.
+So to tackle this question, we have developed a wearable device that can change your visual perspective into a lower position.
+So wearers can observe this, our own world from the lower stature.
+Then they can understand how children perceive, a smaller-person, perceive the world.
+Okay, so this system consists of a wearable stereo camera with fisheye cameras, and head-mount display, to provide real time videos from the lower stature.
+The important thing is that the wearer can control their field of view, by using their own head orientation in real time.
+So the visual transfer of the device, equips two 180 degree fisheye cameras, and microphones, and motion sensors to detect the wearer's body orientations.
+The software is configured by a openframeworks environment, which creates stereorectified images from the captured spherical images from the fisheye cameras.
+The readings she was measured as are on 100 and 380 reader seconds, which is still sufficient for preserving the agency of the user's actions.
+For more details, please read from our paper.
+So as for applications, our device can be used as an educational tool, for nursing school teachers, medical staff, and parents.
+And also as an design assistive tool for designers for stores, classrooms, or exhibitions.
+Actually, we have already tested these scenarios in nursing schools and hospitals, so please take a look at this video.
+(class speaking foreign language) (exclaiming excitedly) (foreign chatter) (laughing) (nurses speaking foreign language) So now, let me explain how our research can be defined through related works review.
+So actually there are several attempts to create a sense of being a child, in the field of design, to provide a design guideline for children or like elderly persons.
+So one study proposed the methodology of using a fixed camera at a lower point of view to evaluate the accessibility for the children in the public space.
+Honda Motor Company provides a car wall goggle to reproduce a child's narrow perspective, to help car drivers to understand how children perceive the lower environment.
+And also, MIT H-Lab have developed elderly suits, which degrades your visual and mortal capabilities to reproduce an elderly's experience and help the evaluation of the accessibility in transportation systems.
+And in psychological studies, many studies have investigated how perception is modified when the body ownership is transferred to a small doll, or a shorter arm, or a smaller avatar in a virtual environment.
+And they reported that having embodiment of a child, and for instance, object sized perception, and distance perception, state of identification, and even speaking behaviors.
+But users' experience might be passive or static when they use a rubber hand illusion technique.
+And also using the virtual environment makes it difficult to have embodied and social interactions with people in the existing real world.
+So everything that's brought with a passive and active axis on the horizontal, and real and virtual axis on vertical, so it works and can be a place like this.
+Studies with a rubber hand illusion technique, where users have to receive the tactile simulation, while sitting or laying down on the floor, could be a passive experience in a real environment.
+On the other hand, having a child's embodiment in VR could isolate from the VR and physical relationship.
+So actually our study places here, where users' experience is more active and embodied, while involving social interactions in the real world environment.
+Then, we would like to explore its possibilities and the challenges, for gaining embodied knowledge of a smaller-person's experience in the real world environment.
+So, what we actually we are trying to do in this research, is shaping body representation into that of another in the real world, for acquiring the embodied knowledge of one's experience.
+So this interaction's type allows users to reach to real people and objects.
+Therefore existing physical or social knowledge in your classroom, workspace, or home, can be also used to understand how a user's body has changed by comparing.
+This allows more active and social interactions, and we believe that the such environment provides a more authentic embodied experience.
+So to verify the shaping of the body representation, and also to explore how it changes once experienced, we investigated these three important factors.
+Which is the changes in the user's perception, action, and interaction, by shaping body representation in real world environment.
+So let's start from the perception experiment.
+So in this experiment we perform personal space evaluation, so objective of this experiment is to evaluate how a changing eye height changes the interpersonal relationship in the real world.
+So personal space is defined as the physical space surrounding someone, into which the others proximity can feel uncomfortable.
+This is a very important factor that represents a social relationship between two persons.
+So in this experiment, we observed the changes in his personal space, with or without changing height of perspective.
+So here shows experiment set up, we used stop distance message to measure the personal space, which is commonly used in psychological studies.
+And there are two important conditions.
+The one is standing, a wire camera is placed on the head, and the other is standing, wire camera is placed on the waist portion.
+So we recruited nine nursery teachers and experiment was conducted in a nursery classroom.
+So here shows the result, and it shows that the shifting the eye level down, significantly enlarged their personal space.
+And the participants also mentioned that the approaching experimenter looks bigger than usual.
+Also they stated that they want to stand up on tiptoe to make their perspective higher.
+Now from this research, lower perspective could create an intimidating feeling, toward approaching the person.
+Also from the comments, they wanted to move their perspective higher, even though they were already standing.
+Such postural and visual mismatch could also affect their sense of personal space.
+So the next is action experiment.
+So in this experiment we tried to figure out, we tried to verify that shaping of body representation, from the user's interesting actions, which we call air handshake illusion.
+So when we were doing the exhibitions, we found that the many visitors raised their hands higher than usual, when the experimenter tried to have a handshake.
+And the result that this is caused by the perceived shoulder height, and this could be used as an index to evaluate the strengths or level of the shaping of the body representation.
+Also, we wanted to know how active interactions, which is a field of view control, in this case, affects the change in body, how it affects the change in your body, your presentation.
+Then we saw that the handgear during the handshake action can be used for the evaluation method.
+So here shows the setup, so there are two important conditions.
+The one is passive video condition, which is watching a video without having a field of view control, then perform a handshake with the man in the video.
+The other is active FOV control condition, which is the participant observed the same experimenter through the camera system, with the field of view control capability, then perform the handshake with a real man.
+And here shows the results, and it shows that the participant lays their hand higher, significantly higher, when they can control their field of view.
+Also, they looked up significantly higher, when they can control their field of view.
+So from this research, it is suggested that the active field of view control actions enhanced the shaping of the body representation.
+It was also observed that some participants extended their arm longer than usual, they could pass if their, pass as if their arm length, become shorter.
+So actually, such phenomenon was also reported in a virtual environment, then this could be verified in a real environment as well.
+So lastly, we conducted a interaction experiment.
+So in this experiment, as shown in the beginning, we did observation and collected questionnaire feedback at national schools, hospitals, and conference exhibitions.
+So we asked participants to answer a little questionnaire about passive height and surroundings, and feelings.
+The results show that their passive height became shorter, and also perceived size of the surroundings became larger.
+And they reported that they felt intimidating.
+So this would indicate that the device modified their experience.
+We also asked participants to answer their body representation from these figures.
+And the six percent of participants stated that perceived height became shorter, and some reported that only their head moved to their waist portion.
+So this could be caused because of the special mismatch of the eyes and hand in the system.
+But anyway, this shows that the visual device achieved to create a lower perspective and a sense of shorter height.
+And interestingly during the observation we could see many interesting activities, such as surprise reaction, or protective pose from the experimenter, or child like talking, and intimidating action by the surrounding of people to the wearer.
+So these are not actually controlled experiment, controlled experiment setup, however, not only the wearer but also the surrounding people could change their interaction style, including attitude or conversation.
+We would like to verify this phenomenon with more controlled setup in the future.
+So in conclusion, we provided possibilities and challenges of changing our perspective by shaping body representation.
+Through activities we did interaction design, to provide embodied social and egocentric smaller-person experience.
+And to achieve this experience, we developed a visual translator device, while preserving the field of view control capability.
+And we also verified that users' perception, action, and interaction, were modified while allowing the active and social interactions with other people in a real world environment.
+And also, not only the wearer but also surrounding people, could gain the embodied knowledge of the smaller-person's experience.
+So actually, we also developed a passive hand exoskeleton, like this, that changed the scale of the hand, the hand dimensions, to reproduce a hoptic perspective of a smaller person's, that of a smaller person's, for assisting more embodied product design, procedure, by adult designers.
+We hope we can report the effect of combining these visual and hoptic prospective transformation in the future.
+So actually, this device is, the demo is available in our interactivity booths, so if you have time, please come and enjoy.
+That completes my presentation.
+Thank you very much! (audience clapping) - [Announcer] All right, so you have microphones here, here, and then in the middle.
+So, I mean, so I, I wanna ask one then.
+It seemed most of the interaction actually happened by the person approaching the person wearing the head monitor display, and so I'm wondering what kinds of interactions do you think you can actually explore as a small, like as a mini-fied person, in this egocentric view, because the hand is an issue, you can only walk towards things, but it seems relatively limited, the interactions that you can explore that way, your own interactions.
+- Yep, so as I showed in the last slide, we are also considering some hoptic perspective translation, transformation, and actually the device is configured in a wearable form factor, and so the wearers can freely walk around in an existing environment, and freely able to have interaction with the surroundings.
+I hope we can find another new findings with the longterm, or another experiment perimeters.
+- [Woman From Audience] I'm Dorothe Smit from Salzburg University, thank you for your talk, very interesting work.
+- Thank you very much.
+- [Woman From Audience] I was wondering, I've looked at your paper a little bit because I'm looking into similar things as well, and I was wondering, so if I've understood correctly, you're using basically 180 degree field of view? - Yep.
+- [Woman From Audience] And then low passing the sides, do you think that had an influence on the level of emergence and sense of presence, and if so do you think that you could speculate that if you had a 360 view, the effects would be even greater? - Yep, thank you for your question, so we as you said, we use the 180 degrees fisheye lens, for HD output, and we actually we crop in a certain area, then rectify, and then display on the head or on display, so the resolution is not so much high, but so in terms of that, the presence in a head mount display, of the person could be decreased, but we have the social interaction, like a conversation, or like touching or hearing in the real world, so we can feel that the clear existence of the person.
+So I think that's one of the benefits of changing the body representation in a real world environment.
+- [Woman From Audience] Thank you.
+- Thank you.
+- [Man From Audience] I'm Shin from (mumbling) laboratory, thank you for GRADTalk.
+So I have a question, so your system provided very small-person perspective for the user, but it was, how other people perceive that person.
+Because in the system, still, some people can look at the users face, real social interactions should be like a small-person versus the usual person, so how do you think about that? - Yep, thank you for your interesting question, so actually I think there's several solutions for that, like displaying the wearer's face around the camera area, to make eye contact between a real face and a camera position, so yeah maybe we can discuss another implementation method.
+- [Man From Audience] Okay thank you so much, great talk, thank you.
+- [Announcer] Let's thank Jun again.
+(audience clapping) and all the speakers of the session.

@@ -1,0 +1,187 @@
+- All right, my name is Nick Elmgvist.
+I'm not really supposed to be here.
+It's supposed to be Pranathi, my student, giving this talk, but she had visa issues, so instead, you get me.
+This work is done with a former student of mine, Adil Yalcin, as well as a colleague at SAS Institute, Xan Gregg.
+And to give you some background at what we're looking at, there are many examples of ordered or sorted lists where you have items and values.
+So think of, for example, the ranking of happiness for different countries in the world, the scores of your favorite teams in the league, maybe the cost for tuition at universities and so on.
+So ordered lists are common, and a common way to visualize these, if we take an example of countries, is just a scrolled barchart, right? So you have items, and you have the bars, the width of the horizontal bars here, showing values.
+Of course, with a representation like this, if I have a longer list than fits the screen, I'll have to scroll.
+That's the part of the word.
+So we call these ranked lists in this paper.
+Essentially sequence of items where we have associated data values.
+So this is clearly a prevalent type of data that shows up, and the representations we're talking about often are part of visualization dashboards.
+But we can do better than scrolled barcharts.
+Of course I mentioned, if you have a long list, you're gonna have to do scrolling, and scrolling takes time.
+You'd have to do interaction, and that will take time.
+So in recent years, a couple of authors and designers, practitioners have proposed alternative visualizations that try to use the space more efficiently.
+So lemme swap over and show you a few of these.
+This tool is called Chubuk that my student Adil, and there's a link at the end of the presentation to this.
+It's just a web-based library for visualizing these things.
+So here's a scroll barchart of fictional data, so the data doesn't mean anything.
+So Belgium at the top, and if I scroll down to see the whole list, I think this is something like 150 items.
+I would clearly have to scroll to see the whole thing.
+A common way to visualize this, maybe just because it's one of those defaults in Tableau, is treemaps.
+Treemaps, if you know something about them, are designed, really, for visualizing hierarchies, so trees.
+And a list like this is certainly not a hierarchy.
+It's a flat list.
+But it turns out they can, it often happens in practice, either this or something like it, like a bubble chart where you have the area of visual marks showing the size of the value.
+And as a visualization designers, this would always used to make me cringe a bit, because we know from experience in graphical perception that assessing length, as length of a bar, is more accurate than assessing area.
+So that was one of the starting points and motivations for doing this, was to explore this phenomenon that we see that a lot of designers and practitioners use.
+Couple years ago, Steven Few, who's a visualization practitioner, proposed a technique that he called wrapped bars.
+So this is a wrapped bar.
+The idea is that you use the horizontal space of the charts more efficiently so that you can eliminate scrolling, and instead you introduce these columns.
+So in this case, we have, what is it? Five columns? That each show the bigger values from left to right, but of course that means you can see everything on the screen at one point.
+You don't have to scroll.
+The downside is that you lose some resolution now, because each of these columns get less horizontal space to fit in, so minute differences between an individual countries here might not be as obvious as they were in the other representation.
+So a couple years ago, my student Adil, who I mentioned one of the co-authors of this work, he proposed a technique that he called piled bars, that was inspired by this.
+But instead of using, well, we still segment the bar into pieces, but instead of using columns, we use the same baseline.
+So you see here that the bars now get stacked on top of each other, or piled on top of each other.
+So they all have the same baseline.
+So Belgium, let's see if I can find my cursor.
+Belgium still goes from the common origin all the way to the right here, but the smaller values are gonna be overlapping on top.
+So there's a bit of a wrapping here, too, where the segmentation begins.
+Then we used color gradients and shadows to make that more clear, but obviously, this is a representation that's less familiar than scrolled barchart, and even wrapped barcharts.
+So another addition to this pantheon of ranked list visualizations from recent years is a visualization called Zvinca Plots, that Steven Few, independently working with a designer called Daniel Zvinca proposed, and you see that the representation is very similar to our piled bars, but instead of using bars, we use dots.
+A little like Mike was mentioning in the questions of the previous talk here.
+So the dots now show the top values.
+So they don't show the entire bar.
+Which means you don't have overlap.
+You don't have over-plotting to the same degree.
+And then 2017, Xan, who's one of our co-authors, proposed the poster at InfoVis that he called packed bars, and the idea here is a little different.
+We still use horizontal space so that we can squeeze all the items on the screen at the same time, but they use the rectangle packing, where only the biggest items are shown with a common origin, though.
+So the blue ones.
+And then additional items are packed in a greeting algorithm where they fit.
+All right, so those are six representations, and as any visualization researcher worth their salt would say, which one is the best one? That was the starting point for this project.
+So to answer that question, we ran a crowdsourced graphical perception study where we wanted to compare accuracy and completion time for these six techniques, for three different representative tasks.
+And I'll talk about the tasks in a moment.
+And of course, the size of these lists that we're visualizing may also have an impact, so we looked at three different data sizes.
+75, 150, and 300 items.
+And I'm gonna mention that at the end as a limitation.
+These are not huge lists.
+So at the same time, typical dashboards don't have lists of thousands or hundreds of thousands of items for the type of categorical data we're dealing with.
+But still, this is, are still small lists, so I'm not gonna try to argue that this is a big dataset by any mean.
+Every participant saw ten repetitions, and you'll note here, the BP means between participants, and WP means within participants.
+Because these are crowdsourced studies, we can only keep crowd workers for a limited amount of time, and we didn't wanna train them on more than one technique and one task at any point in time.
+So every person saw 10 repetitions of one visualization for one task.
+So we planned to have 10 participants for each combination of technique and task.
+Because of some software concerns, we ran the study, and some login concerns, we ended up with 222 participants and 6684 trials.
+So what about the tasks? Well, we wanted a good spread of tasks that capture the type of things you might do with a ranked list visualization like this one.
+So the first task is a one-item type of task that deals with a single item.
+So we called it a rank task.
+Basically, the goal, you see the interface here that people would see through their web browsers, of marking an item and then asking the participant to rank what order, out of one to 75 items, is this particular item.
+So that was one item.
+The other one was on two items.
+So in this case, comparison.
+So given two items that are marked using a circle and a star, signify which one is smaller, and then estimate the size of the smaller one to the bigger one.
+And after a cardinality of one-two, the third one was more of an overview task that involved all of the items.
+The goal here was to correctorize the distribution by assessing the average of all the data that's in the view.
+All right, so we ran our study, and it's worth noting first, perhaps, that we have looked at this problem before.
+In 2016, we started a study like this then we published it in Graphics Interface in 2017, with Adil, my student at the time, he was finishing his PhD, and then Beterson, my colleague.
+But in that study, we had a smaller set of techniques to look at.
+We looked at treemaps, we looked at wrapped bars, and scrolled bars.
+So the addition in this new work is the three additional visualizations, and we also weren't satisfied with the overview task there.
+In that one, you were supposed to correctorize the distribution, so you had to give one of three options, either saying that the distribution of data points is more or less uniform, or if it's skewed to low values or high values.
+So that was pretty rough type of task.
+You could just give one of three values and it felt like a lot of that could be just clicked through by a crowd worker, rather than actually estimating averages.
+Anyway, so here's the results.
+I'm not gonna bore you with all the details.
+You can take a look at the paper for those.
+These are confidence intervals, 95% ones, for broken down by the task.
+Those are the three columns.
+And then you see technique per data size.
+So lemme just give you a summary.
+We found, in general, that wrapped bars had the best overall error, this is error, so how far off you were from the correct answer, had the best overall performance, even if scrolled bars was probably the most accurate one.
+Zvinca Plots did pretty poorly, except for the mean task, assessing the mean of the dataset.
+And I'll talk about that in a moment.
+Treemaps did surprising well.
+And again, this just goes against some of the wisdom of the field, knowing that area is harder to assess than length.
+We were a little surprised.
+Here's the completion time data.
+Again, I'll give you the highlights.
+Not surprisingly, scrolling bars were the slowest in all the examples, basically.
+And that's because there's interaction involved.
+You have to scroll up and down to see all the data values.
+The mean task was the most time consuming one.
+Trying to assess the entire data set, that's not too surprising that that takes time.
+Again, and yeah, so these are all, more or less, expected findings.
+So what does this all mean? Summarizing our implications, not surprisingly, as I already said, scrolled barcharts were accurate, perhaps, because they're familiar, but they were also slow.
+Treemaps surprised us by not being the slowest and not being the least accurate one.
+Actually, it was pretty good all around.
+Although, wrapped bars sort of outperformed the others in terms of all-round performance.
+So it's probably the visualization I should suggest.
+It has a good mix of familiarity as well as performance.
+Zvinca plots, I mentioned, did particularly well for the mean task, which is assessing an entire dataset.
+And that is, perhaps, because it really becomes more of a scatterplot.
+You're trying to find the centroid of the points, rather than bars, so that gets harder, whereas the centroid of the points, it's an easier task, perhaps.
+Limitations, we have a few.
+I mentioned already scale.
+We are not looking at big datasets.
+These are small things that we typically see in dashboards, but certainly something to look at in the future.
+And Daniel Zvinca, who's the designer of the Zvinca Plots, we've been in touch with him.
+He's a little disappointed that we didn't look at very large visualizations.
+And it's also could be argued that, perhaps, treemaps would do better if you have very large datasets, because you're doing a space-filling representation that efficiently uses all of available space.
+We also did low-level tasks, perhaps not those that you might, we think that they are building blocks to higher-level tasks, but we haven't tested that.
+And also, in talking to Steven Few, he was disappointed that we didn't involve data visualization experts, and just crowd workers, and perhaps some of these representations would have different performance if the people that were using them were actual experts.
+All right, so that sort of concludes what I'm gonna say.
+I just wanna finish with this slide.
+In the background, you see a chart from William Playfair's Political Atlas, and it's worth noting that William Playfair was a Scottish engineer, and he was also the inventor of the barcharts and a few other visual representations.
+And here's also the links to the website with that tool I showed you, as well as the experimental data.
+Thank you, and I'm happy to take your questions.
+(audience applauding) - [Host] Again, we have the microphones in the corners.
+Do you have a question, Michael? - [Michael] So with the pile bars with that gradient effect, I wonder if participants ever made the wrong impression and assumed the start of the gradient was the start of the baseline.
+Is that something that you could detect in your experiment results? And if so, how often did that happen? - So, in the experiments, there was no interaction.
+So you couldn't, what I can do now, is I can highlight so I see the whole thing.
+No, we didn't look for that effect.
+I'm not, maybe you have an idea of how to do it.
+We didn't think about looking at it.
+But it is something we heard from a lot of the people that informally looked at the representation.
+It's not trivial how it works, if you have no interaction.
+And it's easy to think that these are stacked.
+So one bar is stacked on top of the other.
+And then you obviously would have that concern.
+So we thought we were ingenious when we came up with this representation, but turned out that it wasn't as, you know, you need to be familiar with it.
+- [Michael] It didn't do so bad, so.
+- Yeah.
+- [Host] More questions? - [Audience Member] Hi, thank you for the nice talk.
+I was wondering, while you were talking, the table lens representation sort of squishes everything together, so you always see the entire, you don't have to scroll.
+Would that make any difference? Would that be an interesting thing to test? - Yes, I think that's a good point.
+So we set up a few requirements when we set the parameters for this study, and one was that you were able to identify each item, so that you'd have to make sure that these bars are big enough.
+And I was, in the table lens, they become minute little lines, so.
+- [Audience Member] Right, but you have focus areas and you mouse over to them. - Yeah, right.
+So I agree, that's one.
+The other thing was no interaction in our limitations.
+We wanted to sort of, except for the scrolling.
+We wanted to limit that part.
+But I think that's a good point.
+If you have, if you can compress, if you can do fisheye things, you can have different performance, certainly.
+- [Host] And if you could remember to say your name and affiliation when you ask the question, please? - [Mon] Excuse me, I have a question.
+I want to know-- - [Host] Could you say your name, please? - [Mon] Oh, sorry, my name is Mon Siat, and I come from the Hong Kong University of Science and Technology, And I'm wondering whether you have different, when you're considering the tasks, so have you considered why people use the rank list? Maybe different people, they want to show different scenes by the rankings, and in different conditions, maybe some other things are considered for them, or the space.
+You have different representation of the rank list.
+But the space, or some university, they want to show, they want to highlight their ranking, and they have given the requirements for the ranking.
+Do you ever surveyed or considered about that things? - So short answer is no.
+And the slightly longer one is that that's absolutely true.
+And as I said in my limitations, we wanted to focus on very low-level tasks that we think are building blocks to higher-level ones.
+But yes, the next step would be to look at more rich tasks than the ones that we did.
+So you might see things that you highlight there, certainly.
+- [Mon] Yeah, thank you.
+- [Host] So it occurred to me, looking at the treemap visualization, that the particular layout algorithm you chose has some impact on this, especially making it such that, at least on the far left, there's an obvious ordering for the ranking, and maybe it breaks down a little on the right-hand side.
+- Absolutely, yeah.
+- [Host] So is there maybe another algorithm that would make this even better? - Yeah, we talk about it briefly in the paper, and it's also interesting, I didn't note it in the presentation.
+That's one place where our new study differed from our old study.
+So we show that treemaps were not as bad as we thought.
+In the old study, they got poorer results, and that is because we used a different layout algorithm.
+So this is a squarified treemap layout algorithm, and as you note, there is that deterministic sum.
+You know, you get an ordering from area, large to small.
+So that will have an impact, effect.
+And what would be interesting to see if there are other layout algorithms that would make it even more clear.
+- [Host] Cool.
+So we have time for one more question while the speakers switch.
+- [Mike] So looking at the treemap.
+I'm sorry, hi, I'm Mike Newardheisen, I'm with Microsoft.
+Looking at your treemap, it seems like the data is fairly closely in the same neighborhood, like rough magnitude.
+But if you had a different kind of disparity in data, like maybe more a logarithmic scale, how would you think that might affect your results? - Yeah, so if you take a look at the website, there's an option, so you can change the skew data, and I've been unplugged so I can't show you.
+But I think the problem with treemaps is that the items get small, the labels disappear, so that, we wanted to avoid that in our study, because then you couldn't read the items.
+So we only looked at uniform distributions where you have that effect, as you know.
+I think treemaps are gonna do better for that type of situation.
+That would be my gut feeling.
+- [Host] Great, thanks again.

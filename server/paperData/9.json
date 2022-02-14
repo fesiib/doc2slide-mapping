@@ -1,0 +1,1487 @@
+{
+  "abstractText": {
+    "page": 0,
+    "region": {
+      "x1": 53.31999969482422,
+      "x2": 295.7434997558594,
+      "y1": 219.90187072753906,
+      "y2": 432.55499267578125
+    },
+    "text": "ABSTRACT This paper explores how human perceptions, actions, and interactions can be changed through an embodied and active experience of being a smaller person in a real-world environment, which we call an egocentric smaller person experience. We developed a wearable visual translator that provides the perspective of a smaller person by shifting the wearer’s eyesight level down to their waist using a head-mounted display and a stereo camera module, while allowing for eld of view control through head movements. In this study, we investigated how the developed device can modify the wearer’s body representation and experiences based on a eld study conducted at a nursing school and museums, and through lab studies. It was observed that the participants changed their perceptions, actions, and interactions because they are considered to have perceived themselves as being smaller. Using this device, designers and teachers can understand the perspectives of other people in an existing environment."
+  },
+  "figures": [{
+    "caption": "Figure 1: We explore a wearable visual device that allows a user to change their body representation, in realtime, to that of a small-person",
+    "captionBoundary": {
+      "x1": 317.9549865722656,
+      "x2": 558.18994140625,
+      "y1": 363.82635498046875,
+      "y2": 391.375
+    },
+    "figType": "Figure",
+    "imageText": [],
+    "name": "1",
+    "page": 0,
+    "regionBoundary": {
+      "x1": 317.0,
+      "x2": 559.0,
+      "y1": 216.0,
+      "y2": 350.0
+    }
+  }, {
+    "caption": "Figure 11: Wearer’s Action: Experiment Setup and Conditions: (a) Watching a Video (b) Small-person Experience",
+    "captionBoundary": {
+      "x1": 317.9549865722656,
+      "x2": 559.794921875,
+      "y1": 219.25833129882812,
+      "y2": 235.84698486328125
+    },
+    "figType": "Figure",
+    "imageText": ["Participant", "Experimenter", "Recorded", "Video", "(POV", "from", "waist)"],
+    "name": "11",
+    "page": 5,
+    "regionBoundary": {
+      "x1": 317.0,
+      "x2": 559.0,
+      "y1": 92.0,
+      "y2": 206.0
+    }
+  }, {
+    "caption": "Figure 10: Wearer’s Perception: Experiment Results",
+    "captionBoundary": {
+      "x1": 69.70600128173828,
+      "x2": 278.12066650390625,
+      "y1": 219.25833129882812,
+      "y2": 224.88897705078125
+    },
+    "figType": "Figure",
+    "imageText": ["38.9", "55.4", "90.2", "102.8", "116.0", "100", "120", "140", "160", "180", "200", "220", "20", "40", "60", "80", "EY_STA", "EY_SIT", "HC_SIT", "WC_STAHC_STA", "Reported", "Personal", "Distance", "[cm]"],
+    "name": "10",
+    "page": 5,
+    "regionBoundary": {
+      "x1": 62.06463623046875,
+      "x2": 286.0,
+      "y1": 96.40773010253906,
+      "y2": 205.0
+    }
+  }, {
+    "caption": "Figure 2: Related Works",
+    "captionBoundary": {
+      "x1": 389.5119934082031,
+      "x2": 486.640625,
+      "y1": 206.74533081054688,
+      "y2": 212.3759765625
+    },
+    "figType": "Figure",
+    "imageText": ["Virtual", "World", "Real", "World", "Passive", "Experience", "Active", "Experience", "Rubber", "Hand", "Illusion", "Dummy", "Body", "Video", "Screen", "Active", "|", "Embodied", "|", "Real", "World", "Computer", "Graphics", "Pointing", "Devices", "Immersive", "VR", "Full", "Body", "Interaction", "Rubber", "Hand", "Illusion", "Video/CG", "Egocentric", "Experience"],
+    "name": "2",
+    "page": 1,
+    "regionBoundary": {
+      "x1": 317.0,
+      "x2": 559.0,
+      "y1": 92.0,
+      "y2": 193.0
+    }
+  }, {
+    "caption": "Figure 12: Wearer’s Action: Experiment Results",
+    "captionBoundary": {
+      "x1": 78.06700134277344,
+      "x2": 269.760009765625,
+      "y1": 206.74533081054688,
+      "y2": 212.3759765625
+    },
+    "figType": "Figure",
+    "imageText": ["p", "<", "0.05", "Hand", "Height", "[pixel]", "Video", "Smaller-person", "360", "300", "240", "180", "120", "0", "60"],
+    "name": "12",
+    "page": 6,
+    "regionBoundary": {
+      "x1": 56.0306510925293,
+      "x2": 290.0,
+      "y1": 97.00782775878906,
+      "y2": 190.5115966796875
+    }
+  }, {
+    "caption": "Figure 14: Wearer’s Interaction: Body Representation",
+    "captionBoundary": {
+      "x1": 330.5669860839844,
+      "x2": 545.58056640625,
+      "y1": 349.204345703125,
+      "y2": 354.8349914550781
+    },
+    "figType": "Figure",
+    "imageText": ["10", "0", "2", "4", "6", "8", "Leg", "Leg"],
+    "name": "14",
+    "page": 6,
+    "regionBoundary": {
+      "x1": 317.0,
+      "x2": 559.0,
+      "y1": 235.0,
+      "y2": 335.0
+    }
+  }, {
+    "caption": "Figure 13: Wearer’s Interaction: Likert Questionnaire",
+    "captionBoundary": {
+      "x1": 330.7380065917969,
+      "x2": 545.410888671875,
+      "y1": 206.74533081054688,
+      "y2": 212.3759765625
+    },
+    "figType": "Figure",
+    "imageText": ["1", "2", "3", "average(×),", "median(", "|", "),", "IQR,", "outlier(�)", "and", "total", "range", "of", "variation", "I", "felt", "an", "open", "feeling", "I", "felt", "an", "opressive", "feeling", "I", "felt", "like", "surroundings", "became", "bigger", "I", "felt", "like", "my", "stature", "became", "shorter", "Disagree", "(0)", "(4)", "Agree"],
+    "name": "13",
+    "page": 6,
+    "regionBoundary": {
+      "x1": 323.0,
+      "x2": 556.581787109375,
+      "y1": 93.56446838378906,
+      "y2": 191.67840576171875
+    }
+  }, {
+    "caption": "Figure 18: Possible Scenarios: (a) Educational tool for medical sta and nursing teachers (b) Design tool for spatial and product designers",
+    "captionBoundary": {
+      "x1": 53.79800033569336,
+      "x2": 295.63787841796875,
+      "y1": 195.48434448242188,
+      "y2": 223.032958984375
+    },
+    "figType": "Figure",
+    "imageText": [],
+    "name": "18",
+    "page": 9,
+    "regionBoundary": {
+      "x1": 53.0,
+      "x2": 295.0,
+      "y1": 92.0,
+      "y2": 182.0
+    }
+  }, {
+    "caption": "Figure 4: Overview of the Developed Wearable Device",
+    "captionBoundary": {
+      "x1": 329.9530029296875,
+      "x2": 546.1950073242188,
+      "y1": 219.25833129882812,
+      "y2": 224.88897705078125
+    },
+    "figType": "Figure",
+    "imageText": ["(Hand", "Exoskeletons)", "Mobile", "Battery", "Single-board", "Computer", "Stereo", "Camera", "Module", "HMD"],
+    "name": "4",
+    "page": 2,
+    "regionBoundary": {
+      "x1": 317.0,
+      "x2": 559.0,
+      "y1": 92.0,
+      "y2": 206.0
+    }
+  }, {
+    "caption": "Figure 3: Concept of Egocentric Small-person Experience",
+    "captionBoundary": {
+      "x1": 58.49800109863281,
+      "x2": 289.3276062011719,
+      "y1": 219.25833129882812,
+      "y2": 224.88897705078125
+    },
+    "figType": "Figure",
+    "imageText": ["(Motion", "Scale)", "Visual", "Height", "Active", "Interactions", "with", "People", "&", "Objects", "Wearer", "Body", "Representation", "Real", "Environment", "80-100cm"],
+    "name": "3",
+    "page": 2,
+    "regionBoundary": {
+      "x1": 53.0,
+      "x2": 294.0,
+      "y1": 92.0,
+      "y2": 204.06646728515625
+    }
+  }, {
+    "caption": "Figure 15: Wearer’s Interaction: Interaction Observation",
+    "captionBoundary": {
+      "x1": 192.61099243164062,
+      "x2": 419.37896728515625,
+      "y1": 171.21835327148438,
+      "y2": 176.8489990234375
+    },
+    "figType": "Figure",
+    "imageText": ["conference", "nursery", "conference", "hospital", "conference", "nursery", "museum", "hospital"],
+    "name": "15",
+    "page": 7,
+    "regionBoundary": {
+      "x1": 53.0,
+      "x2": 559.0,
+      "y1": 92.0,
+      "y2": 158.0
+    }
+  }, {
+    "caption": "Figure 5: System Architecture",
+    "captionBoundary": {
+      "x1": 113.9010009765625,
+      "x2": 233.93777465820312,
+      "y1": 219.25833129882812,
+      "y2": 224.88897705078125
+    },
+    "figType": "Figure",
+    "imageText": ["Wire", "to", "contrain", "range", "of", "motion", "HMD", "Hand", "Exoskeleton", "Microcontroller", "(Ateml", "SAMD21)", "Head", "Orientation", "USB2.0", "Stereo", "Images", "&", "Audio", "HDMI", "9-Axis", "Motion", "SPI", "Waist", "Orientation", "USB2.0", "Fish-eye", "Images", "&", "Stereo", "Audio", "USB2.0", "Microphones", "Fish-eye", "Cameras", "Magnetmeter", "Gyroscope", "Accelerometer", "Single-board", "Computer", "(Openframeworks)"],
+    "name": "5",
+    "page": 3,
+    "regionBoundary": {
+      "x1": 59.0,
+      "x2": 289.0,
+      "y1": 92.0,
+      "y2": 206.0
+    }
+  }, {
+    "caption": "Figure 6: System Con guration of the Visual Translator",
+    "captionBoundary": {
+      "x1": 325.40301513671875,
+      "x2": 550.7454833984375,
+      "y1": 219.25833129882812,
+      "y2": 224.88897705078125
+    },
+    "figType": "Figure",
+    "imageText": ["9-Axis", "Motion", "Sensor", "60mm", "Microcontroller", "Velcro-tape", "Microphone", "Fish-eye", "Camera", "44mm", "62mm"],
+    "name": "6",
+    "page": 3,
+    "regionBoundary": {
+      "x1": 317.0,
+      "x2": 559.0,
+      "y1": 92.0,
+      "y2": 206.0
+    }
+  }, {
+    "caption": "Figure 7: Visual Perspectives: (a) Captured image (b) Usual level (c) Waist level (d) Looking up from the waist level",
+    "captionBoundary": {
+      "x1": 317.9549865722656,
+      "x2": 558.1900634765625,
+      "y1": 478.4453430175781,
+      "y2": 495.03497314453125
+    },
+    "figType": "Figure",
+    "imageText": [],
+    "name": "7",
+    "page": 3,
+    "regionBoundary": {
+      "x1": 317.0,
+      "x2": 559.0,
+      "y1": 396.0,
+      "y2": 465.0
+    }
+  }, {
+    "caption": "Figure 16: Horizontal error was also observed in 8 participants, which would suggest their perceived arm length was shortened",
+    "captionBoundary": {
+      "x1": 53.79800033569336,
+      "x2": 295.6379089355469,
+      "y1": 181.72134399414062,
+      "y2": 209.26995849609375
+    },
+    "figType": "Figure",
+    "imageText": [],
+    "name": "16",
+    "page": 8,
+    "regionBoundary": {
+      "x1": 53.0,
+      "x2": 295.0,
+      "y1": 92.0,
+      "y2": 168.0
+    }
+  }, {
+    "caption": "Figure 17: 13 participants looked up higher under (2) smaller person condition than under (1) video condition",
+    "captionBoundary": {
+      "x1": 317.9549865722656,
+      "x2": 558.37841796875,
+      "y1": 181.72134399414062,
+      "y2": 198.31097412109375
+    },
+    "figType": "Figure",
+    "imageText": ["Head", "Orientation", "(Pitch)", "[deg]", "p", "<", "0.05", "Video", "Smaller-person", "80", "60", "40", "20", "0"],
+    "name": "17",
+    "page": 8,
+    "regionBoundary": {
+      "x1": 323.21484375,
+      "x2": 555.0,
+      "y1": 96.66047668457031,
+      "y2": 165.792236328125
+    }
+  }, {
+    "caption": "Figure 8: Overview of the User Studies",
+    "captionBoundary": {
+      "x1": 96.76200103759766,
+      "x2": 251.06680297851562,
+      "y1": 181.72134399414062,
+      "y2": 187.35198974609375
+    },
+    "figType": "Figure",
+    "imageText": ["Interaction", "Experience", "FeedbackInterpersonal", "Distance", "Perception", "Action", "Handshake", "Height"],
+    "name": "8",
+    "page": 4,
+    "regionBoundary": {
+      "x1": 60.0,
+      "x2": 288.52178955078125,
+      "y1": 93.0,
+      "y2": 168.0
+    }
+  }, {
+    "caption": "Figure 9: Wearer’s Perception: (a) Experiment overview (b) When the participant calls “stop\" (c) Experiment conditions",
+    "captionBoundary": {
+      "x1": 317.49798583984375,
+      "x2": 558.7550048828125,
+      "y1": 231.77035522460938,
+      "y2": 248.3599853515625
+    },
+    "figType": "Figure",
+    "imageText": ["HMD", "Camera", "Participant", "Experimenter", "EY_STA", "EY_SIT", "HC_STA", "HC_SIT", "WC_STA"],
+    "name": "9",
+    "page": 4,
+    "regionBoundary": {
+      "x1": 317.0,
+      "x2": 559.0,
+      "y1": 92.0,
+      "y2": 218.0
+    }
+  }],
+  "sections": [{
+    "paragraphs": [{
+      "page": 0,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 288.3915100097656,
+        "y1": 462.9271545410156,
+        "y2": 469.4329833984375
+      },
+      "text": "• Human-centered computing→ Interaction design."
+    }],
+    "title": {
+      "page": 0,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 128.51052856445312,
+        "y1": 448.0628356933594,
+        "y2": 454.4889831542969
+      },
+      "text": "CCS CONCEPTS"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 0,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 295.74176025390625,
+        "y1": 499.8061828613281,
+        "y2": 518.2669677734375
+      },
+      "text": "Embodied Interaction; Egocentric Experience; Body Representation; Wearable Device; Virtual Reality"
+    }],
+    "title": {
+      "page": 0,
+      "region": {
+        "x1": 53.79798889160156,
+        "x2": 111.39408874511719,
+        "y1": 484.94183349609375,
+        "y2": 491.36798095703125
+      },
+      "text": "KEYWORDS"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 0,
+      "region": {
+        "x1": 53.654998779296875,
+        "x2": 295.0099182128906,
+        "y1": 540.6411743164062,
+        "y2": 579.3729858398438
+      },
+      "text": "Jun Nishida, Soichiro Matsuda, Mika Oki, Hikaru Takatori, Kosuke Sato, and Kenji Suzuki. 2019. Egocentric Smaller-person Experience through a Change in Visual Perspective. In CHI Conference on Human Factors in Computing Systems Proceedings (CHI 2019), May 4–9,"
+    }, {
+      "page": 0,
+      "region": {
+        "x1": 53.24800109863281,
+        "x2": 294.1926574707031,
+        "y1": 595.5426025390625,
+        "y2": 712.3289794921875
+      },
+      "text": "Permission to make digital or hard copies of all or part of this work for personal or classroom use is granted without fee provided that copies are not made or distributed for pro t or commercial advantage and that copies bear this notice and the full citation on the rst page. Copyrights for components of this work owned by others than ACMmust be honored. Abstracting with credit is permitted. To copy otherwise, or republish, to post on servers or to redistribute to lists, requires prior speci c permission and/or a fee. Request permissions from permissions@acm.org. CHI 2019, May 4–9, 2019, Glasgow, Scotland UK © 2019 Association for Computing Machinery. ACM ISBN 978-1-4503-5970-2/19/05. . . $15.00 https://doi.org/10.1145/3290605.3300926"
+    }, {
+      "page": 0,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 559.5679321289062,
+        "y1": 417.33819580078125,
+        "y2": 434.1520080566406
+      },
+      "text": "2019, Glasgow, Scotland UK. ACM, New York, NY, USA, 12 pages. https://doi.org/10.1145/3290605.3300926"
+    }],
+    "title": {
+      "page": 0,
+      "region": {
+        "x1": 53.46699905395508,
+        "x2": 151.32192993164062,
+        "y1": 529.9063110351562,
+        "y2": 535.5369873046875
+      },
+      "text": "ACM Reference Format:"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 0,
+      "region": {
+        "x1": 317.47698974609375,
+        "x2": 559.9019775390625,
+        "y1": 466.71917724609375,
+        "y2": 712.3289794921875
+      },
+      "text": "With the recent advancements in wearable technologies and virtual reality techniques, human’s embodied experiences are being augmented beyond the limitations of space and time. Wearable devices have already achieved an extension of the user’s presence in a remote place by sharing their rst-person perspective [1] or by surrogating one’s body into a robot [2] or other person as an actuator [3, 4]. Recent studies have also allowed users to not only extend their presence but also extend their sense of ownership into an another person’s body [12] or another life form [5], to gaining knowledge by sharing multiple visual perspectives among people [6], or to provide a third eye on their back to see behind them [7]. Interestingly, it was mentioned that changing bodily sensations through such technologies also changes one’s perceptions, actions, and interactions [21]. If it becomes possible to change one’s body representation and perspective in a real-world environment, a more empathic and active experience will be provided for product designers and educational sta when trying to design living environments or communicating with other people. Video materials [10], an illusion technique used for extending the"
+    }, {
+      "page": 0,
+      "region": {
+        "x1": 54.0,
+        "x2": 558.0009765625,
+        "y1": 750.914794921875,
+        "y2": 756.7197875976562
+      },
+      "text": "Paper 696 Page 1"
+    }, {
+      "page": 1,
+      "region": {
+        "x1": 53.429779052734375,
+        "x2": 295.7391662597656,
+        "y1": 96.1091537475586,
+        "y2": 258.031982421875
+      },
+      "text": "sense of ownership to a small doll [13], or an immersive virtual reality technique for converting the user’s body into a smaller avatar [15] have been used to create the sense of being a smaller person, through which the user’s experience may feel passive. Therefore, in this research, we provide the experience of a smaller person in an embodied and active manner in a real world environment, by changing the user’s body representation, such as their visual and haptic perspectives, into that of a small-person on the user’s body by means of a wearable system. With this form, the user’s fundamental interaction capabilities, including reaching, walking, touching, and carrying on a conversation voluntarily would be preserved; thus it would provide more egocentric experience."
+    }, {
+      "page": 1,
+      "region": {
+        "x1": 53.42951965332031,
+        "x2": 295.7460632324219,
+        "y1": 275.4371643066406,
+        "y2": 389.53900146484375
+      },
+      "text": "In this paper, we 1) established and nalized the device con gurations in which the spatial correspondence between the wearer and device, and its usability, were enhanced, 2) conducted a eld study at a nursing school, and lab studies to explore how a wearer’s experience regarding perceptions (study 1), actions (study 2), and interactions (study 3) can be changed, and 3) included de nitions of the concept applied as well as discussions regarding how active visual and motor experiences in a real environment contribute to a modi cation of one’s self-representation."
+    }, {
+      "page": 1,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 295.7438659667969,
+        "y1": 394.9881591796875,
+        "y2": 473.2250061035156
+      },
+      "text": "A preliminary prototype [8, 9] have been presented. These papers focus on system implementations of an early prototype developed in 2014, and do not include dedicated studies on the understanding of users, whereas the present paper focuses on how users perceive and behave when using a more sophisticated device. We describe the improvements achieved in the implementation section."
+    }],
+    "title": {
+      "page": 0,
+      "region": {
+        "x1": 317.69598388671875,
+        "x2": 410.8002014160156,
+        "y1": 451.8548583984375,
+        "y2": 458.281005859375
+      },
+      "text": "1 INTRODUCTION"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 1,
+      "region": {
+        "x1": 53.499000549316406,
+        "x2": 294.2416076660156,
+        "y1": 514.5401611328125,
+        "y2": 544.9559936523438
+      },
+      "text": "There are several attempts to simulate or reproduce the sense of being a smaller-person in a virtual environment (VE) or in a real world environment (RE)."
+    }, {
+      "page": 1,
+      "region": {
+        "x1": 53.45000076293945,
+        "x2": 295.7337951660156,
+        "y1": 571.4068603515625,
+        "y2": 712.3289794921875
+      },
+      "text": "Passive Visual Experience in RE A hand-held video camera placed at a child’s eye level was used for recording a smaller person’s perspective in order to investigate the usability of objects and the architecture in a public space [10]. The users observed a bookstore, a grocery store, and vending machines from a lower perspective, and reported that such new tools helped in exploring and nding new discoveries in an existing environment. Under this scenario, the camera direction was xed, and this passive and allocentric visual experience did not provide any somatosensory feedback such as a sense of position or muscle fatigue from the head orientation (Fig.2 (1))."
+    }, {
+      "page": 1,
+      "region": {
+        "x1": 317.6059875488281,
+        "x2": 559.9028930664062,
+        "y1": 236.15882873535156,
+        "y2": 484.677001953125
+      },
+      "text": "Passive Visual and Tactile Experience in RE Several studies have used visual feedback through a headmounted display (HMD) and a video camera, along with the rubber hand illusion (RHI) [11] for creating a sense of being another person [12], a small doll [13], and even a ghost [14] (Fig.2 (2)). These psychological studies have reported that changing one’s body representation modi es their perception toward humans and objects because our bodies are used as a reference in the visual perception of size and distance. For instance, when a participant’s ownership was extended to the body of a small doll by means of the RHI, the participant perceived objects to be larger and farther away [13]. Although these studies achieved a change in body representation to that of another body in a real environment, the users had to sit or lay down to receive a passive visual and tactile stimulation for creating a stable illusion, and to keep body posture for preserving the e ect of illusion. Thus, their interaction would be in a passive manner. We also explore how our egocentric small-person experience contribute to the change of the wearer’s perception, especially the perception toward human in study 1."
+    }, {
+      "page": 1,
+      "region": {
+        "x1": 317.6260070800781,
+        "x2": 559.8942260742188,
+        "y1": 499.67584228515625,
+        "y2": 712.3289794921875
+      },
+      "text": "Active Visual and Proprioceptive Experience in VE Virtual reality (VR) techniques are also used for producing a smaller height [15] [16] or a smaller hand [17, 18]. These systems achieved the experience of being a smaller person through visual and motor experience in a VE (Fig.2 (3)). Changing the bodily sensation in a VE also changes perceptions and actions. Reducing person’s height in a social situation such as a VR train ride resulted in more negative views of the self and an increase of the occurrence of paranoia [19]. Participants assigned taller avatars in a VE behaved more con dently in a negotiation task than participants assigned shorter avatars [20]. Having a di erent skin color on one’s virtual avatar reduces implicit racial bias [21, 22]. Our study attempts to change the body representation in a RE; therefore, not only will the actions of the wearer change, so will the actions the surrounding people. We also discuss this topic based on observations conducted through the user studies, demonstrations, and exhibitions in science museums."
+    }, {
+      "page": 1,
+      "region": {
+        "x1": 54.0,
+        "x2": 558.0009765625,
+        "y1": 750.914794921875,
+        "y2": 756.7197875976562
+      },
+      "text": "Paper 696 Page 2"
+    }, {
+      "page": 2,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 295.7337341308594,
+        "y1": 257.78985595703125,
+        "y2": 470.4419860839844
+      },
+      "text": "Active Visual and Proprioceptive Experience in RE Several studies have achieved to reproduce one’s bodily sensation into that of elderly or impaired individuals [23–25] in a RE by visual, haptic, or kinesthetic systems. Child vision kit (distributed by Honda Motor Co., Ltd.) reproduces static child vision properties including narrow horizontal and vertical elds of view (FOVs) using cardboard goggles [26]. This kit aims to gain the awareness and knowledge of a child, and to encourage safe driving. MIT’s wearable suit, called AGNES, is capable of reproducing the interactions of an elderly person on the wearer’s body by inducing motor and visual impairments [27, 28]. Using this suit, the wearers can explore the di culty in seeing tra c signs in a public transportation system or picking up objects at a grocery store. These studies indicated that reproducing one’s embodied experience on a wearer’s body helped to acquire one’s embodied knowledge with more emotional and subjective memories, allowing them to gain empathy for other people."
+    }],
+    "title": {
+      "page": 1,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 153.1988525390625,
+        "y1": 499.67584228515625,
+        "y2": 506.10198974609375
+      },
+      "text": "2 RELATEDWORKS"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 2,
+      "region": {
+        "x1": 53.499000549316406,
+        "x2": 295.74346923828125,
+        "y1": 502.5851745605469,
+        "y2": 712.3289794921875
+      },
+      "text": "In this study, we attempts to change the wearer’s body representation to have a small-person’s perspective in a RE, with a capability of full body interaction by using wearable devices (Fig.2 (4)). We investigate the feasibility and properties of active small-person experience in RE through both eld and lab studies, and discuss its challenges and opportunities. To allow this, the concept of a body representation transformation into a smaller person using a wearable VR device has been proposed [8, 9], as depicted in Fig. 3. Visual stimuli plays an important role in recognizing the relationship between a user’s own body representation [29–32]. Changing the height of the eye level to a lower position while allowing for FOV control will allow an egocentric visual perspective of a smaller person to be achieved. Tiny hands and a shorter length of the upper limbs are other important factors enhancing the sense of being smaller. In this paper, we investigated the visual perspective solely to more clearly determine its e ect in changing a user’s perceptions and actions."
+    }],
+    "title": {
+      "page": 2,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 275.9928283691406,
+        "y1": 487.7208557128906,
+        "y2": 494.1470031738281
+      },
+      "text": "3 EGOCENTRIC SMALL-PERSON EXPERIENCE"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 2,
+      "region": {
+        "x1": 317.656005859375,
+        "x2": 559.894287109375,
+        "y1": 261.5211486816406,
+        "y2": 279.98199462890625
+      },
+      "text": "To make our interactions egocentric in a real-world environment, we focused on the following design goals."
+    }, {
+      "page": 2,
+      "region": {
+        "x1": 317.9549560546875,
+        "x2": 560.4375,
+        "y1": 291.4091796875,
+        "y2": 642.0880126953125
+      },
+      "text": "Wearable form. This allows users to freely walk around and explore a real environment, to reach and interact with objects, and to have conversations with other people based on their own intention, action, and timing. Allowing visual and proprioceptive feedback to be received would foster a modi cation of the body representation, in addition to enhancing the sense of presence and immersion [34, 35]. Such reachability and intentional actions will encourage explorative actions of the user. Spatial correspondence. Spatial correspondence between the user’s actions and the device control should be established to allow the wearer to easily understand how to control their viewpoint in the system, which is a natural head orientation in our con guration. Modality correspondence. Modality correspondence between the real and presented environment should bematched. In our system, the real world is presented in an immersive manner, and thus the wearers are able to recognize their space, objects, and other people by using their own existing social and motor knowledge. This will make it easier to dene their physical and social relationships, and enhance the feeling of presence and the reality of people and objects. Temporal correspondence. Temporal correspondence between the user’s input and the device’s output plays an important role in preserving the sense of agency. We carefully designed and evaluated the latency of the camera-HMD system so that the wearer can feel that the presented images are associated with the wearer’s action, and that the device is a part of the wearer’s body."
+    }, {
+      "page": 2,
+      "region": {
+        "x1": 54.0,
+        "x2": 558.0009765625,
+        "y1": 750.914794921875,
+        "y2": 756.7197875976562
+      },
+      "text": "Paper 696 Page 3"
+    }],
+    "title": {
+      "page": 2,
+      "region": {
+        "x1": 317.95501708984375,
+        "x2": 416.40948486328125,
+        "y1": 246.65687561035156,
+        "y2": 253.0830078125
+      },
+      "text": "Design Consideration"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 3,
+      "region": {
+        "x1": 53.43000030517578,
+        "x2": 294.05999755859375,
+        "y1": 261.1911926269531,
+        "y2": 327.47198486328125
+      },
+      "text": "To realize the concept of changing a body representation into that of a smaller person, we have been developing a wearable device to change the visual perspective, as shown in Fig. 4. The visual translator comprises an HMD, a stereo camera module, a sensor belt, a single-board computer with processing software, and a mobile battery (Fig. 5)."
+    }],
+    "title": {
+      "page": 3,
+      "region": {
+        "x1": 53.53900146484375,
+        "x2": 196.8567657470703,
+        "y1": 246.3268585205078,
+        "y2": 252.75299072265625
+      },
+      "text": "4 DEVICE IMPLEMENTATION"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 3,
+      "region": {
+        "x1": 53.31999969482422,
+        "x2": 295.7309265136719,
+        "y1": 352.00018310546875,
+        "y2": 633.4749755859375
+      },
+      "text": "We use an Oculus HMD (Development Kit 2, Oculus, Inc.) to provide an immersive experience. The HMD is connected to a single-board computer (Intel Compute Stick, Intel, Inc.) or a laptop (MacBook Pro, Apple, Inc.). The wearer’s head orientation can be captured in yaw-pitch-roll format. Figure 6 shows the developed stereo camera module and the sensor belt, which is equipped with two sh-eye cameras (ELPUSBFHD01M-L180, Ailipu Technology Co., Ltd, HD@60fps). Each camera module has a 180◦ sh-eye lens.The two camera modules are placed at a distance of 62 mm. Their dimensions are 148 × 44 × 18 mm (depth), and the total weight is 107 g. The wearer attaches the sensor belt at their waist position. It has a nine-axis motion sensor (MPU-9250, Invensense, Inc.) and amicrocontroller (Atmel SAMD21, Atmel) for measuring the wearer’s waist orientation in the yaw-pitch-roll format. It also has a hook and loop tape for securing the stereo camera module such that the wear can move their eyes from the HMD position to the belt position. This interaction causes a strong feeling of being a smaller. The dimensions are 97 × 66× 12 mm (depth), and the total mass is 146 g. Figure 7 shows a wearer’s normal view, and a reproduced view of a smaller person. Two microphones are also embedded into the camera module to transfer the captured sound around the wearer’s waist to a headphone."
+    }],
+    "title": {
+      "page": 3,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 151.6844940185547,
+        "y1": 337.1358337402344,
+        "y2": 343.5619812011719
+      },
+      "text": "Device Configuration"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 3,
+      "region": {
+        "x1": 53.499000549316406,
+        "x2": 294.3126220703125,
+        "y1": 655.5535888671875,
+        "y2": 712.3289794921875
+      },
+      "text": "The images are captured from 180◦ lenses, and thus they should be transformed into rectilinear images, as shown in Fig. 7. We con gured the rendering software, which can map the captured spherical image onto a 3D sphere model as a texture, and then project onto a 2D image using an"
+    }, {
+      "page": 3,
+      "region": {
+        "x1": 317.656005859375,
+        "x2": 558.3917846679688,
+        "y1": 245.09413146972656,
+        "y2": 383.1059875488281
+      },
+      "text": "openFrameworks environment. We measured the FOV of the developed device as ±40◦ for the horizontal axis and ±80◦ for the vertical axis. Because the corrected images are cropped to a ratio of 16 × 9 and then rotated by 90◦, the horizontal FOV is slightly limited compared with that of the vertical axis. However, the wearers tend to look up when someone is facing them because they are perceived as being bigger, and thus a wider FOV on the vertical axis is preferred. A system latency was tested using a high-speed camera (240 fps). The duration between the LED light emission in front of the camera module and its display on the HMD was measured (mean=117.6 ms; SD=15.8ms; N=10)."
+    }, {
+      "page": 3,
+      "region": {
+        "x1": 317.5870056152344,
+        "x2": 559.8949584960938,
+        "y1": 514.5401611328125,
+        "y2": 712.3289794921875
+      },
+      "text": "System advantages: In the related preliminary prototype [8, 9], a pan-tilt mechanism composed of servo motors was used to change the viewpoint; however, this makes the device much larger, resulting in a 20 cm distance created between the cameras and the waist, which reduces the spatial correspondence along the horizontal axis between the device and the human eye, thereby decreasing the feeling of integration with the device. In addition, the total weight of the device was heavy at 600 g, resulting in reducing the responsiveness and lifetime of the pan-tilt. The wearer requires help from another person when attaching the device. In this paper, we solved these problems by using a pair of sh eye cameras, allowing a reduction in the total weight and allowing a simple structure and easy attachment by a single person. We also implemented high-pass (0.05 rad/s), low-pass (1.74 rad/s) lters, and a digital image stabilizer to reduce both angular drift in the sensors and uctuations caused by walking."
+    }, {
+      "page": 3,
+      "region": {
+        "x1": 54.0,
+        "x2": 558.0009765625,
+        "y1": 750.914794921875,
+        "y2": 756.7197875976562
+      },
+      "text": "Paper 696 Page 4"
+    }],
+    "title": {
+      "page": 3,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 132.82452392578125,
+        "y1": 643.1378784179688,
+        "y2": 649.5640258789062
+      },
+      "text": "Image Processing"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 4,
+      "region": {
+        "x1": 53.40999984741211,
+        "x2": 295.7418212890625,
+        "y1": 234.06312561035156,
+        "y2": 336.2099914550781
+      },
+      "text": "To investigate how the wearer’s perceptions, actions, and interactions can be modi ed through the proposed egocentric experience of a smaller person, we investigated the following three factors, which are essential for the understanding of the users: 1) wearer’s perception on social relationship with other humans by measuring their personal space, 2) wearer’s action during handshake task, and 3) wearer’s interaction with people and objects through observations during the demonstrations and experiments. (Fig. 8)"
+    }],
+    "title": {
+      "page": 4,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 137.8159942626953,
+        "y1": 219.19886779785156,
+        "y2": 225.625
+      },
+      "text": "5 USER STUDIES"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 4,
+      "region": {
+        "x1": 53.43000030517578,
+        "x2": 295.7344970703125,
+        "y1": 383.0331726074219,
+        "y2": 712.3289794921875
+      },
+      "text": "To observe the changes in social relationship through the egocentric experience of a smaller person, we measured the wearer’s personal space. A personal space is the physical space surrounding an individual, an encroachment into which can feel threatening or uncomfortable [36]. Previous studies have demonstrated that the size of one’s own sensed body, triggered by visual perception, directly in uences the perception of object sizes and distances when the participants laid on a bed during the experiment [13]. Another study investigated one’s personal space toward di erent persons and objects in a virtual environment [37]. We examined whether such phenomena are also e ective when the wearer’s body representation is modi ed using our wearable devices in a real environment. We focused particularly on the perception of size and distance toward people, as a way to investigate how the proposed experience can change the relationship between two persons, which would be valuable knowledge for an educational sta . We used a stop-distance method for measuring the personal space. This method is typically used in psychological studies [38], and many studies have been conducted to investigate di erences in personal space between people under various conditions such as age, gender [39], or with/without disease [40]. We especially focus on how the personal space can be changed by two conditions; when the camera is placed at HMD (usual POV, condition (3)); and at the waist (lower POV, condition (5)), to observe the e ect of eye level in shaping personal space in a RE."
+    }],
+    "title": {
+      "page": 4,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 155.34088134765625,
+        "y1": 353.224853515625,
+        "y2": 374.5950012207031
+      },
+      "text": "1. Wearer’s Perception Objective"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 4,
+      "region": {
+        "x1": 317.5865173339844,
+        "x2": 559.392822265625,
+        "y1": 286.3631591796875,
+        "y2": 388.510986328125
+      },
+      "text": "In this study, the experimenter approached each participant until the participant said stop, as shown in Fig. 9 (a, b). The distance between their toes was measured using a ruler on the oor. We tested ve conditions, as illustrated in Fig. 9 (c): without the device while standing ((1) EY_STA) or sitting ((2) EY_SIT); wearing the HMD and the camera module placed at the HMD (see-through mode) while standing ((3) HC_STA) or sitting ((4) HC_SIT); andwearing theHMD and the camera module at the participant’s waist position ((5) WC_STA)."
+    }],
+    "title": {
+      "page": 4,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 338.578369140625,
+        "y1": 271.49884033203125,
+        "y2": 277.92498779296875
+      },
+      "text": "Task"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 4,
+      "region": {
+        "x1": 317.656005859375,
+        "x2": 559.8906860351562,
+        "y1": 418.2131652832031,
+        "y2": 472.5400085449219
+      },
+      "text": "The participants were instructed to call out stop when the encroachment of the experimenter felt threatening. The genders of the experimenter and the participant were matched, and the conditions were arranged in a random manner. The participants tried on the device for 5 min before the study."
+    }],
+    "title": {
+      "page": 4,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 343.6595458984375,
+        "y1": 403.3488464355469,
+        "y2": 409.7749938964844
+      },
+      "text": "Setup"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 4,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 559.8980102539062,
+        "y1": 502.2421569824219,
+        "y2": 592.4340209960938
+      },
+      "text": "Nine healthy caregivers from a nursing school participated in a total of 180 trials (9 participants with 4 repetitions for each condition), 8 female and 1male. Theminimum andmaximum height were 146cm and 174cm respectively (mean=160.5cm, SD=7.7cm). No participants had any experience using an HMD prior to the experiment. The trials required approximately 20 min per participant. They were able to control FOV by their head orientations under all conditions."
+    }],
+    "title": {
+      "page": 4,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 372.34307861328125,
+        "y1": 487.37786865234375,
+        "y2": 493.80401611328125
+      },
+      "text": "Participants"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 4,
+      "region": {
+        "x1": 317.6059875488281,
+        "x2": 575.915283203125,
+        "y1": 622.1371459960938,
+        "y2": 712.3289794921875
+      },
+      "text": "Figure 10 shows the results of the personal space experiment. A Friedman test was performed (χ 2=23.2, p < 0.001). A pvalue adjustment was applied using the Benjamini-Hochberg method in which the false-discovery rate (FDR) was set to 0.10 [41, 42]. The results of a Wilcoxon signed rank test showed that there is a signi cant di erence between (5)WC_STA and (3)HC_STA (p = 0.036), (2)EY_SIT (p = 0.017), and (1)EYE_STA (p = 0.012)."
+    }, {
+      "page": 4,
+      "region": {
+        "x1": 54.0,
+        "x2": 558.0009765625,
+        "y1": 750.914794921875,
+        "y2": 756.7197875976562
+      },
+      "text": "Paper 696 Page 5"
+    }, {
+      "page": 5,
+      "region": {
+        "x1": 53.43000030517578,
+        "x2": 295.7410583496094,
+        "y1": 248.14515686035156,
+        "y2": 398.1130065917969
+      },
+      "text": "(5)WC_STA condition: Under the (5) WC_STA condition, in which the participants were asked to observe their surroundings from a lower POV, the largest amount of personal space (116.0 cm) was observed. The participants reported that the approaching experimenter looked bigger than in reality. Although the di erence was not signi cant, several of the participants mentioned that, under the (5) WC_STA condition, the experimenter looked bigger when compared with the (4) HC_SIT condition. STA and SIT conditions: In comparison with the standing conditions, the participants reported a larger distance when sitting and looking up at the approaching experimenter ((2)EY_SIT > (1)EY_STA; and (4)HC_SIT > (3)HC_STA)."
+    }],
+    "title": {
+      "page": 4,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 350.653564453125,
+        "y1": 607.2728271484375,
+        "y2": 613.698974609375
+      },
+      "text": "Results"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 5,
+      "region": {
+        "x1": 53.43000030517578,
+        "x2": 295.7434997558594,
+        "y1": 442.8091735839844,
+        "y2": 712.3289794921875
+      },
+      "text": "Based on our observations through conference demonstrations and exhibitions, it was often observed that when the exhibitor extended their hand for a handshake with the wearer, the wearer raised their hand much higher than that of the exhibitor, as shown in Fig. 11 (b). This could be have occurred because the wearers recognized that they had become smaller from the visual feedback, and tried to grab the exhibitor’s hand, which they perceived to be positioned at their shoulder height. Such hand adjustment in the air, in which changes to one’s bodily sensations create a new spatial relationship between the user and surrounding objects, can become visible through the user’s own actions. We hypothesized that this adjustment action can be used as evidence that the wearer’s body representation changed into that of a smaller person. Therefore, in this study, we investigated whether adjustment action can occur under a controlled stimulation and environment with a larger number of participants. We are particularly interested in the e ects of agency in viewpoint control on the strength of the adjustment action; therefore, we set up a control condition utilizing a video player in which the wearer simply watches a handshake video from a lower stature, and the wearer’s head orientation does not a ect"
+    }, {
+      "page": 5,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 558.2122192382812,
+        "y1": 261.5001525878906,
+        "y2": 315.82598876953125
+      },
+      "text": "the viewpoint control. If there is a di erence in the height of a handshake between the condition of the video and the condition of a smaller person, the e ect of FOV control based on the head orientation in a changing body representation in a RE can be discussed."
+    }],
+    "title": {
+      "page": 5,
+      "region": {
+        "x1": 53.798004150390625,
+        "x2": 136.1820526123047,
+        "y1": 413.0008544921875,
+        "y2": 434.3710021972656
+      },
+      "text": "2. Wearer’s Action Objective"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 5,
+      "region": {
+        "x1": 317.47698974609375,
+        "x2": 559.8888549804688,
+        "y1": 346.17718505859375,
+        "y2": 472.2340087890625
+      },
+      "text": "We instructed the participants to stand up and try to shake hands with the experimenter under the following two conditions: (1) Video condition: A video was recorded from a waist-level perspective, during which an experimenter tried to shake hands with a participant, and is played on the HMD, (2) Smaller person condition: The participant is able to observe the experimenter through the camera module attached at the waist, and to change their viewpoint using their head orientations. The wearer’s head orientations, and rst- and third-person videos, were recorded to compare the height of the participant’s hand between two conditions."
+    }],
+    "title": {
+      "page": 5,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 338.578369140625,
+        "y1": 331.3128356933594,
+        "y2": 337.7389831542969
+      },
+      "text": "Task"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 5,
+      "region": {
+        "x1": 317.5870056152344,
+        "x2": 559.8944702148438,
+        "y1": 502.5851745605469,
+        "y2": 712.3289794921875
+      },
+      "text": "The conditions were arranged in a random manner. The participants tried on the device for 10 s before the experiment started. The distance between the two people was set to 73 cm, which was determined based on previous literature [36] that de nes the far phase of personal distance (starting from 75cm) as the distance at which humans can touch each other’s ngers when he/she extends their arms. The positions of the two persons were xed during all sessions. The participant used their dominant hand to conduct a handshake. All instructions were given by a secondary experimenter sitting 2 m away from the participant. The second experimenter validated the rst experimenter’s hand position to con rm whether they performed the motion at the same position each time ( delity check). Three video cameras were placed to record the participant’s handshake from the front and side. The hand height was measured by counting the pixels between the camera module and the wrist in the recorded image under both conditions, as shown in Fig 11."
+    }, {
+      "page": 5,
+      "region": {
+        "x1": 54.0,
+        "x2": 558.0009765625,
+        "y1": 750.914794921875,
+        "y2": 756.7197875976562
+      },
+      "text": "Paper 696 Page 6"
+    }],
+    "title": {
+      "page": 5,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 343.6595458984375,
+        "y1": 487.7208557128906,
+        "y2": 494.1470031738281
+      },
+      "text": "Setup"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 6,
+      "region": {
+        "x1": 53.569000244140625,
+        "x2": 295.7311096191406,
+        "y1": 282.8971862792969,
+        "y2": 337.2239990234375
+      },
+      "text": "Fifteen healthy participants from our local organization participated in a total of 30 trials (15 participants × 2 conditions, mean height = 170.6 cm, SD = 5.67 cm). They have never tried the system before. The trials required approximately 15 min per participant."
+    }],
+    "title": {
+      "page": 6,
+      "region": {
+        "x1": 53.798004150390625,
+        "x2": 108.18602752685547,
+        "y1": 268.0328369140625,
+        "y2": 274.458984375
+      },
+      "text": "Participants"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 6,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 295.48626708984375,
+        "y1": 375.05517578125,
+        "y2": 441.3370056152344
+      },
+      "text": "Figure 12 shows the hand height in both conditions. Under both conditions, the participants raised their hand higher than usual. When comparing these two conditions, twelve of the participants raised their hand higher under the smaller person condition. A paired T test showed that there is a signi cant di erence between the two conditions (p < 0.05)."
+    }],
+    "title": {
+      "page": 6,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 86.49657440185547,
+        "y1": 360.19085693359375,
+        "y2": 366.61700439453125
+      },
+      "text": "Results"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 6,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 295.7315673828125,
+        "y1": 494.1131591796875,
+        "y2": 572.3499755859375
+      },
+      "text": "In addition to the previous quantitative studies, we also observed the wearer’s interactions in the experiment and demonstration spaces, for investigating interactions in a different scenario such as the wearer versus multiple persons, moving objects, or di erent actions. The venue includes two science museums, a university hospital, two conference demonstrations and two art exhibitions."
+    }],
+    "title": {
+      "page": 6,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 156.5065460205078,
+        "y1": 464.3048400878906,
+        "y2": 485.67498779296875
+      },
+      "text": "3. Wearer’s Interaction Objective"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 6,
+      "region": {
+        "x1": 53.499000549316406,
+        "x2": 295.7409973144531,
+        "y1": 610.18115234375,
+        "y2": 712.3289794921875
+      },
+      "text": "Twenty- ve participants who joined the previous experiments (mean height = 166.5 cm, SD = 8.1 cm) were asked to answer ve questions on a 5-point scale (0 = disagree, 4 = agree), as shown in Fig. 13. We also asked them to answer another questionnaire regarding how the smaller person experience had changed the participant’s body representation, as shown in Fig. 14. Comment feedback, and the actions and interactions of the demonstration visitors were recorded onto video."
+    }],
+    "title": {
+      "page": 6,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 150.79779052734375,
+        "y1": 595.31689453125,
+        "y2": 601.7430419921875
+      },
+      "text": "Task and Participants"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 6,
+      "region": {
+        "x1": 317.6059875488281,
+        "x2": 558.9091796875,
+        "y1": 401.5368347167969,
+        "y2": 494.63800048828125
+      },
+      "text": "estionnaire using the Likert Scale As show in Fig. 13, the questionnaire results indicate that the participants had a feeling of being a smaller person (Q1; score=3.12, SD=1.21), and felt that the surrounding objects and people looked bigger (Q2; score=2.88, SD=1.27). Based on their answers to Q3 and Q4, they tended to experience an oppressive feeling (score=2.24, SD=1.48) rather than an open feeling (score=0.84, SD=0.83)."
+    }, {
+      "page": 6,
+      "region": {
+        "x1": 317.5866394042969,
+        "x2": 559.887939453125,
+        "y1": 511.630859375,
+        "y2": 712.3289794921875
+      },
+      "text": "estionnaire about a body representation Figure 14 depicts six states of body representations as follows: (a) nothing have changed; (b) my legs felt under the ground; (c) only my head moved to the waist position; (d) my entire body became smaller; (e) my upper body shrank; and (f) my legs shrank. For (g), the participant drew a gure representing their own body. As a result, all participants chose from (c) through (g), which indicates that their eye level moved to a lower position while standing. Ten participants chose (c), mentioning that they saw their arms through the camera, and reported that this visual feedback a ected the physical relationship between their eyes and arms. Another participant who chose (f) reported that they did not experience a strange feeling when seeing their arms from the side, which occurred because the participant is familiar with rst-person gaming, which also displays arms close to the player’s face."
+    }, {
+      "page": 6,
+      "region": {
+        "x1": 54.0,
+        "x2": 558.0009765625,
+        "y1": 750.914794921875,
+        "y2": 756.7197875976562
+      },
+      "text": "Paper 696 Page 7"
+    }],
+    "title": {
+      "page": 6,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 350.653564453125,
+        "y1": 386.59283447265625,
+        "y2": 393.01898193359375
+      },
+      "text": "Results"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 7,
+      "region": {
+        "x1": 53.45000076293945,
+        "x2": 295.7414245605469,
+        "y1": 213.4811553955078,
+        "y2": 710.1489868164062
+      },
+      "text": "Participant and Setup:We observed interactions and collected comments from not only the 25 participants of the previous studies but also the visitors at a conference, museum, and hospital, which totals more than 500 people. The experience duration ranges from 3 to 5 minutes. Results: In most of the cases, the wearers rst expressed their surprise toward the di erence in perspective, as shown in Fig. 15 (a). Because they perceived their surroundings has having become bigger and themselves as having become smaller, many of the participants and visitors felt afraid when the experimenter or exhibitor suddenly moved close to them. As a reaction to such an encroachment, some wearers bent backward (Fig. 15 (b)), or performed protective pose toward the exhibitor (Fig. 15 (c, d)). It was also observed that some visitors behaved like a child, such as talking as if the wear had become a child or posing their arms like a baby, when surrounded by adults (Fig. 15 (e)). During a user study of personal space conducted at a nursing school, a teacher spoke loudly to another teacher wearing the device in an oppressive manner by looking down at the wearer (Fig. 15 (f)). Interestingly, the surrounding people including young students also treated the wearer as a child, and changed their behavior into that of a teacher or parent by acting in an overbearing manner with comments such as “Bring me candies right now !\", “Hey, I’m taller than you now.\" The children were observed a few times trying to talk to the camera module positioned at their parent’s waist (Fig. 15 (g)). In a demonstration, neurosurgical doctors were asked to wear the device and walk around in a children’s ward in a hospital. A medical sta noted that a bracing strut in a oor looked much bigger and it gave a strong oppressive feeling. An approaching cart also gave a scary feeling to a medic (Fig. 15 (d)(h)). They stated the importance of maintaining the same eye level with that of a smaller person, and securing a certain distance when trying to talk to them to avoid an oppressive impression. They also mentioned that it was di cult to talk with the receptionists face to face because the monitors placed on the desk prevented the doctors from seeing the receptionist’s face (Fig. 18 (a)). Collected comments suggested the experience provided empathic and proprioceptive understanding of a small-person. One mother stated, “Wow, you see the world like this ...?\", one father said “They live such a hard place !\","
+    }, {
+      "page": 7,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 558.19677734375,
+        "y1": 198.5371856689453,
+        "y2": 216.9990234375
+      },
+      "text": "one grandmother claimed “My neck hurts.\" These interactions and comments were observed across all demo places."
+    }],
+    "title": {
+      "page": 7,
+      "region": {
+        "x1": 53.79798889160156,
+        "x2": 226.8652801513672,
+        "y1": 198.61683654785156,
+        "y2": 205.04296875
+      },
+      "text": "Observation and Comment Feedbacks"
+    }
+  }, {
+    "paragraphs": [],
+    "title": {
+      "page": 7,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 398.4061584472656,
+        "y1": 243.0448760986328,
+        "y2": 249.47100830078125
+      },
+      "text": "6 DISCUSSIONS"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 7,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 559.8980712890625,
+        "y1": 287.79718017578125,
+        "y2": 569.27099609375
+      },
+      "text": "From the result, the eye level of the participant a ected the perception of interpersonal distance because there is a significant di erence between (3)HC_STA and (5)WC_STA conditions. The di erence in eye level would create an oppressive feeling toward the approaching experimenter. In addition, the large neck angle in pitch axis also a ected the perception of social relationship with the experimenter, because the nursing teachers usually interact with 5-years-old children. One participant reported that he/she has a frustrating feeling rather than an oppressive or scary feeling, because the participant could not move the perspective higher since their legs were already fully extended. It is also presumed that their internal body representation also contributed to the change of personal space. According to a related literature, lowering eye height in a VE enlarges perceived distance [32]. This could result in minimizing personal space, whereas our results showed that lowering eye height increased personal space. The oppressive feeling toward the approaching experimenter could strongly a ect the perception of interpersonal distance. There were signi cant di erence between with and without wearing the HMD condition, as similar to a previous study that reported perceived distances are underestimated compared to RE estimates [33]."
+    }],
+    "title": {
+      "page": 7,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 483.2014465332031,
+        "y1": 257.9888916015625,
+        "y2": 279.3590087890625
+      },
+      "text": "1. Wearer’s Perception Eye level a ected the personal space"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 7,
+      "region": {
+        "x1": 317.47698974609375,
+        "x2": 559.9007568359375,
+        "y1": 610.18115234375,
+        "y2": 712.3289794921875
+      },
+      "text": "When the participants were sitting on the chair during the experiment, they reported a slightly larger distance in personal space than when they were standing. This could be caused by an over-estimation of the experimenter’s height through the visual stimuli because the participants also had to look up. In addition to this, several actions, such as standing up, are required to react toward the approaching experimenter while sitting on a chair. Such expectation of future interaction also contributed to enlarging personal space."
+    }, {
+      "page": 7,
+      "region": {
+        "x1": 54.0,
+        "x2": 558.0009765625,
+        "y1": 750.914794921875,
+        "y2": 756.7197875976562
+      },
+      "text": "Paper 696 Page 8"
+    }],
+    "title": {
+      "page": 7,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 528.084716796875,
+        "y1": 595.3168334960938,
+        "y2": 601.7429809570312
+      },
+      "text": "Comparison in standing and si ing conditions"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 8,
+      "region": {
+        "x1": 53.45000076293945,
+        "x2": 295.7410583496094,
+        "y1": 262.6031799316406,
+        "y2": 388.6610107421875
+      },
+      "text": "As shown in Fig. 16, it was observed that when the participants tried to shake hands with the experimenter, they extended their arm longer and missed the experimenter’s hand. This could have occurred because the participants thought their arm length had become shorter, as had their height, resulting in an increase in the perceived distance between hands. A similar phenomenon was also reported in which the arm length changed the perceived distance in a virtual environment [43]. It is noted that seeing an environment through HMD could a ect the perception of distance at the same time."
+    }],
+    "title": {
+      "page": 8,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 210.21713256835938,
+        "y1": 232.79481506347656,
+        "y2": 254.1649169921875
+      },
+      "text": "2. Wearer’s Action Perceived arm length and distance"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 8,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 295.7410888671875,
+        "y1": 418.45916748046875,
+        "y2": 652.114013671875
+      },
+      "text": "Several participants stated that they realized the change in eye level only after they saw the experimenter facing them, although they had visited the experiment room several times before and saw the desks positioned 2m away from the standing location during the experiment. From such comments, it is assumed that the participants used more familiar objects as a reference to recognize the physical relationship between their body and space. It should be noted that the participants knew the height of the experimenter and had su cient experience with each other through conversations because they are from the same local organization. The recorded head orientations also showed that the participants looked up higher under (2) smaller person condition than under (1) video condition (a paired T test was performed as p < 0.05, as shown in Fig. 17). From the result and observations, many participants looked at the experimenters face before the handshake, suggesting that the level of face could be used as a reference. Such existing knowledge based on motor and social experience could help the wearers recognize their space and physical relationship."
+    }],
+    "title": {
+      "page": 8,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 191.6461181640625,
+        "y1": 403.5958557128906,
+        "y2": 410.0220031738281
+      },
+      "text": "Familiar objects as a reference"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 8,
+      "region": {
+        "x1": 53.31999969482422,
+        "x2": 295.73748779296875,
+        "y1": 681.912109375,
+        "y2": 712.3289794921875
+      },
+      "text": "We found that the adjustment action has a unique and practical aspect in that the timing for observing its e ect can be initiated by the experimenter, and its strength can be exposed"
+    }, {
+      "page": 8,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 559.8878173828125,
+        "y1": 223.0851593017578,
+        "y2": 277.4110107421875
+      },
+      "text": "by the participant’s voluntary action, which is measurable in a visual and quantitative manner when using the tracking systems. This measurement method can also be used to evaluate a di erent type of change in body representation, such as an increasing height."
+    }],
+    "title": {
+      "page": 8,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 179.66061401367188,
+        "y1": 667.0478515625,
+        "y2": 673.4739990234375
+      },
+      "text": "Hand Adjustment in the Air"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 8,
+      "region": {
+        "x1": 317.5870056152344,
+        "x2": 559.3087768554688,
+        "y1": 307.54217529296875,
+        "y2": 361.8689880371094
+      },
+      "text": "From the observation at the demo and experiment space, most of the participants found it easy to become familiar with the visual translator. The latency of the developed visual translator (117.6ms) is smaller than the latency of 125ms in which the wearer’s feeling of agency decreased [44] [45]."
+    }, {
+      "page": 8,
+      "region": {
+        "x1": 317.5870056152344,
+        "x2": 559.89599609375,
+        "y1": 367.31817626953125,
+        "y2": 469.4649963378906
+      },
+      "text": "Some wearers behaved like a child and the surrounding people also behaved like a taller or authoritative person. It appears that the proposed experience allowed not only the wearer, but also the surrounding people to perceive as the wearer became a smaller person. These new social contextual cues including an oppressive conversation, protective posture, a conceited look, longer interpersonal distance, and supportive actions from the surrounding people, contributed to shaping the body representation repeatedly."
+    }],
+    "title": {
+      "page": 8,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 420.6636657714844,
+        "y1": 292.6778564453125,
+        "y2": 299.10400390625
+      },
+      "text": "3. Wearer’s Interaction"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 8,
+      "region": {
+        "x1": 317.70599365234375,
+        "x2": 559.8984985351562,
+        "y1": 514.5401611328125,
+        "y2": 712.3289794921875
+      },
+      "text": "Because the change of eye level created signi cant di erences in a wearer’s perception, action, and interaction, changing the body representation larger or higher would be another form factor to investigate. The measurement of personal space and hand adjustment action could be used for evaluating the changes in social and physical relationship in this scenario as well. An appropriate range for inducing the sense of being a smaller or taller could be investigated to reveal the relationship between the eye level and the strength of ownership toward modi ed body representation. As we tested several posture conditions in study 1, further studies include more investigation into how the somatosensory feedback provided by various postures and leg conditions affects the visual perception, and likewise research suggesting that the perceived size and distance are a ected by an inversion of the body orientation, and not by the retinal image orientation [46]."
+    }, {
+      "page": 8,
+      "region": {
+        "x1": 54.0,
+        "x2": 558.0009765625,
+        "y1": 750.914794921875,
+        "y2": 756.7197875976562
+      },
+      "text": "Paper 696 Page 9"
+    }, {
+      "page": 9,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 295.7338562011719,
+        "y1": 250.39784240722656,
+        "y2": 427.18499755859375
+      },
+      "text": "Peripheral Visual Field In the developed visual translator, the wearer’s head orientation and the line of sight in a spherical image are synchronized. However, the rotational centers of the human eyes and the developed visual translator are not matched. During our experiments, the participants did not report an unusual feeling when they rotated their head to the maximum angle. Previous work in the eld of telepresence uses an omnidirectional multi-stereo camera system to match the rotational center [2]. In addition, recent feature tracking techniques enable reconstructing three-dimensional views from monoscopic 360◦videos, and to observe through rotational and translational motions of the viewpoint [47]. These techniques can be applied to our system to provide a more accurate peripheral visual eld on the HMD."
+    }],
+    "title": {
+      "page": 8,
+      "region": {
+        "x1": 317.69598388671875,
+        "x2": 538.5458984375,
+        "y1": 484.7318420410156,
+        "y2": 506.10198974609375
+      },
+      "text": "7 FUTUREWORKS Another Form of Changing Body Representation"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 9,
+      "region": {
+        "x1": 53.45000076293945,
+        "x2": 295.7361145019531,
+        "y1": 457.9441833496094,
+        "y2": 548.135986328125
+      },
+      "text": "Approximately two or three in ten participants stated that they felt dizzy while or after using the device for 3-5 minutes. From their comments, this could be caused by not only the rendering latency (117.6ms) but also uctuations in the camera module at their waist induced by walking. Using a small camera gimbal for stabilizing the camera module, and using a wireless HMD with a high-performance desktop computer for reducing the latency could be possible solutions."
+    }],
+    "title": {
+      "page": 9,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 127.75337219238281,
+        "y1": 443.079833984375,
+        "y2": 449.5059814453125
+      },
+      "text": "Motion Sickness"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 9,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 295.73382568359375,
+        "y1": 578.8941650390625,
+        "y2": 645.176025390625
+      },
+      "text": "Educational Tool. The device could be used as an educational tool for caregivers and teachers in a hospital and nursing school. Figure 18 (a) represents a pilot study as an educational tool in a hospital. The devices can also be used for new employee training programs in amusement parks, public transportation, and hotels."
+    }, {
+      "page": 9,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 295.73089599609375,
+        "y1": 658.0021362304688,
+        "y2": 712.3289794921875
+      },
+      "text": "Design Tool. The device also could be used as an assistive tool for spatial and product design (Fig. 18 (b)). The placement of posters or objects at a reception desk, or in a store layout, can be optimized through the perspective of a smaller person."
+    }, {
+      "page": 9,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 574.5564575195312,
+        "y1": 96.1091537475586,
+        "y2": 198.25701904296875
+      },
+      "text": "AmusementTool. Since the smaller person experience changes interactions of the wearer and the surrounding people, the device can be used as an amusement tool to enhance the play among parents and their children. Parents can explore a maze or treasure hunting game from the same perspective as their children to nd the exit, as an example. A lower perspective can give us new inspiration, allowing us to nd an object under a structure, and enabling parents and their children to cooperate and play together."
+    }],
+    "title": {
+      "page": 9,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 136.67025756835938,
+        "y1": 564.0298461914062,
+        "y2": 570.4559936523438
+      },
+      "text": "Possible Scenarios"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 9,
+      "region": {
+        "x1": 317.5870056152344,
+        "x2": 559.9007568359375,
+        "y1": 227.6161651611328,
+        "y2": 413.45001220703125
+      },
+      "text": "In this paper, we explored how human perceptions and actions can be changed through the experience of a smaller person in a real world environment. To achieve this, we have developed a wearable visual translator that changes the wearer’s body representation into that of a small-person, by shifting the wearer’s eyesight level down to their waist level by using a HMD and a stereo camera module, while allowing for FOV control through head movements. Three user studies were conducted to investigate the wearer’s changes in their social and physical relationships, and to observe a feedback experience. From study 1, which was a personal space evaluation, when the participant felt smaller using the developed device, the largest personal distance was observed. This could have been caused by an oppressive feeling toward the approaching experimenter induced by the feeling of being small."
+    }, {
+      "page": 9,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 559.8922729492188,
+        "y1": 418.899169921875,
+        "y2": 580.822021484375
+      },
+      "text": "In study 2, it was observed that the participants raised their hands higher than usual when trying to shake hands with the experimenter because they perceived their own body representation as being smaller. It was con rmed that the experience of being a smaller person changed the physical relationship of the wearer and the surroundings. In study 3, we observed the wearer’s interactions during demonstrations at conferences and exhibitions. It was often observed that the visitors behaved like a child, such as performing a protective pose when surrounded by adults, or talking like a baby. Interestingly, surrounding people such as young students also treated the wearers like a child, and behaved as teachers or parents by acting in an overbearing manner."
+    }, {
+      "page": 9,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 559.8980102539062,
+        "y1": 586.2711181640625,
+        "y2": 640.5980224609375
+      },
+      "text": "These ndings, challenges, and design considerations will bene t further studies on the design of user experiences based on changes in body representation while preserving active and embodied interactions in a real-world environment."
+    }],
+    "title": {
+      "page": 9,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 399.6416320800781,
+        "y1": 212.7519073486328,
+        "y2": 219.17803955078125
+      },
+      "text": "8 CONCLUSION"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 9,
+      "region": {
+        "x1": 317.6059875488281,
+        "x2": 558.2149658203125,
+        "y1": 669.9571533203125,
+        "y2": 700.3740234375
+      },
+      "text": "This work was supported by Grant-in-Aid for JSPS Research Fellow (JP16J03777) and Scienti c Research on Innovative Areas (JP18H04182)."
+    }, {
+      "page": 9,
+      "region": {
+        "x1": 54.0,
+        "x2": 558.001953125,
+        "y1": 750.914794921875,
+        "y2": 756.7197875976562
+      },
+      "text": "Paper 696 Page 10"
+    }],
+    "title": {
+      "page": 9,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 440.7888488769531,
+        "y1": 655.0928955078125,
+        "y2": 661.51904296875
+      },
+      "text": "9 ACKNOWLEDGMENTS"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 10,
+      "region": {
+        "x1": 57.50400161743164,
+        "x2": 295.3873596191406,
+        "y1": 110.36260986328125,
+        "y2": 115.5670166015625
+      },
+      "text": "[1] Shunichi Kasahara and Jun Rekimoto. 2014. JackIn: integrating rst-"
+    }, {
+      "page": 10,
+      "region": {
+        "x1": 53.797996520996094,
+        "x2": 295.3958740234375,
+        "y1": 120.3245849609375,
+        "y2": 711.4439697265625
+      },
+      "text": "person view with out-of-body vision generation for human-human augmentation. In Proceedings of the 5th Augmented Human International Conference (AH ’14). ACM, New York, NY, USA, , Article 46 , 8 pages. DOI: http://dx.doi.org/10.1145/2582051.2582097 [2] S. Tachi, K. Watanabe, K. Takeshita, K. Minamizawa, T. Yoshida and K. Sato. 2011. Mutual telexistence surrogate system: TELESAR4 - telexistence in real environments using autostereoscopic immersive display -. IEEE/RSJ International Conference on Intelligent Robots and Systems, San Francisco, CA, 2011, pp. 157-162. http://dx.doi.org/10.1109/IROS. 2011.6094543 [3] MHD Yamen Saraiji, Tomoya Sasaki, Reo Matsumura, Kouta Minamizawa, and Masahiko Inami. 2018. Fusion: full body surrogacy for collaborative communication. In ACM SIGGRAPH 2018 Emerging Technologies (SIGGRAPH ’18). ACM, New York, NY, USA, Article 7, 2 pages. DOI: https://doi.org/10.1145/3214907.3214912 [4] Kana Misawa and Jun Rekimoto. 2015. ChameleonMask: Embodied Physical and Social Telepresence using Human Surrogates. In Proceedings of the 33rd Annual ACM Conference Extended Abstracts on Human Factors in Computing Systems (CHI EA ’15). ACM, New York, NY, USA, 401-411. DOI: https://doi.org/10.1145/2702613.2732506 [5] Xin Liu, Yedan Qian, and Pattie Maes. Tree. 2017. Sundance Film Festival. Last accessed: September 19, 2018. https://www.media.mit.edu/ projects/tree/overview/ [6] Shunichi Kasahara, Mitsuhito Ando, Kiyoshi Suganuma, and Jun Rekimoto. 2016. Parallel Eyes: Exploring Human Capability and Behaviors with Paralleled First Person View Sharing. In Proceedings of the 2016 CHI Conference on Human Factors in Computing Systems (CHI ’16). ACM, New York, NY, USA, 1561-1572. DOI: http: //dx.doi.org/10.1145/2858036.2858495 [7] Kevin Fan, Jochen Huber, Suranga Nanayakkara, and Masahiko Inami. 2014. SpiderVision: extending the human eld of view for augmented awareness. In Proceedings of the 5th Augmented Human International Conference (AH ’14). ACM, New York, NY, USA, , Article 49 , 8 pages. DOI: http://dx.doi.org/10.1145/2582051.2582100 [8] Jun Nishida, Hikaru Takatori, Kosuke Sato, and Kenji Suzuki. 2015. CHILDHOOD: wearable suit for augmented child experience. In ACM SIGGRAPH 2015 Emerging Technologies (SIGGRAPH ’15). ACM, New York, NY, USA, Article 7, DOI: http://dx.doi.org/10.1145/2782782. 2792501 [9] Jun Nishida, Hikaru Takatori, Kosuke Sato, and Kenji Suzuki. 2015. CHILDHOOD: Wearable Suit for Augmented Child Experience. In Proceedings of the 2015 Virtual Reality International Conference (VRIC ’15). ACM, New York, NY, USA, Article 22, 4 pages. DOI: https://doi. org/10.1145/2806173.2806190 [10] Ida Shino and Yamanaka Toshimasa. A study on the usability of environment objects by the di erence in eye level. 2000. Japan Society of the Science of Design. (In Japanese) [11] Botvinick Matthew, and Cohen Jonathan. 1998. Rubber hands ’feel’ touch that eyes see. Nature. 391 (6669): 756. DOI: http://dx.doi.org/10. 1038/35784 [12] Bertrand Philippe, Daniel Gonzalez-Franco, Arthur Pointeau, and Christian Cherene. 2014. The Machine to be Another - Embodied Telepresence using human performers. Prix Ars Electronica (2014). [13] van der Hoort B, Guterstam A, Ehrsson HH. 2011. Being Barbie: The Size of One’s Own Body Determines the Perceived Size of the World. PLoS ONE 6(5): e20195. DOI: https://doi.org/10.1371/journal. pone.0020195 [14] Ehrsson, H. Henrik. 2007. The Experimental Induction of Out-of-Body Experiences. Science. Vol.317. No.5841. 1048-1048. DOI: http://dx.doi. org/10.1126/science.1142175"
+    }, {
+      "page": 10,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 559.5505981445312,
+        "y1": 97.41058349609375,
+        "y2": 710.3359985351562
+      },
+      "text": "[15] Domna Banakou, Raphaela Groten, and Mel Slater. 2013. Illusory ownership of a virtual child body causes overestimation of object sizes and implicit attitude changes. PNAS 2013 110 (31). 12846-1285. DOI: https://doi.org/10.1073/pnas.1306779110 [16] Ana Tajadura-Jimenez, Domna Banakou, Nadia Bianchi-Berthouze, and Mel Slater. 2017. Embodiment in a Child-Like Talking Virtual Body In uences Object Size Perception, Self-Identi cation, and Subsequent Real Speaking. Nature Publishing Group 7, 1: 9637. DOI: https://doi. org/10.1038/s41598-017-09497-3 [17] Linkenauger SA, Leyrer M, Bultho HH, Mohler BJ. 2013. Welcome to Wonderland: The In uence of the Size and Shape of a Virtual Hand On the Perceived Size and Shape of Virtual Objects. PLOS ONE 8(7): e68594. DOI: https://doi.org/10.1371/journal.pone.0068594 [18] Nami Ogawa, Takuji Narumi, and Michitaka Hirose. 2017. Distortion in perceived size and body-based scaling in virtual environments. In Proceedings of the 8th Augmented Human International Conference (AH ’17). ACM, New York, NY, USA, Article 35, 5 pages. DOI: https: //doi.org/10.1145/3041164.3041204 [19] Daniel Freeman, Nicole Evans, Rachel Lister, Angus Antley, Graham Dunn, Mel Slater, Height, social comparison, and paranoia: An immersive virtual reality experimental study, Psychiatry Research, Volume 218, Issue 3, 2014, Pages 348-352, ISSN 0165-1781. DOI: https: //doi.org/10.1016/j.psychres.2013.12.014. [20] Nick Yee, Jeremy Bailenson; The Proteus E ect: The E ect of Transformed Self-Representation on Behavior, Human Communication Research, Volume 33, Issue 3, 1 July 2007, Pages 271-290, DOI: https: //doi.org/10.1111/j.1468-2958.2007.00299.x [21] Lara Maister, Mel Slater, Maria V. Sanchez-Vives, Manos Tsakiris, Changing bodies changes minds: owning another body a ects social cognition, Trends in Cognitive Sciences, Volume 19, Issue 1, 2015, Pages 6-12, ISSN 1364-6613. DOI: https://doi.org/10.1016/j.tics.2014.11.001. [22] Tabitha C. Peck, So a Seinfeld, Salvatore M. Aglioti, Mel Slater, Putting yourself in the skin of a black avatar reduces implicit racial bias, Consciousness and Cognition, Volume 22, Issue 3, 2013, Pages 779-787, ISSN 1053-8100. DOI: https://doi.org/10.1016/j.concog.2013.04.016. [23] S. Qin, Y. Nagai, S. Kumagaya, S. Ayaya and M. Asada. 2014. Autism simulator employing augmented reality: A prototype. 4th International Conference on Development and Learning and on Epigenetic Robotics, Genoa, 155-156. DOI: https://doi.org/10.1109/DEVLRN.2014.6982972 [24] G. P. Rosati Papini, M. Fontana and M. Bergamasco. 2016. Desktop Haptic Interface for Simulation of Hand-Tremor. IEEE Transactions on Haptics, vol. 9, no. 1, 33-42, Jan.-March 1. DOI: http://dx.doi.org/10. 1109/TOH.2015.2504971 [25] Jun Nishida and Kenji Suzuki. 2017. bioSync: A PairedWearable Device for Blending Kinesthetic Experience. In Proceedings of the 2017 CHI Conference on Human Factors in Computing Systems (CHI ’17). ACM, New York, NY, USA, 3316-3327. DOI: https://doi.org/10.1145/3025453. 3025829 [26] Honda Child Vision. Last accessed: September 19, 2018. (In Japanese) https://www.honda.co.jp/safetyinfo/kyt/partner/childvision.pdf [27] Joseph F. Coughlin, \"Development of an Older Adult Empathy System to Assess Transit and Livability\", 2013 [28] Martin Lavalliere, Lisa D’Ambrosio, Angelina Gennis, Arielle Burstein, Kathryn M. Godfrey, Hilde Waerstad, Rozanne M. Puleo, Andreas Lauenroth and Joseph F. Coughlin. 2017. Walking a mile in another’s shoes: The impact of wearing an Age Suit. Gerontology &Geriatrics Education, Vol. 38, No.2, 171-187. DOI: http://dx.doi.org/10.1080/02701960. 2015.1079706 [29] Wraga, M. (1999). Using eye height in di erent postures to scale the heights of objects. Journal of Experimental Psychology: Human Perception and Performance, 25(2), 518-530. DOI: http://dx.doi.org/10. 1037/0096-1523.25.2.518"
+    }, {
+      "page": 10,
+      "region": {
+        "x1": 54.0,
+        "x2": 558.001953125,
+        "y1": 750.914794921875,
+        "y2": 756.7197875976562
+      },
+      "text": "Paper 696 Page 11"
+    }, {
+      "page": 11,
+      "region": {
+        "x1": 53.797996520996094,
+        "x2": 295.38897705078125,
+        "y1": 97.41058349609375,
+        "y2": 421.4200134277344
+      },
+      "text": "[30] Wraga, M. (1999). The role of eye height in perceiving a ordances and object dimensions. Perception & Psychophysics, 61(3), 490-507. DOI: http://dx.doi.org/10.3758/BF03211968 [31] Gibson, J. J. (2014). The ecological approach to visual perception: classic edition. Psychology Press. [32] Leyrer M, Linkenauger SA, Bultho HH, Mohler BJ (2015) The Importance of Postural Cues for Determining Eye Height in Immersive Virtual Reality. PLOS ONE 10(5): e0127000. DOI: https://doi.org/10. 1371/journal.pone.0127000 [33] Markus Leyrer, Sally A. Linkenauger, Heinrich H. Bultho , and Betty J. Mohler. 2015. Eye Height Manipulations: A Possible Solution to Reduce Underestimation of Egocentric Distances in Head-Mounted Displays. ACM Trans. Appl. Percept. 12, 1, Article 1 (February 2015), 23 pages. DOI: http://dx.doi.org/10.1145/2699254 [34] Mel Slater, Martin Usoh, and Anthony Steed. 1995. Taking steps: the in uence of a walking technique on presence in virtual reality. ACM Trans. Comput.-Hum. Interact. 2, 3 (September 1995), 201-219. DOI: http://dx.doi.org/10.1145/210079.210084 [35] Katrin Wolf, Markus Funk, Rami Khalil, and Pascal Knierim. 2017. Using virtual reality for prototyping interactive architecture. In Proceedings of the 16th International Conference on Mobile and Ubiquitous Multimedia (MUM ’17). ACM, New York, NY, USA, 457-464. DOI: https://doi.org/10.1145/3152832.3156625 [36] Hall, Edward T. 1969. The hidden dimension. Garden City, N.Y.: Anchor Books. [37] Iachini T, Coello Y, Frassinetti F, Ruggiero G. 2014. Body Space in Social Interactions: A Comparison of Reaching and Comfort Distance in Immersive Virtual Reality. PLOS ONE 9(11): e111511. DOI: https: //doi.org/10.1371/journal.pone.0111511 [38] Dorsey, M., Meisels, M. 1969. Personal space and self-protection. Journal of Personality and Social Psychology. 11, 93-97. [39] Tennis, G., and Dabbs, J. 1975. Sex, Setting and Personal Space: First Grade Through College. Sociometry, 38(3), 385-394. DOI: https://doi."
+    }, {
+      "page": 11,
+      "region": {
+        "x1": 317.95501708984375,
+        "x2": 558.1951904296875,
+        "y1": 97.41058349609375,
+        "y2": 112.5780029296875
+      },
+      "text": "org/doi:10.2307/2786172 [40] Gessaroli E, Santelli E, di Pellegrino G, Frassinetti F. 2013. Personal"
+    }, {
+      "page": 11,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 559.5502319335938,
+        "y1": 117.3355712890625,
+        "y2": 429.5010070800781
+      },
+      "text": "Space Regulation in Childhood Autism Spectrum Disorders. PLOS ONE 8(9): e74959. DOI: https://doi.org/10.1371/journal.pone.0074959 [41] Perneger T. V. (1998). What’s wrong with Bonferroni adjustments. BMJ (Clinical research ed.), 316(7139), 1236-8. [42] Benjamini, Y., & Hochberg, Y. (1995). Controlling the False Discovery Rate: A Practical and Powerful Approach toMultiple Testing. Journal of the Royal Statistical Society. Series B (Methodological), 57(1), 289-300. [43] Sally A. Linkenauger, Heinrich H. Bultho , Betty J. Mohler, Virtual arm’s reach in uences perceived distances but only after experience reaching, Neuropsychologia, Volume 70, 2015, Pages 393-401, ISSN 0028-3932. DOI: https://doi.org/10.1016/j.neuropsychologia.2014.10. 034. [44] Thomas Waltemate, Irene Senna, Felix Hulsmann, Marieke Rohde, Stefan Kopp, Marc Ernst, and Mario Botsch. 2016. The impact of latency on perceptual judgments and motor performance in closed-loop interaction in virtual reality. In Proceedings of the 22nd ACM Conference on Virtual Reality Software and Technology (VRST ’16). ACM, New York, NY, USA, 27-35. DOI: https://doi.org/10.1145/2993369.2993381 [45] Shunichi Kasahara, Keina Konno, Richi Owaki, Tsubasa Nishi, Akiko Takeshita, Takayuki Ito, Shoko Kasuga, and Junichi Ushiba. 2017. Malleable Embodiment: Changing Sense of Embodiment by SpatialTemporal Deformation of Virtual Human Body. In Proceedings of the 2017 CHI Conference on Human Factors in Computing Systems (CHI ’17). ACM, New York, NY, USA, 6438-6448. DOI: https: //doi.org/10.1145/3025453.3025962 [46] Atsuki Higashiyama, Kohei Adachi. 2006. Perceived size and perceived distance of targets viewed from between the legs: Evidence for proprioceptive theory, Vision Research, Volume 46, Issue 23, 3961-3976, DOI: https://doi.org/10.1016/j.visres.2006.04.002 [47] J. Huang, Z. Chen, D. Ceylan and H. Jin. 6-DOF VR videos with a single 360-camera. 2017 IEEE Virtual Reality (VR), Los Angeles, CA, 2017. 37-44. DOI: https://doi.org/10.1109/VR.2017.7892229"
+    }, {
+      "page": 11,
+      "region": {
+        "x1": 54.0,
+        "x2": 558.0020141601562,
+        "y1": 750.914794921875,
+        "y2": 756.7197875976562
+      },
+      "text": "Paper 696 Page 12"
+    }],
+    "title": {
+      "page": 10,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 116.56490325927734,
+        "y1": 96.18885803222656,
+        "y2": 102.614990234375
+      },
+      "text": "REFERENCES"
+    }
+  }]
+}

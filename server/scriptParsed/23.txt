@@ -1,0 +1,115 @@
+- Hi everyone, I'm so excited to be here.
+Thank you so much for coming.
+It's my first CHI.
+So I am going to be presenting this project that I did with James Hodge from the Open Lab at Newcastle and Eric Gordon also at the Engagement Lab.
+So this talk I'm going to split into two parts.
+The first is everything that we did before we actually contacted anyone, any currently incarcerated person.
+And then I'll talk about the technical details of how we actually created the virtual reality experiences with women in prison.
+So talking about ...
+Oh, and just want to point out the timeline.
+This is over the course of about seven months last year.
+The first four months were spent just trying to get into the prison, because there is so much ...
+It's such a sensitive area.
+Anyway, okay, so ...
+At the end of 2017 the Department of Correction in my state, Massachusetts, reached out the Engagement Lab and they sent this e-mail.
+It was a proposal to work together on a virtual reality project.
+So they wrote, "With the new advances "in immersive technology, "we think there's an opportunity "to expose the women at "South Middlesex Correctional Center," which is the state's only minimum security prison pre-release facility for women, "to stressful situations that they'll encounter "once they're released." The idea is that by being exposed to these stressful situations before they're released, they can deal with the emotional and psychological processing while they're still in the quote, safe environment of prison.
+And of course their goal is to reduce recidivism, which is the rate of prisoners once they're released of re-offending and getting re-incarcerated.
+In this e-mail alone, they listed 15 different examples of stressful situations.
+So that includes driving on the highway, using the MBTA, which is our subway station, which is extremely stressful.
+Grocery shopping, walking into AA, Alcoholics Anonymous meeting, et cetera.
+In the very first workshop we ran with the DOC at South Middlesex, we brainstormed 76 other scenarios that are also stressful, So ordered from most to least, the most common stresses listed related to shopping actually, like using grocery self-checkout.
+And of course VR became commercially viable in 2016, so we're not the first people to think about using VR for quote reentry training.
+So this is a screenshot from the Colorado Department of Corrections, where they worked with a private company called NSENA to create these virtual reality scenarios to prepare men who had been incarcerated for life.
+This as you can see is a tutorial of how to use a grocery self-checkout.
+And so of course, this is helpful for people because when you're released and you're dealing with situations that you've never dealt with or that you haven't experienced in decades, it can cause a lot of anxiety.
+But the thing is I started talking with people who have actually been incarcerated, and they told me, "Yes, these situations do cause a lot of anxiety, "but that's not gonna break me.
+"That's not gonna cause me to refund necessarily.
+"It's the other stuff.
+"It's the other parts of reentry that are challenging." So the substance use, going back to environments that might cause you or influence you to do things that are unhealthy.
+Going back to old friends who might, who you used to use with, et cetera.
+And so the first person that I interviewed said something that I thought was really provoking or provocative.
+He said, "Virtual reality means it's my reality." Another woman that I heard speaking out of panel said, "Don't set a limit on people "who are coming back from prison.
+"If you give formally incarcerated people the reigns, "they can transform society." So I want to back up a little bit.
+I was talking to some people from Norway yesterday, so I realized the U.S. prison system needs some context.
+So the U.S. has a massive issue over incarceration.
+We incarcerate 2.3 million people, which is four times the population of Glasgow.
+Of those people we incarcerate, 640,000 are released every year back into the community.
+But within three years, two out of three are rearrested.
+And part of that is because reentry for these people is just, it throws obstacle after obstacle to people, so people face social and legal discriminations when trying to secure basic needs like housing and employment.
+We also incarcerate disproportionately from low-income communities of color, and people who are incarcerated report high rates of mental illness, substance addiction and trauma exposure.
+The other thing is because reentry is so challenging, so many services dedicate their resources to helping people with survival needs related to housing and employment.
+And they don't, many of them don't focus on the actual psychological and emotional challenges of transitioning back into the community.
+So realizing the systemic challenges of reentry, I started talking with more people who have actually, who worked in the space and who have lived with this experience.
+What you're seeing is a network of people that I've reached out to and talked with and interviewed over the course of about a year.
+And of course, generally what I find is in these kinds of social projects, there's an existing rich ecosystem of people and organizations already working in this area, so not trying to reinvent the wheel here.
+Everything, every circle is a person, every square is an organization.
+The yellow means that ...
+Oh, sorry, the orange is someone with the lived experience of incarceration.
+The yellow is someone who actively directly works with someone who has lived through that experience.
+And the main thing here is ...
+Oh, and as I was talking to people, I would pitch this idea of using virtual reality for reentry training, and I would get feedback on the workshops that we wanted to run in prison.
+The main thing that I learned is that there's so much that I don't know.
+So in thinking about our roles as designers, there's this assumption that you can empathize with your users.
+In this case, there's no possibility of me actually being able to truly empathize with people who've been incarcerated and people who are predisposed to be incarcerated in the U.S.
+So the first thing I wanted to do in doing this project was, replacing empathy with trust.
+If we really believe in giving people a second chance in society, can we trust them to lead in that process so they can help themselves? And the second thing ...
+Sorry I can't see.
+So rather than, in thinking about how our design process ease might be limiting for people who are going through this experience.
+So for example, the DOC, the Department of Correction measures success as not recidivating or not being rearrested.
+But this measure doesn't actually do anything for people who are going through that experience.
+So rather than designing for people, can we design with them as partners? And also, can we start to think about reentry training as a way of setting people up for success? Where success is not about not re-offending but rather building up the self-efficacy and agency to succeed on their own terms.
+So now I'm going to talk about the actual technical part of what we did.
+So over the course of about three weeks, we ran storytelling workshops in prison and we ended up creating a series of 360 video modules that depict stressful situations that people commonly face when they're released.
+First of all, in prison there's no Wifi.
+You can't bring in phones.
+There's very little technology infrastructure.
+So how do you take virtual reality and design it in a completely analog low-tech or no-tech way? So what we did was we distilled it down to different creative activities, including writing, drawing, acting and small and large group discussions.
+And the other thing is, I had three, I brought two other facilitators with me in prison to take tons of notes, and we took notes on not just what happened in the workshops, but also the processes in which and the context in which different ideas arose.
+The second thing is, in thinking about how you actually encourage a culture of co-creation in prison where people, where it's such an institutionalized environment and people are regularly suppressed, how do you build an environment in which people can start to trust you and enough to design with you? So part of that is just building in the time for that.
+We were limited to about an hour in each session, so we made our effort to get to know people as much as was allowed by the DOC by asking them questions about where they're from.
+Engaging everyone in the room, including the guards who were there to watch over us.
+And the other thing was reflecting and acknowledging our position as outsiders and the privileges that we hold.
+So whether we liked it or not, some people saw us as giving some kind of hope and connection to the outside.
+So how can we respect that? So part of it was doing our homework before we went into prison.
+Every single facilitator was given an orientation packet, where they were given statistics and data about the U.S. Criminal Justice System.
+Just so they could start to get a sense of the experiences of the women that they were going to be working with.
+These are some things that were created.
+So the first day that we went in, we did a storyboarding activity where we asked women to describe a situation that was stressful and then break it down into three moments.
+So before what happened, the moment that was triggering, and then what she felt in that moment.
+And then this was all of these writing activities, drawing activities, et cetera, were synthesized into a script.
+That then we shot in 360.
+So we shot on site and worked with formerly incarcerated women and men as actors, as well as on-screen and voice acting.
+And I want to, I don't know how much time I have, but I want to show you a brief clip of what we created.
+So just to get some context, this is a video that was created describing the moment when, the afternoon after you're released from prison, your best friend picks you up and she's someone that you used to use with and she offers to buy you a drink.
+(door closing) - [Female Passenger] This is Kim.
+She's my best friend.
+I met her in a program about a year before I went to prison.
+We didn't stay clean together very long, but she's always had my back.
+She hammers down all the time I was away.
+(women speaking loudly) - What took you so long in there? I was so bored waiting.
+- [Female Passenger] Wow, smells like a bar in here.
+What is she thinking? She's whacked, and I've only been in there an hour.
+Hold on, is this a setup? - Okay, I'm going to pause it there, because I don't have that much time.
+Sorry, anyways, so just to conclude.
+We're piloting this program right now at South Middlesex with six women and while we're still getting all of the data for that, what we're finding is that VR, when it's created with people who've actually lived through the experience is an extremely powerful tool for evoking emotions and conversation.
+It serves as an incredible entryway into having challenging conversations about people's feelings and then more deeply the behaviors that lead to underlying those feelings and actions.
+And also we find that it's extremely validating for people to hear really relatable experiences echoing back to them in an immersive experience.
+So that's all I have.
+Thank you so much.
+(audience clapping) - Thank you, and questions for Melissa? You can come.
+Melissa, stay over here.
+I just need to use the (mumbles).
+If you have a question, we have a microphone.
+Clove is holding it back there.
+- [Man] Hi, great job by the way.
+Thank you.
+- [Man] I was just wondering in regards to the methods that you use and the workshops and stuff.
+Obviously, your context was very specific, but do you feel like the methods you used are transferable to other domains in sensitive settings? - I'm sorry, the question is are the methods transferable? - [Man] Yeah, do you feel like you could, the same approach but in a different context and still be as rich as what you've done here? - I think so.
+Because the methods we use are essentially just storytelling activities, plus the set of guidelines for how to build the culture in the room.
+So the methods are not at all specific to the population.
+- [Man] Thank you.
+- Time for one more question.
+All right I have a question.
+So of all the stories that you've from your participants, is there one that didn't meet the cut? That you felt like that was really compelling, that you wish that would fit within this project? - I mean, there's so many different challenging situations from people.
+The scenarios that were created are actual, the three episodes that we created are actually a mashup of a ton of different scenarios.

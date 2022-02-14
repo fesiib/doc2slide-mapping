@@ -1,0 +1,138 @@
+- Thank you, Matthew.
+Good afternoon, everyone! My name's Mingqian Zhao, and I'm from the Hong Kong University of Science and Technology.
+I'm presenting this work on behalf of my collaborators, Professor Huamin Qu, also from HKUST, and Professor Michael Sedimair from The University of Stuttgart.
+We work on neighborhood perception in bar charts.
+Well, bar charts are one of the most ubiquitous visualization techniques.
+And, due to its ubiquitous use, many researchers have focused on investigating how the perception of bar charts, and also other significant charts, would be influenced by contextual factors.
+And, one of those contextual factors is the neighborhood objects' size.
+For example, in this figure, in the Ebbinghaus illusion, the size of the inner circle in group one would be perceived to be larger than that in group two, and this is mainly due to the surrounding circles' size.
+In our study, we would like to contribute a novel factor to this line of research.
+That is, the neighborhood effects in bar charts.
+The goal of our work is to know how far the perception of a bar's height is influenced by the height of its neighboring bars.
+This question is quite important, as in the real application scenarios where this bar or components are not always sorted according to their actual heights.
+So, there could be situations that this target bar are located in different neighborhood conditions.
+So to be more specific, we are interested to know whether we could observe any difference in the rank estimation of the exact same target bar when it is raised in different neighborhood conditions, and we mainly worked on two neighborhood conditions.
+That is, the highest neighborhood and the lowest neighborhood.
+The highest neighborhood is constructed by the top 20% highest bars in the group, while the lowest neighborhood is constructed by the top 20% lowest bars.
+We chose rank estimation task as the test bed as it is a task highly related to bars' height.
+And, in our study, we defined the rank to be the ratio between ordinal rank of the target bar and the total number of data items.
+For example, in this figure, the highlighted target, the rank of it, is calculated to be 61.53.
+The foundation of our work is the Parallel Line Illusion in psychological research, and there are two distortions in this illusion, that is length assimilation and length contrast.
+When length assimilation distortion dominant, for example in the left figure here, the target line would be perceived towards the contextual line.
+And for example, if the contextual line is a long one, the target line to the right will be perceived longer.
+And, length contrast is just the opposite.
+So, when the contextual line is a long one, the target line would be perceived as shorter.
+Interesting, seeing as under certain circumstances these two distortions could shift from one another.
+In our study, we hypothesized that neighborhood effects exist in bar charts, and we anticipate that we will see the dominance of length contrast distortion.
+The occurrence for length contrast distortion is mainly due to our own experimental setting.
+And, to be more specific, we want to see that when surrounded by the top highest bars, the target bar rank would be perceived lower than that surrounded by the top lowest bars.
+And for example, if the target bar is perceived to be rank at 50 in the left figure in its lowest neighborhood, we anticipate to see that it will be perceived even lower, for example at the 40, in its highest neighborhood.
+We conduct three studies to investigate this neighborhood effects.
+In pilot study one, we hoped to see some substantial differences in the perceived target bar rank when it is in different neighborhood conditions.
+In this study, we construct nine conditions in total, and we first chose three target bar levels to be the low target bar groups ranked at 25, the medium bars rank in the middle, and the high bars ranked around 75.
+We also generate three neighborhood conditions for each of this target bar level.
+That is, the lowest neighborhood, the similar neighborhood, and the highest neighborhood.
+And, please be noted, that the width of the neighborhood is always fixed to be 20% of the whole chart.
+We conduct a within-subject study of 15 datasets with 94 participants.
+This figure shows our user interface, and we have a one second countdown timer in our study, which means participants are only allowed one second to view each chart.
+We asked the question how do you think about the height of the target bar, highlighted in orange among the whole group, and we measured their answers using a slider with tick marks.
+In our study, we defined the error metric to be the difference between the perceived rank and the actual target bar rank.
+This figure shows the initial results in pilot study one.
+This is the results with all of the datasets aggregated, and we can see a very clear neighborhood effect in each of the target bar group.
+Let me introduce in more detail.
+For example, here what I highlighted is the two neighborhood conditions when the target bar is chosen to be low bars' rank near 25.
+And, we can see that the perceived rank is lower in its highest neighborhood compared to that in its lowest neighborhood.
+This is consistent as what we hypothesized, and it is also true for the other two target bar groups.
+We did not see any substantial difference between the lowest in a similar neighborhood conditions.
+However, we are quite surprised to see a much stronger between target bar group effects.
+That is, a overestimation in the low bars' group and a very strong underestimation in the high bar group.
+We hypothesized that this is mainly due to the choice of the target bar rank itself, and we also hypothesized that our investigation of the neighborhood effect might have been masked by this data-inherent characteristics.
+That's in pilot study two; we want to conduct a new study to isolate and to quantify this other data-inherent effects.
+And, we hypothesized that there will be six predictors contributing to this masking effect.
+That is, the target bar rank itself, the number of data items of the dataset, and also four other statistical characteristics of the dataset, including the coefficient of variance, skewness and kurtosis, normality.
+We conduct a new within-subject study on six datasets with around 200 participants, and we tasked each of the data item in the bar chart twice.
+Once is under the condition of random order, and another one is under the sorted condition.
+We have this setting because this time we do not want to do any manipulation over the neighborhood.
+We just want to know what the error would be like under more natural circumstances.
+And, we used regression analysis to extract causal relationships between error and this six predictors.
+We put three terms of target bar rank into the fitting function, and that is the cubic and quadratic and linear term of rank.
+This is because of the hypothesized curvilinear relationship between error and target bar rank.
+This is also in line with what we see in pilot study one.
+And, then when you have other linear combination of the other five predictors into the fitting function, together we're seeing interaction between the target bar rank and the total number of data items.
+After a very careful model selection, step one is model selection, we constructed a model denoted as model two.
+And, this model has a quite good model fit and is not very complicated, as you could see that in model two there are in total six factors, including two terms of the target bar rank, number of data items, skewness and kurtosis of the test set, and also the interaction between number of data item and target.
+This figure shows the prediction results of this model, and also the original data samples.
+The original data samples are shown in scatterplots, while the six colored lines shows the prediction for the six datasets.
+In this figure, we could see a very clear curvilinear relationship between error and rank, as what we have hypothesized.
+And, we also see a salient difference between these datasets.
+That means there are some other data-inherent characteristics that are influencing the perception of rank.
+We conducted out-of-sample testing for model two and also test against overfitting.
+After we do this, over 15 tasks, we find this model is quite good, and we also compared between random assorted conditions.
+We find that there are less data-inherent effects and also smaller variances in error in the sorted condition, which means compared to the random condition, the sorted order condition is the more accurate way for presenting this rank-related information.
+From pilot study two, we know that there are different data-inherent factors that influence the accuracy of rank estimation task, and we built a rough model based on our data in order to filter out noise and to better investigate to the neighborhood effects.
+Then, we conduct the main study, the study's three.
+We hypothesized that neighborhood effects still exist after we have offset the data-inherent effects.
+This time, we also used the regression analysis to extract causal relationship.
+And, we add another new linear predictor into the fitting function that is the neighborhood rank.
+And, we hoped that we could use this new, linear predictor to explain the difference between different neighborhood conditions, and we anticipated its coefficient to be negative.
+Similarly, we improved pilot study one by using the number of datasets and increasing the number of target bar levels.
+We have around 200 participants in total, and this time we only test between two neighborhood conditions, that is the highest and the lowest condition.
+The results show that we can see a very clear neighborhood effect when we aggregate all the data samples, all the datasets together.
+This results is consistent with what we hypothesized.
+And, when we look into more details, we also, for example, into the more individual dataset level or individual target level, we still find the neighborhood effects dominance, even though we also observed the two other cases, which showed a reverse pattern that is correspond to length assimilation in Parallel Line Illusion.
+After the model selection procedure, we construct a new model with seven predictors this time.
+And this model was a good model fit and its not overfitting.
+We can see that adding neighborhood rank as the last linear predictor improves the model fit, and its coefficient is negative, as what we hypothesized.
+This negative coefficient means that when a target bar is being judged at rank, for example 60 in its highest neighborhood, it will be judged at 61.32 in its lowest neighborhood.
+We also compared between the data-inherent effects and the neighborhood effects.
+In this figure, we used two glyphs to represent those two neighborhood conditions.
+Compared to the data-inherent effects, as what I have highlighted here, the neighborhood effects is much smaller.
+And, the statistical test also echoes this finding that when we are trying to use Cohen's f2, this kind of effect size to sort these predictors, we find that the neighborhood rank is of the smallest, or even negligible effect, compared to other predictors.
+From our study, we conclude that neighborhood effects can be observed in bar charts, yet their effect size is quite small.
+And, results from our work imply that compared to the random order, the sorted order is still the more accurate approach to convey rank-related information.
+And, designers do not need to worry too much about neighborhood effects.
+The accuracy on rank estimation tasks is rather low, so we encourage designers to provide additional clues if they would like to convey rank-related information more precisely.
+Okay, that's all, thank you.
+(audience applauds) - [Host] So again, the microphones are in these bottom two corners if you have questions.
+While people are filtering down, I'll ask something.
+Great work, thank you for this.
+One of the things that I sort of like to ask when we start talking about these perceptual things is can we use these sorts of models to do bias correction, and should we? - Currently, we can not do a model's correction.
+We also think about whether we can counteract those bias, but from this model we see that this model is just a rough model for this six datasets.
+And, in order to do it using this models to see biasing, to counteracting this biases, I think we need to improve the ecological validity by including more datasets.
+And, this is also one part of our future work.
+Currently, we do not have come up with some counteracting method.
+- [Host] Other questions? There's a microphone right there.
+- [Male Audience Member] So, if we want to show the same data, but we don't use bars.
+If instead we showed dots at the tops of the bars, do you think this effect could disappear? - You mean, we do not highlight the target by using color? - [Male Audience Member] No, I mean instead of showing bars, imagine we only show a dot at the top of each bar.
+- Actually, there is one confronting factor in our study.
+That is, the shape of the top of the bars.
+You know, according to Gestalt law or something, or some other laws, the shape of the top of each bars actually you have a curved line.
+And, this curve is actually confirms our findings.
+So I guess if we just replace those bars with those dots, will be something similar will happen because this shape also counter to this biases.
+- [Male Audience Member] I think that's not a confound.
+There's nothing wrong with your experiment.
+The shape you used is very standard.
+So, I'm just speculating that maybe a different effect could be found if we used a different way of showing the data.
+- Yes, quite interesting.
+- Thank you. - Thank you.
+- [Host] Other questions? - [Male Audience Member] Hi, so with the bar charts, could you perhaps speculate on if you were to add error bars to the bar charts, how much that complexity might affect results or change results? - Adding error bars to the bar charts...
+Actually, we are using the bar charts to, the bar components are used to show each of the data items.
+I'm not very clear what the error bars means for the bar.
+- [Male Audience Member] So, if you were to use a bar chart to show survey responses, for example, or some other kind of thing that you want to characterize statistically, the actual value itself might be deceptive, and so you might want to show error bars to communicate the uncertainty around the value.
+Adding error bars, in my experience, adds a lot of visual noise to bar charts, and I've kind of moved away.
+So, I was just curious if you have any speculation on error bars within the bar charts of changing the results.
+- Actually, what we consider the dataset is more like we have nominal dataset, for example.
+This is a rate for a class of students, a number of students, and each bar just represent one student.
+This is their grade.
+So, we mainly consider over this nominal dataset.
+We do not consider answers from survey.
+We have means, we have this confidence intervals.
+So, this is our consideration.
+- [Host] We have time for one more question while the speakers switch.
+So, have you thought about some of the sort of mechanisms behind why you might be seeing the particular shapes of the biases that you've seen? - You mean the (speaker drowned out by noises) work? - [Host] Like, from a, you should use the microphone, but from a sort of perceptual perspective.
+Why is it curvilinear in the way that you've seen? For example.
+- Because the Parallel Line Illusion, and when there are high bars around, this might look a little bit shorter.
+The taller bar look a little bit shorter, as I highlighted.
+Also, you can find in my paper that is the Parallel Line Illusion.
+This might be the foundation of this perception bias.
+- [Host] Thank you.

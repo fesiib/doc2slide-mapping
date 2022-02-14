@@ -1,0 +1,122 @@
+All right, hello everyone, I'm Julie Anne Seguin, I'm a user experience researcher at Google, and the work that I am presenting today is that of myself and my co-authors, Alec Scharff is also a user experience researcher, and Kyle Pedersen, who is here today, is an interaction designer.
+All of us were working at Google research when this work first came together.
+So what I'm presenting today is a user experience evaluation method that we developed to assess early design concepts.
+And I'm gonna walk you through this method with an example of how we used it to guide the product development process for Now Playing, which is an on-device music recognition system for the Pixel 2.
+So I'm gonna start with a little overview video and then I'll go on and break it down for you.
+(electronic music) - [Narrator] At innovative companies projects often spring from technical breakthroughs rather than validated human needs.
+It can be easy to think about applications for new technology, but difficult to evaluate the desirability of these applications.
+This was an early obstacle when designing Now Playing, an on-device music recognition system for the Pixel 2.
+In response to this challenge we developed the Triptech method, to quickly explore many product ideas before committing resources to building full prototypes.
+We start by working with product partners to formulate the underlying needs addressed by their ideas.
+Next, we evaluate these needs and the appropriateness of the proposed solutions.
+The Triptech method has two parts, surveys and focus groups.
+First we use online surveys to assess the frequency and importance of user needs.
+Respondents are shown a problem or need and asked to rate how often they experienced that issue and how important it is to resolve.
+Next, we create storyboards illustrating each concept and evaluate them in group interviews with prospective users.
+The storyboards have three frames.
+One that shows the problem statement.
+One that illustrates the proposed solution.
+And one that shows the resolution and value to the user.
+From this we gather data about desirability, appropriateness, expectations and concerns, giving a foundation for subsequent product design.
+For Now Playing the findings we're used to identify mismatches between user needs and conceptual ideas.
+Set user experience targets.
+And help plan design and research activities for the project.
+When the team was considering several design avenues, Triptech was used to deprioritize solutions that didn't solve the needs of the target audience.
+Saving the team from making costly investments.
+The Triptech method has been used to evaluate user needs and design concepts in over a dozen projects, across three countries with more than 35,000 respondents having taken part in Triptech surveys to date.
+- Okay. So, let me tell you a little bit about what challenges we we're trying to meet and and why why this particular evaluation approach.
+The product innovation process as we know it is changing.
+Traditionally the user centered design process starts by studying a target population and conducting some some research to understand the need of your target audience.
+And from that point to design solutions to address those needs.
+However, more and more what we're seeing is that product innovation can come from technological advancements, so breakthrough technologies, some, some exciting new available options, end up looking for applications, this happens a lot in tech companies so we work with really talented groups of engineers, we're part of Google research so for some times there is an a technological breakthrough and we're left with a solution looking for a problem.
+So what we're trying to do is to find a way to still be the advocate for the user and bring that user voice into the process, despite the fact that tech driven innovation is here and probably here to stay.
+Another challenge that we had is that there are few methods that work well in the early stages of the product development cycle.
+So some of the methods again that are compatible with a more traditional approach to UCD, sorry, user centered design, is to start with the ethnography or some longitudinal evaluations but these things take time.
+And there are only a few of them that really are well built for the part of the design process where you don't have prototypes yet, we are still in the ideation phase.
+So we're trying to find something that will be both compatible with tech-driven innovation and something that could be used before you've built any prototypes, especially when you're considering lots and lots of possible design avenues or solutions and you need to narrow it down a little bit.
+So we call our solution the Triptech method.
+And the Triptech method is actually just that an adaptation of existing method.
+One is surveys, another is called speed dating and the third is focus groups.
+So we merged the three together to create this this new method that we call Triptech but as they said, we really didn't re-invent anything we just reassembled some of the pieces and made it work for a little bit earlier in that innovation process.
+So the Triptech method exists so that you are able to prioritize user needs, like I said sometimes we get tech that comes first and we go looking for a way to apply that technology, well with this method what we do is formulate needs or at least we hypothesize needs and we evaluate them on their own, then we also go on to evaluate the design concepts that would address the needs.
+And finally the method can help outline some early UX requirements, what are things that we wanna make sure that we explore along the way or that we're gonna consider if this is an idea that we take a few steps down into the the product development process.
+So the Triptech method has two parts.
+The surveys are there really to focus on evaluating the needs in isolation of what solutions we plan to use to address the needs and then we use group interviews to really dig into the solutions and what our users feel about the solution.
+So I'm gonna start by talking about the surveys a little bit.
+So for the surveys what we wanna do is we work as a team and we wanna pull out those user needs that we're hypothesizing.
+So of course if we have existing UX research, we will want to pull from that, but if we don't, if we have a technological application and we trying to guess as to what our users might want, then we work together as UX researchers, UX designers, product managers, sometimes marketing researchers, the engineers and we try to state the user need or problem very plainly.
+What is it that we think we're able to address with this new technology? For example, the case study that that I'll detail today as I said is for a music recognition system, so for that one the need was, when I hear music I like, I want to know the artist and title.
+So after we've hypoth, like created all of these needs statements then what we can do is actually get feedback on those statements, and again not show any of the technology, but just using large scale surveys, in our case we use Google surveys, to reach a large number of respondents.
+You recruit survey respondents that match your your potential target audience and you ask them the two following questions, rate the frequency of this need or problem.
+So how often do you encounter this? And rate the importance, how important is it to address this problem? And from that we are able to get a good feel for which ones of our possibly many different needs were rated as very frequent or very important.
+So you can use these data to get an overview of the various needs that you hypothesize and then help set priorities or even more importantly, maybe even deprioritize a few.
+So here's an example, so what you have on the vertical axis here is important so the higher something is on the scale, the more it's deemed very important.
+And what we're using the metric here is the percentage of people who answered that this need or problem was either very or extremely important to address.
+And then if you look on the horizontal axis, what you'll see is the frequency, so that if something is further off to the right, it is deemed more frequent or rather the percentage of people who said that this happens to them often or always is higher.
+So imagine that you had lots and lots of possible concepts that you've articulated lots and lots of needs, you're able to look at them in this chart and at least get like a first feel for which ones are in that top quadrant, and that's usually where you wanna focus or at least look at that bottom left quadrant and know that that that's the one that you can deprioritize.
+If you had so many different concepts and then that's the needs that you weren't able to take all of these ideas and show them to user in the second phase as I'm about to describe.
+This is also a really great way to deprioritize.
+In our case, this was part of a study with nine user needs so we decided to take all of them into this second phase of the method.
+The needs statement that I showed you earlier, for 'when I hear music I like, I want to know the artist and title,' it rated as the second frequent need, sorry, yep, second most frequent and it was fourth in terms of importance.
+So again once we've taken a look at just the needs, what it is that we think, what's the user need value, what are we bringing to users, and deprioritize the ones where maybe we had a cool idea but we just didn't find something of value for the the target audience.
+Then we move on to the second part which is group interviews, and the goal here for group interviews is really to evaluate our proposed solution to the need.
+We do that by building storyboards.
+We make three-framed storyboards, that's why the method is called Triptech by the way, and the first frame what we do is show them that problem, that exact same statement that we used in the surveys, so 'when I hear music I like, I want to know the artist and title.' And we collect the same type of feedback as we did with the surveys.
+We asked them about frequency, we asked them about importance, and then we can also ask some more open ended question because this part happens with small groups of individuals who come i, in person, we do focus groups of about six to eight participants per group.
+The next part of the storyboard, the middle frame, shows the solution.
+What are we proposing to build? What is our design concept? So in this case, you can see a hand holding a phone and it says my new phone can listen and display the artist and song title on the lock screen.
+And then the third frame of the storyboard, shows the happy resolution for the user.
+What do we think is the value here? For example, I am able to get the information I need without unlocking my phone.
+So when it's when we're bringing people in for these focus groups, we're doing a couple of different things.
+As I said first of all, by showing them, let me backtrack, just the need, we're able to see if their answers match the answers we got from our survey respondents, making sure that our in person sample is representative of the larger sample that we surveyed.
+And then we're also able to get a lot more detail and discussion around their thoughts and reactions to that need and they evaluate the solution.
+So we do that in two two parts, first we get individual feedback.
+We ask for our participants to to give us their first reactions to the need and the design concept, but without first sharing it with anyone.
+We need their umprimed reaction, and what I mean by unprimed is we wanna collect reactions that haven't yet been influenced by the rest of the group.
+So we have them note their first impression, we also have them rate perceived usefullness and desirablity, how much they want this idea.
+These are mostly collected for, to feed into the discussion.
+And then after everybody has had a chance to react to the full storyboard to seeing the solution we're proposing, they can by the way do that like on a computer or they can fill in a printed answer sheet.
+Then we move on to an actual group discussion which is more in line with the typical focus group.
+And from that what we're trying to extract are what did they like, what did they dislike about the idea? What are possible ways they use something like this in their own lives? And then I think most importantly, what questions come to mind when they first see these ideas, what concerns do they have? And all of those pieces of information become very useful for us, I particularly like the questions and concerns because if this is an idea that moves forward, you want to make sure to be able to design some user experienced research and design activities that are going to take a look at these concerns and questions and really help shape the product itself and maybe some of the parameters in how the product is built.
+So going back to the example of the music recognition need that was deemed popular with our users, we found that we were able to understand a little bit more around like desirability.
+What kind of assumptions were our users making of this, for example, I'm assuming this isn't notifying you, or hmm, is it pulling cellular data? We also get to find out about the appropriateness of the solution compared to the need.
+And finally, questions and concerns, what are those things that are going to be top of mind for our users.
+A little bit more about Now Playing, so what came up two of the top concerns, while we know that people were excited about the idea of their phone recognizing music and telling them the song and the artist is they were really worried about privacy.
+Does this mean that everything that's playing around me is is being sent to to the cloud? Is this is this listening in on me? They also had concerns about battery life.
+If this can tell me about the music that's playing at any given time, how do I know it's not going to drain my battery? So as the product furthered what we did is that we made sure that we developed it in a way that's completely private.
+It works on devices that doesn't communicate with the servers at all, which means that it can work offline as well.
+And some really wonderful engineering went into making sure that this was done in a battery-preserving way.
+Of course, as useful as Triptech is, there are a couple of limitations that I wanna note for today.
+One of them is that Triptech asks participants to self report on the needs.
+People are rating how frequent and important a need or problem it is to them as opposed to us like running a study to observe that.
+One way around that is if if you have available user experience research, we encourage you to start from that.
+But we still think, and there's some published data to back up the fact user's perceptions of the need can also be valuable and can help you judge if this is something you should prioritize.
+And then of course another limitation that's worth noting, is that it because we use focus group types of discussion then the results are also limited by all the common focus group limitations.
+So it is possible to get group think, it is possible that people will change their minds or their answers as they're listening to other people talk.
+It can't predict how well a product will do in the market.
+However, we still think that this group discussion is really valuable cause what we're trying to do at this point, this early in the design process is just to pick up on signals, to find out like, what could be some of the red flags, what are the things that people find attractive, or worrying or particularly novel about this idea.
+So this is just another way to gather more signal.
+And then finally just to recap, like why Triptech.
+Number one it can be used early in the design process, at the point where you only have some ideas and before you invest a single dime on prototyping.
+It's useful for evaluating both the need and the design concept, and since we get some data about the need itself in separation with the design concept, it's easy to spot those places where maybe we got a little bit excited about tech for tech's sake but it wasn't really going to address something of value for our target audience.
+And then finally using answers about likes, dislikes, questions and concern, we really can say well here are some requirements that we want to fulfill along the way for example, with Now Playing addressing the issues about privacy and testing that with users and also addressing the issues with battery life and designing the product in a way that would not not consume and drain the battery.
+So overall this has been a successful method for us.
+We've used it in it was 12 projects of the time of the publication, it's closer to 20 now.
+We've used it in three countries, with the fourth one on the way and we've had over 35,000 individuals take part into our surveys so overall a popular method at Google and hopefully with the accompanying paper for for this case study then you'll be able to dig into the method a little more and maybe apply it in your own work.
+Very happy to take your questions and also if ever you do want to follow upon any of this feel free to send an email to myself or Alec or to Kyle.
+And that's it.
+(audience clapping) - [Moderator] (mumbles) questions? Yes, we go a bit over time but lunch break is later on so it's okay.
+- [Audience Member] Thanks for the talk, I was wondering how did you recruit people for focus groups? - Yes, okay, so the question is how do we recruit people for focus groups? Well so we're at Google and we are fortunate enough to have a really wonderful participant pool.
+We have a very large number of users across the world that are available for, for Google studies.
+But of course what I would say if you're applying this in your own work it just, it's starting with identifying with the target, what the target market is going to be and then making sure that you find a way to recruit individuals that will fit that demographic so that you have a representative sample.
+- [Moderator] We have one more question.
+- [Audience Member] Thanks for the talk, I just wondering what comes before this method, for example, where does this (mumbles) come from as the input of the survey.
+- What comes before the method and I didn't hear the last, the second part.
+- [Audience Member] Yeah, what comes before this method so for this survey you have for example, nine is what you want to evaluate, how where does the list of needs come from, for example probably come from 12 or 15 kind of needs and does also from another user research or other type of method? - Right, thank you, great questions, so in the case of this, this particular case study or the first time we implemented this method we were a group working on AI powered solutions and our team was looking at a number of different ways to bring artificial intelligence to smartphones, so what they had is again a team of technologists were working on several on device applications of AI for smartphones and then went searching for like, well what could we do with this, what are some options with that? So it really was one of those problems of having the tech first and then looking for a best way or a place to apply it to test out the technology and this method was our way to get the user part of that discussion, as opposed to letting the train kind of like, run on it's own and then you end up starting to invest a lot of research on something that just never even been validated with users.
+- [Audience Member] Thanks, one more, so one of the things I love about speed dating is the the process of figuring out what things to show is supposed to include bad design ideas, things that you know, you know that are really creepy with the AI or something like that because you're trying to find the users boundaries and you get surprised sometimes that what you thought was really creepy everybody thinks it's fine.
+Do you use that deliberately giving bad design ideas or what you think are bad design ideas? - That's a wonderful question, we have our version of this.
+So speed dating, part of the, this method are based on the needs validation portion of speed dating and to our paper it's a wonderful one, I encourage you to read it.
+What we've found is the best way to do that is we don't have to manufacture scenarios that we suspect will make users uncomfortable, instead what we do is at the phase of planning out the study we decide not to, we're a little bit liberal in what we include, we don't want to artificially cap it at things what we think or assume are going to be creepy and you know all those themes that are common to things like like AI.
+So the way to do it is without having to create a false one as kind of a benchmark, we just make sure that you let many of those different ideas through and you're able to get that comparison of the data.
+And I gotta say our team has never struggled with coming up with ideas (laughs loudly) and coming up with the needs statement has also in and of itself been an active been an activity that's really useful in getting them to understand sometimes where the tech doesn't have a value proposition, but when it comes to the design concepts we let them run with it, and then we let the users speak for the value.
+Thank you.

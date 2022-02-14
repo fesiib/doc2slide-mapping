@@ -1,0 +1,146 @@
+- Hi, my name is Yeah-Seul.
+I'm a PHD student at University of Washington working with Jessica Hullman.
+This project was done when I interned at Adobe Research under the supervision on Mira Dontchaeva in a collaboration with Eytan Adar.
+In this project, we explore the possibility to support speech input while expert users interact with creative application.
+So using creative applications is notoriously hard, even for experts.
+There are many reasons.
+Creative applications, such as Adobe Photoshop, Illustrator, or Microsoft PowerPoint, offer a very broad set of features because design tasks often require various sets of operations.
+So even experts can only be able to master a certain set of them that they use often.
+If they wanna use the rest of them, they have to find them in the piles of menus like this.
+Also, expert users use multiple applications to complete a complex design task, so this requires them to familiarize themselves with many applications that might have a slightly different user interface.
+Experts also tend to use multiple input devices, like a keyboard, mouse, tablet, and pen, and touch, which costs some time and effort when they need to switch to another modality to a certain interaction, like typing while drawing with their digital pen.
+To overcome these difficulties, expert users use some techniques, like keyboard shortcuts, macros, or interface customizations, but there are often limitations to how much efficiency this can provide.
+So for example, a user can only learn and program the limited number of keyboard shortcuts because it quickly becomes difficult to find new combinations that are both memorable and efficient.
+And also these types of practice, adapting these types of practices to your workflow requires time and effort as well.
+So even the complex nature of expert needs and tool and technique the support that needs, expert users face to deal with cognitive and physical cost in their daily tasks.
+So since they have to learn and recall, and also integrate all those features and techniques into their workflow, it imposes some cognitive load.
+And they have to switch modality often, and even with the case of single input modality, like digital pen, they have to travel all the way to top to trigger an operation in the menu and have to come back to the main canvas they're mainly working on, and this imposes some physical costs for users.
+So in this project, we consider speech input to reduce these costs.
+So specifically, speech input that layers on top of the existing application and acts as a vocal shortcut that will help expert users to trigger necessary operations.
+And speech input might help them to reduce the cognitive cost associated with the locating a button to trigger an operation or recalling obscure keyboard shortcuts.
+And may reduce the physical cost as well by reducing the needs to speech input, sorry, needs to switch input modality and save lots of travels across the screen.
+So we started our exploration of this possibility of supporting speech input with a set of research questions.
+So first we were wondering whether expert users can envision the speech interaction in their existing workflow.
+And if so, when is the circumstances that expert users want to use speech input.
+And also, what is the most natural or efficient query to invoke an operation for expert users? Lastly, we were interested in understanding unique needs for expert users in terms of using speech interaction.
+So to answer this question, we conducted a series of studies and built a prototype.
+So first, we did a formative interview.
+We wanted to understand whether expert users were willing to use speech input or not.
+If so, which use cases the user can envision that speech input might help.
+Then we start prototyping by incorporating the design goals that emerge from the formative study.
+And with the prototype we developed, we evaluated how expert users used the prototypes to do typical creative tasks to understand how and when speech input is being used.
+So to learn how experts envisioned to use speech input in their workflow, we recruited 10 creative experts where all participants identified themselves as professional artists or designers.
+And their experience were varied from three years to 15 years, and on average, they were using four creative applications.
+In each session, we first asked their professional history in a couple of projects they were working on.
+We also proned them to think about opportunities for speech input in the context of their current projects.
+And we also discussed specific situations where they envisioned to issue a speech command and broadly discuss some strategy they're using to be more efficient.
+Here are a few examples of use cases.
+So some experts liked speech support, especially when they're using brush.
+So since drawing with brush required them to focus on the main canvas that's often located in the center of the application, and currently they have to move focus to find a specific brush they're looking for among many other listed brushes.
+So some experts envisioned to use a speech input to change brush tip by simply saying the name of the brush or change the parameter in like size or opacity while being focused on the main drawing task they're working on.
+Some experts mentioned about using color library.
+So often experts users work with a specific color pallet instead of setting a color by searching through swatches or entering RBG values, they can envision using speech input to invoke a preset color, like simply saying marketing blue.
+We have a few more interesting findings, and then you can find that in our paper.
+So using use cases and constrain implied by the expert users' feedback, we motivated a design goal for our prototype.
+So first, speech input should be implemented in way that allows the experts to minimize disruption of their creative flow because that's their main concern.
+Second, speech input should support the flexible design configurations that experts are using as they tend to use multiple devices.
+Finally, speech input should enable the users to customize the command.
+For example, to handle the custom assets, or a preset colors, or a macro, and so on.
+So keep that design goal in mind.
+We built a prototype called VoiceCuts.
+VoiceCuts is a speech input layer that supports vocal shortcut functionality on top the the creative application, Adobe Photoshop.
+So first we categorized operations supported by Photoshop.
+We identified three major operations that can be used as a basic unique of a design task, which is activating tools or features or setting tool perimeters and selecting document objects, such as layers or groups, in Photoshop.
+And a typical design task consists of one or more operations that are listed here.
+And our strategy for building the prototype can be summarized as these three points, which is, VoiceCuts will support a short phrase speech query as experts want to minimize the disruption of flow.
+For a similar purpose, VoiceCuts will execute the top ranked operation, even when there's some uncertainty in their speech query, instead of asking users to disambiguate their intention.
+And VoiceCuts will provide customize interfaces so that users can integrate their personal needs.
+So I'll briefly show you how show you how VoiceCuts works.
+So imagine this user is working on this CHI logo file, and show wanted to add a little illustration to this logo.
+To do this, she needs to change brush tool and set the brush tip and size.
+So first, user can trigger the speech panel either by clicking a button in their tablet or using a keyboard shortcut.
+So once the speech panel is triggered, VoiceCuts is listening to what the user says.
+Once the user issued the speech query, in this case, azalea brush size 10, then VoiceCuts will execute the first ranked result, which is change to brush tool and set the brush tip to azalea and set the size brush as 10.
+Then, the user can look at the history of speech interaction in this history panel, and the user can customize their query by clicking the edit button if she wants to shorten the query to trigger the same set of operations.
+So here is how VoiceCuts interprets the user speech query.
+So first, the user speech input is converted to the text speech, sorry, converted to text using Google's Speech-to-Text API, then our interpreter first tokenized the sentence for three types of operations that we identify, which was activating tools, setting the parameter of that tool, and selecting the document object.
+We built three detectors that detects each operation.
+And all three detectors return the information of whether the operation was fully or partially matched with the list we collected as a tool or parameter and document object.
+And also, we returned the word that their detection was based on and the index of the word.
+And after all detectors return the result, now it's time to prioritize the detected operation.
+First, full match operation will be preferred over partial match, and also we prioritize parameter setting operation the most followed by tool operation and then document object operation.
+An execution engine will execute and identify an operation.
+So we believe that this approach of having multiple detectors working in a parallel manner then prioritize the results based on some domain knowledge can be generalizable across many creative applications.
+And for an application that has operation categories other than these three, our approach can be extended with additional detectors.
+So, our detector has some limitations.
+So Google's Speech-to-Text API is not subtile for a short phrase, so they're optimized for longer and conversational dialogue, so converting short phrases preformed less accurately.
+Next, we rely on the Photoshop execution API, so VoiceCuts capability to execute certain functions has bounded by this capability of internal API.
+Lastly, we didn't incorporate any user models to resolve when there are disambiguations.
+So for example, if we know that the user prefers a certain tool over another, we can prioritize that preferred tool to be executed based on our understanding of users.
+So, using VoiceCuts, we ran a lab study and case study to understand the circumstance of speech input being used.
+To gather feedback on viability and limitation of VoiceCuts, we recruited eight experts for a lab study.
+Then we asked them to complete a design task, which consists of editing an image and then adding illustration to that image.
+And each session lasts from one to one and a half hours.
+And after the tasks, we asked some questions, such as, how do think the speech input affected the flow of your work, what was the biggest frustration, and what did you think about the biggest win for using speech input in your session? So we found that expert users used speech input in these circumstances.
+So some participants used speech input as a fast search.
+So this participant felt fast to search by speech than navigation the interface when this participant wants to check an operation that she doesn't use often.
+And participants use speech to organize document object hierarchy.
+So they are using it not only because it's faster, but that verbalizing the command actually helped them to think through the structure of the complex hierarchy.
+So one participant says that, "By verbalizing the speech command "I can make sure that the structure is that what I want." And participants use the speech when they try to explore design alternatives.
+So for example, one participant says that, "Instead of having to go through hoops, "I can just just say brighter, "and my eyes never leave my work, "so that I can just focus on that "and then see how it looks." And it was somewhat surprising to us because this approach might not be the fastest way because the user should keep saying a command and adjust it little by little, but they there is a benefit, the user can keep focusing and looking at the canvas to test out different design alternatives to find out, let's say, a perfect size for brush, for example.
+Please check more findings in our paper.
+And we observe a few more things.
+Participants tended to provide full phrase to specify tools or layers, even when it's not necessary.
+So for example, VoiceCuts can trigger brush tool when the users just say brush, or burn to trigger burn tools, but participants use a full phrase.
+So they said previous experience with other voice-assistant applications like Alexa or Siri, they felt they should specify the command to be understood by VoiceCuts.
+And another observation was no one had used our customization function, but in our followup interview, all participants said that they would use it assuming longer term use.
+And they provide a few examples how they customize interaction and all focused on shortening the commands.
+So given this feedback, we would like to deploy VoiceCuts in a real-world scenario where people can use it in the context of their own environment.
+So we deploy VoiceCuts with one professional designer in a large software company and collected his feedback.
+And right image shows his work setting, has one Wacom tablet alongside keyboard and mouse and extra monitor.
+So overall, the designer's feedback was positive.
+He found the value in vocal shortcut approach and felt that VoiceCuts saved him some time.
+And we analyzed his speech history, and he made total 58 unique commands, and the VoiceCuts took action on 33 of them.
+And the designer has some few suggestions for improvement, most significantly around response time of VoiceCuts and the accuracy of speech to text functionality.
+And he mentioned that is would be nice to add text entry by just saying it.
+So in the future system, we can improve response time and accuracy of speech-to-text by having local engines to convert it instead of having a cloud API.
+And also, we can provide a set of short phrases that often been used in the Photoshop as a hint so that the engine can prioritize those short words to improve accuracy.
+In VoiceCuts, the user should trigger the speech panel to start issuing a speech command.
+Contrast to our expectations, all participants but one wanted a speech system that was always listening instead of a trigger based listening.
+So they described that they're often being in the quiet and private working environment and found triggering speech input by pushing the button a bit distracting.
+So important feature work will be investigated what is the fact of different listening mechanisms and also identify which one is the best for creative application context.
+And VoiceCuts intentionally designed to execute the top ranked operation to reduce some distraction, but what if the operation was not the one that the user intended? So they had to revoke the operation and issue it again.
+The important future work will explore the right cost model so that we can know when to execute and when not to based on some cost utility analysis.
+And some of our participants actually want use speech input for some background tasks outside of creative applications.
+So for example, one participant said that it'd be nicer to manipulate music player, or change to a different radio station, or look up a quick tutorial with speech will be benefit to keep him in a flow.
+And another participant mentioned that he wanted to interact with the speech enabled creative application when he is collaborating with other people to minimize the disruption of using keyboard and mouse in the setting.
+All right, that's it.
+Thank you.
+(crowd applauds) - [Woman] We have time a few questions.
+- [Tomekia] Thank you for the great work.
+Tomekia from UBC.
+I wonder if you have observed a case where the users wanna use multi-model input on top of speech using pan or other keyboard input as supplement.
+I think, for example, in cases where after I say, brush size 10, maybe I wanna see the size panel and then wanna dynamically adjust it using my mouse or maybe an error recovery mechanism.
+- So you're saying, do we observe any other usage where participants use multi-model, like-- - [Tomekia] Any need for multi-model. - Oh, needs for multi-model.
+For our scope of research, we haven't specifically looked for that aspect of it, but I'm sure that there will be.
+I think that's the area of future work.
+- [Man] Hi.
+Very cool talk.
+I'm wondering if you saw any difference in how the users were responding based on their experience with Photoshop.
+Maybe beginners liked it better, or experts found it either way.
+- So you're saying the participants get better as the session progressed? - [Man] No, sorry.
+If the user is already really good at Photoshop, do they still find value in this or vice versa? - Oh, yeah, our target user was experts, so all of our participants have some experience with Photoshop, and then we specific recruited someone who has experience with Photoshop, and then we had multiple criteria to filter out who should be recruited.
+- [Man] Did you do that because you thought beginners would not benefit from this, or what impact might this have on beginners into Photoshop? - Oh, well, our approach is specifically designed to experts because we have certain assumptions to build on this project, which is experts know what to say, they know the keyword so that they can just saying it and then we can match those results with what we have.
+So, probably there will be, novice will need more information than shortcut approach, but probably some of the approach that we take, like architectural-wise or other user experiences, will apply to novice usage as well.
+- [Man] Thank you.
+- [Chu] Hello.
+Hey.
+Excuse me.
+Chu from University of Notre Dame.
+Very interesting work.
+I'm wondering, so last year, I remember Adobe released voice control of Adobe Photoshop and Bridge on their software.
+I'm wondering, what's an improvement compared to the company's previously released the work.
+Have you considered that? Do you collect the user needs from the experiments? - I'm not aware of what the product you're talking about, but we can talk after this talk.
+- [Chu] Yeah, sure, thanks.
+- Thank you.
+- Let's thank the speaker.

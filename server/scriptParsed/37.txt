@@ -1,0 +1,141 @@
+- Thank you for the great introduction.
+My name is Carla and I'm going to present some work that I did with Wendy Mackay at Inria in Paris, Midas Nouwens from Aarhus University and Joanna McGrenere from (murmurs).
+So as Jacque was just saying, couples have very special communication practices and needs.
+They like expressing how they care for each other in very diverse ways, so they use a lot of different apps with diverse features.
+Instead of using just one.
+They also share intimate knowledge of each other's routines.
+And they need to stay in sync, so for example, they end up sharing calendars with their everyday activities.
+And last, but not least, they miss each other when they're apart and they worry when the other doesn't answer a call or doesn't reply a text.
+So, in general, we see that apps rarely offer couple-specific functionality and couples end up adapting their communication to the communication apps that they use with everybody else.
+So we see this as a design opportunity to augment couples' communication with technology tailored to their special needs and their special practices.
+So one approach in the literature is to share streams of intimate data that provide context about the other.
+For example, previous research on implicitly sharing location data found that couples felt more connected with each other and they also appreciated knowing that the other was safe without having to explicitly ask.
+Sharing motion information also coordinating every day tasks and inferred whether the other was available for a call, and even start conversations about how the day was going.
+And more recently, a study about sharing heart rate information also found that couples had increased feelings of connectedness, and there were also situations where they started conversations about the day that they were sharing.
+However, we see that this research, mostly, has focused on one stream of data at a time.
+Sharing only one type of data.
+And we wondered how would couples take advantage of sharing multiple streams of data that show different situations.
+Also most research also focused in sharing only live data, and we speculated that persistent data and showing past events could also provide richer contextual cues.
+So in this study we investigate, how else communication changes when they share multiple persistent streams of contextual information? So for this, we built a technology probe, which we called Lifelines.
+There is a timeline, additional timeline of contextual information shared between the partners.
+You can see that the (murmurs) appears as a notification which happens, cannot be dismissed, it's sticky.
+So they have access to it, regardless the app that they're using.
+So presenting Lifelines as a notification has two key benefits.
+One, it provides peripheral awareness in the notifications panel where a partner see their incoming messages.
+And, second, users can overlay the notification on top of any communication app that they're using.
+So they can augment their current conversations with contextual information.
+Partners can also open a configuration app that is called The Lifebuilder, where they can see a legend of the streams that they share with each other.
+On the top, we see their use of Lifeline and one below is their partner's.
+And they can share up to six streams of contextual information which we selected based on previous research and also based on what types of data most phones were able to support.
+So the streams appear in layers.
+First, the battery level, on top we see the closest to home, how close the user is to home.
+Then whether media is playing or not.
+Whether the user is walking or not.
+The timestamp and duration of outgoing calls to their partner.
+And, last, the timestamp of SMSs sent to their partner.
+So here, for example, a user is playing a game.
+We can see that the black battery level gets the thinner as the phone battery drops.
+And here we can see that as the, the user approaches home, the closest to home stream gets darker.
+So partners can individually choose what streams they want to share with the other and they can turn them on and off wherever and whenever they want.
+And they can also customize the aesthetics of the their Lifelines to make them more personal by choosing different colors and different patterns to enable.
+So (murmurs) doing our study with nine couples.
+Where we used Lifelines as a technology probe to know more about how multiple persistence streams of contextual information affected the communication dynamics.
+The study started with the set up, and then a three days training period where they only saw their own Lifelines.
+And in this way they were able to get used to how the visualization reflected their everyday activities.
+Then they started sharing their Lifelines for three weeks, and we did two interviews in the three weeks.
+Last, participants uninstalled Lifelines, and one week later they answered a questionnaire.
+We collected 22 hours of video from 34 interviews, and for these, we shared a link to each participant with a website showing their historical lifelines.
+We asked them to share those streams with us so they could point to the specific moment where Lifelines had an effect on their communication.
+We coded these interviews we promised and then we continued with a thematic analysis.
+So, what was the value of sharing multiple streams instead of only one type of data.
+Participants inferred context by interpreting a mix of streams together.
+So then more precise contextual information or to (murmurs) the meaning of a single stream.
+For example, for Mona, if she saw steps on top of the light closest to home, then she knew that her boyfriend was walking around campus, but if she saw steps with the dark closest to home, she knew that he was most probably walking the dogs around the house.
+However, we noticed that, mostly, participants looked at only one stream at a time.
+Examples of interpreting (murmurs) of multiple streams were very interesting.
+But, most the time they looked for the stream, the single stream that was not useful for the needs that they had at the moment.
+So how did persistent streams help to infer in context? The most interesting thing that we found, was that missing data had meaning.
+So when the phones were suspended for too long and participants weren't using them, the app that was sensing the data stopped working.
+So you could start seeing regular gaps on participants' (murmurs).
+And instead of perceiving this as a bug some participants actually thought that this was extra contextual information.
+For example, Barry explained that when he saw these regular gaps, he knew that his wife was away from the phone and probably running after the kids.
+But, when he saw her complete Lifeline, she was having a peaceful moment, the kids weren't doing anything strange, and she was just relaxing exploring Facebook.
+So patterns of missing data provided additional contextual information and this was thanks to persisting past events.
+So another question that we had was, how couples' communication changed when using this probe? We found that Lifelines sometimes replaced direct communication, when people just looked at the data instead of asking a specific question.
+For example, Rick learned to recognize that when Nina was outside the city, her closest to home stream was empty, it didn't show up.
+But, as she was approaching home, it started appearing.
+When it just started to appear, it meant she was an hour away from home.
+So he his pattern to start estimating when to start preparing dinner.
+And one time he even ordered food on the phone and the food arrived at the same time as Nina.
+(amused mumbling) So in other cases we found that, instead of replacing communication, contextual information triggered direct communication.
+That means a partner texted or called each other after seeing unexpected or curious data on their Lifelines.
+For example, Dory noticed the series of little cross patch patterns on John's Lifeline while he was at work and wondered why, because she didn't expect him to be listening to music at work.
+She texted John, asked him and he said, well, it's actually a fun (murmurs) game that he had just installed.
+And this inspired Dory to also install the game.
+So then they started talking about games every day and that was very nice for John.
+(laughter) So it's very important to know this, that we found very strong individual differences, sorry, individual differences across and within couples.
+So there's change that triggered or replaced communication actually depending on each couple's routines, their needs, their values, their knowledge of each other.
+For example, we can see how media playing and steps were valuable for Dory and Kelly.
+So Dory asked about surprising events when she saw media playing, as we just saw.
+And Kelly used media playing to coordinate pick-ups because her husband listens to music when he's on the train.
+By recording steps, for Dory, they were a way of checking that her husband arrived safe to the office.
+And for Kelly, they were a way of checking if her husband was walking enough to warn him about his knee health.
+So we see that we can't really say that a specific type of data is what triggers communication or what replaces communication.
+What we see, is that the data that confirms partners' expectation and knowledge of each other replaces direct communication.
+And the data that challenges their expectations and their knowledge of each other triggers their communication.
+So we also found that replacing direct communication sometimes it's not just a comfortable way of coordinating, but may hurt established communication patterns that are very important to the couple.
+We found only one example like this, but we believe it's quite important to inform and how to design for contextual information technology.
+So Hugo's partner started using Lifelines a lot.
+And then when he stopped sending those little messages, like, "Hey, how are you, What are you doing? " Where are you?" And Hugo missed this a lot because he felt that it was a more personal touch than just looking at the data.
+So one day he turned off the closest to home stream, to test if that if that would make his girlfriend start texting him again.
+So you can see here, that the closest to home stream is on and it suddenly disappears.
+So when his partner noticed, she felt like he was hiding something.
+(laughter) But, he explained that he was not hiding anything, he was just turning his GPS off to save battery.
+(laughter) So we see in this example how an ambiguous visualization, like this, can enable plausible deniability.
+(laughter) But, most importantly, it suggests that not all couples may feel more connected when sharing contextual information.
+And that a poor balance between triggering and replacing direct communication can lead to feeling more distant instead of more connected.
+One week after we asked participants to uninstall the probe, we sent them a questionnaire.
+And we saw that 15 out of 18 participants missed sharing at least two of the streams.
+And some found ways of compensating the lack of Lifelines.
+For example, Rick said that now he had to ask more often, "Where are you?" Before saying anything else.
+And Barry started checking WhatsApp messages for the last seen status more often, because now he didn't have the regular data to infer whether his wife was using the phone or not.
+So what are the implications for design that we source from these findings? On one hand, partners should be able to explore more diverse types of conceptual information streams.
+To experiment what types of data replaced or triggered communication for them, especially since the type of data that are valuable to some couples may be completely irrelevant to others.
+On the other hand, we believe that mixing persistent streams with live ephemeral streams might provide (murmurs) ways of handling privacy settings.
+So if you believe that there is a stream that you're going to turn on and off all the time, maybe instead of having it as a persistent one, it's better to have it as an ephemeral stream.
+And last, this whole study really challenged our perception of what it meant to design for couples.
+Especially since they were all so different.
+We couldn't find patterns.
+So the best advice that we have is that we should be open ended technologies that they can adopt to their particular needs and their unique communication patterns.
+So, to conclude, we did a study for finding out how couples communication changes when sharing multiple persistent streams of contextual information.
+And the most important take aways (timer goes off) are that what are the stream, triggers or replaces direct communication does not depend on the particular data that is shared, but it depends on how it challenges or confirms the knowledge of each other in the couple.
+And that the efforts of sharing contextual information are deeply personal.
+So it is essential to provide diverse opportunities and nuanced control over the data that each couple shares.
+Thank you very much.
+(cheering) - Any question from the audience? Yes.
+- [Audience] Thanks for this interesting talk.
+Wonderful application.
+Also very nice design.
+I'm (mumbles) Oliver, from the Affective and Cognitive Institute in Offenburg, Germany.
+And I wonder, often in HCI we do things simply because we can, like, I think that this is an application which is like this.
+But, did you, before you created the application, or maybe even before you started the study, check who really wanted to use this kind of application? Because I'm in a relationship myself, but I think it is, it's quite intimate to share this amount of knowledge.
+Just to exactly know, how often, how far you were away from home, you can have all these questions.
+It may raise suspicions where you don't want them.
+- Okay, so I have a very special slide for extremes.
+(laughter) So, what you just mentioned is, you are talking about the elephant in the room.
+And I did (murmurs) first.
+Again, I think, how did we come up with the idea? In fact it came a little bit from our own needs.
+At least for Wendy and I, are people that work with our partners and we noticed that there are many situations in which coordination would be easier if you just knew about the other.
+And we took care of designing this type of communication.
+Sharing contextual information, sharing in a way that was ambiguous enough so that only the couple was able to interpret it.
+Without knowing the other very well, you just see a bunch of colors and then nice patterns and you don't know what they mean.
+And we did some private studies, some previous studies, to inform what kind of data streams couples would share.
+But the thing is that, of course, that when you do this types of study, you only recruit people that is okay with sharing this information.
+And that find the same kind of values that we did.
+But it was also then quite challenging to recruit.
+And that's when we started to see that a lot of people really took it personally, including things like, "I hope your study fails." And it's actually why it's quite interesting as follow up research.
+Using this, even without this in your relation just using the idea as a probe to understand how people feel about sharing this type of very intimate data and how does it help to reflect within the couple.
+But, again, every couple is different, so.
+- Okay, let's just take another question while the second speaker is setting up.
+- [Audience] My name is Christine.
+Great presentation.

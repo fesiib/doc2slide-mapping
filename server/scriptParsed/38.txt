@@ -1,0 +1,570 @@
+- Start since it's getting slightly late.
+Good afternoon, everyone.
+Welcome to the Ethics Town Hall.
+We apologize for the technical delays, the entire setup decided to take a Brexit on us and (audience laughing) also kick the North American laptops out.
+We're gonna do the introductions without the slides and then we're gonna put the names back up hopefully, where the second restart this is, no third.
+Third is the charm so.
+I'm Cos Munteanu, I'm University of Toronto and I'll be moderating the panel.
+And we're gonna do introductions and then talk a little bit about format and what's gonna happen.
+And we're just gonna give you a hint.
+We're gonna do series participation in this one.
+We're really, really interested in hearing what you think.
+So we're gonna use some slides just to tell you a little bit about what the committee does and then open it up for a lot of discussions.
+So we're gonna go, in no particular order.
+- Hi, I'm Jenny Waycott from the University of Melbourne.
+I'm part of the research ethics, what do we call ourselves? The Research Ethics Committee.
+- That's what we all are.
+- Yes, we're all part of the committee.
+And the reason I'm interested in research ethics in HCI is because the work I do looks at designing and using technology for all the adults who are socially isolated or who are living aged care.
+So I'm interested in ethics around HCI research in sensitive settings.
+- I'm Casey Fiesler.
+I am faculty at University of Colorado in Boulder.
+I do a lot of work around research ethics for public data and social media.
+- Amy Bruckman, Georgia Tech, what Casey said.
+(audience laughs) - Michael Muller, IBM research.
+I guess I'm on the committee because I keep on insisting that ethics is pleural.
+- Hi, Chris Frauenberger here, TUV, which is Vienna University of Technology.
+I am on the committee because I care about ethics.
+I design technology with marginalized groups such as autistic children and I guess I also kind of, I'm the only European on stage, am I, yes.
+I think that's true.
+That's also why I'm on the committee I think.
+- And we have some sort of slides.
+It'll be a bit weird because it wants draw, so we're gonna go line by line, no paper (mumbles).
+So we're gonna go a little bit about what the committee does for those of you who are not familiar with the activities and then open it up for discussion.
+So next slide.
+(audience laughs) So what do we do? We facilitate the engagement of the entire SIGCHI community around ethical issues, particularly norms that may emerge sort of collectively from what we do.
+We help refine any policies that SIGCHI has on, related to ethics and a lot of work is on advice to program committees during the review process.
+This has been very intensive a lot of times for us.
+So if you are a program committee paper chair for any of the SIGCHI conferences, you can call us during the review process whenever there's a paper that raises ethical concerns.
+We are not providing reject/accept decisions.
+We're all volunteers in the same as all of us are reviewing for conferences.
+But we brainstorm collectively.
+We think about things.
+We look at what has been done in CHI and in general about ethics.
+And we provide sort of a assessment of ethical issues that come up in a paper during the review process.
+Often we are proactive about it.
+We had requests to look at the situation that arose before a paper was submitted.
+Sometimes that was also.
+What we don't do is we're not having a review process for people to say is my paper ethical or not before I even consider submitting.
+So we don't have mechanisms for that and it would be a bit too much for us to handle.
+We don't do is we don't have a pure check mark, ethical, no ethical.
+And we will see why that is a bit difficult to do.
+Also what we don't do but the other ACM committees that do this, we do not discuss professional ethics.
+Sometimes it's hard to disentangle.
+But we do not look at issues that someone took credit for your paper that was not correct.
+Someone stole your work.
+Someone didn't cite the work.
+Someone plagiarized your paper.
+There's a special committee for that that's been around for quite long and that's all of that.
+So we're particularly focusing on issues related to ethics from the perspective of research with human participants.
+But those are outside of our mandate.
+A few things that we've discussed at this panel.
+So we're doing this town hall, I think right now we were able to do this at I think almost every SIGCHI conference, sometimes five, six of us, sometimes one or two, usually in a large group talking to everyone.
+A lot of issues come up about what are the concerns that we have as researcher that are part of this process when we're doing research, when we wanna publish about it, what are the key things that we are looking at and a lot of issues are popping up, the recent things around what is acceptable to use as online data in our research without consent.
+What can we scrape? Can we break terms of services rule? What do we accept as a community and this helps us define what are our own community norms.
+This has nothing to do with if you are at the US university with your IRB, if you are a Canadian university with their IRB and any other place where you have an institutional body that regulates that.
+We are looking at what are the best practices for informed consent, a lot of nuances in informed consent for those of you who had to go through this, you know working with sensitive settings, this becomes much more nuanced than here's a paper, sign it.
+So do we as a community think about these things? What are the best practices when we introduce technology to a vulnerable setting, sensitive settings, especially populations that are vulnerable? What are the best practices when we have situations that arise during the research that we are doing, that are not anticipated, things that are posing serious ethical issues but with probably consequences for other aspects, for example someone in crisis during your research.
+Someone in crisis because of your research, which happened.
+So all of these things are important things that we need to discuss about how we are handling them.
+We had several interesting papers that we reviewed that were serious questions about potential damage that may came out from publishing this research.
+So all of this has very, very interesting considerations that we're looking at.
+And we discussed these things in forums like this to help us inform what are the norms that we're going through.
+And what obligation do we have as a community to look at this and study these issues? And occasionally we see, and a shameless plug, we have a course this year on ethics.
+There's workshops on ethics and occasionally we see papers on ethics.
+So engage with the community and see what are the norms emerging from this.
+And then what are the best practices for ethical considerations during the paper review process? And this is an important thing.
+Sometimes reviewers, sometimes chairs would say this is slightly unethical.
+How is the process negotiated and what's the best way to do it? So what we're gonna do today, we're gonna try to focus a bit more, because we've done this at CHI for four years I think.
+This is fourth or the fifth, I think somewhere on that.
+And we've thought about, the first years were more what are the serious ethical issues that concern all of us I think.
+Now it's a bit more, tend to focus a bit more on the process.
+So what are the issues you're more concerned with and particularly do you think SIGCHI policies and procedures that are related to ethics actually help us? Could they be improved? Are the program committees handling these issues well? Should we have a check box on the, going with the controversial thing first.
+One big check box, first line of the reviewing form, paper rejected because of unethical reasons.
+So that was suggested.
+So should we have that? How we handle of this? What steps can we take to facilitate conversations around ethics and particularly, how do we handle the fact that in some places you have very strict reviewing process.
+Often many of us don't even think about mentioning that this research has been reviewed by our university, in some cases it's very strict.
+In some cases you lose your license as a researcher if you break those things, or your funding for life.
+In places where there are no institutional frameworks, but there's still a community concern about ethics, how do we balance those things? How do we balance different community norms? We have many debates on this panel, differences between the Canadian perspective and the US perspective and think they're more or less the same, and there's so many differences.
+How do we reach a consensus whenever we're in a large international community coming from different places? So how do we engage with all that? And we're gonna start with this discussion in a second.
+I'm gonna just tell you a little bit about how we're gonna do that because we wanna feel that there's an increased engagement with the community.
+Two of us will move around the floor to listen to your concerns.
+We're gonna have a roaming microphone.
+The student volunteers have graciously agreed to help.
+We're gonna have also sticky notes for those of you who are not comfortable speaking up or you wanna write something controversial or something that you don't feel like you should have your face identify your question.
+Just hand in this to the SVs and they will hand them to us and we'll read out the questions.
+So I wanna have the process as open as possible but also make you feel comfortable.
+And before we get to that, Amy wants to say a few words about also increased initiatives in terms of transparency of this committee level, which I'm gonna flip to the next page, it will be the conclusion.
+- Thanks Cosmin.
+I was the founding chair of this committee a number of years ago and we had an election a few months ago and I'm delighted to announced that Katie Shelton is the new chair of this committee.
+So congratulations to Katie.
+Katie could not be here because she is on maternity leave but she asked me to convey to keep an eye out for the call for members of this committee will be coming soon.
+Katie is going to publish an open call for anyone who would like to volunteer to join this committee and we're particularly hoping for as much geographic diversity as possible because ethical norms vary geographically.
+And believe me when I was forming the committee in the past, I worked very hard to find people from diverse geographic areas, and it was hard.
+So we're hoping that when you see this call you will respond also forward it to interesting people who are interested in research ethics.
+- Thank you, Amy.
+So we're gonna now open it up for questions, discussions.
+I wanna make sure there is plenty of time to do that.
+So me and Chris are gonna go on the floor so we can ask are there any questions and the panel will step in with answers to your questions and to concerns.
+We're gonna discuss things and we are gonna be on the floor facilitating that.
+And I think there's already questions and I'm gonna grab the roaming microphone.
+- [Chris] Sorry, is there already a hand? Oh, perfect.
+And if you could quickly say your name if you're comfortable with this and your (mumbles).
+You don't need to.
+- [Rua] Hello, my name is Rua Williams.
+Maybe I shouldn't tell you where I'm from, I don't know.
+You'll find out.
+So one of my concerns is the ethics of the various ways that disability is engaged with in research and as a disabled person, how often I have to excuse myself from panels that are research on disabled people versus research with and for disabled people and sort of the ethics of how do you navigate between the disability justice of like no eugenics and everybody else thinking that myself and my children would be better off dead.
+So that is a thing I'm worried about.
+- Deep breaths being taken here.
+- Do you want me to go? It's a really big issue to start with.
+I've recently put in a grant application for projects that aims to work with people with intellectual disabilities and one of the things we really struggled with is how do we make sure that we have a process where our research participants also co-researchers and are engaged with the process.
+One of the reasons, we're working with somebody who's got a human rights background and we're being very much informed by that human rights perspective.
+But one of the challenges is how do we ensure our funding bodies support that kind of approach to research.
+So that's an issue that we're facing at the moment.
+It's not really an answer to your question but I think it's a real challenge actually.
+- I don't have a particularly brilliant answer either but since you came out as disabled, I will come out as disabled also, hello.
+And I guess I'm thinking one of the mantras of the part of the disability rights community that I know and it's also for the indigenous rights community is nothing about us without us.
+And so if there's research about whichever those us's we are talking about, then this is easy for me to say, and I'll immediately say why it's typical, but a way to think about it is if there's a community of people who are disabled then they should be part of the planning of the research.
+I just said action research without saying action research, so now I did.
+And that's a long-term process and many people's research doesn't have that timeframe.
+So sometimes we can't do that and sometimes we can.
+And in some circumstances we've actually wrestled with papers in which the question of consent was really complicated for people, and I'll go down a list here and make it more and more troublesome.
+We asked for consent of people who participate in research.
+That's good.
+We ask for consent of people who have cognitive disabilities and then we need to figure out if their consent is meaningful.
+Have we asked in a meaningful way? So that's criticizing or questioning both parties.
+Did we ask in a way that they understood? Were they able to answer? Or the person with the disability is a minor and so someone else is giving consent on their behalf legally.
+None of this is easy unfortunately is the end of what I'm saying.
+And you already knew that.
+So that's not an answer for you at all.
+I just agreed with you.
+But I take a long time to do it, which is unfortunate.
+If there are other people here who have experience in this area, I know of at least one person in the room may have such experience, we would love to hear from you.
+- [Man] Did he mean me? - Perhaps that person.
+- [Chris] No, I just wanted to say, because I worked with autistic children, and that's particular the case of informed consent is really tricky in that case.
+You want children to know what they're participating in but then there are all sorts of legal issues around it, who can actually give consent.
+And beyond that I think there's another element that I see, particularly in the UK where a lot of autistic researchers come and participate in the research on something.
+I think that's also something that we as a community need to kind of encourage and foster in terms of inviting researchers with disabilities into our projects and become part of it to kind of enrich our view and be a bit more, not sensitive, but aware of which context we're stepping in.
+- [Man] The big question around, and I don't have a microphone, (muffled speaking) is what can we do as a community when we have a piece of research that say has been approved by a university, if there's all these (muffled speaking).
+- [Woman] I think that one small possible, not necessary a solution but one practice that may be beneficial in reflection of how difficult it is is to acknowledge these things as study limitations.
+So if you have a paper that has not used community-based action research or whatever, that you acknowledge that and you say this is a limitation of the study, this is a limitation of these results.
+- [Man] That's a great example (muffled speaking).
+Whether it falls around this.
+- [Nicky] Hi, Nicky Popalas, Northwestern University.
+So I'm wondering if the committee could speak to whether or not there are guidelines in place for program committees with respect to the idea of having industry researchers peer reviewing research done about the industry.
+So if you're doing some HCI study about oil rig workers and an industry researcher from Shell is then assigned to review the research submission on that work, what are the ethics around that? And then of course substitutes your favorite IT company for Shell.
+(audience laughs) - Nick, I think that's an excellent question and the answer is that we have not yet evolved sufficiently strong social norms about how to deal with that.
+There is a view of the world in which someone from Shell is the best possible person.
+They really know this stuff, assuming goodwill.
+And there's another view of the world in which, good grief, Shell doesn't allow internal Shell researchers to publish about Shell and then someone outside Shell publishes about Shell and you're gonna let Shell review it? We were trying to get away from Shell telling us what we can and cannot say about Shell.
+So I think it's incredibly problematic.
+I can see why well-meaning people might assign someone from Shell to review that paper.
+But then again, what's the alternative? I mean to say we have to have purely academic reviewers on papers that talk about industry in any fashion.
+That doesn't make sense either.
+So I think what we need is a strong conflict of interest policy for the reviewers regardless of their affiliation.
+- And let's talk about what we do tell reviewers which is in part if you have an employer in common with the source of this paper, you need to recuse yourself.
+But you can't tell because it's been anonymized.
+But you might be able to tell in which case you should recuse yourself.
+We also tell reviewers if you are uncomfortable about reviewing this for any reason, please recuse yourself.
+No one will ask.
+And so that's not, is that a guideline? I think that's a guideline.
+I think it doesn't answer all, I'm saying what I said in the previous conversation, doesn't answer all of what you said but it's a partial answer.
+I think it's where we are, but other people please disagree.
+- Well the other thing I wanna say is that the, we do not in SIGCHI do the kind of prevention of conflict of interest work that say the NSF does in reviewing grants where with your grant you hand in a list of this is my advisor.
+These are my advisees.
+These are the people I've collaborated with in the last X years.
+There's a question in my mind about whether we should.
+- [Joe] Joe Constant University of Minnesota and it'll become relevant here but also the co-chair of ACM's publications board.
+Given what's up here and the question about policies and procedures that could be improved, it worries me that so much of the discussion always talks about what should a program committee do when there is unethical work before it for review because that's too late.
+And I think one of the challenges for this community is to establish at the very least, the guidelines that represent our consensus and if needed, the procedures if we feel that institutional review is not sufficient or effective, to give people the chance to do it right and get the feedback on what it's gonna take to do it right before the harm happens and not only to determine whether it shows up at CHI or goes to a different publication that doesn't have these processes and protections in place.
+And I know of examples from colleagues where papers have been rejected on ethical concerns that they still hold against the community because they went through rigorous review and feel like the time to do that is when you've planned the work, not afterwards to have somebody who didn't have that level of documentation second guess it based on eight or 10 pages.
+But I think that a large part of what we need to talk about as a community is how do we promulgate what's good practice that we encourage, and how do we promulgate what's unacceptable that we're going to enforce something about and the space in between is that uncomfortable area where you say, yeah, I wish you really had done this better and it may be the place where we need open reviews, commentaries, other things to help people see that yeah, this work was technically not wrong but boy, it would have been a lot better if people had followed these approaches.
+- I can provide two answers, short answers and I'm gonna let other people because that's something that came up quite a lot.
+First of all one solution we've been trying to kinda engage with is more community engagement around the issues of ethics.
+Unfortunately we feel there's more, we're pushing that but there's nothing coming sort of back.
+One example is we've been trying to get a course on ethics at CHI for three years in a row.
+It was canceled every time for lack of interest.
+We had three registrants two years ago and then five registrants last year.
+This is the first time we're doing it.
+So that's one example.
+The other one is issues where universities are very involved in the ethical process.
+It goes through a panel with board members, very difficult research, and then someone from a completely different context rejects the paper for example for being unethical after being discussed in front of a 10-panel member that are experts in ethics and how do you mitigate that and can we reach that consensus where you're always gonna have that tension.
+I think that's a bit more of an open question than an answer to what you said and I'm gonna pass it back to ours.
+- So I just want to say, didn't we also discuss once to kinda make cases available, to kind of, as a way of as a community to discuss things.
+And it's a real conundrum because that's so difficult.
+There are ethical issues around making cases available in a way that are ethical.
+It's very difficult to withhold the information that you need to withhold and still make the case relevant enough for people to be able to discuss it.
+And even within our community, sorry, within our committee we've taken great care to prepare cases so that nobody's conflicted and whoever has a look at it is able to do so within the full detail and doesn't know too much.
+So that's a really difficult tool, but of course it would be great to have.
+- I'll also add that it's very appealing to think that we could provide guidelines, like you should do this and you should not do this.
+And that's very challenging in part because of contextual ethics and ethics vary in difficult cultures, et cetera.
+These town hall meetings are one of our attempts to have public conversations and the attempt to create these community norms.
+However the people in this room are probably not the ones who need to hear it the most.
+I mean it's just the same issue with this course and with workshops, et cetera.
+It tends to be quite preaching to the choir.
+The other thing is that we very rarely, in my recollection, we don't tend to ever suggest the papers rejected on ethical, I mean we actually don't ever make that suggestion, but mostly it has to do with including ethical considerations in the paper, explaining your process, explaining what's actually happening.
+So even if a paper comes to us after the fact during the review process, it's common that it's just an explanatory issue.
+We do also take people who want to ask us about study designs.
+This has happened maybe twice in the past five years.
+It's something that we do.
+And if everyone suddenly started asking us it might be a problem.
+But I agree it would be better to get that information early on, but it's really hard to create a checklist.
+And maybe we'll form some norms that are so solid that we could give something, but that's really difficult.
+- I just wanna say, there are two different components to this.
+One is the research ethics component.
+Are we conducting our research in an ethical fashion? And the different but complementary aspect of it is are there implications to our research that are politically troubling and to what extent are we responsible for anticipating those when the technology will eventually be out of our hands? I think we all have to face up to both of those in our advising and in our collaborating every day.
+This isn't something that a committee does.
+I think the question is how do we raise awareness of everyone everyday? One of the harder things I've had to do in recent years was to tell a colleague I think there are ethical problems with your research.
+I have done it.
+That is a very difficult conversation to have but we all have to be willing to have those conversations.
+- We're gonna start with that question from the audience.
+So how should we handle corporate research partnerships with companies that give us lots of money and a lot of other key resources but whose work may go against our values? And we can probably extend that to also.
+- Can you repeat that last part Cosmin? I couldn't hear you, whose work what? - Companies that give us a lot of money and sponsor our research and they may do work against our values.
+- I would like to think that if a company has given you money to do research that you think is wrong in some way, that that might be troubling.
+I mean I would hope that the answer would then maybe, I mean, money is very appealing obviously.
+I know that a lot of people take issue with taking any corporate money at all, though there's also something to be said that it's good to have researchers who might have a more objective perspective who are able to have access to resources, data, et cetera.
+I think this is something that a lot of people are struggling with.
+I don't know that there's an ethical answer to this issue, but I think that it's something that we should be talking about.
+- Just to cause trouble, what if a government is willing to give you lots of money for something you don't agree with either? No government in particular on my mind, actually many but I'm not gonna go there.
+- And I will expand that question to what if ACM gives you money? There was a petition that somehow got to me where it was a boycott ACM because of unethical.
+The people outside ACM who think ACM is a highly unethical organization for the work we do.
+Lots of signatures on the boycott.
+- [Man] Yes, okay I'd also like to add this other aspect of ethics having to do with wider impacts.
+And we had an interesting discussion with Michael actually on one of the (mumbles) pieces subcommittees this year because in the call for papers for 2019 it said that you know at least encourage, I don't know if it was a requirement but we were at least encouraged to write a section on wider impacts.
+And then when we as a program committee starting doing, we'd use meta reviews.
+Very few of the reviews actually sort of reacted to that at all.
+And also it was not part of the form that we were supposed to fill in.
+So it never reached the form, which is I guess one of the reasons why people didn't sort of look because they just followed the instructions in the form.
+And then we had this sort of lengthy discussion about this and I argued that we should be a little bit more, take this a little bit more seriously.
+And others like Michael argued that there are good reasons why we shouldn't force authors to actually make explicit the wider impacts of their work because it might compromise their careers.
+Is it okay to discuss this? - Sure, you're a wonderful discussion partner, by the way.
+I really enjoyed those exchanges.
+Part of what we were supposed to do was to say how could this idea go wrong? How could this design go wrong? How could this technology go wrong? There was a workshop here about CHI for evil, so a related concept.
+And I had several concerns and we did discuss this at length and thank you again for that wonderful discussion.
+One concern was we never told people how much they had to do.
+Is it a sentence? Is is it a paragraph? Is it a quarter of your paper? We never said and so that's a large uncertainty in which people of extraordinarily good will could disagree and papers could run into trouble because they had different assumptions about how big the ethical discussion needed to be.
+Grounds for ethical discussions, whose ethics, as I said before, one of the reasons I'm on the committee is that I think that there are a number of ethical frameworks in the world and actually as I continue to read, I think there's more and more of them.
+And so it would require a bunch of concerns like that.
+And then finally if one is on a government grant, being funded by a government grant or as I would be, funded by my employer, how much criticism can we do and still have that grant still owe, have that job.
+And so it becomes a very complicated thing to ask people to do, and especially if we do it without, with in just vague language and say you really ought to address the ethical issues here but we won't tell you how or how much.
+So that doesn't mean we shouldn't do something but I think we need to work as a community to figure out what that something is and see if again, I speak as a person who does, I hope academic quality research in industry, I sure would like to keep my job.
+And so I'm hoping that what we come up with will not make industry people or government-funded people suddenly have career problems.
+- Can I say something in response to Michael's comment about there being many ethics.
+There are many ethics.
+But that doesn't mean there can't be a standard for SIGCHI.
+And I think the problem we have right now is that we're in this ethical pluralism mess of yeah, there are a lot of standards I don't know and I wouldn't want to impose my values on them and at a certain point we need to do the work as a community to come to consensus on what SIGCHI ethics are and evolve them over time.
+But then we would have a standard and not be so stuck in, well I don't know, there's a lot of ethics.
+I don't know what to do.
+- Actually I do need to respond.
+Amy and I have been having this discussion for perhaps 20 years.
+I think there's something that we can do between there is one way to be ethical and there are a zillion ways to be ethical.
+Pick the one that suits you this afternoon.
+And I think finding out, working intensely together, and I think it will be a process of working together to see well maybe there's one ethical standard.
+Maybe there's a different ethical standard under somewhat different, we already know there's different ethical standards about consent depending upon the age and the cognitive competence of the person for whom consent is being given by somebody.
+So we know that that's plural.
+There will be other things that are plural.
+I hope there aren't a whole lot of them but I think we're going to discover that there are legitimate pluralisms that are not also relativism.
+And Amy's gonna disagree and this is what we do all the time.
+This is wonderful.
+- So I'm actually gonna jump in and agree with Michael.
+- Well, okay then. (laughing) - But I do wanna say one of our challenges in kind of coming to community consensus on a SIGCHI standard is for example that opposite directions that the US and the EU for example, have taken over the last few years.
+So the changes to the common rule that went into place in January of this year make all kinds of research we do no longer subject to IRB review.
+I don't have do anything anymore.
+I just say it's benign behavioral intervention and I'm gonna be careful with my data and then I don't need a consent form.
+I don't need anything.
+I don't even know what I'm supposed to do anymore.
+It's just kinda like, yeah, go for it, whatever.
+And at the same time the EU has put in an increasingly picky no, you really, really, really have to tell people what you're doing in much more detail.
+So the regulations just changed in the last 12 months in opposite directions.
+So then we have a big challenge as a SIGCHI community to figure out where our standard is.
+- [Man] Sorry, just one more comment on it because the wider impact section.
+It was not above sort of arguing for whether it was good or bad.
+It was just making explicit what are the wider impacts of your products or services? If the wider impact of your product or services is that makes it easy for the tobacco industry to sell tobacco in southern Africa, right? That is the wider impact period.
+Then it's up to somebody else to say if that's good or bad.
+But is even that a problem, sort of making it explicit without even going, at all going into the ethics of it? Should that be a problem? (audience laughs) - [Man] Maybe.
+- Well I'm sorry, that really was sort of addressed back into our conversation.
+People of good will can disagree.
+People of extraordinary good will can disagree about how deeply that topic is taken up, how broadly that topic is taken up, what constitutes an exceptively complete account of that.
+This is why we need to give people better advice than address the wider impact.
+And we can do that.
+We can do that in two years, maybe even in one year.
+We just need to give people that advice and then we'll have a standard on which reviewers can review.
+We don't have that yet.
+I said standard, Amy.
+- Can I just add to that that sometimes the wider impacts are not very well known.
+Sometimes people won't have a really good knowledge, insight about what the wider impacts might be.
+Sometimes it can be fairly obvious that this could, something bad could happen from this research.
+But sometimes it's a little bit more nuanced than that.
+- I just wanna remind people that a year ago at this panel, for those of you weren't here, the members of the Future Computing Academy talked about their proposal that broader impacts should be part of all our publications.
+I think it's a really intriguing proposal.
+It has not moved forward as far as I can tell.
+I think there's some complicated questions about how requiring those broader impacts to be in CHI publications would affect the review process.
+So if you say, by the way there are the following 18 dire potential consequences of my new invention, does that mean you get bonus points for being honest or negative points for making the world end? I don't know.
+So we have to understand how we would operationalize that if we were to actually do it.
+But I think it's a really intriguing suggestion.
+- [Cosmin] We have three questions (muffled speaking) instincts about (muffled speaking) I would also like to invite to reflect especially if they are coming from research in places where there's no institutional settings for example for ethics.
+What are your thoughts in this, keep talking about should we have forms, should we have that, what are your thoughts about these projects were heavily institutionalized by (muffled speaking).
+And we have three, at least there's three hands.
+So we're gonna go one, two and three, go back and then.
+- [Alyssa] Hi, Alyssa Antil from Simon Frasier.
+So I work with vulnerable children in Asia and the Balkan countries and so I've had head-on collision with some of these topics.
+And I'm also a key member of the IDC community, so I know at IDC when you submit a paper, you have to submit some information about how your participants were recruited, et cetera.
+And I just wanted to know a bit more along these lines, what the background was at CHI if we've ever looked at, and you started to talk about this and mention this, but have we looked at formalizing that as part of a submission not in the paper itself but in little boxes, maybe CHI for evil implications, how this was alignment with my IRB or not and then ethical implications and amelioration.
+And these things are not to police in any way or to say yes or no, but to start educating our community that these things actually need to be things one thinks about so then all of the reviewers are starting to see these things.
+And at first I can imagine it would be a bit chaotic.
+But I just wonder if there's been any discussion around kind of a bottoms up emergence.
+- Oh there has been.
+So this committee had a written proposal to do that a number of years ago and we got screamed at by people who said, well there is no IRB in my country and even just adding a box to the PCS review form, has this undergone formal ethics review in any form, makes me feel like I'm at a disadvantage 'cause there is no such thing.
+And we said back, well there isn't in your country so we're not mad at you and there was a lot of push back and the idea was killed for that reason.
+- [Colin] Just to add, this Colin in IDC.
+We've solved this problem, well we've not solved this problem, but we addressed this problem by asking people to take a stance.
+And you have to kind of add one paragraph about your stance on how you included children in your research.
+And we were explicitly not asking about formal ethics review because at least in my country, there is no such thing.
+But I think it's at least in IDC, in that community, we were of the opinion that it's fair enough so that everybody at least gives that, a paragraph with full.
+- [Karen] Thank you, I'm gonna stand up so you all see me and I'm gonna talk this way if you don't mind 'cause I don't wanna have my back to everyone.
+Anyway, my name is Karen Fisher.
+I'm a professor at the University of Washington and I'm also the design ethnographer.
+I work for UNHCR Jordan in the Middle East.
+And for the past five years I've been embedded at UNH (mumbles) camp.
+So I work with Syrian refugees with the Syrian war.
+And I would really, really welcome, what I like about the CHI paper is knowing now you can have more than 10 pages.
+You can write, excerpt your references.
+And I would really welcome being able to have a page to write about ethics and positionality 'cause I learned now quite a long time ago that IRB just does not work for me.
+I have a golden rule of people first, data second.
+And when you're working with Syrians, with refugees, you have to go with an open heart.
+You talk about leaving the field, exiting, I don't do that 'cause I dig in deep you know I, a prolonged engagement.
+I don't know when I'm leaving, so there's no such thing as having protocol for when you're going to be leaving the field.
+And my norms, I have to go with norms, I have to go with UNHR protection protocols from (mumbles) to 1949, but I have to go with community norms.
+I had to go with gender norms.
+I had to go work with norms for children, knowing everything else.
+So that really determines what I'm going to be doing.
+Just definitely cannot be asking people for conformed consent or anything like that.
+Everything has to be in Arabic.
+People are very low literacy, no literacy.
+I mean gender-based violence, I'm not even gonna get in to the type of trauma that everybody's been dealing with, incredible violence every single day, big implications for the people that work and for their families, what would happen to them based on the work that we're doing all the time, but also there's so many different types of sensitivities around the work that I'm doing.
+And I would love to be able to talk about this in my papers and what I had to do in terms of positionality.
+So if there was opportunity, if I could have an extra page to add on to my paper, I would really love to do it, and especially if someone wanted to read it and talk with me about it, that would be great.
+- So in my opinion, CHI should do away with page limits.
+However that is a constraint and it's a problem.
+But I would still encourage people to please write about your ethical considerations in your methods section.
+It's part of what you decide to do and how you do it and why you do it and it could also mitigate a lot of the problems in review with reviewers not understanding your ethical considerations by writing about them.
+And I know this is challenging because we all like, but I think that papers can fill or shrink to fit available space.
+So I would encourage people to try to do that.
+I wish we could write more but yeah.
+- Can I add to that too that I think this topic, reflecting on the way you go about your research deserves also its own paper.
+So as well as having opportunities to put some of this reflection in our methods section, I think it's really valuable to write papers that are reflective like this.
+And I certainly have found it valuable both for my own writing but also reading other people's reflections on how they go about doing their work ethically.
+- [Ron] Ron Becker, University of Toronto.
+First I just wanna point out that we have flip flopped back and forth throughout this discussion between what I assumed was the real purpose of the discussion in the committee which is research ethics, preserving the dignity and rights and welfare of participants and the ethics of research, are we doing work that is good in some sense and not evil or harmful in some sense.
+There's nothing wrong with that, but I think we need to keep that in mind.
+The other thing I wanna mention is that so far we haven't mentioned one of the key stakeholders in all this which is the graduate students doing the research.
+We've spent a lot of time talking about how ethical considerations affect how you write a paper and whether it'll be submitted or not and whether it'll be rejected unreasonably or not.
+But a problem that I found over the last 15 years doing research with seniors in a computer science department is the increasing difficulty my students had, particularly those in a master's program that was allegedly supposed to be 17 months of how they could do their coursework in a rhythm in pace with all their peers who were doing theory or whatever and still endure the one-month to one-year delay to get ethics approval depending upon which board you were submitting it to, whether you were working with a seniors' home or a hospital.
+In the case of a hospital, which form they were using, whether in fact you had this get ethics approval both at the hospital and at the university, what was the rhythm of their review process and how long did it take to turn things around? And I think CHI and maybe this committee should take an interest in mentoring professors in how to manage their graduate student experiences particularly in departments that at some level don't understand what we do, like computer science departments, to ensure that their graduate students prosper and have a good experience and are able to finish in a timely fashion.
+(audience member applauds and Cosmin laughs) - [Chris] Do you wanna maybe read this comment about justice that would fit to that? - I'll read this.
+Anyone wants to answer it? - I'm just gonna answer that saying I agree.
+I mean that's a problem that I, is this working? - Yes.
+- It's a challenge that I have as well in just having students who need to go through the process and it's just not possible to fit that in to a 12-week semester if it's a 12-week project.
+So we have to come up with other ideas about things they can do.
+It's always a challenge.
+- I also wanna add that on the subject of care of grad students and researchers in particular, that something that faculty in particular should be thinking about is the kind of research your students might be doing and whether it could be harmful for them.
+A lot of people work with very sensitive topics, very difficult topics.
+It can be a good idea maybe to make sure that a student has access to a therapist if they're doing very difficult for example and just to be careful for that because not everyone might feel comfortable speaking up if their research is even harming them.
+- That's good.
+I'm gonna read two questions from the audience 'cause we don't wanna forget about those that weren't comfortable, send this on notes.
+And please continue to do so.
+One question is, and I'm gonna slightly censor it to not name the entity that's mentioned here.
+How about communities like others that are related to our in some ways, I sometimes go to those, who have some shared ethical guidelines.
+So they have the guidelines in place.
+Should we have those? How should we get there or should we bar from others? I have an answer for that but I'll (mumbles).
+Should we bar from others? Do we have our own guidelines explicitly written down? - We don't currently have guidelines written down.
+I know of some communities that do have more, AOIR for example, the Association for Internet Researchers.
+I think they're actually in the process of revising theirs right now.
+That's a good resource for a very particular kind of research and it's also structured in the form of questions and things that you should be thinking about as opposed to providing rules, which could be good.
+- [Chris] I just need to say I think one of the problems is that CHI is such a broad church and that makes it a lot harder to write something down that is good practice for all the different kinds of things that are being done within CHI's limit.
+- I'm gonna sorta answer with a bit of a caution because there are communities that, some research that we do is considered highly unethical.
+I engage with a program chair for a completely unrelated field and I was told very clearly, absolutely, we should never use deceit in our research no matter how benign.
+Like Wizard of Oz is the most evil method if anything of all, just minor changes to your interface to measure things, never.
+You should never use it.
+We reject papers right away if they even have like a hint of Wizard of Oz.
+And I think probably most of us would think it's no big deal, just fiddle with the interface, and then measure a few things and get the research.
+So there are different standards in different fields and the question is how we reach standards that we all share, and I think it's a bit difficult.
+And I'm gonna follow up with another question that we received.
+What is the relationship between ethics and justice and should we be more focused on justice? - [Chris] I just wanna say something about, because I think it also speaks to your comment that we've been talking about for this good research in terms of research ethics, but also whether our research is in any way harmful or should be done in terms of broader implications to society.
+And I think we had these discussions on the committee a couple of times.
+It's very hard to tease these two things entirely apart.
+Of court there are some things that you could clearly put into a (mumbles) bucket and then other things that you could clearly put in the other bucket.
+But it's the same thing as you cannot entirely separate the quality of the research and its ethics.
+That's another kind of one of these boundaries where it's really hard to, in some cases, to not talk to the quality of the research but to the ethics.
+This is I think something that you only can answer for each specific case.
+And of course, at least I would like this committee to be, also consider the bigger question about whether it's good for society, but mainly of course it is about research ethics and about participants in our research.
+- So we're gonna take one question and again encourage you to reflect if you're coming from a background, context, is additional setting where there are no guidelines for ethics, where there are no institutional policies, how do you engage with the process? How would you see SIGCHI's role in this and how should we make sure that this actually happens properly.
+- [Eric] Hi, so I have a question on a similar topic.
+So Eric over at Michigan.
+So I think some of the most vital, interesting, important ethical questions around technology are happening in research-adjacent spaces.
+I think they're happening in industry.
+So you're seeing for example employees organizing movements against the companies they work for.
+So an example of Project Maven in Google.
+Do you think we should support these people and if so, what can we do to support them? - [Man] Want some big words.
+(audience laughs) - Well since I work for industry, officially as an IBMer I of course have no opinion.
+(audience laughs) I think the sense of research ethics that we've been discussing here, and I hope you'll disagree with me, would say that's not in our remit, just as there are political aspects of ethics, those are also not in our remit.
+I could say things about the Trump administration but I should not.
+And so I don't know if that's what we should be doing.
+Somebody tell me that I'm wrong and that we should jump into the fray, please.
+- You know I think it's an interesting research project and let's talk about it later.
+Let's go do it.
+No, I mean yeah we, well there's a question of to what extent anyone outside can help.
+Those voices have strength because they come from inside.
+So then the question is, and there are a number of websites which, like isn't there a glass ceiling website? There's some transparency.
+- Glass door.
+- Glass door websites that try and create more transparency for industry workers.
+And I think those designs are very delicate but interesting.
+- I also think this is something that we should be thinking about when we're teaching, especially ethics.
+I mean the issue is like okay so we teach our students all about ethics, and they're super ethical and then they go out and get a job and what are they supposed to do? And I ask a lot of people this, and they're like I don't know.
+And so I think this is part of the conversation.
+It's something that we should be talking about a lot.
+I don't think it's the job of this committee though a question of whether it's a job for ACN is kind of interesting.
+I don't think we're the ones to answer that though.
+- Yeah, I'm sorry, I meant for this committee I think it's beyond our remit.
+I would love to engage on that topic and I might even like to take action on that topic but not as a member of the committee.
+- [Omar] Hi, my name is Omar Lite and I'm an undergraduate researcher at (mumbles) university.
+So my question is, so in doing research with marginalized or vulnerable populations, researchers often come across unexpected situations where they're not trained or even qualified to respond.
+This may cause harm to the participants or the researchers themselves.
+So what should researchers do about this? Should a constantly evolving ethical (mumbles) be implemented or should they get formal training before going through this research? - Plan, they should plan.
+So one of the things we've worked hard on with our grad students who are working with delicate topics and vulnerable populations is to do our best to anticipate things that might come up and to, for example, in a project we were doing years ago about cyber bullying, we had a written plan for if you think someone we're interacting with in any capacity might be suicidal, here is what you do.
+What you don't want is to be caught in the moment and not know what to do.
+So I think you have to plan for those situations to the extent that you can reasonably anticipate them.
+- I think working closely with organizations who have that professional capacity to provide the support is also important.
+So in my work with older people who are socially isolated, so it's not the age but the social isolation that makes them marginalized, we worked closely with care providers that they were already familiar with and that enabled us to feel a bit better about any issues that arose that we felt like our participants were being supported by their carers.
+- I mean that's also a shameless plug for we do workshops at CHI where we discuss these things, we debate these things with the courses.
+So keeping engaged with this community in that way, it's also a great source of learning, of resources but also sharing back some of the experiences and interesting case study that someone may run into.
+- [Chris] And maybe also what you can do is keep an open channel to your supervisor.
+I think make this a topic of your, I don't know, weekly, biweekly or however often you can meet your supervisor meeting because I think this is, sometimes I mean you spoke to a sudden crisis that you're not prepared for.
+But a lot of these things are also, things are cumulative in a way that they build up over months and there's a certain breaking point.
+And you don't wanna get to that breaking point.
+You wanna talk about this is difficult for me.
+So make sure that your relationship to your supervisor is of the kind that you can talk about these things.
+And of course that's a little bit idolized but maybe this is also a speaking tool of our supervisors to be mindful of that, that this is also a need of whoever we're supervising to be able to tell us that they're actually finding the current work difficult for these reasons.
+- [Man] So since the Association of Internet Researchers came up, I'm going to try to encourage the committee to consider in fact creating some sort of document, guidelines, something.
+When AOIR put its ethical guidelines, when that process started 20 years ago, and it's now on version 3.0 in October, there was about a year of discussing what do you call this because everybody felt that it needed to be in some way codified but not law nor policy nor those other sort of more legalistic terms.
+But the process of putting it together as a document was what really kicked off the conversation in that organization and brought people together who, as is the case with CHI, come from incredibly disparate backgrounds and in fact until that conversation, probably didn't have that conversation.
+So sort of us as, now hopefully it won't be just a conversation that'll come out of it but that process in and of itself was incredibly worthwhile.
+And it was one that was engaged not just at meetings but online and in other venues and in sub meetings at other organizations' conferences.
+So I hear some reticence about.
+- You know I agree with you.
+I was on the committee that wrote the AOIR policy version one.
+The first version was really lame.
+And the problem is if it's all mamby pamby, well some people say this, and other people say this but it's nice to see that I believe it's gotten better over time.
+And I agree with you, the process is as critical as the product.
+This is a big undertaking.
+If ACM wants to do this, then we need to establish a new committee and have a worked out process for drafts and revisions and rounds of public feedback just the way that the new ACM code of conduct had that elaborate process over a period of multiple years.
+I think it's possible.
+I think we need to invest in it if we're gonna do it.
+- One comment to that and I teach a lot.
+In fact as I do research on ethics, so one of the issues we have frankly in Canada, the Canadian guidelines, it's more than 200 pages long.
+Students don't have to read it all.
+They have to take sometimes an exam on it.
+It's 200 pages long.
+I know it all in and out with subchapters because I research it.
+And a few things that people don't know for example is that some challenges that we have in interpreting the same thing, research without consent.
+And if it's written down, it's written.
+For example in the Canadian guideline, half a page describing how to research with consent, 10 pages about how to do research without consent.
+Smoking a pipe together is consent in the appropriate community in the appropriate setting.
+A lot of people would disagree with that.
+So those are the challenges that we have in coming up with those things and if someone brings it up, the Canadian guidelines have been developed over about 25 years with several thousand people providing input into that.
+Can ACM take this? I would like to see it but I'm also slightly afraid there would be a 200-page list of every little detail possible and then we're still gonna miss something.
+There was a.
+- [Man] Hi, (mumbles).
+Michael brought up an interesting kind of area of thought on what exactly the remit of the committee is.
+And so I'm wondering individually, is there something that is within the remit that you think the committee currently isn't working too much on that you think the committee should that could potentially also seed thoughts and conversations amongst all of us once we leave this room? - Well you know I think, call Katie.
+I'm delighted that Katie Shelton has taken on this responsibility and she, our duly elected representative will set the vision for this committee moving forwards.
+I think that from my point of view, we have not yet gotten the word out to program chairs of ACM SIGCHI conferences strongly enough that we are here to provide confidential advice.
+So I think that's the next thing on my list that we should work harder at.
+And the other thing which Katie and I just discussed in length, at length is that we're gonna refresh the committee and again continue to work harder on that geographic diversity which is really desperately hard and hopefully you guys will help us get the word out.
+- [Cosmin] We're slowly, we want now we involve Katie (muffled speaking) questions and bring up some very controversial subjects.
+- [Roger] So I'm Roger Rancer from (mumbles) University.
+So how 'bout technology that's changed frame over time, for example location-based services that was kind of viewed as okay by everybody but now is kind of a tool for oppression and tracking people and how can we kind of build that into the process of establishing research and not being evil? - This is the question of our time.
+I used to think I knew how I felt about computer vision, that it was a tool that would cause oppression in non-democratic regimes and therefore I was disgusted that my colleagues work on it.
+And then we had a blind student in my class who said if I could get face recognition that really worked, it would transform my life.
+And I have not known what to think since.
+These technologies have overwhelming positive and negative consequences and I don't know how to approach that as someone creating something which can get out of my control.
+I will say that we should be careful about what we open source.
+So if you have a toolkit that could be used in some problematic ways and some good ways then ask people to request a copy.
+But that's a bandaid.
+I mean the cat's out of the bag and I think this is the question of our time.
+- And just because you asked about our individual views about the remit of this committee, I would love this committee to take a broader view on these issues.
+But I also think it might not be installed for that and it might not be within remit.
+But maybe there's a future committee that could do that.
+- [Cliff] Cliff Lamby, University of Michigan.
+Let me ask this question in a slightly different way, and don't tell Helena I asked this question but if SIGCHI at UC could get you guys $20,000 to do something, how would you use that money.
+- Party.
+(audience laughing) - Cliff, I think we would write that policy.
+We'd need to choose a committee.
+We'd to have a series of first, intensive, face-to-face meetings for writing and probably copy the cycles of public feedback used by the ACM code update committee.
+I think that's what I would suggest and that that's gonna require a little more than 20 by the time we have multiple face-to-face meetings and public meetings and rounds of input and all that kind of stuff.
+But yes, I think that's a very serious possibility.
+- [Meredith] Hey, Meredith Ringle Morris from Microsoft research.
+I guess I was wondering if the committee already has or plans to have a way to share, I'll call them case studies for lack of a better word, back to the community of some of these examples of ethical issues you see.
+For example one way to do that could be if you had some sort of blog poster newsletter in which you're able to sufficiently anonymize some of the examples.
+I don't know if that would be possible to do, to anonymize them sufficiently.
+Another way might be through a panel at a future conference where for example researchers volunteer to share examples from their own past research of ethical quandaries or ethical failures in retrospect and to sort of provide more concrete ideas.
+- Mary, we have a blog.
+We're putting the URL up on the screen.
+- [Cosmin] I got blog (mumbles).
+(audience laughs) We have a blog.
+- We have a blog.
+You know it's hard for us to keep the blog up because all the cases we deal with are confidential.
+And it's always a struggle to write something up while not giving away details that would reveal what the particular case was about.
+We have put up blog posts on broader issues.
+Everyone who joins the committee accepts responsibility for organizing at least one panel discussion like this at an ACM conference per year.
+So we're trying to get to as many SIGCHI conferences as possible.
+So those are just some of the things we've taken, some of the steps we've taken and if you have suggestions for more, we would love to hear them.
+- So one of the things we've been doing, some of us on the committee are on a series of workshops and we have the case studies on our website.
+So we cannot have that as an official ACM.
+It's just one of the workshop that CHI and several other conferences.
+And there are a lot of case studies.
+And it's by people who have gone through this.
+They share their experiences with these case studies and we discuss and we post them.
+When I think, Jenny can answer how many, she's the steering committee chair for that.
+- So those workshops are particular to HCI research in sensitive settings.
+So they don't necessarily cover the broad spectrum of research ethics in HCI but I guess, I don't know the numbers off the top of my head.
+But we've run three workshops and we had several participants at each and each participant submitted a position paper describing their experiences of dealing with ethical dilemmas in their work.
+- Between that and several other related conferences we had the workshop, I think we're probably a bit over a hundred case studies.
+- [Meredith] So are those workshops also links to off the blog, how do we find those case studies? - That's a separate one.
+We'll have to see if we can sort of interlink them without one looking like it's sponsoring the other or endorsing the other.
+- [Man] Can we have one more? - [Stevie] Thank you, Stevie Chancellor at Georgia Tech.
+So I'm talking a little bit from our experiences running a research workshop at CHI about sensitive research.
+One of the things that we really struggled with in our acceptance process is how many people had to drop out because of access issues to CHI.
+I think that the SIGCHI research ethics town hall is a fantastic way for us to get together as a community and CCW, this panel workshops across the community are really important for raising this issue at a conference level.
+But I worry, people who aren't in this room who can't make it to the conference for whatever reason or who aren't necessarily interested in ethics now are not hearing the things that all of us in the room are talking about and caring about.
+And so one of the things I wanted to ask the panel is how can we as a community come up with ways that we disseminate these ideas better and that we can facilitate a broader conversation for people about research ethics at CHI.
+- Please bring that question to the CHI 2030 booth in the main exhibit space beginning this evening.
+They are looking for all sorts of issues about access to CHI which have implications about how we might do the conference the same way, entire different, not at all.
+Everything's on the table.
+So your opinions count.
+This is one of those rare moments when we're really sourcing from everybody.
+And so I don't mean to take it off of your topic but it would be a great topic to bring there, please do.
+- So I think on that note.
+- I also think that the idea around case studies, et cetera, and Mary's point, I think that that's going to get better over time as we have more examples.
+Like we said, we don't have a ton of examples yet so there's nothing that we can extrapolate broadly.
+But being able to put resources like that online will help part of that problem, which is people that can't come to CHI.
+What it won't help is the people who don't care about ethics, which is like the people who are not in this room because they don't want to be here and they're probably not gonna read a blog either.
+And I do not know what to do about that problem.
+I mean, (laughs).
+- Every year at this event I think we should send you all out for festive drinks and make everyone else come.
+You all are the people who don't need to be here.
+- [Chris] But also one of the ways is how we all can be ambassadors for what we've been talking about here, is take on roles in making the next CHI.
+So if you're asked to be an AC or if you're asked to be a reviewer for papers, try and actively to kind of get in there and then also raise your voice.
+There's a PC meeting and subcommittee and then say, I really actually have some trouble with this paper or maybe not.
+Or for these reasons we should make sure that they hear some of our concerns.
+And maybe this is one way of multiplying the concerns and issues that we've talked about here.
+- And those are the times where we also are aware when conferences come along and we're on, I wanna say on call, but we're ready to take on cases and engage in thinking and bringing our own database of case studies.
+So that's a good opportunity.
+And I think on that note, we are, we have to wrap up, if they're concluding.
+- Yeah, I just wanna repeat again, we would love to have you all on this committee.
+It's a working committee.
+You get to write reviews of papers.
+You get to organize ethics events.
+But we have a lot of fun, and I hope you all volunteer.
+- Thanks everyone, thank you student volunteers for your help and thanks everyone.

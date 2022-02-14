@@ -1,0 +1,167 @@
+- Hi all, thanks for coming.
+My name is Yasha Iravantchi and today I'll be presenting Interferi.
+This work was done in collaboration with Yang Zhang, Evi Bernitsas, and advised by Mayank Goel and Chris Harrison So one of the most immersive ways we can interact with computers is virtual reality.
+We can create these incredible new worlds, but it very quickly becomes lonely and we want our friends to join us in these worlds.
+So naturally social VR emerged as a way we can interact with friends online.
+But we want to interact with the environment in natural ways such as communicating with hand and face gestures.
+While the controller can invoke hand gestures, what if we could do the same with no controller at all, leaving our hands completely free? So of course, we didn't get here overnight.
+There's a ton of amazing work that precedes Interferi.
+On the arm they fall into four main categories: accelerometer based methods, which instrument the hands and joints; geometry based methods, which look for changes in contour or contact; vision based methods, which instrument the hands with cameras; and bio-based methods, which leverage physiological characteristics.
+Interferi falls into the last category.
+And on the face we see similar categories, including geometry, vision and bio-based.
+However, the main take-away from all of this, is that gesture recognition is not a solved problem.
+And there's no 'one-size-fits-all' solution.
+Systems that work on the hands may not work on the face, or vice versa.
+Additionally, smart watch interactions may not work in VR, and the same way goes both ways.
+Interferi is our effort in tackling this problem.
+Our approach is a single wristband for hand gesture tracking and a mask for facial gesture tracking.
+But before we go any further about Interferi, let's first talk about interferometry, the sensing principle itself.
+So let's start with a cylinder of water.
+This is a top-down view.
+We can add ultrasonic transducers all around the column of water.
+And then if we fire one transducer, seen in red, with a 40kHz ultrasound signal, a frontal wavefront is created.
+We can then take a second transducer, fire it in sync with the first transducer, and generate an interference pattern.
+Note the peaks in yellow, that form constructive interference, and the troughs in blue form destructive interference.
+With the remaining transducers in blue, we can listen and capture the signal.
+But we can also move and shift interference patterns by changing the relative phase of the second transducer in purple.
+And we can change the phase arbitrarily, resulting in nearly infinite patterns from phase shifts alone.
+But we can also pick any combination of transducers.
+We can move them around, or we can change the spacing of the transducers, from one receiver in between to two receivers in between, and all the way to directly opposing each other.
+Again, we're always listening on the remaining transducers in blue.
+At the end of the day, we can produce literally an infinite number of patterns, despite the fact that we only have eight transducers.
+So while this is all great in theory, we wanted to confirm in practice what interferometry looks like.
+So we filled an acrylic cylinder with water, and placed two transducers at 90 degrees separation.
+We placed a receiving transducer on a CNC gantry, which allows us to move around the cylinder in a tight grid, allowing us to visualize the propagation of the signal in a bounded liquid medium.
+So this is the visualization of ultrasonic effects with a single transducer producing a wavefront.
+And this is the interference pattern with two transducers.
+Note the complex interaction between the two waves and the reflections off the wall of the cylinder.
+Of course in the body this is even more complex.
+There are high impedance boundaries like skin, that create multi-path interference, and anatomical features like fat, bone and muscle, that tend to scatter acoustic energy.
+These complicated interactions are what makes the signal so unique though, and creates distinct features for machine learning.
+So in order to take advantage of this rich technique, let's discuss how we implement our system.
+So first, skin creates a high acoustic impedance barrier.
+It's hard to get signals into the body, and then it's hard to get them out again.
+So in order to do that, Interferi drives its transmitting transducers at 100 volts peak to peak.
+This allows us to inject a robust signal into the body and still have enough acoustic energy to bounce back out again.
+Second, the speed of sound in the body's about 15000 meters per second, so for on-body interferometry to work it requires tight sub-degree synchronization across all of its transducers.
+So Interferi achieves about a .1 degree tolerance.
+And lastly, interferometry requires a high sampling rate.
+Since our carrier wave is 40 kHz, we need to sample at way, way higher speeds, and Interferi samples at 480 kHz.
+What's particularly cool about Interferi is that the last two points, we were able to run this off a hacked TNC 3.6.
+We really wanted to use commodity hardware as best as we could, and so we don't really want to reinvent the wheel.
+So for the arm we designed four armbands along two design axes, and selected one that arranged eight transducers around the digitorum muscle.
+And on the face we designed four masks across two axes, and selected one with eight transducers symmetrically around the eyes.
+For more details as how we came up with our final two form factors and transducer pair combinations, please see the paper.
+And this is what our final two wearables look like in real life.
+So let's actually see how interferometry works.
+So I have my armband over here.
+And then as you can see, as I have my arm, as I move it, the signal's really changing with my hand.
+So let's actually train this.
+So as you can see, with just one instance of training it works.
+(audience applause) So to evaluate our system, we use two gesture sets, one for the arm which we adapted from Tomo, our previous work, and one for the face.
+I had this video originally to prove to you that it actually does work.
+So this is live recognition of it working, but I see you guys saw it in real life.
+And then on the face we have the laptop showing the same signal, showing gestures that include neutral, left eye closed, right eye closed, both eyes closed, eyebrows raised, smile, frown, mouth open, and my favorite, kissy face.
+So to evaluate the performance we ran a user study.
+We recruited 10 participants, and they were asked to perform each gesture in a random order, so that no gesture was performed back to back.
+Each full set of gestures formed a round and we collected 10 rounds of gestures to form a session.
+In between each session, the worn sensor was removed and re-worn to evaluate how robust our system was to positional changes and over time.
+On the machine learning side, we used SciKitLearn Random Forest classifier.
+To evaluate the within-session performance, we performed a Leave one round out cross validation, where we train on nine rounds within a session and test on the tenth all combinations across both sessions.
+We found that Interferi performs well across the 11 class arm gesture set, at 93% across all users.
+Looking at the hand gesture subset in purple, Interferi performs particularly well, at 98%, and it also performs well with the pinch set in orange at 90%.
+So across-session accuracy is when training the system on one session's data, and testing on data that was collected at a different time, when the band was removed and re-worn, Interferi has a classification accuracy of 65% across the entire gesture set, and 80% on the hand set.
+What this suggests to us is that some gestures, such as stretch and Spiderman, are much more robust to changes in armband positioning.
+On the face, we found that Interferi performs well across the nine class face gesture set, with 89% across all users.
+And for the eye and mouth subsets, we found that Interferi performed at 92% and 91%.
+Similarly, Interferi has across-section accuracy of 64% across the entire gesture set, but similar to the arm certain gestures are particularly robust across sessions.
+However, more challenging than discrete gesture recognition is continuous tracking.
+This is the most atomic stage of gesture recognition, as it can generate other gestures.
+So for continuous tracking, we recruited 10 participants, and we asked them to perform four tasks.
+One is the degree of smile task, two hand pose, three wrist angle, and four weights.
+For the hand pose and wrist angle tasks, we used a Leap Motion as ground truth, and for regression we used SciKitLearn Extra Trees regressor.
+So for the continuous tracking degree of smile task, we asked users to perform four different levels of smile, from neutral to big smile, and our average smile intensity error was 8.6%.
+For the hand pose task we asked the users to close their hand and close their thumb, and we found that the average error was 1.7 degrees for the thumb, and 6.5 degrees for the four fingers error.
+And in the plot below, you can see on the thumb and four fingers that Interferi tracks reasonably well with the lead motion.
+For the wrist angle task, we asked the user to move the hand all the way to the left and all the way to the right, and the average wrist angle error was 5.3 degrees, and similarly Interferi tracks well with the lead motion.
+And for the last task, we performed a weights recognition task, where the participant was asked to hold one of five weights.
+In this task we performed a Leave-one-weight-out evaluation where we train on four weights and test on the fifth all combinations.
+What this means is that machine learning is attempting to predict on a weight category it's never seen before.
+So this includes scenario that require extrapolation, such as training on zero pounds, six pounds, nine pounds and twelve pounds, and then asking it to predict 15.
+And we found a Leave-one-weight out error of 1.59 pounds.
+So finally, Interferi does have some limitations.
+The first is that it requires per-user calibration, so I can train on myself but it won't work if I put it on someone else.
+Interferi also currently requires large transducers, so while we can use smaller transducers, we don't have a guarantee that the signal will be as robust.
+And Interferi also relies on good acoustic coupling.
+Form factors do need to ensure good contact conditions, so to address those two previous limitations, in the future better housing ergonomics and conformity could improve performance.
+On our worn four factors designs, they were designed as one size fits most, so those with larger or small arms and faces didn't have good contact conditions with the wearable.
+So we see Interferi being quickly integrated into existing wearables that can conform to multiple body sizes, such as on the right.
+We have some mock-ups integrating Interferi into a potential Apple watchband or within an Oculus Dk2.
+That was Interferi and thank you for coming.
+(audience applause) - [Host] So we have five minutes for questions.
+- [Lewis] Hi, Lewis Chuang from LMU Munich.
+That was a fantastic talk.
+Thank you for the live demo.
+I'd just like to ask a couple of questions about the extent to which Interferi might either interfere with other possible devices or other sensors, or on-body sensors like electrodes, for example, and vice versa, what might be environmental variables that might interfere with the signal itself, such as ambient sound, if that's even a factor? - So the kind of cool thing about these transducers is the metallic shell is the ground pin, and so you can actually create a hybrid system that pairs something like Tomo and you can use Electric Impedance Tomography in real time, at the same time as Interferi.
+So you can drive an electric system that won't interfere with my acoustic interferometry system.
+You can have hybrid models that also vote between Tomo system and my system, and then you can create an even more robust gesture recognition system.
+Does that answer your...
+Okay.
+- [Audience Member] Thank you. So for me, I'm from University of Toronto.
+So just a quick question, so what is the latency level of your whole system, like a couple of milliseconds, or something like 100 milliseconds after the gesture itself? Thank you.
+- So our system runs pretty real time.
+I think if I recall off the top of my head, we're running at 50 frames a second.
+So 1/50th of a second would be the latency.
+- [Audience Member] Okay, thank you.
+- [Adam] Hi, Adam Agassi, from the IDC miLAB in Tel Aviv.
+What machine learning algorithm for the training and for the recognition? - So for discrete classification we use SciKitLearn's Random Forest classifier.
+Default parameters were 200 trees.
+For the regressor we use an Extra Trees regressor in SciKitLearn, default parameters 200 trees.
+The kind of interesting thing about Interferi is that all the other algorithms worked as well.
+So SVM worked, I think we also ran it on KNIME as well and that worked as well.
+The signal is robust enough that it's pretty clear to any machine learning algorithm.
+- [Host] I have one question.
+Is there any interference with sweat? - So the reason why we go to 100 volts is because it basically punches through everything.
+One of the big problems with bio-sensing systems is that there are a lot of interferences.
+There's arm hair, there's sweat, there's different fat composition, muscle composition, so in order to overcome all of that we went to 100 volts so that we'd just have a robust signal all the time.
+- [Host] Thank you.
+- [Audience member] One question.
+You just mentioned the 100 volts. Is there any implications that this is harmful in any ways to the body? - So in terms of like electric shock, we current limit everything, so all of our transducers are also very high impedance so there's not much current that's traveling through it.
+This is actually a very low-power system, just high volts.
+In terms of the harmful effects of ultrasound, there's been many studies that show that ultrasound does not have harmful effects on the body, except for when you turn it into military applications, but that's not what we're doing here.
+- [Audience Member] Thank you for your presentation, and simple question. Your system can discriminate between the one finger and the two finger? - So like being able to do pinches? - [Audience Member] Yeah, yeah.
+- Yes. So I think I might have gone through that a little too quickly.
+But so, in addition to being able to do full hand gestures, we can also do individual pinches.
+- [Audience Member] A pinch? - Yep. So those are our pinch gesture sets.
+- [Audience Member] Like moving the one and two? - Yes.
+- [Audience Member] Also this one and this one.
+- Yes, we can do that. We just didn't evaluate that in our paper.
+- [Audience Member] Okay, thank you.
+- [Host] We have one question here.
+- [Audience Member] Hi, I'm (mumbles).
+Do this device have specific placements? I mean maybe different placements and different accuracies.
+- Could you repeat the question? It's a little...
+- [Audience Member] My question is does this this device have different accuracy, for example, different placements? Maybe different placements have different accuracy? - So we found that, for instance, in our weights error classifier, people who had difficulty holding the 15 pound weight, their accuracies were lower.
+It's a function of one, how well can you perform the gesture or how well can you hold up the weight.
+It's also a function, of does this armband fit your arm or not? It's really hard to fit this on people who have really small arms or really large arms.
+- [Audience Member] Could you show us the results of the classifier, because from what I saw there was a huge difference between left eye and right eye pinch.
+Left eye and right eye.
+- Yep, so in the across or...? - [Audience Member] Yeah, so left eye close is about 90% accuracy, and right eye close is about 60%, and to me this looks like to me this would be almost the same.
+- Yeah, so this is what's kind of interesting.
+We noticed that in some gestures that are asymmetric, like left eye closed, right eye closed, people who are more comfortable with...
+Most people regularly will wink with the right eye instead of their left eye, and so when they're performing a left eye closed task they'll perform it a little bit stronger than they would a right eye closed.
+So that's why when the gesture itself is being performed with more force, it's going to have a more distinctive signal.
+So that's why there's that assymetry there.
+- [Audience Member] Nice presentation. Thanks for the presentation. Simple question.
+What is the advantage of acoustic sensing over EMG? Did you do any comparison? - So EEG has, I mean, EEG is kind of one of those things where-- - [Audience Member] EMG, EMG.
+- EMG? - [Audience Member] Yeah.
+- Yep. So, EMG has more contact condition issues than acoustic sensing would. For instance, EMG is much more sensitive to sweat or, you know, my arms would have a difficult time putting EMG because I have hairy arms, so I don't necessarily want to shave my arms in order to use this system.
+This system would work on people with different hair conditions as well.
+Also this is a completely dry system, there's no gel, there's no paste that's on there in order to produce the coupling, so this system I put it on and I pull it off and there's nothing I have to wipe off my arm.
+- [Audience Member] Sorry, with the same question, because there is this off-the-shelf system called Mio.
+Did you compare your system with their system? Because it more or less looks the same, the technology is different but it will be really interesting to have a comparative study about it.
+- Yeah so there's a lot of systems that we could have compared to, but we chose to compare to a system like Tomo more directly.
+There's a lot of different ways to evaluate gestures within the gesture sensing community, and this is the way we chose to evaluate it.
+But that could be another way then in the future people could evaluate this system.
+- [Audience Member] Yeah, okay.
+- [Host] Okay. So let's thank all our speakers.

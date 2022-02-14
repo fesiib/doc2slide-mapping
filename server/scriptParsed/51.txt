@@ -1,0 +1,270 @@
+- Hi everyone.
+I'm afraid I do have slides, boo.
+But I do have some free stuff to give away as well, yay.
+(crowd laughing) So maybe that makes it a little more exciting.
+It's great to be here.
+Thank you very much for that.
+I'm Angus Main, I'm from the Royal College of Art.
+I'm a tutor on the Information Experience Design programme.
+I'm also a PhD candidate at the University of Arts London as part of the Creative Coding Institute, and today I'd like to encourage you to do something which usually you're told not to do.
+Which is to lie, and to lie more.
+Not to each other, but to the objects around you, and to really think about the communication that we have with the objects around us.
+So, specific, i.e. to deceive your devices more.
+And I'd like us all to think a bit more, and spend a bit more time thinking about how we might deceive our devices.
+So, in particular, I like to think about the sensors in those devices and the amount of sensors which are around us at any one stage that we carry with us.
+They're on our person.
+They're in our homes, they're in our cars.
+And I'd like to think more about what they're capable of sensing, what they're able to observe about us, and how we might be able to control that process of observation, and this process of communication that we're sort of tacitly part of.
+So, sensors are everywhere.
+I guess the main idea I have is that ubiquitous computing led to ubiquitous sensing.
+Sensors are all around us.
+As an example of that, just take the iPhone.
+So the original iPhone, when it was released in 2007, was advertised with three sensors.
+They made a point that it's got three sensors on board.
+An accelerometer, an ambient light sensor, and a proximity sensor.
+It actually had a couple of other ones as well, which they didn't label, which was microphone and a touch sensor as well.
+But those were the sensors which were on board, as far as we can tell.
+Nowadays, the latest versions of iPhone triple that.
+There are 15 sensors.
+There's the original ones, all those ones which they had on the original one, but they're more sophisticated.
+But we have new ones.
+Things like barometers, for sensing atmospheric pressure.
+We have magnetometers for sensing direction, as a compass.
+Gyroscopes.
+We have a plethora of cameras facing in all directions.
+Same with microphones, many more microphones.
+We have depth cameras.
+We have GPS, we have biometric sensors.
+These things are just crammed full of sensors.
+And this is our best guess at the sensors which are in there.
+It's not actually published.
+It's not announced, every single sensor which is part of the device.
+But if you take them apart and you analyze all the components, then this is the kind of list that you get to.
+And of course, it's not just these devices.
+Things like iPhones, which we know are sensitive objects.
+It's all kinds of objects that we surround ourselves with.
+These smart objects, these internet of things objects.
+So, these are all around us.
+Things like thermostats, smart thermostats that contain, obviously, a temperature sensor, which we're aware of, but also proximity sensors, movement sensors.
+Touch sensors.
+We have smart doorbells, which contain video cameras and microphones and motion sensors.
+Watches which contain sophisticated biometric sensors.
+Speakers crammed full of microphones.
+We have televisions that might contain proximity sensors, that might contain microphones and cameras as standard.
+The television, as an object, is an object which has gone from an object that we observe into something that actually observes us as much as it's being observed.
+And we're not necessarily aware of these things.
+They're not necessarily advertised.
+There's no sticker on the side of the box saying it contains these sensors.
+To a certain extent, this has always been so.
+There's been sensors in objects for ages.
+But obviously what's changed is the fact that these objects are all connected.
+They're all part of a bigger ecosystem of sensing, and I think it's useful to think about those in terms of sensoriums.
+So, in the human sensorium, it's not just our sense organs that do the sensing.
+We have the sense organs.
+We have the nose, the eyes, the skin.
+And we have the individual receptors which are part of that sense organ.
+We have the individual nerves which are actually doing the sensing.
+But they're all connected together as part of a nervous system, and they're connected to a brain, which is then trying to make sense of all that information coming in from these receptors.
+And all of this works together as a sensorium.
+And we've got to a similar position now with digital technology, that we have, instead of these sense organs, we have devices.
+These collections of receptors.
+And those receptors are the sensors, these tiny components.
+And they're all joined together, not by a nervous system but by networks.
+By wifi, by the internet.
+And rather than a brain trying to make sense of all this, we have online algorithms.
+We have online services which are taking in all of these little bits of information and trying to make sense of it.
+Trying to make inferences around those.
+And I think we need to think more about this digital sensorium, how it's observing us.
+The sensors themselves, the equivalent of receptors, it's not just those which are the issue.
+It's those I'm trying to tackle, but in a way, they're a convenient thing to tackle, because they're the edge of this sensorium.
+They have a physical presence in the objects that surround us.
+Things like online algorithms are hidden away.
+They're obscure, we can't really see them, but the sensors are here.
+They're in our pockets, they're in our buildings.
+In our environments.
+It's not necessarily the sensors themselves which are the problem.
+It's the whole ecosystem, but it's useful to look at those.
+Just because they're present, though, just because they physically have a presence on our devices, doesn't make them any more knowable.
+Sensors are tiny, microscopic little black boxes that sit inside other black boxes that we carry around with us.
+We can't see them.
+We can't observe them observing us.
+And even if we could observe them, even if we could see them, would we know what they are? Would we know what they do? And even if someone told us, "Okay, well, that's an accelerometer," would we know what the capabilities of an accelerometer are? What kind of observations would an accelerometer make about me? Even if we understood that, for example, an accelerometer is the thing in a phone that knows if you're shaking it, or knows which direction it's being turned in.
+Even if we know that, do we know how far those capabilities extend? Probably not.
+We'd probably be surprised to know that the accelerometer in your phones is so sensitive to vibration that it can actually be used as a microphone.
+That it can actually pick up on the vibrations of human voice.
+There's a lot of unknowns in all of that, and this causes an issue, I think.
+There's an imbalance here.
+A communication power imbalance.
+The fact that these sensors observe without being observed means we have this power imbalance, and it's similar to the panopticon.
+It turns us into inmates of a panopticon, where we are being observed, but we can't tell when we're being observed, or how we're being observed.
+We just have to generally assume that there's observation going on.
+So how do we redress this imbalance? How do we tackle it? I think there's two things which are needed.
+We need more awareness, and we need more agency.
+So we need awareness of these sensors.
+What they are, where they are.
+How they're sensing, what they're capable of sensing.
+And then we need agency over that.
+We need some way of controlling that observation, of opting out of it, or manipulating the kind of observation that's happening.
+Gaining control over that whole process.
+So I think the way of doing that is lying.
+If we can lie to these objects, if we can lie to these sensors, then it means we have awareness of them.
+We know they're there.
+They're something that we can communicate with, we can lie to, we can deceive.
+And if we can lie, it means we have agency over it.
+We can control it.
+We have some kind of part in this process of communication which up to now, there hasn't been so much.
+As a show of hands, who does this? Nearly everyone! (laughs) So, why do we do this? We do this 'cos we're sort of, I guess, aware? Maybe vaguely, that there's some kind of ability of observation going on.
+That there's a sensor there, and it might be observing us.
+And it might be observing us in a way that we don't want.
+And we want agency over that.
+We want some control over that process, so we have this nice reassuring thing we can stick on the top that we know vision can't get through.
+That we know is going to stop that active observation.
+And that's great, but that's one sensor.
+What about all the other sensors on a device like this, or on any of your devices? How d'you do the equivalent for an accelerometer? How do you put a sticker over the accelerometer and say, "Actually, I don't want you "to observe something right now?" How do you do it for a barometer, or any of the other sensors on a phone, on a laptop, or any of these objects? And that's really what I want to look at with this project.
+So as part of this research, I've identified a few different levels of lying.
+Different types of lying that we can engage with with our objects.
+So first of all, we have lying through omission.
+So this is simply stopping the act of observation.
+This is what we've just seen, putting a sticker over a camera.
+It's telling the truth, but not the whole truth.
+It's choosing when to tell the truth and when not to say anything at all, when to withhold that information.
+And it's pretty simple to achieve.
+Then we have lying through obfuscation.
+So that's telling the truth, and everything else apart from the truth as well.
+So we allow the sensor to observe us.
+Maybe we allow a microphone to listen to us.
+But we blast it with music, or with noise, so it can't really hear what's going on.
+It can't hear the nuance.
+It can't pick up on the whispered conversations.
+Or we get an accelerometer, we constantly shake it.
+So, it's still observing stuff, but it can't pick up on the nuanced little changes in direction.
+Or we lie through falsification.
+This is the master, boss level of lying.
+This is telling your sensor a specific untruth.
+Making it believe it's observing a certain thing when actually it's observing something completely different.
+This is a lot harder to achieve.
+I talk a bit more about all of those in the paper.
+So in terms of outcomes, there's a couple that I've looked at.
+So, for awareness, I've produced a book.
+A guidebook to sensors for anyone to look at.
+And for agency, I've produced a tool kit.
+So these are some tools and materials that you can use to start lying to the objects around you.
+(crowd laughing) The book is like a spotter's guide, like a children's guide to sensors.
+It's for anyone to try and understand the sensors around you.
+It's in two sections.
+The first one is a run-down of common sensors and what they are.
+What is a gyroscope? What is an accelerometer? How do you access it? What's it observing about you? And the second half is a way of looking at specific devices, specific objects, and trying to identify what kind of sensing is going on with those objects.
+How sensitive is that object? So it's pretty accessible, and it will give you an understanding of how you're being observed.
+And then there's the Liar's Tool Bag.
+This is a tool bag.
+It's full of a few little materials.
+It's customizable, there's different ones that can go in and out of there.
+But there are a few objects in there which help you lie, help you lie to these objects.
+And I'll take you through the ones which we have here today.
+First of all, most simply, stickers.
+Stickers you can put over cameras, stickers you can put over proximity sensors, light sensors, infrared sensors.
+It will just stop that optic, stop that sensing going on.
+Then we have a microphone disabler.
+This is a bit more complex, but actually, at its heart, quite simple.
+So the microphone disabler, if you get one of these kits, you'll be able to see it, is just this.
+It's a mini-jack, a headphone port with nothing connected apart from one resistor, which is across two of the contacts.
+If you plug this into your phone, particularly the iPhone or your Macbook, or your laptop, it will disable the internal microphone, and that's because the device thinks it has an external microphone plugged in, and therefore it turns off the internal microphone.
+These are really cheap and easy to make.
+Then we have the phone rocker.
+The phone rocker is (crowd laughing) two simple parts of cardboard, they have a slot in them, you put your phone in there, you can rock it backwards and forwards.
+(crowd laughing) It makes it really easy to simulate walking on your phone.
+You can just tap it, it rocks away for a while, you can rack up hundreds and hundreds of steps in just a minute or two.
+(crowd laughing) Then we have some magnets.
+Again, pretty simple.
+These kits do contain magnets.
+If you're sensitive to magnets or you have a pacemaker or something, do be aware of that.
+I want to disable devices but not those devices.
+But they are just simple magnets.
+They're not that strong.
+But they just allow you to disable the compass on your phone.
+If you place it on your phone, or a device which has a magnetometer, it will think you're facing a certain direction when you're not.
+You're actually going in lots of different directions.
+Then we have plastic bag.
+This is the thing that the tools come in, but actually, it's an important tool in itself.
+If you seal your phone in this plastic bag with a little bit of air, so there's a little bit of an air bubble in there, and then you squeeze it gently, you're increasing the air pressure, which is affecting the barometer, which is part of your phone, which tells you how high above sea level you are.
+So if you squeeze it, you can massively increase the pressure, which massively reduces your altitude as far as the phone's concerned.
+So it's like you're walking up and down mountains or doing loop-the-loops in planes.
+Just little deceptions which can affect it.
+And of course, these are all small deceptions, and on their own, perhaps you can argue how effective they might be.
+But they're just ways of thinking about the types of observation which are happening, and thinking about how we might get some control over them.
+And actually, it's quite simple to get some control over these things.
+So I have a few of these tool kits to give away, about 40 or so.
+Might not be enough for all of you, but at the very end of all these sessions, if you come up to the front, I can give you some of these and you can start lying to some objects.
+As you're doing that, you might want to look at the sensor data itself, which is quite hard to do on the phone.
+So I just recommend these two apps.
+There's Gathered for the iPhone, or there's AndroSensor for Android, which will give you the sensor data raw.
+You can also do things like turn on your voice recorder, if you want to see the microphone disabler working, turn on your voice recorder.
+Plug it in, you'll see that it goes to zero, you're not getting anything from it.
+So just as a sort of final thought, I'd like to also think about what would be the impact of this culture of lying to objects.
+What's the kind of result of this? Where would it get us, not only as people who use devices, clearly there's an empowerment, I would hope, within that.
+But as people who are designing systems as well.
+If we had more lying to objects, more people deceiving the data streams on these devices, what would it mean? Would we be able to trust the data in the same way? Would it make us scrutinize the kind of data that we're getting from sensors a bit more, if we knew that people were more aware of it? Would it make us scrutinize the kind of assumptions or inferences that we're making about sensor data? Perhaps.
+Perhaps it would just cause chaos, I don't know.
+But it's an interesting thing to think about.
+Okay, so thank you very much.
+(loud cheering and applauding) - [Event Manager] Great, so, yeah, if you have any questions, please do line up at the microphone over there.
+We've got an SV who's got some cards, so if you can't get to the microphone, then please give 'em a wave, and you can write your question down, and we'll read it out.
+I'll start with a question, actually.
+So, great talk, really interesting.
+I wonder how the trade-off between understanding that you're being listened to but also usefulness? So like, Alexa.
+A lot of people know a lot of stuff goes on in the background, but being able to just shout out to it is very convenient.
+So... - I mean, I'm definitely not anti-technology, I'm not anti these things existing.
+They serve a purpose.
+I think all we need to look at is how much control we have over them.
+So, can you turn these things on and off? Or can you, in some way, affect some control over the sensors, the equivalent of putting the sticker over the camera? And at the moment, I don't think there are many tools for doing that, and I think perhaps that's something we need to look at more.
+But that's not to say that the sensors themselves, or the tools and devices they're attached to, aren't useful.
+It is useful to have these systems in place.
+I'd just like to have a bit more control over them.
+- [Female Audience Member] Hi, I'm Victoria Ganza.
+I loved the talk very much, very much not from a research perspective, but privately into privacy.
+Two observations.
+The one observation is, I think we have a lot of agency in also especially not carrying this device called smartphone with us around.
+And I try to do that often.
+On a very personal note, it feels extremely weird to go out without a smartphone, so I especially take care to notify my husband, you know, "I'm going to go one hour shopping, "but I'm not taking it with me, okay? "But I'll be back." I'm exaggerating a bit, but we've become so used to be always reachable, always on in case of any emergency that could happen.
+In an hour in a safe apartment in Austria.
+(laughter drowning out speaker) And the other comment on that would maybe be also question, another thought that came to me.
+I've been reading up on health insurances, getting better, lower prices for health insurance if you do, I don't know, 10,000 steps a day, or 1,000, or whatever.
+And my thought was, if I were such an organization, the first thing I would do is to make it illegal, at least in the contract of usage, to deceive the device.
+Do you have any thoughts on that? - Yeah, I do.
+Thank you for both those.
+So, to tackle the last one first, in terms of insurance companies and things.
+I do talk a bit about that in the paper.
+And I think what I'd like to do for this project is really provoke these thoughts and these questions about these objects.
+And so, for example, it's quite common now that you have car insurance companies that will have either a black box of sensors which you can attach, or even just on your phone, an app that will record how you're driving.
+And we're sort of okay with that, I guess, because we have this financial benefit of doing that.
+They will reduce our premium, perhaps, if we have those devices.
+But what are those sensors which are in that object, or what sensors on the phone, that needs to be questioned more, I think.
+And this, I hope, acts as a provocation for doing that, and also shows us the inefficiency of doing that.
+The fact that these sensors can be fooled.
+So perhaps, then, it would lead to a conversation like you're suggesting.
+But the insurance companies need to look at that a little bit more as well.
+And yes, we can do without the devices entirely, and I would hope that might be an idea that comes out of this as well.
+These are meant to be slightly ridiculous.
+Things that you're rocking your phone in is clearly not a normal use case, it's clearly something a bit odd.
+And perhaps in doing that, we can question, well, hang on.
+Rather than having this thing that I'm having to rock constantly, maybe I just don't have the phone at all.
+Or maybe I just don't subscribe to those services which are using that kind of information.
+So I hope those kind of questions might be raised from it as well.
+Thank you.
+- [Event Manager] I've got a question from the audience here.
+"We are the ones creating these devices "and making them useful, "so what does this tool kit mean "for the CHI community?" - Well, I hope that's what I'm getting at with this last question as well.
+So if nothing else, perhaps think about how easy these sensors can be deceived, and if you're creating devices or systems or services which are relying on this constant, valid stream of data coming from a phone in order to back up the insurance company's policies, or whatever it might be, really relying on that data.
+Know that it can be disabled with a piece of cardboard.
+Know that it can be disabled with a simple jack that you plug in.
+You know, it's easy to get around that.
+So perhaps we need to question the validity of that at some stage as well.
+- [Event Manager] So, we have time for just a quick question.
+- [Female Audience Member] Yeah, thank you.
+Danielle Wild.
+You bring a beautiful sense of whimsy to this serious and important topic.
+What I suggest is that it opens up an opportunity to interrogate how we are designing the whole world.
+Because as technology designers, we are shaping not just the world that people are inhabiting, but how they engage.
+And there's this ongoing uber-narrative of security and being careful, and making sure all these things are in place, and that's why we have all these things with sensors to help us do this.
+But this agenda of whimsy, I think, is something that you are bringing to the table that could be expanded beyond just this particular topic.
+To pose a challenge to the CHI community to say well, what if, as a community, the world that we were creating was one that embraced whimsy as a normal, everyday part of the world that we're trying to create? And that's so little looked at and I'd love to see you expand your discourse into that direction a little bit, to extend the kind of challenge that you're bringing.
+- Great, thank you for that as well.

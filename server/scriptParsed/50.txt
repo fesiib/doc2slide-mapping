@@ -1,0 +1,88 @@
+- Hi, so the paper is on navigating ride-sharing regulations, how regulations changed the gig of ride-sharing for drivers in Taiwan.
+So, our study had two primary questions which was what were the ride-sharing drivers reactions to the regulations and how did the regulations impact their work and their technology use? So, these questions primarily arose driving trend and regulations.
+So, we're seeing these regulations appearing in London, and New York, and Pittsburgh, and we're kinda seeing this as a continued trend in which will, sorry.
+And so, we're interested in how the actual regulations were affecting the drivers since it seems like these regulations are primarily speculative about what the actual impacts will be.
+So for instances, some people have, oh sorry, some researchers have argued that these regulations will stifle innovation while others have said it will balance the differences between taxis, the existing ride-hailing market, and the ride-sharing drivers.
+So, we've primarily selected to do a research in Taiwan because Taiwan had three primary stages of regulations.
+So, Uber first entered Taiwan during 2013 and they partnered with the local taxis.
+However, primarily, the, however, sorry. (laughs) However, primarily, people still use these taxis and there's this conflict between the regional ride-hailing market and these ride-hailing drivers, which resulted in the suspension by the government during 2017 for two months between April and June.
+So after the suspension period, Uber was regulated.
+However, when it came back, it significantly changed what the original intention of Uber was.
+So, the regulations were intended to increase the safety of ride-sharing while also balancing the competition between taxis and these ride-sharing drivers.
+So, the taxis in Taiwan were stating that these ride-hailing drivers were making it more difficult for them to earn a livelihood.
+And so, the new regulations had each Uber driver have a new license plate.
+And what this means is they actually have to buy the license plate similar to the existing token system in places like New York.
+So, the regulations mimic the existing system that the taxis already operated.
+And so in essence, this changed how it operated, as well, because now they're contracted the new stakeholder, which was the car rental agencies.
+And by contracting the car rental agencies, this changed also the entry and existing fees and increased the costs that they also had to operate with.
+So, this left several questions about what were the ride-sharing drivers' reactions to these regulatory changes, particularly since they changed significant aspects of what ride-sharing was supposed to be, which was sharing the idle property, and now, this seems more like mimicking the traditional ride-hailing, similar to how taxis operated.
+So, it was no longer a gig, but, more in a sense of now it's a traditional taxi system.
+So, what we found from our study is we found from 19 different interviews gathered from ride-sharing drivers in Taiwan that they kind of have mixed feelings about the regulations.
+So, some people complain that it was now more of a formal job rather than a gig, and this was mostly due to the increase entry and exiting costs because now that they have to purchase a license plate, they felt more obligated to stay, and now, that they also had several other restrictions such as, they have to have a background check and they also have to file with the car rental agencies, and so now, they're contracted for a set amount of time.
+So, it's no longer like a gig where you could just log on, log off, where there wasn't as much of a penalty for leaving the system.
+And what the drivers also felt was that the regulations were kind of implemented in a way that wasn't very transparent or easy to find information.
+So, because each of the car rental agencies were also not under uniform standard, each of the agencies offered different deals, and so, they felt like it was very difficult to find this information.
+So, one of the participants said, "it's actually not enough for others "to tell you how you should join Uber, "you must find your own information "using your personal determinations or from the internet." So, for some of our participants, they actually went to the Uber headquarters in Taiwan, while others had browsed blogs or internet forums, but, then general gist of it is, there is no uniform way in how they found the information.
+And the third thing that they kind of were a little bit more mixed about was the car rental agencies.
+Some of them felt like they were more predatory, while others found that it was a sense of community and support.
+So, this new introduction of stakeholders was kind of surprising and it was unique to kind of Taiwan's regulations, however, this is not necessarily something that is isolated to Taiwan.
+So, the reactions, however, overall were generally positive, so, despite those mixed feelings, they were primarily, they found that because the problem was now legitimized through these regulations, they felt more competent in being able to invest in this platform because beforehand Uber was kind of in this illegal gray area stage during the suspension period.
+So, there's a lot of this, "will it continue, "will it be fined, what will happen to it?" And so, through this legitimization of the regulations, they felt like they had this new founded stability.
+And they also felt like there was an increased safety for both the drivers and for the passengers, as well, because now that each of the drivers were held more or less liable for their passengers.
+And I think the most important part of this was also the legal protection.
+So, prior to this the ride-sharing drivers were kind of in the state that if people had sued them or if they were in an accident, it was primarily the drivers fault and they had minimal recourse in terms of what to do after the accidents.
+So, this is one of the quotes about the legal protection to legitimization of the platform.
+So, this participant said, "if I had a collision "with someone else, I don't have to worry "that I am driving for Uber illegally "when an accident happens.
+"The other things is if you drive "for Uber without legal protection, "how will you face your family? "How do you explain to your children and your parents? "This is very important." So, this was a distinct change from before it was regulated.
+So, this next question that was kind of raised was how did the ride-sharing drivers navigate during the suspension periods and the subsequent regulations of ride-sharing? So, they primarily used Line, so, the appropriated technology that was already existing to kind of create this informal ride-hailing system.
+So, it wasn't necessarily that ride-hailing stopped during that period of time, but rather, because of the of the disruption by these policy changes, they used an appropriated technology that they had already established.
+In this case, this is how Line works.
+So, you can create a group and you can leave these different messages, so, it's kind of like a mixed medium sense and you can record voice messages, or you can send text messages, and the moderators have a great deal of control into who they invite into the group.
+So, this is also how they kind of avoided detection by legal agencies because by setting who can be in the groups they could kind of control it, so, not inviting someone that's going to report them to Uber or report them to the government.
+And so, they can do it through multiple means, through the QR code or through mobile links in email, so, this just gave them more flexibility.
+So, ride-sharing regulations have heavily effected how these Line groups happened, so, this primarily occurred during the suspension period when the market was still relatively gray.
+And so, this came out a way to continue making their living, especially since, several of the drivers, when Uber was first released had actually purchased cars, so, they were in extreme debt in some cases.
+And so, they used Line to kind of continue their living and some of them had quit their jobs when they found out that Uber was in the market.
+And then afterwards, when it was regulated, because of the existing systems that were created when it was suspended, it still kind of continued on after the regulation period.
+So, it's also important to note that throughout this entire time period, since it first emerged to how it's currently used, Line is still illegal, so, these groups are actually highly secretive and there's a lot of effort spent to try to avoid detection by both the legal agencies and by the Uber platform because once Uber came back, if the Uber platform had found out that they were using these informal ride-hailing systems, they would actually shut down the Line group and remove the driver's ability to continue driving for Uber.
+So, the motivation for these drivers were primarily monetary, however, some did feel an obligation to their customers because a lot of the times the people who are in the system are people that they have worked with for a while starting from the suspension period, back in 2017 until now, so, there's a lot of this kind of give and take.
+So, one of the drivers said, "Line groups are "a violation of Uber's regulations, "but, if I don't pick up these types of passengers, "then my salary will be pressed very low.
+"But, say for example, if it's a foreign professor "and I drive him to dinner, "then he says, "hey, this weekend I'll go back to the USA", "I might ask if I can drive him to the airport." So, in this case, the users are both the ride-sharing drivers, but, they both approach the customers and the customers also approach the drivers, as well.
+But, what was most unique about the Line groups were that each of the groups had different policy operations, so, even though they occurred organically, each of the groups had extremely different policies that actually kind of differed with each other.
+So, here are the Line group policies, so, the first thing is about access.
+So, the access to the groups were invitation only and sometimes a car rental agencies themselves would form these groups, as well.
+And they operated based on different fees, so for instance, some of the groups were primarily concerned with monthly fees, while others were concerned by commission, and so, this primarily arouse out of the nature of the group, as well.
+And then finally, designating rides this actually.
+Okay, thank you.
+This part actually effected how the drivers picked up rides, whether or not they preferred the Line group systems.
+So, for some of the, what they call themselves a little bit of the older driver, they stated that they didn't like the Line groups as much because they would have to go and catch the rides, so, the rides would be sent out through text form and then, whoever catches them first often gets the ride, and so, because there was that competition, that reaction speed, this one driver said, "personally, my reaction speed "is not very fast, ah not as fast as "the young people's hands and feet.
+"Most often, I cannot outrace them "in claiming the dispatch." But however, that being said, a lot of people still liked the Line groups 'cause some people, if they have extra rides or customers, they will send the new rides into the chat and so, they will get a commission fee.
+So, in this case they said, "why not use these groups, "when I get a percent cut for trips "for each ride I toss in the group.
+"It's like getting paid for doing nothing." And so, there's this kind of community sense, as well, where everybody kind of benefited.
+So, the customers and the ride-sharing drivers in general both preferred this new informal ride-hailing system and they said that in some cases, it was improvement over Uber and this is primarily due to the changes in regulation and the existing fee cut which made Uber a little bit more difficult to sustain.
+So, this person said, "I have thought about this problem.
+"In your Line group, if they toss out a few dispatches, "then, don't you need to fight to claim it? "But, you can't possibly always be watching your phone, "and watching your phone while driving "is a very dangerous thing.
+"I think that is very tiring.
+"Why should I make myself so distressed "by using Line groups?" So, this was an example of something that even though they preferred it, there was still this kind of apprehension because it differed with existing ride-hailing system because by using these systems it made the traveling more difficult, it also was in some cases a little bit more difficult to use than Uber.
+So, this is the role of design.
+So, policy impacts the design and appropriation of technology.
+So, in this case, the regulations heavily impacted how the people use the actual technology and whether or not they appropriated new designs.
+And designing for the users without considering policy, you can actually change the intended use of the design.
+So, in this case, it disrupted the existing use of Uber and it created this informal ride-hailing system by appropriating existing technology.
+And then the final question about all of this findings is how did this relate to the usability and what does the usability mean to the ride-sharing drivers because clearly in this case, the usability by the designers from Uber contrast sharply with how the ride-sharing drivers actually felt and what kind of systems that they preferred and adopted.
+So, any questions? (applause) - [Eduardo] Thank you for your talk.
+I'm Eduardo, I work at Uber as a researcher.
+- Thank you for saying. (laugh) (laughter) - [Eduardo] And I'd like to hear why from the user perspective they feel an increased sense of safety and how this type of groups, informal groups in Line, are actually given value to the users, I understand driver part, but, I'd like to understand the rider.
+- So, I'll answer the first question first.
+So, it seems like in terms of Asia, at least, most of the policies were targeted towards safety and so, in this case, how the increase of safety was increase the connection between how the drivers are operating with existing databases, so, in this case, they had the professional license plates.
+So, that was a way of increasing the safety from regulation standpoint and then, it effected how they use it platforms.
+Sorry, what was your second question? - [Eduardo] Yeah, I was mostly referring to this informal groups in Line, So, you don't have control on if they are regulated or not, and have the license, and especially, the riders side, so, the passenger, how does the system influence an increased sense of safety? - So, in this case, because the access to these groups are so sensitive, most often the customers and the ride sharing drivers already know each other or have shared a ride through the official Uber platform, and so, because of that there is that sense of trust and because, let's say for instance, if I'm a customer and I feel like this Uber driver isn't trustworthy, but, he's inviting me for a Line group, then, they can just pick no, I don't want to do this, and plus, there's that sense of oh, this is illegal, and so, they have an incentive to kind of avoid distrust worthy customers and distrust worthy drivers.
+So, that' show they increase the safety from an informal standpoint.
+- [Dan] Hey, Dan Cosley, Cornell, again.
+So, this is a really cool talk and it's really interesting to see this tension between kind of, you know, sort of official recognized legality, right, that gives people sort of a comfort that they can actually do this and then, the kind of looking for the best deal for them which, is where I see this story between Uber and these Line groups, right, so, how, I guess let me think about it from the Uber point of view, how could Uber sort of make it so that the Line groups just weren't actually all that attractive to drivers and it would sort of stay in the platform? - So, I think this goes into the second question, I'm not entirely sure if it's possible to reverse the use of Line groups, and this is primarily because of the way that it was created, and so, because of all the different phases and regulations, and the threat of regulation, and the threats of being band, again, these Line groups had kind of persisted also as a since of safety, so, if they loose that ability to operate online, I'm sorry, on Uber, at least they would have ability to earn income and so, this kind of goes into how we must design for users in regards to how these policies change and the impacts of these policies because once there becomes a disruption in the user technology, this disruption seems to be lasting even though they now have an opportunity on these platforms.
+- [Woman] I have a tiny question.
+Maybe it's related to the first Uber question.
+Did you get in touch with any of the customers at all? Did they find that the Line group provide a more personal experience because they basically have their dedicated driver in some sense.
+- So, I kind of informally gathered information on this and so, when I was staying in Taiwan, a lot of the elderly people, instead of using Uber they would actually have the numbers of the taxi drivers that they like.
+So, there was already kind of this informal system and so, this kind of informal ride-hailing was kind of augmenting that original usage.
+So, I think in that case, there is that engendered trust already.

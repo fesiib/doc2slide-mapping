@@ -1,0 +1,1036 @@
+{
+  "abstractText": {
+    "page": 1,
+    "region": {
+      "x1": 54.0,
+      "x2": 294.19207763671875,
+      "y1": 223.18800354003906,
+      "y2": 368.75628662109375
+    },
+    "text": "ABSTRACT Informal presentations are a lightweight means for fast and convenient communication of ideas. People communicate their ideas to others on paper and whiteboards, which afford fluid sketching of graphs, words and other expressive symbols. Unlike existing authoring tools that are designed for formal presentations, we created SketchPoint to help presenters design informal presentations via freeform sketching. In SketchPoint, presenters can quickly author presentations by sketching slide content, overall hierarchical structures and hyperlinks. To facilitate the transition from idea capture to communication, a note-taking workspace was built for accumulating ideas and sketching presentation outlines. Informal feedback showed that SketchPoint is a promising tool for idea communication."
+  },
+  "figures": [{
+    "caption": "Figure 9. Users can sketch hyperlinks from a cluster in a slide to a target slide to allow jumps during a presentation.",
+    "captionBoundary": {
+      "x1": 325.140625,
+      "x2": 550.8580322265625,
+      "y1": 428.5559997558594,
+      "y2": 445.0196838378906
+    },
+    "figType": "Figure",
+    "imageText": [],
+    "name": "9",
+    "page": 5,
+    "regionBoundary": {
+      "x1": 362.0,
+      "x2": 514.0,
+      "y1": 239.0,
+      "y2": 422.0
+    }
+  }, {
+    "caption": "Figure 10. At the Overview level, only rough views of slides are shown (If a slide has a title, only the title is shown). In this figure, a user is dragging a page with a title “h”. The user can resequence or delete a slide by dragging and dropping it to a new position in the storyboard or away from the storyboard, respectively.",
+    "captionBoundary": {
+      "x1": 329.9997253417969,
+      "x2": 538.7134399414062,
+      "y1": 652.8359985351562,
+      "y2": 711.5385131835938
+    },
+    "figType": "Figure",
+    "imageText": [],
+    "name": "10",
+    "page": 5,
+    "regionBoundary": {
+      "x1": 340.0,
+      "x2": 528.0,
+      "y1": 463.0,
+      "y2": 647.0
+    }
+  }, {
+    "caption": "Figure 1. SketchPoint Interface. The left workspace is an electronic notebook and the storyboard on the right is for presentation authoring. The bar separating the two can be dragged to adjust the size of two workspaces. The stroke sketched from left to right will produce slides based on the selected notes and insert them into the storyboard.",
+    "captionBoundary": {
+      "x1": 330.59991455078125,
+      "x2": 555.1436157226562,
+      "y1": 602.2560424804688,
+      "y2": 660.95849609375
+    },
+    "figType": "Figure",
+    "imageText": [],
+    "name": "1",
+    "page": 1,
+    "regionBoundary": {
+      "x1": 328.0,
+      "x2": 557.0,
+      "y1": 423.0,
+      "y2": 596.0
+    }
+  }, {
+    "caption": "Figure 12. A structure patch containing a flowchart. Both the nodes and links of the flowchart can be adjusted. Users can switch between the recognized and original ink views of the patch by tapping with the pen.",
+    "captionBoundary": {
+      "x1": 335.75970458984375,
+      "x2": 547.4496459960938,
+      "y1": 209.7959442138672,
+      "y2": 247.3790283203125
+    },
+    "figType": "Figure",
+    "imageText": [],
+    "name": "12",
+    "page": 6,
+    "regionBoundary": {
+      "x1": 349.0,
+      "x2": 534.0,
+      "y1": 74.0,
+      "y2": 204.0
+    }
+  }, {
+    "caption": "Figure 11. Line-based clusters organized in a title-list structure. Users can add strokes to an ink-based cluster, and they can drag recognized objects, e.g., words, as shown here. Three horizontal lines are hyperlinks to other slides.",
+    "captionBoundary": {
+      "x1": 63.899391174316406,
+      "x2": 291.4591369628906,
+      "y1": 212.7959442138672,
+      "y2": 250.3798828125
+    },
+    "figType": "Figure",
+    "imageText": [],
+    "name": "11",
+    "page": 6,
+    "regionBoundary": {
+      "x1": 85.0,
+      "x2": 270.0,
+      "y1": 74.0,
+      "y2": 207.0
+    }
+  }, {
+    "caption": "Figure 2. Idea processing requires iterative cycles of Idea Capture & Production followed by Idea Communication before eventual Idea Publication. The denser the hash marks indicates more people are involved in that step.",
+    "captionBoundary": {
+      "x1": 63.4202880859375,
+      "x2": 282.78265380859375,
+      "y1": 677.9158935546875,
+      "y2": 715.4990234375
+    },
+    "figType": "Figure",
+    "imageText": ["Idea", "Publication", "Idea", "Communication", "Idea", "Capture", "&", "Production", "Public", "feedback", "Gathering", "and", "Refinement", "of", "idea"],
+    "name": "2",
+    "page": 2,
+    "regionBoundary": {
+      "x1": 67.0,
+      "x2": 279.0,
+      "y1": 529.0,
+      "y2": 670.0
+    }
+  }, {
+    "caption": "Figure 14. Gestures used in SketchPoint. The Erase gesture is a dense squiggle drawn on top of other strokes. The Convert gesture (illustrated in figure 1) is determined by the start and end positions of the stroke.",
+    "captionBoundary": {
+      "x1": 64.74029541015625,
+      "x2": 292.0704040527344,
+      "y1": 675.5159301757812,
+      "y2": 713.0989990234375
+    },
+    "figType": "Figure",
+    "imageText": ["Select", "Cross", "out", "List", "Insert", "a", "slide", "Erase."],
+    "name": "14",
+    "page": 7,
+    "regionBoundary": {
+      "x1": 89.0,
+      "x2": 266.0,
+      "y1": 542.0,
+      "y2": 661.0
+    }
+  }, {
+    "caption": "Figure 13. Conducting an informal presentation. Annotations can be sketched on the slide during the presentation and later retrieved by time or slide.",
+    "captionBoundary": {
+      "x1": 77.03941345214844,
+      "x2": 275.1834716796875,
+      "y1": 206.49595642089844,
+      "y2": 233.51934814453125
+    },
+    "figType": "Figure",
+    "imageText": [],
+    "name": "13",
+    "page": 7,
+    "regionBoundary": {
+      "x1": 79.0,
+      "x2": 273.0,
+      "y1": 74.0,
+      "y2": 200.0
+    }
+  }, {
+    "caption": "Figure 4. Common organizations used in informal presentations.",
+    "captionBoundary": {
+      "x1": 80.70028686523438,
+      "x2": 272.5820617675781,
+      "y1": 697.4760131835938,
+      "y2": 713.9398803710938
+    },
+    "figType": "Figure",
+    "imageText": ["(a)", "title-list", "structure", "(b)", "title-graphic", "structure", "title", "item", "item", "item", "title"],
+    "name": "4",
+    "page": 3,
+    "regionBoundary": {
+      "x1": 68.0,
+      "x2": 285.2890930175781,
+      "y1": 593.0,
+      "y2": 688.7999877929688
+    }
+  }, {
+    "caption": "Figure 3. Whiteboards are often used to create and capture informal presentations.",
+    "captionBoundary": {
+      "x1": 147.77972412109375,
+      "x2": 467.122802734375,
+      "y1": 357.2760009765625,
+      "y2": 363.17999267578125
+    },
+    "figType": "Figure",
+    "imageText": ["Graphic", "or", "title-graphic", "Link", "List", "or", "title-list"],
+    "name": "3",
+    "page": 3,
+    "regionBoundary": {
+      "x1": 82.5,
+      "x2": 530.6610717773438,
+      "y1": 74.0,
+      "y2": 350.0
+    }
+  }, {
+    "caption": "Figure 5. SketchPoint users can specify an outline by explicit gesture, i.e., large brackets. The solid triangles or squares, called manipulators, are produced by SketchPoint based on structure parsing. These are used to manipulate the outline, e.g., collapsing or expanding it.",
+    "captionBoundary": {
+      "x1": 324.66058349609375,
+      "x2": 547.6571044921875,
+      "y1": 179.49595642089844,
+      "y2": 227.63873291015625
+    },
+    "figType": "Figure",
+    "imageText": [],
+    "name": "5",
+    "page": 4,
+    "regionBoundary": {
+      "x1": 338.0,
+      "x2": 534.0,
+      "y1": 74.0,
+      "y2": 173.0
+    }
+  }, {
+    "caption": "Figure 8. SketchPoint automatically produces the presentation skeleton with hyperlinks to later slides from the outline of Figure 6.",
+    "captionBoundary": {
+      "x1": 329.6402893066406,
+      "x2": 548.8866577148438,
+      "y1": 682.89599609375,
+      "y2": 709.9193725585938
+    },
+    "figType": "Figure",
+    "imageText": [],
+    "name": "8",
+    "page": 4,
+    "regionBoundary": {
+      "x1": 387.0,
+      "x2": 492.0,
+      "y1": 503.0,
+      "y2": 677.0
+    }
+  }, {
+    "caption": "Figure 6. An outline can also be specified implicitly by indenting text as it is written.",
+    "captionBoundary": {
+      "x1": 330.3595886230469,
+      "x2": 538.4151000976562,
+      "y1": 344.4360046386719,
+      "y2": 360.8996887207031
+    },
+    "figType": "Figure",
+    "imageText": [],
+    "name": "6",
+    "page": 4,
+    "regionBoundary": {
+      "x1": 373.0,
+      "x2": 496.0,
+      "y1": 238.0,
+      "y2": 338.0
+    }
+  }, {
+    "caption": "Figure 7. Internal structure of the outline in Figure 6.",
+    "captionBoundary": {
+      "x1": 333.0003356933594,
+      "x2": 538.7117919921875,
+      "y1": 487.2960205078125,
+      "y2": 493.20001220703125
+    },
+    "figType": "Figure",
+    "imageText": [],
+    "name": "7",
+    "page": 4,
+    "regionBoundary": {
+      "x1": 329.0,
+      "x2": 543.0,
+      "y1": 371.0,
+      "y2": 481.0
+    }
+  }],
+  "sections": [{
+    "paragraphs": [{
+      "page": 1,
+      "region": {
+        "x1": 53.99971008300781,
+        "x2": 294.0999450683594,
+        "y1": 386.50799560546875,
+        "y2": 416.0997009277344
+      },
+      "text": "Categories and Subject Descriptors H.5.2 [Information Interfaces and Presentation]: User Interfaces – prototyping, user-centered design, interaction styles."
+    }, {
+      "page": 1,
+      "region": {
+        "x1": 53.99999237060547,
+        "x2": 141.61680603027344,
+        "y1": 433.8479919433594,
+        "y2": 452.70001220703125
+      },
+      "text": "General Terms Design, Human Factors."
+    }, {
+      "page": 1,
+      "region": {
+        "x1": 54.0,
+        "x2": 289.3052673339844,
+        "y1": 470.447998046875,
+        "y2": 499.8597106933594
+      },
+      "text": "Keywords Informal presentation, Zooming User Interface (ZUI), Sketching, Pen-based Computers, Rapid Prototyping, Gestures, Storyboards"
+    }]
+  }, {
+    "paragraphs": [{
+      "page": 1,
+      "region": {
+        "x1": 54.0,
+        "x2": 294.1577453613281,
+        "y1": 524.5559692382812,
+        "y2": 583.2584228515625
+      },
+      "text": "Informal presentations are lightweight ways for people to communicate ideas to others for feedback and modification. One major form of informal presentations is to sketch ideas on paper and whiteboards during informal discussions, meetings and seminars. Freeform sketches are easily produced and are sufficiently expressive to convey a wide variety of information."
+    }, {
+      "page": 1,
+      "region": {
+        "x1": 53.99999237060547,
+        "x2": 294.1480407714844,
+        "y1": 593.9144897460938,
+        "y2": 620.9378662109375
+      },
+      "text": "Current software tools provide abundant functionality to customize detailed slides for formal presentations. These heavyweight tools capture the presenter’s focus with complicated"
+    }, {
+      "page": 1,
+      "region": {
+        "x1": 317.8800048828125,
+        "x2": 558.0734252929688,
+        "y1": 222.0937957763672,
+        "y2": 259.6768798828125
+      },
+      "text": "menus and buttons. From the start of designing a presentation, presenters often become obsessed by design details, such as colors and fonts, which are unnecessary for quickly communicating ideas in an informal setting."
+    }, {
+      "page": 1,
+      "region": {
+        "x1": 317.8800048828125,
+        "x2": 558.0748901367188,
+        "y1": 270.3328857421875,
+        "y2": 382.4944152832031
+      },
+      "text": "To better understand informal presentation practices, we distributed a questionnaire to 30 researchers, and interviewed seven of these researchers from our lab. The study showed that informal presentations take an important role in the life of a researcher. The informal representations encourage more suggestions and modifications, affording communicationintensive meetings. Informal presentations are a natural transition from periods of idea accumulation and are thus an important step in the cycle of knowledge production. They enable fast and multiple iterations to further refine ideas. However, existing tools are too heavyweight and do not fit this role very well."
+    }, {
+      "page": 1,
+      "region": {
+        "x1": 317.8799133300781,
+        "x2": 558.1122436523438,
+        "y1": 393.156005859375,
+        "y2": 409.61968994140625
+      },
+      "text": "Based on our observations, we built SketchPoint (see Figure 1), a system supporting informal presentation design by freeform"
+    }, {
+      "page": 1,
+      "region": {
+        "x1": 324.05999755859375,
+        "x2": 558.0536499023438,
+        "y1": 686.7960205078125,
+        "y2": 713.8193969726562
+      },
+      "text": "* Zhiwei Guan is now a research associate of the National Research Council in Software Engineering Automation Center, Naval Postgraduate School, Monterey, CA 93940, USA."
+    }, {
+      "page": 1,
+      "region": {
+        "x1": 57.720001220703125,
+        "x2": 291.79266357421875,
+        "y1": 646.6650390625,
+        "y2": 717.8394775390625
+      },
+      "text": "Permission to make digital or hard copies of all or part of this work for personal or classroom use is granted without fee provided that copies are not made or distributed for profit or commercial advantage and that copies bear this notice and the full citation on the first page. To copy otherwise, or republish, to post on servers or to redistribute to lists, requires prior specific permission and/or a fee. ICMI’03, November 5–7, 2003, Vancouver, British Columbia, Canada. Copyright 2003 ACM 1-58113-621-8/03/0011…$5.00."
+    }, {
+      "page": 2,
+      "region": {
+        "x1": 54.0,
+        "x2": 294.16229248046875,
+        "y1": 74.49602508544922,
+        "y2": 185.9969482421875
+      },
+      "text": "sketching. SketchPoint enables users to quickly author presentations by sketching slide content, overall hierarchical structures, and hyperlinks. Slides are organized in a storyboard from which users can directly present their slides. To enable a smooth transition from idea capture to communication, a notetaking workspace allows presenters to pick notes for use in slides. SketchPoint supports structure-based manipulations on ink by implicitly determining the structure of ink strokes by their spatial relationships. It also enables users to indicate the structures by gestures. Informal feedback from early users of SketchPoint showed that it is a promising tool for idea communication."
+    }, {
+      "page": 2,
+      "region": {
+        "x1": 54.0,
+        "x2": 294.14959716796875,
+        "y1": 196.65293884277344,
+        "y2": 265.91510009765625
+      },
+      "text": "In the next section of this paper, we discuss related work. In section 3, we describe the investigation that inspired us to build SketchPoint. In section 4, we provide a detailed description of SketchPoint. We also discuss the interaction techniques used in SketchPoint in section 5. In section 6, we present the current status of SketchPoint and our plans for future work. We conclude in section 7."
+    }],
+    "title": {
+      "page": 1,
+      "region": {
+        "x1": 54.0,
+        "x2": 166.06800842285156,
+        "y1": 511.60784912109375,
+        "y2": 519.4798583984375
+      },
+      "text": "1. INTRODUCTION"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 2,
+      "region": {
+        "x1": 54.0,
+        "x2": 294.2118225097656,
+        "y1": 296.6159973144531,
+        "y2": 515.2150268554688
+      },
+      "text": "Influential commercial products, such as Microsoft PowerPoint [13], provide presenters with lots of functionality, but these tools focus on the creation of detailed formal slides, which are not suitable for informal presentations that aim at fast and lightweight idea communication. Sinha et al’s MultiPoint [18] enhances PowerPoint with multimodal interaction, which enables pen-based and speechbased input for slide authoring. Essentially, it provides recognition-based interaction that complies with the existing formal design metaphor of PowerPoint. Sketching is an efficient and natural way to demonstrate a wide variety of ideas and information. Several systems show the capabilities and efficiencies of sketch-based user interfaces in design, idea capture and communication [1, 3, 4, 5, 7, 11]. We are the first to employ sketch-based user interfaces for informal presentation design. Implicit, or “lazy,” sketch processing greatly lowers the cognitive load of users and allows natural interaction. To enable structurebased manipulations on freeform sketches, implicit structuralizing has been explored in systems employing electronic notebook and"
+    }, {
+      "page": 2,
+      "region": {
+        "x1": 317.8800048828125,
+        "x2": 561.0172119140625,
+        "y1": 74.49132537841797,
+        "y2": 518.8701171875
+      },
+      "text": "whiteboard metaphors [3, 10, 12, 14, 21]. Based on this prior work, we enable high-level interaction with freeform sketches by structuralizing strokes. This allows presenters to sketch line-based clusters (e.g., words), graphs (e.g., flow charts), and outlines. Our earlier study [9] presented the conceptual design of SketchPoint as a tool for integrating note-taking and presentation. In the current work, we further the previous work with emphasis on informal presentations in the early stages of idea communication. We refine and present SketchPoint as a tool for sketching informal presentations. This paper presents the details of interaction techniques for creating informal presentations, the algorithms for converting sketched outlines into presentation slides, the structure-based manipulation based on both raw and interpreted views of ink strokes, and the implementation of SketchPoint. One of our main goals is to provide a natural way for presenters to organize their information while designing presentations. Shipman et al [19] conducted a user study to find the traditional ways people organize information. Based on their results and our own investigations, we chose implicit and explicit outlines as the major structure for both presentation organizations and slide contents. The storyboard metaphor has been widely used in design [1, 7, 11] because it provides an intuitive and natural way to specify sequences and maintain the structure of information. We applied the interactive storyboard as a means for maintaining the structure of a presentation and for carrying out slide-level manipulations, such as slide duplication, removal and re-layout. Zoomable User Interfaces (ZUIs) [2] present an efficient way to organize lots of information in a limited space. DENIM [11] successfully employs this metaphor to organize the different representations of a web site design into different zoom levels. SketchPoint also utilizes a ZUI to organize the activity of presentation design into four continuous steps, i.e., four zoom levels, and allows the appropriate interaction at each level. There has been much research in facilitating the activity of giving presentations [15] and in enhancing presentations in conference and classroom settings [4, 20]. Although our major concern is informal presentation design, we also created some advanced features for giving presentations, such as capture and retrieval of annotations when demonstrating slides."
+    }],
+    "title": {
+      "page": 2,
+      "region": {
+        "x1": 54.0,
+        "x2": 170.42401123046875,
+        "y1": 283.6679992675781,
+        "y2": 291.5400085449219
+      },
+      "text": "2. RELATED WORK"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 2,
+      "region": {
+        "x1": 317.8800048828125,
+        "x2": 558.0637817382812,
+        "y1": 547.5960083007812,
+        "y2": 669.6566162109375
+      },
+      "text": "To learn more about the practice of informal presentation for idea communication, we studied researchers both in our laboratory and at our university. First, we distributed a questionnaire to 30 people asking about the necessity of informal presentations, the organization and content styles they most often employed and the difficulties they have with these presentations. The results showed that all those surveyed thought informal presentations are important in idea communication. We chose to interview seven of the participants who worked in our lab so that we could easily collect and analyze samples from their notebooks and whiteboards. The detailed results of the survey, interviews, and our analysis of the collected samples are described below."
+    }],
+    "title": {
+      "page": 2,
+      "region": {
+        "x1": 317.8800048828125,
+        "x2": 458.76953125,
+        "y1": 534.6478881835938,
+        "y2": 542.5198974609375
+      },
+      "text": "3. CURRENT PRACTICE"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 2,
+      "region": {
+        "x1": 317.8800048828125,
+        "x2": 558.001708984375,
+        "y1": 692.3760375976562,
+        "y2": 708.8397216796875
+      },
+      "text": "Idea communication is an important step in furthering draft ideas by clarifying them and gathering suggestions from others (see"
+    }, {
+      "page": 3,
+      "region": {
+        "x1": 54.0,
+        "x2": 296.4699401855469,
+        "y1": 374.73602294921875,
+        "y2": 578.7550659179688
+      },
+      "text": "Figure 2). In informal situations, like weekly internal seminars, our participants go through multiple iterations of idea capture & production and idea communication. Once the idea is mature, it is communicated to more people through idea publication. Informal presentations are often used for communicating ideas in small groups. The pen and paper metaphor has great advantages in informal presentations. It allows diverse information to be easily conveyed, such as words and images, by sketching on paper, whiteboards or walls. Our participants said sketching is also helpful to clarify draft ideas and make abstract ideas concrete. Existing electronic presentation tools bring much functionality to authoring formal, well-formatted presentation slides. However, our investigation showed that frequent internal idea communication still relies on pen-and-paper-based informal presentations. As shown in Figure 2, before an idea matures and is published, it needs multiple iterative refinements. Most of the researchers thought precision-oriented slides are well-accepted by large-scale public audiences; however, they require lots of work to author. It is not easy to achieve fast idea communication for"
+    }, {
+      "page": 3,
+      "region": {
+        "x1": 317.8800048828125,
+        "x2": 558.115966796875,
+        "y1": 374.73138427734375,
+        "y2": 561.6513671875
+      },
+      "text": "refining draft ideas with precision-oriented slides since they force, or at least encourage, presenters to expend too much effort on representation details, such as fonts, colors, and layout. In addition, informal presentations seem to welcome more feedback and resulting modification, which is important for getting an idea right. This is because the informal representations imply that it is unfinished work and is welcome to further modification, as was demonstrated for web site design [6]. Our investigation also showed that researchers believed more formal presentations are suitable for idea publication (see Figure 2), which is infrequent enough to allow for relatively long and detailed preparation. Note taking is a convenient way to capture ideas, and it is closely related to informal presentations. People organize captured ideas found in their notes and communicate them to others. In other words, note taking is an important preparation step and a source of material for informal presentations."
+    }],
+    "title": {
+      "page": 2,
+      "region": {
+        "x1": 317.8800048828125,
+        "x2": 448.49267578125,
+        "y1": 679.427978515625,
+        "y2": 687.2999877929688
+      },
+      "text": "3.1 Idea Communication"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 3,
+      "region": {
+        "x1": 317.8800048828125,
+        "x2": 558.0511474609375,
+        "y1": 584.3760375976562,
+        "y2": 710.4569702148438
+      },
+      "text": "We asked our participants how they currently create and conduct informal presentations and what kinds of schemes they use to organize their information. The investigation showed that researchers usually started with their paper notebooks, which contain captured ideas from their daily work life and some rough organization of information for presentation. Based on these materials, they transcribed and sketched the information on whiteboards, which work well for small group discussions. Our investigation found that a tree-like hierarchical structure is the most frequently used organization scheme. This organization is efficient for presenters to organize content in a logical way, and it is also makes it easy for the audience to understand the big"
+    }, {
+      "page": 4,
+      "region": {
+        "x1": 53.99970245361328,
+        "x2": 294.1973571777344,
+        "y1": 74.49602508544922,
+        "y2": 236.27874755859375
+      },
+      "text": "picture. For example, the structures of title-list or title-graphic are common organizations of information (see Figure 3). That is, a topic can be backed up by several sub-topics and each of them can be recursively decomposed into further details. We found that often different pieces of content are semantically linked. Presenters specify the links by sketching arrowed lines between the related information (see Figure 3). These links might indicate further explanation, references or affiliation. By analyzing answers from our survey and the collected samples from our interviews, we distilled two major information organizations of informal presentation as shown in Figure 41. We also found that flowcharts (see Figure 3) with nodes and links are an efficient way to describe relationships and that many other sketched graphics share a similar topology, e.g., UML diagrams and State Transition Diagrams."
+    }],
+    "title": {
+      "page": 3,
+      "region": {
+        "x1": 317.8800048828125,
+        "x2": 506.9256896972656,
+        "y1": 571.4279174804688,
+        "y2": 579.2999267578125
+      },
+      "text": "3.2 Creating Informal Presentations"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 4,
+      "region": {
+        "x1": 54.0,
+        "x2": 294.2208557128906,
+        "y1": 258.99603271484375,
+        "y2": 540.9532470703125
+      },
+      "text": "Our investigation showed that there was no efficient electronic tool to help our participants with their informal presentations. Traditional presentation tools focus on a formal style of presentation design that is not suitable for informal presentation purposes. People prefer the pen-and-paper metaphor for informal presentations. Although sketching on physical whiteboards and on paper is natural, there are some problems. The information is not easy to maintain and edit. For example, information on physical materials is difficult to rearrange. Presenters have to maintain semantic relationships by themselves. It can be difficult to be clear about the ideas you are working on, with complicated arrows going to and fro on whiteboards (see Figure 3) or on paper. Both presenters and audiences easily get lost when a large amount of information is scattered across whiteboards. And there are no electronic tools to support these activities, other than to clean up images taken with a digital camera after the fact. Although commercial electronic whiteboard systems make it easier to capture and edit information than with physical whiteboards, it is still difficult to use these systems for informal communication since they do not support higher level semantics. Manually transcribing notes to informal presentation media, like a whiteboard, is not efficient for idea communication since it can be abrupt for the presenter to change modes and may disturb the concentration of the audience. No existing tools support a smooth transition from note taking to informal presentations."
+    }],
+    "title": {
+      "page": 4,
+      "region": {
+        "x1": 54.0,
+        "x2": 245.7096405029297,
+        "y1": 246.04798889160156,
+        "y2": 253.91998291015625
+      },
+      "text": "3.3 Problems Creating Presentations"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 4,
+      "region": {
+        "x1": 54.0,
+        "x2": 294.1668395996094,
+        "y1": 569.676025390625,
+        "y2": 660.0575561523438
+      },
+      "text": "Based on our interviews and personal observations, we designed SketchPoint to support and enhance informal presentations. The design of SketchPoint is based on the pen-and-paper metaphor. It supports the task of informal presentation design by using two workspaces, organized in four continuous zoom levels as shown in Figure 1. A natural path from note taking to presentation design enables the transition from idea capture to idea communication. SketchPoint abstracts and unifies the processes of informal presentation design into four continuous zoom levels based on the"
+    }, {
+      "page": 4,
+      "region": {
+        "x1": 54.0,
+        "x2": 294.1634826660156,
+        "y1": 684.7440185546875,
+        "y2": 692.7000122070312
+      },
+      "text": "1 Both types of organization found in Figure 3 are shown in"
+    }, {
+      "page": 4,
+      "region": {
+        "x1": 61.20030212402344,
+        "x2": 294.1707763671875,
+        "y1": 697.355712890625,
+        "y2": 713.8193969726562
+      },
+      "text": "vertical layouts, but they can also have horizontal layouts, e.g., the title is to the left side of the contents (or list)."
+    }, {
+      "page": 5,
+      "region": {
+        "x1": 53.99908447265625,
+        "x2": 294.1811828613281,
+        "y1": 74.41502380371094,
+        "y2": 112.0791015625
+      },
+      "text": "ZUI metaphor [2]; they are Overview, Organize, Detail and Show. (The zooming slider is on the rightmost portion of the screen in Figure 1) A storyboard metaphor is used to organize presentation slides."
+    }],
+    "title": {
+      "page": 4,
+      "region": {
+        "x1": 54.0,
+        "x2": 238.7484130859375,
+        "y1": 556.7279052734375,
+        "y2": 564.5999145507812
+      },
+      "text": "4. THE SKETCHPOINT SYSTEM"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 5,
+      "region": {
+        "x1": 53.99967956542969,
+        "x2": 294.23065185546875,
+        "y1": 134.79600524902344,
+        "y2": 556.9799194335938
+      },
+      "text": "As shown in Figure 1, the note-taking workspace enables users to sketch freeform notes that can be structuralized through either explicit gestures (see Figure 5 and Figure 14) or implicit layouts (see Figure 6). The basic unit of the notes is a cluster, rather than a stroke. Clusters are parsed based on the algorithm described in [10]. The high-level structures supported by SketchPoint are vertical and horizontal title-list structures or their combinations as illustrated in Figure 5. These structuralized notes allow users to manipulate them based on high-level semantics. For example, users can tap the solid triangle to collapse or expand a list. Users can also delete or select an entire list by deleting or selecting the list title. Selected notes can be converted to informal slides in the presentation workspace by sketching a converting gesture as illustrated in Figure 1 (the stroke is drawn from the note-taking workspace to the presentation workspace). The conversion is performed based on the parsed internal structure of the sketches, which is maintained by SketchPoint. The outline is a natural organizational scheme for presenters to specify the structure of a presentation since it can be used to produce the skeleton of a presentation. The outline in Figure 6 can be represented by a tree as shown in Figure 7. The presentation skeleton produced from this outline is shown in Figure 8. The skeleton production algorithm is based on the traversal of the tree structure. The algorithm recursively transfers an outline element from the notes into a set of sorted and linked slides according to the internal structure of the notes. The algorithm is described below: Given: • x : the root cluster of an outline structure of selected notes • x′ : the clone2 of x • xi : the ith immediate child cluster of x • ix′ : the clone of xi • n : the number of immediate children of x • y : the slide in the storyboard after which the produced slides will be inserted CreateSlidesFromOutline (x, y) 1. Build a slide s that includes cluster x′ and ix′ , 0 ≤ i < n."
+    }, {
+      "page": 5,
+      "region": {
+        "x1": 53.99876403808594,
+        "x2": 242.95770263671875,
+        "y1": 559.6950073242188,
+        "y2": 630.4799194335938
+      },
+      "text": "Set x′ as the title of slide s 2. Insert s after y 3. for i := n – 1 to 0: 4. m := CreateSlidesFromOutline (xi, s) 5. Create hyperlink from ix ′ of slide s to slide m 6. Return s"
+    }],
+    "title": {
+      "page": 5,
+      "region": {
+        "x1": 54.0,
+        "x2": 261.03594970703125,
+        "y1": 121.84796905517578,
+        "y2": 129.719970703125
+      },
+      "text": "4.1 Converting Notes to Informal Slides"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 5,
+      "region": {
+        "x1": 54.0,
+        "x2": 294.18670654296875,
+        "y1": 651.1559448242188,
+        "y2": 678.1793212890625
+      },
+      "text": "By sketching and using outlines for the overall structure of a presentation, presenters can keep a clear vision of how their slides are organized. SketchPoint converts these outlines into a"
+    }, {
+      "page": 5,
+      "region": {
+        "x1": 54.0,
+        "x2": 175.4022216796875,
+        "y1": 705.864013671875,
+        "y2": 713.8198852539062
+      },
+      "text": "2 A duplication of a stroke cluster"
+    }, {
+      "page": 5,
+      "region": {
+        "x1": 317.88031005859375,
+        "x2": 558.0778198242188,
+        "y1": 74.49590301513672,
+        "y2": 225.716552734375
+      },
+      "text": "presentation skeleton made up of sequentially arrayed slides in a storyboard. Presenters can then further refine and add to the skeleton. The interactive storyboard, shown in Figures 8, 9 and 10, is rendered as a filmstrip that is centered in the presentation design workspace. The linear sequence of slides, arrayed vertically, in the storyboard determines the default demonstration sequence of an informal presentation. The sequential order of slides in the storyboard is simple enough to be understood and anticipated by presenters. The skeleton embodies the hierarchical structures of a presentation by combining the linear slide sequence with non-linear hyperlinks. In Figure 9 a presenter is drawing a hyperlink to enable a non-linear transition when giving a presentation."
+    }, {
+      "page": 6,
+      "region": {
+        "x1": 53.99998474121094,
+        "x2": 294.17852783203125,
+        "y1": 257.5560302734375,
+        "y2": 383.6369323730469
+      },
+      "text": "Besides maintaining the sequence of the slides, the interactive storyboard also enables fundamental slide level manipulations, such as removing a slide, inserting a slide and adjusting the presentation order of a slide. SketchPoint employs ZUI [2] based navigation in the presentation design space. Users can select a slide as the zoom focus using a circle gesture and this slide will become the first slide for a demonstration. Unlike DENIM, SketchPoint allows continuous zooming, which gives presenters more flexibility and immediate feedback upon zooming. SketchPoint supports four continuous zoom levels. Any zoom level allows a presenter to insert a new slide using an Insert gesture."
+    }],
+    "title": {
+      "page": 5,
+      "region": {
+        "x1": 54.0,
+        "x2": 286.9655456542969,
+        "y1": 638.2080078125,
+        "y2": 646.0800170898438
+      },
+      "text": "4.2 Using Storyboards to Specify Sequencing"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 6,
+      "region": {
+        "x1": 54.0,
+        "x2": 294.20745849609375,
+        "y1": 406.35601806640625,
+        "y2": 698.8729858398438
+      },
+      "text": "Presenters can enrich the skeleton by adding new slides in the storyboard or by putting detailed content in the slides. When zooming to the Detail level, presenters can sketch words, graphics and other symbols into a slide just as they can on paper or whiteboards. SketchPoint maintains the naturalness of free-hand sketching but adds implicit structure parsing to enable structurebased manipulations. As shown in Figure 11, the slide structure supported by SketchPoint is title-list. A title is a line-based stroke cluster. The items of a list can be a line-based cluster or a structure patch. A structure patch, such as the one containing the flowchart in Figure 12, is used to support arbitrary graphics. When sketching, the sketches are dynamically and implicitly grouped into horizontal line-based clusters based on the temporal and spatial distance and density information. To achieve low cognitive load, the feedback is given in a lazy style so that the presenter can sketch continuously without being disturbed. These line-based clusters work not only for words but also for any symbols that can fit on lines. SketchPoint does not care about the semantics of the sketches themselves. Instead, SketchPoint parses the logical structure of the sketch, i.e., clusters and their relationships. Although SketchPoint mainly supports informal representations of slides, it also provides an optional feature that allows presenters to replace the original ink by recognized words or linked shapes (see Figures 11, 12). The segmentation and recognition of sketches can be invoked when necessary. The presenter can tap a cluster to see"
+    }, {
+      "page": 6,
+      "region": {
+        "x1": 317.8800048828125,
+        "x2": 558.0807495117188,
+        "y1": 257.5489501953125,
+        "y2": 571.1851806640625
+      },
+      "text": "the recognized view and tap it again to change it back to the original ink view. In the recognized view, a cluster can be dragged and dropped to adjust the layout of the content, as shown in Figure 10. While in the ink view, the presenter can continue to add new strokes to a cluster. A presenter can enter a word correction mode to correct both segmentation and recognition errors by holding the pen on the cluster for a short moment. SketchPoint performs incremental word segmentation and recognition. Parsing can be improved based on corrections made by the presenter. The presenter can terminate the correction mode by holding the pen down again. SketchPoint also allows presenters to sketch graphics that do not fit in line-based structures. These are placed in structure patches. SketchPoint allows presenters to specify a rectangular area as a structure patch by holding the pen to trigger a rubber-band action. This avoids the need to segment between line-based clusters and arbitrary graphics, which would compromise the stability of the system and introduce usability problems because of the limitations of current algorithms. Presenters can sketch graphics freely and continuously in the structure patch. A structure patch can be associated with a particular parsing engine to parse different types of graphics. Currently, SketchPoint only supports a flowchart parsing engine, which recognizes graphs with links and closure nodes. A presenter can edit the flowchart structurally by moving nodes along with their associated labels and by adjusting the layout of links. The presenter can sketch words (or any other symbols) as labels of a graph node. The parser does not try to recognize these words but does discern the spatial relationships of these elements."
+    }],
+    "title": {
+      "page": 6,
+      "region": {
+        "x1": 54.0,
+        "x2": 274.8742980957031,
+        "y1": 393.4079895019531,
+        "y2": 401.2799987792969
+      },
+      "text": "4.3 Adding and Organizing Slide Contents"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 6,
+      "region": {
+        "x1": 317.8800048828125,
+        "x2": 558.05126953125,
+        "y1": 593.9158935546875,
+        "y2": 709.4371948242188
+      },
+      "text": "Using the mechanisms described in the previous subsections, a presenter can build an informal presentation. The presenter can zoom the presentation workspace to the Show level. The presenter can then give an informal presentation, as shown in Figure 13. The slides will be projected to fill the entire screen. The presenter can tap to move forward in the presentation and double-tap to move backward. If the presenter taps on an item with a hyperlink, the presentation will jump to the target slide of the link. We use the duration between two adjacent taps to judge whether the user has performed a double-tap or two separate taps. This can be inexact and should be user definable. The presenter"
+    }, {
+      "page": 7,
+      "region": {
+        "x1": 53.99999237060547,
+        "x2": 294.1678466796875,
+        "y1": 242.1959686279297,
+        "y2": 315.47845458984375
+      },
+      "text": "can terminate the Show mode either by holding the pen for a short while or tapping forward until the final slide. When giving a presentation, the presenter can freely sketch annotations as shown in Figure 13 to conduct a more vivid and interactive presentation. The annotations will be recorded and tagged with the time of the presentation and the current slide for later contextual retrieval."
+    }],
+    "title": {
+      "page": 6,
+      "region": {
+        "x1": 317.8800048828125,
+        "x2": 532.527587890625,
+        "y1": 580.9679565429688,
+        "y2": 588.8399658203125
+      },
+      "text": "4.4 Conducting an Informal Presentation"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 7,
+      "region": {
+        "x1": 53.99999237060547,
+        "x2": 294.22802734375,
+        "y1": 344.1960144042969,
+        "y2": 533.6350708007812
+      },
+      "text": "SketchPoint takes advantage of the affordances [16] of the penand-paper metaphor and provides a natural WYPIWYG (What You Perceive Is What You Get) [17] interaction style. Interaction techniques used in SketchPoint include tap, hold, drag, and a small set of gestures (see Figure 14). These are lightweight techniques, and informal feedback showed that they do not require much effort to learn to use. There is no explicit mode switch for gesture versus sketching; SketchPoint discriminates between them using contextual information. For example, if an “erase” gesture is drawn on blank space instead of over other strokes, it will be considered sketched input. Users can interact with high-level structures, such as title-list, instead of with single strokes. SketchPoint presents a consistent interface for both sketching and for manipulating content in different contexts. Most sketched content in a slide can be tapped to view the recognized information or tapped again to view the original ink. When viewing ink, SketchPoint keeps the naturalness of sketching and allows presenters to sketch their ideas freely,"
+    }, {
+      "page": 7,
+      "region": {
+        "x1": 317.8800048828125,
+        "x2": 558.094970703125,
+        "y1": 74.49108123779297,
+        "y2": 137.2138671875
+      },
+      "text": "while in the recognized view this content can be manipulated structurally, e.g., by dragging and dropping items. We differentiate between a tap and drawing a dot by using the time interval between the tap action and the stroke cluster that is tapped on. If the interval is long enough, SketchPoint interprets it as a tap instead of a dot."
+    }],
+    "title": {
+      "page": 7,
+      "region": {
+        "x1": 54.0,
+        "x2": 238.9560089111328,
+        "y1": 331.24798583984375,
+        "y2": 339.1199951171875
+      },
+      "text": "5. INTERACTION TECHNIQUES"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 7,
+      "region": {
+        "x1": 317.87908935546875,
+        "x2": 558.0906982421875,
+        "y1": 165.93601989746094,
+        "y2": 640.1295166015625
+      },
+      "text": "SketchPoint was implemented in Java 2 using the Penbuilder toolkit [8]. We developed the algorithms for continuous word segmentation and graph parsing in SketchPoint. We intend to expand our graph-parsing algorithm to support more graph semantics. We tested SketchPoint with our colleagues to acquire feedback on the usability of its interaction techniques and functionality. They were tested with several simulated tasks. SketchPoint has also been deployed in various setups in our laboratory. We used Wacom LCD tablets (Wacom PL550 and PL300) attached to a 1.3 GHz Pentium 4 PC. We also tested the system with a Wacom Intuous Tablet (9×12) attached to an 800 MHz Pentium III PC with a 17-inch monitor. This early feedback showed that our participants were interested in using SketchPoint for informal idea communication. They found the automatic transformation from notes to informal slides attractive, and thought that SketchPoint would be helpful for communicating ideas informally in internal settings. We observed that people could easily author an informal presentation. Besides asking us to fix some stability problems, our participants also asked for search functions and requested that SketchPoint import non-ink content (e.g., images, text, and audio). User feedback also showed us that SketchPoint needs a more intuitive method for creating hyperlinks when the target slide is not visible in the same screen as the start of the hyperlink. We will explore visualization techniques other than zooming to improve the efficiency of this type of operation. We can easily extend our current system to also support speech annotations. In the future we plan to add this feature along with the playback of time-synchronized ink and speech annotations. Currently, SketchPoint only supports a limited set of ink structures, such as item-list. We intend to add more structures in the future and to use more explicit and implicit interactions to indicate these structures, e.g., using a pen with different ink colors for different structures. We are now deploying SketchPoint for use by graduate students and teachers in Kochi University using Tablet PCs and electronic whiteboards as the target platforms. We will conduct long-term evaluations of SketchPoint and collect more feedback from daily usage. We would like to know how SketchPoint impacts idea communication in daily work, how SketchPoint effects existing ways of using whiteboards and how SketchPoint relates to formal presentations."
+    }],
+    "title": {
+      "page": 7,
+      "region": {
+        "x1": 317.8800048828125,
+        "x2": 504.1393127441406,
+        "y1": 152.9879913330078,
+        "y2": 160.8599853515625
+      },
+      "text": "6. STATUS AND FUTURE WORK"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 7,
+      "region": {
+        "x1": 317.8800048828125,
+        "x2": 558.0575561523438,
+        "y1": 668.8558959960938,
+        "y2": 716.9987182617188
+      },
+      "text": "Our investigation showed that informal presentations are an important way to communicate ideas, and that existing electronic tools do not support this task well. To address this need, we created SketchPoint, the first tool to support informal presentations, which enables fast idea communication in frequent,"
+    }, {
+      "page": 8,
+      "region": {
+        "x1": 53.99999237060547,
+        "x2": 294.17401123046875,
+        "y1": 74.49602508544922,
+        "y2": 207.1163330078125
+      },
+      "text": "informal situations. SketchPoint allows presenters to quickly author informal slides by sketching the slide content, overall hierarchical structure and hyperlinks of a presentation. The presenter can then easily organize slides in a storyboard and present them directly from the tool. By incorporating note taking in SketchPoint and enabling automatic conversion from notes to slides, we offer a smooth transition from idea capture to idea communication. SketchPoint also enables formal and informal views of ink strokes and allows structure-based manipulation that provides more efficient interaction. SketchPoint’s lightweight mechanisms facilitate multiple iterations of idea refinement. An informal evaluation of SketchPoint generated positive feedback from users."
+    }],
+    "title": {
+      "page": 7,
+      "region": {
+        "x1": 317.8800048828125,
+        "x2": 415.3080749511719,
+        "y1": 655.9078979492188,
+        "y2": 663.7799072265625
+      },
+      "text": "7. CONCLUSION"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 8,
+      "region": {
+        "x1": 54.0,
+        "x2": 294.2585754394531,
+        "y1": 235.8359832763672,
+        "y2": 262.859375
+      },
+      "text": "We would like to thank Jimmy Lin, Scott Klemmer and Marc Ringuette for their help in improving this paper. We also would like to thank the reviewers for their valuable comments."
+    }],
+    "title": {
+      "page": 8,
+      "region": {
+        "x1": 54.0,
+        "x2": 203.4096221923828,
+        "y1": 222.8880157470703,
+        "y2": 230.760009765625
+      },
+      "text": "8. ACKNOWLEDGMENTS"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 8,
+      "region": {
+        "x1": 54.0,
+        "x2": 266.9480895996094,
+        "y1": 293.9068908691406,
+        "y2": 300.4800109863281
+      },
+      "text": "[1] Bailey, B.P., Konstan, J.A. and Carlis, J.V. DEMAIS:"
+    }, {
+      "page": 8,
+      "region": {
+        "x1": 72.00000762939453,
+        "x2": 291.90594482421875,
+        "y1": 305.1357116699219,
+        "y2": 342.7187805175781
+      },
+      "text": "Designing Multimedia Applications with Interactive Storyboards. In Proceedings of the ACM Conference on Multimedia, Ottawa, Canada, Sept.30 – Oct.5, 2001, pp.241248."
+    }, {
+      "page": 8,
+      "region": {
+        "x1": 54.0,
+        "x2": 280.426513671875,
+        "y1": 351.74688720703125,
+        "y2": 400.55877685546875
+      },
+      "text": "[2] Bederson, B.B. and Hollan, J.D. Pad++: A Zooming Graphical Interface for Exploring Alternate Interface Physics. In Proceedings of the ACM Symposium on User Interface Software and Technology: UIST’94. Marina del Rey, CA. pp.17-26. Nov.2-4, 1994."
+    }, {
+      "page": 8,
+      "region": {
+        "x1": 54.0,
+        "x2": 288.80902099609375,
+        "y1": 409.5868835449219,
+        "y2": 458.3996887207031
+      },
+      "text": "[3] Chiu, P. and Wilcox, L. 1998. A Dynamic Grouping Technique for Ink and Audio Notes. In Proceedings of the ACM Symposium on User Interface Software and Technology: UIST’98, 195-202. San Francisco, CA. Nov.68."
+    }, {
+      "page": 8,
+      "region": {
+        "x1": 54.0,
+        "x2": 292.6332702636719,
+        "y1": 467.4268798828125,
+        "y2": 526.7984619140625
+      },
+      "text": "[4] Davis, R.C., Landay, J.A., Chen, V., Huang, J., Lee R.B., Li, F., Lin, J., Morrey, C.B., Schleimer, B, Price, M.N. and Schilit B.N. NotePals: Lightweight Note Sharing by the Group, for the Group. In Proceedings of the ACM Conference on Human Factors in Computer Systems: CHI’99, Pittsburgh, PA, May 15-20, 1999, pp. 338-345."
+    }, {
+      "page": 8,
+      "region": {
+        "x1": 54.0,
+        "x2": 292.3001403808594,
+        "y1": 535.8267822265625,
+        "y2": 563.519287109375
+      },
+      "text": "[5] Hearst, M.A., Gross, M.D., Landay, J.A. and Stahovich, T.F. Sketching Intelligent Systems, IEEE Intelligent Systems, vol.13, no.3, IEEE, May-June 1998, pp.10-19."
+    }, {
+      "page": 8,
+      "region": {
+        "x1": 54.0,
+        "x2": 289.6991271972656,
+        "y1": 572.5467529296875,
+        "y2": 621.358642578125
+      },
+      "text": "[6] Hong, J.I., Li, F.C. and Landay, J.A. End-User Perceptions of Formal and Informal Representations of Web Sites. Short Paper of the ACM Conference on Human Factors in Computer Systems: CHI’01, Seattle, WA, Mar.31-Apr.4, 2001. 385-386."
+    }, {
+      "page": 8,
+      "region": {
+        "x1": 54.0,
+        "x2": 293.2632141113281,
+        "y1": 630.3867797851562,
+        "y2": 658.0792846679688
+      },
+      "text": "[7] Landay, J.A. and Myers, B.A. \"Sketching Interfaces: Toward More Human Interface Design.\" IEEE Computer, vol. 34, no.3, March 2001, pp. 56-64."
+    }, {
+      "page": 8,
+      "region": {
+        "x1": 54.0,
+        "x2": 289.8035888671875,
+        "y1": 667.1068725585938,
+        "y2": 715.9188232421875
+      },
+      "text": "[8] Li, Y., Guan, Z., Chen, Y. and Dai, G. Penbuilder: Platform for the Development of Pen-based User Interface, In Proceedings of International Conference on Multimodal Interfaces ICMI’2000, Springer Press, 2000, Beijing, China. Oct. 14-16."
+    }, {
+      "page": 8,
+      "region": {
+        "x1": 317.8800048828125,
+        "x2": 557.3851318359375,
+        "y1": 74.84686279296875,
+        "y2": 113.09906005859375
+      },
+      "text": "[9] Li, Y., Guan, Z., Ren, X. and Dai, G. SketchPoint: A Smooth Bridge from Note-taking to Presentations, In Proceedings of International Conference on Asia-Pacific Computer-Human Interaction APCHI’2002, Beijing, China. Nov.1-4, 2002."
+    }, {
+      "page": 8,
+      "region": {
+        "x1": 317.8800048828125,
+        "x2": 554.5891723632812,
+        "y1": 122.12689208984375,
+        "y2": 170.93878173828125
+      },
+      "text": "[10] Li, Y., Guan, Z., Wang, H., Dai, G. and Ren, X. Structuralizing Freeform Notes by Implicit Sketch Understanding, In Proceedings of the Sketch Understanding Symposium of AAAI, Stanford University in Palo Alto, CA. March 25-27, 2002."
+    }, {
+      "page": 8,
+      "region": {
+        "x1": 317.8800048828125,
+        "x2": 549.0123901367188,
+        "y1": 179.96685791015625,
+        "y2": 218.21905517578125
+      },
+      "text": "[11] Lin, J., Newman, M.W., Hong, J.I. and Landay, J.A. DENIM: Finding a Tighter Fit Between Tools and Practice for Web Site Design. In CHI Letters: Human Factors in Computing Systems, CHI 2000, 2000. 2(1): pp. 510-517."
+    }, {
+      "page": 8,
+      "region": {
+        "x1": 317.8800048828125,
+        "x2": 554.9092407226562,
+        "y1": 227.24676513671875,
+        "y2": 276.05865478515625
+      },
+      "text": "[12] Moran, T.P., Melle, W.V. and Chiu, P. Spatial Interpretation of Domain Objects Integrated into a Freeform Electronic Whiteboard. In Proceedings of the ACM Symposium on User Interface Software and Technology: UIST’98, San Francisco, CA, Nov. 6-8, 1998, pp.175-184."
+    }, {
+      "page": 8,
+      "region": {
+        "x1": 317.8800048828125,
+        "x2": 552.7728271484375,
+        "y1": 285.0868835449219,
+        "y2": 307.2598876953125
+      },
+      "text": "[13] MS PowerPoint, http://www.microsoft.com/powerpoint. [14] Mynatt, E.D., Edwards, W.K., LaMarca, A. and Igarashi, T."
+    }, {
+      "page": 8,
+      "region": {
+        "x1": 335.8800048828125,
+        "x2": 550.0916748046875,
+        "y1": 311.91558837890625,
+        "y2": 349.4986572265625
+      },
+      "text": "1999. Flatland: New Dimensions in Office Whiteboards. In Proceedings of the ACM Conference on Human Factors in Computer Systems: CHI’99, 346-353. Pittsburgh, PA, May 15-20."
+    }, {
+      "page": 8,
+      "region": {
+        "x1": 317.8800048828125,
+        "x2": 547.775146484375,
+        "y1": 358.5268859863281,
+        "y2": 407.3387756347656
+      },
+      "text": "[15] Nelson, L., Ichimura, S., Pedersen, E.R. and Adams, L. Palette: A Paper Interface for Giving Presentations. In Proceedings of the ACM Conference on Human Factors in Computing Systems: CHI’99, Pittsburgh, PA, May 15-20, 1999, pp.354-361"
+    }, {
+      "page": 8,
+      "region": {
+        "x1": 317.8800048828125,
+        "x2": 542.9619750976562,
+        "y1": 416.36688232421875,
+        "y2": 444.05938720703125
+      },
+      "text": "[16] Raskin, J. The Humane Interface: New Directions for Designing Interactive Systems, Addison-Wesley Pub Co; ISBN: 0201379376; 1 edition (March 24, 2000)."
+    }, {
+      "page": 8,
+      "region": {
+        "x1": 317.8800048828125,
+        "x2": 551.613525390625,
+        "y1": 453.0868835449219,
+        "y2": 491.3390808105469
+      },
+      "text": "[17] Saund, E. and Moran, T.P. A perceptually-supported sketch editor. In Proceedings of ACM Symposium on User Interface Software and Technology, Marina del, Rey, CA. pp. 175-184, November 2–4 1994."
+    }, {
+      "page": 8,
+      "region": {
+        "x1": 317.8800048828125,
+        "x2": 554.3699340820312,
+        "y1": 500.3667907714844,
+        "y2": 549.1787109375
+      },
+      "text": "[18] Sinha, A.K., Shilman, M. and Shah, N. MultiPoint: A Case Study of Multimodal Performance for Building Presentations. Student Posters of ACM Conference on Human Factors in Computer Systems: CHI’01, Seattle, WA, Mar.31-Apr.4, 2001. 431-432."
+    }, {
+      "page": 8,
+      "region": {
+        "x1": 317.8800048828125,
+        "x2": 546.4645385742188,
+        "y1": 558.2069091796875,
+        "y2": 607.018798828125
+      },
+      "text": "[19] Shipman, F.M., Marshall, C.C., Moran,T.P. 1995. Finding and Using Implicit Structure in Human Organized Spatial Layouts of Information. In Proceedings of the ACM Conference on Human Factors in Computer Systems: CHI'95, 346-353. Denver, Colorado, May 7-11."
+    }, {
+      "page": 8,
+      "region": {
+        "x1": 317.8800048828125,
+        "x2": 552.6143798828125,
+        "y1": 616.0467529296875,
+        "y2": 654.2989501953125
+      },
+      "text": "[20] Truong, K.N. and Abowd, G.D. StuPad: Integrating Student Notes with Class Lectures, in CHI’99 Extended Abstracts: Human Factors in Computer Systems, Extended Abstracts, 1999. Pittsburgh, PA: pp.208-209."
+    }, {
+      "page": 8,
+      "region": {
+        "x1": 317.8800048828125,
+        "x2": 540.2492065429688,
+        "y1": 663.326904296875,
+        "y2": 712.1387939453125
+      },
+      "text": "[21] Wilcox, L.D., Schilit, B.N. and Sawhney, N.N. 1997. Dynomite: A Dynamically Organized Ink and Audio Notebook. In Proceedings of the ACM Conference on Human Factors in Computer Systems: CHI’97, 186-193. Atlanta, GA."
+    }, {
+      "page": 8,
+      "region": {
+        "x1": 50.0,
+        "x2": 88.47803497314453,
+        "y1": 784.68798828125,
+        "y2": 787.0
+      },
+      "text": "View publication stats"
+    }],
+    "title": {
+      "page": 8,
+      "region": {
+        "x1": 54.0,
+        "x2": 150.68161010742188,
+        "y1": 280.6080017089844,
+        "y2": 288.4800109863281
+      },
+      "text": "9. REFERENCES"
+    }
+  }]
+}

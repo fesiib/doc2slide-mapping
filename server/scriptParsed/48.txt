@@ -1,0 +1,165 @@
+- Hi, I'm Neha Kumar, faculty at Georgia Tech, and I'm here to proudly present the work of 17 incredible students working together with me, last semester, so in fall of 2018, in the form of a book club, and to read about things like culture and modernity inequality in the US, global development, and feminism.
+So just to call out the names, some of them are here in the room, others couldn't make it.
+Manasee Narvilkar, Josiah Mangiameli, Adriana Alvarado Garcia, Azra Ismail, Daniel Schiff, Danielle Schechter, Jordan Chen, Karthik Bhat, Marisol Wong-Villacres, Anusha Vasudeva, Aparna Ramesh, Michaelanne Dye, Naveena Karusala, Pragati Singh, Savanthi Murthy, Shubhangi Gupta, Udaya Lakshimi, and myself.
+As we read, the 18 of us brought our knowledges and also the lack thereof around feminism and different kinds of feminisms to the table.
+And each of us grappled with these questions in different ways, questions like, what is feminism? Do I have feminist values? Am I allowed to be feminist? When can I call myself feminist? Is feminism for me? Do I know any feminists? Where do I see feminism in my life? As an HCC student, faculty, researcher? And HCC stands for human-centered computing.
+What does it mean to live like a feminist? Do I have to be like Sara Ahmed? Must I be critical of Sheryl Sandberg? Do I care enough? Do I want my voice to be heard? The answer for most of us, and for most of these questions was it's complicated.
+Unpacking this to reflect some more, we came together to do a joint literature review as a submission for ACM CHI.
+And so our submission was really a collection of stories, and I'm going to share some of those with you.
+Sara Ahmed, in "Living a Feminist Life," talks of the importance of companion texts, and we found several along the way.
+Some of these resonated with us, validated us, reminded us that we're not alone.
+Some brought out the tensions that reside within us and among us.
+Each brings forth and introduces its own kind of feminism, legitimizing its own way of being.
+It may emphasize understanding and reflection, coping, and self-care, or action and emancipation.
+It may focus on women in corporate settings, oops, or those living on the margins of society, individuals of particular sexual orientations, or women, just more generally speaking.
+Our companion texts served us as guides, as we found ourselves aligned with no single view, interpretation, or threshold of what it means to be feminist.
+Our expressions, our shades of feminism are based on our experiences.
+They're a consequence of navigating this world while doing the best that we can to understand and to coexist.
+We engage with and also deviate from scholarly thought and written manifestos, relying on what we have learnt, honoring the personal.
+Chimamanda Adichie says, "The consequence of the single story is this: "It robs people of dignity.
+"It makes our recognition of our equal humanity difficult.
+"It emphasizes how we are different "rather than how we are similar." Notwithstanding the differences, these feminisms and others do express common ideas and values, that women and other groups have been and are marginalized, that the implicit and explicit structures that govern our world have had a hand in this, that such marginalizations are variously reflected in the world of human-centered computing, and that reorienting our values and actions might help to combat them.
+This is what brought us to do this.
+As Adichie says, "Stories matter.
+"Many stories matter.
+"Stories have been used to dispossess and to malign, "but stories can also be used to empower and to humanize.
+"Stories can break the dignity of a people, "but stories can also repair that broken dignity." These stories that we share with you, they move us, motivate us, challenge us, and anger us.
+They make us who we are.
+As human-centered computing students, researchers, faculty, professionals, we share them in the hope that they might bring you to reflect and to uncover the shade of feminism that fits you best.
+This shade may manifest as a commitment to action or the articulation of latent thought.
+It may be already vibrant, or it might be struggling to find definition as a mild form of feminism or a blend of multiple forms.
+The smallest step might be a radical one, and we invite you to take that step with us.
+Here's story number one by a student who had this experience while she was doing field work for her human-centered computing research.
+- [Story One Voiceover] "Madam, here's my number." "Call me if you ever need anything, "if you ever face an emergency.
+"Don't worry, I will not ask for your number.
+"I will never call you." Our eyes met in the rear-view mirror and I gave a tentative smile to the older rickshaw driver.
+During our ride, as I headed home from my field site in Delhi, we had wondered over our mutual connection to be had and a nostalgia for the simply courtesy afforded there, all too often missing in Delhi, where people have loud voices and even louder opinions.
+But even as a recorded his number, I knew that I would never place that call.
+The light in my eyes dimmed a little at this realization.
+I felt ashamed and guilty for giving in to my fears around safety, for keeping a physical and emotional distance, and I felt angry at a society that made it difficult for a woman to have an entirely genuine interaction with a stranger.
+Increased reporting of cases of sexual assault have generated intense fear and suspicion, particularly directed towards male, blue-collar workers.
+I have found, however, that these men are often migrant workers living away from home, just to send their families enough so that they can afford decent lives.
+Many of these men have shown kindness to me as a young woman traveling alone.
+As more and more women in India and elsewhere begin to venture outside their homes and beyond, we need to acknowledge and honor these small yet large acts of kindness and noble intent, and as we resist the impositions of patriarchal behavior, we must recognize that they not only restrict women but also place heavy burdens on men.
+- "Let's stop clipping each other's wings." Again, as a response to structures of oppression.
+- [Story Two Voiceover] I had a cosmopolitan Indian upbringing, which taught me that boys and girls are equal in every way.
+I was a fairly rambunctious kid, unafraid to express myself in any way I wanted.
+I went on adventures with my friends, climbed trees, and played in the dirt.
+I would occasionally get in trouble with these friends, and when words failed, I settled scores using fist-fights.
+I'd be scolded and disciplined, but to no avail.
+One incident stands out and is still in my memory.
+One of the first talks an adult had with me was when I was six or seven years old.
+One of my favorite teachers sat me down and told me to stop getting into physical altercations with boys, as "boys grew up to be stronger than girls" and that I might hurt myself.
+I remember being confused and hurt.
+Although I realize now that she spoke out of concern, that conversation has wounded me in ways that cannot change.
+At a major crossroads in my life, I've had to stop and think hard about what driving forces led me there.
+My response of being told I couldn't do something was to go do it twice as hard and not back down.
+I responded to the conversation with my teacher by taking up boxing in school, being the only girl to do so, becoming the sports captain after four years of representing my school at the state level, and the highest honor of all, marching at the head of the school on our annual Sports Day.
+Let's stop clipping each other's wings.
+- And this is the ambition that also leads many of us into STEM education.
+"Because that's the way we do it." - [Story Three Voiceover, Male] "Because that's the way we do it" is the most common response I heard to questions about gendered roles throughout my childhood.
+When I helped serve food or make tea in my grandparent's kitchen, I was praised, but my sister was expected to do so.
+I remember hearing my family say, "In my time, girls only left the house "to go to their husband's house.
+"Going to college was never an option then." When my sister left home for grad school, then I remembered them saying, "Why did you wait until you finished your education "to get married? "Who will marry you now that you are a specialized doctor?" They also maintained it would be okay if she were a man, but a woman has to consider raising a family.
+I heard these and similar things at various childhood family gatherings, constantly reinforcing my sense of opportunity as a man, downplaying barriers my sister has had to break before she could partake in the same opportunities.
+I started to question these relatives, asking, "Why do you say that to her but not to me? "And why does that make sense anymore?" Questioning bad logic is one thing, but questioning decades of cultural practices is quite another.
+Even as I persisted to argue, the conversations always shifted to how my generation failed to respect its elders or to recognize that they always knew better.
+It became clear that we were fighting traditions, not logic.
+And I can only hope that showing empathy to the women in my life now, in both my personal and professional circles, will pay dividends for posterity.
+- Thank God for allyship.
+- [Audience] (laughs) - [Story Four Voiceover, Female] For me, feminism is about the privilege to be anything, free of single stories, unapologetic for one's own stories, and respectful and celebratory of others'.
+This definition did not start out as centered around gender or race or class, though now I often think in terms of such intersections.
+It started out as lack of confidence, fear of being too much, and eventually letting go of these feelings, to be who I am and to have the space to be who I am.
+When I think about how I learned to be feminist, how I learned to be okay with being myself, there are many immediate associations.
+But what highlighted for me the importance of embodiment and diverse forms of feminist expression is dance, its visceral melting of movement and motions with storytelling.
+I learned Kuchipudi, an Indian classical dance, for 14 years.
+It requires quite a bit of acting in addition to pure, rhythmic dance, and generally depicts stories from Hindu mythology.
+I remember being taught to beat the ground hard with my feet, becoming unafraid to make noise, sharpen my movements, practice sequences until I was confident.
+I remember learning to play different characters, especially powerful goddesses and women in Hindu mythology.
+At first, afraid to show the emotion that these roles called for, and then amazed that the emotions felt so powerful and resonant.
+The generosity of Lakshmi when she spontaneously showered golden gooseberries upon a woman who gave away the last bit of food in her house as alms.
+The anger of Kali so intense that she was on the cusp of destroying the whole universe until her husband laid himself at her feet to calm her.
+The fatigue and frustration of Sita as she decided to return to the earth, her mother, after a life so full of injustice at the hands of men.
+Through these movements, stories, and embodiments, I learned that I can exist in the world and that I can be anything, maybe generous, angry, or tired, without hint of apology.
+Over time, I learned to notice when others operated on the belief that people, particularly women, could not be anything, or perhaps only one thing, or just a few things, and this informs my feminism.
+How can we give each other space to be ourselves? When does someone's self take away someone else's space to be themselves? Where is the balance? And who do we choose to ask these questions of? - That reflection always makes my eyes moist.
+- [Audience] (laughs) - So the next one is my own, talking about margins of privilege.
+"Wow, you're a real professor!" "Are you really a professor?" "Are you the TA?" "You're the only female professor I know." "As woman of color, be prepared." But, no, I wasn't prepared to hear these comments when I first became tenure-track faculty.
+And I wasn't prepared for the moment when a dear and cherished mentor said to me that I was "special" because of my gender and ethnicity, and how rare the combination is in the field of computing.
+I struggled to respond to such remarks, no less than I had struggled to respond some years ago, sitting in a room full of a senior Google executives, and newly awarded (names organization) Board of Scholars, on being asked, "What were you experiences, "subtext, of marginalization, as a woman in STEM?" I tried to answer, to recall a story of oppression, a story that the room was expecting to hear.
+I had always seen myself as privileged and felt uncomfortable, disempowered even at the seeming imposition that there must have been such disadvantage, that there must have been a way that I was marginalized because I was a woman of color in computing.
+I thought back to the class of 200 students I had taken on Digital Systems Design, where there were only nine other women, but no memories of feeling oppressed came to mind.
+The only somewhat rather negative incident I could recall was when I male friend, whose application to major in computer science had been rejected for the fifth time, told me that I would have no problem getting in because I was a girl.
+To my naive self at the time, being a girl in STEM became a clear advantage then, not a point of vulnerability.
+Today, my understanding is slightly more nuanced, but it has taken some time and many unsolicited reminders that I belong to an underrepresented group in computing.
+Ignorance was bliss and it made my journey a little easier.
+Today, I find myself alternating between a strong sense of injustice that the world is how it is, like when James Damore's manifesto came out, and a stronger sense of determination that it must not stay this way.
+I realize I am on some margin, but a margin that unequivocally intersects with privilege.
+Every day, I aim to bring this privilege and marginality in dialogue with one another, ensuring that they work together in tandem to become drivers of change.
+That is what being a feminist and HCC researcher is all about to me.
+There are 13 more stories where these came from, and you can find them in our paper, and there are many more in this room, I bet.
+Each of our stories presents a window into the lives of human-centered computing students, researchers, practitioners, where they come from and how they are led, shaped and moved by tradition, yet ready for change.
+The shades of feminism they bring to human-centered computing are not singularly representative of any one kind of feminism, but rooted in many diverse backgrounds and lived experiences.
+And when we place them along continuums of feminist expressions, they aspire to a better future that is different, equitable, and just, whether it is by renewing attention to age-old structures of oppression or discovering in them our sources of inspiration as we define feminism for ourselves, also developing our own forms of resistance and solidarity to respond to these structures.
+Our hope is that these structures will inspire more among us to reflect on our own backgrounds and experiences, towards an understanding of the shades of feminism that they bring to the discipline, to contribute to a holistic growth of it.
+May many more of us be drawn to confront the expectations of tradition, combat the more-or-less overt institutional barriers that challenge education, and then raise an activistic stance, whether it is through embracing strands of radical feminism, reinforcing liberal feminist thought, other feminisms or a blend of several.
+As a Adichie says, "Many stories matter." And we hope that you and future readers will find value in sharing and partaking of these stories, these streams of feminism, and take the next steps to express your own.
+So with that, I'd like to invite anyone who would like to share.
+Of course, questions are welcome, but we'd love to hear more stories.
+Thank you.
+- [Audience] (claps) - I did try to plant some questions (laughs) in the audience. - [Audience] (laughs) - So if anyone would like to come up.
+Lucy? (laughs) - [Lucy] Hi, I'm Lucy.
+Yeah, I think one thing that you pointed out a little bit that I personally really feel a lot, is the feeling of, like, ugh, am I being a bad feminist? Am I bad feminist if my partner makes more money than me? Should I drop out of grad school, really just try to get on that money-making machine so that I can be, you know, the right kind of, like, empowered woman? I think that this sort of, like...
+That there's perhaps not a bad way, there's not really a way you can be a bad feminist is a freeing thing.
+That you can make your own choices as an individual and it's not up to you to catch up the wage-gap.
+It's not, like, on each individual woman's shoulders.
+Like, she can make a choice that is right for her.
+Thanks.
+- Yeah, I want to say to that, there was one of the authors of this piece, she came up to me and she said she didn't really want to be on the author's list at first because she felt that she didn't feel confident enough to be, like, she didn't know if she was confident enough in her knowledge of feminism.
+And it took some conversations around that to kind of say, you know, all feminisms are okay.
+I mean, how do we get to the point of being expert? How do we get the point of, like, knowing everything? Do we all know everything about anything? It's all a learning process.
+- [Lucy] Okay. Sounds good.
+- Anyone else? Yes.
+- [Male Commenter] So, I don't know what, it's kind of interesting though, the story.
+My wife was an academic, and she got pregnant.
+She was on a short-term grant.
+So what that meant was that her maternity leave was taken out of her money, and it wasn't extended, right? So there was no...
+Because the idea with a maternity grant is you get someone else in, and they'll do your work for you.
+But, in this case, no one would do it.
+So then she went back to say, "Well, you're actually paying me less money now "than I've got.
+"So can I have an extension?" And had a meeting with the head of department, with these sorts of things.
+Got, had a really horrible experience, both of us meeting with HR person, head of the department.
+No one on her side.
+And the admin said to her, "Well, you can always come back to work immediately." - (laughs) - [Audience] (laughs) - [Male Commenter] Last two weeks.
+That very much colored her whole view of an area of academia, which is, in a way, sort of projects itself as inclusive and thoughtful about these things.
+So I just wondered if anyone had any comments about that? - Thank you for sharing that.
+Would anyone else like to share? - [Georgia Tech Commenter] (provides name).
+I'm from Georgia Tech.
+It's good to see you.
+I wasn't really prepared to share, but I have a question.
+But I will share a quick story now that I, that everybody else started.
+- (laughs) - [Audience] (laughs) - [Georgia Tech Commenter] So I feel like for people who are immigrants or who have moved to another community with a campus of its own, my wife has endured a lot of the, sort of, institutional structures that are sometimes specifically for immigrants that are particularly in conflict for women.
+For example, when I was hired, we moved to the United States when we were hired.
+I was hired.
+I had a job I was hired for.
+But the spouses, the visa structure was such that the spouses were not allowed to work.
+So while I was upon that visa, she literally could not work for four or five years.
+That set her back in her career for, you know, to this day.
+That's just, you know, 15, 16 years ago.
+To this day, I feel like she's still trying to catch up because of those lost years of a promising career.
+My question was about, if you could talk about how the group came together and also what was kind of the daily experiences of crafting the stories and, or selecting.
+What are some of the reflective practices that you went through when you applied for this? Thank you.
+- So, first, thank you for sharing the story.
+And I think that there are lots among us in this room who will have more stories to share about those times.
+With regards to the question that you asked, so we actually came together as a seminar, and every fall I do the seminar, we try out different formats, and this year we tried to do a book club.
+So in the book club we discussed different books that we would read, and so as I mentioned, we read about, like, culture and modernity.
+We read (provides book title) and such.
+And then we read "Living a Feminist Life" by Sara Ahmed.
+That's a really powerful text, and it brought up a lot of questions for us in the group.
+And there were 18 of us, as I mentioned, and there were lots of questions.
+There were questions about, well, "Do we have to be like her? "Do we have to have those strong sentiments "if we really wanna be able to call ourselves feminist? "Like, when I am allowed to be feminist?" And so, as we were having those discussions, and because I already do feminist research in HCI, we started to read more of the texts that at least I was familiar with.
+And as we did that, we needed a little review for the class so that everyone could get a grade.
+So we collected, we kind of ideated and came together with this idea for a submission, that we would write about how our experiences with feminism through our lives.
+And as you'll see, in the other stories, they're also very diverse.
+So how those experiences have shaped us as we are as HCC researchers, students, faculty, practitioners, who are going out in industry or what have you.
+And this is what we came up with.

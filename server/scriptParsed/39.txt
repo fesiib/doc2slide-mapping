@@ -1,0 +1,99 @@
+- Hello everybody and thanks for coming.
+I'm working as an interaction designer and project manager at BMW.
+In 2013, our whole company, our whole research department especially was buzzing with automated vehicles, but it was all about algorithms and such capabilities.
+As an interaction designer and also as a passionate bicyclist, I was really wondering how would these vehicles interact with other road users.
+To illustrate this question, I'll just show you a little video.
+(organ music) (tire screech) (high-pitched singing in foreign language) (upbeat music) (tire screech) (high-pitched singing in foreign language) In automotive industry, interaction designers traditionally design the ideal environment for the driver, the cockpit.
+Now designing an automated vehicle so that it is accepted by other road users and that it can interact well with them required a complete change of perspective for automotive industry.
+It was a change of perspective from designing for a system that is used deliberately by our clients to one that is encountered by the public.
+And from designing a machine to designing an actor that proactively makes decisions.
+Our usual methods and tools were not suitable for this.
+So we need a new approach to handle the new perspective in the design process.
+Also, even within our company, this perspective was completely new and we needed to evangelize the topic and to convince people that they would partner with us and that they would fund us.
+So we had to instill the new perspective in the hats of the stakeholders.
+In the next 10 minutes, I will guide you through our design process and show you for the seven most important steps how we approached them, why we couldn't use conventional methods, and how the new approach helped us in the design process and for convincing stakeholders.
+In 2013, when we started eliciting user requirements, there were no users to ask because there were simply no automated vehicles on the road yet.
+So instead of a conventional user study, we investigated the hopes and concerns of the public via an online media analysis.
+We gathered over 150 articles and nearly 2,000 comments from mainstream German online news and as you can see, the topic was increasingly discussed from 2011 on and also there was a broad range of hopes and concerns from safety issues to political and economical aspects.
+Two of those hopes and concerns were especially relevant for interaction on the road.
+One was that the technology is seen as uncanny, that it's a black box and the other one was that the road division is unclear and that people were concerned about a loss of self-determination, but also there was a big hope on a more cooperative road user.
+So altogether, this data might not have been representative, but it exposed for us the potential extremes and how professionals would shape the public opinion.
+So for our design process, we got very valuable insights into user needs and especially the two main requirements, which was that the vehicle needs to communicate and that it needs to be absolutely cooperative.
+Also, on the stakeholder's side, this process step was very helpful because the sheer rise in number showed how important this topic is about to get.
+And also those sometimes pretty provocative statements from comments served as great mental anchors.
+Now we wanted to use the insights that we gained here also for the concept work.
+So we created a character based on hopes and fears and on workshops with experts and some literature on technology acceptance.
+It consists of a set of attributes that we rated in a user study with a little scale and it showed that actually participants thought that it fits quite well with their expectations on behavior of automated vehicles.
+Altogether, the character helped us not only for creative concept work, but also for evaluating solutions and for making design decisions.
+In the next step, we had to understand the use case and elicit traffic situations.
+Now this is a very common step in automotive industry, but we used a special visualization technique that I want to share with you.
+We used whiteboards to draw the street infrastructure and Lego figures and miniature vehicles for the moving objects for the traffic participants.
+This was very valuable for collaborative work because people didn't need to have any special drawing skills and scenarios could be adapted very easily.
+In addition to that, you have to imagine a traffic situation as a very complex interactive course of action and timing is very important for it.
+Now to verbalize details of that is very difficult and also to create animations, a video, during a workshop is nearly impossible.
+So using these whiteboards and miniature figures, it was a very good way to illustrate what you meant by a traffic situation exactly.
+And thus we could elicit and communicate a vast amount of comprehensive scenarios.
+Actually this already leads me to the next challenge, which is that there was not only a vast amount of scenarios, but actually an endless amount.
+And it was impossible to design for each single one or even to foresee each single one.
+So instead we decided to create a consistent language that could be applicable to any kind of traffic situation.
+It was a set of abstract messages like I give way or thank you and also we set up a taxonomy of traffic situations that included attributes like the right of way or the speed of an AV.
+This helped us not only diminish the multitude of scenarios for the concept work, but also to choose the right scenarios for specific research questions.
+Now we knew what to communicate and in which situations.
+The next thing was to define the tonality as we were not creating a solution for a user task, but rather an actor that has to negotiate its own goals.
+You all know how important, how crucial tonality is if you want to negotiate something.
+So to define the tonality, we used a human-human communication model from Schulz von Thun.
+It states that a message can be phrased with a focus on self-regulation or on appeal.
+For a vehicle, this meant for example I give way as a self-regulation or you go first as an appeal.
+To avoid concerns regarding loss of self-determination and be in line with the cooperative character, we decided to go for the self-regulation side and phrase the message as intention, so an intent-based communication style.
+This helped us to create an acceptable tonality and to create a cooperative negotiation style.
+In parallel to this, we worked on the communication channels.
+Actually movement is the most important communication channel, but nevertheless, we decided at this early stage to focus on visual media because we still had to make the whole topic comprehensible and attractive within our company.
+So we set up a project with students from (German School) and they created some awesome prototypes for display projection and abstract light media.
+And afterwards, we set up an exhibition and invited stakeholders from all kinds of BMW departments.
+We deliberately integrated media into the vehicles in these prototypes and set it in context of the city to give a holistic impression of the potential of the media.
+At the same time, it was important for us to stick with a very abstract style because we wanted to have enough flexibility for in depth design in later stages.
+So it was kind of like paper prototyping, but more sexy, which was very important because we still, as I said, we wanted to have an attractive visualization, which would serve for early inspiration and evangelization.
+And the exhibition also helped to fuel discussion between different departments and disciplines.
+In the next step, we integrated a broad range of media and also single designs into a real vehicle.
+It was great to look at perception, but we clearly needed another environment for prototyping and evaluation too because we noticed that the single of the vehicle is interpreted strongly depending on the movement and in context of the scenario.
+We could not go with the vehicle into a real traffic situation because at this early stage, we needed a high level of controllability.
+Controllability in automotive industry, normally you just use a driving simulator.
+Okay, but again the driving simulator is set up for the perspective of the client.
+So instead, we had to build a new system and we created a pedestrians and bicyclists VR simulator.
+I'll show you how this looks like from the perspective of a pedestrian.
+So you can see the vehicle coming up and it gives light signal in the front.
+And you can see how it nicely embeds the signal in the scenario and it also provides a holistic impression of the moving object in 3D space.
+In addition to that, it allowed us to explore and evaluate a broad range of concepts without having to implement everything in a costly manner to a real vehicle.
+This was also great for discussing it with stakeholders and actively involve them in the design process.
+In addition, the VR simulator was a great tool for maximum immersion into the new perspective in a minimum amount of time.
+Actually, people who had never heard about that topic before just needed a couple of seconds to understand why it is important and what are special design issues and requirements.
+Now I've talked in a very condensed way through our design process and I want to show you of course a little bit about the solution.
+You can see that we evaluate a broad range of concepts, more than are on the slide now.
+Some examples just and we decided on direct light, a light belt around the vehicle because this would allow us to communicate in 360 degree direction, so in any traffic situation and direct light is just great under any lighting conditions.
+Since 2017, there's, we set up an EU-funded project Interact, it is called, to evaluate and refine this solution and to pass it in the community and prepare for standardization.
+To summarize this case study, I also want to show you the insights that we learned from designing, that we learned in general about designing autonomous actors for public space.
+So as they're encountered in a public space, they need to be designed for acceptance and cooperation, which we achieved by a media analysis and the cooperative character.
+And as the system has its own goals, it needs to negotiate them and this means the tonality has to be designed and not only the content.
+This is where the communication model helped us a lot.
+As a system in public space is integrated into real world human-human interaction, there will be an endless number of scenarios and you have to approach them by an abstract model that is applicable for any situation.
+So we used consistent language, a set of messages for this.
+And then if the system is a physical entity, its movement is absolutely key for interpretation of any communication signals.
+So if you test those systems, you need to make sure that you visualize the moving 3D object in a scenario and here the VR simulator helped us very much.
+Last but not least, I think that there will be a lot more intelligent, proactive, robotic systems in the future and this means for us as interaction designers that we have to look not only at the direct user, but at the whole social ecosystem in which it has to integrate.
+And if this means that we actually have to change what is considered important in our company and the perspective of our company, then this might be a design challenge of equal importance as designing the solution itself.
+Thank you.
+(applause) - Questions? - [Peter] Hi, I'm Peter Vievnov from Kadulty.
+The design you've gone for is very much visual, which is only good if you know the person actually takes note of an approaching vehicle and is able to look at it, whereas that might not be the case in many situations where people are oblivious to all sorts of vehicles.
+So have you given consideration to design challenges and how to solve those situations, how to make people aware of vehicles more? - Okay, so as I said, I think the most important cue is always the movement of the vehicle.
+The visual media is just an add on.
+And in addition to that, personally, I think that acoustic media is always also important because there will always be people who will not be able to see the vehicle.
+And we actually also researched on this, just I couldn't put, like, it was like two and a half to three years of research that I condensed into this case study, so I couldn't talk about this.
+But yes we looked at sound too.
+- [Peter] Cool, thank you.
+- [Woman] (mumbles), UCL.
+I'm just interested in what you said towards the end of your presentation that the next step is to find the solution, but solution to whose problem? How do you, the question then is who defines the problem that you are trying to tackle and the scope? - I'm not sure what you mean.
+Could you rephrase your question please? - [Woman] Sorry, if your next step is solving a problem, right, that was the end of your presentation.
+You mentioned something about solving a problem.
+Whose problem are you solving and what's and what? - Okay, so I think we're pretty much at a good solution for the visual communication media that was the slide belt that you saw, which by the way, other automotive companies have by now come up with similar solutions so I think that's quite stable.
+Yeah, does it answer your question? Okay.
+- Let's thank our speaker.

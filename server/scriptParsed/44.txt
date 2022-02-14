@@ -1,0 +1,93 @@
+- Thank you.
+So most of you probably know exactly what citizen science is.
+I like to think about it as science on steroids, where lay citizens enable researchers to run their studies faster and more efficiently by aiding them with data collection, processing or analysis.
+And I'm sure also most of you are aware that we live at a time of increased scrutiny both legal and societal when it comes to data privacy, whether it's the Cambridge Analytica scandal or Facebook setting aside $3 billion for governmental privacy probe.
+We hear about privacy every day in the news and in line with this, the public increase about data privacy increases.
+So the big companies are very good at convincing us that even when we might have some privacy concerns, we should still share our data online and this is because we can save money.
+We can get a better personalized service that saves us time.
+And sometimes simply to do something like order your groceries or get a credit card, you need to share a lot of very sensitive data like where you live, how much you earn.
+Also in research, it is not uncommon in traditional research that people and specifically intrusive studies like maybe health studies, clinical trials get paid quite a lot of money to share sensitive data about themselves.
+So you could say, well, what's sensitive about citizen science? After all, many citizen science projects focus on things that sound very innocuous like bird spotting.
+Actually, there's a lot of sensitive data that goes into most projects and this can be even the meta data, the IP address of the computer you're using.
+The data you might collect in observational study will often be location and time stamped.
+Using the example I just mentioned, if you go bird spotting, the photos you take are likely to be tagged.
+And if you share this information on forums shared with other citizens and scientists and coordinators, sometimes it might be quite easy to deduce where you live and when you're away on holidays.
+And finally, in psychological and medical surveys, you answer a lot of questions about yourself.
+Some of them might include questions about data they're very sensitive like do you suffer from any chronic conditions or things like your ethnicity and other types of data that you wouldn't normally share with a stranger and yet you do share them in these projects.
+So what are the benefits of citizen science? We know that someone would definitely use Facebook, even when they have some privacy concerns simply because this is a service that is very useful to them.
+It allows them to do things that they wouldn't be able to do otherwise.
+Is there anything in citizen science that can convince people to share data despite privacy concerns? Typically when we speak about citizen science, we focus on how very productive this makes us.
+There are many papers that list all these wonderful benefits.
+We engage public awareness of science.
+We engage lay citizens with the scientific process and this is considered a very good thing and it also makes our grant applications look very good.
+So we assume citizen science is inherently good, but is it good enough? Is it good enough to convince citizen scientists to part with their data at this time when most of us are trying to scale back, to revise those privacy settings, to share less? So of course, some citizen scientists will have a strong sense of motivation, often relating to those very noble goals like advancing the scientific study and even saving the world.
+In fact, a recent study conducted by Bowser et al with long-term citizen science participants who are loyal to a specific project found that the motivations that made people participate and made them stay within a project and be loyal to a specific project were the motivations that made them pay less attention to their privacy concerns.
+And so participants shared that even though, yes, they may have had some privacy concerns, their motivation was stronger.
+It was more important for them to still take part and contribute to the project they cared about.
+However, these were the so-called super contributors and these loyal participants who take part for a long time, attach themselves to a specific project and sometimes contribute many, many hours every month.
+They are only a small part of the general population of all citizen scientists.
+In fact, the majority of citizen scientists are dabblers.
+They participate casually.
+And as Eveleigh et al have found in 2015, their motivations can differ from those of super contributors.
+They often care more about the outcomes of the projects as opposed to just the joy of participation and the feeling of belonging.
+So we wanted to see whether we would be able to motivate the dabblers in the context of a one-off citizen science psychological survey, which we titled sleep mapping.
+182 participants completed the full survey and there were four stages.
+At the beginning, we primed the participants with one of four motivational messages.
+And these related to altruism, learning, social proof, that is knowing that other people have already taken part, and being able to contribute to a project.
+Each participant was randomly assigned one of these messages at the very beginning of the study.
+Then they were presented with a set of neutral questions.
+Because our study was called sleep mapping, the questions pertained to sleep habits.
+For example, what time do you wake up? What would be the best time during the day for you to work out or take an exam? So nothing intrusive.
+Then we proceeded to the sensitive questions.
+And this was a set of questions that included some very intrusive queries, such as did any of your loved ones die when you were young? Did you live with both your mother and father? What is the job of your spouse? Do you suffer from any chronic conditions? And finally, at the end, we presented participants with the three item west and privacy scale that aimed to measure their attitudes towards privacy.
+What we found out was that responses to neutral questions participants responded freely.
+Soliciting information was very easy when we didn't ask any intrusive questions, almost 100%.
+However, sensitive data disclosure was much, much lower with the mean disclosure 38%.
+And even across that relatively low sensitive data disclosure, there were differences across the motivational groups and what we found was that participants primed by the message that emphasized the learning opportunities that could stem from taking part in citizen science shared significantly more data than participants primed by the other three messages.
+We also found that the outcome of the west and privacy scale, which allowed us to divide participants into privacy and concerned, privacy fundamentalists who shy away from sharing data, and privacy pragmatists who approach it in a pragmatic way by weighing the pros and cons of disclosure.
+These groups did not have an impact on whether people disclosed information or not, suggesting that it isn't about how very concerned you are with sharing your data, but how motivated you are.
+Or in other words, what's in it for me? So how does this relate to citizen science? Well, it's about give and take.
+For quite a long time in the literature reporting from citizen science projects, the focus has been on productivity, on what we as researchers can gain from those projects.
+And even when we speak about participant benefits, we often focus on the ones that may sound quite vague and buzzword-y, like advancing science and helping the world.
+The fact that we live at a time of increased scrutiny over how data are collected and processed means that we must think more carefully about how citizen science projects might benefit the participants.
+When data is currency, we cannot just ask for data.
+We have to give something back.
+The take-home message is when collecting sensitive data, design projects that give back and think about giving back tangible, concrete rewards to your participants.
+Tell your participants about how they will benefit.
+They should know what's in it for them.
+And finally, ethics.
+Keep your promises.
+As I have demonstrated in this presentation, they can affect citizen disclosure because we don't want to end up in a situation where participants stop sharing data and citizen science projects are no longer feasible.
+Thank you very much to all of my participants who have given their time and effort to take part in this project.
+(audience clapping) - [Dan Cosley] Hi there, Dan Cosley again.
+I'm not as sure as you are that motivation is what's driving these privacy decisions.
+There's been some work in the privacy literature and in particular, in privacy on crowdsourcing that Shruti Sannon, Natalya N. Bazarova and I have done last year at CHI and then again there's another paper this year about it in Turk that suggests that people are actually a lot more concerned about understanding why the data is important for the questions that are being asked.
+In your case, the sensitive questions didn't sound very much like they were related to sleep versus asking someone like were you, what kind of content were you listening or watching right before bed or was there someone else in the bed, which might be sensitive questions, but ones that might actually be more relevant to participants in the study.
+And my hypothesis, and it'd be interesting to know how you think about this, is that the more relevant the questions are, the more likely people would be to contribute that kind of privacy beyond sort of their general motivation, prime motivation for learning or for contributions to science.
+- Absolutely, very good question.
+Thank you.
+Absolutely, relevance is one of the variables that have shown to be important for data disclosure.
+However, the great majority of privacy studies look at the exchange of some type of reward for data.
+I think in principle, it's difficult to compare crowdsourcing studies because citizen science has a slightly different ethos and focuses primarily on tapping into that volunteer participant population.
+The reason that we look at benefits is because there is an ethical aspect to it now.
+We could certainly look at the different variables that have an impact on how much data people disclose, such as maybe the way we arrange questions, whether we present the sensitive questions first or the neutral first.
+And I absolutely agree, all of this might have an impact on disclosure, but there's a very important ethical aspect, which is we live in a time where data has become the new currency and we need to really think about do we have the right to keep asking citizen scientists for more and more or do we need to step back and think about what we are giving back to that community of citizen scientists.
+There has been a number of studies that have shown the motivations of participants have an impact on whether they join a program and how long they stay in the program.
+We are also suffering from a very big problem with recruitment and retention in citizen science right now.
+From my perspective, this examination of rewards is where we should be going in relation to citizen science specifically, but I agree that some other variables might be more appropriate for other types of work, for example crowdsourcing.
+- [Dan Cosley] And I agree that thinking about what you give back to the people who participate is important, yeah.
+- Thank you.
+- [Jason Jax] Hi, Jason Jax.
+I think your point about data as currency is very prescient.
+With GDPR now in Europe, we see lots of, every time I visit a news website for example, I have to accept or decline to be tracked.
+And I was wondering if you had any thoughts maybe there might be some additional user fatigue constantly seeing these dialogue boxes and maybe that might change their behavior.
+- Sorry, could you specify what do you mean about user fatigue? Is that in relation to when they see maybe a consent form and they might drop out at that point, is that? - [Jason Jax] Well, no, I meant more that since with the establishment of the GDPR regulations, users generally speaking across the web are seeing a lot more accept or decline forms on whether or not they want to have their data gathered and I think that as people, to be honest, I'm not reading the privacy policies of the news websites every time I'm visiting them.
+I'm clicking accept or decline, depending on what will get me to the news article fastest.
+And I wonder if people are having that experience across the web, maybe their reaction to sharing data might change going forward with additional fatigue with having to see these kind of consent.
+- Yes, absolutely.
+So I think the reaction to the GDPR in general is a very complex process and a lot of people will still continue disclosing data, specifically because we need to disclose data.
+We need to do the things that we have done so far online and sometimes we just want to read another article and I know exactly what you are talking about.
+But I think in the context of citizen science because there is such a big emphasis on volunteering and there is a strong sense of I can quit if I don't like it and the way we have looked at the pattern of attrition.
+During the study for example, we have seen that at the point of transition from the neutral items to the sensitive items, we have had a significant number of participants drop out and I think what it is is that people in general do pay attention, but in many contexts, they don't have the ability to make that decision because private companies are so clever at working around it.
+But as the academic community, we need to set a better example and actually make sure that this is an informed choice and offer something that isn't a clever trick that'll make people disclose anyway, but something that is actually a very transparent interaction and a decision on their part.
+Thank you.
