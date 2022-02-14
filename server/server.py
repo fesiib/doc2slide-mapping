@@ -30,12 +30,12 @@ def prediction():
     paperParsedFilename = glob.glob("./paperParsed/*")
     scriptParsedFilename= glob.glob("./scriptParsed/*")
     scriptTimeFilename = glob.glob("./scriptTime/*")
-    similarity = glob.glob("./similarity/*")
+    #similarity = glob.glob("./similarity/*")
 
     print(paperParsedFilename)
     print(scriptParsedFilename)
     print(scriptTimeFilename)
-    print(similarity)
+    #print(similarity)
 
     numFiles = len(paperParsedFilename)
 
@@ -45,18 +45,18 @@ def prediction():
         paperParsedFile = open('./paperParsed/' + str(i) + '.txt')
         scriptParsedFile = open('./scriptParsed/' + str(i) + '.txt')
         scriptTimeFile = open('./scriptTime/' + str(i) + '.txt')
-        similarityFile = open('./similarity/' + str(i) + '.csv')
+        #similarityFile = open('./similarity/' + str(i) + '.csv')
 
         paperParsed = readFile(paperParsedFile, 'txt')
         scriptParsed = readFile(scriptParsedFile, 'txt')
         scriptTime = readFile(scriptTimeFile, 'txt')
-        similarity = readFile('./similarity/' + str(i) + '.csv', 'csv')
+        #similarity = readFile('./similarity/' + str(i) + '.csv', 'csv')
 
         returnValue.append({
             'id': i,
             'paper': paperParsed,
             'script': scriptParsed,
-            'similarity': similarity
+            #'similarity': similarity
         })
 
 

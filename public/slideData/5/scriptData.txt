@@ -1,0 +1,72 @@
+
+ I'm Charlie, very happy to be here to give an overview of our TOCHI paper, and you can download it at that tinyurl. Be warned, it is quite a big paper. It's 60-odd pages, and I'm also very pleased that my co-authors' here at CHI, so yo, Ben and Russell.
+ So, before we start, I'd just like to ask you to put your hands up, if any of you have ever tried to change your behavior recently. So, maybe get more sleep, go to fewer parties, drink less, eat fewer cakes in the breaks, so mine's definitely up. And I want you to keep it up if you found it easy. I put mind down. Okay, so I don't think anybody found it easy.
+ And there is three key challenges with behavior change.
+ So it's known as a wicked problem. So, it's incomplete, and contradictory, and changing the qualm, it's very hard to define how to do it.
+ And perhaps, as a result of that, there's an awful lot of different approaches. So, from a research point of view, it can be difficult to know where to start.
+ And also, the evidence shows that actually very few interventions succeed, in the long term.
+ And so what we did, is we used the lens of habits
+ To help us understand both why behavior change is hard, and what we can do about it. What the paper tries to do is to bring together the most pertinent theories and strategies into an explanatory model, and to help them form the design of interventions to target habits. So, it's really trying to build on existing work,
+ So, it's about 16 pages of references, in the papers.
+ So, this is an overview of the paper, and in the interest of time, I'm going to frame the research by just talking, briefly, about why habits are important,
+ talk about some strategies to intervene, and, finally, cover some challenges.
+ And our motivation was really that studying behavior change
+ is a little bit overwhelming, and we hope that people can use the paper as a starting point to structure the design space,
+ not just the theories, but also about techniques with our explanatory framework.
+ Okay, so one reason behavior change is hard is because of habits. And there's a clear research gap in considering habits
+ as the key driver of long-term behavior change. And so our contribution is addressing it by looking at
+
+ So this operational definition is based on Orbell, Verplanken & Gardner. So the idea is that, through repetition and behavior in a stable context, we can outsource the initiation of that behavior to the environment, so it runs automatically. So, outside of your conscious control. So we can preserve limited cognitive resources by doing this.
+ and an opportunity. So, a challenge, because the automaticity means that it's difficult to change, once it's been formed. But also, an opportunity, because that difficulty in changing, means that once a good habit is formed, then you're likely to keep it.
+ And this is just to illustrate how getting started in behavior change can be overwhelming, so these are just some of the numbers of different change theories, techniques, strategies, that other authors have identified. But even with the lens of habit, few theories directly address it.
+ And there's also a research gap in considering habits as a key driver of behavior change, so these are recent kind of behavior change papers, in blue. Mentions of habits are in reds, ones with actually substantive discussion of habits, they're not just talking about habits colloquially, are in orange. You can see there's very few oranges.
+ And so what we've tried is bring together theories into a habit alteration model that we call the HAM. So, we wanted to provide a theoretical and practical grounding to intervene
+ using habits. And we outline several theories in the paper, looking at how they deal with habits, but few do so. And so what we've found is bring three theories together,
+ to try and bridge that research gap in understanding how to change habits, using technology.
+ So I'm gonna give a quick overview of each of the three. So, dual process theories essentially argues that
+ behavior emerges from the interplay of two distinct sets of processes.
+ associative, automatic, parallel, and fast. And type 2, which, are slower, more conscious, and goal-directed, rational, serial processes.
+ It's because we need to understand the underlying mechanisms of how we can actually translate cues into action. But we also need to understand how we can practically apply these,
+
+ So, the context occurs, and the response will happen. And the habits are highly prevalent in everyday life, across multiple domains. And it's important to note that the context can be external, so a location or a person, or a particular item. Or, it can be internal, so like an emotion, can be a cue to behavior.
+ the successful formation of habits. For example, repetition in a stable context is really key to achieving automatic behavior,
+ And lastly, goal setting theories. So this tries to fill the theoretical gap in how to specify intentional behaviors, so Type 2 type behavior, things you'll deliberately want to do. And goal setting theory,
+
+ also says that hard, specific goals tend to be more effective than easy, vague ones.
+ to drive that behavior repetition that will form the habits.
+ Okay, so what we've done is try to put these puzzle pieces together to come up with an explanatory framework,
+ And what we are really trying to do is to come up
+ with a practical tool to help people to describe and assess habit targeting interventions. And in particular, to help them devise new interventions
+ that don't just rely on the limited deliberate type 2 cognitive resources.
+ So, a quick overview of the model, now. Essentially three phases across the two types of processes. Type 1 and type 2. So the three levels are filter, prepare, and act.
+ that essentially flow through perception, and type 1 and type 2 attention filters to create an input set of cues.
+ type 1 and type 2 memory processes match those input cues to potential responses. Type 1 impulses or type 2 intentions.
+ And then, in the third phase, on the act phase, impulses and intentions compete to become a single response.
+ So I'm gonna zoom into those phases, one by one, a little bit. So, the filter stage, we have F1, the context cues, which are always present, and we have F2, the type 1 automatic, intentional processes, and F3, the directed, intentional processes. You can see from the dotted lines which may or may not run. So that's trying to encapsulate the idea that you can put selective attention on particular cues. So what sort of interventions can we have at this phase? So, one possible, sort-of, intervention is priming.
+
+ And priming is the unobtrusive presentation of cues to try and activate those context response links. So it targets type 1 processes. So you provide the context cue and try to get a response, but they can be quite subtle. So, for example, Bateson et al found that people paid nearly three times as much for their drinks as an honesty box in a coffee room when they showed the eyes rather than the control image of flowers. Even though you don't consciously, if you're thinking about it, you're actually being watched.
+ And now, in the prepared phase, we have that set of cues as input, and they interact with both type 1 and type 2 memory processes to generate potential outputs, which ends up on the potential response stack. So type 1 outputs impulses and type 2 outputs intentions, and impulses run faster. So habits may run down the left hand side without you really noticing if particularly, if your type 2 processes on the right are busy.
+ And the sort of interventions we might see here really try and target those context response links.
+ And one way to do that is to practice an example of what to do. So we have a late-breaking work, which is about getting people to practice pushing away a smartphone, to try and control that overuse of smartphone. So, the idea is you repeat the behavior to try and jump that intention behavior gap between type 2 conscious and type 1 non-conscious processes.
+ And then, in the act phase, after some arbitration between the type 1 impulses and type 2 intentions, we end up with a single response, which may have a particular outcome, for example, a corresponding change in the environment, or a rewards. And so, a particular intervention here
+ So, self-monitoring is essentially using information from self-tracking to form alternative intentions to act. And it can be helpful to find your unknown behavior patterns. For example, if you use the free bikes to the conference, it might be helpful to know, actually, how far and how long you swipe it for.
+ And so this is the overview of the model. I'm just trying to emphasize that repetition is key. So information from observed response and outcomes will feed back into the model. And in terms of how habits are triggered. So a familiar cue might throw through the left hand side and the type 1 attention filters, and memory processes. So it's strongly associated with a particular response. So the corresponding impulse pops onto the potential response stack quite quickly. And, in terms of habit formation, the key is to try and shift behavior from type 2, on the right hand side, over to the left.
+ Okay, so the paper outlines 10 different, possible interventions across those three phases, filter, prepare, and act, with the two different types, unconscious and conscious, and gives some design strategies, but in the interest of time,
+ I'm just going to give two concrete examples which we found promising. These are promising because, in general, there's problem of a lack of empirical evidence for whether these work, or not. So we picked two strategies where there's meta-analysis showing an evidence of impact on behavior, and their interventions that aim to automate the conscious type 2 processes into non-conscious type 1 processes, deliberately.
+ and automating self-control. So, implementation intentions are specific if-then plans, that try to link if's so that the context, or a set of cues, with a response, then. So it's deliberately trying to shift from the right hand side to the left hand side of the model, because in type 2, the left hand side, they run faster, so they're more likely to be enacted.
+ found that implementation intention groups increased daily walking.
+ a medium to large magnitude effect, and implementation intentions seems like a good strategy for habit formation.
+ The next intervention is thinking about how we might be able to automate self-control. So, self-control is the ability to alter your own behavioral patterns, so you can prevent or inhibit the dominant response. That implies you can introspect the potential response stacks so you can see what's in there, and put an alternative on there. So it is part of type 2 of processes, but there's some evidence
+ that repeating or practicing those stop behaviors, you can automate it into a type 1 process,
+ which was what Lawrence et al, did. So they used training to inhibit a simple motor response. So the task is to say if the pictures on the right or on the left, except if the frame is bold. So, the healthy things, the apple, you want people to respond left to right. And the unhealthy things, the chocolate, you want people to stop themselves from responding. And they found an impact on outcome, so actually on weight loss, and reduced energy intake.
+ So, very briefly, after any intervention, we've got some challenges and context-sensing,
+ You have to think about the experiment design, and we really want to make sure that we measure behavior
+ and we really need to test these strategies, particularly the interplay of a good combination of type 1 and type 2 for an individual.
+ So, overall, we were really hoping that this paper would provide guidance for those working, starting out in the area, and basically, I wrote a paper I wish I had eight years ago. And we really want to help researchers
+
+ to target type 1 processes and type 2 processes. And finally, just a flag up, that technology can play a role, but it doesn't have to be the only solution.
+ Thank you to ASIM for travel grant. I'm also part of an ethical technology cooperative, so I'm here through the kindness of my coworkers, so thanks for that.
+ So, I'm happy to answer any questions. (clapping) - (mumbling) University of Lausanne. Thanks so much for your talk. Great work. I was wondering if you could talk a little bit about how you choose these different psychological theories. Particularly, I was wondering why you, for instance, you didn't pick the self-determination theory. It's one of the theories that could be used to form the framework you described. - So the paper goes through a set of different theories. Kind of looking at how they deal with habits, and we didn't feel like self-determination theory really helped us to explain habitual behavior. So I think self-determination theory tends to focus more on conscious feelings of whether you can achieve a given goal or not, or how your intentions formed. So, what we tried to do was to pick the theories that we thought together, and gave people the framework to be able to think about both conscious and non-conscious approaches to behavior change. - Thank you. - Hi, Dominic DiFranzo at Cornell University. Great work, I really loved the theoretical model. I'm sure you're familiar with one of the difficulties with doing this work, particularly with this intervention strategies is the long-term effects where there's a continuous work on the long term, and when the intervention is no longer there. You stopped intervention. Does that behavior change, or persist afterward? Could you maybe speak a little about any parts of your model, or any parts of the things you looked at that might suggest efficacy in increasing behavior change, even when interventions and strategies have stopped being there. - Sorry. Yeah. Yeah, I guess the, sorry, (laughing) I guess what we're trying to say is,
+
+ So that is the fundamental point. And I guess the things that form habits faster, are more likely to help in the long term, and habits that don't contend with other existing behaviors. So, one of the things is, you don't want to,
+

@@ -1,0 +1,15 @@
+level	page_num	block_num	par_num	line_num	word_num	left	top	width	height	conf	text
+1	1	0	0	0	0	0	0	640	720	-1	
+2	1	1	0	0	0	0	179	569	68	-1	
+3	1	1	1	0	0	0	179	569	68	-1	
+4	1	1	1	1	0	0	179	183	19	-1	
+5	1	1	1	1	1	0	179	183	19	50	Background
+5	1	1	1	1	2	63	173	21	36	61	and
+5	1	1	1	1	3	84	179	57	19	4	Motivation
+4	1	1	1	2	0	49	220	520	27	-1	
+5	1	1	1	2	1	49	221	83	21	96	Career
+5	1	1	1	2	2	143	221	131	26	96	mentoring
+5	1	1	1	2	3	286	221	18	20	96	in
+5	1	1	1	2	4	316	220	77	22	96	online
+5	1	1	1	2	5	404	221	165	21	96	communities
+

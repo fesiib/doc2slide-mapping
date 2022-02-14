@@ -1,0 +1,116 @@
+CCS CONCEPTS
+KEYWORDS
+ACM Reference Format:
+ACM Reference Format:
+ACM Reference Format:
+ACM Reference Format:
+1 INTRODUCTION
+1 INTRODUCTION
+1 INTRODUCTION
+1 INTRODUCTION
+1 INTRODUCTION
+1 INTRODUCTION
+1 INTRODUCTION
+1 INTRODUCTION
+2 RELATEDWORK
+Interaction with The Face
+Bite Force Measurement
+Bite Force Measurement
+Bite Force Measurement
+Clench Detection in The Wild
+Clench Detection in The Wild
+3 USER STUDY 1: CLENCH FORCE CONTROL
+Task
+Task
+Task
+Task
+Design and Procedure
+Calibration.
+Calibration.
+Performance Measures.
+Procedure.
+Participants
+Apparatus
+Apparatus
+Apparatus
+Results
+Confirmation Techniques.
+Confirmation Techniques.
+Number of Clench Force Levels.
+Effect of Visual Feedback.
+Effect of Visual Feedback.
+Effect of Visual Feedback.
+Effect of Visual Feedback.
+Effect of Visual Feedback.
+Effect of Visual Feedback.
+Effect of Visual Feedback.
+Control at Different Clench Force Level.
+4 CLENCH INTERACTION DESIGN
+4 CLENCH INTERACTION DESIGN
+4 CLENCH INTERACTION DESIGN
+4 CLENCH INTERACTION DESIGN
+Evaluation
+Material.
+Procedure.
+Results
+Results
+Results
+Results
+Results
+Results
+Results
+Results
+Results
+Results
+Results
+Results
+Results
+Results
+Results
+Results
+Results
+Results
+Gesture for Discrete Command Input.
+Clench for Value Control.
+Clench for Value Control.
+Clench for Value Control.
+5 USER STUDY 2: PERFORMANCE EVALUATION
+Task
+Task
+Task
+Task
+Task
+Task
+Task
+Design and Procedure
+Design and Procedure
+Design and Procedure
+Design and Procedure
+Participants and Apparatus
+Participants and Apparatus
+Results
+Results
+6 USER STUDY 3: CLENCH USE CASE STUDY
+6 USER STUDY 3: CLENCH USE CASE STUDY
+Design and Procedure
+Participants and Apparatus
+Results
+Results
+7 DISCUSSION
+Associating Clench Semantically
+Limitation and Future Work
+Limitation and Future Work
+Limitation and Future Work
+Limitation and Future Work
+Limitation and Future Work
+8 CONCLUSION
+8 CONCLUSION
+8 CONCLUSION
+9 ACKNOWLEDGEMENT
+REFERENCES
+REFERENCES
+REFERENCES
+REFERENCES
+REFERENCES
+REFERENCES
+REFERENCES
