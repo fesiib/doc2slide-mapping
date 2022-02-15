@@ -12,22 +12,17 @@ function App() {
     const presentationID = parseInt(urlParams.get('id'));
 
 	const [data, setData] = useState(null);
+	const [paragraphs, setParagraphs] = useState([]);
+	const [scripts, setScripts] = useState([]);
 
 	const getData = () => {
-		const dataPath = '/slideData/' + presentationID + '/result.json';
-		fetch(
-			dataPath,
-			{
-				headers : { 
-					'Content-Type': 'application/json',
-					'Accept': 'application/json'
-				}
-			}
-		).then(function(response){
-			return response.json();
-	
-		}).then(function(myJson) {
-			setData(myJson)
+		axios.post('http://localhost:3555/getData', {
+			presentationId: presentationID,
+		}).then( (response) => {
+			console.log(response);
+			setParagraphs(response.data.paper);
+			setScripts(response.data.script);
+			setData(response.data.data);
 		});
 	}
 
@@ -49,12 +44,17 @@ function App() {
 		if (!data) {
 			return;
 		}
-
 		const thumbnailsPath = '/slideData/' + presentationID + '/images/';
 		const output = data.slideInfo.map((slide, idx) => {
 			const thumbnailPath = thumbnailsPath + slide.index.toString() + '.jpg';
 			const title = "Script:\n\n" + slide.script + "\n\n\n\n\nOCR Result:\n\n" + slide.ocrResult;
-			console.log(title);
+
+			const startTime = new Date(0);
+			startTime.setSeconds(slide.startTime);
+
+			const endTime = new Date(0);
+			endTime.setSeconds(slide.endTime);
+
 			return (
 				<div key={idx} 
 				>
@@ -72,7 +72,10 @@ function App() {
 							objectFit: 'cover',
 						}}/>
 					</div>
-					<div> {idx} </div>	
+					<div> 
+						{idx} {" "}
+						({startTime.getMinutes()}:{startTime.getSeconds()} - {endTime.getMinutes()}:{endTime.getSeconds()})
+					</div>	
 				</div>
 			)
 		});
@@ -86,8 +89,55 @@ function App() {
 		</div>;
 	}
 
-	const outputPaper = (data) => {
-		console.log(data);
+	const outputTable = (paragraphs, scripts) => {
+		const outputParagraphs = paragraphs.map((paragraph, idx) => {
+			return (
+				<div style={{
+					display:  "flex",
+					gap: 10,
+					margin: 10,
+				}}>
+					{idx}
+					<div>
+						{paragraph}
+					</div>
+				</div>
+			)
+		});
+
+		const outputScripts = scripts.map((script, idx) => {
+			return (
+				<div style={{
+					display:  "block",
+					gap: 10,
+					margin: 10,
+				}}>
+					{idx}
+					<div>
+						{script}
+					</div>
+				</div>
+			)
+		});
+
+		return <div style={{
+			display: "flex",
+			flexDirection: "row",
+			textAlign: "left",
+			margin: 20,
+		}}>
+			<div style={{
+				width: "50%",
+			}}>
+				{outputParagraphs}
+			</div>
+			
+			<div style={{
+				width: "50%",
+			}}>
+				{outputScripts}
+			</div>
+		</div>
 	}
 	
 	useEffect(()=>{
@@ -106,7 +156,7 @@ function App() {
 				{outputSlideThumbnails(data)}
 			</div>
 			<div>
-				{outputPaper(data)};
+				{outputTable(paragraphs, scripts)}
 			</div>
 		</div>
 	);

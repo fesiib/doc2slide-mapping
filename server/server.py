@@ -1,65 +1,53 @@
+import os
+
 import json
 from flask import Flask
 from flask_cors import CORS
 from flask import request
-import glob
+
 import pandas as pd
 
 app = Flask(__name__)
 CORS(app)
 
-def readFile(f, ext) :
-    if ext == 'txt' :
-        retValue = []
-
+def readTXT(path):
+    paragraphs = []
+    with open(path, 'r') as f:
         while True:
             line = f.readline()
-            if not line: 
+            if not line:
                 break
+            line = line.strip()
+            if line == "":
+                continue
+            paragraphs.append(line)
+    return paragraphs
 
-            retValue.append(line.strip())
+def readJSON(path):
+    obj = {}
+    with open(path, 'r') as f:
+        encoded = f.read()
+        obj = json.loads(encoded)
+    return obj
 
-        return retValue
-    else :
-        return pd.read_csv(f, header=None).to_numpy().tolist()
-
-        
+SLIDE_DATA_PATH = './slideMeta/slideData'        
 
 @app.route('/getData', methods=['POST'])
 def prediction():
-    paperParsedFilename = glob.glob("./paperParsed/*")
-    scriptParsedFilename= glob.glob("./scriptParsed/*")
-    scriptTimeFilename = glob.glob("./scriptTime/*")
-    #similarity = glob.glob("./similarity/*")
+    decoded = request.data.decode('utf-8')
+    requestJSON = json.loads(decoded)
+    presentationId = requestJSON["presentationId"]
 
-    print(paperParsedFilename)
-    print(scriptParsedFilename)
-    print(scriptTimeFilename)
-    #print(similarity)
+    parent_path = os.path.join(SLIDE_DATA_PATH, str(presentationId))
 
-    numFiles = len(paperParsedFilename)
+    paper_path = os.path.join(parent_path, 'paperData.txt')
+    script_path = os.path.join(parent_path, 'scriptData.txt')
+    data_path = os.path.join(parent_path, 'result.json')
 
-    returnValue = []
-
-    for i in range(1, numFiles+1) :
-        paperParsedFile = open('./paperParsed/' + str(i) + '.txt')
-        scriptParsedFile = open('./scriptParsed/' + str(i) + '.txt')
-        scriptTimeFile = open('./scriptTime/' + str(i) + '.txt')
-        #similarityFile = open('./similarity/' + str(i) + '.csv')
-
-        paperParsed = readFile(paperParsedFile, 'txt')
-        scriptParsed = readFile(scriptParsedFile, 'txt')
-        scriptTime = readFile(scriptTimeFile, 'txt')
-        #similarity = readFile('./similarity/' + str(i) + '.csv', 'csv')
-
-        returnValue.append({
-            'id': i,
-            'paper': paperParsed,
-            'script': scriptParsed,
-            #'similarity': similarity
-        })
-
-
-    return json.dumps(returnValue)
+    return json.dumps({
+        "paper": readTXT(paper_path),
+        "script": readTXT(script_path),
+        "data": readJSON(data_path)
+    })
 
 app.run(host='0.0.0.0', port=3555)
