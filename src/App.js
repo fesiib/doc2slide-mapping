@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import axios from 'axios'
 import {useState, useEffect} from 'react';
 import './App.css';
+import HeatMap from './components/HeatMap';
 
 const WIDTH = 500;
 const HEIGHT = WIDTH * 9 / 16;
@@ -145,6 +146,11 @@ function App() {
 	}, []);
 	return (
 		<div className="App">
+			<HeatMap 
+				data={data ? data.similarityTable : []}
+				paragraphs={paragraphs}
+				scripts={scripts}
+			/>
 			<h1> Presentation {presentationID} </h1>
 			<div style={{
 				textAlign: "left",

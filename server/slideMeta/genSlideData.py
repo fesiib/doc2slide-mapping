@@ -42,6 +42,7 @@ for index, row in dataFile.iterrows() :
         os.system("rm -rf slideImages")
 
         os.system("cp -rp ./slideData/" + str(index) + " ./slideImages")
+        
         os.system("python genJsonStructure.py")
     
         os.system("mv slideImages slideData")
@@ -52,7 +53,7 @@ for index, row in dataFile.iterrows() :
 
     cnt = cnt + 1
 
-    if index >= 5 :
+    if index >= 1:
         break
 
 cmd = 'echo \'{"presentationCnt": ' + str(cnt) + '}\' > slideData/summary.json'

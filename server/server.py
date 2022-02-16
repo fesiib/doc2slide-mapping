@@ -7,6 +7,10 @@ from flask import request
 
 import pandas as pd
 
+from processData import process
+
+SLIDE_DATA_PATH = './slideMeta/slideData'
+
 app = Flask(__name__)
 CORS(app)
 
@@ -18,8 +22,6 @@ def readTXT(path):
             if not line:
                 break
             line = line.strip()
-            if line == "":
-                continue
             paragraphs.append(line)
     return paragraphs
 
@@ -28,9 +30,7 @@ def readJSON(path):
     with open(path, 'r') as f:
         encoded = f.read()
         obj = json.loads(encoded)
-    return obj
-
-SLIDE_DATA_PATH = './slideMeta/slideData'        
+    return obj        
 
 @app.route('/getData', methods=['POST'])
 def prediction():
@@ -39,15 +39,16 @@ def prediction():
     presentationId = requestJSON["presentationId"]
 
     parent_path = os.path.join(SLIDE_DATA_PATH, str(presentationId))
+    parent_path_2 = os.path.join(SLIDE_DATA_PATH, str(presentationId))
 
     paper_path = os.path.join(parent_path, 'paperData.txt')
-    script_path = os.path.join(parent_path, 'scriptData.txt')
-    data_path = os.path.join(parent_path, 'result.json')
+    script_path = os.path.join(parent_path_2, 'scriptData.txt')
+    #data_path = os.path.join(parent_path, 'result.json')
 
     return json.dumps({
         "paper": readTXT(paper_path),
         "script": readTXT(script_path),
-        "data": readJSON(data_path)
+        "data": process(parent_path, parent_path_2),
     })
 
 app.run(host='0.0.0.0', port=3555)
