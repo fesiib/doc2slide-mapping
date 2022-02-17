@@ -1,11 +1,12 @@
 import json
 import os
+import re
 import numpy
 import sklearn
 import nltk
 from sentence_transformers import SentenceTransformer
 
-nltk.download('punkt')
+#nltk.download('punkt')
 
 model = SentenceTransformer('all-MiniLM-L6-v2')
 
@@ -30,6 +31,183 @@ def readFile(filename) :
     
     return retValue
 
+def getOutlineHyungyu(sectionData, topSections, script_sentence_range):
+    uniqueSections = []
+    for section in sectionData:
+        if section in SKIPPED_SECTIONS or section in uniqueSections:
+            continue
+        uniqueSections.append(section)
+
+    INF = (len(script_sentence_range) + 1) * 100
+    n = len(uniqueSections)
+
+    Table = [ [ (-INF, n, -1) for j in range(len(script_sentence_range))] for i in range(len(script_sentence_range)) ]
+
+    def getSegment(start, end):
+        if end - start < 2:
+            return (-INF, n)
+
+        scores = [0 for i in range(n)]
+        for i in range(start, end):
+            innerScores = [-INF for i in range(n)]
+            for topSection in topSections[i]:
+                pos = uniqueSections.index(topSection[0])
+                innerScores[pos] = max(innerScores[pos], topSection[2])
+            for j in range(n):
+                if innerScores[j] > 0:
+                    scores[j] += innerScores[j]
+        
+        result_section = -1
+        for i in range(n):
+            if result_section == -1 or scores[result_section] < scores[i]:
+                result_section = i
+
+        return (scores[result_section], result_section)
+
+    for i in range(len(script_sentence_range)) :
+        segResult = getSegment(0, i + 1)
+        Table[0][i] = (segResult[0], segResult[1], 0)
+
+    for i in range(1, len(script_sentence_range)):
+        segResult = getSegment(i, i + 1)
+        Table[i][i] = (Table[i-1][i-1][0] + segResult[0], segResult[1], i)
+
+        for j in range(i+1, len(script_sentence_range)) :
+            for k in range(i-1, j) :
+                cost = getSegment(k+1, j+1)
+                if Table[i][j][0] < Table[i-1][k][0] + cost[0]:
+                    Table[i][j] = (Table[i-1][k][0] + cost[0], cost[1], k + 1)
+
+    weight = []
+    for i in range(len(script_sentence_range)) :
+        weight.append(Table[i][len(script_sentence_range) - 1][0])
+
+    myMaxValue = -INF
+    optSegs = -1
+
+    for i in range(len(Table)) :
+        if myMaxValue < Table[i][len(script_sentence_range) - 1][0]:
+            myMaxValue = Table[i][len(script_sentence_range) - 1][0]
+            optSegs = i
+
+    finalResult = [ 0 for i in range(len(script_sentence_range)) ]
+
+    curSlide = len(script_sentence_range) - 1
+    print(myMaxValue, optSegs)
+
+    while optSegs > 0:
+        start = Table[optSegs][curSlide][2]
+        curSection = Table[optSegs][curSlide][1]
+
+        for i in range(start, curSlide + 1) :
+            finalResult[i] = curSection
+        
+        curSlide = start - 1
+        optSegs = optSegs - 1
+
+        if curSlide < 0 :
+            print("WHAT???? ERROR ERROR ERROR ERROR")
+            break
+
+    outline = []
+
+    outline.append({
+        'section': uniqueSections[finalResult[0]],
+        'startSlideIndex': 0,
+        'endSlideIndex': 0
+    })
+
+    for i in range(1, len(finalResult)) :
+        if outline[-1]['section'] != uniqueSections[finalResult[i]]:
+            outline.append({
+                'section': uniqueSections[finalResult[i]],
+                'startSlideIndex': i,
+                'endSlideIndex': i
+            })
+        else :
+            outline[-1]['endSlideIndex'] = i
+    return outline, weight
+
+def getOutlineMaskDP(sectionData, topSections, script_sentence_range):
+    uniqueSections = []
+    for section in sectionData:
+        if section in SKIPPED_SECTIONS or section in uniqueSections:
+            continue
+        uniqueSections.append(section)
+
+    n = len(uniqueSections)
+    m = len(script_sentence_range)
+    INF = (m + 1) * 100
+
+    dp = [[(-INF, n, -1) for j in range(m + 1)] for i in range(1 << n)]
+    dp[0][1] = (0, n)
+
+    for i in range(m):
+        print(i)
+        scores = [-INF for k in range(n)]
+        for j in range(i + 1, m + 1):
+            for topSection in topSections[j - 1]:
+                pos = uniqueSections.index(topSection[0])
+                scores[pos] = max(scores[pos], topSection[2])
+
+            for mask in range(0, (1 << n)):
+                if dp[mask][i][0] < 0:
+                    continue
+                for k in range (n):
+                    if mask & (1 << k) > 0:
+                        continue
+                    nmask = mask | (1 << k)
+                    if (dp[nmask][j][0] < dp[mask][i][0] + scores[k]):
+                        dp[nmask][j] = (scores[k], k, i)
+
+    recoverMask = 0
+    recoverSlideId = m
+
+    for mask in range(1 << n):
+        if dp[mask][recoverSlideId][0] > dp[recoverMask][recoverSlideId][0] \
+            or (bin(mask).count('1') < bin(recoverMask).count('1') and dp[mask][recoverSlideId][0] == dp[recoverMask][recoverSlideId][0]
+        ):
+            recoverMask = mask
+
+    outline = []
+    while recoverSlideId > 1:
+        print(recoverMask, recoverSlideId, dp[recoverMask][recoverSlideId])
+        sectionId = dp[recoverMask][recoverSlideId][1]
+        nextRecoverMask = recoverMask ^ (1 << sectionId)
+        nextRecoverSlideId = dp[recoverMask][recoverSlideId][2]
+        outline.append({
+            "section": uniqueSections[sectionId],
+            "startSlideIndex": nextRecoverSlideId,
+            "endSlideIndex": recoverSlideId - 1,
+        })
+        recoverMask = nextRecoverMask
+        recoverSlideId = nextRecoverSlideId
+    
+    return outline[::-1]
+
+def getOutlineSimple(topSections):
+    outline = []
+
+    for i in range(1, len(topSections)):
+        scores = {
+            "NO_SECTION": 0
+        }
+        for j in range(0, len(topSections[i])):
+            if topSections[i][j][0] not in scores:
+                scores[topSections[i][j][0]] = 0    
+            scores[topSections[i][j][0]] = max(scores[topSections[i][j][0]], topSections[i][j][2])
+        section = "NO_SECTION"
+        for (k, v) in scores.items():
+            if v > scores[section]:
+                section = k
+        outline.append({
+            "section": section,
+            "startSlideIndex": i,
+            "endSlideIndex": i,
+        })
+    return outline
+
+
 def process(paper_path, script_path):
     timestamp = open(os.path.join(script_path, "frameTimestamp.txt"), "r")
 
@@ -53,12 +231,9 @@ def process(paper_path, script_path):
     result['slideInfo']= []
 
     ocrResult = []
-
     for i in range(len(timestampData)) :
         ocrFile = open(os.path.join(script_path, "ocr", str(i) + ".jpg.txt"), "r")
-
         ocrResult.append('')
-
         while True :
             line = ocrFile.readline()
             if not line :
@@ -66,19 +241,21 @@ def process(paper_path, script_path):
             res = line.split('\t')[-1].strip()
             if len(res) > 0 :
                 ocrResult[-1] = ocrResult[-1] + '. ' + res
-
-
-    # Concatenating Nearby Scripts
-    # interval = 4
-    # __scriptData = []
-    # for j in range(len(scriptData)) :
-    #     __scriptData.append(' '.join(scriptData[max(j-interval, 0):min(j+interval, len(scriptData))]))
+    
+    for i in range(len(timestampData)) :
+        result['slideInfo'].append({
+            "index": i,
+            "startTime": timestampData[i][0],
+            "endTime": timestampData[i][1],
+            "script": scriptData[i],
+            "ocrResult": ocrResult[i],
+        })
 
     # Statement-level for Scripts
     __scriptData = []
     script_sentence_range = []
-    for script, ocr in zip(scriptData, ocrResult):
-        if (len(__scriptData) > 150):
+    for i, (script, ocr) in enumerate(zip(scriptData, ocrResult)):
+        if (len(__scriptData) > 300):
             break
         sentences = nltk.sent_tokenize(script)
         #sentences.extend(nltk.sent_tokenize(ocr))
@@ -88,12 +265,9 @@ def process(paper_path, script_path):
     __paperData = []
     paper_sentence_id = []
     for i, paragraph in enumerate(paperData):
-        # if (sectionData[i].startswith("5 STUDY 2:") is False and sectionData[i].startswith("Sources") is False):
-        #     continue
-
         if (sectionData[i].strip() in SKIPPED_SECTIONS or len(nltk.word_tokenize(paragraph)) < MIN_PARAGRAPH_LENGTH):
             continue
-        if (len(__paperData) > 500):
+        if (len(__paperData) > 300):
             break
         sentences = nltk.sent_tokenize(paragraph)
         for j in range(len(__paperData), len(sentences) + len(__paperData)):
@@ -102,7 +276,6 @@ def process(paper_path, script_path):
 
     print("Sentences# {} Scripts# {}".format(len(__scriptData), len(scriptData)))
     print("Sentences# {} Paragraphs# {}".format(len(__paperData), len(paperData)))
-    
 
     paper_embeddings = model.encode(__paperData)
     script_embeddings = model.encode(__scriptData)
@@ -111,7 +284,6 @@ def process(paper_path, script_path):
     val_threshold = 0.4
     
     similarity = sklearn.metrics.pairwise.cosine_similarity(paper_embeddings, script_embeddings)
-    ###similarity = (similarity - numpy.min(similarity) / (numpy.max(similarity) - numpy.min(similarity)))
     trans = numpy.transpose(similarity)
     
     __sim = []
@@ -139,11 +311,6 @@ def process(paper_path, script_path):
         for j in range(len(__sim[i])):
             overall[i][j] = max(__sim[i][j], __sim_t[i][j])
 
-
-    # for i in range(len(similarity)) :
-    #     # overall.append([ min(__sim[i][j], __sim_t[i][j]) for j in range(len(similarity[i]))])
-    #     overall.append([ __sim[i][j] for j in range(len(similarity[i]))]) # less strict version
-
     print(overall.shape)
 
     # y-axis : slides, x-axis : paper
@@ -159,151 +326,22 @@ def process(paper_path, script_path):
             for pos in args:
                 sectionScores[paper_sentence_id[pos]] += overall[pos][j]
         sectionIds = numpy.argsort(sectionScores)[-threshold:]
-        sections = [(sectionData[sectionId], int(sectionId), sectionScores[sectionId]) for sectionId in sectionIds]
+        sections = []
+        for sectionId in sectionIds:
+            if sectionData[sectionId] in SKIPPED_SECTIONS:
+                continue
+            sections.append((sectionData[sectionId], int(sectionId), sectionScores[sectionId]))
 
         topSections.append(sections)
         script_sentence_start += script_sentence_range[i]
     
+    result['topSections'] = topSections
 
-    # Table = [ [ 0 for j in range(len(__scriptData))] for i in range(len(__scriptData)) ]
-
-    # def getSegment(topSections, start, end) :
-    #     if end - start + 1 <= 4 :
-    #         return ('', -99)
-
-    #     myList = []
-
-    #     for j in range(start, end+1) :
-    #         myList.append(topSections[j][0])
-    #         myList.append(topSections[j][1])
-    #         myList.append(topSections[j][2])
-
-    #     myList = list(set(myList))
-    #     value = [ 0 for i in range(len(myList)) ]
-
-    #     result_section = ''
-    #     result_value = -99
-
-    #     for i in range(len(myList)) :
-    #         temp = 0
-    #         if myList[i] == "NO_SECTION_FOUND" :
-    #             continue
-
-    #         for j in range(start, end+1) :
-    #             if topSections[j][0] == myList[i] :
-    #                 temp = temp + 3
-    #             if topSections[j][1] == myList[i] :
-    #                 temp = temp + 2
-    #             if topSections[j][2] == myList[i] :
-    #                 temp = temp + 1
-
-    #         if result_value < temp :
-    #             result_value = temp
-    #             result_section = myList[i]
-
-    #     return (result_section, result_value)
-
-    # for i in range(len(__scriptData)) :
-    #     segResult = getSegment(topSections, 0, i)
-
-    #     Table[0][i] = (0, segResult[0], segResult[1])
-
-    # for i in range(1, len(__scriptData)) :
-    #     Table[i][i] = (i, topSections[i][0], 3 + Table[i-1][i-1][2])
-
-    #     for j in range(i+1, len(__scriptData)) :
-    #         Table[i][j] = (-1, -1, -99)
-
-    #         for k in range(i-1, j) :
-    #             cost = getSegment(topSections, k+1, j)
-
-    #             if Table[i][j][2] < Table[i-1][k][2] + cost[1] :
-    #                 Table[i][j] = (k, cost[0], Table[i-1][k][2] + cost[1])
-
-    # myMaxValue = -99
-    # myMaxIndex = -1
-
-    # weight = []
-
-    # for i in range(len(__scriptData)) :
-    #     weight.append(Table[i][len(__scriptData)-1][2])
-
-    # for i in range(len(Table)) :
-    #     if myMaxValue < Table[i][len(__scriptData)-1][2] :
-    #         myMaxValue = Table[i][len(__scriptData)-1][2]
-    #         myMaxIndex = i
-
-    # finalResult = [ '' for i in range(len(__scriptData)) ]
-
-    # cur = myMaxIndex
-    # curSlide = len(__scriptData)-1
-
-    # while True :
-    #     start = Table[cur][curSlide][0]
-    #     curSection = Table[cur][curSlide][1]
-
-    #     for i in range(start, curSlide+1) :
-    #         finalResult[i] = curSection
-
-    #     if start <= 0 :
-    #         break
-
-    #     curSlide = Table[cur][curSlide][0] - 1
-    #     cur = cur - 1
-
-    #     if cur < 0 :
-    #         print("WHAT???? ERROR ERROR ERROR ERROR")
-    #         break
-
-
-    outline = []
-
-    for i in range(1, len(topSections)):
-        scores = {
-            "NO_SECTION": 0
-        }
-        for j in range(0, len(topSections[i])):
-            if topSections[i][j][0] not in scores:
-                scores[topSections[i][j][0]] = 0    
-            scores[topSections[i][j][0]] += topSections[i][j][2]
-        section = "NO_SECTION"
-        for (k, v) in scores.items():
-            if v > scores[section]:
-                section = k
-        outline.append({
-            "section": section,
-            "startSlideIndex": i,
-            "endSlideIndex": i,
-        })
-
-    # outline.append({
-    #     'section': finalResult[0],
-    #     'startSlideIndex': 0,
-    #     'endSlideIndex': 0
-    #     })
-
-    # for i in range(1, len(finalResult)) :
-    #     if outline[-1]['section'] != finalResult[i] :
-    #         outline.append({
-    #             'section': finalResult[i],
-    #             'startSlideIndex': i,
-    #             'endSlideIndex': i
-    #         })
-    #     else :
-    #         outline[-1]['endSlideIndex'] = i
-
-    for i in range(len(timestampData)) :
-        result['slideInfo'].append({
-            "index": i,
-            "startTime": timestampData[i][0],
-            "endTime": timestampData[i][1],
-            "script": scriptData[i],
-            "ocrResult": ocrResult[i],
-        })
+    
+    outline, weight = getOutlineHyungyu(sectionData, topSections, script_sentence_range)
 
     result['outline'] = outline
-    result['topSections'] = topSections
-    #result['weight'] = weight
+    result['weight'] = weight
 
     result["similarityTable"] = numpy.float64(overall).tolist()
     result["scriptSentences"] = __scriptData

@@ -60,15 +60,21 @@ function HeatMap(props) {
                 flexDirection: "row",
                 textAlign: "left",
                 margin: 20,
+                gap: 20,
             }}>
                 <div style={{
-                    width: "50%",
+                    width: "10%",
+                }}>
+                    {paragraph !== null ? `Score: ${data[paragraph][script]}` : "?"}
+                </div>
+                <div style={{
+                    width: "45%",
                 }}>
                     {paragraph !== null ? `${paragraph} ${paragraphs[paragraph]}` : "Select"}
                 </div>
                 
                 <div style={{
-                    width: "50%",
+                    width: "45%",
                 }}>
                     {script !== null ? `${script} ${scripts[script]}` : "Select"}
                 </div>

@@ -33,7 +33,7 @@ function App() {
 		}
 		const output = data.outline.map((val, idx) => {
 			return (<li key={idx}>
-				{val.section} ({val.startSlideIndex} - {val.endSlideIndex})
+				({val.startSlideIndex} - {val.endSlideIndex}) {"\t"} {val.section} 
 			</li>);
 		});
 		return (<ol>
