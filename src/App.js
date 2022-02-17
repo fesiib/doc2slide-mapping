@@ -36,9 +36,9 @@ function App() {
 				{val.section} ({val.startSlideIndex} - {val.endSlideIndex})
 			</li>);
 		});
-		return (<ul>
+		return (<ol>
 			{output}
-		</ul>);
+		</ol>);
 	}
 
 	const outputSlideThumbnails = (data) => {
@@ -148,8 +148,8 @@ function App() {
 		<div className="App">
 			<HeatMap 
 				data={data ? data.similarityTable : []}
-				paragraphs={paragraphs}
-				scripts={scripts}
+				paragraphs={data ? data.paperSentences : []}
+				scripts={data ? data.scriptSentences : []}
 			/>
 			<h1> Presentation {presentationID} </h1>
 			<div style={{

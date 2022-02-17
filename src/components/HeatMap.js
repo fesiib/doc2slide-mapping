@@ -50,8 +50,8 @@ function HeatMap(props) {
                         };
                     }}
                     onClick={(x, y) => {
-                        setParagraph(y);
-                        setScript(x);
+                        setParagraph(x);
+                        setScript(y);
                     }}
                 />
             </div>
