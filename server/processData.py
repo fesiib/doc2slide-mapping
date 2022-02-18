@@ -1,19 +1,24 @@
 import json
 import os
-import re
 import numpy
 import sklearn
-import nltk
+
+import spacy
+
+from nltk.tokenize import sent_tokenize, word_tokenize
+
 from sentence_transformers import SentenceTransformer
+
+from string import ascii_lowercase, punctuation, digits
 
 #nltk.download('punkt')
 
-model = SentenceTransformer('all-MiniLM-L6-v2')
-
 SKIPPED_SECTIONS = [
     "CCS CONCEPTS",
+    "KEYWORDS",
     "ACM Reference Format:",
     "REFERENCES",
+    "ACKNOWLEDGMENTS"
 ]
 MIN_PARAGRAPH_LENGTH = 10
     
@@ -31,10 +36,159 @@ def readFile(filename) :
     
     return retValue
 
+def is_section_skipped(section):
+    for skipped_section in SKIPPED_SECTIONS:
+        if skipped_section in section:
+            return True
+    return False
+
+def makeLemma(token):
+    return token.lemma_.lower().strip()
+
+def actual_word(word):
+    for ch in word:
+        if ch not in ascii_lowercase and ch not in digits:
+            return False
+    return True
+
+def getKeywords(text, nlp):
+    STOP_WORDS = spacy.lang.en.stop_words.STOP_WORDS
+    tokens = nlp(text)
+    tokens = [ makeLemma(word) for word in tokens if word.lemma_ != "-PRON-"]
+    tokens = [ word for word in tokens if word not in STOP_WORDS and word not in punctuation]
+    tokens = [ word for word in tokens if actual_word(word)]
+
+    return list(set(tokens))
+
+def applyThresholds(array_2d, top_k, val_threshold):
+    ret_array = []
+
+    for i in range(len(array_2d)) :
+        args = numpy.argsort(array_2d[i])[-top_k:]
+        prob = array_2d[i][args[0]]
+        prob = max(prob, val_threshold)
+
+        ret_array.append([val if val >= prob else 0 for val in array_2d[i]])
+    
+    return ret_array
+
+def getSimilarityEmbedding(paperData, scriptData, sectionData, paper_sentence_id, script_sentence_range):
+    model = SentenceTransformer('all-MiniLM-L6-v2')
+
+    paper_embeddings = model.encode(paperData)
+    script_embeddings = model.encode(scriptData)
+
+    top_k = 20
+    val_threshold = 0.0
+    
+    similarity = sklearn.metrics.pairwise.cosine_similarity(paper_embeddings, script_embeddings)
+    trans = numpy.transpose(similarity)
+    
+    __sim = applyThresholds(similarity, top_k, val_threshold)
+    __sim_t = applyThresholds(trans, top_k, val_threshold)
+
+    __sim_t = numpy.transpose(__sim_t)
+
+    overall = numpy.zeros((len(__sim), len(__sim[0])))
+
+    for i in range(len(__sim)):
+        for j in range(len(__sim[i])):
+            overall[i][j] = max(__sim[i][j], __sim_t[i][j])
+
+    # y-axis : slides, x-axis : paper
+
+    topSections = []
+
+    script_sentence_start = 0
+
+    for i in range(len(script_sentence_range)):
+        sectionScores = numpy.zeros(len(sectionData), dtype=numpy.float64)
+        for j in range(script_sentence_start, script_sentence_start + script_sentence_range[i]):
+            args = numpy.argsort(overall[:, j])[-top_k:]
+            for pos in args:
+                sectionScores[paper_sentence_id[pos]] += overall[pos][j]
+        sectionIds = numpy.argsort(sectionScores)[-top_k:]
+        sections = []
+        for sectionId in sectionIds:
+            if is_section_skipped(sectionData[sectionId]):
+                continue
+            sections.append((sectionData[sectionId], int(sectionId), sectionScores[sectionId]))
+
+        topSections.append(sections)
+        script_sentence_start += script_sentence_range[i]
+    
+    return overall, topSections
+
+
+def getSimilarityKeywords(paperData, scriptData, sectionData, paper_sentence_id, script_sentence_range):
+    nlp = spacy.load("en_core_web_sm")
+    similarity = numpy.zeros((len(paperData), len(scriptData)))
+
+    paperKeywords = []
+    scriptKeywords = []
+
+    top_k = 20
+    val_threshold = 4
+    
+    for paper_sentence in paperData:
+        paperKeywords.append(getKeywords(paper_sentence, nlp))
+
+    
+    for script_sentence in scriptData:
+        scriptKeywords.append(getKeywords(script_sentence, nlp))
+
+    for i in range(len(paperKeywords)):
+        for j in range(len(scriptKeywords)):
+            intersection = 0
+            union = 0
+            for keyword in paperKeywords[i]:
+                if keyword in scriptKeywords[j]:
+                    intersection += 1
+            union = (len(paperKeywords[i]) + len(scriptKeywords[j])) - intersection
+            ## intersection over union
+            similarity[i][j] = 0
+            if union > 0:
+                similarity[i][j] = intersection / union
+
+    similarity_t = numpy.transpose(similarity)
+
+    #similarity = applyThresholds(similarity, top_k, val_threshold)
+    #similarity_t = applyThresholds(similarity_t, top_k, val_threshold)
+
+    similarity_t = numpy.transpose(similarity_t)
+
+    overall = numpy.zeros((len(similarity), len(similarity[0])))
+
+    for i in range(len(similarity)):
+        for j in range(len(similarity[i])):
+            overall[i][j] = max(similarity[i][j], similarity_t[i][j])
+
+    topSections = []
+
+    script_sentence_start = 0
+
+    for i in range(len(script_sentence_range)):
+        sectionScores = numpy.zeros(len(sectionData), dtype=numpy.float64)
+        for j in range(script_sentence_start, script_sentence_start + script_sentence_range[i]):
+            args = numpy.argsort(overall[:, j]) [-top_k:]
+            for pos in args:
+                sectionScores[paper_sentence_id[pos]] += overall[pos][j]
+        sectionIds = numpy.argsort(sectionScores) [-top_k:]
+        sections = []
+        for sectionId in sectionIds:
+            if is_section_skipped(sectionData[sectionId]):
+                continue
+            sections.append((sectionData[sectionId], int(sectionId), sectionScores[sectionId]))
+
+        topSections.append(sections)
+        script_sentence_start += script_sentence_range[i]
+    
+    return overall, topSections, paperKeywords, scriptKeywords
+
 def getOutlineHyungyu(sectionData, topSections, script_sentence_range):
     uniqueSections = []
     for section in sectionData:
-        if section in SKIPPED_SECTIONS or section in uniqueSections:
+        if is_section_skipped(section) or section in uniqueSections:
             continue
         uniqueSections.append(section)
 
@@ -56,7 +210,6 @@ def getOutlineHyungyu(sectionData, topSections, script_sentence_range):
             for j in range(n):
                 if innerScores[j] > 0:
                     scores[j] += innerScores[j]
-        
         result_section = -1
         for i in range(n):
             if result_section == -1 or scores[result_section] < scores[i]:
@@ -64,13 +217,12 @@ def getOutlineHyungyu(sectionData, topSections, script_sentence_range):
 
         return (scores[result_section], result_section)
 
-    for i in range(len(script_sentence_range)) :
-        segResult = getSegment(0, i + 1)
-        Table[0][i] = (segResult[0], segResult[1], 0)
+    Table[0][0] = (0, n, 0)
 
     for i in range(1, len(script_sentence_range)):
         segResult = getSegment(i, i + 1)
-        Table[i][i] = (Table[i-1][i-1][0] + segResult[0], segResult[1], i)
+
+        Table[i][i] = (max(Table[i-1][i-1][0] + segResult[0], Table[i][i][0]), segResult[1], i)
 
         for j in range(i+1, len(script_sentence_range)) :
             for k in range(i-1, j) :
@@ -112,7 +264,7 @@ def getOutlineHyungyu(sectionData, topSections, script_sentence_range):
     outline = []
 
     outline.append({
-        'section': uniqueSections[finalResult[0]],
+        'section': "NO_SECTION",
         'startSlideIndex': 0,
         'endSlideIndex': 0
     })
@@ -131,7 +283,7 @@ def getOutlineHyungyu(sectionData, topSections, script_sentence_range):
 def getOutlineMaskDP(sectionData, topSections, script_sentence_range):
     uniqueSections = []
     for section in sectionData:
-        if section in SKIPPED_SECTIONS or section in uniqueSections:
+        if is_section_skipped(section) or section in uniqueSections:
             continue
         uniqueSections.append(section)
 
@@ -207,6 +359,27 @@ def getOutlineSimple(topSections):
         })
     return outline
 
+def fixSectionTitles(section_titles):
+    ret_titles = []
+
+    title_num = 0
+
+    last_section = None
+
+    def is_main_section(title):
+        if title[0] in digits or title.isupper() is True:
+            return True
+        return False
+
+
+    for title in section_titles:
+        if is_main_section(title) or last_section is None:
+            ret_titles.append(title)
+            last_section = title
+        else:
+            ret_titles.append(last_section) 
+    return ret_titles
+
 
 def process(paper_path, script_path):
     timestamp = open(os.path.join(script_path, "frameTimestamp.txt"), "r")
@@ -217,6 +390,8 @@ def process(paper_path, script_path):
     paperData = readFile(os.path.join(paper_path, "paperData.txt"))
     sectionData = readFile(os.path.join(paper_path, "sectionData.txt"))
     scriptData = readFile(os.path.join(script_path, "scriptData.txt"))
+
+    sectionData = fixSectionTitles(sectionData)
 
     while True :
         line = timestamp.readline()
@@ -255,21 +430,21 @@ def process(paper_path, script_path):
     __scriptData = []
     script_sentence_range = []
     for i, (script, ocr) in enumerate(zip(scriptData, ocrResult)):
-        if (len(__scriptData) > 300):
-            break
-        sentences = nltk.sent_tokenize(script)
-        #sentences.extend(nltk.sent_tokenize(ocr))
+        # if (len(__scriptData) > 10):
+        #     break
+        sentences = sent_tokenize(script)
+        sentences.append(ocr)
         script_sentence_range.append(len(sentences))
         __scriptData.extend(sentences)
 
     __paperData = []
     paper_sentence_id = []
     for i, paragraph in enumerate(paperData):
-        if (sectionData[i].strip() in SKIPPED_SECTIONS or len(nltk.word_tokenize(paragraph)) < MIN_PARAGRAPH_LENGTH):
+        if (is_section_skipped(sectionData[i]) or len(word_tokenize(paragraph)) < MIN_PARAGRAPH_LENGTH):
             continue
-        if (len(__paperData) > 300):
-            break
-        sentences = nltk.sent_tokenize(paragraph)
+        # if (len(__paperData) > 10):
+        #     break
+        sentences = sent_tokenize(paragraph)
         for j in range(len(__paperData), len(sentences) + len(__paperData)):
             paper_sentence_id.append(i)
         __paperData.extend(sentences)
@@ -277,75 +452,21 @@ def process(paper_path, script_path):
     print("Sentences# {} Scripts# {}".format(len(__scriptData), len(scriptData)))
     print("Sentences# {} Paragraphs# {}".format(len(__paperData), len(paperData)))
 
-    paper_embeddings = model.encode(__paperData)
-    script_embeddings = model.encode(__scriptData)
+    #overall, topSections = getSimilarityEmbedding(__paperData, __scriptData, sectionData, paper_sentence_id, script_sentence_range)
+    overall, topSections, paperKeywords, scriptKeywords = getSimilarityKeywords(__paperData, __scriptData, sectionData, paper_sentence_id, script_sentence_range)
 
-    threshold = 10
-    val_threshold = 0.4
-    
-    similarity = sklearn.metrics.pairwise.cosine_similarity(paper_embeddings, script_embeddings)
-    trans = numpy.transpose(similarity)
-    
-    __sim = []
-    __sim_t = []
-    
-    for i in range(len(similarity)) :
-        top_k = numpy.argsort(similarity[i])[-threshold:]
-        prob = similarity[i][top_k[0]]
-        prob = max(prob, val_threshold)
-
-        __sim.append([val if val >= prob else 0 for idx, val in enumerate(similarity[i])])
-
-    for i in range(len(trans)) :
-        top_k = numpy.argsort(trans[i])[-threshold:]
-        prob = trans[i][top_k[0]]
-        prob = max(prob, val_threshold)
-
-        __sim_t.append([val if val >= prob else 0 for idx, val in enumerate(trans[i])])
-
-    __sim_t = numpy.transpose(__sim_t)
-
-    overall = numpy.zeros((len(__sim), len(__sim[0])))
-
-    for i in range(len(__sim)):
-        for j in range(len(__sim[i])):
-            overall[i][j] = max(__sim[i][j], __sim_t[i][j])
-
-    print(overall.shape)
-
-    # y-axis : slides, x-axis : paper
-
-    topSections = []
-
-    script_sentence_start = 0
-
-    for i in range(len(script_sentence_range)):
-        sectionScores = numpy.zeros(len(sectionData), dtype=numpy.float64)
-        for j in range(script_sentence_start, script_sentence_start + script_sentence_range[i]):
-            args = numpy.argsort(overall[:, j])[-threshold:]
-            for pos in args:
-                sectionScores[paper_sentence_id[pos]] += overall[pos][j]
-        sectionIds = numpy.argsort(sectionScores)[-threshold:]
-        sections = []
-        for sectionId in sectionIds:
-            if sectionData[sectionId] in SKIPPED_SECTIONS:
-                continue
-            sections.append((sectionData[sectionId], int(sectionId), sectionScores[sectionId]))
-
-        topSections.append(sections)
-        script_sentence_start += script_sentence_range[i]
-    
-    result['topSections'] = topSections
-
-    
     outline, weight = getOutlineHyungyu(sectionData, topSections, script_sentence_range)
+
+    overall = overall / numpy.amax(overall)
+
+    result['topSections'] = topSections
 
     result['outline'] = outline
     result['weight'] = weight
 
     result["similarityTable"] = numpy.float64(overall).tolist()
-    result["scriptSentences"] = __scriptData
-    result["paperSentences"] = __paperData
+    result["scriptSentences"] = scriptKeywords
+    result["paperSentences"] = paperKeywords
 
     jsonFile = open(os.path.join(paper_path, "result.json"), "w")
     jsonFile.write(json.dumps(result))
@@ -353,4 +474,4 @@ def process(paper_path, script_path):
 
 if __name__ == "__main__":
     output = process('./slideMeta/slideData/0', './slideMeta/slideData/0')
-    #print(output)
+    print(output["outline"])
