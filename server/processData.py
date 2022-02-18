@@ -280,27 +280,29 @@ def getOutlineHyungyu(sectionData, topSections, script_sentence_range):
             outline[-1]['endSlideIndex'] = i
     return outline, weight
 
-def getOutlineMaskDP(sectionData, topSections, script_sentence_range):
+def getOutlineMaskDP(sectionData, topSections, script_sentence_range, target_mask = None):
     uniqueSections = []
     for section in sectionData:
         if is_section_skipped(section) or section in uniqueSections:
             continue
         uniqueSections.append(section)
 
+    for i, section in enumerate(uniqueSections):
+        print(i, ":", section)
+
     n = len(uniqueSections)
     m = len(script_sentence_range)
     INF = (m + 1) * 100
 
-    dp = [[(-INF, n, -1) for j in range(m + 1)] for i in range(1 << n)]
-    dp[0][1] = (0, n)
+    dp = [[(-INF, n, -1) for j in range(m)] for i in range(1 << n)]
+    dp[0][0] = (0, n)
 
     for i in range(m):
-        print(i)
-        scores = [-INF for k in range(n)]
-        for j in range(i + 1, m + 1):
-            for topSection in topSections[j - 1]:
+        scores = [0 for k in range(n)]
+        for j in range(i + 1, m):
+            for topSection in topSections[j]:
                 pos = uniqueSections.index(topSection[0])
-                scores[pos] = max(scores[pos], topSection[2])
+                scores[pos] += topSection[2]
 
             for mask in range(0, (1 << n)):
                 if dp[mask][i][0] < 0:
@@ -310,27 +312,34 @@ def getOutlineMaskDP(sectionData, topSections, script_sentence_range):
                         continue
                     nmask = mask | (1 << k)
                     if (dp[nmask][j][0] < dp[mask][i][0] + scores[k]):
-                        dp[nmask][j] = (scores[k], k, i)
+                        dp[nmask][j] = (dp[mask][i][0] + scores[k], k, i)
 
-    recoverMask = 0
-    recoverSlideId = m
+    recoverMask = target_mask
+    recoverSlideId = m - 1
 
-    for mask in range(1 << n):
-        if dp[mask][recoverSlideId][0] > dp[recoverMask][recoverSlideId][0] \
-            or (bin(mask).count('1') < bin(recoverMask).count('1') and dp[mask][recoverSlideId][0] == dp[recoverMask][recoverSlideId][0]
-        ):
-            recoverMask = mask
 
+    if recoverMask is None or dp[recoverMask][recoverSlideId][0] < 0:
+        recoverMask = 0
+        for mask in range(1 << n):
+            #print(mask, dp[mask][recoverSlideId])
+            if dp[mask][recoverSlideId][0] > dp[recoverMask][recoverSlideId][0] \
+                or (bin(mask).count('1') < bin(recoverMask).count('1') and dp[mask][recoverSlideId][0] == dp[recoverMask][recoverSlideId][0]
+            ):
+                recoverMask = mask
+
+    if target_mask is not None:
+        print (bin(target_mask), bin(recoverMask), dp[target_mask][recoverSlideId][0])
+    
     outline = []
-    while recoverSlideId > 1:
+    while recoverSlideId > 0:
         print(recoverMask, recoverSlideId, dp[recoverMask][recoverSlideId])
         sectionId = dp[recoverMask][recoverSlideId][1]
         nextRecoverMask = recoverMask ^ (1 << sectionId)
         nextRecoverSlideId = dp[recoverMask][recoverSlideId][2]
         outline.append({
             "section": uniqueSections[sectionId],
-            "startSlideIndex": nextRecoverSlideId,
-            "endSlideIndex": recoverSlideId - 1,
+            "startSlideIndex": nextRecoverSlideId + 1,
+            "endSlideIndex": recoverSlideId,
         })
         recoverMask = nextRecoverMask
         recoverSlideId = nextRecoverSlideId
@@ -455,7 +464,7 @@ def process(paper_path, script_path):
     #overall, topSections = getSimilarityEmbedding(__paperData, __scriptData, sectionData, paper_sentence_id, script_sentence_range)
     overall, topSections, paperKeywords, scriptKeywords = getSimilarityKeywords(__paperData, __scriptData, sectionData, paper_sentence_id, script_sentence_range)
 
-    outline, weight = getOutlineHyungyu(sectionData, topSections, script_sentence_range)
+    outline, weight = getOutlineMaskDP(sectionData, topSections, script_sentence_range)
 
     overall = overall / numpy.amax(overall)
 
