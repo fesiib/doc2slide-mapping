@@ -1,0 +1,68 @@
+CCS CONCEPTS
+KEYWORDS
+ACM Reference Format:
+ACM Reference Format:
+1 INTRODUCTION
+1 INTRODUCTION
+1 INTRODUCTION
+2 RELATEDWORK
+2 RELATEDWORK
+2 RELATEDWORK
+2 RELATEDWORK
+3 PILOT STUDY
+3 PILOT STUDY
+3 PILOT STUDY
+3 PILOT STUDY
+4 EXPERIMENTAL EVALUATION
+Participants
+Participants
+Participants
+Devices
+Devices
+Devices
+Devices
+Devices
+Devices
+Devices
+Devices
+Procedure
+Procedure
+Procedure
+Measures
+Measures
+Measures
+Hypotheses
+5 RESULTS
+5 RESULTS
+NASA Task Load Index
+Participant Preference
+6 DISCUSSION
+6 DISCUSSION
+6 DISCUSSION
+6 DISCUSSION
+6 DISCUSSION
+6 DISCUSSION
+6 DISCUSSION
+6 DISCUSSION
+Synthesis of Time and Errors: An Outline of Future Work
+Synthesis of Time and Errors: An Outline of Future Work
+Synthesis of Time and Errors: An Outline of Future Work
+Synthesis of Time and Errors: An Outline of Future Work
+Synthesis of Time and Errors: An Outline of Future Work
+Synthesis of Time and Errors: An Outline of Future Work
+Synthesis of Time and Errors: An Outline of Future Work
+Synthesis of Time and Errors: An Outline of Future Work
+Synthesis of Time and Errors: An Outline of Future Work
+7 CONCLUSION
+ACKNOWLEDGEMENTS
+REFERENCES
+REFERENCES
+REFERENCES
+REFERENCES
+REFERENCES
+REFERENCES
+REFERENCES
+REFERENCES
+REFERENCES
+REFERENCES
+REFERENCES

@@ -1,0 +1,134 @@
+CCS CONCEPTS
+KEYWORDS
+ACM Reference Format:
+1 INTRODUCTION
+1 INTRODUCTION
+1 INTRODUCTION
+1 INTRODUCTION
+1 INTRODUCTION
+1 INTRODUCTION
+1 INTRODUCTION
+1 INTRODUCTION
+2 BACKGROUND
+Graphical Perception
+Graphical Perception
+Graphical Perception
+Graphical Perception
+Graphical Perception
+Graphical Perception
+Graphical Perception
+Separability and Conjunctive Search
+Separability and Conjunctive Search
+Separability and Conjunctive Search
+Separability and Conjunctive Search
+Separability and Conjunctive Search
+3 CONDITIONS AND HYPOTHESES
+3 CONDITIONS AND HYPOTHESES
+3 CONDITIONS AND HYPOTHESES
+3 CONDITIONS AND HYPOTHESES
+3 CONDITIONS AND HYPOTHESES
+3 CONDITIONS AND HYPOTHESES
+3 CONDITIONS AND HYPOTHESES
+3 CONDITIONS AND HYPOTHESES
+3 CONDITIONS AND HYPOTHESES
+3 CONDITIONS AND HYPOTHESES
+3 CONDITIONS AND HYPOTHESES
+4 GENERAL METHODS
+Stimuli
+Stimuli
+Stimuli
+Stimuli
+Stimuli
+Stimuli
+Stimuli
+Procedure
+Procedure
+Participant Recruitment
+Analysis
+5 SHAPE AND COLOR
+Experiment One: Effects of Shape on Color
+Experiment One: Effects of Shape on Color
+Experiment One: Effects of Shape on Color
+Experiment One: Effects of Shape on Color
+Experiment One: Effects of Shape on Color
+Experiment One: Effects of Shape on Color
+Experiment One: Effects of Shape on Color
+Experiment One: Effects of Shape on Color
+Experiment One: Effects of Shape on Color
+Experiment One: Effects of Shape on Color
+Experiment One: Effects of Shape on Color
+Experiment One: Effects of Shape on Color
+Experiment One: Effects of Shape on Color
+Experiment One: Effects of Shape on Color
+Experiment One: Effects of Shape on Color
+Experiment One: Effects of Shape on Color
+Experiment Two: Effects of Color on Shape
+Experiment Two: Effects of Color on Shape
+Experiment Two: Effects of Color on Shape
+Experiment Two: Effects of Color on Shape
+Experiment Two: Effects of Color on Shape
+Experiment Two: Effects of Color on Shape
+Experiment Two: Effects of Color on Shape
+Experiment Two: Effects of Color on Shape
+Experiment Two: Effects of Color on Shape
+Experiment Two: Effects of Color on Shape
+6 SHAPE AND SIZE
+Experiment Three: Effects of Shape on Size
+Experiment Three: Effects of Shape on Size
+Experiment Three: Effects of Shape on Size
+Experiment Three: Effects of Shape on Size
+Experiment Three: Effects of Shape on Size
+Experiment Three: Effects of Shape on Size
+Experiment Three: Effects of Shape on Size
+Experiment Three: Effects of Shape on Size
+Experiment Three: Effects of Shape on Size
+Experiment Three: Effects of Shape on Size
+Experiment Three: Effects of Shape on Size
+Experiment Three: Effects of Shape on Size
+Experiment Three: Effects of Shape on Size
+Experiment Three: Effects of Shape on Size
+Experiment Three: Effects of Shape on Size
+Experiment Four: Effects of Size on Shape
+Experiment Four: Effects of Size on Shape
+Experiment Four: Effects of Size on Shape
+Experiment Four: Effects of Size on Shape
+Experiment Four: Effects of Size on Shape
+Experiment Four: Effects of Size on Shape
+Experiment Four: Effects of Size on Shape
+Experiment Four: Effects of Size on Shape
+7 DISCUSSION
+7 DISCUSSION
+7 DISCUSSION
+7 DISCUSSION
+7 DISCUSSION
+7 DISCUSSION
+7 DISCUSSION
+7 DISCUSSION
+7 DISCUSSION
+7 DISCUSSION
+7 DISCUSSION
+7 DISCUSSION
+Limitations and Future Work
+Limitations and Future Work
+Limitations and Future Work
+Limitations and Future Work
+Limitations and Future Work
+Limitations and Future Work
+Limitations and Future Work
+Implementation
+Implementation
+Implementation
+8 CONCLUSION
+9 ACKNOWLEDGMENTS
+REFERENCES
+REFERENCES
+REFERENCES
+REFERENCES
+REFERENCES
+REFERENCES
+REFERENCES
+REFERENCES
+REFERENCES
+REFERENCES
+REFERENCES
+REFERENCES

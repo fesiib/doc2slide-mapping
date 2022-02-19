@@ -1,0 +1,980 @@
+{
+  "abstractText": {
+    "page": 0,
+    "region": {
+      "x1": 53.43000030517578,
+      "x2": 295.7315673828125,
+      "y1": 262.9519348144531,
+      "y2": 499.5150146484375
+    },
+    "text": "ABSTRACT Annotating rich audio data is an essential aspect of training and evaluating machine listening systems. We approach this task in the context of temporally-complex urban soundscapes, which require multiple labels to identify overlapping sound sources. Typically this work is crowdsourced, and previous studies have shown that workers can quickly label audio with binary annotation for single classes. However, this approach can be difcult to scale when multiple passes with diferent focus classes are required to annotate data with multiple labels. In citizen science, where tasks are often image-based, annotation eforts typically label multiple classes simultaneously in a single pass. This paper describes our data collection on the Zooniverse citizen science platform, comparing the efciencies of diferent audio annotation strategies. We compared multiple-pass binary annotation, single-pass multi-label annotation, and a hybrid approach: hierarchical multi-pass multi-label annotation. We discuss our fndings, which support using multi-label annotation, with reference to volunteer citizen scientists’ motivations."
+  },
+  "figures": [{
+    "caption": "Figure 4: The quality metrics for each annotation task type while varying the the number of annotators per example and the minimum number of votes required for a positive label (i.e., voting threshold) during aggregation. The bands are the 95% CIs around the metrics, computed using 1000 bootstrap samples.",
+    "captionBoundary": {
+      "x1": 53.7979736328125,
+      "x2": 558.202880859375,
+      "y1": 470.0361328125,
+      "y2": 497.5898742675781
+    },
+    "figType": "Figure",
+    "imageText": ["Number", "of", "annotators", "1", "2", "3", "4", "5", "Binary", "Annotation", "1", "2", "3", "4", "5", "Minimum", "votes", "for", "a", "positive", "label", "Hierarchical", "Multi-label", "Annotation", "1", "2", "3", "4", "5", "Minimum", "votes", "for", "a", "positive", "label", "Multi-label", "Annotation", "ll", "Re", "ca", "1.0", "0.8", "0.6", "0.4", "0.2", "0.0", "1", "2", "3", "4", "5", "Minimum", "votes", "for", "a", "positive", "label", "Number", "of", "annotators", "1", "2", "3", "4", "5", "Binary", "Annotation", "1", "2", "3", "4", "5", "Minimum", "votes", "for", "a", "positive", "label", "Hierarchical", "Multi-label", "Annotation", "1", "2", "3", "4", "5", "Minimum", "votes", "for", "a", "positive", "label", "Multi-label", "Annotation", "isi", "on", "Pr", "ec", "1.0", "0.8", "0.6", "0.4", "0.2", "0.0", "1", "2", "3", "4", "5", "Minimum", "votes", "for", "a", "positive", "label", "Number", "of", "annotators", "1", "2", "3", "4", "5", "Binary", "Annotation", "1", "2", "3", "4", "5", "Minimum", "votes", "for", "a", "positive", "label", "Hierarchical", "Multi-label", "Annotation", "1", "2", "3", "4", "5", "Minimum", "votes", "for", "a", "positive", "label", "Multi-label", "Annotation", "re", "ea", "su", "F-", "m", "1.0", "0.8", "0.6", "0.4", "0.2", "0.0", "1", "2", "3", "4", "5", "Minimum", "votes", "for", "a", "positive", "label"],
+    "name": "4",
+    "page": 5,
+    "regionBoundary": {
+      "x1": 71.8121109008789,
+      "x2": 552.6453247070312,
+      "y1": 107.86039733886719,
+      "y2": 447.6429748535156
+    }
+  }, {
+    "caption": "Table 2: Mean time (in s) to complete a full 22-class annotation for each type of annotation task.",
+    "captionBoundary": {
+      "x1": 317.65899658203125,
+      "x2": 559.8056640625,
+      "y1": 146.68911743164062,
+      "y2": 163.28594970703125
+    },
+    "figType": "Table",
+    "imageText": ["Task", "Type", "22-class", "Ann.", "Time", "(s)", "(95%", "CI)", "Binary", "308.64", "[301.01,", "316.09]", "Multi-label", "33.54", "[31.48,", "35.58]", "Hrchl.", "Multi-label", "50.66", "[47.52,", "53.88]"],
+    "name": "2",
+    "page": 4,
+    "regionBoundary": {
+      "x1": 328.0,
+      "x2": 548.0,
+      "y1": 92.0,
+      "y2": 144.0
+    }
+  }, {
+    "caption": "Figure 2: The mean number of positive labels generated in a full multi-label annotation. Other/Unknown indicates the catch-all classes in the multi-label annotation tasks.",
+    "captionBoundary": {
+      "x1": 53.78900146484375,
+      "x2": 294.0437316894531,
+      "y1": 250.78811645507812,
+      "y2": 278.3419189453125
+    },
+    "figType": "Figure",
+    "imageText": ["Classes", "Other/Unknown", "Specific", "Sensor", "Recordings", "1.36", "1.44", "Hrchl.", "Multi-label", "Multi-label", "0.0", "0.5", "1.0", "1.5", "2.0", "2.5", "3.0", "3.5", "Mean", "number", "of", "generated", "labels", "per", "recording", "YouTube", "Recordings", "3.30", "1.25", "1.52", "Binary", "Hrchl.", "Multi-label", "Multi-label"],
+    "name": "2",
+    "page": 4,
+    "regionBoundary": {
+      "x1": 61.26641082763672,
+      "x2": 287.34674072265625,
+      "y1": 99.76675415039062,
+      "y2": 227.45697021484375
+    }
+  }, {
+    "caption": "Figure 1: Screenshots of the binary and multi-label annotation tasks on Zooniverse along with the spectrogram sound visualization shown to annotators.",
+    "captionBoundary": {
+      "x1": 53.5699462890625,
+      "x2": 295.65374755859375,
+      "y1": 415.4052734375,
+      "y2": 442.9590148925781
+    },
+    "figType": "Figure",
+    "imageText": ["(b)", "Binary", "(c)", "Multi-label", "(a)", "Accompanying", "sound", "visualization"],
+    "name": "1",
+    "page": 3,
+    "regionBoundary": {
+      "x1": 75.0,
+      "x2": 273.0,
+      "y1": 102.0,
+      "y2": 398.12701416015625
+    }
+  }, {
+    "caption": "Table 1: Annotator agreement.",
+    "captionBoundary": {
+      "x1": 376.27301025390625,
+      "x2": 499.5880432128906,
+      "y1": 223.20211791992188,
+      "y2": 228.84197998046875
+    },
+    "figType": "Table",
+    "imageText": ["Task", "Type", "Krippendorf’s", "α", "(95%", "CI)", "Binary", "Multi-label", "Hrchl.", "Multi-label", "Stg", "1", "Hrchl.", "Multi-label", "Stg", "2", "0.52", "[0.46,", "0.58]", "0.53", "[0.44,", "0.60]", "0.45", "[0.37,", "0.52]", "0.45", "[0.35,", "0.54]", "Task", "Type", "Unanimous", "Agreement", "Pct.", "Binary", "Multi-label", "Hrchl.", "Multi-label", "Stg", "1", "Hrchl.", "Multi-label", "Stg", "2", "81%", "91%", "79%", "65%"],
+    "name": "1",
+    "page": 3,
+    "regionBoundary": {
+      "x1": 324.0,
+      "x2": 552.0,
+      "y1": 92.0,
+      "y2": 220.0
+    }
+  }],
+  "sections": [{
+    "paragraphs": [{
+      "page": 0,
+      "region": {
+        "x1": 53.79861831665039,
+        "x2": 294.0469665527344,
+        "y1": 531.245849609375,
+        "y2": 561.6680908203125
+      },
+      "text": "• Human-centered computing → Computer supported cooperative work; Empirical studies in collaborative and social computing; • Information systems → Speech"
+    }, {
+      "page": 0,
+      "region": {
+        "x1": 53.24806213378906,
+        "x2": 295.0209655761719,
+        "y1": 585.571533203125,
+        "y2": 712.3292236328125
+      },
+      "text": "Permission to make digital or hard copies of all or part of this work for personal or classroom use is granted without fee provided that copies are not made or distributed for proft or commercial advantage and that copies bear this notice and the full citation on the frst page. Copyrights for components of this work owned by others than the author(s) must be honored. Abstracting with credit is permitted. To copy otherwise, or republish, to post on servers or to redistribute to lists, requires prior specifc permission and/or a fee. Request permissions from permissions@acm.org. CHI 2019, May 4–9, 2019, Glasgow, Scotland Uk © 2019 Copyright held by the owner/author(s). Publication rights licensed to ACM. ACM ISBN 978-1-4503-5970-2/19/05. . . $15.00 https://doi.org/10.1145/3290605.3300522"
+    }, {
+      "page": 0,
+      "region": {
+        "x1": 317.6659851074219,
+        "x2": 558.2036743164062,
+        "y1": 262.8624572753906,
+        "y2": 281.3330078125
+      },
+      "text": "/ audio search; • Applied computing → Sound and music computing."
+    }],
+    "title": {
+      "page": 0,
+      "region": {
+        "x1": 53.79861831665039,
+        "x2": 128.50814819335938,
+        "y1": 516.3916015625,
+        "y2": 522.8175048828125
+      },
+      "text": "CCS CONCEPTS"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 0,
+      "region": {
+        "x1": 317.6062927246094,
+        "x2": 517.5557250976562,
+        "y1": 311.23077392578125,
+        "y2": 317.7463073730469
+      },
+      "text": "Audio annotation, citizen science, crowdsourcing"
+    }],
+    "title": {
+      "page": 0,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 375.5487976074219,
+        "y1": 296.37652587890625,
+        "y2": 302.8023986816406
+      },
+      "text": "KEYWORDS"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 0,
+      "region": {
+        "x1": 317.64398193359375,
+        "x2": 559.5827026367188,
+        "y1": 339.13397216796875,
+        "y2": 399.7929992675781
+      },
+      "text": "Mark Cartwright, Graham Dove, Ana Elisa Méndez Méndez, Juan P. Bello, and Oded Nov. 2019. Crowdsourcing Multi-label Audio Annotation Tasks with Citizen Scientists. In CHI Conference on Human Factors in Computing Systems Proceedings (CHI 2019), May 4–9, 2019, Glasgow, Scotland Uk. ACM, New York, NY, USA, 11 pages. https://doi.org/10.1145/3290605.3300522"
+    }],
+    "title": {
+      "page": 0,
+      "region": {
+        "x1": 317.62298583984375,
+        "x2": 415.4913330078125,
+        "y1": 328.3991394042969,
+        "y2": 334.03900146484375
+      },
+      "text": "ACM Reference Format:"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 0,
+      "region": {
+        "x1": 317.58392333984375,
+        "x2": 559.88232421875,
+        "y1": 430.8444519042969,
+        "y2": 712.3289794921875
+      },
+      "text": "Annotating rich audio data is an essential aspect of training and evaluating machine listening models, which have the potential to enable powerful applications in diverse domains such as bioacoustic monitoring, urban noise monitoring, electric vehicle sensing, assistive technologies, and more. This is a difcult and time consuming task, due in part to audio’s temporal dimension. We approach this problem from the context of a New York City-based project that is working closely with city agencies such as the Department of Environmental Protection; and which aims to monitor, analyze, and mitigate urban noise pollution using a smart sensor network powered by machine listening models that detect noise sources [5]. Noise pollution is a major concern to many urban residents and has many negative efects, e.g. on citizens’ health [4, 21] and students’ learning [4]. Because of these societal concerns, we are exploring citizen science-based inquiry, including our approach to training machine listening models, and a key task is to establish how best to design tasks to acquire multilabel audio annotations with volunteers. Since our aim is for high ecological validity, this study was not conducted as a controlled experiment, but rather we undertake an analysis of a real-world data collection solving a real-world audio annotation problem. This activity took place on Zooniverse, the most widely used citizen science platform, and as such,"
+    }, {
+      "page": 0,
+      "region": {
+        "x1": 54.0,
+        "x2": 558.0009765625,
+        "y1": 750.914794921875,
+        "y2": 756.7197875976562
+      },
+      "text": "Paper 292 Page 1"
+    }, {
+      "page": 1,
+      "region": {
+        "x1": 53.43000030517578,
+        "x2": 295.7337341308594,
+        "y1": 96.09944915771484,
+        "y2": 628.6430053710938
+      },
+      "text": "our focus is on the authentic behaviors of volunteering citizen scientists, which may difer from those of paid workers on commercial platforms. Best practice for crowdsourced audio annotation remains understudied, with prior research typically focusing on paid crowdworkers rather than volunteer citizen scientists. In this paper we make some initial steps towards addressing this area of concern. Previous research recommends breaking complex tasks into small units of work for paid crowdsourcing [31]. In large-scale audio annotation eforts, this has resulted in paid crowdworkers performing single-class binary-labeling tasks [20, 22]. But citizen scientists and crowdworkers have diferent motivations, and in online citizen science projects, where audio annotation is rare, image annotation typically adopts a multi-labeling approach [34, 51]. However, like video annotation, annotating audio is more complex than annotating images due to the addition of a temporal dimension; and while full multi-label annotations for N classes can be constructed from N binary class annotations, this does not scale well. Should researchers follow the norms of citizen science image annotation (multi-label) when collecting multi-label audio annotations with volunteers? Or those of crowdsourced audio annotation with paid crowdworkers (multiple binarylabel)? What are the efects on annotation throughput and quality of adopting these contrasting approaches? Two previous studies point in contrasting directions. In [22], a pilot study indicated that crowdworkers found a multi-label audio annotation task difcult, were unhappy, and had low annotator agreement. However, in [50], a study on video annotation with crowdworkers found that multi-label annotation tasks resulted in higher quality annotations than those from binary annotation tasks. This paper contributes to the literature on best practices for crowdsourced audio annotation, and seeks to answer these questions, by comparing diferent annotation task types on the Zooniverse online citizen science platform [1]. We compare multiple-pass binary annotation, single-pass multilabel annotation, and a hybrid approach: hierarchical multipass multi-label annotation; in work from the early stages of our urban soundscape annotation campaign. We present an analysis of the throughput of the three diferent annotation task types and a sensitivity analysis on the efect of aggregation variables on annotation quality. Our results suggest that practices developed for crowdsourced populations may not translate to volunteer-based populations."
+    }],
+    "title": {
+      "page": 0,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 411.0555114746094,
+        "y1": 415.9901123046875,
+        "y2": 422.4159851074219
+      },
+      "text": "1 INTRODUCTION"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 1,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 295.7301940917969,
+        "y1": 657.992431640625,
+        "y2": 712.3289794921875
+      },
+      "text": "In the past decade, there have been several large-scale, multilabel and multi-class paid-crowdsourcing eforts to annotate media for training machine learning models, e.g. ImageNet (14M images, 20k classes) [15], COCO (328k images, 91 classes)[33], Places (10M images, 434 classes) [56], AudioSet"
+    }, {
+      "page": 1,
+      "region": {
+        "x1": 317.5870056152344,
+        "x2": 559.8875732421875,
+        "y1": 96.09944915771484,
+        "y2": 258.031982421875
+      },
+      "text": "(1.8M audio recordings, 636 classes) [20], and OpenMIC-2018 (20k audio recordings, 20 classes) [22]. While each has taken a slightly diferent approach to suit their media, they all use weak search engines [15, 20, 33, 56] or classifers [22] to generate candidate sets which are then verifed by humans with binary [15, 20, 22, 56], limited multi-label [20], or hierarchical multi-label [33] annotation. Of these eforts, AudioSet [20] and OpenMIC-2018 [22] are the only audio annotation eforts. It is also worth noting that AudioSet annotators were exposed to both audio and accompanying video during annotation because they found it too difcult with audio alone. COCO [33] is the only dataset with full multi-label annotations, and required 70k worker hours to complete image segmentation and labeling."
+    }, {
+      "page": 1,
+      "region": {
+        "x1": 317.5870056152344,
+        "x2": 559.8894653320312,
+        "y1": 263.4724426269531,
+        "y2": 640.5980224609375
+      },
+      "text": "Because of the immense human efort required, researchers have sought to optimize multi-class and multi-label crowdsourced image annotation [7, 12, 13, 16, 32], often with approaches that break larger multi-label tasks into small subtasks. In audio annotation, studies have typically focused on the efects of sound visualizations rather than trade-ofs between binary and multi-label annotation when investigating rapid methods [53] and best practices [10]. However, a small-scale study using data labeled by experts rather than through crowdsourcing indicates that sound event detection accuracy is higher when using a single model trained on full multi-label data rather than aggregating multiple single-class models trained on binary data [8]. For video annotation, which like audio has the additional complexity of a temporal dimension, research has indicated both that breaking annotation into smaller subtasks is wasteful [50], and also conversely that performance and annotator satisfaction increase when annotating one object rather than multiple objects, (although error accumulated in sequences of micro-tasks largely negated this fnding) [54]. All of the above annotation eforts and studies were performed with paid crowdworkers. While intrinsic motivations can afect the quantity [11] and quality [46] of paid crowdwork, the primary motivation of paid crowdworkers is still payment and therefore extrinsic [30]. It’s therefore unclear if the fndings of studies using paid crowdsourced annotation will translate to annotation with citizen scientists, who are not motivated by payment. Viewing the problem from the opposite direction, [36] show that while paid crowdworkers can complete labeling tasks with comparable quality to volunteer citizen scientists, they are also highly sensitive to changes in payment method."
+    }, {
+      "page": 1,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 559.8847045898438,
+        "y1": 646.0374145507812,
+        "y2": 712.3289794921875
+      },
+      "text": "Zooniverse [1], the largest online citizen science platform, has hosted several large image annotation projects, most notably Galaxy Zoo (900k images, 6 classes) [34] and Snapshot Serengeti (1.2M image sets, 48 animal presence classes) [51], but audio annotation projects on the platform are rarer and smaller in size [35, 48]. On the Zooniverse platform,"
+    }, {
+      "page": 1,
+      "region": {
+        "x1": 54.0,
+        "x2": 558.0009765625,
+        "y1": 750.914794921875,
+        "y2": 756.7197875976562
+      },
+      "text": "Paper 292 Page 2"
+    }, {
+      "page": 2,
+      "region": {
+        "x1": 53.54899978637695,
+        "x2": 295.7317810058594,
+        "y1": 96.09944915771484,
+        "y2": 365.6289978027344
+      },
+      "text": "image-based projects typically use full multi-label annotation. Although the initial Galaxy Zoo project was limited to six classes, there are now several projects inspired by Snapshot Serengeti that have on the order of 50 classes [1]. Unlike paid crowdsourcing, citizen science relies on voluntary eforts of contributors. Volunteers typically express multiple motivations [42–44], which change dynamically through a project’s temporal shifts [47]. Typically, online citizen science projects have skewed participation patterns, with a small number of highly motivated volunteers contributing the majority of work [19]. The quantity of online volunteer contributions correlates with collective-, norm-oriented-, reputation-, and intrinsic- motivation; while contribution quality responds positively to collective- and reputationmotives [40]. Volunteers’ individual contributions may be increased through highlighting instances of novelty [25]. The importance of intrinsic motivations highlights a need for engaging participation mechanisms, and association with a project’s aims helps motivate new volunteers [39]. Where volunteers are drawn from a particular community, motivations for engagement in citizen science closely refect motivations for community membership of that community and its core activities [55]."
+    }, {
+      "page": 2,
+      "region": {
+        "x1": 53.79795837402344,
+        "x2": 295.7253723144531,
+        "y1": 371.0684814453125,
+        "y2": 628.6430053710938
+      },
+      "text": "The desire to learn about a particular topic is an important motivator in both online [42, 43] and in-real-life [18] citizen science, as is the desire to contribute to “authentic” scientifc research [38]. In addition to knowledge acquisition, sharing new knowledge can motivate and sustain engagement [26]. Other methods of motivating sustained engagement include competition amongst volunteers and gamifcation of citizen science activities [6, 24, 41]. Such regular engagement with a project builds community membership, and leads to task aptitude and familiarity; while task difculty and boredom, and competing priorities are barriers to contribution [28]. Other factors that impact on volunteers’ engagement, both positively and negatively, include a project’s coordination practices and the volunteer’s previous domain experience [17]. In addition, scientists’ concerns about data quality and interpretation, and wider ethical concerns about visibility, authorship and attribution [14, 45], can lead to tension between the motivations and epistemic contributions of citizen science participants as individuals and their status within a collective distributed efort [29]. We build on this literature by investigating best practices for crowdsourced audio annotation with volunteer citizen scientists."
+    }],
+    "title": {
+      "page": 1,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 147.79510498046875,
+        "y1": 643.1385498046875,
+        "y2": 649.564453125
+      },
+      "text": "2 RELATED WORK"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 2,
+      "region": {
+        "x1": 53.54899978637695,
+        "x2": 294.23126220703125,
+        "y1": 681.9024047851562,
+        "y2": 712.3289794921875
+      },
+      "text": "Zooniverse is the largest platform for online citizen science projects [1], ofering a ready-made community of motivated volunteers from which to recruit. While this facilitates our"
+    }, {
+      "page": 2,
+      "region": {
+        "x1": 317.95489501953125,
+        "x2": 559.8870239257812,
+        "y1": 96.09944915771484,
+        "y2": 341.718994140625
+      },
+      "text": "aim of studying the authentic behaviors of volunteering citizen scientists, the Zooniverse platform is designed for real-world data collection and not for controlled experiments, and researchers therefore have limited facility for controlling variations over the presentation of their tasks. Also, during the design stage of this research, we were in close contact with expert Zooniverse moderators who provided informed advice, suggesting practical compromises between ensuring that primary data were collected and enriching these primary annotation data with user-focused data. For example, this expert advice included removing links to external questionnaires in order to “lower the barrier to entry as much as possible”. However as an alternative, the Zooniverse platform does enable researchers to view more qualitative participant responses through its ‘Talk’ boards. Suggestions such as these highlight tensions between eliciting real-world annotation with citizen science volunteers and gathering rich participant data. Because of factors such as this, our comparison of multiple annotation task types in the early stages of our data collection should be considered more akin to A/B testing than strictly controlled experimentation."
+    }],
+    "title": {
+      "page": 2,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 161.8722686767578,
+        "y1": 652.1049194335938,
+        "y2": 673.4747314453125
+      },
+      "text": "3 DATA COLLECTION Platform"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 2,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 559.8881225585938,
+        "y1": 371.0684814453125,
+        "y2": 628.6430053710938
+      },
+      "text": "Our audio data consist of 10 second clips from two distinct sources, and represent 22 classes of sound sources. The frst dataset consists of audio taken from selected YouTube video clips, where the sound source was identifed, and additionally confrmed by members of our research team. These provided ground truth for our analysis. The second were recordings selected from amongst the 30 years’ worth of audio data collected by 50+ sensors installed in busy locations around New York City [5]. The 22 classes of sound sources that make up our labeling taxonomy are derived from requirements requested by the city’s department of environmental protection, and based on its legally enforceable noise code. They include examples of engines of diferent sizes, construction machinery and tools, human and animal vocalizations, music, and vehicle alert signals and sirens. We selected 2 examples for each class from the YouTube dataset, and 3 examples from the dataset of sensor recordings, creating a total of 110 10 second audio clips. The 3 examples selected from the sensor data were curated by members of our research team from an initial sample of 30 examples automatically selected for each class using “VGGish” embedding-derived audio features [27]."
+    }],
+    "title": {
+      "page": 2,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 367.309814453125,
+        "y1": 356.2145690917969,
+        "y2": 362.64044189453125
+      },
+      "text": "Audio data"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 2,
+      "region": {
+        "x1": 317.58917236328125,
+        "x2": 559.8870849609375,
+        "y1": 657.992431640625,
+        "y2": 712.3289794921875
+      },
+      "text": "Volunteers were randomly presented with 1 of 3 task types: 1) binary-labeling, 2) one-stage multi-labeling, and 3) two-stage hierarchical multi-labeling. All volunteers were presented with the same tutorial and feld guide to familiarize themselves with examples of each sound-source class. In all three"
+    }, {
+      "page": 2,
+      "region": {
+        "x1": 54.0,
+        "x2": 558.0009765625,
+        "y1": 750.914794921875,
+        "y2": 756.7197875976562
+      },
+      "text": "Paper 292 Page 3"
+    }, {
+      "page": 3,
+      "region": {
+        "x1": 53.499000549316406,
+        "x2": 294.30963134765625,
+        "y1": 466.70947265625,
+        "y2": 485.1809997558594
+      },
+      "text": "task types, the audio was presented both aurally and visually (using a spectrogram representation; see Figure 1a)."
+    }, {
+      "page": 3,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 294.0433349609375,
+        "y1": 490.6204528808594,
+        "y2": 533.0009765625
+      },
+      "text": "In the binary labeling task (see Figure 1b), volunteers were asked to decide whether a single suggested sound-source class was present or not in the recording. This task type provided both positive and negative labels explicitly."
+    }, {
+      "page": 3,
+      "region": {
+        "x1": 53.43000030517578,
+        "x2": 295.73016357421875,
+        "y1": 538.4404296875,
+        "y2": 712.3289794921875
+      },
+      "text": "In the one-stage multi-labeling task (see Figure 1c), volunteers were presented with a list of 30 class labels and an audio clip, and were asked to select all the sound-source classes present in the audio. The list of label options included our 22 sound-source classes plus labels for unknown or uncertain examples of the “superclasses”; e.g. engines, construction machinery, or alert signals. This task type provided positive labels explicitly and negatively labels implicitly. Previous studies [50] indicate that requesting explicit negative labels reduces both precision and recall, and increases task completion time in a multi-label task. In the two-stage hierarchical multi-label task, each stage was undertaken separately and by a diferent volunteer. In stage 1, the audio was presented to a volunteer alongside a list of 9 superclass labels; e.g. engines, or powered sawing"
+    }, {
+      "page": 3,
+      "region": {
+        "x1": 316.8489990234375,
+        "x2": 559.8897705078125,
+        "y1": 291.9654541015625,
+        "y2": 489.76300048828125
+      },
+      "text": "tools. Identifcation of sounds in this stage provided a flter for possible class labels. For each selected superclass in stage 1, we posted a stage 2 task in which the same audio clip was presented alongside the sublist of our 22 class labels that correspond to the superclass. For example, if the audio had been identifed as containing engine sounds in stage 1, the list of possible labels shown in stage 2 would include: largesounding engine, medium-sounding engine, small-sounding engine, other/unknown engine, artifcial interference noise, and other/unknown sound. Stage 2 tasks were undertaken at a later date, and the audio was presented to a diferent volunteer. This task type provided positive labels explicitly and negative labels implicitly. We included this task as a compromise between the multi-labeling and binary labeling tasks — it requires fewer sound-source classes to be annotated simultaneously and possibly fewer sound-source classes to be annotated overall for full multi-label annotation."
+    }],
+    "title": {
+      "page": 2,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 342.75189208984375,
+        "y1": 643.1385498046875,
+        "y2": 649.564453125
+      },
+      "text": "Tasks"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 3,
+      "region": {
+        "x1": 317.47698974609375,
+        "x2": 559.8885498046875,
+        "y1": 526.4854125976562,
+        "y2": 712.3289794921875
+      },
+      "text": "We collected at least 5 annotations per recording for the multi-label task and both stages of the hierarchical multilabel task and at least 3 annotations per recording for the binary annotation task, from a total of 339 unique volunteers. We limited our analysis to these minimums. It was impractical to collect more than 3 annotations for the binary task, due to it’s poor scalability. The annotator agreement for all three task types is presented in Table 1. We also downloaded the comments and messages that volunteer citizen scientists left on the Zooniverse ‘Talk’ boards as a way of approaching user-focused data. Because there were too few of these messages to undertake a detailed qualitative analysis, we have instead included example comments in our Discussion, as a way to illustrate particular points regarding Zooniverse volunteers’ responses to the diferent annotation approaches, and not as study fndings in their own right."
+    }, {
+      "page": 3,
+      "region": {
+        "x1": 54.0,
+        "x2": 558.0009765625,
+        "y1": 750.914794921875,
+        "y2": 756.7197875976562
+      },
+      "text": "Paper 292 Page 4"
+    }],
+    "title": {
+      "page": 3,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 380.4205017089844,
+        "y1": 511.6308898925781,
+        "y2": 518.0567626953125
+      },
+      "text": "4 ANALYSIS"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 4,
+      "region": {
+        "x1": 53.31999969482422,
+        "x2": 295.7301330566406,
+        "y1": 321.59246826171875,
+        "y2": 483.5249938964844
+      },
+      "text": "We defne the throughput of an annotation task as the rate of label generation. This is a function of the number of volunteers, the quantity of labels that they generate in a single task, the speed at which they complete a task, and the number of annotation tasks they are motivated to complete. Maximizing this measure helps collect data quickly and progress research. It also respects the time volunteer annotators freely give to the project as productive contributors. Our analysis focuses on the quantity of positive labels generated and the speed of task completion in response to the annotation task. To calculate task completion times, we computed the time diference between annotation tasks submitted by the same volunteer and removed outliers in the top 5th percentile, which may represent diferent annotation sessions."
+    }, {
+      "page": 4,
+      "region": {
+        "x1": 53.79798889160156,
+        "x2": 295.7301025390625,
+        "y1": 488.9644775390625,
+        "y2": 626.9869995117188
+      },
+      "text": "The binary annotation task generated over twice as many positive labels per full multi-label annotation as the multilabel annotation tasks, (see Figure 2). In addition, as shown in Figure 3, it took about twice as long to complete an individual multi-label annotation task (32.81 s, 95% CI [30.80, 34.86]) as it did an individual binary annotation task (14.06 s, 95% CI [13.74, 14.38]). When scaled up for 22 classes, it took more than 9 times as long to annotate a full multi-label annotation using binary labeling tasks (see Table 2). Therefore, if full annotations are needed, multi-labeling tasks have higher throughput; but if only binary annotations are needed, the two task types have comparable throughput."
+    }],
+    "title": {
+      "page": 4,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 159.85986328125,
+        "y1": 306.7381286621094,
+        "y2": 313.16400146484375
+      },
+      "text": "Annotation throughput"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 4,
+      "region": {
+        "x1": 53.50899887084961,
+        "x2": 295.7301330566406,
+        "y1": 657.992431640625,
+        "y2": 712.3289794921875
+      },
+      "text": "In addition to maximizing throughput, we also want high quality labels. To measure quality, we calculated the precision, recall, and F-measure on aggregated annotations of the YouTube recordings, since these have positive ground-truth labels. However, we also need negative ground-truth labels"
+    }, {
+      "page": 4,
+      "region": {
+        "x1": 405.6583557128906,
+        "x2": 558.1995239257812,
+        "y1": 292.0965270996094,
+        "y2": 304.8907775878906
+      },
+      "text": "0 20 40 60 80 Time (s)"
+    }, {
+      "page": 4,
+      "region": {
+        "x1": 371.8522033691406,
+        "x2": 401.1072082519531,
+        "y1": 204.38970947265625,
+        "y2": 218.17919921875
+      },
+      "text": "Binary Multi-label"
+    }, {
+      "page": 4,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 401.1007995605469,
+        "y1": 223.4285888671875,
+        "y2": 246.780517578125
+      },
+      "text": "Hrchl. Multi-label S1 Hrchl. Multi-label S2 - Engine Hrchl. Multi-label S2 - Impact"
+    }, {
+      "page": 4,
+      "region": {
+        "x1": 324.74542236328125,
+        "x2": 401.0999450683594,
+        "y1": 251.98486328125,
+        "y2": 265.7744140625
+      },
+      "text": "Hrchl. Multi-label S2 - Saw Hrchl. Multi-label S2 - Alert"
+    }, {
+      "page": 4,
+      "region": {
+        "x1": 321.18804931640625,
+        "x2": 401.10638427734375,
+        "y1": 271.02374267578125,
+        "y2": 284.8197021484375
+      },
+      "text": "Hrchl. Multi-label S2 - Vocal Hrchl. Multi-label S2 - Music"
+    }, {
+      "page": 4,
+      "region": {
+        "x1": 403.4745788574219,
+        "x2": 556.789794921875,
+        "y1": 192.6249542236328,
+        "y2": 197.7529296875
+      },
+      "text": "Time to Complete Individual Annotation Task"
+    }, {
+      "page": 4,
+      "region": {
+        "x1": 317.9549560546875,
+        "x2": 558.4786987304688,
+        "y1": 320.9591369628906,
+        "y2": 348.51287841796875
+      },
+      "text": "Figure 3: The time to complete individual annotation task for each annotation task type. S1 and S2 indicate stages 1 and 2 respectively."
+    }, {
+      "page": 4,
+      "region": {
+        "x1": 317.5870056152344,
+        "x2": 559.8876342773438,
+        "y1": 371.0684814453125,
+        "y2": 712.3289794921875
+      },
+      "text": "to compute our metrics. These we obtained by labeling a limited amount of data that we had high confdence about ourselves. Our ground-truth contained one positive and one negative label for each of the 44 YouTube recording and was balanced to have an equal number of positives and negatives for each class. With this ground-truth data, we varied both the number of annotators and the voting threshold required for a positive label, and measured their efects on annotation quality. To account for the many possible combinations of annotators, we estimated the true positives, false positives, and false negatives using a sample of 1000 random combinations of annotators for each task type / recording pair. For example, in one sample of the multi-labeling task aggregated with three annotators and a voting threshold of two, we randomly chose three of the fve annotations and labeled a class as positive if at least two of the annotators labeled it positive. We then calculated the true positives, false positives, and false negatives using our ground truth data, and repeated the process 1000 times. For hierarchical multi-labeling, we performed a similar process but aggregated annotations at both stages, with the output of stage one informing the inclusion of subtasks in stage two. The annotations from the subtasks were combined together to form a full multi-label annotation. For binary labeling, we aggregated binary annotations for each class and then combined all 22 class annotations together to form a full multi-label annotation. We then summed the true positives, false positives, and false negatives over the recordings to compute the quality metrics for each combination of"
+    }, {
+      "page": 4,
+      "region": {
+        "x1": 54.0,
+        "x2": 558.0009765625,
+        "y1": 750.914794921875,
+        "y2": 756.7197875976562
+      },
+      "text": "Paper 292 Page 5"
+    }, {
+      "page": 5,
+      "region": {
+        "x1": 53.79798889160156,
+        "x2": 295.734619140625,
+        "y1": 519.2734375,
+        "y2": 705.1160888671875
+      },
+      "text": "task type, number of annotators, and voting threshold. Figure 4 shows the results of varying the number of annotators and the minimum voting threshold for all three task types. Using a three-way ANOVA, we investigated the efect of annotation task type, number of annotators, and voting threshold on the number of type I (false positive) and type II (false negative) errors for aggregate annotations. We computed the ANOVA directly on the type I and II errors rather than macro-averaged metrics because our limited ground-truth labels for each example and/or class could lead to ill-defned precision and recall metrics with macroaveraging. For the number of type I errors, we found that task type (F (2, 1548) = 81.62, p < 0.001) and voting threshold (F (4, 1548) = 7.15, p < 0.001) had signifcant efects, but number of annotators (F (4, 1548) = 1.59, p = 0.17) did not. There were also signifcant interactions between task"
+    }, {
+      "page": 5,
+      "region": {
+        "x1": 317.95013427734375,
+        "x2": 559.8773803710938,
+        "y1": 518.70556640625,
+        "y2": 621.4301147460938
+      },
+      "text": "type and voting threshold (F (6, 1548) = 13.75, p < 0.001) and task type and the number of annotators (F (6, 1548) = 3.54, p < 0.01). For the number of type II errors, we found that task type (F (2, 1548) = 129.74, p < 0.001), number of annotators (F (4, 1548) = 41.94, p < 0.001), and voting threshold (F (4, 1548) = 103.52, p < 0.001) all had signifcant efects. There were also signifcant interactions between voting threshold and the number of annotators (F (6, 1548) = 6.76, p < 0.001)."
+    }, {
+      "page": 5,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 559.8883666992188,
+        "y1": 626.8694458007812,
+        "y2": 705.115966796875
+      },
+      "text": "To test where these diferences occurred, we also ran post hoc Tukey HSD tests (α = 0.05), but we only report diferences in main efects for simplicity. For type I errors, we found signifcant diferences between the binary task and the two multi-label tasks but not between the two multilabel tasks themselves. In addition, we only found signifcant diferences in voting thresholds pairs 1–2 and 2–3. For type"
+    }, {
+      "page": 5,
+      "region": {
+        "x1": 54.0,
+        "x2": 558.0009765625,
+        "y1": 750.914794921875,
+        "y2": 756.7197875976562
+      },
+      "text": "Paper 292 Page 6"
+    }, {
+      "page": 6,
+      "region": {
+        "x1": 53.43000030517578,
+        "x2": 295.7301330566406,
+        "y1": 96.09944915771484,
+        "y2": 365.6289978027344
+      },
+      "text": "II errors, we found signifcant diferences between all task types and all thresholds, but did not fnd signifcant diferences in number of annotator pairs 1–2, 2–3, and 3–4. Overall, we found that with low voting thresholds, the binary task produced aggregate annotations with more type I errors (lower precision), and with high voting thresholds, the multi-label tasks produced aggregate annotations with more type II errors (lower recall). We didn’t fnd any signifcant diferences between the two multi-label tasks in recall, but we found that the hierarchical multi-label task produced annotations with lower recall than the multi-label task as the voting threshold increased. At low voting thresholds for all tasks, we found minimal diferences in performance when the number of annotators was 3 and above, but more annotators was always better. The aggregate annotations from the multi-labeling and hierarchical multi-labeling tasks both attained their highest F-measures with fve annotators and a voting threshold of one annotator (0.96 and 0.92 respectively). Whereas, aggregate annotations from binary labeling achieved their highest F-measure with three annotators and a voting threshold of one annotator (0.94). For fair comparison, the max F-measure of multi-label annotations aggregated with three annotators was 0.93."
+    }],
+    "title": {
+      "page": 4,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 139.77525329589844,
+        "y1": 643.1363525390625,
+        "y2": 649.562255859375
+      },
+      "text": "Annotation quality"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 6,
+      "region": {
+        "x1": 53.427001953125,
+        "x2": 295.7301330566406,
+        "y1": 394.97845458984375,
+        "y2": 712.3289794921875
+      },
+      "text": "Multi-label audio annotation is a time consuming task for which few studies have investigated best practices. Our analysis suggests using a multi-label annotation task, collecting at least three annotations per example, and aggregating them with a low voting threshold will deliver results equal in quality to those collected using binary labeling, and will do so more quickly. We found annotators tended to “over annotate” when attending to one class at a time and to “under annotate” when asked to attend to many classes. In light of these tradeofs, binary audio annotation may be preferred when high recall is prioritized, for example when training a gun shot detection model for which the cost of a false negative may be someone’s life. And multi-label audio annotation may be preferred when precision is prioritized, for example when training an urban noise pollution detection model for which the cost of a false positive is an unnecessary investigation by a city noise inspector. When aggregated however, these tendencies can be balanced by adjusting the number of annotators and the voting threshold for each task type, making peak performance comparable. Also, the throughput of multilabel annotation was higher, which is advantageous when training a single model with multi-label output rather than multiple binary-class models. Such a single model may have higher accuracy [8], and we suspect that this diference may be greater when the model must distinguish between several similar classes."
+    }, {
+      "page": 6,
+      "region": {
+        "x1": 317.95001220703125,
+        "x2": 559.8914794921875,
+        "y1": 96.09944915771484,
+        "y2": 305.8529968261719
+      },
+      "text": "With only 30 classes, we did not fnd it advantageous to use the two-stage hierarchical multi-label model. At low voting thresholds, the hierarchical multi-label task produced labels of similar quality to the single-pass multi-label task, but at high voting thresholds, the downward trend on recall is more extreme than in the multi-label case, due to compounding type II errors at each annotation stage. While we suspect that an advantage for the hierarchical approach may appear as the number of classes is increased, additional experimentation is required to investigate this. We found the unanimous vote measure, 91% for multilabeling and 81% for binary labeling tasks, to be higher that the equivalent reported by the AudioSet data collection (76.2%), indicating greater consistency between citizen scientists than paid crowdworkers. However, we observed low scores when calculating Krippendorf α agreement, indicating both that annotation of urban sound is a difcult task, and that there is room to improve the design of our tasks."
+    }],
+    "title": {
+      "page": 6,
+      "region": {
+        "x1": 53.79861831665039,
+        "x2": 128.8468780517578,
+        "y1": 380.12457275390625,
+        "y2": 386.5504455566406
+      },
+      "text": "5 DISCUSSION"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 6,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 559.8868408203125,
+        "y1": 338.19146728515625,
+        "y2": 404.4830017089844
+      },
+      "text": "Because we are presenting a study of data collection with an existing community of volunteer citizen scientists on the most well-established platform for these activities, and because we are using an intentionally restricted audio dataset, the following limitations should be acknowledged with respect to our analysis and fndings."
+    }, {
+      "page": 6,
+      "region": {
+        "x1": 317.5870056152344,
+        "x2": 559.8883666992188,
+        "y1": 418.88946533203125,
+        "y2": 712.3289794921875
+      },
+      "text": "Using the Zooniverse platform. Zooniverse is a platform designed for real-world citizen science data collection, rather than for controlled experimentation, and because of this it provides researchers with only limited control over the variations with which tasks and recordings can be presented. Therefore this was not a controlled study, rather it was more akin to an A/B test of diferent designs and measuring their impact. However, it is also important to recognize that fndings from this study should be considered subject to the potentially biasing impact of the particular norms associated with participation in Zooniverse projects. While it appears to us that our fndings are at least in part a refection of volunteer citizens scientists greater intrinsic motivation when compared to paid crowdworkers, it is also possible that they refect particular norms, standards, and expectations cultivated through volunteer participation in multiple Zooniverse projects over the years. As the refections of Zooniverse’s UX team indicate [52], norms are emerging around the practices associated with large-scale citizen science participation on the platform, and while it is currently and quite signifcantly the largest instance of such a platform, Zooniverse is not the only option available. Future studies might compare the power of these norms by running simultaneous studies on diferent platforms. For example, do the fndings of previous studies, which both note the difering motivations"
+    }, {
+      "page": 6,
+      "region": {
+        "x1": 54.0,
+        "x2": 558.0009765625,
+        "y1": 750.914794921875,
+        "y2": 756.7197875976562
+      },
+      "text": "Paper 292 Page 7"
+    }, {
+      "page": 7,
+      "region": {
+        "x1": 53.43000030517578,
+        "x2": 295.73321533203125,
+        "y1": 96.09944915771484,
+        "y2": 365.6289978027344
+      },
+      "text": "of volunteer citizens sciences, e.g. [42–44] and also used data from Zooniverse volunteers, hold true for alternative platforms? Another possibility is that the kind of network afects seen with Google, Amazon and Facebook may apply in a citizen science context to Zooniverse. Either way, the choice of platform for similar studies in the future will remain an important consideration. These norms and practices also impacted our collection of user-focused data, as we followed the advice of expert moderators and chose to remove links to external questionnaires so as not to raise barriers to volunteers’ participation. Instead we hoped that data downloaded from the comments and messages that volunteer citizen scientists left on the Zooniverse ‘Talk’ boards would be sufcient to provide similar insight. As it turned out, there were too few of these messages to undertake a detailed qualitative analysis, and so these merely provide illustration rather than fndings in their own right. Data from additional questionnaires would have helped us assess the preferences and motivations of the annotators, and enriched our user data. However, in striving for ecological validity this was a tradeof we chose to make, exemplifying tensions between eliciting real-world annotation with citizen science volunteers and gathering rich participant data."
+    }, {
+      "page": 7,
+      "region": {
+        "x1": 53.43000030517578,
+        "x2": 295.7332458496094,
+        "y1": 380.0344543457031,
+        "y2": 649.56396484375
+      },
+      "text": "Generalizability to other sources of audio data. There are also limitations of our study due to our data. Our ground truth data were limited to a small selection of urban soundscapes which may reduce the generalizability of our results to other audio recordings. However, soundscapes such as these, dominated by technological and human sounds, are typically evaluated to be in the chaotic quadrant of Swedish Soundscape-Quality Protocol [2, 3]. In a previous study [10], we found that as urban soundscapes become more complex, annotators’ precision stays about the same but their recall goes up. Therefore, while future a study is necessary to assess how our current results will translate to other types of soundscapes or audio recordings, the results from our previous study provide some insight into how our current results may translate to other urban soundscapes. A general study of audio recording annotation would likely require a dataset several orders of magnitude greater in size and would not have been feasible in our study design. The ground-truth data were also limited due to the incompleteness of their labels. The efects of this can be seen in the surprisingly perfect precision results for the multi-label annotation task. With complete ground-truth labels, we suspect that the metrics would be lower but the trends would remain the same."
+    }],
+    "title": {
+      "page": 6,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 370.0095520019531,
+        "y1": 323.3373718261719,
+        "y2": 329.76324462890625
+      },
+      "text": "Limitations"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 7,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 294.0459899902344,
+        "y1": 681.9024047851562,
+        "y2": 712.3289794921875
+      },
+      "text": "Limitations aside, our analysis both supports and contrasts prior studies on the annotation of temporal media. We see how annotators “over annotate” in binary labeling tasks and"
+    }, {
+      "page": 7,
+      "region": {
+        "x1": 316.8290100097656,
+        "x2": 558.9088134765625,
+        "y1": 96.09944915771484,
+        "y2": 281.9429931640625
+      },
+      "text": "“under annotate” in multi-labeling tasks, similarly to [50]; and that errors often compound when an annotation task is broken down into a series of dependent sub-tasks, like [54]. However, our fndings oppose [22] who suggested that a multi-labeling task resulted in lower annotator agreement and unhappier crowdworkers. In contrast, messages from our Zooniverse project’s ‘Talk’ boards include comments from volunteers who found the binary task limiting; while no comments suggest that the multi-label task was too complex or time-consuming. There are too few messages to undertake a qualitative analysis, and so we include comments from three volunteers as illustration, and in order to spark ideas for future research (N.B. the animal diary and animal camera trap projects in the quotes are referring to Snapshot Serengeti [51] where volunteers are asked to identify wildlife from motion-triggered cameras left in the countryside):"
+    }, {
+      "page": 7,
+      "region": {
+        "x1": 342.3639831542969,
+        "x2": 534.7908935546875,
+        "y1": 292.6195373535156,
+        "y2": 346.4429931640625
+      },
+      "text": "“There might be a better way than is that X sound yes or no to classify quicker. People will get tired of listening to sound clips faster than other quick options, like the animal diaries. You want to squeeze as much data out of each audio clip.”"
+    }, {
+      "page": 7,
+      "region": {
+        "x1": 342.364013671875,
+        "x2": 534.878662109375,
+        "y1": 357.1195373535156,
+        "y2": 422.89801025390625
+      },
+      "text": "“I hear drums, observer/audience yelling applause, at least one large size dog that is very unhappy about the noise. This takes place outside. I have no way to label more than two features, so it will probably be more frustrating than I can deal with to participate.”"
+    }, {
+      "page": 7,
+      "region": {
+        "x1": 342.364013671875,
+        "x2": 534.8798217773438,
+        "y1": 433.57452392578125,
+        "y2": 487.39801025390625
+      },
+      "text": "“In my opinion, this project should use the same model as the animal camera trap projects, that is, have a list of sound categories that one can click on for each clip, and give the opinion to choose more than one category.”"
+    }, {
+      "page": 7,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 558.2072143554688,
+        "y1": 497.56146240234375,
+        "y2": 527.988037109375
+      },
+      "text": "There are likely to be a range of other factors contributing to our fndings, each of which merits inquiry beyond the scope of this particular discussion."
+    }, {
+      "page": 7,
+      "region": {
+        "x1": 317.70599365234375,
+        "x2": 559.8820190429688,
+        "y1": 541.9114379882812,
+        "y2": 608.2030029296875
+      },
+      "text": "Recognition over recall. For example, having the full range of classifcation options in the multi-label task immediately visible and directly available may be signifcant, bringing to mind previous HCI discussion around the relative importance of recognition over recall with regards to direct manipulation interfaces (e.g., [9, 23, 49])."
+    }, {
+      "page": 7,
+      "region": {
+        "x1": 317.5870056152344,
+        "x2": 559.8844604492188,
+        "y1": 622.12744140625,
+        "y2": 712.3289794921875
+      },
+      "text": "Motivations of volunteer citizen scientists. Another important factor may be the difering motivations of volunteer citizen scientists who are likely to be driven by intrinsic motivations [19, 40, 42], and paid crowd-workers who are primarily motivated by fnancial incentives [30, 37, 46]. This may explain why binary labeling tasks, in which individual instances can be completed quickly, have appeared to be more efective in previous audio annotation undertaken by crowd-workers;"
+    }, {
+      "page": 7,
+      "region": {
+        "x1": 54.0,
+        "x2": 558.0009765625,
+        "y1": 750.914794921875,
+        "y2": 756.7197875976562
+      },
+      "text": "Paper 292 Page 8"
+    }, {
+      "page": 8,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 440.783935546875,
+        "y1": 96.09944915771484,
+        "y2": 126.5260009765625
+      },
+      "text": "and why, in contrast to this, our fndings suggest that multi- 7 ACKNOWLEDGMENTS labeling tasks may be more efective in the context of audio annotation with volunteer citizen scientists."
+    }, {
+      "page": 8,
+      "region": {
+        "x1": 53.43000030517578,
+        "x2": 295.73016357421875,
+        "y1": 140.93148803710938,
+        "y2": 541.968017578125
+      },
+      "text": "Volunteers’ contributions and accomplishments. A refective case study highlighting insights the Zooniverse UX team gained as the platform developed [52] further helps us to frame or fndings. For instance, audio tasks on the Zooniverse platform are considered less likely to sustain volunteers’ participation than image-oriented tasks, highlighting the importance of designing workfows that maximize the impact of individual contributions. A second insight is that it is important for volunteer contributors to gain a sense of accomplishment, and in more monotonous tasks (such as ours) this should be achieved quickly. While on the surface the simple binary task is completed more quickly, it is possible that annotators will be presented with a succession of examples in which the sound in question is not present. If accomplishment is more closely associated with positively identifying sounds than negatively identifying their absence, it is likely that the binary task becomes demotivating, and that the multi-label task, which enables contributors to make a positive identifcation in every case, leads to earlier and more consistent feelings of accomplishment. A third insight is that volunteer discussion and collaboration, beyond the initial requirements of the task, has resulted in a number of citizen-led discoveries. This indicates that citizen scientists are not necessarily looking for simple tasks that can be completed as quickly as possible. Rather, they may be motivated to extend a task, investigate further, and gain a deeper understanding. Having the full range of classifcations options visible may prompt sharing and discussion, which are important to this process of social inquiry. However, one important caveat to this discussion is that our tasks required only a limited number of classifcation options. An increase in the number of categories from which labels are selected could quickly make multi-label tasks, in which all options were always visible, extremely challenging."
+    }],
+    "title": {
+      "page": 7,
+      "region": {
+        "x1": 53.79861831665039,
+        "x2": 197.10067749023438,
+        "y1": 667.04833984375,
+        "y2": 673.4742431640625
+      },
+      "text": "Comparison to previous studies"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 8,
+      "region": {
+        "x1": 53.42997741699219,
+        "x2": 295.7301330566406,
+        "y1": 574.3064575195312,
+        "y2": 712.3289794921875
+      },
+      "text": "This paper contributes to our understanding of multi-label audio annotation crowdsourced with volunteer citizen scientists. We have described how a multi-labeling approach to annotation can result in annotations at a higher throughput and of comparable overall quality (as measured by F-score) to those obtained using binary-labeling, the technique most commonly used with paid crowdworkers. This supports previous work on image annotation with citizen scientists, and reminds us of the important diferences between participants who volunteer their time and efort freely, and paid crowdworkers, which we unpack in light of insights gained from crowdsourcing, citizen science, and HCI literature."
+    }, {
+      "page": 8,
+      "region": {
+        "x1": 317.47698974609375,
+        "x2": 559.7357177734375,
+        "y1": 111.0434799194336,
+        "y2": 153.42498779296875
+      },
+      "text": "We would like to thank all the Zooniverse volunteers who continue to contribute to our project. This work is supported by National Science Foundation award 1544753 (https://www. nsf.gov/awardsearch/showAward?AWD_ID=1544753)."
+    }],
+    "title": {
+      "page": 8,
+      "region": {
+        "x1": 53.79861831665039,
+        "x2": 135.48196411132812,
+        "y1": 559.4523315429688,
+        "y2": 565.8782348632812
+      },
+      "text": "6 CONCLUSION"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 8,
+      "region": {
+        "x1": 321.6610107421875,
+        "x2": 559.5469970703125,
+        "y1": 189.0585479736328,
+        "y2": 194.27099609375
+      },
+      "text": "[1] [n. d.]. Zooniverse. https://www.zooniverse.org/. Accessed: 2018-09-"
+    }, {
+      "page": 8,
+      "region": {
+        "x1": 321.66143798828125,
+        "x2": 558.1981201171875,
+        "y1": 199.0215606689453,
+        "y2": 214.197021484375
+      },
+      "text": "19. [2] Ãsten Axelsson, Mats E Nilsson, and Birgitta Berglund. 2012. The"
+    }, {
+      "page": 8,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 559.5527954101562,
+        "y1": 218.9472198486328,
+        "y2": 712.3289794921875
+      },
+      "text": "Swedish soundscape-quality protocol. The Journal of the Acoustical Society of America 131, 4 (2012), 3476–3476. [3] Östen Axelsson, Mats E Nilsson, and Birgitta Berglund. 2010. A principal components model of soundscape perception. The Journal of the Acoustical Society of America 128, 5 (2010), 2836–2846. [4] Mathias Basner, Wolfgang Babisch, Adrian Davis, Mark Brink, Charlotte Clark, Sabine Janssen, and Stephen Stansfeld. 2014. Auditory and non-auditory efects of noise on health. The Lancet 383, 9925 (2014), 1325–1332. [5] Juan Pablo Bello, Claudio Silva, Oded Nov, R Luke DuBois, Anish Arora, Justin Salamon, Charles Mydlarz, and Harish Doraiswamy. 2019. SONYC: A System for the Monitoring, Analysis and Mitigation of Urban Noise Pollution. Commun. ACM 62, 2 (2019). [6] Anne Bowser, Derek Hansen, Yurong He, Carol Boston, Matthew Reid, Logan Gunnell, and Jennifer Preece. 2013. Using gamifcation to inspire new citizen science volunteers. In Proceedings of the International Conference on Gameful Design, Research, and Applications. ACM, 18– 25. [7] Jonathan Bragg and Daniel S Weld. 2013. Crowdsourcing multi-label classifcation for taxonomy creation. In Proceedings of the AAAI Conference on Human Computation and Crowdsourcing. [8] Emre Cakir, Toni Heittola, Heikki Huttunen, and Tuomas Virtanen. 2015. Multi-label vs. combined single-label sound event detection with deep neural networks. In Proceedings of the European Signal Processing Conference. IEEE, 2551–2555. [9] John M Carroll. 1989. Evaluation, description and invention: Paradigms for human-computer interaction. In Advances in Computers. Vol. 29. Elsevier, 47–77. [10] Mark Cartwright, Ayanna Seals, Justin Salamon, Alex Williams, Stefanie Mikloska, Duncan MacConnell, Edith Law, Juan P. Bello, and Oded Nov. 2017. Seeing sound: Investigating the efects of visualizations and complexity on crowdsourced audio annotations. Proceedings of the ACM on Human-Computer Interaction 1, 1 (2017). [11] Dana Chandler and Adam Kapelner. 2013. Breaking monotony with meaning: Motivation in crowdsourcing markets. Journal of Economic Behavior & Organization 90 (2013), 123–133. [12] Xiangyu Chen, Yadong Mu, Shuicheng Yan, and Tat-Seng Chua. 2010. Efcient large-scale image annotation by probabilistic collaborative multi-label propagation. In Proceedings of the ACM International Conference on Multimedia. ACM, 35–44. [13] Lydia B Chilton, Greg Little, Darren Edge, Daniel S Weld, and James A Landay. 2013. Cascade: Crowdsourcing taxonomy creation. In Proceedings of the SIGCHI Conference on Human Factors in Computing Systems. ACM, 1999–2008. [14] Caren B Cooper, Jennifer Shirk, and Benjamin Zuckerberg. 2014. The invisible prevalence of citizen science in global research: migratory birds and climate change. PLOS ONE 9, 9 (2014), e106508. [15] Jia Deng, Wei Dong, Richard Socher, Li-Jia Li, Kai Li, and Li Fei-Fei. 2009. Imagenet: A large-scale hierarchical image database. In Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition."
+    }, {
+      "page": 8,
+      "region": {
+        "x1": 54.0,
+        "x2": 558.0009765625,
+        "y1": 750.914794921875,
+        "y2": 756.7197875976562
+      },
+      "text": "Paper 292 Page 9"
+    }, {
+      "page": 9,
+      "region": {
+        "x1": 53.79804992675781,
+        "x2": 294.91900634765625,
+        "y1": 97.40254211425781,
+        "y2": 112.5780029296875
+      },
+      "text": "IEEE, 248–255. [16] Jia Deng, Olga Russakovsky, Jonathan Krause, Michael S Bernstein,"
+    }, {
+      "page": 9,
+      "region": {
+        "x1": 53.79005432128906,
+        "x2": 295.3950500488281,
+        "y1": 117.32820129394531,
+        "y2": 718.4176025390625
+      },
+      "text": "Alex Berg, and Li Fei-Fei. 2014. Scalable multi-label annotation. In Proceedings of the SIGCHI Conference on Human Factors in Computing Systems. ACM, 3099–3102. [17] Martin Dittus, Giovanni Quattrone, and Licia Capra. 2016. Analysing volunteer engagement in humanitarian mapping: building contributor communities at large scale. In Proceedings of the ACM Conference on Computer-Supported Cooperative Work and Social Computing. ACM, 108–118. [18] Margret C Domroese and Elizabeth A Johnson. 2017. Why watch bees? Motivations of citizen science volunteers in the Great Pollinator Project. Biological Conservation 208 (2017), 40–47. [19] Alexandra Eveleigh, Charlene Jennett, Ann Blandford, Philip Brohan, and Anna L Cox. 2014. Designing for dabblers and deterring drop-outs in citizen science. In Proceedings of the SIGCHI Conference on Human Factors in Computing Systems. ACM, 2985–2994. [20] Jort F Gemmeke, Daniel PW Ellis, Dylan Freedman, Aren Jansen, Wade Lawrence, R Channing Moore, Manoj Plakal, and Marvin Ritter. 2017. Audio Set: An ontology and human-labeled dartaset for audio events. In Proceedigns of the IEEE International Conference on Acoustics, Speech, and Signal Processing. [21] Monica S Hammer, Tracy K Swinburn, and Richard L Neitzel. 2013. Environmental noise pollution in the United States: developing an efective public health response. Environmental Health Perspectives 122, 2 (2013), 115–119. [22] Eric Humphrey, Simon Durand, and Brian McFee. 2018. OpenMIC-2018: an open dataset for multiple instrument recognition. In Proceedings of the International Society for Music Information Retrieval Conference. [23] Edwin L Hutchins, James D Hollan, and Donald A Norman. 1985. Direct manipulation interfaces. Human-computer Interaction 1, 4 (1985), 311– 338. [24] Ioanna Iacovides, Charlene Jennett, Cassandra Cornish-Trestrail, and Anna L Cox. 2013. Do games attract or sustain engagement in citizen science?: a study of volunteer motivations. In CHI’13 Extended Abstracts on Human Factors in Computing Systems. ACM, 1101–1106. [25] Corey Brian Jackson, Kevin Crowston, Gabriel Mugar, and Carsten Østerlund. 2016. Guess what! You’re the First to See this Event: Increasing Contribution to Online Production Communities. In Proceedings of the International Conference on Supporting Group Work. ACM, 171–179. [26] Corey Brian Jackson, Carsten Østerlund, Gabriel Mugar, Katie DeVries Hassman, and Kevin Crowston. 2015. Motivations for sustained participation in crowdsourcing: case studies of citizen science on the role of talk. In Proceedings of the Hawaii International Conference on System Sciences. IEEE, 1624–1634. [27] Aren Jansen, Jort F Gemmeke, Daniel PW Ellis, Xiaofeng Liu, Wade Lawrence, and Dylan Freedman. 2017. Large-scale audio event discovery in one million youtube videos. In Proceedings of the IEEE International Conference on Acoustics, Speech and Signal Processing. IEEE, 786–790. [28] Charlene Jennett, Laure Kloetzer, Daniel Schneider, Ioanna Iacovides, Anna Cox, Margaret Gold, Brian Fuchs, Alexandra Eveleigh, Kathleen Methieu, Zoya Ajani, et al. 2016. Motivations, learning and creativity in online citizen science. Journal of Science Communication 15, 3 (2016). [29] Dick Kasperowski and Thomas Hillman. 2018. The epistemic culture in an online citizen science project: Programs, antiprograms and epistemic subjects. Social Studies of Science (2018). [30] Nicolas Kaufmann, Thimo Schulze, and Daniel Veit. 2011. More than fun and money. Worker Motivation in Crowdsourcing-A Study on Mechanical Turk. In Proceedings of Americas Conference on Information Systems. 1–11. [31] Aniket Kittur, Boris Smus, Susheel Khamkar, and Robert E Kraut. 2011. Crowdforge: Crowdsourcing complex work. In Proceedings of the ACM"
+    }, {
+      "page": 9,
+      "region": {
+        "x1": 317.9550476074219,
+        "x2": 558.4832763671875,
+        "y1": 97.40254211425781,
+        "y2": 112.5780029296875
+      },
+      "text": "Symposium on User Interface Software and Technology. ACM, 43–52. [32] Ranjay A Krishna, Kenji Hata, Stephanie Chen, Joshua Kravitz, David A"
+    }, {
+      "page": 9,
+      "region": {
+        "x1": 317.94732666015625,
+        "x2": 559.547607421875,
+        "y1": 117.32820129394531,
+        "y2": 700.3740234375
+      },
+      "text": "Shamma, Li Fei-Fei, and Michael S Bernstein. 2016. Embracing error to enable rapid crowdsourcing. In Proceedings of the SIGCHI Conference on Human Factors in Computing Systems. ACM, 3167–3179. [33] Tsung-Yi Lin, Michael Maire, Serge Belongie, James Hays, Pietro Perona, Deva Ramanan, Piotr Dollár, and C Lawrence Zitnick. 2014. Microsoft coco: Common objects in context. In European conference on computer vision. Springer, 740–755. [34] Chris J Lintott, Kevin Schawinski, Anže Slosar, Kate Land, Steven Bamford, Daniel Thomas, M Jordan Raddick, Robert C Nichol, Alex Szalay, and Dan Andreescu. 2008. Galaxy Zoo: morphologies derived from visual inspection of galaxies from the Sloan Digital Sky Survey. Monthly Notices of the Royal Astronomical Society 389, 3 (2008), 1179– 1189. [35] Oisin Mac Aodha, Rory Gibb, Kate E Barlow, Ella Browning, Michael Firman, Robin Freeman, Briana Harder, Libby Kinsey, Gary R Mead, and Stuart E Newson. 2018. Bat detective—Deep learning tools for bat acoustic signal detection. PLOS Computational Biology 14, 3 (2018), e1005995. [36] Andrew Mao, Ece Kamar, Yiling Chen, Eric Horvitz, Megan E Schwamb, Chris J Lintott, and Arfon M Smith. 2013. Volunteering versus work for pay: Incentives and tradeofs in crowdsourcing. In Proceedings of the AAAI Conference on Human Computation and Crowdsourcing. [37] Winter Mason and Duncan J Watts. 2009. Financial incentives and the performance of crowds. In Proceedings of the ACM SIGKDD Workshop on Human Computation. ACM, 77–85. [38] Greg Newman, Andrea Wiggins, Alycia Crall, Eric Graham, Sarah Newman, and Kevin Crowston. 2012. The future of citizen science: emerging technologies and shifting paradigms. Frontiers in Ecology and the Environment 10, 6 (2012), 298–304. [39] Oded Nov, Ofer Arazy, and David Anderson. 2011. Dusting for science: motivation and participation of digital citizen science volunteers. In Proceedings of the iConference. ACM, 68–74. [40] Oded Nov, Ofer Arazy, and David Anderson. 2014. Scientists@ Home: what drives the quantity and quality of online citizen science participation? PLOS ONE 9, 4 (2014), e90375. [41] Nathan R Prestopnik and Kevin Crowston. 2011. Gaming for (citizen) science: Exploring motivation and data quality in the context of crowdsourced science through the design and evaluation of a socialcomputational system. In IEEE International Conference on e-Science Workshops. IEEE, 28–33. [42] M Jordan Raddick, Georgia Bracey, Pamela L Gay, Chris J Lintott, Carie Cardamone, Phil Murray, Kevin Schawinski, Alexander S Szalay, and Jan Vandenberg. 2013. Galaxy Zoo: Motivations of citizen scientists. (2013). arXiv:physics.ed-ph/1303.6886 [43] M Jordan Raddick, Georgia Bracey, Pamela L Gay, Chris J Lintott, Phil Murray, Kevin Schawinski, Alexander S Szalay, and Jan Vandenberg. 2010. Galaxy Zoo: Exploring the motivations of citizen science volunteers. Astronomy Education Review 9, 1 (2010), n1. [44] Jason Reed, M Jordan Raddick, Andrea Lardner, and Karen Carney. 2013. An exploratory factor analysis of motivations for participating in Zooniverse, a collection of virtual citizen science projects. In Proceedings of the Hawaii International Conference on System Sciences. IEEE, 610–619. [45] Hauke Riesch and Clive Potter. 2014. Citizen science as seen by scientists: Methodological, epistemological and ethical dimensions. Public understanding of science 23, 1 (2014), 107–120. [46] Jakob Rogstadius, Vassilis Kostakos, Aniket Kittur, Boris Smus, Jim Laredo, and Maja Vukovic. 2011. An assessment of intrinsic and extrinsic motivation on task performance in crowdsourcing markets."
+    }, {
+      "page": 9,
+      "region": {
+        "x1": 54.0,
+        "x2": 558.001953125,
+        "y1": 750.914794921875,
+        "y2": 756.7197875976562
+      },
+      "text": "Paper 292 Page 10"
+    }, {
+      "page": 10,
+      "region": {
+        "x1": 53.79804992675781,
+        "x2": 295.3905334472656,
+        "y1": 97.81300354003906,
+        "y2": 311.83099365234375
+      },
+      "text": "Proceedigns of the International AAAI Conference on Web and Social Media, 17–21. [47] Dana Rotman, Jenny Preece, Jen Hammock, Kezee Procita, Derek Hansen, Cynthia Parr, Darcy Lewis, and David Jacobs. 2012. Dynamic changes in motivation in collaborative citizen-science projects. In Proceedings of the ACM Conference on Computer Supported Cooperative Work. ACM, 217–226. [48] Lior Shamir, Carol Yerby, Robert Simpson, Alexander M von BendaBeckmann, Peter Tyack, Filipa Samarra, Patrick Miller, and John Wallin. 2014. Classifcation of large acoustic datasets using machine learning and crowdsourcing: Application to whale calls. The Journal of the Acoustical Society of America 135, 2 (2014), 953–962. [49] Ben Shneiderman. 1982. The future of interactive systems and the emergence of direct manipulation. Behaviour & Information Technology 1, 3 (1982), 237–256. [50] Gunnar A Sigurdsson, Olga Russakovsky, Ali Farhadi, Ivan Laptev, and Abhinav Gupta. 2016. Much ado about time: Exhaustive annotation of temporal data. In Proceedings of the AAAI Conference on Human Computation and Crowdsourcing. [51] Alexandra Swanson, Margaret Kosmala, Chris Lintott, Robert Simpson, Arfon Smith, and Craig Packer. 2015. Snapshot Serengeti, highfrequency annotated camera trap images of 40 mammalian species in"
+    }, {
+      "page": 10,
+      "region": {
+        "x1": 317.94708251953125,
+        "x2": 559.0808715820312,
+        "y1": 97.40254211425781,
+        "y2": 112.5780029296875
+      },
+      "text": "an African savanna. Scientifc data 2 (2015), 150026. [52] Ramine Tinati, Max Van Kleek, Elena Simperl, Markus Luczak-Rösch,"
+    }, {
+      "page": 10,
+      "region": {
+        "x1": 317.9550476074219,
+        "x2": 559.5498657226562,
+        "y1": 117.32752990722656,
+        "y2": 291.9049987792969
+      },
+      "text": "Robert Simpson, and Nigel Shadbolt. 2015. Designing for citizen data analysis: a cross-sectional case study of a multi-domain citizen science platform. In Proceedings of the SIGCHI Conference on Human Factors in Computing Systems. ACM, 4069–4078. [53] Anthony Truskinger, Mark Cottman-Fields, Daniel Johnson, and Paul Roe. 2013. Rapid scanning of spectrograms for efcient identifcation of bioacoustic events in big data. In Proceedings of the IEEE International Conference on eScience. IEEE, 270–277. [54] Carl Vondrick, Donald Patterson, and Deva Ramanan. 2013. Efciently scaling up crowdsourced video annotation. International Journal of Computer Vision 101, 1 (2013), 184–204. [55] Chris Wood, Brian Sullivan, Marshall Ilif, Daniel Fink, and Steve Kelling. 2011. eBird: engaging birders in science and conservation. PLOS Biology 9, 12 (2011), e1001220. [56] Bolei Zhou, Agata Lapedriza, Aditya Khosla, Aude Oliva, and Antonio Torralba. 2018. Places: A 10 million image database for scene recognition. IEEE transactions on Pattern Analysis and Machine Intelligence 40, 6 (2018), 1452–1464."
+    }, {
+      "page": 10,
+      "region": {
+        "x1": 54.0,
+        "x2": 558.001953125,
+        "y1": 750.914794921875,
+        "y2": 756.7197875976562
+      },
+      "text": "Paper 292 Page 11"
+    }],
+    "title": {
+      "page": 8,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 380.7193603515625,
+        "y1": 174.89437866210938,
+        "y2": 181.32025146484375
+      },
+      "text": "REFERENCES"
+    }
+  }]
+}

@@ -1,0 +1,1630 @@
+{
+  "abstractText": {
+    "page": 0,
+    "region": {
+      "x1": 53.79800033569336,
+      "x2": 295.8020324707031,
+      "y1": 368.5258483886719,
+      "y2": 569.2239990234375
+    },
+    "text": "ABSTRACT Scatterplots commonly use multiple visual channels to encode multivariate datasets. Such visualizations often use size, shape, and color as these dimensions are considered separable—dimensions represented by one channel do not significantly interfere with viewers’ abilities to perceive data in another. However, recent work shows the size of marks significantly impacts color difference perceptions, leading to broader questions about the separability of these channels. In this paper, we present a series of crowdsourced experiments measuring how mark shape, size, and color influence data interpretation in multiclass scatterplots. Our results indicate that mark shape significantly influences color and size perception, and that separability among these channels functions asymmetrically: shape more strongly influences size and color perceptions in scatterplots than size and color influence shape. Models constructed from the resulting data can"
+  },
+  "figures": [{
+    "caption": "Figure 3: Mean just noticeable differences (JNDs) based on our data-driven models for all shapes across each color axis in CIELAB with error bars showing standard error. Unfilled shapes require larger color differences for people to accurately perceive a difference when compared to filled shapes across all three color axes. mQTons performed comparable to unfilled shapes; however, colors were more discriminible on ⊤ and + compared to − and contrary to H1.",
+    "captionBoundary": {
+      "x1": 53.47500228881836,
+      "x2": 558.1805419921875,
+      "y1": 246.5146026611328,
+      "y2": 285.22296142578125
+    },
+    "figType": "Figure",
+    "imageText": ["(c)", "More", "Discriminable", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "Less", "Discriminable", "B*:", "JND", "Values", "for", "Each", "Shape", "))", "(5", "0%", "(N", "D", "N", "D", "%", "J", "n", "50", "M", "ea", "10", "2", "3", "4", "5", "6", "7", "8", "9", "11", "1", "(b)", "More", "Discriminable", "12", "13", "14", "15", "16", "Less", "Discriminable", "A*:", "JND", "Values", "for", "Each", "Shape", "))", "(5", "0%", "(N", "D", "N", "D", "%", "J", "n", "50", "M", "ea", "10", "2", "3", "4", "5", "6", "7", "8", "9", "11", "1", "(a)", "More", "Discriminable", "L*:", "JND", "Values", "for", "Each", "Shape", "Less", "Discriminable", "1", "11", "2", "3", "4", "5", "6", "7", "8", "9", "10", "M", "ea", "n", "50", "%", "J", "N", "D", "(N", "D", "(5", "0%", "))"],
+    "name": "3",
+    "page": 5,
+    "regionBoundary": {
+      "x1": 56.0,
+      "x2": 556.0,
+      "y1": 106.15393829345703,
+      "y2": 229.4329833984375
+    }
+  }, {
+    "caption": "Figure 6: Participants accurately perceived shape differences robust to size. Significant variation in accuracy was only found in our smallest tested fixed size (6 pixels), and the magnitude of this variation is quite small (accuracy only 4.5% lower than with 50 pixel shapes).",
+    "captionBoundary": {
+      "x1": 53.474998474121094,
+      "x2": 294.0330505371094,
+      "y1": 224.04762268066406,
+      "y2": 273.7159423828125
+    },
+    "figType": "Figure",
+    "imageText": ["5", "10", "15", "20", "25", "30", "35", "40", "Size  (pixels)", "0", "45", "50", ")", "Mean  Accuracy  vs.  Size", "ra", "cy", "  (%", "Ac", "cu", "90", "80", "70", "60", "50", "40", "30", "20", "10"],
+    "name": "6",
+    "page": 9,
+    "regionBoundary": {
+      "x1": 85.0,
+      "x2": 263.0,
+      "y1": 95.74890899658203,
+      "y2": 206.0076904296875
+    }
+  }, {
+    "caption": "Figure 4: Shape perception accuracy across all three color axes in CIELAB. Significance was only found in L* for extremely light colors (L* > 92). Compared to Figure 3, we see little to no evidence of interference from color on shape perceptions.",
+    "captionBoundary": {
+      "x1": 53.798004150390625,
+      "x2": 558.1946411132812,
+      "y1": 224.1756134033203,
+      "y2": 240.96697998046875
+    },
+    "figType": "Figure",
+    "imageText": ["(c)", "-­60", "-­40", "-­20", "0", "20", "40", "60", "80-­80", "100-­100", "B*", "Mean  Accuracy  vs.  B*", ")", "ra", "cy", "  (%", "Ac", "cu", "90", "80", "70", "60", "50", "40", "30", "20", "10", "(b)", "-­60", "-­40", "-­20", "0", "20", "40", "60", "80-­80", "100-­100", "A*", "Mean  Accuracy  vs.  A*", ")", "ra", "cy", "  (%", "Ac", "cu", "90", "80", "70", "60", "50", "40", "30", "20", "10", "(a)", "55", "60", "65", "70", "75", "80", "85", "9050", "95", "10045", "L*", "Mean  Accuracy  vs.  L*", ")", "ra", "cy", "  (%", "Ac", "cu", "90", "80", "70", "60", "50", "40", "30", "20", "10"],
+    "name": "4",
+    "page": 7,
+    "regionBoundary": {
+      "x1": 56.0,
+      "x2": 553.7069702148438,
+      "y1": 105.36125946044922,
+      "y2": 207.093994140625
+    }
+  }, {
+    "caption": "Figure 2: We generated 16 candidate shapes drawing on encodings from popular commercial tools. Our shapes fall into three categories: filled shapes, unfilled shapes, and open shapes modified from QTons [71].",
+    "captionBoundary": {
+      "x1": 53.79800033569336,
+      "x2": 295.5213928222656,
+      "y1": 198.4826202392578,
+      "y2": 237.19097900390625
+    },
+    "figType": "Figure",
+    "imageText": ["mQTons", "Unfilled", "Filled"],
+    "name": "2",
+    "page": 3,
+    "regionBoundary": {
+      "x1": 73.0,
+      "x2": 275.0,
+      "y1": 92.0,
+      "y2": 185.0
+    }
+  }, {
+    "caption": "Figure 5: Predicted mean bias in perceived size across all tested shapes based on our models. Error bars show standard error and the red line indicates no significant bias. Shapes such as ■, □, and ⊤ were generally perceived larger compared to other shapes of the same size whereas ⋆ and ♦ were perceived as smaller.",
+    "captionBoundary": {
+      "x1": 317.9549865722656,
+      "x2": 559.3218383789062,
+      "y1": 281.6716003417969,
+      "y2": 342.2989501953125
+    },
+    "figType": "Figure",
+    "imageText": ["Mean  Bias  (%)", "20", "30", "40", "50", "60", "70", "80", "9010", "1000", "Mean  Bias  Across  All  Shapes"],
+    "name": "5",
+    "page": 8,
+    "regionBoundary": {
+      "x1": 324.0,
+      "x2": 547.6195678710938,
+      "y1": 97.83747863769531,
+      "y2": 263.39544677734375
+    }
+  }],
+  "sections": [{
+    "paragraphs": [{
+      "page": 0,
+      "region": {
+        "x1": 53.19300079345703,
+        "x2": 294.17889404296875,
+        "y1": 585.5210571289062,
+        "y2": 711.8670043945312
+      },
+      "text": "Permission to make digital or hard copies of all or part of this work for personal or classroom use is granted without fee provided that copies are not made or distributed for profit or commercial advantage and that copies bear this notice and the full citation on the first page. Copyrights for components of this work owned by others than the author(s) must be honored. Abstracting with credit is permitted. To copy otherwise, or republish, to post on servers or to redistribute to lists, requires prior specific permission and/or a fee. Request permissions from permissions@acm.org. CHI 2019, May 4–9, 2019, Glasgow, Scotland UK © 2019 Copyright held by the owner/author(s). Publication rights licensed to ACM. ACM ISBN 978-1-4503-5970-2/19/05. . . $15.00 https://doi.org/10.1145/3290605.3300899"
+    }, {
+      "page": 0,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 558.2110595703125,
+        "y1": 368.94927978515625,
+        "y2": 386.9070129394531
+      },
+      "text": "help designers anticipate viewer perceptions to build more effective visualizations."
+    }]
+  }, {
+    "paragraphs": [{
+      "page": 0,
+      "region": {
+        "x1": 317.4269714355469,
+        "x2": 559.855224609375,
+        "y1": 416.539306640625,
+        "y2": 435.29901123046875
+      },
+      "text": "• Human-centered computing → Empirical studies in visualization;"
+    }],
+    "title": {
+      "page": 0,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 392.6675109863281,
+        "y1": 401.973876953125,
+        "y2": 408.4000244140625
+      },
+      "text": "CCS CONCEPTS"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 0,
+      "region": {
+        "x1": 317.59698486328125,
+        "x2": 559.8648071289062,
+        "y1": 465.7322692871094,
+        "y2": 483.69000244140625
+      },
+      "text": "Visualization, Graphical Perception, Visual Channels, Separability, Crowdsourcing"
+    }],
+    "title": {
+      "page": 0,
+      "region": {
+        "x1": 317.9549560546875,
+        "x2": 375.5510559082031,
+        "y1": 450.3648681640625,
+        "y2": 456.791015625
+      },
+      "text": "KEYWORDS"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 0,
+      "region": {
+        "x1": 317.7309875488281,
+        "x2": 559.6849975585938,
+        "y1": 505.5889892578125,
+        "y2": 554.8270263671875
+      },
+      "text": "Stephen Smart and Danielle Albers Szafir. 2019. Measuring the Separability of Shape, Size, and Color in Scatterplots. In CHI Conference on Human Factors in Computing Systems Proceedings (CHI 2019), May 4–9, 2019, Glasgow, Scotland Uk. ACM, New York, NY, USA, 14 pages. https://doi.org/10.1145/3290605.3300899"
+    }],
+    "title": {
+      "page": 0,
+      "region": {
+        "x1": 317.6319885253906,
+        "x2": 412.8418884277344,
+        "y1": 494.1996154785156,
+        "y2": 500.0320129394531
+      },
+      "text": "ACM Reference Format:"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 0,
+      "region": {
+        "x1": 317.59698486328125,
+        "x2": 559.8661499023438,
+        "y1": 586.4893188476562,
+        "y2": 712.0430297851562
+      },
+      "text": "Visualizations leverage a variety of visual channels to encode data and often combine channels to encode multiple data attributes at once. However, data represented using one channel may interfere with interpreting data along another. For example, visualizing one attribute using chroma and a second using lightness may degrade analysts’ abilities to accurately interpret either attribute independently: shifting lightness makes it more difficult to estimate chroma and varying chroma may complicate lightness perceptions [30]. Two visual channels are considered to be integral if encoding a data attribute using one channel interferes with selectively attending to the"
+    }, {
+      "page": 0,
+      "region": {
+        "x1": 54.0,
+        "x2": 558.0009765625,
+        "y1": 750.914794921875,
+        "y2": 756.7197875976562
+      },
+      "text": "Paper 669 Page 1"
+    }, {
+      "page": 1,
+      "region": {
+        "x1": 53.54899978637695,
+        "x2": 295.710205078125,
+        "y1": 96.6122817993164,
+        "y2": 222.1669921875
+      },
+      "text": "other. Conversely, two visual channels are considered to be separable if one channel can be attended to without interference from the other [48]. Multivariate visualizations often leverage separable channels to design visualizations that allow analysts to accurately disentangle data along different dimensions. Channels such as size and color have conventionally been considered largely separable [70]. However, recent research [19, 64, 65] challenges the separability of color and size, suggesting a need for a deeper understanding of the interplay between different visual channels to inform effective visualization."
+    }, {
+      "page": 1,
+      "region": {
+        "x1": 53.79764175415039,
+        "x2": 295.7105712890625,
+        "y1": 228.1193084716797,
+        "y2": 401.4939880371094
+      },
+      "text": "In this paper, we quantify the amount of perceptual interference between shape, size, and color. All three channels commonly encode values in many visualizations including maps and scatterplots. We measure how the interplay of shape, size, and color encodings influence our ability to distinguish data values along each channel and the symmetry of these effects. Understanding and quantifying the perceptual interference between these channels is vital to crafting visualizations that support accurate interpretation across multiple data dimensions. Our goal is to inform visualization designers and improve visualization effectiveness in the real world. We aim to achieve this by constructing actionable probabilistic models based on empirical evidence that can help predict how these visual channels interact with one another to recognize and account for potential biases in data analysis."
+    }, {
+      "page": 1,
+      "region": {
+        "x1": 53.54899978637695,
+        "x2": 295.7087097167969,
+        "y1": 407.4472961425781,
+        "y2": 509.0909729003906
+      },
+      "text": "Our experiments look at three major categories of shapes used in existing commercial tools: filled geometries, unfilled geometries, and open shapes inspired by quantitative texton sequences (QTonS) [71] modified based on designs employed in existing tools. Our experiments leverage empirically validated methods to construct actionable probabilistic models of value difference perceptions [64, 66]. We apply these methods to model both color and size differences as a function of mark shape."
+    }, {
+      "page": 1,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 295.7106018066406,
+        "y1": 515.0433349609375,
+        "y2": 640.5980224609375
+      },
+      "text": "Our findings suggest that mark shape significantly affects perceptions of both mark size and color. For example, people more readily discriminate colors mapped to filled shapes compared to unfilled shapes, and shapes such as ⊤, ▲, and ■ appear larger than equally sized +, △, and A shapes. Our results also indicate that these relationships are asymmetric: shape has a pronounced impact on size and color perception, while size and color have a smaller impact on shape perception for our tested ranges. We implemented the models constructed from our results as a D3 [6] extension that scales these channels based on known parameters of a visualization."
+    }, {
+      "page": 1,
+      "region": {
+        "x1": 53.79767608642578,
+        "x2": 295.7965087890625,
+        "y1": 651.0530395507812,
+        "y2": 705.35498046875
+      },
+      "text": "Contributions: The primary contributions of this work are empirical measures and models that predict how perceived differences in color and size vary depending on mark shape. Our models replicate prior work showing the interdependence of size and color [65] and provide an in-depth quantitative"
+    }, {
+      "page": 1,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 559.8688354492188,
+        "y1": 96.6122817993164,
+        "y2": 186.301025390625
+      },
+      "text": "analysis of the interplay between shape, size, and color in multivariate scatterplots. Our results allow for a more principled understanding of the separability of size, shape, and color for visualization design, providing empirically-grounded metrics for selecting between different encodings. These findings challenge current guidelines on separable and integral dimensions which we hope will spark future research around these principles rooted in empirical evidence from visualizations."
+    }],
+    "title": {
+      "page": 0,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 411.0592041015625,
+        "y1": 571.121826171875,
+        "y2": 577.5479736328125
+      },
+      "text": "1 INTRODUCTION"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 1,
+      "region": {
+        "x1": 317.70599365234375,
+        "x2": 559.9590454101562,
+        "y1": 220.94627380371094,
+        "y2": 286.7250061035156
+      },
+      "text": "Shapes frequently encode categorical data in scatterplots. However, little empirical understanding exists to inform visualization designers about the effects of shape on interpreting data encoded using additional channels, such as color and size. We survey current empirical studies of separability from visualization and vision science to inform our work."
+    }],
+    "title": {
+      "page": 1,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 404.802490234375,
+        "y1": 205.57887268066406,
+        "y2": 212.0050048828125
+      },
+      "text": "2 BACKGROUND"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 1,
+      "region": {
+        "x1": 317.70599365234375,
+        "x2": 559.8623657226562,
+        "y1": 321.3692932128906,
+        "y2": 411.0589904785156
+      },
+      "text": "Graphical perception measures the effectiveness of different visual channels for encoding data. These studies have explored how different visual channels might support a broad variety of tasks [57]. For example, they rank how well various channels support value comparison [2, 18, 21, 27], estimating quantities from specific visualization types [33, 62], investigating biases in particular channels [7, 23], and exploring certain statistical quantities like correlation [31, 55]."
+    }, {
+      "page": 1,
+      "region": {
+        "x1": 317.70599365234375,
+        "x2": 559.8637084960938,
+        "y1": 417.01129150390625,
+        "y2": 590.385986328125
+      },
+      "text": "This work focuses on three visual channels—shape, color, and size—that prior studies have explored in isolation. For example, Skau & Kosara [62] measured how shapes factors in pie and donut charts affect interpretation accuracy. Ware [71] demonstrated how shape could encode ordinal data through Quantitative Texton Sequences (QTonS). We focus on shape encodings in scatterplots, where prior studies have primarily evaluated shape encodings for category discrimination tasks [39, 40, 68]. For example, Burlinson et al. [12] found that closed shapes support faster comparison than open shapes and that combining open and closed shapes may introduce perceptual interference in selection tasks. These studies provide preliminary insight into how the visual system processes shape information in visualizations in order to effectively leverage shape to support multiple analysis tasks."
+    }, {
+      "page": 1,
+      "region": {
+        "x1": 317.70599365234375,
+        "x2": 559.8692626953125,
+        "y1": 596.3383178710938,
+        "y2": 709.93798828125
+      },
+      "text": "Like shape, color is commonly used in a wide variety of visualizations. However, color perception is sensitive to viewing conditions [8, 36, 44, 46, 56, 58, 63] and visualization context [14, 52, 64, 65]. In visualizations, color can encode both qualitative and quantitative patterns. Quantitative color encodings rely on mapping data differences to sufficiently visible perceptual differences. As a result, developers often use either designer-crafted tools such as ColorBrewer [9] to select robust encodings or interpolate between differences using color spaces like CIELAB [24]. Additional features of"
+    }, {
+      "page": 1,
+      "region": {
+        "x1": 54.0,
+        "x2": 558.0009765625,
+        "y1": 750.914794921875,
+        "y2": 756.7197875976562
+      },
+      "text": "Paper 669 Page 2"
+    }, {
+      "page": 2,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 295.790771484375,
+        "y1": 96.6122817993164,
+        "y2": 186.301025390625
+      },
+      "text": "a color encoding affect interpretation accuracy, such as semantic alignment with the data [41, 60] and colormap design [4, 5, 42, 47] (see Zhou & Hansen [72] and Bujack et. al. [11] for surveys). However, most studies of color encodings focus on color as an isolated cue. Color’s sensitivity to mark geometries suggests that such an isolation assumption may provide only limited insight into how to effectively leverage color in visualizations [52, 64, 65]."
+    }, {
+      "page": 2,
+      "region": {
+        "x1": 53.54899978637695,
+        "x2": 295.7944641113281,
+        "y1": 192.2543182373047,
+        "y2": 293.89801025390625
+      },
+      "text": "Size is conventionally considered a more robust channel for encoding data values. For example, Cleveland & McGill [20] demonstrated that size is more accurate than color for value comparison tasks. Heer et al. [33] studied the effect of chart size on comparing values in time series visualizations. In text visualizations, size may also introduce biases due to the mark shapes created by word structures [3, 23]. We further explore how size-induced biases might influence separability in scatterplots."
+    }, {
+      "page": 2,
+      "region": {
+        "x1": 53.54899978637695,
+        "x2": 295.7122802734375,
+        "y1": 299.85028076171875,
+        "y2": 533.0009765625
+      },
+      "text": "Many graphical perception studies have explicitly explored graphical perception in scatterplots. For example, several studies measured people’s abilities to estimate correlation [31, 54, 61] and to detect (and even be primed to) value clusters [26, 59, 69]. Several recent techniques leverage findings from graphical perception studies of scatterplots to automate scatterplot design for legibility [15, 43] and to predict perceptual attributes associated with scatterplot analysis such as similarity [49] or class separability [59]. However, these investigations focus on analyses over either an entire design or a single channel. Multiclass and other multivariate scatterplots require designers to understand how different channels might interfere with data analysis across different subsets of dimensions. For example, mean position estimation is robust to multiple channels, but task performance varies with the salience of the channel employed [29]. In this work, we extend recent efforts in graphical perception for scatterplots to explore perceptual interactions between task-relevant and task-irrelevant channels to quantify potential biases in multivariate scatterplots."
+    }],
+    "title": {
+      "page": 1,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 414.1080017089844,
+        "y1": 306.0018615722656,
+        "y2": 312.4280090332031
+      },
+      "text": "Graphical Perception"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 2,
+      "region": {
+        "x1": 53.439998626708984,
+        "x2": 294.4097900390625,
+        "y1": 570.8343505859375,
+        "y2": 708.343994140625
+      },
+      "text": "Vision science traditionally describes separability as whether or not a dimension can be selectively attended to without interference from another dimension [28, 48]. Such studies related to integral and separable channels generally center on conjunctive search [67]—the process of identifying an object defined by multiple features, such as searching for a red X among a collection of blue X’s and red O’s. These studies aim to understand how the visual system processes an object’s feature information. For example, Jenkins et al. [34] found that attentional selection in searching for targets of a specified shape and size operates in parallel, allowing people to search for shape and size simultaneously. Alternatively, color tends"
+    }, {
+      "page": 2,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 558.2130126953125,
+        "y1": 96.6122817993164,
+        "y2": 114.57000732421875
+      },
+      "text": "to attract attention more strongly than shape when searching for color-shape conjunctions [37]."
+    }, {
+      "page": 2,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 559.9450073242188,
+        "y1": 120.5232925415039,
+        "y2": 246.0770263671875
+      },
+      "text": "Research in psychology has shown an interdependence between visual channels such as hue and brightness [8, 13, 30]. Pomerantz & Sager [51] found an interdependence between spatial configurations and symbol identification; however, the effect was asymmetric—symbol shape affected perceptions of spatial arrangements significantly more than arrangement affected symbol recognition. Cheng & Pachella [17] challenged the definitions of integral and separable dimensions and instead argued that channels corresponding to psychological attributes (i.e., an attribute that can be selectively attended to) are separable and channels that do not are integral."
+    }, {
+      "page": 2,
+      "region": {
+        "x1": 316.6300048828125,
+        "x2": 559.8676147460938,
+        "y1": 252.02928161621094,
+        "y2": 425.4049987792969
+      },
+      "text": "Understanding of integral and separable channels in visualization has largely centered around expert heuristics [45, 70], with channels defined using terms like “fully separable” and “no significant interference.” Few studies have empirically explored interactions between separable channels in data visualizations. Acevedo & Laidlaw [1] found that people more precisely detect brightness differences than differences in other visual elements such as size or spacing in multivariate icon-based visualizations. Other studies have shown that quantity estimation is affected by both size and color [19, 23] with size perceptions being biased by specific hues. Spatial frequency and other factors of data complexity may influence the effectiveness of different color schemes depending on the target analysis task [52]. Kim & Heer found that size may interfere with positional data encodings [35]."
+    }, {
+      "page": 2,
+      "region": {
+        "x1": 317.95489501953125,
+        "x2": 559.8701782226562,
+        "y1": 431.3572692871094,
+        "y2": 604.7319946289062
+      },
+      "text": "More recent work has attempted to quantify such interactions between channels. For example, Stone et al. [64] and Szafir [65] modeled how mark size influences color perception, finding that larger and elongated marks increase our abilities to discriminate encoding colors. Demiralp et al. [25] studied the perceptual interactions between shape, size, and color similar to our study. They developed distance matrices based on Likert ratings, triplet comparison, and spatial arrangement tasks to help optimize visual encodings of color, shape, and size for discriminibility, quantifying categorical and ordinal differences along these channels. We instead leverage psychophysical methods to capture smaller shifts in numeric perception at the scale of just noticeable differences and also evaluate how specific facets of a mark’s shape may systematically influence separability."
+    }],
+    "title": {
+      "page": 2,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 219.283447265625,
+        "y1": 555.4668579101562,
+        "y2": 561.8930053710938
+      },
+      "text": "Separability and Conjunctive Search"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 2,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 559.8640747070312,
+        "y1": 634.5953369140625,
+        "y2": 712.3289794921875
+      },
+      "text": "Our understanding of the separability of color, shape, and size encodings stems primarily from ordering tasks where participants compare large differences along each dimension [25, 70]. However, many visualization tasks require analysts to analyze small variations, such as value differences in continuous data. Prior work [64, 65] quantified interactions between size and color using probabilistic models that predict"
+    }, {
+      "page": 2,
+      "region": {
+        "x1": 54.0,
+        "x2": 558.0009765625,
+        "y1": 750.914794921875,
+        "y2": 756.7197875976562
+      },
+      "text": "Paper 669 Page 3"
+    }, {
+      "page": 3,
+      "region": {
+        "x1": 53.439998626708984,
+        "x2": 294.0541076660156,
+        "y1": 271.4432678222656,
+        "y2": 337.22198486328125
+      },
+      "text": "viewer perception based on visualization parameters. In this work, we construct similar models quantifying interactions between size, shape, and color through four crowdsourced experiments: two primary experiments to study the effect of mark shape on color and size perception and two measuring the symmetry of these effects."
+    }, {
+      "page": 3,
+      "region": {
+        "x1": 53.46900177001953,
+        "x2": 295.7120361328125,
+        "y1": 343.1742858886719,
+        "y2": 540.4600219726562
+      },
+      "text": "We contextualize our investigation using scatterplots, which often use shape to distinguish categories of data points and color and size to encode continuous attributes. We tailor our experimental designs to reflect this scenario using the methodology from Szafir [65]—a binary forced-choice comparison of two target marks analogous to comparing two data points in a visualization. We constructed a candidate set of 16 mark shapes sampled from common visualization tools, including D3, Tableau, Excel, and Matlab (Figure 2). These shapes form three categories: filled shapes, unfilled shapes, and open shapes inspired by quantitative texton sequences (QTonS) [71] modified based on designs used in existing commercial tools. For simplicity, we refer to these open shapes as modified QTons or mQTons. Our experiments tested shape, size, and color difference perceptions over six different mark sizes (6, 12, 18, 25, 37, and 50 pixels). All shapes were sized by filling a square box in either height or width as appropriate."
+    }, {
+      "page": 3,
+      "region": {
+        "x1": 53.33000183105469,
+        "x2": 294.056396484375,
+        "y1": 551.394287109375,
+        "y2": 569.3519897460938
+      },
+      "text": "We used these conditions to evaluate three hypotheses related to the separability of mark shape, size, and color:"
+    }, {
+      "page": 3,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 286.3544616699219,
+        "y1": 579.8070678710938,
+        "y2": 586.2880249023438
+      },
+      "text": "H1—Colors will be more discriminable on denser shapes."
+    }, {
+      "page": 3,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 294.0580749511719,
+        "y1": 597.2222900390625,
+        "y2": 710.8209838867188
+      },
+      "text": "We anticipate that colors will be more discriminable on filled shapes than equivalent unfilled shapes (e.g., ■ vs. □) and that mQTons having angles less than 90° (e.g., B and ✴) will perform comparable to filled shapes, while other mQTons will perform comparable to unfilled shapes. This hypothesis stems from prior work that shows colors become more discriminable as mark size increases. Filled shapes and mQTons such as B and ✴ generally use a larger number of pixels compared to unfilled shapes and the other mQTons due to their density. We anticipate that density will exhibit similar gains."
+    }, {
+      "page": 3,
+      "region": {
+        "x1": 317.95501708984375,
+        "x2": 475.5101013183594,
+        "y1": 96.1340560913086,
+        "y2": 102.614990234375
+      },
+      "text": "H2—Denser shapes will appear larger."
+    }, {
+      "page": 3,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 559.8598022460938,
+        "y1": 113.5492935180664,
+        "y2": 191.28302001953125
+      },
+      "text": "When two shapes are close in diameter, the viewer might integrate other attributes such as area or visual density, privileging filled shapes and dense QTons. Additionally, unfilled shapes indirectly produce a slightly smaller negative shape by enclosing an area within its border [16]. This negative shape could interfere with size comparisons by directing viewer focus to the enclosed area."
+    }, {
+      "page": 3,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 560.8224487304688,
+        "y1": 201.73806762695312,
+        "y2": 232.1300048828125
+      },
+      "text": "H3—Interference between channels will be asymmetric: shape will more significantly affect color and size than either will affect shape."
+    }, {
+      "page": 3,
+      "region": {
+        "x1": 317.59698486328125,
+        "x2": 559.8612670898438,
+        "y1": 243.0632781982422,
+        "y2": 284.9320068359375
+      },
+      "text": "Based on our observations and results from prior studies [25], unless the shapes are too small or too close to the background color to be readily identified, we anticipate that people will reliably compare shapes regardless of color or size."
+    }],
+    "title": {
+      "page": 2,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 487.92376708984375,
+        "y1": 619.2278442382812,
+        "y2": 625.6539916992188
+      },
+      "text": "3 CONDITIONS AND HYPOTHESES"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 3,
+      "region": {
+        "x1": 317.70599365234375,
+        "x2": 559.867431640625,
+        "y1": 318.38128662109375,
+        "y2": 467.84600830078125
+      },
+      "text": "Our goal is to understand separability in ways that inform visualization designers working in the context of real-world displays. Display conditions such as ambient illumination, display gamma, and resolution mean that a single design may look different on different displays. As the number of potential conditions is too large to feasibly account for each independently, prior studies have used crowdsourcing to attain large numbers of real world samples that help account for this variance in aggregate [32, 53, 65, 66]. These models, while limited in their abilities to account for the precise visual mechanisms at play, allow designers to predict perceptions in the real world with significantly higher precision than traditional laboratory models."
+    }],
+    "title": {
+      "page": 3,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 431.65277099609375,
+        "y1": 303.01385498046875,
+        "y2": 309.44000244140625
+      },
+      "text": "4 GENERAL METHODS"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 3,
+      "region": {
+        "x1": 317.5969543457031,
+        "x2": 559.9554443359375,
+        "y1": 501.2952880859375,
+        "y2": 674.6699829101562
+      },
+      "text": "Our experiments use a binary forced-choice design, asking participants to compare either the color, size, or shape of the two target marks. Participants saw a series of scatterplots rendered using D3 on a 375 x 250 pixel white background with 1 pixel gray axes without labels or numbers as shown in Figure 1. Each scatterplot contained two vertically aligned colored shapes embedded in a set of randomly selected gray distractor shapes. As the distance between marks can affect color perception [10], the two colored shapes were always rendered 125 pixels apart, approximating the width of foveal vision at arm’s length. Marks in visualizations are not always evenly spaced, but fixing the distance between the compared shapes allows us to control for potential confounding effects. Marks differed on one tested dimension (shape, size, or color) by a fixed amount."
+    }, {
+      "page": 3,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 559.4548950195312,
+        "y1": 680.622314453125,
+        "y2": 710.5360107421875
+      },
+      "text": "We selected a set of six fixed sizes (6, 12, 18, 25, 37, and 50 pixels) based on those used in prior experiments [64, 65]. As designers have no methods to estimate aspects of"
+    }, {
+      "page": 3,
+      "region": {
+        "x1": 54.0,
+        "x2": 558.0009765625,
+        "y1": 750.914794921875,
+        "y2": 756.7197875976562
+      },
+      "text": "Paper 669 Page 4"
+    }, {
+      "page": 4,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 294.2252197265625,
+        "y1": 96.6122817993164,
+        "y2": 150.43597412109375
+      },
+      "text": "display resolution or viewing distance necessary for precise psychophysical calculations of visual angle, we present our results in terms of pixel sizes. We convert to visual angle for modeling, assuming a default pixel resolution of 96 PPI and a D65 whitepoint."
+    }, {
+      "page": 4,
+      "region": {
+        "x1": 63.76100158691406,
+        "x2": 124.24699401855469,
+        "y1": 135.7750701904297,
+        "y2": 165.7239990234375
+      },
+      "text": "We inserted √"
+    }, {
+      "page": 4,
+      "region": {
+        "x1": 125.44300079345703,
+        "x2": 294.04693603515625,
+        "y1": 157.39793395996094,
+        "y2": 169.96002197265625
+      },
+      "text": "visualization area mark diameter2 distractor marks positioned"
+    }, {
+      "page": 4,
+      "region": {
+        "x1": 53.46851348876953,
+        "x2": 294.3996276855469,
+        "y1": 173.64830017089844,
+        "y2": 287.24700927734375
+      },
+      "text": "according to a random sampling of a normal distribution (µ = 0.5, σ = 1.0). Distractor shapes intersecting any other shape in the scatterplot were removed. We adjusted each distractor’s size by a random value between [−20%,20%] of the tested shape size to prevent distractor shapes from providing an anchoring size that might inadvertently support size comparisons. Distractor shapes add visual complexity to the scatterplots being rendered which helps us address the Isolation Assumption made in prior studies [65], increasing the ecological validity of our results."
+    }],
+    "title": {
+      "page": 3,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 350.9026184082031,
+        "y1": 485.9278564453125,
+        "y2": 492.35400390625
+      },
+      "text": "Stimuli"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 4,
+      "region": {
+        "x1": 53.439998626708984,
+        "x2": 295.7120361328125,
+        "y1": 345.45428466796875,
+        "y2": 530.7839965820312
+      },
+      "text": "Each experiment consisted of four phases (1) informed consent and screening, (2) tutorial, (3) formal study, and (4) demographics questionnaire. The specific question phrasings will be given in each experiment’s relevant sections. Participants first provided informed consent for their participation and, for studies involving color perception, completed an Ishihara test to screen for color vision deficiencies [38]. While an online Ishihara test is limited due to variations in color representation across displays, it successfully caught color vision deficiencies in piloting. We additionally asked participants to self-report color vision deficiencies at the end of the study and excluded any participants self-reporting CVD. Upon successfully completing the screening, participants completed a series of tutorial questions to clarify any possible ambiguities in the experimental instructions. Participants had to answer all tutorial questions correctly to begin the formal study."
+    }, {
+      "page": 4,
+      "region": {
+        "x1": 53.44029998779297,
+        "x2": 295.7048034667969,
+        "y1": 536.7373046875,
+        "y2": 698.156982421875
+      },
+      "text": "During the formal study, each participant completed a fixed number of trials sequentially in random order to mitigate transfer (e.g., learning or fatigue) effects. Participants recorded their responses for each trial using the ’f’ and ’j’ keys, as in Stone et al. [64]. Each scatterplot rested in the center of the page with the instructions, a reminder of keypress mappings, and a request to complete each trial as quickly and accurately as possible above the scatterplot. After each trial, a gray box covered the scatterplot for 0.5 seconds to mitigate potential contrast effects between subsequent trials. To ensure honest participation, each experiment contained several control trials with large differences between target marks. After completing all trials, participants reported basic demographic information and were compensated for their participation."
+    }],
+    "title": {
+      "page": 4,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 100.36505126953125,
+        "y1": 330.08685302734375,
+        "y2": 336.51300048828125
+      },
+      "text": "Procedure"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 4,
+      "region": {
+        "x1": 317.48699951171875,
+        "x2": 559.461181640625,
+        "y1": 111.55631256103516,
+        "y2": 225.156005859375
+      },
+      "text": "We recruited 1,930 participants across four experiments using Amazon’s Mechanical Turk. All participants were from the United States, between the age of 18 and 65 years old, and had an approval rating of 95% or greater. 181 of these participants (9.4%) were excluded from our analyses for either failing to correctly answer a majority of the engagement checks (trials that were considerably easier to get correct than regular trials), self reporting a color vision deficiency or abnormal vision, or having a mean response time less than 0.5 seconds (mean overall response time: 2.05 seconds)."
+    }],
+    "title": {
+      "page": 4,
+      "region": {
+        "x1": 317.95501708984375,
+        "x2": 427.50830078125,
+        "y1": 96.18885803222656,
+        "y2": 102.614990234375
+      },
+      "text": "Participant Recruitment"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 4,
+      "region": {
+        "x1": 317.59698486328125,
+        "x2": 559.958984375,
+        "y1": 255.6822967529297,
+        "y2": 369.2820129394531
+      },
+      "text": "Across all our experiments, we collected equal numbers of samples for all combinations of our independent variables. Several of our independent variables were mixed-participants factors: they are counterbalanced between-participants with each participant seeing multiple settings of each variable. This allows us to balance statistical power with potential transfer effects. We analyzed effects from our independent variables using an ANCOVA treating interparticipant variation as a random covariate. All post-hoc analyses used Tukey’s Honest Significant Difference Test (HSD, α = .05)."
+    }],
+    "title": {
+      "page": 4,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 355.9140319824219,
+        "y1": 240.3148956298828,
+        "y2": 246.74102783203125
+      },
+      "text": "Analysis"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 4,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 558.3773803710938,
+        "y1": 399.8092956542969,
+        "y2": 489.49798583984375
+      },
+      "text": "Our first pair of experiments measured the separability of shape and color by modeling color perception as a function of size for different shapes. The first experiment focuses on participants’ abilities to accurately discern color differences for various mark shapes while the second leverages the same experimental paradigm to instead quantify the effects of color on shape perceptions, allowing us insight into the perceptual symmetry of this relationship."
+    }],
+    "title": {
+      "page": 4,
+      "region": {
+        "x1": 317.9549560546875,
+        "x2": 427.56793212890625,
+        "y1": 384.4418640136719,
+        "y2": 390.8680114746094
+      },
+      "text": "5 SHAPE AND COLOR"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 4,
+      "region": {
+        "x1": 317.48699951171875,
+        "x2": 559.864013671875,
+        "y1": 519.2222290039062,
+        "y2": 585.802978515625
+      },
+      "text": "We conducted a 16 (mark shape, mixed) × 5 (color difference, within) × 3 (CIELAB axis, between) × 6 (mark size, within) mixed-factors study to measure the effects of mark shape on color difference perceptions in scatterplots. The general procedure for this experiment is outlined in the General Methods section."
+    }, {
+      "page": 4,
+      "region": {
+        "x1": 317.2082214355469,
+        "x2": 559.8597412109375,
+        "y1": 598.3973388671875,
+        "y2": 711.9970092773438
+      },
+      "text": "Stimuli. Our stimuli consisted of a series of fixed size scatterplots with two colorful marks (one mapped to a fixed color and the second to an adjusted color) embedded in a set of mid-grey (L∗ = 50) distractor marks. We generated a set of fixed colors by uniformly sampling the CIELAB gamut using 12.5 step increments along the L* axis and 12 step increments along both the a* and b* axes. We removed any colors from our sample that, when adjusted, fell outside of the CIELAB gamut or that fell too close to grey to avoid confusion with our distractor marks. This sampling process yielded 79 fixed"
+    }, {
+      "page": 4,
+      "region": {
+        "x1": 54.0,
+        "x2": 558.0009765625,
+        "y1": 750.914794921875,
+        "y2": 756.7197875976562
+      },
+      "text": "Paper 669 Page 5"
+    }, {
+      "page": 5,
+      "region": {
+        "x1": 53.45000076293945,
+        "x2": 294.04498291015625,
+        "y1": 307.415283203125,
+        "y2": 325.37298583984375
+      },
+      "text": "colors where L* ranged from 30 to 65, a* ranged from -36 to 48, and b* ranged from -48 to 48."
+    }, {
+      "page": 5,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 298.1629333496094,
+        "y1": 331.3252868652344,
+        "y2": 421.0140075683594
+      },
+      "text": "We mapped one of these fixed colors to one mark and adjusted the color of the second mark by a fixed color difference step along one axis of CIELAB. Steps corresponded to the size-adjusted JNDs tested in Szafir [65]: no difference, 0.5ND(50), 0.75ND(50), 1ND(50), 1.25ND(50), 1.5ND(50), and 2ND(50). Each participant saw target marks corresponding to two shapes rendered at six different sizes (6, 12, 18, 25, 37, and 50 pixels)."
+    }, {
+      "page": 5,
+      "region": {
+        "x1": 53.439998626708984,
+        "x2": 295.7105407714844,
+        "y1": 439.4822692871094,
+        "y2": 648.7230224609375
+      },
+      "text": "Experimental Design. Participants were asked to compare two colorful marks of the same shape and report whether they were the same color or different. We used discriminability rate (the proportion of correctly identified color differences) as our primary dependent measure. Adjusted color axis was a between-participants factor, while mark size (measured as the shape diameter) and color difference were within-participants factors. Mark shape was a mixed-participants factor. We chose to vary size and color difference within-subjects to help account for variance from display configurations. Each participant saw two different tested shapes and each combination of shape × size × color difference (along either L*, a*, or b*) once. Shapes were pseudorandomly assigned to participants such that combinations of shape, size, and color difference were counterbalanced across all participants. Fixed color was randomly mapped to each trial, with each color tested once per participant. Each participant completed 79 trials, including 7 engagement checks to ensure honest participation."
+    }, {
+      "page": 5,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 295.7105407714844,
+        "y1": 667.1912841796875,
+        "y2": 709.0599975585938
+      },
+      "text": "Results. We recruited 683 total participants for this experiment. We excluded 77 particiants from our analysis for either failing to correctly answer a majority of the engagement checks, self reporting a color vision deficiency or abnormal"
+    }, {
+      "page": 5,
+      "region": {
+        "x1": 317.6260070800781,
+        "x2": 559.86572265625,
+        "y1": 307.415283203125,
+        "y2": 349.2829895019531
+      },
+      "text": "vision, or having a mean response time less than 0.5 seconds. We analyzed data from the remaining 606 participants (µage = 35.5,σage = 9.5, 296 male, 304 female, 6 DNR), resulting in 43,632 trials."
+    }, {
+      "page": 5,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 559.8675537109375,
+        "y1": 355.23529052734375,
+        "y2": 432.968994140625
+      },
+      "text": "We analyzed the effect of shape on color difference perception across experimental factors (shape, color axis, color difference, and size) using a four-factor mixed-factors ANCOVA with interparticipant variation treated as a random covariate. We report significant effects relative to our primary research questions and include full data tables and analysis scripts at https://bit.ly/2prjuRu."
+    }, {
+      "page": 5,
+      "region": {
+        "x1": 317.7059631347656,
+        "x2": 568.3681030273438,
+        "y1": 438.9222717285156,
+        "y2": 576.4310302734375
+      },
+      "text": "We found a significant effect of shape on color difference perception across all three axes in CIELAB (FL (15,590) = 7.5, p < .001, Fa (15,590) = 14.3, p < .001, Fb (15,590) = 19.6, p < .001). We found partial support for H1: in general, colors were significantly more discriminible for filled shapes than for unfilled shapes. For example, ■ (µL = 56.5% ± 3.0%,µa = 53.8%± 3.3%,µb = 58.4%± 3.0%) and ▲ (µL = 51.1%± 3.3%,µa = 48.7%± 3.3%,µb = 49.2%± 3.2%) significantly outperformed their unfilled counterparts, □ (µL = 46.1%± 3.3%,µa = 40.0%± 3.2%,µb = 41.8%± 3.3%) and △. (µL = 42.1%± 3.2%,µa = 34.4%± 3.2%,µb = 37.7%± 3.2%)."
+    }, {
+      "page": 5,
+      "region": {
+        "x1": 317.7059631347656,
+        "x2": 564.2981567382812,
+        "y1": 582.38427734375,
+        "y2": 695.9830322265625
+      },
+      "text": "mQTons, however, performed contrary to our expectations. Comparisons showed ⊤ and + enabled significantly greater discriminability than unfilled shapes. For example, we found that color differences were perceived either significantly or marginally better across all three color axes when ⊤ (µL = 48.5%± 3.3%,µa = 41.1%± 3.1%,µb = 37.8%± 3.2%) and+ (µL = 53.0%± 3.3%,µa = 39.4%± 3.2%,µb = 41.7%± 3.3%) were used compared to △ (µL = 42.1%± 3.2%,µa = 34.4%± 3.2%,µb = 37.7%± 3.2%) despite using fewer pixels. These mQTons provided comparable discriminability to"
+    }, {
+      "page": 5,
+      "region": {
+        "x1": 54.0,
+        "x2": 558.0009765625,
+        "y1": 750.914794921875,
+        "y2": 756.7197875976562
+      },
+      "text": "Paper 669 Page 6"
+    }, {
+      "page": 6,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 295.7079162597656,
+        "y1": 96.6122817993164,
+        "y2": 114.57000732421875
+      },
+      "text": "filled shapes despite the lower density of colored pixels associated with the same size mark."
+    }, {
+      "page": 6,
+      "region": {
+        "x1": 53.43982696533203,
+        "x2": 295.7114562988281,
+        "y1": 120.5232925415039,
+        "y2": 198.25701904296875
+      },
+      "text": "Additionally, we found a significant effect of size on color difference perception across all three color axes (FL (5,600) = 34.3, p < .003,Fa (5,600) = 18.7, p < .001,Fb (5,600) = 21.9, p < .001). Colors were generally more discrimible when larger sizes were used (e.g., 50 pixels) compared to smaller sizes (e.g., 6 pixels) which replicates previous experimental results [65]."
+    }, {
+      "page": 6,
+      "region": {
+        "x1": 53.54899978637695,
+        "x2": 295.78826904296875,
+        "y1": 217.3592987060547,
+        "y2": 426.6000061035156
+      },
+      "text": "Modeling Results. We used our data to construct a set of models using the methodology established in Stone et al. [64]. Our models predict color discriminibility rates based on a mark’s size and shape by computing 50% JNDs for each combination of shape × size. We first used linear regression to fit a linear model through the origin to the mean discriminibility rate as a function of color difference for each combination of shape, size, and tested axis, resulting in 96 models for each color axis. All of these models provided significant fits to our experimental data (p < .05). We then computed 50% just noticeable color differences (JNDs) for each linear model and fit a second linear regression to these JNDs to model JND variation for each shape and axis as a function of inverse mark size, resulting in 48 total models (p < .05 for all models). We can normalize each axis in the CIELAB ∆E metric according to the outputs of these models in order to generate a specific difference model for each tested shape. All of our models can be found at https://bit.ly/2prjuRu."
+    }, {
+      "page": 6,
+      "region": {
+        "x1": 53.439998626708984,
+        "x2": 295.7094421386719,
+        "y1": 432.5522766113281,
+        "y2": 629.8380126953125
+      },
+      "text": "Figure 3 summarizes the mean JNDs derived from our data for each combination of shape and axis aggregated over size, with error bars corresponding to the standard error of that mean to indicate each shape’s sensitivity to size variation. We found that both the means and variance varied across different shapes. For L*, the mean JND in the least discriminable shape, (µJND = 10.07L*±3.1%) was 54.7% larger than the most discriminable shape, ♦ (µJND = 6.51L*±3.2%). These results suggest that mark shape and color are not readily separable: a mark’s shape can significantly shift our abilities to discriminate fine-scale color differences, providing preliminary evidence of significant perceptual interference of shape on color encoding perception. As in prior studies, color perceptions were sensitive to size variation. For example, the mean JND value for L* across all 16 shapes at our smallest fixed size (6 pixels) is 11.30∆L∗ but only 6.48∆L∗ for our largest fixed size (50 pixels)."
+    }],
+    "title": {
+      "page": 4,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 511.6458740234375,
+        "y1": 504.6568298339844,
+        "y2": 511.0829772949219
+      },
+      "text": "Experiment One: Effects of Shape on Color"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 6,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 295.7044372558594,
+        "y1": 666.8743286132812,
+        "y2": 708.7420043945312
+      },
+      "text": "Our first experiment compared identical shapes to gauge the effect of shape on color perception and found evidence that color may not be strongly separable from mark shape. To evaluate the symmetry of our results, we repeated our experiment"
+    }, {
+      "page": 6,
+      "region": {
+        "x1": 317.59698486328125,
+        "x2": 559.8616333007812,
+        "y1": 96.6122817993164,
+        "y2": 162.3909912109375
+      },
+      "text": "using an inverted experimental paradigm: we mapped two differing target shapes to a fixed color to measure the influence of mark color on shape perception. We conducted a 16 (shape, within) × 3 (CIELAB axis, between) × 6 (mark size, within) mixed-factors study following the general procedure outlined in the General Methods section."
+    }, {
+      "page": 6,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 559.8659057617188,
+        "y1": 176.02928161621094,
+        "y2": 229.85198974609375
+      },
+      "text": "Stimuli. Shapes and sizes matched those from the first experiment. Each pair of target marks were mapped to a pair of shapes sampled with replacement from our candidate set, leading to 128 possible combinations of shape (112 differing pairs and 16 same-shape pairs)."
+    }, {
+      "page": 6,
+      "region": {
+        "x1": 316.3009948730469,
+        "x2": 559.2034301757812,
+        "y1": 235.80528259277344,
+        "y2": 349.40399169921875
+      },
+      "text": "We sampled colors uniformly from the CIELAB gamut. We mapped each pair of marks to a single fixed color and one of our 128 shape pairs. However, because we did not vary colors within each trial, we were able to sample a larger proportion of the gamut. This sampling resulted in 168 total colors where L* ranged from 50 to 96 using 3.8 step increments, a* ranged from -80 to 80 using 20 step increments, and b* ranged from -60 to 80 using 20 step increments. We chose lighter colors (L* from 50 to 96) because in piloting, error rates were highest when colors were close to the background luminance."
+    }, {
+      "page": 6,
+      "region": {
+        "x1": 317.59698486328125,
+        "x2": 562.8980102539062,
+        "y1": 363.04229736328125,
+        "y2": 512.5069580078125
+      },
+      "text": "Experimental Design. Our experiment again used a binary forced-choice task measuring perceived shape difference across different mark colors. Participants were asked to compare the two colorful marks and report whether they were the same shape or different. We used the discriminability rate (the proportion of correctly identified shape differences) as our primary dependent measure. Fixed color was randomly mapped to each trial, with each color tested once per participant. Each participant completed 168 trials: one trial for each size and shape pair, four engagement checks, and 44 additional same-shape pairs to help balance the distribution of correct responses. Combinations of size, color, and shape were counterbalanced between participants."
+    }, {
+      "page": 6,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 559.8659057617188,
+        "y1": 526.144287109375,
+        "y2": 603.8779907226562
+      },
+      "text": "Results. We recruited 219 total participants for this experiment. 8 were excluded from analysis for either failing to correctly answer a majority of the engagement checks, self reporting a color vision deficiency or abnormal vision, or having a mean response time less than 0.5 seconds. We analyzed data from the remaining 211 participants (µage = 36.4,σage = 11.5, 63 male, 147 female, 1 DNR) resulting in 35,448 total trials."
+    }, {
+      "page": 6,
+      "region": {
+        "x1": 317.95465087890625,
+        "x2": 559.867431640625,
+        "y1": 609.830322265625,
+        "y2": 711.4749755859375
+      },
+      "text": "We analyzed the effect of color on shape difference perception across experimental factors (shape pair, color axis, and size) using a three-factor mixed-factors ANCOVA with interparticipant variation treated as a random covariate. We found a significant effect of L* on accuracy of perceived shape differences (F (1,209) = 1.7, p < .03). However, Figure 4a shows that the magnitude of this effect is small, and significant variation in accuracies were only seen for colors with extremely high L* values: the accuracy difference between"
+    }, {
+      "page": 6,
+      "region": {
+        "x1": 54.0,
+        "x2": 558.0009765625,
+        "y1": 750.914794921875,
+        "y2": 756.7197875976562
+      },
+      "text": "Paper 669 Page 7"
+    }, {
+      "page": 7,
+      "region": {
+        "x1": 53.46900177001953,
+        "x2": 295.70538330078125,
+        "y1": 260.5099182128906,
+        "y2": 388.7130126953125
+      },
+      "text": "the highest and lowest L∗ values was 4.4%. However, this behavior was asymptotic: we saw only observed degradation in shape perception beyond L∗ = 92. As we measured these perceptions against a white background, this lightness value is near the threshold where the shapes will become difficult to distinguish from the background. We also found a significant interaction between shape and L* on shape perception (F (15,195) = 3.5, p < .01), with pairs integrating B generating slightly lower overall accuracy (µL = 93.3%± 2.2%). We anticipate that the fine features on this shape are especially sensitive to the observed lightness threshold."
+    }, {
+      "page": 7,
+      "region": {
+        "x1": 53.439979553222656,
+        "x2": 295.71014404296875,
+        "y1": 394.665283203125,
+        "y2": 472.39898681640625
+      },
+      "text": "While the two dimensions (color and shape) are not immediately comparable, the large difference in the magnitude of the observed effects coupled with the asymptotic behavior we find in shape discrimination suggests that the effect of shape on color perceptions is significantly stronger than that of color on shape perceptions, indicating an asymmetry in the separability of these two channels (H3)."
+    }],
+    "title": {
+      "page": 6,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 247.6381378173828,
+        "y1": 651.5068359375,
+        "y2": 657.9329833984375
+      },
+      "text": "Experiment Two: Effects of Color on Shape"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 7,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 295.8019714355469,
+        "y1": 512.1563110351562,
+        "y2": 649.666015625
+      },
+      "text": "Our first study showed that mark shape, color, and size may not be separable: changing shapes can dramatically influence both perceived color difference and its sensitivity to changes in size. This interaction may be a result of mark shape biasing perceived size. To further explore the relationship between mark shape and size, we conducted a second pair of experiments measuring the separability of shape and size directly. Experiment Three measures how accurately participants can discern size differences for our 16 mark shapes to measure size perception biases between different shapes, while Experiment Four inverts Experiment Three to explore the effects of size on shape perception."
+    }],
+    "title": {
+      "page": 7,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 148.78524780273438,
+        "y1": 496.7888488769531,
+        "y2": 503.2149963378906
+      },
+      "text": "6 SHAPE AND SIZE"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 7,
+      "region": {
+        "x1": 53.33000183105469,
+        "x2": 294.7242736816406,
+        "y1": 689.42333984375,
+        "y2": 707.3809814453125
+      },
+      "text": "We conducted a 16 (shape, within) x 6 (fixed size, within) x 4 (size difference, within) mixed-factors study to measure"
+    }, {
+      "page": 7,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 559.8675537109375,
+        "y1": 263.1582946777344,
+        "y2": 316.98199462890625
+      },
+      "text": "the effects of shape on size difference perceptions in scatterplots. While our independent variables were tested withinparticipants, combinations of these variables were counterbalanced mixed-participants factors to avoid fatigue affects given the large number of possible combinations."
+    }, {
+      "page": 7,
+      "region": {
+        "x1": 317.70599365234375,
+        "x2": 559.1986694335938,
+        "y1": 329.2422790527344,
+        "y2": 406.97601318359375
+      },
+      "text": "Stimuli. For this experiment, participants were shown a series of scatterplots as described in the General Methods section with two bright blue shapes embedded within a field of gray distractor shapes. We chose a bright blue (L* = 32, a* = 79, b* = -107) to highlight the two tested shapes and ease visual search. Shape pairs were drawn from the combinations of our 16 tested mark shapes resulting in 120 shape pairs."
+    }, {
+      "page": 7,
+      "region": {
+        "x1": 317.95465087890625,
+        "x2": 559.867431640625,
+        "y1": 412.92828369140625,
+        "y2": 562.3930053710938
+      },
+      "text": "Fixed sizes mirrored those in Experiment One, with one shape rendered at the fixed size and the second adjusted by adding 5%, 10%, or 15% to its diameter. These thresholds ranged from approximately one to two 50% JNDs for sameshape pairs in piloting. We elected to vary diameter rather than area as our size differences are small, and the geometries of tested shapes complicate normalizing areas between shape pairs. Diameter variation for continuous values in scatterplots is currently employed in tools like Tableau. To mitigate potential effects from aliasing, the actual adjusted differences in pixels were rounded to the nearest whole pixel. We reduced the set of adjusted sizes for our smallest marks as to remove any duplicate sizes caused by rounding errors."
+    }, {
+      "page": 7,
+      "region": {
+        "x1": 317.6260070800781,
+        "x2": 559.867431640625,
+        "y1": 574.654296875,
+        "y2": 712.1630249023438
+      },
+      "text": "Experimental Design. The general procedure for this experiment is outlined in the General Methods section. Participants reported which of the two blue shapes appeared to be greater in size. Our primary dependent measure was the accuracy rate (how often the larger of two shapes was correctly identified as largest). For equal sized pairs, an unbiased percept should lead to a 50% response rate. The tutorial instructed participants to consider size the greater of a mark’s height or width to clarify potentially ambiguous conditions (e.g., those where size may disagree on any single dimension, such as − and ♦). While this clarification does add complexity to the task, participants had to correctly answer five tutorial questions"
+    }, {
+      "page": 7,
+      "region": {
+        "x1": 54.0,
+        "x2": 558.0009765625,
+        "y1": 750.914794921875,
+        "y2": 756.7197875976562
+      },
+      "text": "Paper 669 Page 8"
+    }, {
+      "page": 8,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 294.0555725097656,
+        "y1": 96.6122817993164,
+        "y2": 114.57000732421875
+      },
+      "text": "to ensure they understood how size was being defined in the experiment before proceeding to the main study."
+    }, {
+      "page": 8,
+      "region": {
+        "x1": 53.05099868774414,
+        "x2": 295.7079772949219,
+        "y1": 120.5232925415039,
+        "y2": 210.21197509765625
+      },
+      "text": "In the formal study, each participant saw each shape combination once and each combination of fixed size and size difference five times, with combinations of shape pair, fixed size, and size difference mapped pseudorandomly and counterbalanced between participants. Each participant completed 123 trials including three engagement checks (trials where the shapes differed in length by 50%) to ensure honest participation."
+    }, {
+      "page": 8,
+      "region": {
+        "x1": 53.469017028808594,
+        "x2": 295.7106018066406,
+        "y1": 222.1412811279297,
+        "y2": 311.83099365234375
+      },
+      "text": "Results. We recruited 548 total participants for this experiment. 59 participants were excluded from analysis for either failing to correctly answer a majority of the engagement checks, self reporting a color vision deficiency or abnormal vision, or having a mean response time less than 0.5 seconds. We analyzed data from the remaining 489 participants (µage = 36.5,σage = 11.6, 192 male, 293 female, 4 DNR) for a total of 60,147 trials."
+    }, {
+      "page": 8,
+      "region": {
+        "x1": 53.46900177001953,
+        "x2": 295.7096862792969,
+        "y1": 317.78326416015625,
+        "y2": 371.6059875488281
+      },
+      "text": "We analyzed the effect of shape on size difference perception across our experimental factors (shape, fixed size, and size difference) using a four-factor ANCOVA. Shape was broken up into two factors: bigger shape (bs) and smaller shape (ss) based on the size differences discussed above."
+    }, {
+      "page": 8,
+      "region": {
+        "x1": 53.469200134277344,
+        "x2": 297.70831298828125,
+        "y1": 377.5592956542969,
+        "y2": 491.1579895019531
+      },
+      "text": "We found a significant effect of shape on size perception (Fbs (15,473) = 943.9, p < .001,Fss (15,473) = 940.2, p < .001). Post-hoc comparisons showed that shapes having greater visual density along the top or bottom of the shape were generally perceived as having greater diameter (e.g., ⊤, ■, □, µ = 78.68%±9.90%). Additionally, filled shapes were generally perceived as larger than their unfilled counterparts, partially supporting H2. Contrary to H2, higher-order mQTons (e.g., ✴, B, +, µ = 46.93%± 7.16%) in general were consistently perceived as smaller than less dense shapes."
+    }, {
+      "page": 8,
+      "region": {
+        "x1": 53.469017028808594,
+        "x2": 295.704345703125,
+        "y1": 497.11029052734375,
+        "y2": 586.7999877929688
+      },
+      "text": "We also found a significant effect of fixed size on difference perception (F (5,483) = 19.8, p < .001). Participants compared sizes more accurately for larger fixed sizes (e.g., 50 pixels: µ = 69.7%± 1.0%) than for smaller fixed sizes (e.g., 6 pixels: µ = 64.9%± 1.1%). We also found a significant interaction effect between bigger shape and smaller shape (F (209,279) = 11.9, p < .001). This effect shows that certain pairs of shapes can also skew size perception."
+    }, {
+      "page": 8,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 295.704345703125,
+        "y1": 598.7293090820312,
+        "y2": 712.3289794921875
+      },
+      "text": "Modeling Results. We fit our data to a set of psychometric functions that predict size perception based on the two shapes being compared, the fixed size, and size difference to model relative size perceptions as a function of the signed size difference between the two shapes. We elected not to include data involving our smallest fixed size (6 pixels) in our modeling because only three total size differences (compared to five and seven for our other fixed sizes) could be rendered within the desired range (-16.7%, 0%, and 16.7% corresponding to 5, 6, and 7 pixels). After removing our smallest fixed size, we"
+    }, {
+      "page": 8,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 558.2108764648438,
+        "y1": 368.84527587890625,
+        "y2": 411.5159912109375
+      },
+      "text": "constructed 600 models corresponding to each shape pair × fixed size combination, excluding same shape pairs. Of these 600 models, 558 (93%) of them provided significant fits to the data (p < .05)."
+    }, {
+      "page": 8,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 559.8675537109375,
+        "y1": 417.4682922363281,
+        "y2": 638.6640014648438
+      },
+      "text": "We can use the y-intercept of these models to estimate the likelihood that one shape will be perceived as larger than another for any pair of shapes. Figure 5 shows the mean bias for each tested shape computed using our models. This figure shows biases consistent with our inferential observations: shapes with visual mass near the top or bottom of the shape tend to be seen as larger overall (e.g., ■ compared to +). By seeding our functions according to target visualization parameters, we can use the well-fit models generated from this data to normalize our size computations between encoding shapes to help account for potential biases in size perceptions due to shape. Our results suggest that this bias can be quite substantial: for example, ⊤ shapes were perceived as larger than any other tested shape in 82% of trials whereas ⋆ shapes were only reported as larger in 27% of trials. This bias suggests that separability between data attributes encoded using shape and size is limited as certain shapes are likely to be perceived as significantly larger even if rendered at comparable sizes. A full list of models is available at https://bit.ly/2prjuRu."
+    }],
+    "title": {
+      "page": 7,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 247.68795776367188,
+        "y1": 674.0558471679688,
+        "y2": 680.4819946289062
+      },
+      "text": "Experiment Three: Effects of Shape on Size"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 8,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 559.8631591796875,
+        "y1": 669.8162841796875,
+        "y2": 711.6840209960938
+      },
+      "text": "Due to the substantial biases in perceived size differences between tested shapes, we conducted a 16 (shape, within) × 6 (fixed size, within) × 4 (size difference, within) mixedfactors study to measure the symmetry of these effects of"
+    }, {
+      "page": 8,
+      "region": {
+        "x1": 54.0,
+        "x2": 558.0009765625,
+        "y1": 750.914794921875,
+        "y2": 756.7197875976562
+      },
+      "text": "Paper 669 Page 9"
+    }, {
+      "page": 9,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 295.71142578125,
+        "y1": 298.33428955078125,
+        "y2": 376.0679931640625
+      },
+      "text": "size on shape perception in scatterplots. While our independent variables were tested within-participants, combinations of these variables were counterbalanced mixed-participants factors to avoid fatigue affects given the large number of possible combinations. Our primary dependent measure was the discriminability rate (how frequently participants correctly reported shape differences)."
+    }, {
+      "page": 9,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 295.7969665527344,
+        "y1": 388.6042785644531,
+        "y2": 538.0689697265625
+      },
+      "text": "Experimental Design. The general procedure for this experiment is outlined in the General Methods section. Participants again saw a series of scatterplots containing two bright blue shapes within a field of gray distractor shapes. Shape sizes matched those tested in Experiment Three, with each scatterplot mapping shapes to a single target size. Similar to Experiment Two, participants were asked if the two blue shapes in the scatterplot were the same shape or different. Each participant saw 168 trials corresponding to 120 shape pairs plus an additional 48 same-shape pairs. Trials that rendered shapes at the largest size (50 pixels) were used as engagement checks. Shape, fixed size, and size difference were distributed across trials identically to Experiment Three."
+    }, {
+      "page": 9,
+      "region": {
+        "x1": 53.05082702636719,
+        "x2": 295.7969970703125,
+        "y1": 550.6053466796875,
+        "y2": 628.3389892578125
+      },
+      "text": "Results. We recruited 480 total participants for this experiment. 37 were excluded from analysis for either failing to correctly answer a majority of the engagement checks, self reporting a color vision deficiency or abnormal vision, or having a mean response time less than 0.5 seconds. We analyzed data from the remaining 443 participants (µage = 37.2,σage = 12.5, 167 male, 275 female, 1 DNR), resulting in 74,424 total trials."
+    }, {
+      "page": 9,
+      "region": {
+        "x1": 53.439998626708984,
+        "x2": 298.29620361328125,
+        "y1": 634.2913208007812,
+        "y2": 712.0250244140625
+      },
+      "text": "We analyzed the effect of size on shape perception across our experimental factors (shape, fixed size, and size difference) using a four-factor mixed effects ANCOVA. Shape was again broken up into two factors: bigger shape (bs) and smaller shape (ss) based on the size differences discussed above. We found a significant effect of size (F (5,437) = 47.3, p < .001) as well as size difference (F (3,437) = 8.5, p <"
+    }, {
+      "page": 9,
+      "region": {
+        "x1": 317.59698486328125,
+        "x2": 558.5567016601562,
+        "y1": 96.6122817993164,
+        "y2": 234.12200927734375
+      },
+      "text": ".001) on the rate of perceived shape differences. Similar to Experiment Two however, the magnitude of this effect is small, and significant variation in accuracies are only seen for our smallest fixed size (6 pixels, Fbs (75,367) = 1.5, p < .01,Fss (75,367) = 1.9, p < .001). The difference in shape discriminability between 50 pixel shapes and 6 pixel shapes was 4.5%. As with color, the observed behavior again appears to be asymptotic for small shapes. One possible explanation for this effect is that the shapes have become sufficiently small that fine resolution details can no longer be efficiently rendered or detected. However, further testing is needed to confirm this hypothesis."
+    }, {
+      "page": 9,
+      "region": {
+        "x1": 317.59698486328125,
+        "x2": 559.8660278320312,
+        "y1": 240.07432556152344,
+        "y2": 377.5840148925781
+      },
+      "text": "Our results again suggest an asymmetry between effects of shape on size and size on shape for our tested mark parameters: accuracy differences for size perceptions across shapes were much larger than those for shape perceptions at varying sizes. We are limited in our abilities to directly compare shape and size as differences along these two encoding vectors as our sampled sizes and shapes are not necessarily aligned in their difficulty; however, as with color, we see that these asymmetries hold across even large size differences. The two experiments also use the same set of parameters and stimuli, but generate significantly different results, further indicating an asymmetry in the separability of size and shape."
+    }],
+    "title": {
+      "page": 8,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 506.7440185546875,
+        "y1": 654.4488525390625,
+        "y2": 660.875
+      },
+      "text": "Experiment Four: Effects of Size on Shape"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 9,
+      "region": {
+        "x1": 317.48699951171875,
+        "x2": 558.5650024414062,
+        "y1": 409.60528564453125,
+        "y2": 439.51800537109375
+      },
+      "text": "We measured the separability of shape, size, and color in multiclass scatterplots to understand the perceptual interplay of these encodings. Our results show:"
+    }, {
+      "page": 9,
+      "region": {
+        "x1": 333.39697265625,
+        "x2": 559.8612670898438,
+        "y1": 449.02728271484375,
+        "y2": 623.2050170898438
+      },
+      "text": "• Shape significantly affects color difference perception: Colors were more discriminible when filled shapes were used compared to unfilled shapes. Shapes such as ⊤ and + performed comparably to denser shapes. • Color has some effect on shape perception: Extremely light colors complicated shape perceptions but the magnitude of the effect was small. • Shape significantly affects size perception: Sizes were perceived to be greater for shapes that contain more visual density on the top or bottom of the shape (e.g., ⊤, ■, □). Filled shapes were perceived as larger than their unfilled counterparts. • Size has some effect on shape perception: Extremely small sizes complicated shape perceptions but the magnitude of the effect was small."
+    }, {
+      "page": 9,
+      "region": {
+        "x1": 317.6260070800781,
+        "x2": 559.9456176757812,
+        "y1": 633.5153198242188,
+        "y2": 711.2490234375
+      },
+      "text": "Color difference perception accuracy was generally highest when filled shapes were used, partially supporting H1. Our results also replicated results from previous experiments (Szafir [65] and Stone et al. [64]), showing that color difference perception varies proportionally to mark size. However, contrary to our expectations, color difference perceptions in open shapes were not well explained by shape density. We"
+    }, {
+      "page": 9,
+      "region": {
+        "x1": 54.0,
+        "x2": 558.001953125,
+        "y1": 750.914794921875,
+        "y2": 756.7197875976562
+      },
+      "text": "Paper 669 Page 10"
+    }, {
+      "page": 10,
+      "region": {
+        "x1": 53.54899978637695,
+        "x2": 295.2905578613281,
+        "y1": 95.81025695800781,
+        "y2": 198.25701904296875
+      },
+      "text": "expected the less dense mQTons (−, ⊤, , and +) to perform similar to unfilled shapes, and the denser mQTons (B and ✴) to perform similar to filled shapes. However, we found no clear patterns in mQTon shape and color perceptions. For example, our fourth mQTon (+) outperformed other mQTons for the L* and b* axes in CIELAB and had similarly high discriminability for a*. This shape uses fewer pixels than B and ✴, and uses a comparable number of pixels to ⊤ and , yet consistently supported higher discriminability."
+    }, {
+      "page": 10,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 295.80047607421875,
+        "y1": 204.2092742919922,
+        "y2": 317.8080139160156
+      },
+      "text": "This preliminary evidence suggests that there may be alternative mechanisms that cause the biases observed in our data. One phenomenon that could be affecting color perceptions for mQTons is illusory contours [50]. For example, viewers could be perceiving an illusory unfilled cube when looking at , or an illusory circular border around B and ✴. These illusory contours may cause our visual system to blend the shape color with the background color. However, we would need to further test these hypotheses in a laboratory environment to ascertain the precise factors involved in mQTon perception."
+    }, {
+      "page": 10,
+      "region": {
+        "x1": 53.48899841308594,
+        "x2": 295.8020324707031,
+        "y1": 323.7602844238281,
+        "y2": 449.31500244140625
+      },
+      "text": "Our second experiment demonstrated an asymmetry in the perceptual interdependence of color and shape: only extremely light colors that are rarely used in practice significantly degraded shape perceptions. This effect is likely caused by participants either not being able to find target shapes or not being able to resolve the details of the target shapes because the background color of the scatterplot (white) and the light-colored target shapes are not sufficiently discriminable. This limited effect suggests an asymmetric relationship exists between shape and color: shape much more strongly affects color perception than vice versa, supporting H3."
+    }, {
+      "page": 10,
+      "region": {
+        "x1": 53.439998626708984,
+        "x2": 295.8020324707031,
+        "y1": 455.26727294921875,
+        "y2": 712.3289794921875
+      },
+      "text": "We anticipated some of the variation we saw in our first pair of experiments may be explained by variations in size perceptions across shapes: if some shapes appear larger, they may also support greater discriminability. Our results showed that filled shapes are generally perceived as larger than unfilled shapes, partially supporting H2. Holes created by unfilled shapes may cause people to attend to the negative shape created by the hole and causing unfilled shapes to appear smaller. However, if we group shapes generally perceived as larger (e.g., ⊤, ■, and □), only one of these shapes is filled. Our results suggest that visual density along the top or bottom of a shape is a more significant determinant of perceived size biases. The two target shapes in our stimuli were always vertically aligned, which may partially explain these results; however, shapes like ♦ also span the full vertical mark space. Our results also suggest that the variations seen in Experiment One cannot be explained by mark size biases. For example, ♦ generally provided high discriminability; however, it was perceived as smaller than 12 of our 15 tested marks. Similarly, + provided the best color discriminability of all mQTons, but was perceived as smaller than 4 of the 5 tested mQTons. Future studies in laboratory environments would help us better"
+    }, {
+      "page": 10,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 559.4609375,
+        "y1": 96.6122817993164,
+        "y2": 114.57000732421875
+      },
+      "text": "understand the perceptual mechanisms behind shape, color, and size interference to evaluate these hypotheses."
+    }, {
+      "page": 10,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 559.867431640625,
+        "y1": 120.5232925415039,
+        "y2": 222.1669921875
+      },
+      "text": "We found a limited effect of size on shape perception; like Experiment Two, the magnitude of this effect was substantially smaller than the effect of shape on size and only present for the smallest tested mark sizes, again supporting H3. When mark size is extremely small (smaller than any practical visualization would use), shapes may not render accurately due to the limited amount of pixel space. This would lead to a decrease in shape perception accuracy as the geometry of the shape itself would change."
+    }, {
+      "page": 10,
+      "region": {
+        "x1": 317.48681640625,
+        "x2": 559.9589233398438,
+        "y1": 228.1193084716797,
+        "y2": 389.53900146484375
+      },
+      "text": "As our goal is to improve visualization effectiveness in the real world, it is important to consider how these results might also affect higher level tasks such as correlation or average. While we evaluate binary comparisons, these shifts likely affect higher level tasks. Errors while performing higher level tasks are likely to be as high as those for comparison tasks as the perception of each individual mark is skewed, which skews the overall distribution. For example, scatterplots using ■ and B to categorize datapoints and using a color encoding could potentially skew correlation or average interpretations because colors are more discriminable on ■ compared to B which would skew the overall distribution of color differences perceived. Our modeling approach allows us to approximate these errors and shift encodings appropriately."
+    }, {
+      "page": 10,
+      "region": {
+        "x1": 317.64599609375,
+        "x2": 559.9556884765625,
+        "y1": 395.49127197265625,
+        "y2": 509.09100341796875
+      },
+      "text": "Separable versus integral channels have always been important guidelines for visualization designers because understanding how viewers will perceive the information being presented is critical for maximizing visualization effectiveness. Our results collectively suggest that shape, size, and color are significantly less separable than conventionally thought. These results show strong asymmetries among these visual channels. This work offers quantified empirical guidance for reasoning about and accounting for integrality in multivariate visualizations."
+    }],
+    "title": {
+      "page": 9,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 393.0062255859375,
+        "y1": 394.23785400390625,
+        "y2": 400.66400146484375
+      },
+      "text": "7 DISCUSSION"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 10,
+      "region": {
+        "x1": 317.48699951171875,
+        "x2": 559.8671875,
+        "y1": 538.9533081054688,
+        "y2": 712.3289794921875
+      },
+      "text": "While crowdsourcing allows us to model visualization perception in real-world contexts, it represents a trade-off of control for ecological validity. This trade-off is well-studied in graphical perception [22, 25, 32, 42, 52], but does limit our results in notable ways. For example, hardware settings could cause colors to appear brighter or more discriminable for some participants. We recruited a large number of participants to account for this limitation, and our results from Experiment One closely replicate results from prior studies that show an interdependence between color and size, including both laboratory studies [14] and our own work with web-based visualizations [64, 65]. Variation in screen resolution could cause marks to appear different in size for different participants. While we use absolute pixel sizes in our experiments, our models emphasize the relative difference in mark sizes"
+    }, {
+      "page": 10,
+      "region": {
+        "x1": 54.0,
+        "x2": 558.001953125,
+        "y1": 750.914794921875,
+        "y2": 756.7197875976562
+      },
+      "text": "Paper 669 Page 11"
+    }, {
+      "page": 11,
+      "region": {
+        "x1": 53.439998626708984,
+        "x2": 294.22686767578125,
+        "y1": 96.6122817993164,
+        "y2": 138.48101806640625
+      },
+      "text": "which are consistent despite variation in screen resolution and consistent with visualization encodings. Because of this, our results focus on the ordinal nature of our tested sizes rather than the absolute pixel size."
+    }, {
+      "page": 11,
+      "region": {
+        "x1": 53.439998626708984,
+        "x2": 295.7105712890625,
+        "y1": 144.4332733154297,
+        "y2": 329.76300048828125
+      },
+      "text": "Additionally, anti-aliasing could cause some lines to be rendered slightly differently for different participants since anti-aliasing is based on browser configuration. To help mitigate the influence of this, we use D3 [6], one of the most popular visualization libraries, which renders SVGs that leave rasterization to the browser and beyond a visualization designer’s control. Anti-aliasing would substantially impact shapes containing lines less than a pixel wide which would only affect our smallest tested size (6 pixels). We elected to remove samples involving 6-pixel marks from our models constructed from Experiment Three. The primary goal of this work is to inform visualization designers and improve visualization effectiveness in the real world. Designers rarely know the hardware settings and environment of the viewer, so the choice to use crowdsourcing for these experiments simulates what designers work with in the real world."
+    }, {
+      "page": 11,
+      "region": {
+        "x1": 53.439998626708984,
+        "x2": 295.7106018066406,
+        "y1": 335.7162780761719,
+        "y2": 437.3599853515625
+      },
+      "text": "Our experiments used a limited sample of shapes, sizes, and colors but generally kept the samples within the range of practical visualizations. Future work could use different backgrounds and more carefully controlled mark shapes. Further, we used limited samples to control for the large number of conditions. Future work could increase the number of samples integrated into our models to reduce model variance and to allow for a more in-depth statistical evaluation of model variation across each condition."
+    }, {
+      "page": 11,
+      "region": {
+        "x1": 53.79764175415039,
+        "x2": 295.710205078125,
+        "y1": 443.3122863769531,
+        "y2": 568.8670043945312
+      },
+      "text": "Conventional guidelines around size encoding often recommend using area rather than diameter. We chose to use diameter to encode size to provide consistency in how we normalized and adjusted shapes with very different geometries and because our size manipulations were sufficiently small that we anticipate the differences in diameter and area encodings were negligible. This decision is well-grounded in common visualization tools: several visualization tools used in the real world, such as Tableau, encode size using diameter. However, future experiments should confirm these results hold for other size encodings such as area."
+    }, {
+      "page": 11,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 295.71148681640625,
+        "y1": 574.8193359375,
+        "y2": 664.5079956054688
+      },
+      "text": "While our results show disadvantages to using unfilled shapes with respect to color and size biases, unfilled shapes can help disambiguate marks that are overlapping. For example, Tableau uses unfilled shapes by default to avoid overdraw in scatterplots. Extending these studies to consider scatterplots with overdraw would further illuminate trade-offs in using filled versus unfilled shapes in multivariate visualizations."
+    }],
+    "title": {
+      "page": 10,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 449.71575927734375,
+        "y1": 523.5858154296875,
+        "y2": 530.011962890625
+      },
+      "text": "Limitations and Future Work"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 11,
+      "region": {
+        "x1": 53.48899841308594,
+        "x2": 294.3041076660156,
+        "y1": 694.371337890625,
+        "y2": 712.3289794921875
+      },
+      "text": "The lack of an easily discernable mapping between mark geometry, size perceptions, and color perceptions make it"
+    }, {
+      "page": 11,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 559.8638916015625,
+        "y1": 96.6122817993164,
+        "y2": 162.3909912109375
+      },
+      "text": "difficult for people to account for potential biases created in multidimensional scatterplots and other visualizations combining these encodings. The measures and models constructed in this work can be used to make adjustments to the color and size ranges used in these visualizations as a function of mark shape in order to improve visualization effectiveness."
+    }, {
+      "page": 11,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 559.8701782226562,
+        "y1": 168.3433074951172,
+        "y2": 317.8080139160156
+      },
+      "text": "To support the use of these models in practice, we have implemented the models constructed from Experiment One as a D3 extension (which can be found here: https://bit.ly/2prjuRu) to normalize color encoding scales according to the size and shape parameters of a target visualization. This package takes parameters such as mark size and shape and returns the minimum distance (∆E in CIELAB) that mark colors need to be apart so that 50% of the population will perceive a difference to support perceptually corrected color interpolation. By integrating these models into a common visualization tool, we hope to allow developers to fluidly account for interference between these channels to generate more effective multidimensional visualizations."
+    }],
+    "title": {
+      "page": 11,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 126.73712158203125,
+        "y1": 679.0038452148438,
+        "y2": 685.4299926757812
+      },
+      "text": "Implementation"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 11,
+      "region": {
+        "x1": 317.48699951171875,
+        "x2": 559.9590454101562,
+        "y1": 349.9482727050781,
+        "y2": 595.0540161132812
+      },
+      "text": "In this paper, we measure how the interplay of shape, size, and color encodings influence our ability to distinguish data values along each channel and measure the symmetry of these effects. Our results suggest that shape, size, and color are less separable than conventionally thought and that some of this variation can be readily modeled. We found that colors are generally more discriminible when filled shapes are used compared to unfilled shapes and shapes such as + and ⊤ performed comparably to denser shapes despite using fewer pixels. We also found preliminary evidence that shapes containing more visual density along the top or bottom edges (e.g., ⊤, ■, □) are perceived as larger than shapes that do not (e.g., −, +, ⋆). These effects appear asymmetric—shape more strongly affects color and size difference perception than color or size affect shape perception. From our experimental results, we constructed models that predict viewer perception based on what shapes are being used in a scatterplot and implemented these models as an extension in D3. We hope that this work can be used to spark future research to construct new guidelines for separable and integral visual channels grounded in empirical evidence."
+    }],
+    "title": {
+      "page": 11,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 399.6416320800781,
+        "y1": 334.58087158203125,
+        "y2": 341.00701904296875
+      },
+      "text": "8 CONCLUSION"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 11,
+      "region": {
+        "x1": 317.48699951171875,
+        "x2": 560.242431640625,
+        "y1": 627.1943359375,
+        "y2": 645.1519775390625
+      },
+      "text": "We thank Matt Whitlock for his support and thoughtful feedback. This research was funded by NSF CRII: CHS # 1657599."
+    }],
+    "title": {
+      "page": 11,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 440.7888488769531,
+        "y1": 611.8268432617188,
+        "y2": 618.2529907226562
+      },
+      "text": "9 ACKNOWLEDGMENTS"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 11,
+      "region": {
+        "x1": 321.9399719238281,
+        "x2": 558.202392578125,
+        "y1": 676.5000610351562,
+        "y2": 681.302001953125
+      },
+      "text": "[1] Daniel Acevedo and David Laidlaw. 2006. Subjective quantification of"
+    }, {
+      "page": 11,
+      "region": {
+        "x1": 334.9549865722656,
+        "x2": 559.5929565429688,
+        "y1": 686.4630737304688,
+        "y2": 711.1900024414062
+      },
+      "text": "perceptual interactions among some 2D scientific visualization methods. IEEE Transactions on Visualization and Computer Graphics 12, 5 (2006), 1133–1140."
+    }, {
+      "page": 11,
+      "region": {
+        "x1": 54.0,
+        "x2": 558.0020141601562,
+        "y1": 750.914794921875,
+        "y2": 756.7197875976562
+      },
+      "text": "Paper 669 Page 12"
+    }, {
+      "page": 12,
+      "region": {
+        "x1": 53.79798889160156,
+        "x2": 295.4361572265625,
+        "y1": 97.81306457519531,
+        "y2": 718.572998046875
+      },
+      "text": "[2] Danielle Albers, Michael Correll, Steve Franconeri, and Michael Gleicher. 2014. A task driven framework for visualizing time series data. In Proc. 2014 ACM Human Factors in Computing Systems. ACM. [3] Eric Alexander, Chih-Ching Chang, Mariana Shimabukuro, Steven Franconeri, Christopher Collins, and Michael Gleicher. 2016. The biasing effect of word length in font size encodings. In Poster Compendium of the IEEE Conference on Information Visualization. [4] Lawrence D Bergman, Bernice E Rogowitz, and Lloyd A Treinish. 1995. A rule-based tool for assisting colormap selection. In Proceedings of the 6th conference on Visualization’95. IEEE Computer Society, 118. [5] David Borland and Russell M Taylor Ii. 2007. Rainbow color map (still) considered harmful. IEEE computer graphics and applications 27, 2 (2007). [6] Michael Bostock, Vadim Ogievetsky, and Jeffrey Heer. 2011. D3 datadriven documents. IEEE Transactions on Visualization and Computer Graphics 17, 12 (2011), 2301–2309. [7] Nadia Boukhelifa, Anastasia Bezerianos, Tobias Isenberg, and JeanDaniel Fekete. 2012. Evaluating sketchiness as a visual variable for the depiction of qualitative uncertainty. IEEE Transactions on Visualization and Computer Graphics 18, 12 (2012), 2769–2778. [8] D.H. Brainard and B.A. Wandell. 1992. Asymmetric color matching: how color appearance depends on the illuminant. Journal of the Optical Society of America A 9, 9 (1992), 1433–1448. [9] Cynthia A Brewer, Geoffrey W Hatchard, and Mark A Harrower. 2003. ColorBrewer in print: a catalog of color schemes for maps. Cartogr. Geogr. Inf. Sci. 30, 1 (2003), 5–32. [10] Alžběta Brychtová and Arzu Çöltekin. 2017. The effect of spatial distance on the discriminability of colors in maps. Cartography and Geographic Information Science 44, 3 (2017), 229–245. [11] Roxana Bujack, Terece L Turton, Francesca Samsel, Colin Ware, David H Rogers, and James Ahrens. 2018. The good, the bad, and the ugly: A theoretical framework for the assessment of continuous colormaps. IEEE transactions on visualization and computer graphics 24, 1 (2018), 923–933. [12] David Burlinson, Kalpathi Subramanian, and Paula Goolkasian. 2018. Open vs. Closed Shapes: New Perceptual Categories? IEEE transactions on visualization and computer graphics 24, 1 (2018), 574–583. [13] Tara C Callaghan. 1984. Dimensional interaction of hue and brightness in preattentive field segregation. Perception & psychophysics 36, 1 (1984), 25–34. [14] Robert C Carter and Louis D Silverstein. 2010. Size matters: Improved color-difference estimation for small visual targets. Journal of the Society for Information Display 18, 1 (2010), 17–28. [15] Haidong Chen, Wei Chen, Honghui Mei, Zhiqi Liu, Kun Zhou, Weifeng Chen, Wentao Gu, and Kwan-Liu Ma. 2014. Visual abstraction and exploration of multi-class scatterplots. IEEE Transactions on Visualization and Computer Graphics 20, 12 (2014), 1683–1692. [16] Lin Chen and Wu Zhou. 1997. Holes in illusory conjunctions. Psychonomic Bulletin & Review 4, 4 (1997), 507–511. [17] Patricia W Cheng and Robert G Pachella. 1984. A psychophysical approach to dimensional separability. Cognitive Psychology 16, 3 (1984), 279–304. [18] W.S. Cleveland and R. McGill. 1984. Graphical perception: Theory, experimentation, and application to the development of graphical methods. J. Amer. Statist. Assoc. 79, 387 (1984), 531–554. [19] William S Cleveland and William S Cleveland. 1983. A color-caused optical illusion on a statistical graph. The American Statistician 37, 2 (1983), 101–105. [20] William S Cleveland and Robert McGill. 1984. Graphical perception: Theory, experimentation, and application to the development of graphical methods. J. Amer. Statist. Assoc. 79, 387 (1984), 531–554. [21] Michael Correll, Danielle Albers, Steven Franconeri, and Michael Gleicher. 2012. Comparing averages in time series data. In Proceedings"
+    }, {
+      "page": 12,
+      "region": {
+        "x1": 317.9549560546875,
+        "x2": 559.5939331054688,
+        "y1": 97.81306457519531,
+        "y2": 700.3740234375
+      },
+      "text": "of the SIGCHI Conference on Human Factors in Computing Systems. ACM, 1095–1104. [22] Michael Correll, Dominik Moritz, and Jeffrey Heer. 2018. ValueSuppressing Uncertainty Palettes. In Proceedings of the 2018 CHI Conference on Human Factors in Computing Systems. ACM, 642. [23] Michael A Correll, Eric C Alexander, and Michael Gleicher. 2013. Quantity estimation in visualizations of tagged text. In Proceedings of the SIGCHI conference on human factors in computing systems. ACM, 2697–2706. [24] Commision Internationale de lâĂŹEclairage. 1978. Recommendations on uniform color spaces, color-difference equations, psychometric color terms. Paris: CIE (1978). [25] Cagatay Demiralp, Michael S Bernstein, and Jeffrey Heer. 2014. Learning perceptual kernels for visualization design. IEEE Transactions on Visualization and Computer Graphics 20, 12 (2014), 1933–1942. [26] Ronak Etemadpour, Robson Carlos da Motta, Jose Gustavo de Souza Paiva, Rosane Minghim, Maria Cristina Ferreira de Oliveira, and Lars Linsen. 2014. Role of human perception in cluster-based visual analysis of multidimensional data projections. In Information Visualization Theory and Applications (IVAPP), 2014 International Conference on. IEEE, 276–283. [27] Johannes Fuchs, Fabian Fischer, Florian Mansmann, Enrico Bertini, and Petra Isenberg. 2013. Evaluation of alternative glyph designs for time series data in a small multiple setting. In Proceedings of the SIGCHI Conference on Human Factors in Computing Systems. ACM, 3237–3246. [28] Wendell R Garner. 1976. Interaction of stimulus dimensions in concept and choice processes. Cognitive psychology 8, 1 (1976), 98–123. [29] Michael Gleicher, Michael Correll, Christine Nothelfer, and Steven Franconeri. 2013. Perception of Average Value in Multiclass Scatterplots. IEEE TVCG 19, 12 (2013), 2316–2325. [30] Richard L Gottwald and WR Garner. 1975. Filtering and condensation tasks with integral and separable dimensions. Perception & Psychophysics 18, 1 (1975), 26–28. [31] Lane Harrison, Fumeng Yang, Steven Franconeri, and Remco Chang. 2014. Ranking Visualizations of Correlation Using Weber’s Law. IEEE Transactions on Visualization and Computer Graphics (2014). [32] J. Heer and M. Bostock. 2010. Crowdsourcing graphical perception: using mechanical turk to assess visualization design. In Proceedings of the 28th international conference on Human factors in computing systems. ACM, 203–212. [33] Jeffrey Heer, Nicholas Kong, and Maneesh Agrawala. 2009. Sizing the horizon: the effects of chart size and layering on the graphical perception of time series visualizations. In Proceedings of the SIGCHI Conference on Human Factors in Computing Systems. ACM, 1303– 1312. [34] Michael Jenkins, Anna Grubert, and Martin Eimer. 2017. Target objects defined by a conjunction of colour and shape can be selected independently and in parallel. Attention, Perception, & Psychophysics 79, 8 (2017), 2310–2326. [35] Younghoon Kim and Jeffrey Heer. 2018. Assessing effects of task and data distribution on the effectiveness of visual encodings. In Computer Graphics Forum, Vol. 37. Wiley Online Library, 157–167. [36] J.H. Krantz. 2001. Stimulus delivery on the Web: What can be presented when calibration isn’t possible. Dimensions of Internet Science (2001), 113–130. [37] Jeongmi Lee, Carly J Leonard, Steven J Luck, and Joy J Geng. 2018. Dynamics of Feature-based Attentional Selection during Color–Shape Conjunction Search. Journal of cognitive neuroscience (2018), 1–15. [38] H Legrand, G Rand, and C Rittler. 1945. Tests for the detection and anlysis of color-blindness I. The Ishihara test: An evaluation. Journal"
+    }, {
+      "page": 12,
+      "region": {
+        "x1": 54.0,
+        "x2": 558.001953125,
+        "y1": 750.914794921875,
+        "y2": 756.7197875976562
+      },
+      "text": "Paper 669 Page 13"
+    }, {
+      "page": 13,
+      "region": {
+        "x1": 53.798004150390625,
+        "x2": 294.0386047363281,
+        "y1": 97.81306457519531,
+        "y2": 112.5780029296875
+      },
+      "text": "of the Optical Society of America 35 (1945), 268. Issue 4. [39] Stephan Lewandowsky and Ian Spence. 1989. Discriminating strata in"
+    }, {
+      "page": 13,
+      "region": {
+        "x1": 53.79798889160156,
+        "x2": 294.0382080078125,
+        "y1": 117.73805236816406,
+        "y2": 132.50299072265625
+      },
+      "text": "scatterplots. J. Amer. Statist. Assoc. 84, 407 (1989), 682–688. [40] Jing Li, Jarke J van Wijk, and Jean-Bernard Martens. 2009. Evaluation"
+    }, {
+      "page": 13,
+      "region": {
+        "x1": 53.797996520996094,
+        "x2": 295.43902587890625,
+        "y1": 137.66407775878906,
+        "y2": 630.635009765625
+      },
+      "text": "of symbol contrast in scatterplots. In Visualization Symposium, 2009. PacificVis’ 09. IEEE Pacific. IEEE, 97–104. [41] Sharon Lin, Julie Fortuna, Chinmay Kulkarni, Maureen Stone, and Jeffrey Heer. 2013. Selecting Semantically-Resonant Colors for Data Visualization. In Computer Graphics Forum, Vol. 32. Wiley Online Library, 401–410. [42] Yang Liu and Jeffrey Heer. 2018. Somewhere Over the Rainbow: An Empirical Assessment of Quantitative Colormaps. In Proceedings of the 2018 CHI Conference on Human Factors in Computing Systems. ACM, 598. [43] Luana Micallef, Gregorio Palmas, Antti Oulasvirta, and Tino Weinkauf. 2017. Towards perceptual optimization of the visual design of scatterplots. IEEE transactions on visualization and computer graphics 23, 6 (2017), 1588–1599. [44] K.T. Mullen. 1985. The contrast sensitivity of human colour vision to red-green and blue-yellow chromatic gratings. The Journal of Physiology 359, 1 (1985), 381–400. [45] Tamara Munzner. 2014. Visualization Analysis and Design. CRC Press. [46] B. Oicherman, M.R. Luo, B. Rigg, and A.R. Robertson. 2008. Effect of observer metamerism on colour matching of display and surface colours. Color Research and Applications 33, 5 (2008), 346–359. [47] Lace Padilla, P Samuel Quinan, Miriah Meyer, and Sarah H CreemRegehr. 2017. Evaluating the Impact of Binning 2D Scalar Fields. IEEE Transactions on Visualization and Computer Graphics 23, 1 (2017), 431–440. [48] Stephen E Palmer. 1999. Vision science: Photons to phenomenology. MIT press. [49] Anshul Vikram Pandey, Josua Krause, Cristian Felix, Jeremy Boy, and Enrico Bertini. 2016. Towards understanding human similarity perception in the analysis of large sets of scatter plots. In Proceedings of the 2016 CHI Conference on Human Factors in Computing Systems. ACM, 3659–3669. [50] Susan Petry and Glenn E Meyer. 2012. The perception of illusory contours. Springer Science & Business Media. [51] James R Pomerantz and Lawrence C Sager. 1975. Asymmetric integrality with dimensions of visual pattern. Perception & Psychophysics 18, 6 (1975), 460–466. [52] Khairi Reda, Pratik Nalawade, and Kate Ansah-Koi. 2018. Graphical Perception of Continuous Quantitative Maps: the Effects of Spatial Frequency and Colormap Design. In Proceedings of the 2018 CHI Conference on Human Factors in Computing Systems. ACM, 272. [53] Katharina Reinecke, David R Flatla, and Christopher Brooks. 2016. Enabling Designers to Foresee Which Colors Users Cannot See. In Proceedings of the 2016 CHI Conference on Human Factors in Computing Systems. ACM, 2693–2704. [54] Ronald A Rensink. 2017. The nature of correlation perception in scatterplots. Psychonomic bulletin & review 24, 3 (2017), 776–797. [55] Ronald A Rensink and Gideon Baldridge. 2010. The perception of correlation in scatterplots. In Computer Graphics Forum, Vol. 29. Wiley"
+    }, {
+      "page": 13,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 558.1993408203125,
+        "y1": 97.81306457519531,
+        "y2": 112.5780029296875
+      },
+      "text": "Online Library, 1203–1210. [56] P. Rizzo, A. Bierman, and M.S. Rea. 2002. Color and brightness"
+    }, {
+      "page": 13,
+      "region": {
+        "x1": 317.9549560546875,
+        "x2": 559.5960083007812,
+        "y1": 117.73805236816406,
+        "y2": 638.968017578125
+      },
+      "text": "discrimination of white LEDs. In International Symposium on Optical Science and Technology. International Society for Optics and Photonics, 235–246. [57] Bahador Saket, Alex Endert, and Cagatay Demiralp. 2018. Task-Based Effectiveness of Basic Visualizations. IEEE Transactions on Visualization and Computer Graphics (2018). [58] A. Sarkar, L. Blondé, P. Le Callet, F. Autrusseau, P. Morvan, J. Stauder, et al. 2010. A color matching experiment using two displays: design considerations and pilot test results. In Proceedings of the Fifth European Conference on Color in Graphics, Imaging and Vision. [59] Michael Sedlmair and Michaël Aupetit. 2015. Data-driven Evaluation of Visual Quality Measures. In Computer Graphics Forum, Vol. 34. Wiley Online Library, 201–210. [60] Vidya Setlur and Maureen C Stone. 2016. A linguistic approach to categorical color assignment for data visualization. IEEE transactions on visualization and computer graphics 22, 1 (2016), 698–707. [61] Varshita Sher, Karen G Bemis, Ilaria Liccardi, and Min Chen. 2017. An Empirical Study on the Reliability of Perceiving Correlation Indices using Scatterplots. In Computer Graphics Forum, Vol. 36. Wiley Online Library, 61–72. [62] Drew Skau and Robert Kosara. 2016. Arcs, angles, or areas: individual data encodings in pie and donut charts. In Computer Graphics Forum, Vol. 35. Wiley Online Library, 121–130. [63] M. Stokes, M.D. Fairchild, and R.S. Berns. 1992. Precision requirements for digital color reproduction. ACM Transactions on Computer Graphics 11, 4 (1992), 406–422. [64] Maureen Stone, Danielle Albers Szafir, and Vidya Setlur. 2014. An engineering model for color difference as a function of size. In Color and Imaging Conference, Vol. 2014. Society for Imaging Science and Technology, 253–258. [65] Danielle Albers Szafir. 2018. Modeling Color Difference for Visualization Design. IEEE transactions on visualization and computer graphics 24, 1 (2018), 392–401. [66] Danielle Albers Szafir, Maureen Stone, and Michael Gleicher. 2014. Adapting color difference for design. In Color and Imaging Conference, Vol. 2014. Society for Imaging Science and Technology, 228–233. [67] Anne Treisman and Sharon Sato. 1990. Conjunction search revisited. Journal of experimental psychology: human perception and performance 16, 3 (1990), 459. [68] Lothar Tremmel. 1995. The visual separability of plotting symbols in scatterplots. Journal of Computational and Graphical Statistics 4, 2 (1995), 101–112. [69] André Calero Valdez, Martina Ziefle, and Michael Sedlmair. 2018. Priming and anchoring effects in visualization. IEEE transactions on visualization and computer graphics 24, 1 (2018), 584–594. [70] Colin Ware. 2000. Information visualization (3 ed.). Morgan Kaufmann. [71] Colin Ware. 2009. Quantitative texton sequences for legible bivariate maps. IEEE Transactions on Visualization and Computer Graphics 15, 6 (2009). [72] Liang Zhou and Charles Hansen. 2016. A survey of colormaps in visualization. IEEE Transactions on Visualization and Computer Graphics 22, 8 (2016)."
+    }, {
+      "page": 13,
+      "region": {
+        "x1": 54.0,
+        "x2": 558.001953125,
+        "y1": 750.914794921875,
+        "y2": 756.7197875976562
+      },
+      "text": "Paper 669 Page 14"
+    }],
+    "title": {
+      "page": 11,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 380.7218933105469,
+        "y1": 661.9248657226562,
+        "y2": 668.3510131835938
+      },
+      "text": "REFERENCES"
+    }
+  }]
+}

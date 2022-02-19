@@ -1,0 +1,1559 @@
+{
+  "abstractText": {
+    "page": 0,
+    "region": {
+      "x1": 53.999969482421875,
+      "x2": 294.28570556640625,
+      "y1": 283.6521301269531,
+      "y2": 543.936767578125
+    },
+    "text": "ABSTRACT We investigate how families repair communication breakdowns with digital home assistants. We recruited 10 diverse families to use an Amazon Echo Dot in their homes for four weeks. All families had at least one child between four and 17 years old. Each family participated in pre- and post- deployment interviews. Their interactions with the Echo Dot (Alexa) were audio recorded throughout the study. We analyzed 59 communication breakdown interactions between family members and Alexa, framing our analysis with concepts from HCI and speech-language pathology. Our findings indicate that family members collaborate using discourse scaffolding (supportive communication guidance) and a variety of speech and language modifications in their attempts to repair communication breakdowns with Alexa. Alexa’s responses also influence the repair strategies that families use. Designers can relieve the communication repair burden that primarily rests with families by increasing digital home assistants’ abilities to collaborate together with users to repair communication breakdowns."
+  },
+  "figures": [],
+  "sections": [{
+    "paragraphs": [{
+      "page": 0,
+      "region": {
+        "x1": 53.99200439453125,
+        "x2": 294.03521728515625,
+        "y1": 573.6454467773438,
+        "y2": 588.9590454101562
+      },
+      "text": "• Human-centered computing → Human computer interaction (HCI); Collaborative interaction, Field studies, Empirical studies in HCI"
+    }],
+    "title": {
+      "page": 0,
+      "region": {
+        "x1": 53.999969482421875,
+        "x2": 128.58384704589844,
+        "y1": 560.0538940429688,
+        "y2": 566.5017700195312
+      },
+      "text": "CCS CONCEPTS"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 0,
+      "region": {
+        "x1": 318.0,
+        "x2": 542.99365234375,
+        "y1": 299.4855041503906,
+        "y2": 315.8970031738281
+      },
+      "text": "Digital Home Assistants; Human Computer Interaction; Joint Media Engagement; Communication Repairs; Families"
+    }, {
+      "page": 0,
+      "region": {
+        "x1": 317.99200439453125,
+        "x2": 558.0016479492188,
+        "y1": 331.9654235839844,
+        "y2": 397.51318359375
+      },
+      "text": "ACM Reference format: Erin Beneteau, Olivia K. Richards, Mingrui Zhang, Julie A. Kientz, Jason Yip, and Alexis Hiniker. 2019. Communication Breakdowns Between Families and Alexa. In 2019 CHI Conference on Human Factors in Computing Systems Proceedings (CHI 2019), May 4–9, 2019, Glasgow, Scotland, UK. ACM, New York, NY, USA. 13 pages. https://doi.org/10.1145/3290605.3300473"
+    }],
+    "title": {
+      "page": 0,
+      "region": {
+        "x1": 318.0,
+        "x2": 376.42364501953125,
+        "y1": 284.672119140625,
+        "y2": 291.1199951171875
+      },
+      "text": "KEYWORDS"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 0,
+      "region": {
+        "x1": 317.9999694824219,
+        "x2": 558.1553955078125,
+        "y1": 438.04437255859375,
+        "y2": 619.391357421875
+      },
+      "text": "The worlds of human-to-human communication and human-to-technology communication are quickly becoming blurred in everyday, family life. The increasing popularity of digital home assistants, like the Amazon Echo, and conversational assistants, like Siri, increase users’ expectations of voice as an effective communication method with machines [23]. However, humans must work to adapt their communication patterns to the needs of the machines, rather than machines adapting to humans [19]. People shorten their sentences, use simplified language, and repeat themselves in attempts to be understood by voice interfaces [19,20,22,23,31]. As a result, users of voice interface technology become frustrated and can fail to learn the full capabilities of the technology, or abandon use altogether [10,23]."
+    }, {
+      "page": 0,
+      "region": {
+        "x1": 54.0,
+        "x2": 558.2396850585938,
+        "y1": 609.01513671875,
+        "y2": 707.2066650390625
+      },
+      "text": "Despite the difficulty with human-to-voice interface communication, the technology is becoming pervasive in family lives. Yarosh et. al found that 93% of the children they talked with at a state fair in Minnesota had used voice interface technology [43]. Digital home assistants, which utilize voice interfaces, are anticipated to be present in 55% of American households by the year 2022 [32]. Yet, Permission to make digital or hard copies of all or part of this work for personal or classroom use is granted without fee provided that copies are not made or distributed for profit or commercial advantage and that copies bear this notice and the full citation on the first page. Copyrights for components of this work owned by others than the author(s) must be honored. Abstracting with credit is permitted. To copy otherwise, or republish, to post on servers or to redistribute to lists, requires prior specific permission and/or a fee. Request permissions from Permissions@acm.org. CHI 2019, May 4–9, 2019, Glasgow, Scotland UK © 2019 Copyright is held by the owner/author(s). Publication rights licensed to ACM. ACM ISBN 978-1-4503-5970-2/19/05…$15.00 https://doi.org/10.1145/3290605.3300473"
+    }, {
+      "page": 0,
+      "region": {
+        "x1": 54.0,
+        "x2": 558.0009765625,
+        "y1": 750.914794921875,
+        "y2": 756.7197875976562
+      },
+      "text": "Paper 243 Page 1"
+    }, {
+      "page": 1,
+      "region": {
+        "x1": 54.0,
+        "x2": 294.1364440917969,
+        "y1": 79.7835922241211,
+        "y2": 135.68017578125
+      },
+      "text": "the prevalence of the technology does not necessarily indicate the successful, ongoing use of the technology. True conversational capabilities have not yet been fully realized [33,34], and we want to better understand how human-technology “conversations” can be improved."
+    }, {
+      "page": 1,
+      "region": {
+        "x1": 54.010040283203125,
+        "x2": 294.15435791015625,
+        "y1": 142.50880432128906,
+        "y2": 298.82586669921875
+      },
+      "text": "In our research, we blend two fields of study: humancomputer interaction (HCI) and speech-language pathology. HCI has a long history of research in how humans communicate with computers, robots, and other conversational agents [26,39]. Speech language pathology has a long history of research on human-to-human communication development, communication disorders, and remediation [14,35]. Drawing from these two fields, we aim to better understand the communication breakdowns and repair strategies used between families and digital home assistants, specifically, the Amazon Echo Dot (who we refer to as the conversational partner “Alexa”)."
+    }, {
+      "page": 1,
+      "region": {
+        "x1": 54.010066986083984,
+        "x2": 294.1434020996094,
+        "y1": 305.6545104980469,
+        "y2": 424.27630615234375
+      },
+      "text": "To frame our study, we use the concepts of joint media engagement [40], conversational analysis [27], pragmatics [35], and discourse scaffolding [41]. Building on these concepts, we explore the communicative relationships between digital home assistants and families. Our specific research questions are: 1) What types of communication breakdowns occur? 2) How do families repair communication breakdowns with Alexa? 3) How does Alexa repair communication breakdowns with family members?"
+    }, {
+      "page": 1,
+      "region": {
+        "x1": 54.010108947753906,
+        "x2": 294.2466125488281,
+        "y1": 431.1049499511719,
+        "y2": 675.1771850585938
+      },
+      "text": "We gave Amazon Echo Dots to 10 economically and ethnically diverse families to use in their homes for four weeks. None of the families had previously owned a digital home assistant. We conducted pre- and postdeployment interviews with all 10 families in their homes, and we captured audio of natural, unscripted family interactions with Alexa. Based on an analysis of 59 conversational interactions, we discuss three types of responses from Alexa that signal communication breakdowns and a taxonomy of five strategies that family members used to repair breakdowns. At times, Alexa initiated collaborative communication repair opportunities with her communication partner, but currently, the brunt of communication repair work lies with the family. Designers could use the analysis of communication repair types to create relevant and helpful responses for digital home assistants to use during communication breakdowns. We conclude with design suggestions that can improve digital home assistants’ facilitation of conversational repairs with families."
+    }],
+    "title": {
+      "page": 0,
+      "region": {
+        "x1": 318.0,
+        "x2": 418.2500915527344,
+        "y1": 421.8921203613281,
+        "y2": 428.3399963378906
+      },
+      "text": "1 INTRODUCTION"
+    }
+  }, {
+    "paragraphs": [],
+    "title": {
+      "page": 1,
+      "region": {
+        "x1": 318.007080078125,
+        "x2": 419.4746398925781,
+        "y1": 79.35291290283203,
+        "y2": 85.80078125
+      },
+      "text": "2 RELATED WORK"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 1,
+      "region": {
+        "x1": 318.0069580078125,
+        "x2": 558.1654663085938,
+        "y1": 127.24849700927734,
+        "y2": 383.86578369140625
+      },
+      "text": "In the field of speech-language pathology, pragmatics incorporates the social aspects of communication, including turn taking, topic maintenance, socially appropriate speech and language use, and code switching [18,35]. Code switching involves the recognition of different communicative expectations for different communication partners and/or different communication environments [8]. The most explicit form of code switching is to switch languages to match the language of the communication partner, such as shifting from English to Spanish [13]. A subtle form of code-switching, in which the rules and use of language are dependent on the communication context, is demonstrated when a teenager uses a different conversational tone and different vocabulary when talking to friends than when talking to a parent. Pragmatics, and specifically code switching, requires some understanding and intentional thought behind communication interactions [17,35,36]. As such, linguistic code switching often begins around ages 4-5, when children begin intentionally talking in different ways to different people, in different settings [44]."
+    }, {
+      "page": 1,
+      "region": {
+        "x1": 317.99993896484375,
+        "x2": 558.1741333007812,
+        "y1": 390.7545471191406,
+        "y2": 684.6510009765625
+      },
+      "text": "Communication repair refers to the work of restoring shared understanding after conversational partners misunderstand each other. Essentially, the person who is talking needs to rephrase or say something differently because the person they were talking to did not understand what they were saying [25]. The ability to code switch can aid in conversational repair and can be thought of as the act of adjusting your speaking style to accommodate the listener [41]. These adjustments to speaking style can take many forms and are dependent on the communicator’s language abilities. For example, children often use repetition as their initial repair strategy when presented with “neutral” clarification responses, such as “huh,” “what,” and “I don’t know” [6,25]. Children ages nine and older might use contextual cues, such as defining terms, to repair a communication breakdown, whereas this can be more challenging for younger children [6]. Adults may engage in discourse scaffolding to assist children in expanding or adjusting their speech [41]. Discourse scaffolding is a mechanism to guide learning through communication strategies with the intention of gradually transferring skills and responsibility to the learner [38,41]. At an early communication stage, an example of discourse scaffolding is when a child says,"
+    }, {
+      "page": 1,
+      "region": {
+        "x1": 54.0,
+        "x2": 558.0009765625,
+        "y1": 750.914794921875,
+        "y2": 756.7197875976562
+      },
+      "text": "Paper 243 Page 2"
+    }, {
+      "page": 2,
+      "region": {
+        "x1": 54.0,
+        "x2": 294.0862731933594,
+        "y1": 77.9029541015625,
+        "y2": 96.48504638671875
+      },
+      "text": "“cookie,” and a parent responds with an expansion of the child’s utterance: “you want more cookies.”"
+    }, {
+      "page": 2,
+      "region": {
+        "x1": 54.010009765625,
+        "x2": 294.2316589355469,
+        "y1": 103.31368255615234,
+        "y2": 347.446044921875
+      },
+      "text": "Dynamics between multiple communication partners, especially those involving young children, can be heavily influenced by the communicative development ages of the communication partners and the context of the communication interaction [14,18,21,24]. Our earlier example of discourse scaffolding was appropriate for a very young child, whereas the communication interaction between a teenager and parent would look very different. For example, a parent might use discourse scaffolding through questioning to lead the teen to expand on their own language. The parent might ask, “What did you do after school?” and the teen might reply, “hung out with friends.” The parent could then scaffold further elaboration with questions, such as, “where did you and your friends hang out?” While these examples highlight the nuances of communication interactions between family members of different ages and developmental stages, we find that the communication interaction can become even more complex when one of the communication partners is not human."
+    }],
+    "title": {
+      "page": 1,
+      "region": {
+        "x1": 318.007080078125,
+        "x2": 523.5675048828125,
+        "y1": 99.69348907470703,
+        "y2": 117.54412841796875
+      },
+      "text": "Human Communication and Communication Breakdowns"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 2,
+      "region": {
+        "x1": 54.01007080078125,
+        "x2": 294.2896728515625,
+        "y1": 378.63330078125,
+        "y2": 610.2205810546875
+      },
+      "text": "The field of HCI has a well-established body of literature on how humans verbally communicate with computers, robots, and other devices. In 1987, Suchman framed acts of human-machine interaction as a dialog between communication partners [39]. From this perspective, the work of the designer is to enable human and machine collaboration towards a shared understanding through continuous acts of collaborative communication repair when breakdowns occur. Yet, despite this legacy, and improvements in human-computer communication techniques [2–4], research continues to demonstrate that humans adapt their communication styles and patterns to match the machine, both with robots [31,42] and computers [28,30], rather than the other way around. Humans shorten their sentences [20,31], use repetition [1], increase volume [5] and hyperarticulate [28] as repair strategies. These modification strategies are motivated by a desire to achieve successful communication with computers [5,30]."
+    }],
+    "title": {
+      "page": 2,
+      "region": {
+        "x1": 54.01007080078125,
+        "x2": 213.47340393066406,
+        "y1": 362.5411682128906,
+        "y2": 368.9890441894531
+      },
+      "text": "Human-Computer Communication"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 2,
+      "region": {
+        "x1": 54.01007080078125,
+        "x2": 294.1845703125,
+        "y1": 641.4078369140625,
+        "y2": 697.3645629882812
+      },
+      "text": "In recent years, the field of HCI has begun to examine human communication with conversational agents, such as Siri, and with digital home assistants, such as the Amazon Echo [10,23,34,37]. Despite the “conversational” interface with conversational agents, people are not yet"
+    }, {
+      "page": 2,
+      "region": {
+        "x1": 318.0,
+        "x2": 558.2533569335938,
+        "y1": 78.44417572021484,
+        "y2": 449.51165771484375
+      },
+      "text": "able to talk to technology in the same way that they talk to other people [23,34]. Users of conversational assistants often need to shorten their queries to key words, since increased utterance length can increase the likelihood of speech recognition errors, both with conversational agents and with other humans [19,22–24]. We also see young children using repetition as an initial conversational repair strategy when they are talking to a computer game [9]. With current systems, the burden of ensuring a successful communication interaction with a conversational agent continues to fall to the human in the conversation, with little support from the conversational agent itself [12,34]. The majority of research on communication breakdowns and repairs takes place in 1:1 interactions [19,20,22,24,25,31,43]. One of the few studies that investigates how multiple people work together to repair communication breakdowns with a conversational agent observed friends meeting in a café, using the conversational agents (such as Siri) on their phones [34]. The researchers used conversational analysis as their approach, based on the principle of analyzing naturally occurring interactions with technology from the user’s point of view [27]. Their findings revealed that when a communication breakdown occurs with a conversational agent, multiple people attempt communication repairs, passing the phone from person to person. Our specific interest is how families repair communication breakdowns with digital home assistants in naturalistic use in their homes."
+    }, {
+      "page": 2,
+      "region": {
+        "x1": 318.03009033203125,
+        "x2": 558.225341796875,
+        "y1": 456.3403015136719,
+        "y2": 687.9276123046875
+      },
+      "text": "We can turn to literature on how technology is situated within family dynamics for reference, such as Takeuchi and Stevens documentation of “Joint Media Engagement” (JME) and the ways families make meaning around their technology experience [40]. Family members, particularly parents, use media as shared learning opportunities, scaffolding communication around the media experience [16,40]. Comparatively little work has examined children’s and families’ interactions with digital assistants. Yarosh and colleagues found that children struggled to formulate queries to a voice interface [43] and Cheng and colleagues define a taxonomy of communication repair strategies that preschoolers use when talking to a voice-driven game [9]. Porcheron et al. report on a study of five families using the Amazon Echo in their homes, and they describe how a family of two adults and two children take turns in attempting to repair a communication breakdown with their Amazon Echo [33]. The authors conclude that the device’s responses to the communication breakdown are"
+    }, {
+      "page": 2,
+      "region": {
+        "x1": 54.0,
+        "x2": 558.0009765625,
+        "y1": 750.914794921875,
+        "y2": 756.7197875976562
+      },
+      "text": "Paper 243 Page 3"
+    }, {
+      "page": 3,
+      "region": {
+        "x1": 54.0,
+        "x2": 294.0992126464844,
+        "y1": 79.7835922241211,
+        "y2": 98.0450439453125
+      },
+      "text": "ineffective in supporting the participants in identifying the cause of the breakdown."
+    }, {
+      "page": 3,
+      "region": {
+        "x1": 54.010009765625,
+        "x2": 294.17535400390625,
+        "y1": 104.8736801147461,
+        "y2": 185.8603515625
+      },
+      "text": "In this study, we expand the body of work on communication repair strategies with conversational agents and digital home assistants. We specifically explore how diverse families attempt to repair communication breakdowns with the conversational partner Alexa (their Echo Dot) through a close analysis of conversational interactions."
+    }],
+    "title": {
+      "page": 2,
+      "region": {
+        "x1": 54.01007080078125,
+        "x2": 285.20458984375,
+        "y1": 625.3157348632812,
+        "y2": 631.7636108398438
+      },
+      "text": "Communication Breakdowns with Voice Interfaces"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 3,
+      "region": {
+        "x1": 54.01002502441406,
+        "x2": 294.1312561035156,
+        "y1": 227.12770080566406,
+        "y2": 257.9342041015625
+      },
+      "text": "We conducted a four-week field study with 10 families, audio recording their everyday interactions with the Amazon Echo Dot (second generation)."
+    }],
+    "title": {
+      "page": 3,
+      "region": {
+        "x1": 54.01002502441406,
+        "x2": 119.7061538696289,
+        "y1": 210.9754638671875,
+        "y2": 217.42333984375
+      },
+      "text": "3 METHOD"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 3,
+      "region": {
+        "x1": 54.010040283203125,
+        "x2": 294.2015075683594,
+        "y1": 289.1816101074219,
+        "y2": 420.34844970703125
+      },
+      "text": "We recruited 10 diverse families to use the Echo Dot for a period of four weeks, intentionally recruiting families who represent a wide-spectrum of family life. Families selfidentified as never having owned a digital home assistant. Families also reported having a total household income at or below the median for the county in which the study was conducted. Families ranged from families of two to families of five (see Table 1). All families had at least one child between the ages of four and 17 living in the home. Two families were bilingual, in which all family members spoke both English and Spanish in their homes."
+    }],
+    "title": {
+      "page": 3,
+      "region": {
+        "x1": 54.010040283203125,
+        "x2": 108.58598327636719,
+        "y1": 273.02935791015625,
+        "y2": 279.47723388671875
+      },
+      "text": "Participants"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 3,
+      "region": {
+        "x1": 54.01005554199219,
+        "x2": 294.1944885253906,
+        "y1": 451.5958251953125,
+        "y2": 570.2176513671875
+      },
+      "text": "We collected audio data throughout the four-week period, using a custom-built audio sampling system designed to record interactions every time the trigger word “Alexa” was spoken. We also conducted pre- and post-deployment interviews with families in their homes at the start of the deployment period and at the conclusion of the four weeks. We compensated families with US$100 in gift cards for completing the study, and they were able to keep their Echo Dot after the conclusion of the study. The study was approved by our university’s Institutional Review Board."
+    }, {
+      "page": 3,
+      "region": {
+        "x1": 54.0,
+        "x2": 294.1308898925781,
+        "y1": 588.2009887695312,
+        "y2": 604.5
+      },
+      "text": "Table 1. Total family members, ages, and ethnicity of participant families."
+    }, {
+      "page": 3,
+      "region": {
+        "x1": 60.0,
+        "x2": 84.947998046875,
+        "y1": 616.10546875,
+        "y2": 632.52001953125
+      },
+      "text": "Family ID"
+    }, {
+      "page": 3,
+      "region": {
+        "x1": 100.26000213623047,
+        "x2": 139.0644073486328,
+        "y1": 616.10546875,
+        "y2": 632.52001953125
+      },
+      "text": "N Adult N"
+    }, {
+      "page": 3,
+      "region": {
+        "x1": 154.25999450683594,
+        "x2": 178.6320037841797,
+        "y1": 616.10546875,
+        "y2": 643.7999877929688
+      },
+      "text": "Adults age ranges"
+    }, {
+      "page": 3,
+      "region": {
+        "x1": 203.33999633789062,
+        "x2": 270.1644287109375,
+        "y1": 616.10546875,
+        "y2": 632.52001953125
+      },
+      "text": "Child ages Ethnicity"
+    }, {
+      "page": 3,
+      "region": {
+        "x1": 60.0,
+        "x2": 283.32147216796875,
+        "y1": 650.4854736328125,
+        "y2": 702.780029296875
+      },
+      "text": "A 4 3 41-68+ 13 Asian B 4 3 18-55 12 White/Asian C 2 1 41-55 9 White D 4 2 26-55 3, 5 Hispanic E 5 3 26-67 4, 8 White"
+    }, {
+      "page": 3,
+      "region": {
+        "x1": 324.0,
+        "x2": 348.9480285644531,
+        "y1": 80.0055160522461,
+        "y2": 96.41998291015625
+      },
+      "text": "Family ID"
+    }, {
+      "page": 3,
+      "region": {
+        "x1": 364.260009765625,
+        "x2": 403.06439208984375,
+        "y1": 80.0055160522461,
+        "y2": 96.41998291015625
+      },
+      "text": "N Adult N"
+    }, {
+      "page": 3,
+      "region": {
+        "x1": 418.260009765625,
+        "x2": 442.63201904296875,
+        "y1": 80.0055160522461,
+        "y2": 107.70001220703125
+      },
+      "text": "Adults age ranges"
+    }, {
+      "page": 3,
+      "region": {
+        "x1": 467.3399963378906,
+        "x2": 534.1643676757812,
+        "y1": 80.0055160522461,
+        "y2": 96.41998291015625
+      },
+      "text": "Child ages Ethnicity"
+    }, {
+      "page": 3,
+      "region": {
+        "x1": 324.0,
+        "x2": 532.9072265625,
+        "y1": 114.32552337646484,
+        "y2": 131.280029296875
+      },
+      "text": "F 5 3 18-55 <1, 5 Hispanic G 3 1 26-40 10, 16 African"
+    }, {
+      "page": 3,
+      "region": {
+        "x1": 500.4000244140625,
+        "x2": 539.2781982421875,
+        "y1": 137.42250061035156,
+        "y2": 153.833984375
+      },
+      "text": "American/ White"
+    }, {
+      "page": 3,
+      "region": {
+        "x1": 324.0,
+        "x2": 523.1932373046875,
+        "y1": 160.46546936035156,
+        "y2": 189.17999267578125
+      },
+      "text": "H 2 1 41-55 9 White I 5 2 26-40 2, 4, 6 White J 2 1 18-25 4 White"
+    }],
+    "title": {
+      "page": 3,
+      "region": {
+        "x1": 54.01005554199219,
+        "x2": 100.50286865234375,
+        "y1": 435.4435729980469,
+        "y2": 441.8914489746094
+      },
+      "text": "Procedure"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 3,
+      "region": {
+        "x1": 317.9999694824219,
+        "x2": 558.1923217773438,
+        "y1": 220.5442657470703,
+        "y2": 314.1361083984375
+      },
+      "text": "To capture audio recordings of participants’ interactions with the Echo Dot, we created an audio buffer system inspired by the open source code from Porcheron et al. [33]. The software captures audio when the trigger word “Alexa” is spoken; it saves one minute of audio prior to the trigger word, along with three additional minutes during and after the trigger word is spoken. It then pushes a total of four minutes of audio to a secure server."
+    }, {
+      "page": 3,
+      "region": {
+        "x1": 318.0199890136719,
+        "x2": 558.2401733398438,
+        "y1": 320.9647521972656,
+        "y2": 439.5865478515625
+      },
+      "text": "For our study, we deployed the audio recording system on a Samsung tablet computer that families placed near the Echo Dot in each of their homes. We instructed families to keep the tablet plugged in and not to use the tablet for anything other than for the study’s audio recording. The recording system also had both a “record a thought” button and a “delete” button available for families to leave explicit comments for the researchers or to delete the audio capture files, based on the desires of the participants."
+    }],
+    "title": {
+      "page": 3,
+      "region": {
+        "x1": 318.0,
+        "x2": 384.5949401855469,
+        "y1": 204.4521484375,
+        "y2": 210.9000244140625
+      },
+      "text": "Audio Capture"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 3,
+      "region": {
+        "x1": 318.0199279785156,
+        "x2": 558.1862182617188,
+        "y1": 470.83392333984375,
+        "y2": 702.361083984375
+      },
+      "text": "We used an inductive process to analyze the audio capture conversational samples [7,11,29]. We began with memoing and open coding during the initial transcriptions of the audio capture files. Through memoing and open coding, we noticed an emerging theme related to communication breakdowns. We then began coding communication breakdowns from transcripts of each of the 10 families, developing and revising codes as we found additional examples of communication breakdowns, reviewing a total of 14.5 hours of audio capture. We continued this process until communication breakdown codes were stable and applicable to multiple families. Once codes were stable, we reviewed transcripts from each of the 10 families for communication breakdowns again. We included communication breakdowns from each family in our corpus of 59 communication breakdown interactions, systematically going through each individual family’s transcript and pulling out communication breakdowns for each code (when present). If a family had multiple"
+    }, {
+      "page": 3,
+      "region": {
+        "x1": 54.0,
+        "x2": 558.0009765625,
+        "y1": 750.914794921875,
+        "y2": 756.7197875976562
+      },
+      "text": "Paper 243 Page 4"
+    }, {
+      "page": 4,
+      "region": {
+        "x1": 54.0,
+        "x2": 294.1744689941406,
+        "y1": 78.22359466552734,
+        "y2": 159.21026611328125
+      },
+      "text": "communication breakdowns for a particular code type, we reviewed the instances and chose no more than three instances of that code type for deeper analysis. For example, Family C had multiple instances of adjusting prosody; we chose three instances that we felt were most representative to be included in the corpus for deeper analysis."
+    }, {
+      "page": 4,
+      "region": {
+        "x1": 54.01001739501953,
+        "x2": 294.2506408691406,
+        "y1": 166.0388946533203,
+        "y2": 485.4415283203125
+      },
+      "text": "For our final analysis on communication breakdowns and repairs, a total of 59 conversational interactions falling under the broad themes of communication breakdowns and repairs were deeply analyzed by two researchers. Communication breakdowns were defined as interactions between family members and Alexa which did not result in an appropriate response from Alexa to the human communication partner. We drew on the HCI conversational analysis approach to analyze family conversations set in natural environments, with a focus on the user’s experiences. The use of conversational analysis in HCI aims to highlight opportunities for designers to improve interactions between humans and computers by detailing the structure of interactions from the user’s perspective [27]. The first author, a speech-language pathologist (SLP), used speech-language constructs when analyzing communication breakdowns and repairs. Constructs are defined in our findings below. We also consulted a practicing SLP on the codes and themes related to family communication repair strategies. The practicing SLP validated the communication repair strategies identified and validated the repair types used in the conversational samples discussed in this paper. For additional validation, we consulted a second SLP, also a researcher, who validated the repair strategy definitions used."
+    }, {
+      "page": 4,
+      "region": {
+        "x1": 54.02009582519531,
+        "x2": 294.1593933105469,
+        "y1": 492.2701721191406,
+        "y2": 573.2568359375
+      },
+      "text": "During our analysis, we discovered that family members were not the only communication partners to attempt communication repairs in conversations. Alexa also engaged in communication repair attempts, and therefore we have included an analysis of Alexa’s communication repairs in the findings, in addition to family communication repairs."
+    }, {
+      "page": 4,
+      "region": {
+        "x1": 54.02008819580078,
+        "x2": 294.1424560546875,
+        "y1": 580.08544921875,
+        "y2": 686.1622314453125
+      },
+      "text": "We also want to explicitly state that in our findings and discussion, we refer to Alexa in a personified form. We do this for two reasons: 1) Alexa is a communication partner in the conversational interactions and is most easily identified by name and personal pronoun when discussing the complex interaction between multiple conversation partners. 2) We reflect our participant families’ language describing Alexa, based on our interviews and audio capture."
+    }],
+    "title": {
+      "page": 3,
+      "region": {
+        "x1": 318.0199890136719,
+        "x2": 356.33648681640625,
+        "y1": 454.6816711425781,
+        "y2": 461.1295471191406
+      },
+      "text": "Analysis"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 4,
+      "region": {
+        "x1": 318.01702880859375,
+        "x2": 558.21142578125,
+        "y1": 93.8850326538086,
+        "y2": 212.5068359375
+      },
+      "text": "All 10 of our families experienced communication breakdowns with Alexa. To illustrate our findings, we discuss three distinct conversational samples from three different families in which we highlight the complex communication dynamics between multiple family members and Alexa. Before our discussion of these rich conversational samples, we provide an explanation of the constructs we use to describe the communication interactions between family members and Alexa (shown in Tables 2-4)."
+    }, {
+      "page": 4,
+      "region": {
+        "x1": 318.027099609375,
+        "x2": 558.1612548828125,
+        "y1": 219.33546447753906,
+        "y2": 275.2320556640625
+      },
+      "text": "Our families used a variety of specific speech and language repair strategies, which we categorize under the broader construct of “communication repair types.” Communication repair types are listed in Table 2, with quotes from our participant families used as examples."
+    }, {
+      "page": 4,
+      "region": {
+        "x1": 317.9954833984375,
+        "x2": 558.0906372070312,
+        "y1": 281.74359130859375,
+        "y2": 387.8203430175781
+      },
+      "text": "In addition to specific repair strategies, we define a variety of discourse scaffolds between family members that occur during collaboration, adapted from the fields of education and speech-language pathology [38,41]. These scaffolds occur both between family members and between family members and Alexa. The discourse scaffolds are listed and defined in Table 3. Examples of discourse scaffolds are described when we discuss the three specific family communication breakdowns."
+    }, {
+      "page": 4,
+      "region": {
+        "x1": 318.0,
+        "x2": 558.0938720703125,
+        "y1": 399.3810119628906,
+        "y2": 415.6800231933594
+      },
+      "text": "Table 2. Speech and language repair strategies used by family members."
+    }, {
+      "page": 4,
+      "region": {
+        "x1": 323.6400146484375,
+        "x2": 499.0619812011719,
+        "y1": 427.34552001953125,
+        "y2": 455.5169982910156
+      },
+      "text": "Repair Type Definition Example Prosodic changes"
+    }, {
+      "page": 4,
+      "region": {
+        "x1": 391.02301025390625,
+        "x2": 550.666748046875,
+        "y1": 438.80853271484375,
+        "y2": 511.9560546875
+      },
+      "text": "Adjustments to the rhythm or cadence of speech, including pausing and the rate of speech “Alexa . . what is . . the . . temperature?” [each individual word pronounced slowly and clearly instead of in a conversational manner]- Family C"
+    }, {
+      "page": 4,
+      "region": {
+        "x1": 323.6400146484375,
+        "x2": 368.6147766113281,
+        "y1": 518.60546875,
+        "y2": 535.0169677734375
+      },
+      "text": "Overarticulation"
+    }, {
+      "page": 4,
+      "region": {
+        "x1": 391.02301025390625,
+        "x2": 440.0721130371094,
+        "y1": 518.60546875,
+        "y2": 568.9110107421875
+      },
+      "text": "Exaggerating sounds, also referred to as hyperarticulation [22]"
+    }, {
+      "page": 4,
+      "region": {
+        "x1": 467.406005859375,
+        "x2": 546.9624633789062,
+        "y1": 518.3085327148438,
+        "y2": 568.9020385742188
+      },
+      "text": "“Alexa, play ‘Make it Rain’ by Dack steN” [emphasis and prolongation of final consonant]- Family C"
+    }, {
+      "page": 4,
+      "region": {
+        "x1": 323.6400146484375,
+        "x2": 370.1700744628906,
+        "y1": 575.5454711914062,
+        "y2": 614.573974609375
+      },
+      "text": "Semantic adjustments and modification"
+    }, {
+      "page": 4,
+      "region": {
+        "x1": 391.02301025390625,
+        "x2": 550.4210815429688,
+        "y1": 575.2305297851562,
+        "y2": 648.39599609375
+      },
+      "text": "Modifying the meaning of a word or sentence, including providing “cues,” such as defining a word [6] “Alexa, play little kid music.” (Alexa): I couldn’t find any little kid songs. “Alexa, play kids songs.”- Family G"
+    }, {
+      "page": 4,
+      "region": {
+        "x1": 323.6400146484375,
+        "x2": 358.5780029296875,
+        "y1": 655.0454711914062,
+        "y2": 671.52001953125
+      },
+      "text": "Increased volume"
+    }, {
+      "page": 4,
+      "region": {
+        "x1": 391.0140075683594,
+        "x2": 550.9817504882812,
+        "y1": 654.74853515625,
+        "y2": 705.3510131835938
+      },
+      "text": "The speaker raises their voice specifically for the interaction with Alexa “Alexa stop.” “Alexa stop!” [louder] - Family D"
+    }, {
+      "page": 4,
+      "region": {
+        "x1": 54.0,
+        "x2": 558.0009765625,
+        "y1": 750.914794921875,
+        "y2": 756.7197875976562
+      },
+      "text": "Paper 243 Page 5"
+    }, {
+      "page": 5,
+      "region": {
+        "x1": 59.63999938964844,
+        "x2": 235.06198120117188,
+        "y1": 80.0055160522461,
+        "y2": 108.177001953125
+      },
+      "text": "Repair Type Definition Example Syntactical adjustments"
+    }, {
+      "page": 5,
+      "region": {
+        "x1": 127.02300262451172,
+        "x2": 172.84201049804688,
+        "y1": 91.7655258178711,
+        "y2": 142.07098388671875
+      },
+      "text": "Modifying sentence structure or grammatical elements"
+    }, {
+      "page": 5,
+      "region": {
+        "x1": 203.406005859375,
+        "x2": 286.5903015136719,
+        "y1": 91.46849060058594,
+        "y2": 142.06195068359375
+      },
+      "text": "“Alexa, thank you, stop it.” (alarm continues) “Alexa, stop.”- Family H"
+    }, {
+      "page": 5,
+      "region": {
+        "x1": 59.63999938964844,
+        "x2": 180.8186798095703,
+        "y1": 148.7055206298828,
+        "y2": 210.2879638671875
+      },
+      "text": "Repetition The speaker repeats an utterance used earlier in the same conversation"
+    }, {
+      "page": 5,
+      "region": {
+        "x1": 203.406005859375,
+        "x2": 283.7138366699219,
+        "y1": 148.4084930419922,
+        "y2": 210.2789306640625
+      },
+      "text": "“Alexa, call [name]. (Alexa): Do you mean [name]? “Volume to eight. Call [name]. Alexa, call [name]”.- Family A"
+    }, {
+      "page": 5,
+      "region": {
+        "x1": 54.005577087402344,
+        "x2": 294.2029724121094,
+        "y1": 229.7886505126953,
+        "y2": 285.68524169921875
+      },
+      "text": "Our final construct is that of Alexa’s responses and how they signal communication breakdowns. We encountered three types of responses from Alexa that indicate a communication breakdown. Examples from our audio capture of Alexa’s responses are listed in Table 4."
+    }, {
+      "page": 5,
+      "region": {
+        "x1": 54.0,
+        "x2": 294.023681640625,
+        "y1": 309.8009948730469,
+        "y2": 336.3600158691406
+      },
+      "text": "Table 3. Discourse scaffolds families used to support one another in reformulating their communication with Alexa."
+    }, {
+      "page": 5,
+      "region": {
+        "x1": 54.0,
+        "x2": 263.0394287109375,
+        "y1": 348.0255126953125,
+        "y2": 364.9200134277344
+      },
+      "text": "Discourse Scaffold Definition Direct instruction Telling a family member what they"
+    }, {
+      "page": 5,
+      "region": {
+        "x1": 133.3800048828125,
+        "x2": 256.6889953613281,
+        "y1": 371.0655212402344,
+        "y2": 387.5400085449219
+      },
+      "text": "should say or why something has happened"
+    }, {
+      "page": 5,
+      "region": {
+        "x1": 54.0,
+        "x2": 284.3675842285156,
+        "y1": 394.2254943847656,
+        "y2": 480.4800109863281
+      },
+      "text": "Modeling Producing an utterance to demonstrate the desired response Redirection Refocusing the conversation on a desired topic Expansion Adding on to something said by someone else Contraction Shortening something that has been said Consulting Family members asking others for"
+    }, {
+      "page": 5,
+      "region": {
+        "x1": 133.37998962402344,
+        "x2": 226.49221801757812,
+        "y1": 486.6225280761719,
+        "y2": 491.75701904296875
+      },
+      "text": "assistance or information"
+    }, {
+      "page": 5,
+      "region": {
+        "x1": 54.0,
+        "x2": 294.0930480957031,
+        "y1": 513.8040161132812,
+        "y2": 530.10302734375
+      },
+      "text": "Table 4. Signals from Alexa that a communication breakdown has occurred."
+    }, {
+      "page": 5,
+      "region": {
+        "x1": 54.0,
+        "x2": 245.68199157714844,
+        "y1": 541.7054443359375,
+        "y2": 581.2139892578125
+      },
+      "text": "Response type Definition Example Acting on Misunderstanding (AoM)"
+    }, {
+      "page": 5,
+      "region": {
+        "x1": 134.88299560546875,
+        "x2": 275.4657287597656,
+        "y1": 553.2105712890625,
+        "y2": 626.3130493164062
+      },
+      "text": "Performing an action or providing a response based on misheard or misunderstood input “Alexa, what should we do this night?” Alexa responds with a definition of “this night.”"
+    }, {
+      "page": 5,
+      "region": {
+        "x1": 54.0,
+        "x2": 107.64539337158203,
+        "y1": 633.0255126953125,
+        "y2": 660.7139892578125
+      },
+      "text": "Neutral Clarification Response (NR)"
+    }, {
+      "page": 5,
+      "region": {
+        "x1": 134.88299560546875,
+        "x2": 282.9320983886719,
+        "y1": 632.7105712890625,
+        "y2": 705.7950439453125
+      },
+      "text": "Providing an indication that the communication partner’s interaction was unclear “Sorry, I don’t know that.” “Sorry, I’m not sure.” “I’m not quite sure how to help you with that.”"
+    }, {
+      "page": 5,
+      "region": {
+        "x1": 318.0,
+        "x2": 509.6819763183594,
+        "y1": 80.0055160522461,
+        "y2": 119.4539794921875
+      },
+      "text": "Response type Definition Example Specific Clarification Response (SR)"
+    }, {
+      "page": 5,
+      "region": {
+        "x1": 398.88299560546875,
+        "x2": 546.8447875976562,
+        "y1": 91.45939636230469,
+        "y2": 142.0528564453125
+      },
+      "text": "Providing specific information to request clarification “Did you mean [person’s name]?” “Is that 10:45 in the morning or evening?”"
+    }],
+    "title": {
+      "page": 4,
+      "region": {
+        "x1": 318.01702880859375,
+        "x2": 381.4676818847656,
+        "y1": 77.73279571533203,
+        "y2": 84.1806640625
+      },
+      "text": "4 RESULTS"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 5,
+      "region": {
+        "x1": 318.0,
+        "x2": 558.1513061523438,
+        "y1": 173.44435119628906,
+        "y2": 254.4310302734375
+      },
+      "text": "We explored the variety of communication repair strategies that family members use with Alexa, within the framing of family collaboration and joint media engagement. We present three examples of communication breakdowns with three different families, and use speech and language constructs to analyze the specific repair strategies used in detail."
+    }],
+    "title": {
+      "page": 5,
+      "region": {
+        "x1": 318.0,
+        "x2": 508.9269104003906,
+        "y1": 157.2921142578125,
+        "y2": 163.739990234375
+      },
+      "text": "Family Collaboration on Repair Strategies"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 5,
+      "region": {
+        "x1": 318.0,
+        "x2": 558.199462890625,
+        "y1": 292.3417053222656,
+        "y2": 398.41845703125
+      },
+      "text": "Our first communication breakdown occurs in Family E, who are talking while music is playing on their Echo Dot. The topic of conversation is about popsicles, a flavored ice treat. The son (age 8) initiates communication with Alexa. Alexa responds by acting on a misunderstanding. The mother collaborates with her son in repairing the communication breakdown, to which Alexa responds with specific clarification responses. The family ultimately carries on the conversational topic without Alexa."
+    }, {
+      "page": 5,
+      "region": {
+        "x1": 332.3999938964844,
+        "x2": 557.157958984375,
+        "y1": 410.84552001953125,
+        "y2": 709.3711547851562
+      },
+      "text": "(Son): Can I ask a question? (Mother): What? (Father): What’s the question? (Son): Um (pause) what are popsicles made of? (Father): Why would I tell you that? (Son): Alexa, (pause and music stops) what are popsicles made of? (Alexa): Three, six servings of s’mores popsicles are, you’ll need two cups cold milk, one . . . (Alexa continues to talk) (Mother, talking over Alexa): She thinks it’s s’mores popsicles because you didn’t articulate. (Mother, in louder voice): Alexa, (pause and Alexa stops talking) how do you make a popsicle? (Alexa): Okay, for popsicles, I recommend a top recipe called sweet pink popsicle orange summers, which take eight hours and five minutes to make. (Mother talking over Alexa): Oh my god. (Alexa): You can ask for more information, or for more recipes, say next. (Son): Next (Mother): Alexa, stop. Resume music. (Father): Hey. You’re a smart kid. What do you think popsicles are made of? (Son): Ice? (Father): No. (Mother): How do you make ice? (Father): How do you make it?"
+    }, {
+      "page": 5,
+      "region": {
+        "x1": 54.0,
+        "x2": 558.0009765625,
+        "y1": 750.914794921875,
+        "y2": 756.7197875976562
+      },
+      "text": "Paper 243 Page 6"
+    }, {
+      "page": 6,
+      "region": {
+        "x1": 68.4000015258789,
+        "x2": 278.494140625,
+        "y1": 77.9084701538086,
+        "y2": 128.15087890625
+      },
+      "text": "(Son): Water. (Mother): Plus what? (Son): Plus steam! No, plus cold. (conversation continues between parents and child about popsicles)"
+    }, {
+      "page": 6,
+      "region": {
+        "x1": 54.00556945800781,
+        "x2": 294.16790771484375,
+        "y1": 140.68360900878906,
+        "y2": 259.305419921875
+      },
+      "text": "In this interaction, the son first asks his parents how to make popsicles, asking for consultation without the use of media. When he does not get the answer he is looking for, he changes communication partners and asks Alexa. At this point, the family as a unit is now engaged with media, with Alexa as a consultant. We see throughout the interaction that all family members are listening to the conversational interactions with Alexa, as evidenced by the subsequent communication by family members related to Alexa’s responses."
+    }, {
+      "page": 6,
+      "region": {
+        "x1": 54.00556945800781,
+        "x2": 294.2080383300781,
+        "y1": 266.1340637207031,
+        "y2": 322.0306396484375
+      },
+      "text": "We know the son wants generalized information based on his initial word choice, “what are popsicles made of.” The use of a plural and the lack of a specific type of popsicle indicates that he is interested in popsicles in general instead of a specific popsicle type."
+    }, {
+      "page": 6,
+      "region": {
+        "x1": 54.00558090209961,
+        "x2": 294.23809814453125,
+        "y1": 328.8592834472656,
+        "y2": 698.4420776367188
+      },
+      "text": "Alexa responds on the correct topic– popsicles –but provides too specific of a response that deviates from the son’s intended topic. When the communication breakdown occurs, the son’s mother actively engages in the interaction. However, her initial communication is with her son rather than with Alexa. She uses the communication breakdown as a learning opportunity to educate her son on improving his success in obtaining information from Alexa. The mother provides discourse scaffolding in the form of direct instruction. She instructs her son, given her interpretation of the source of the communication breakdown with Alexa: his poor articulation in which Alexa misheard the word “s’mores.” She then provides further discourse scaffolding in the form of modeling by engaging with Alexa directly in a communication repair. The mother makes the first repair attempt by adjusting the syntax of the question from, “what are popsicles made of” to, “how do you make a popsicle.” As a result, the communication breakdown is somewhat repaired, and Alexa responds both on-topic and with specific information relevant to the question. However, Alexa continues to provide information for a specific type of popsicle rather than a generalized recipe for any popsicle. At this point, Alexa assists her communication partners by refining her response and providing a summary of the popsicle recipe. Alexa then models two possible communication responses to her communication partner: “ask for more information” or “say next.” By providing choices, Alexa is performing discourse scaffolding of her"
+    }, {
+      "page": 6,
+      "region": {
+        "x1": 317.99554443359375,
+        "x2": 558.1829223632812,
+        "y1": 78.44954681396484,
+        "y2": 297.185546875
+      },
+      "text": "own and promoting turn-taking in the communication interaction through a specific clarification response. The specific clarification further refines her response to more closely match the needs of her communication partner. The son, the original instigator of the communication interaction, resumes his role in the interaction with Alexa and responds to Alexa with “next,” one of the communicative options that Alexa provided. However, it is clear that both the mother and father are engaged with the interaction and have had enough of Alexa’s responses. The mother redirects the conversation by stopping Alexa. The parents take on the roles of communication partners with their son. The family maintains the topic of conversation but abandons Alexa as a communication partner for the remainder of the conversational topic. The parents resume the discourse scaffolding that the mother started earlier and lead their son to answering his own question."
+    }],
+    "title": {
+      "page": 5,
+      "region": {
+        "x1": 318.0,
+        "x2": 475.0934753417969,
+        "y1": 273.794677734375,
+        "y2": 279.5211181640625
+      },
+      "text": "Communication Breakdown 1: Family E"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 6,
+      "region": {
+        "x1": 318.0055236816406,
+        "x2": 558.1617431640625,
+        "y1": 328.5431213378906,
+        "y2": 409.58990478515625
+      },
+      "text": "The next conversational interaction is with Family B, which begins in a similar way to Communication Breakdown 1 in Family E. One family member first consults other family members for information, but when other family members are not able to provide the information, the family turns to technology for the answer."
+    }, {
+      "page": 6,
+      "region": {
+        "x1": 332.3909912109375,
+        "x2": 553.00732421875,
+        "y1": 422.0055236816406,
+        "y2": 709.254150390625
+      },
+      "text": "(Mother): Hey [daughter’s name]! Hey [father’s name]! (pause) South Korea (pause) what part of Asia? Southeast or East Asia? (indistinct family member response) (Mother): From America. What you . . . (indistinct family member response) (Mother): Yeah. (Father): Google is South Korea East Asia or South? (Mother): Alexa! South Korea is East Asian or Southeast Asian? (Alexa): Sorry, I’m not sure. (Daughter): Alexa. Are Koreans Southeast Asian? (Alexa beeps) (pause in family conversation) (Mother): Try again [daughter’s name]. (Daughter, with increased volume): Alexa! Are Koreans Southeast Asian? (Alexa): I’m not quite sure how to help you with that. (Daughter): Hmmmm… (Mother): Alexa. Who is Eastern East Asia? What country is East Asia? (Alexa): There are no UN recognized countries in Eastern Europe. (Daughter): Augh.. (Father, with raised voice): Alexa. Please define East Asian countries."
+    }, {
+      "page": 6,
+      "region": {
+        "x1": 54.0,
+        "x2": 558.0009765625,
+        "y1": 750.914794921875,
+        "y2": 756.7197875976562
+      },
+      "text": "Paper 243 Page 7"
+    }, {
+      "page": 7,
+      "region": {
+        "x1": 68.4000015258789,
+        "x2": 291.7754821777344,
+        "y1": 79.46553802490234,
+        "y2": 141.0479736328125
+      },
+      "text": "(Alexa): This might answer your question. There are five UN recognized countries in Eastern Asia: China, Japan, South Korea, North Korea, and Mongolia. Did that answer your question? (Mother): Yes. (Alexa): Thanks for your feedback."
+    }, {
+      "page": 7,
+      "region": {
+        "x1": 53.99554443359375,
+        "x2": 294.197021484375,
+        "y1": 153.52357482910156,
+        "y2": 585.8316040039062
+      },
+      "text": "This interaction illustrates multiple types of communication repairs that families in our study used: syntax adjustments, semantics adjustments, changes in volume, changes in prosody, and collaboration with family members. To begin, the mother consults other family members for information, and when they are not able to provide that information, the father suggests the family’s go-to information resource: Google. By doing this, the father immediately provides discourse scaffolding and shifts the family’s focus to include media. The mother decides to try Alexa first, essentially shifting the family’s media attention from Google as a resource to Alexa. The mother’s question to Alexa closely follows the syntactical model suggested by the father for the Google search, with an expansion to clarify the last key term “Southeast Asian” vs “South.” This form of question is essentially an either/or type of question, in which the requester provides two options and is looking for a response that fits one of those options. Alexa’s response, instead, is a neutral response, “Sorry, I’m not sure,” which does not provide her communication partner with any specific information on the cause of the communication breakdown. The daughter, originally asked as a primary information resource, actively takes part in the conversation with Alexa and takes a turn at repairing the communication breakdown. She uses her mother’s query as a foundation for her interaction. The daughter employs contraction by making a syntactical change: deleting the words in the query and thus changing the nature of the question to a yes/no question (“Are Koreans Southeast Asian?”). Alexa’s response to this question is an extreme version of a neutral response, that of a beep and silence. The family conversation briefly comes to a halt with this response from Alexa, causing a second, and perhaps more dramatic communication breakdown."
+    }, {
+      "page": 7,
+      "region": {
+        "x1": 54.00556945800781,
+        "x2": 294.1749267578125,
+        "y1": 592.6602172851562,
+        "y2": 698.7369995117188
+      },
+      "text": "After the brief silence, the mother encourages her daughter to try again through direct instruction. At this point, both mother and daughter are actively engaged in jointly repairing the communication breakdown. The daughter employs repetition with increased volume in this conversational repair attempt (the third total conversational repair attempt for the family as a unit). Alexa responds with another neutral response, “I’m not quite sure how to help you with that.”"
+    }, {
+      "page": 7,
+      "region": {
+        "x1": 318.0025329589844,
+        "x2": 558.2001953125,
+        "y1": 79.9969711303711,
+        "y2": 160.9736328125
+      },
+      "text": "At this point, the mother resumes her original role in communicating with Alexa and attempts the fourth repair. She modifies her daughter’s interaction through a combination of expansion and contraction. Utilizing a dramatic syntactic change, she breaks up her original either/or question into two closed ended questions, asking both “who” and “what” questions."
+    }, {
+      "page": 7,
+      "region": {
+        "x1": 317.99993896484375,
+        "x2": 558.1472778320312,
+        "y1": 167.56861877441406,
+        "y2": 273.70550537109375
+      },
+      "text": "By now, we have seen the original question modified five times by three family members. Each time the question is modified in relation to the prior family member’s version of the question. Up to this point, Alexa has provided neutral responses, which resulted in the family collaborating to make a wide variety of repair types. Without any specific responses or actions from Alexa, the family did not have any signposts to guide their repair strategies."
+    }, {
+      "page": 7,
+      "region": {
+        "x1": 317.9999084472656,
+        "x2": 558.21728515625,
+        "y1": 280.5341491699219,
+        "y2": 449.33612060546875
+      },
+      "text": "In response to the mother’s two closed ended questions, Alexa acts on a misunderstanding. After the fourth repair attempt is unsuccessful, the daughter makes a noise of frustration and at this point the father actively joins the interaction with Alexa for the first time. His interaction indicates that he has been listening to the prior communication attempts between his family and Alexa but has waited to take his turn at communication repair. The father’s communication repair employs another syntactic change, as well as increasing his volume. He shifts the question to a specific, closed-ended request: “Please define East Asian countries.” He also redirects Alexa from an off-topic response (countries in Eastern Europe) back to the specific topic the family is interested in."
+    }, {
+      "page": 7,
+      "region": {
+        "x1": 317.99993896484375,
+        "x2": 558.2263793945312,
+        "y1": 456.1647644042969,
+        "y2": 599.8766479492188
+      },
+      "text": "All three family members collaborated to achieve a successful communication interaction with Alexa. Each family member listened to the interaction between Alexa and other family members and adjusted their communication interaction based on the prior interactions. At the end, after providing the desired information, Alexa instigates turn-taking with the family by asking them a question “did that answer your question?” The mother, the initiator of the communication interaction, responds to Alexa’s question. Alexa responds back to the mother with a statement that concludes the communication interaction on this topic."
+    }],
+    "title": {
+      "page": 6,
+      "region": {
+        "x1": 318.00555419921875,
+        "x2": 475.7403259277344,
+        "y1": 309.99609375,
+        "y2": 315.7225341796875
+      },
+      "text": "Communication Breakdown 2: Family B"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 7,
+      "region": {
+        "x1": 317.9999694824219,
+        "x2": 558.1692504882812,
+        "y1": 631.2342529296875,
+        "y2": 699.6759033203125
+      },
+      "text": "Our final collaborative communication repair example is from one of our two bilingual families. We note that this final communication breakdown example is representative of two key themes found across our participant families: children’s speech and language development impacting communication with Alexa (captured in multiple"
+    }, {
+      "page": 7,
+      "region": {
+        "x1": 54.0,
+        "x2": 558.0009765625,
+        "y1": 750.914794921875,
+        "y2": 756.7197875976562
+      },
+      "text": "Paper 243 Page 8"
+    }, {
+      "page": 8,
+      "region": {
+        "x1": 53.99998092651367,
+        "x2": 294.2475280761719,
+        "y1": 78.22359466552734,
+        "y2": 272.11566162109375
+      },
+      "text": "instances, but primarily with monolingual children) and Alexa struggling to understand bilingual individuals (also captured in multiple instances, but primarily with adults). Both of these themes were reinforced by family comments during our final interviews. The communication breakdown described below is the only communication breakdown that combined these two themes in one example. This conversational interaction is from Family D, a family that speaks both English and Spanish in their home. In this example, the family has set up their Echo Dot for the first time and have just completed the guided setup through the Alexa app with the researchers in the room. The mother encourages their 5-year-old to ask a question, but the 5-year-old has trouble with a consistent production of the word “Alexa.”"
+    }, {
+      "page": 8,
+      "region": {
+        "x1": 68.39999389648438,
+        "x2": 291.142822265625,
+        "y1": 284.5455017089844,
+        "y2": 492.8551025390625
+      },
+      "text": "(Mother): It’s A (pause) lexa (emphasis on the last two syllables) (Child): uh (slight pause) leh (pause) ska. Is it going to rain for a little bit or is it going to be sunny for a little bit. (said quickly and quietly), (pause) or both. (no rising intonation at end to indicate a question) (pause and no response from Alexa) (Researcher): That was a good question but it might have been a little too long, too many questions I heard. (Mother): Let’s see. (pause) Alexa, is it going to be rainy all day or sunny all day or . . . (recording cut off). (recording resumes with child giggling) (Mother): Alexa, what did I ask you? (Alexa): Sorry, I’m not sure (everyone laughs) (Mother): Alexa, I asked if it was going to rain all day. (Alexa): Probably not. Each day of the next 7 days . . . has at most a 30% chance of rain. (child laughs)"
+    }, {
+      "page": 8,
+      "region": {
+        "x1": 53.99555587768555,
+        "x2": 294.18804931640625,
+        "y1": 505.36358642578125,
+        "y2": 686.7105712890625
+      },
+      "text": "Joint engagement with Alexa is clear for the entirety of the communication interaction, evidenced by the communication partners’ reactions to all interactions with Alexa. Initially, the child’s mother provides direct instruction to her child on improving the production of the word “Alexa.” We found that many of the young children in our study struggled with the speech production necessary to make themselves consistently understood by Alexa. Developmentally, children at age 5 can be expected to have difficulty with the consistent production of some sounds, including the /l/ sound and /s/ sound, which are both part of the word “Alexa” [44]. Typically developing young bilingual children can be expected to make sound substitutions from one language to another [15]. We see evidence of some of these"
+    }, {
+      "page": 8,
+      "region": {
+        "x1": 317.99249267578125,
+        "x2": 558.0336303710938,
+        "y1": 78.2911605834961,
+        "y2": 96.5526123046875
+      },
+      "text": "developmental speech patterns with the child in Family D in our conversational sample described earlier."
+    }, {
+      "page": 8,
+      "region": {
+        "x1": 317.9824523925781,
+        "x2": 558.1874389648438,
+        "y1": 103.3812484741211,
+        "y2": 347.51361083984375
+      },
+      "text": "Another theme we find in this example is the linguistic construction of the question the child asks Alexa: “Is it going to rain for a little bit or is it going to be sunny for a little bit, or both?” The syntax of the question is complex, asking Alexa three different questions about the weather grouped into one. We also see that the child’s use of language does not match Alexa’s abilities. This is the first time this child has used a digital home assistant, and the child is most likely unaware of the need to code-switch. Therefore, the researcher provides direct instruction and suggests the child might have asked too many questions at once. The mother then modifies her child’s question, by adjusting the syntax and semantics, to attempt her communication repair. However, Alexa does not respond. The mother then makes another attempt at communication repair by asking Alexa, “what did I ask you?” Alexa provides a neutral clarification response. Joint engagement in the interaction is demonstrated by everyone laughing at Alexa’s response."
+    }, {
+      "page": 8,
+      "region": {
+        "x1": 318.0224609375,
+        "x2": 558.1087036132812,
+        "y1": 354.3422546386719,
+        "y2": 410.23883056640625
+      },
+      "text": "In the final communication repair, the mother significantly modifies both the syntax and semantics of the question to a contracted yes/no question. Alexa then responds appropriately to the question, which ends that specific communication interaction."
+    }],
+    "title": {
+      "page": 7,
+      "region": {
+        "x1": 317.9999694824219,
+        "x2": 476.63653564453125,
+        "y1": 612.6871948242188,
+        "y2": 618.4136352539062
+      },
+      "text": "Communication Breakdown 3: Family D"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 8,
+      "region": {
+        "x1": 318.0,
+        "x2": 558.2145385742188,
+        "y1": 441.42608642578125,
+        "y2": 660.2457275390625
+      },
+      "text": "Although we find that most family members in our study are able to adapt communication interactions with Alexa, as evidenced through the multiple types of repair strategies used, not everyone was successful in this process. In particular, children under the age of 5 tended to struggle more than older children and adults. For example, the parents of Family I report that one of their younger children (age 4) would walk up to the Echo Dot and begin talking to Alexa without first addressing her by name. The child would use long sentences and often change topic before Alexa responded. His parents felt that his communication with Alexa was similar to his communication with other people. The parents believed that their son expected Alexa to respond to him like other people do, and they reported that he became frustrated when she did not. In contrast, their older child (age 6) would say Alexa’s name and then pause before continuing his communication interaction with her."
+    }, {
+      "page": 8,
+      "region": {
+        "x1": 318.00994873046875,
+        "x2": 558.078125,
+        "y1": 667.0743408203125,
+        "y2": 697.880859375
+      },
+      "text": "It was not only young children that had a difficult time code switching. We find that Alexa did not code switch with family members to craft her communication"
+    }, {
+      "page": 8,
+      "region": {
+        "x1": 54.0,
+        "x2": 558.0009765625,
+        "y1": 750.914794921875,
+        "y2": 756.7197875976562
+      },
+      "text": "Paper 243 Page 9"
+    }, {
+      "page": 9,
+      "region": {
+        "x1": 53.99998474121094,
+        "x2": 294.1793518066406,
+        "y1": 79.7835922241211,
+        "y2": 236.10064697265625
+      },
+      "text": "interactions to the needs and abilities of the person she was addressing, as evidenced most clearly through the jokes she told. For example, the child in Family J asked Alexa to tell jokes throughout the four-week deployment. She responded with a variety of jokes, such as: “A man walks into a bar. Crank. It was a heavy metal bar.” During our final interview with Family J, we asked the mother and child if the jokes Alexa told were appropriate for the child (age 4). The mother replied “Yeah, there were a couple that [child’s name] chuckled at but I don’t think she (pause and mother directs question to child) ‘do you know why the jokes were funny? Did they make sense to you?’” The child’s response was “No, I don’t know why.”"
+    }, {
+      "page": 9,
+      "region": {
+        "x1": 53.99998474121094,
+        "x2": 294.1543273925781,
+        "y1": 242.9292755126953,
+        "y2": 374.09613037109375
+      },
+      "text": "Alexa’s lack of code switching is not only evident with children. We find that Alexa is unable to code switch with multilingual users. For example, when the mother in Family D says, “Alexa, play song by Marco Antonio Solis,” producing the singer’s name using Spanish phonological processes instead of an English phonetic version of the singer’s name. Alexa’s response is “‘Unbelieve,’ by Andy Groun.” In this case, Alexa misheard or misunderstood the request because of her inability to code switch to recognize that the requester was using the correct pronunciation for words in another language."
+    }, {
+      "page": 9,
+      "region": {
+        "x1": 54.00999450683594,
+        "x2": 294.14129638671875,
+        "y1": 380.9247741699219,
+        "y2": 436.82135009765625
+      },
+      "text": "We can think of Alexa as being very literal with communication interactions, which implies a lack of understanding of the social nuances and uses of language, essentially, a deficit in pragmatic skills. An excellent example of Alexa’s poor pragmatic skills is with Family A:"
+    }, {
+      "page": 9,
+      "region": {
+        "x1": 68.4000015258789,
+        "x2": 233.80650329589844,
+        "y1": 448.89752197265625,
+        "y2": 488.1510314941406
+      },
+      "text": "(Mother): Alexa, add 157 (slight pause) (Alexa): I added 157 to your shopping list. (Mother): Alexa, calculate 157 plus 50 (pause) (Alexa): Sorry, I didn’t catch that."
+    }, {
+      "page": 9,
+      "region": {
+        "x1": 53.99555587768555,
+        "x2": 294.1358642578125,
+        "y1": 500.62359619140625,
+        "y2": 669.4857177734375
+      },
+      "text": "Alexa did not understand that the pause in this case was in anticipation of continuing the request. In addition, Alexa did not understand that the semantic modification, from “add” to “calculate” was intended to provide a definition of the earlier request of the word “add.” Multiple meanings of words are a challenge for Alexa, and for any communication partner that does not understand the context of the communication interaction. Finally, Alexa failed to recognize the contextual cue that “157” was a number and therefore the correct interpretation of “add” is to calculate. A final example of Alexa’s inability to code switch is when the child in Family J asks Alexa to count to 10 in Spanish. Alexa responds by translating the word “count” from English to Spanish."
+    }],
+    "title": {
+      "page": 8,
+      "region": {
+        "x1": 318.0224914550781,
+        "x2": 496.0859069824219,
+        "y1": 425.3339538574219,
+        "y2": 431.7818298339844
+      },
+      "text": "Pragmatics: Code Switching with Alexa"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 9,
+      "region": {
+        "x1": 318.0025329589844,
+        "x2": 558.2000122070312,
+        "y1": 95.26448822021484,
+        "y2": 251.52142333984375
+      },
+      "text": "Currently, the burden of repairing communication breakdowns with Alexa lies with family members. Repairing communication breakdowns with Alexa can take a great deal of effort on the part of multiple family members, and in some cases, might lead to abandonment. Our findings reinforce Suchman’s suggestion from 1987: designers of machines should focus on designing for collaboration between the user and the machine to achieve mutual understanding [39]. To alleviate the burden on family members, and to increase chances of successful conversational repairs, we recommend that digital home assistants are designed with a focus on improving communication repair strategies."
+    }],
+    "title": {
+      "page": 9,
+      "region": {
+        "x1": 318.0025329589844,
+        "x2": 399.7095642089844,
+        "y1": 79.17237091064453,
+        "y2": 85.6202392578125
+      },
+      "text": "5 DISCUSSION"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 9,
+      "region": {
+        "x1": 318.00250244140625,
+        "x2": 558.234130859375,
+        "y1": 282.7688293457031,
+        "y2": 589.6264038085938
+      },
+      "text": "Understanding the communicative context and the communication partners involved in a conversation incorporates the field of pragmatics [35,36]. To improve communication repair strategies, knowledge of the context and the communication partner is extremely helpful, allowing digital home assistants to artificially code switch as needed. We acknowledge that Alexa (the Echo Dot) is a machine, and does not have pragmatic skills; however, it may be possible to build on the concept of code switching to design more appropriate interactions between digital home assistants and humans. Designers who are mindful of the varied skill levels and communication styles of family members can improve digital assistants’ abilities to repair communication breakdowns. Younger children have difficulty with certain sounds and sound combinations [44], and they tend to use repetition as an initial communication repair strategy [25]. If designers imbued voice assistants with the skills to identify that a communication partner is a young child, and therefore is likely to use repetition as a repair strategy and likely to have imprecise speech, a digital home assistant can provide more specific communication feedback to collaborate on the communication repair. One way in which the specific feedback can be helpful is through the form of discourse scaffolding."
+    }],
+    "title": {
+      "page": 9,
+      "region": {
+        "x1": 318.0025634765625,
+        "x2": 528.53076171875,
+        "y1": 266.6165771484375,
+        "y2": 273.064453125
+      },
+      "text": "Digital Code Switching for Human Interaction"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 9,
+      "region": {
+        "x1": 318.01251220703125,
+        "x2": 558.2338256835938,
+        "y1": 632.2163696289062,
+        "y2": 700.6580200195312
+      },
+      "text": "Our findings demonstrate how parents use discourse scaffolding to direct their child’s communication interactions. With a designed ability to code-switch, Alexa can do the same, based on recognizing cues from the human communication partner. Developing discourse scaffolds is an expansion of some basic functions that"
+    }, {
+      "page": 9,
+      "region": {
+        "x1": 54.0,
+        "x2": 558.001953125,
+        "y1": 750.914794921875,
+        "y2": 756.7197875976562
+      },
+      "text": "Paper 243 Page 10"
+    }, {
+      "page": 10,
+      "region": {
+        "x1": 54.0,
+        "x2": 294.1934509277344,
+        "y1": 78.22359466552734,
+        "y2": 196.84539794921875
+      },
+      "text": "Alexa already has, such as performing specific clarification responses like, “Do you mean 10:45 in the morning or the evening?” By developing the ability to code switch, Alexa can apply directive discourse scaffolding to a greater variety of communication interactions, based on her understanding of the context and her communication partner. For example: Alexa could identify repetition and imprecise speech and respond with, “I’m not quite sure what you’re asking. Can you tell me just the key word of what you want?”"
+    }, {
+      "page": 10,
+      "region": {
+        "x1": 53.99000930786133,
+        "x2": 294.1452941894531,
+        "y1": 203.6740264892578,
+        "y2": 372.5361328125
+      },
+      "text": "Other work in the area of conversational interfaces has made similar suggestions for conversational agents to provide cues and prompts to collaborate with their human conversational partners [9,12,19,34,43]. Here, we further suggest that the constructs of discourse scaffolding and code switching could be productively applied to the design of digital assistants. Discourse scaffolding can be applied to any conversational partner (adult or child), and through code switching, customized to provide the level of support that is appropriate for the specific conversational partner. Our close analysis of conversational breakdowns and repairs with family members provides an initial guide for developers to design conversational strategies which incorporate code switching and discourse scaffolding."
+    }, {
+      "page": 10,
+      "region": {
+        "x1": 54.00006103515625,
+        "x2": 294.159423828125,
+        "y1": 379.3647766113281,
+        "y2": 560.7117919921875
+      },
+      "text": "We realize that the application of code switching may inadvertently create new miscommunications between Alexa and her communication partners. Alexa might misidentify an adult using repetition and talking while chewing gum as following the same patterns as a young child. However, the use of specific clarification responses provides more signposts for communication repairs than neutral clarification responses. If Alexa makes a mistake, it is easier for her human communication partner to identify the cause and make the repair with specific responses. Ideally, the responses from her human communication partner allow Alexa to learn her communication partner’s speech patterns over time, making code switching easier, and increasing the accuracy of communication responses."
+    }],
+    "title": {
+      "page": 9,
+      "region": {
+        "x1": 318.01251220703125,
+        "x2": 534.0386352539062,
+        "y1": 604.7215576171875,
+        "y2": 622.5721435546875
+      },
+      "text": "Discourse Scaffolding and Specific Clarification Responses"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 10,
+      "region": {
+        "x1": 54.0101318359375,
+        "x2": 294.14947509765625,
+        "y1": 591.9591064453125,
+        "y2": 698.035888671875
+      },
+      "text": "Based on our findings, we see how the concept of joint media engagement [40] is useful for designers to consider when creating applications and skills for digital home assistants. Due to the conversational nature of the interaction, other people in the immediate environment listen to and engage in communication with digital home assistants when there is a communication breakdown, both at home and in other social settings [33,34]. Designers of digital home assistants can capitalize on this"
+    }, {
+      "page": 10,
+      "region": {
+        "x1": 318.0071105957031,
+        "x2": 558.2066650390625,
+        "y1": 78.4542465209961,
+        "y2": 197.0760498046875
+      },
+      "text": "knowledge and engage families in positive, joint interactive experiences, even when only one family member initially engages with the digital home assistant. We saw from our participant families that some family members did not engage immediately with Alexa until other family members had engaged in multiple interaction attempts. For example, when designing an Alexa skill for multiple players, such as a game or competition, family members might be encouraged to join in midway through: “Is there anyone else who can jump in and help?”"
+    }, {
+      "page": 10,
+      "region": {
+        "x1": 318.0,
+        "x2": 558.2246704101562,
+        "y1": 203.90467834472656,
+        "y2": 372.43511962890625
+      },
+      "text": "Utilizing the concept of joint media engagement, digital home assistants can simultaneously build their own pragmatic skills while assisting family members with their own conversational skills. If the digital home assistant is transparent about the nature of the communication breakdown, it can increase family members’ own awareness of their communication skills. In this way, the digital home assistant can model meta-pragmatic skills, in which people talk about their own social use of language and their understanding of the social use of language [41]. Digital home assistants have the potential to become communication facilitation tools for communication both between family members and between family members and the digital home assistant."
+    }, {
+      "page": 10,
+      "region": {
+        "x1": 318.0,
+        "x2": 558.1433715820312,
+        "y1": 379.2637634277344,
+        "y2": 535.5206909179688
+      },
+      "text": "Based on our analysis of diverse families’ communication breakdowns and repairs with Alexa, we find many opportunities to support the growth of Alexa’s communication skills. We particularly want to emphasize the potential for digital home assistants to assist their human communication partners in repairing communication breakdowns. Our interactions with technology have radically changed since Suchman’s work in 1987, however, the hurdle of overcoming communication breakdowns remains the same [39]. Voice interfaces provide a unique opportunity for technology to take on the burden of developing a shared understanding with their human communication partners."
+    }],
+    "title": {
+      "page": 10,
+      "region": {
+        "x1": 54.0101318359375,
+        "x2": 291.1935119628906,
+        "y1": 575.806884765625,
+        "y2": 582.2547607421875
+      },
+      "text": "Promoting Family Engagement and Communication"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 10,
+      "region": {
+        "x1": 318.0,
+        "x2": 558.2946166992188,
+        "y1": 566.76806640625,
+        "y2": 697.9349365234375
+      },
+      "text": "The corpus of communication interactions analyzed for this study is a subset of the total communication interactions captured and likely excludes additional examples of communication breakdowns and repairs. Our findings are also limited in that some families expressed an awareness of needing to “use” the Echo Dot during the study, and this may have perpetuated their attempts to repair communication breakdowns with Alexa. To mitigate that effect, our corpus includes communication breakdown segments that occurred throughout the fourweek study period. Our sample is also limited to 10"
+    }, {
+      "page": 10,
+      "region": {
+        "x1": 54.0,
+        "x2": 558.001953125,
+        "y1": 750.914794921875,
+        "y2": 756.7197875976562
+      },
+      "text": "Paper 243 Page 11"
+    }, {
+      "page": 11,
+      "region": {
+        "x1": 54.0,
+        "x2": 294.1334228515625,
+        "y1": 79.7835922241211,
+        "y2": 123.1351318359375
+      },
+      "text": "families in one area of the United States. Future work remains to conduct a larger scale analysis of families in different regions with a broader range of language and dialectical differences."
+    }],
+    "title": {
+      "page": 10,
+      "region": {
+        "x1": 318.0,
+        "x2": 370.1341247558594,
+        "y1": 550.6158447265625,
+        "y2": 557.063720703125
+      },
+      "text": "Limitations"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 11,
+      "region": {
+        "x1": 54.0,
+        "x2": 294.32568359375,
+        "y1": 164.40248107910156,
+        "y2": 320.659423828125
+      },
+      "text": "The burden of repairing communication breakdowns between humans and technology continues to rest with humans. Our findings highlight how families collaborate in a variety of ways to repair communication breakdowns with digital home assistants, often requiring multiple repair attempts with more than one family member trying to successfully communicate with Alexa (the conversational name used with the Echo Dot). While Alexa makes some attempts to repair communication breakdowns through specific clarification responses, neutral clarification responses are far more common, which do not aid in helping the human communication partner repair the breakdown."
+    }, {
+      "page": 11,
+      "region": {
+        "x1": 54.03005599975586,
+        "x2": 294.1973876953125,
+        "y1": 327.4880676269531,
+        "y2": 496.2900390625
+      },
+      "text": "We turn back to 1987 and Suchman’s guidance that designers focus on improving how technology can promote shared understanding with their human communication partners. Rather than trying to anticipate a user’s needs, the digital home assistant can promote conversational collaboration through improvements in repairing communication breakdowns. To this end, we suggest that designers incorporate specific processes which promote the artificial pragmatic skills of digital home assistants. Improving technology’s ability to identify their human communication partners and to provide specific clarification responses will ultimately improve the ability for humans and machines to collaborate towards shared understanding in their conversational interactions."
+    }],
+    "title": {
+      "page": 11,
+      "region": {
+        "x1": 54.000003814697266,
+        "x2": 142.2291259765625,
+        "y1": 148.250244140625,
+        "y2": 154.6981201171875
+      },
+      "text": "6 CONCLUSION"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 11,
+      "region": {
+        "x1": 54.0,
+        "x2": 294.1524353027344,
+        "y1": 527.0654907226562,
+        "y2": 633.756103515625
+      },
+      "text": "This research was funded, in part, by a grant from Mozilla. We also want to acknowledge our appreciation of the speechlanguage pathologists who we consulted for validity checks of our coding for communication repair types: Teresa Fleck, a practicing SLP of 20 years, and Victoria Lai, an SLP and researcher. We also appreciate the transcription and administration support of Bella Chiu, Yini Guan, Leanne Liu, Sharon Heung, Ashley Boone and Kate Yen. Finally, we sincerely thank the participant families, without whom this research would not be possible."
+    }],
+    "title": {
+      "page": 11,
+      "region": {
+        "x1": 54.030052185058594,
+        "x2": 163.02760314941406,
+        "y1": 513.419189453125,
+        "y2": 519.8670654296875
+      },
+      "text": "ACKNOWLEDGMENTS"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 11,
+      "region": {
+        "x1": 54.0,
+        "x2": 294.0790710449219,
+        "y1": 662.6551513671875,
+        "y2": 666.6600341796875
+      },
+      "text": "[1] Linda Bell and Joakim Gustafson. Interaction with an Animated Agent in a"
+    }, {
+      "page": 11,
+      "region": {
+        "x1": 54.0,
+        "x2": 294.1246643066406,
+        "y1": 670.6368408203125,
+        "y2": 698.5869750976562
+      },
+      "text": "Spoken Dialogue System. Retrieved September 13, 2018 from https://www.speech.kth.se/august/eur99_augdata.html [2] D. Bohus and A.I. Rudnicky. 2001. Modeling the cost of misunderstanding errors in the CMU Communicator dialog system. In IEEE Workshop on"
+    }, {
+      "page": 11,
+      "region": {
+        "x1": 317.9903869628906,
+        "x2": 558.2476196289062,
+        "y1": 78.5770263671875,
+        "y2": 697.3564453125
+      },
+      "text": "Automatic Speech Recognition and Understanding, 2001. ASRU ’01., 252–255. DOI:https://doi.org/10.1109/ASRU.2001.1034635 [3] Dan Bohus and Eric Horvitz. 2009. Open-world dialog: Challenges, directions, and prototype. In Proceedings of IJCAI’2009 Workshop on Knowledge and Reasoning in Practical Dialogue Systems. [4] Dan Bohus and Eric Horvitz. 2011. Multiparty Turn Taking in Situated Dialog: Study, Lessons, and Directions. In Proceedings of the SIGDIAL 2011 Conference (SIGDIAL ’11), 98–109. Retrieved from http://dl.acm.org/citation.cfm?id=2132890.2132903 [5] Holly P. Branigan, Martin J. Pickering, Jamie Pearson, and Janet F. McLean. 2010. Linguistic alignment between people and computers. J. Pragmat. 42, 9 (September 2010), 2355–2368. DOI:https://doi.org/10.1016/j.pragma.2009.12.012 [6] Bonnie Brinton, Martin Fujiki, Diane Frome Loeb, and Erika Winkler. 1986. Development of conversational repair strategies in response to requests for clarification. J. Speech Hear. Res. 29, 1 (March 1986), 75–81. DOI:https://doi.org/10.1044/jshr.2901.75 [7] Antony Bryant and Kathy Charmaz. 2007. The SAGE handbook of grounded theory. London : SAGE Publications, London. [8] Li-Rong Lilly Cheng. 2007. Codes and Contexts: Exploring Linguistic, Cultural, and Social Intelligence. ASHA Lead. 12, 7 (May 2007), 8–33. DOI:https://doi.org/10.1044/leader.FTR2.12072007.8 [9] Yi Cheng, Kate Yen, Yeqi Chen, Sijin Chen, and Alexis Hiniker. 2018. Why Doesn’T It Work?: Voice-driven Interfaces and Young Children’s Communication Repair Strategies. In Proceedings of the 17th ACM Conference on Interaction Design and Children (IDC ’18), 337–348. DOI:https://doi.org/10.1145/3202185.3202749 [10] Benjamin R. Cowan, Nadia Pantidi, David Coyle, Kellie Morrissey, Peter Clarke, Sara Al-Shehri, David Earley, and Natasha Bandeira. 2017. “What Can I Help You with?”: Infrequent Users’ Experiences of Intelligent Personal Assistants. In Proceedings of the 19th International Conference on HumanComputer Interaction with Mobile Devices and Services (MobileHCI ’17), 43:1– 43:12. DOI:https://doi.org/10.1145/3098279.3098539 [11] John W. Creswell. 2018. Qualitative inquiry & research design: choosing among five approaches (Fourth edi ed.). SAGE, Thousand Oaks, CA. [12] Stefania Druga, Randi Williams, Cynthia Breazeal, and Mitchel Resnick. 2017. “Hey Google is It OK if I Eat You?”: Initial Explorations in Child-Agent Interaction. In Proceedings of the 2017 Conference on Interaction Design and Children (IDC ’17), 595–600. DOI:https://doi.org/10.1145/3078072.3084330 [13] Paula B. García, Lori Leibold, Emily Buss, Lauren Calandruccio, and Barbara Rodriguez. 2018. Code-Switching in Highly Proficient Spanish/English Bilingual Adults: Impact on Masked Word Recognition. J. Speech Lang. Hear. Res. (August 2018), 1–11. DOI:https://doi.org/10.1044/2018_JSLHR-H-17-0399 [14] Catherine Garvey. 1975. Requests and responses in children’s speech*. J. Child Lang. 2, 1 (April 1975), 41–63. DOI:https://doi.org/10.1017/S030500090000088X [15] Christina E. Gildersleeve-Neumann, Ellen S. Kester, Barbara L. Davis, and Elizabeth D. Peña. 2008. English Speech Sound Development in PreschoolAged Children From Bilingual English–Spanish Environments. Lang. Speech Hear. Serv. Sch. 39, 3 (July 2008), 314–328. DOI:https://doi.org/10.1044/01611461(2008/030) [16] Alexis Hiniker, Bongshin Lee, Kiley Sobel, and Eun Kyoung Choe. 2017. Plan & Play: Supporting Intentional Media Use in Early Childhood. In Proceedings of the 2017 Conference on Interaction Design and Children (IDC ’17), 85–95. DOI:https://doi.org/10.1145/3078072.3079752 [17] Yvette D. Hyter. 2007. Pragmatic Language Assessment: A Pragmatics-AsSocial Practice Model. Top. Lang. Disord. 27, 2 (April 2007), 128–145. DOI:https://doi.org/10.1097/01.TLD.0000269929.41751.6b [18] Sharon L. James. 1990. Normal Language Acquisition. Allyn & Bacon, Incorporated. [19] Jiepu Jiang, Wei Jeng, and Daqing He. 2013. How Do Users Respond to Voice Input Errors?: Lexical and Phonetic Query Reformulation in Voice Search. In Proceedings of the 36th International ACM SIGIR Conference on Research and Development in Information Retrieval (SIGIR ’13), 143–152. DOI:https://doi.org/10.1145/2484028.2484092 [20] Alan Kennedy, Alan Wilkes, Leona Elder, and Wayne S. Murray. 1988. Dialogue with machines. Cognition 30, 1 (October 1988), 37–72. DOI:https://doi.org/10.1016/0010-0277(88)90003-0 [21] Margaret Lahey. 1988. Language Disorders and Language Development (1 edition ed.). Pearson, New York : London. [22] M. Lohse, K. J. Rohlfing, B. Wrede, and G. Sagerer. 2008. “Try something else!” — When users change their discursive behavior in human-robot interaction. In 2008 IEEE International Conference on Robotics and Automation, 3481–3486. DOI:https://doi.org/10.1109/ROBOT.2008.4543743 [23] Ewa Luger and Abigail Sellen. 2016. “Like Having a Really Bad PA”: The Gulf Between User Expectation and Experience of Conversational Agents. In Proceedings of the 2016 CHI Conference on Human Factors in Computing Systems (CHI ’16), 5286–5297. DOI:https://doi.org/10.1145/2858036.2858288 [24] Barbara G. MacLachlan and Robin S. Chapman. 1988. Communication Breakdowns in Normal and Language Learning-Disabled Children’s"
+    }, {
+      "page": 11,
+      "region": {
+        "x1": 54.0,
+        "x2": 558.0020141601562,
+        "y1": 750.914794921875,
+        "y2": 756.7197875976562
+      },
+      "text": "Paper 243 Page 12"
+    }, {
+      "page": 12,
+      "region": {
+        "x1": 53.99122619628906,
+        "x2": 294.2086181640625,
+        "y1": 77.23507690429688,
+        "y2": 360.65740966796875
+      },
+      "text": "Conversation and Narration. J. Speech Hear. Disord. 53, (1988). DOI:https://doi.org/10.1044/jshd.5301.02 [25] Tova Most. 2002. The Use of Repair Strategies by Children With and Without Hearing Impairment. Lang. Speech Hear. Serv. Sch. 33, 2 (April 2002), 112–123. DOI:https://doi.org/10.1044/0161-1461(2002/009) [26] Clifford I. Nass, Youngme Moon, John Morkes, Eun-Young Kim, and B. J. Fogg. 1997. Human Values and the Design of Computer Technology. In Batya Friedman (ed.). Center for the Study of Language and Information, Stanford, CA, USA, 137–162. Retrieved August 31, 2018 from http://dl.acm.org/citation.cfm?id=278213.278222 [27] M. A. Norman and P. J. Thomas. 1991. Informing HCI design through conversation analysis. Int. J. Man-Mach. Stud. 35, 2 (August 1991), 235–250. DOI:https://doi.org/10.1016/S0020-7373(05)80150-6 [28] Sharon Oviatt, Jon Bernard, and Gina-Anne Levow. 1998. Linguistic adaptations during spoken and multimodal error resolution. Lang. Speech 41, 3/4 (July 1998), 419–442. [29] Michael Quinn Patton. 2015. Qualitative research & evaluation methods: integrating theory and practice (Fourth edi ed.). SAGE Publications, Inc, Thousand Oaks, California. [30] Jamie Pearson, Jiang Hu, Holly P. Branigan, Martin J. Pickering, and Clifford I. Nass. 2006. Adaptive Language Behavior in HCI: How Expectations and Beliefs About a System Affect Users’ Word Choice. In Proceedings of the SIGCHI Conference on Human Factors in Computing Systems (CHI ’06), 1177–1180. DOI:https://doi.org/10.1145/1124772.1124948 [31] Hannah R.M. Pelikan and Mathias Broth. 2016. Why That Nao?: How Humans Adapt to a Conventional Humanoid Robot in Taking Turns-at-Talk. In Proceedings of the 2016 CHI Conference on Human Factors in Computing Systems - CHI ’16, 4921–4932. DOI:https://doi.org/10.1145/2858036.2858478 [32] Sarah Perez. Voice-enabled smart speakers to reach 55% of U.S. households by 2022, says report. TechCrunch. Retrieved September 5, 2018 from http://social.techcrunch.com/2017/11/08/voice-enabled-smart-speakers-toreach-55-of-u-s-households-by-2022-says-report/ [33] Martin Porcheron, Joel E. Fischer, Stuart Reeves, and Sarah Sharples. 2018. Voice Interfaces in Everyday Life. In Proceedings of the 2018 CHI Conference on Human Factors in Computing Systems (CHI ’18), 640:1–640:12. DOI:https://doi.org/10.1145/3173574.3174214"
+    }, {
+      "page": 12,
+      "region": {
+        "x1": 317.99237060546875,
+        "x2": 558.2371826171875,
+        "y1": 77.29159545898438,
+        "y2": 360.71392822265625
+      },
+      "text": "[34] Martin Porcheron, Joel E. Fischer, and Sarah Sharples. 2017. “Do Animals Have Accents?”: Talking with Agents in Multi-Party Conversation. In Proceedings of the 2017 ACM Conference on Computer Supported Cooperative Work and Social Computing (CSCW ’17), 207–219. DOI:https://doi.org/10.1145/2998181.2998298 [35] Carol A. Prutting. 1982. Pragmatics as Social Competence. J. Speech Hear. Disord. 47, 2 (May 1982), 123–134. DOI:https://doi.org/10.1044/jshd.4702.123 [36] Kenyatta O. Rivers, Yvette D. Hyter, and Glenda DeJarnette. 2012. Parsing Pragmatics. ASHA Lead. 17, 13 (October 2012), 14–17. DOI:https://doi.org/10.1044/leader.FTR1.17132012.14 [37] Alex Sciuto, Arnita Saini, Jodi Forlizzi, and Jason I. Hong. 2018. “Hey Alexa, What’s Up?”: A Mixed-Methods Studies of In-Home Conversational Agent Usage. In Proceedings of the 2018 Designing Interactive Systems Conference (DIS ’18), 857–868. DOI:https://doi.org/10.1145/3196709.3196772 [38] Tina Sharpe. 2006. “Unpacking” Scaffolding: Identifying Discourse and Multimodal Strategies that Support Learning. Lang. Educ. Int. J. 20, 3 (May 2006), 211–231. [39] Lucy A Suchman. 1987. Plans and situated actions: The problem of humanmachine communication. Cambridge university press. [40] Lori Takeuchi and R Stevens. 2011. The new coviewing: Designing for learning through joint media engagement. [41] Geraldine P. Wallach and Katharine G. Butler. 1994. Language Learning Disabilities in School-Age Children and Adolescents: Some Principles and Applications (1 edition ed.). Pearson, New York : Toronto : New York. [42] Akiko Yamazaki, Keiichi Yamazaki, Matthew Burdelski, Yoshinori Kuno, and Mihoko Fukushima. 2010. Coordination of verbal and non-verbal actions in human–robot interaction at museums and exhibitions. J. Pragmat. 42, 9 (September 2010), 2398–2414. DOI:https://doi.org/10.1016/j.pragma.2009.12.023 [43] Svetlana Yarosh, Stryker Thompson, Kathleen Watson, Alice Chase, Ashwin Senthilkumar, Ye Yuan, and A. J. Bernheim Brush. 2018. Children Asking Questions: Speech Interface Reformulations and Personification Preferences. In Proceedings of the 17th ACM Conference on Interaction Design and Children (IDC ’18), 300–312. DOI:https://doi.org/10.1145/3202185.3202207 [44] Four to Five Years Old. American Speech-Language-Hearing Association. Retrieved August 20, 2018 from https://www.asha.org/public/speech/development/45/"
+    }, {
+      "page": 12,
+      "region": {
+        "x1": 54.0,
+        "x2": 558.001953125,
+        "y1": 750.914794921875,
+        "y2": 756.7197875976562
+      },
+      "text": "Paper 243 Page 13"
+    }],
+    "title": {
+      "page": 11,
+      "region": {
+        "x1": 54.0,
+        "x2": 116.61898040771484,
+        "y1": 649.5321044921875,
+        "y2": 655.97998046875
+      },
+      "text": "REFERENCES"
+    }
+  }]
+}

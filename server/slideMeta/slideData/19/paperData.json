@@ -1,0 +1,1046 @@
+{
+  "abstractText": {
+    "page": 0,
+    "region": {
+      "x1": 53.79800033569336,
+      "x2": 295.74114990234375,
+      "y1": 198.48487854003906,
+      "y2": 387.22698974609375
+    },
+    "text": "ABSTRACT Many touch based interactions provide limited opportunities for direct tactile feedback; examples include multi-user touch displays, augmented reality based projections on passive surfaces, and mid-air input. In this paper, we consider distal feedback, through vibrotactile stimulation on a smart-watch placed on the user’s non-dominant wrist, as an alternative feedback mechanism to interaction location vibrotactile feedback, under the user’s finger. We compare the effectiveness of interaction location feedback vs. distal feedback through a Fitts’s Law task completed on a smartphone. Results show that distal and interaction location feedback both reduce errors in target acquisition and exhibit statistically comparable performance, suggesting that distal vibrotactile feedback is a suitable alternative when interaction location feedback is not readily available."
+  },
+  "figures": [{
+    "caption": "Figure 1: Distal feedback versus interaction location feedback.",
+    "captionBoundary": {
+      "x1": 317.9549865722656,
+      "x2": 559.794921875,
+      "y1": 418.35638427734375,
+      "y2": 434.95501708984375
+    },
+    "figType": "Figure",
+    "imageText": [],
+    "name": "1",
+    "page": 0,
+    "regionBoundary": {
+      "x1": 341.0,
+      "x2": 535.0,
+      "y1": 194.0,
+      "y2": 414.0
+    }
+  }, {
+    "caption": "Figure 8: Error rates across target sizes for each condition.",
+    "captionBoundary": {
+      "x1": 56.641998291015625,
+      "x2": 291.1925048828125,
+      "y1": 646.7554321289062,
+      "y2": 652.39501953125
+    },
+    "figType": "Figure",
+    "imageText": [],
+    "name": "8",
+    "page": 6,
+    "regionBoundary": {
+      "x1": 53.0,
+      "x2": 295.0,
+      "y1": 483.0,
+      "y2": 642.0
+    }
+  }, {
+    "caption": "Figure 7: Scatterplots of average time to select a target by Fitts’s IDs for each condition.",
+    "captionBoundary": {
+      "x1": 130.20098876953125,
+      "x2": 481.7846984863281,
+      "y1": 462.1703796386719,
+      "y2": 467.80999755859375
+    },
+    "figType": "Figure",
+    "imageText": ["(c)", "Distal", "Watch", "feedback", "(C03)", "(d)", "No", "feedback", "(C04)", "(a)", "Interaction", "Location", "Phone", "feedback", "(C01)", "(b)", "Interaction", "Location", "Phone", "feedback", "with", "Delay(C02)"],
+    "name": "7",
+    "page": 6,
+    "regionBoundary": {
+      "x1": 54.0,
+      "x2": 558.0,
+      "y1": 92.0,
+      "y2": 448.34698486328125
+    }
+  }, {
+    "caption": "Figure 2: Feedback conditions: (1) fill feedback, (2) center feedback, (3) line leading edge feedback, (4) no feedback (blue colouring denotes feedback area).",
+    "captionBoundary": {
+      "x1": 53.52000045776367,
+      "x2": 294.3108825683594,
+      "y1": 639.0924072265625,
+      "y2": 666.6500244140625
+    },
+    "figType": "Figure",
+    "imageText": [],
+    "name": "2",
+    "page": 2,
+    "regionBoundary": {
+      "x1": 53.0,
+      "x2": 296.0,
+      "y1": 571.0,
+      "y2": 635.0
+    }
+  }, {
+    "caption": "Figure 9: Time for individual target sizes for each condition.",
+    "captionBoundary": {
+      "x1": 53.79800033569336,
+      "x2": 294.0329895019531,
+      "y1": 503.5273742675781,
+      "y2": 509.1669921875
+    },
+    "figType": "Figure",
+    "imageText": [],
+    "name": "9",
+    "page": 7,
+    "regionBoundary": {
+      "x1": 53.0,
+      "x2": 295.0,
+      "y1": 341.0,
+      "y2": 499.0
+    }
+  }, {
+    "caption": "Figure 10: Fitts’s parameters for typical targets (above 3.2mm in size).",
+    "captionBoundary": {
+      "x1": 317.9549865722656,
+      "x2": 558.190185546875,
+      "y1": 244.98037719726562,
+      "y2": 261.5789794921875
+    },
+    "figType": "Figure",
+    "imageText": ["Condition", "a", "b", "r", "2", "Phone", "315.9", "153.6", "0.979", "Phone", "with", "delay", "327.3", "169.9", "0.981", "Smartwatch", "292.0", "185.0", "0.971", "No", "Feedback", "382.8", "131.6", "0.987"],
+    "name": "10",
+    "page": 7,
+    "regionBoundary": {
+      "x1": 351.0,
+      "x2": 525.0,
+      "y1": 177.0,
+      "y2": 238.0
+    }
+  }, {
+    "caption": "Figure 3: Devices used for the experiment: Sony Smartwatch 3 (left), Huawei Nexus 6P (right), Sony SWR510 Strap (top).",
+    "captionBoundary": {
+      "x1": 53.79800033569336,
+      "x2": 294.03302001953125,
+      "y1": 245.00338745117188,
+      "y2": 261.60198974609375
+    },
+    "figType": "Figure",
+    "imageText": [],
+    "name": "3",
+    "page": 3,
+    "regionBoundary": {
+      "x1": 53.0,
+      "x2": 295.0,
+      "y1": 92.0,
+      "y2": 240.0
+    }
+  }, {
+    "caption": "Figure 4: Rationale for target sizes. A typical application, like email, presents a range of target sizes: 1.9mm approximates the height of text; 1.3mm is the typical distance between words, useful in text selection; 3.2mm is the width of a character, for cursor navigation across a word; 6.3mm to 1.0cm approximates the width of widgets.",
+    "captionBoundary": {
+      "x1": 53.564998626708984,
+      "x2": 295.63787841796875,
+      "y1": 285.1673889160156,
+      "y2": 345.6019287109375
+    },
+    "figType": "Figure",
+    "imageText": [],
+    "name": "4",
+    "page": 4,
+    "regionBoundary": {
+      "x1": 55.0,
+      "x2": 291.0,
+      "y1": 92.0,
+      "y2": 272.0
+    }
+  }, {
+    "caption": "Figure 5: Target widths used in the experimental protocol.",
+    "captionBoundary": {
+      "x1": 320.47100830078125,
+      "x2": 555.6759643554688,
+      "y1": 270.9363708496094,
+      "y2": 276.57598876953125
+    },
+    "figType": "Figure",
+    "imageText": [],
+    "name": "5",
+    "page": 4,
+    "regionBoundary": {
+      "x1": 378.0,
+      "x2": 499.0,
+      "y1": 92.0,
+      "y2": 266.0
+    }
+  }, {
+    "caption": "Figure 6: Samples of the Fitts Law ISO Task on a Smartphone Interface",
+    "captionBoundary": {
+      "x1": 317.9549865722656,
+      "x2": 558.190185546875,
+      "y1": 369.39239501953125,
+      "y2": 385.99102783203125
+    },
+    "figType": "Figure",
+    "imageText": [],
+    "name": "6",
+    "page": 4,
+    "regionBoundary": {
+      "x1": 318.0,
+      "x2": 556.0,
+      "y1": 297.0,
+      "y2": 362.0
+    }
+  }],
+  "sections": [{
+    "paragraphs": [{
+      "page": 0,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 261.0430603027344,
+        "y1": 421.01055908203125,
+        "y2": 427.8949890136719
+      },
+      "text": "• Human-centered computing→ User studies."
+    }],
+    "title": {
+      "page": 0,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 128.51052856445312,
+        "y1": 406.52484130859375,
+        "y2": 412.95098876953125
+      },
+      "text": "CCS CONCEPTS"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 0,
+      "region": {
+        "x1": 53.54899978637695,
+        "x2": 286.91900634765625,
+        "y1": 461.6785583496094,
+        "y2": 468.56298828125
+      },
+      "text": "vibrotactile feedback; targeting; touchscreen; smartwatch"
+    }],
+    "title": {
+      "page": 0,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 111.39409637451172,
+        "y1": 447.1928405761719,
+        "y2": 453.6189880371094
+      },
+      "text": "KEYWORDS"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 0,
+      "region": {
+        "x1": 53.59199523925781,
+        "x2": 297.5028076171875,
+        "y1": 498.87847900390625,
+        "y2": 548.9100341796875
+      },
+      "text": "Jay Henderson, Jeff Avery, Laurent Grisoni, Edward Lank. 2019. Leveraging Distal Vibrotactile Feedback for Target Acquisi-tion. In Proceedings of CHI Conference on Human Factors in Computing Systems Proceedings (CHI 2019). ACM, New York, NY, USA, 11 pages. https://doi.org/10.1145/3290605.3300715"
+    }, {
+      "page": 0,
+      "region": {
+        "x1": 53.24800109863281,
+        "x2": 295.0179748535156,
+        "y1": 585.2767333984375,
+        "y2": 712.3289794921875
+      },
+      "text": "Permission to make digital or hard copies of all or part of this work for personal or classroom use is granted without fee provided that copies are not made or distributed for profit or commercial advantage and that copies bear this notice and the full citation on the first page. Copyrights for components of this work owned by others than the author(s) must be honored. Abstracting with credit is permitted. To copy otherwise, or republish, to post on servers or to redistribute to lists, requires prior specific permission and/or a fee. Request permissions from permissions@acm.org. CHI 2019, May 4–9, 2019, Glasgow, Scotland, UK © 2019 Copyright held by the owner/author(s). Publication rights licensed to ACM. ACM ISBN 978-1-4503-5970-2/19/05. . . $15.00 https://doi.org/10.1145/3290605.3300715"
+    }],
+    "title": {
+      "page": 0,
+      "region": {
+        "x1": 53.46600341796875,
+        "x2": 151.705322265625,
+        "y1": 488.1513671875,
+        "y2": 493.7909851074219
+      },
+      "text": "ACM Reference Format:"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 0,
+      "region": {
+        "x1": 317.656005859375,
+        "x2": 559.8980102539062,
+        "y1": 478.29656982421875,
+        "y2": 712.3289794921875
+      },
+      "text": "Displays are ubiquitous: we carry them with us in the form of smartphones and tablets, we find them in the environment in the form of public screens, and we project them into the air or on surfaces around us using augmented reality (AR) technology. The most common form of interaction with personal, public, and virtual display screens is some form of gesture - using either 2D touch or 3D motion to manipulate content. While there are several challenges with gestural interaction, the specific challenge we seek to address is feedback. When one touches a flat display (or gestures at a virtual screen) there is no physical sensation of widget interaction [5]. This lack of feedback is a known challenge on touchscreen displays, which a large body of research attempts to overcome by using haptic effects [6, 18, 19, 22, 26, 36]. Similarly, commercial smartphones and tablets use vibration to communicate to the user that contact has been made with a target. Whether one uses vibration or some other form of haptic stimulation, the design of these feedback techniques makes two assumptions: first, the device has some sort of physical"
+    }, {
+      "page": 0,
+      "region": {
+        "x1": 54.0,
+        "x2": 558.0009765625,
+        "y1": 750.914794921875,
+        "y2": 756.7197875976562
+      },
+      "text": "Paper 485 Page 1"
+    }, {
+      "page": 1,
+      "region": {
+        "x1": 52.70199966430664,
+        "x2": 295.7410888671875,
+        "y1": 95.73056030273438,
+        "y2": 509.09100341796875
+      },
+      "text": "form (e.g. it is not a virtual projection as with augmented reality); and second, the device will be used by only a single user. Typical haptic effects such as electrostatic vibration [36], the squeeze film effect [7], or the use of the internal vibration motor on a mobile device all manipulate the entire display or the entire device. To localize effects, we determine the user’s contact point and movement, what effect we wish to convey at that point, and time the generated haptic effect to coincide exactly with the user’s position. While this is not a problem for single-user physical displays, it does not allow multiple users to interact simultaneously nor does it support feedback for virtual screens. While one can imagine engineering solutions to segment haptic displays [3] or to artificially stimulate fingers in midair [6, 26], we wondered whether some other form of feedback, e.g. vibration, could be provided distally (on a location other than the interaction site), and whether that vibration feedback could then support target acquisition tasks. Given that smartphones use vibration to communicate target acquisition, could we leverage a convenience device like a smartwatch to provide feedback at another on-body location during interactions when interaction location feedback is impractical (e.g. when a display is shared or virtual)? In this paper we explore the effectiveness of smartwatchbased feedback as an aid to target acquisition with the dominant hand. We do this by quantitatively assessing the performance of smartwatch-based vibration feedback during touchscreen interaction to under-finger vibration. This experiment demonstrates parity in performance between localized feedback – where the touchscreen device provides vibration – and distal feedback – where vibration is provided by the smartwatch. In essence, our results argue that, if vibrotactile feedback is desired but cannot be provided under the finger, that providing vibrotactile feedback via another mobile, personal device can effectively support interaction."
+    }],
+    "title": {
+      "page": 0,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 411.0592041015625,
+        "y1": 463.8108825683594,
+        "y2": 470.2370300292969
+      },
+      "text": "1 INTRODUCTION"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 1,
+      "region": {
+        "x1": 53.43000030517578,
+        "x2": 295.7377624511719,
+        "y1": 538.071533203125,
+        "y2": 712.3289794921875
+      },
+      "text": "Motivated by work by Cockburn and Brewster in multimodal feedback effects on targeting [9], many researchers have explored the various ways that tactile feedback can be used to enhance targeting performance. Levesque et al. [20] and Casiez et al. [7] demonstrated the advantages of surface friction with respect to targeting performance. More recent work by Zhang and Harrison [36] explored how best to render one category of tactile effect – electrovibration, where an alternating voltage varies the feeling of “rubberiness” of the surface – to maximally improve targeting performance. While many of these tactile effects have been explored in research systems, the most common form of tactile feedback employed on commercial smartphones is vibration [28]. Early research in this space explored how best to design hardware to support vibrotactile feedback [27, 29], while"
+    }, {
+      "page": 1,
+      "region": {
+        "x1": 317.47698974609375,
+        "x2": 559.8980712890625,
+        "y1": 95.73056030273438,
+        "y2": 712.3289794921875
+      },
+      "text": "more recent work has focused on the design of vibrotactile stimuli [17, 28]. Current vibrotactile effects are provided by a small electrical motor with a slightly off-balance shaft. When vibration is desired, the motor spins the shaft, and the outof-balance mass causes a small vibration in the device. This type of vibration device is called an electrically rotating mass (ERM) component. Vibrotactile feedback on touch-screens has proven an effective method to reduce errors in targeting tasks, such as text input on PDAs or smartphones [4, 14]. We know that targeting aids are important, particularly for acquisition of small targets: Hoggan et al. [14] noted frustration among users for touch-screen targeting as the user’s finger may block the target from their field of view. When this happens, the user would have no visual indication if they are correctly hitting the target. This issue of occlusion is often attributed to the size of the user’s finger, i.e. the fat finger problem [31]. However, situations exist where under-finger or interaction location feedback is impractical for targeting tasks, such as virtual reality, augmented reality or multi-user scenarios. Solutions to these domains include haptic feedback on a wand [18] or stylus [10, 19] on contact with a target, and vibration on a mobile phone when augmented reality targets come into view [1]. The drawback of techniques like these is they encumber the hand being used for interaction. To avoid this problem, we we consider distal feedback as an alternative to interaction location feedback. There is some reason to believe that wrist-worn feedback on the arm associated with interaction [15] might provide benefits because, as the user makes contact with something, the wrist-based vibration will vibrate bones in the wrist and hand and transmit the vibrotactile effect to the point of interaction. Leveraging this idea of skeletal transmission, Maeda et al. [22] describe the design of wrist-worn vibration to enhance haptic effects during interaction, including enhancing interaction in virtual environments [23]. It is less clear whether vibrotactile effects that are more distantly separated from interaction are beneficial. In virtual or augmented reality, Kaul et al. [16] looked at adding haptic effects to a VR or AR headset to improve targeting and found that it was not particularly effective, while Richter et al. [30] examined various configurations of body-worn haptic feedback during typing tasks and found improved performance. We are not the first to explore wrist-won tactile feedback: the evaluation of wrist-worn tactile feedback has been explored for typing on a touch tabletop with wrist-worn tactile output provided on the users input arm by McAdam and Brewster [24, 25]. In this prior work, an actuator is attached using a tubegrip bandage to the same side of the body that is used for interaction. We extend this research with two key differences. First, we use an off-the-shelf smartwatch, a commodity device, rather than an actuator held in tight contact"
+    }, {
+      "page": 1,
+      "region": {
+        "x1": 54.0,
+        "x2": 558.0009765625,
+        "y1": 750.914794921875,
+        "y2": 756.7197875976562
+      },
+      "text": "Paper 485 Page 2"
+    }, {
+      "page": 2,
+      "region": {
+        "x1": 53.43000030517578,
+        "x2": 295.74139404296875,
+        "y1": 95.73056030273438,
+        "y2": 401.4939880371094
+      },
+      "text": "with the skin via a tubegrip bandage. Second, we administer feedback on the wrist of the non-dominant (typically noninteractive) hand (versus the dominant/interactive hand as in McAdam and Brewster) because the majority of people wear their watch on their non-dominant wrist [32]. Alongside the work of McAdam and Brewster, Tankana et al. [34] have explored distal feedback on a users non-dominant hand in the application of forceps manipulation for laparoscopic surgery, but their study is limited to finger-only feedback and they do not compare this to other feedback types - including forceps (proximal) feedback, or locations beyond fingers/a specialized haptic display. In summary, despite past work, it is unknown how vibrotactile feedback from a smartwatch worn on the wrist of the non-dominant hand would compare to interaction location vibrotactile feedback provided under a user’s finger via vibration of a touch surface. Researchers have also explored the design of tactile feedback, but have found few benefits in targeting tasks [11, 24]. McAdam and Brewster hypothesize that benefits of distal vibrotactile feedback may be reduced due to target size, since Fitts’s Law shows that as target size increases, they become easier to acquire, i.e. if targets are large enough, tactile feedback may not be required [24]. Thus, we see benefit in studying a standard Fitts’s law task, usingmore challenging targets to acquire, to further explore the distal feedback phenomenon."
+    }],
+    "title": {
+      "page": 1,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 147.7989044189453,
+        "y1": 523.5858154296875,
+        "y2": 530.011962890625
+      },
+      "text": "2 RELATEDWORK"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 2,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 295.23284912109375,
+        "y1": 430.4705505371094,
+        "y2": 556.906982421875
+      },
+      "text": "One open question when designing vibrotactile feedback is the form that vibrotactile feedback should take. Should a device vibrate when the user enters the target, then stop, or should the device continue to vibrate continuously while a user is within the target? Inspired by past work Zhang et al. [36] on vibrotactile feedback, we conducted an initial pilot study to evaluate four different feedback conditions: no feedback, fill feedback, center feedback (where 1/4 of the target provided feedback to guide participants to the center of the target and reduce errors), and line leading edge feedback (see Figure 2)."
+    }, {
+      "page": 2,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 295.5872497558594,
+        "y1": 681.5335083007812,
+        "y2": 712.3289794921875
+      },
+      "text": "For the pilot study, participants performed a short Fitts’s Law experiment [33] with three target sizes (3.8mm, 7.6mm and 12.6mm) and two different amplitudes (32mm and 64mm)."
+    }, {
+      "page": 2,
+      "region": {
+        "x1": 317.47698974609375,
+        "x2": 559.8945922851562,
+        "y1": 95.73056030273438,
+        "y2": 138.48101806640625
+      },
+      "text": "The specific devices used in our study were a Nexus 6P smartphone running Android 7.1.2 (14.5 cm display, 1440 by 2560 pixels at 518 dpi), and a Sony Smartwatch 3 running Android Wear 1.5.0."
+    }, {
+      "page": 2,
+      "region": {
+        "x1": 317.5870056152344,
+        "x2": 559.8985595703125,
+        "y1": 143.55154418945312,
+        "y2": 521.0460205078125
+      },
+      "text": "To assess feedback, we conducted a semi-structured interview with participants after the pilot study, exploring which interaction techniques they preferred, and their impressions of vibrotactile feedback and the use of the watch for feedback. We also collected timing information. RM-ANOVAS indicated that there was no significant effect of condition on elapsed time (F1.061,15.917 = 1.032,p = ns,η2 = 0.00179), or condition on error rate (F1.061,15.917 = 1.12,p = ns,η2 = 0.00195). This analysis suggests that the techniques were comparable and error rates differed only marginally between techniques. We also examined survey results to uncover user preferences. While we found that participants preferred vibrotactile feedback on the smartphone, the smartwatch was also highly rated in comments. In terms of the specific haptic feedback conditions, participants found the fill technique the easiest to use overall because it provided constant feedback when over the target (i.e. participants were not required to search for the actual target on the display). Alongside understanding how best to apply vibrotactile effects, one strongly positive result from our study is that participants highlighted no perceived difficulties in integrating distal watch feedback from the non-dominant arm with on-screen interaction. One participant noted that, as he interacted with small targets using the watch, he became convinced that we were also doing “something with the phone too” and, when re-assured that we were not, that the watch and phone were distinct, he noted that it was “amazing how fast [we] re-wired [his] brain” (to associate the distal feedback to an interaction location location). The promising results from this pilot study motivated a more complete study of smartwatch-based vibrotactile feedback."
+    }],
+    "title": {
+      "page": 2,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 133.06362915039062,
+        "y1": 415.9848327636719,
+        "y2": 422.4109802246094
+      },
+      "text": "3 PILOT STUDY"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 2,
+      "region": {
+        "x1": 317.47698974609375,
+        "x2": 559.8910522460938,
+        "y1": 550.0275268554688,
+        "y2": 652.552978515625
+      },
+      "text": "We compare interaction location vibrotactile feedback (i.e. under the finger) to distal vibrotactile feedback (i.e. a smartwatch) with respect to target acquisition time, error rate, and user preference. We conducted a full-factorial, repeated measures experiment to assess the validity of using an distal vibrotactile feedback as a comparable technique to that of interaction location. The current section describes our experimental protocol, including participants, devices, dependent variables, procedure and data collected."
+    }],
+    "title": {
+      "page": 2,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 473.0191650390625,
+        "y1": 535.5418701171875,
+        "y2": 541.968017578125
+      },
+      "text": "4 EXPERIMENTAL EVALUATION"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 2,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 559.7424926757812,
+        "y1": 681.5335083007812,
+        "y2": 712.3289794921875
+      },
+      "text": "Sixteen participants volunteered for a 45 minute user study. Nine participants identified as female and seven identified as male, with ages ranging from 22 to 38 (mean = 24.94,"
+    }, {
+      "page": 2,
+      "region": {
+        "x1": 54.0,
+        "x2": 558.0009765625,
+        "y1": 750.914794921875,
+        "y2": 756.7197875976562
+      },
+      "text": "Paper 485 Page 3"
+    }, {
+      "page": 3,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 294.05413818359375,
+        "y1": 284.65057373046875,
+        "y2": 327.3999938964844
+      },
+      "text": "standard deviation = 3.78). One participant preferred not to disclose their age. Three participants were left-handed and the remaining 13 were right-handed. All participants received a $10 remuneration for their participation."
+    }],
+    "title": {
+      "page": 2,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 372.34307861328125,
+        "y1": 667.0478515625,
+        "y2": 673.4739990234375
+      },
+      "text": "Participants"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 3,
+      "region": {
+        "x1": 53.499000549316406,
+        "x2": 295.74102783203125,
+        "y1": 357.56256103515625,
+        "y2": 555.72998046875
+      },
+      "text": "Our experimental protocol required use of two mobile devices: a smartphone and a smartwatch. These are depicted in figure 3. The smartwatch was a Sony Smartwatch 3 with a Sony SWR510 Strap. The core unit’s dimensions are 51 x 36 x 10mm, with a weight of 45g. The Smartphone was a Huawei Nexus 6P running vanilla Android OS version 7.1.2. The display measured 14.5cm with a resolution of 1440 by 2560 pixels, yielding a 518 dpi display. These were the same devices used in the pilot study. To drive our experimental design, we implemented a version of the ISO 9241 Fitt’s task that measured user finger position and provided Vibrotactile feedback. Input was captured on the touchscreen of the smartphone, and vibrotactile feedback was provided either by the smartphone itself or by the smartwatch using Eccentric Rotating Mass (ERM) vibration motors. To coordinate vibration with input, we connected the smartphone to the Smartwatch via Bluetooth."
+    }, {
+      "page": 3,
+      "region": {
+        "x1": 53.54899978637695,
+        "x2": 295.73602294921875,
+        "y1": 571.4068603515625,
+        "y2": 712.3289794921875
+      },
+      "text": "Dependent Variables Initially, we conceptualized our experiment as a having three vibrotactile feedback condiditons: feedback on the smartphone (interaction location), feedback on a smartwatch worn on the user’s non-dominant wrist (distal), and a control condition (no feedback). We implemented our application and logging (described below) and ran the full experimental protocol. In this initial experiment, we found that the smartphone was slightly faster than the smartwatch, by about 30 to 50ms. We hypothesized that this delay might be due to transmission delays of the Bluetooth connection between smartphone and smartwatch during the distal condition. While the delay"
+    }, {
+      "page": 3,
+      "region": {
+        "x1": 317.5870056152344,
+        "x2": 559.8982543945312,
+        "y1": 95.73056030273438,
+        "y2": 281.9429931640625
+      },
+      "text": "could reasonably be expected in distal vibrotactile feedback applications, we decided to add a fourth condition to the experiment (interaction location feedback with simulated Bluetooth delay). Even small delays in feedback can have significant impacts on performance, so adding Bluetooth delay to the smartphone allows us to account for this delay. Bluetooth delay was calculated as half of the round trip time for inter-device communication, approximately 39ms. We discarded the data from our initial experiment and reran our experiment with four factors. With this change, our final experimental design included four vibrotactile feedback conditions: feedback on the smartphone (interaction location) with no delay, feedback on the smartphone with a 39ms delay (interaction location delay), feedback on a smartwatch worn on the user’s non-dominant wrist (distal) and a control condition (no feedback)."
+    }, {
+      "page": 3,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 558.210205078125,
+        "y1": 287.0135803222656,
+        "y2": 317.8080139160156
+      },
+      "text": "Based on pilot results, we utilized target fill for vibrotactile feedback. Our four feedback conditions were implemented as follows:"
+    }, {
+      "page": 3,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 559.8929443359375,
+        "y1": 328.4281921386719,
+        "y2": 562.8890380859375
+      },
+      "text": "• Interaction location feedback with no delay (C01): when the user correctly enters the target region, the phones vibration motor immediately activates and remains active until the user either lifts their finger or removes their finger from the region. This is typically the way that vibrationbased feedback works in modern interactive touchscreens. • Interaction location feedback with delay (C02): when the user correctly enters the target region, the phones vibration motor activates after the calculated delay time (39ms) and remains active until the user either lifts their finger or removes their finger from the target plus the delay time. • Distal feedback (C03): when the user correctly enters the target region a message is sent from the phone to the smartwatch to activate the watch vibration motor. This remains active until the user either lifts their finger or removes their finger from the region, at which time a message is sent to deactivate the vibration motor of the watch. • No feedback (C04): no vibration feedback occurs upon correct target acquisition."
+    }, {
+      "page": 3,
+      "region": {
+        "x1": 317.72601318359375,
+        "x2": 559.7442626953125,
+        "y1": 573.9375610351562,
+        "y2": 712.3289794921875
+      },
+      "text": "Participants performed an ISO 9241 Fitts task [33] with six target widths (2cm, 1cm, 6.3mm, 3.2mm, 1.9mm, and 1.3mm) and six distances (18.2mm, 24.7mm, 31.2mm, 37.7mm, 49.4mm and 57.2mm.) in order to generate appropriate Fitts’s curves. This yields 36 IDs ranging from 0.924 to 5.807. Our six distances were chosen based on the size of the smartphone screen and the constraints of the Fitts’s Law task. Our rationale for target sizes was based on typical targeting tasks in smartphone interfaces. 2.0cm represents inter-icon spacing on a home screen, and 1.0cm represents the typical size of an icon on the display, given our smartphone’s screen size. 6.3mm coincides with Android design guidelines for"
+    }, {
+      "page": 3,
+      "region": {
+        "x1": 54.0,
+        "x2": 558.0009765625,
+        "y1": 750.914794921875,
+        "y2": 756.7197875976562
+      },
+      "text": "Paper 485 Page 4"
+    }, {
+      "page": 4,
+      "region": {
+        "x1": 53.429420471191406,
+        "x2": 295.7410583496094,
+        "y1": 369.3445739746094,
+        "y2": 615.33203125
+      },
+      "text": "minimum-size of finger targets [12] (approximately 7mm with a minimum of 1mm inter-target spacing). We also used a set of smaller targets, highlighted in Figure 4. Specifically, 3.2mmwas used to represent smaller targets used in everyday interaction, such as keyboard buttons (normal range of 3- 5mm). We also added two additional, very small targets: 1.9mm (approximate height of a text link before zoom) and 1.3mm (approximate inter-word spacing in a line of text, used when positioning a cursor). These sizes are both common with targeting tasks like browsing the web or editing an email message, and are often difficult to select. Given that our goal is to contrast vibrotactile feedback both at the point of contact to feedback via a smartwatch worn distal, exploring a range of typical targeting tasks from the simple to the complex seemed appropriate. Figure 5 shows these target sizes in comparison to an index finger; we acknowledge that the smallest target sizes are often difficult to acquire, but, as we note above, there exist a class of relatively frequent targeting tasks (e.g. inserting a missing word or correcting wording in an email prior to sending) that require acquiring these small targets."
+    }],
+    "title": {
+      "page": 3,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 88.89765930175781,
+        "y1": 343.07684326171875,
+        "y2": 349.50299072265625
+      },
+      "text": "Devices"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 4,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 294.29803466796875,
+        "y1": 645.6685180664062,
+        "y2": 712.3289794921875
+      },
+      "text": "Participants were instructed to select a blue target with their index finger as the start position, then move their index finger from the blue target to the red target, and lift their finger once it is within the red target. There were a total of 5 circles within each targeting task. Text feedback in the top right hand corner of the display indicated whether or not a"
+    }, {
+      "page": 4,
+      "region": {
+        "x1": 317.5870056152344,
+        "x2": 559.8984375,
+        "y1": 415.6785583496094,
+        "y2": 625.801025390625
+      },
+      "text": "user had successfully completed the targeting task. Figure 6 shows the application interface. This was a within-participant design, where each participant was presented with all of the feedback conditions. Participants completed a practice block followed by two experimental blocks for each of the conditions. Order of conditions were varied: the Feedback condition was counterbalanced across participants using a 4x4 Latin Square Design. Target width and distance were randomly varied for each feedback condition within each experimental block. After the completion of each condition, participants were administered the NASA Task Load Index (TLX) [13] to assess weighted workload scores for each interface. Categories assessed as part of the NASA TLX are physical demand, mental demand, temporal demand, performance, effort and frustration [13]. Lastly, post experiment, participants were asked to rank the feedback techniques (smartphone, watch, or none) from most to least preferred."
+    }, {
+      "page": 4,
+      "region": {
+        "x1": 317.58685302734375,
+        "x2": 558.2021484375,
+        "y1": 630.443115234375,
+        "y2": 661.666015625
+      },
+      "text": "Overall, our experimental design yielded: 4 techniques × 6 widths × 6 distances × 5 targets × 2 blocks × 16 participants = 23,040 trials"
+    }],
+    "title": {
+      "page": 4,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 100.36505126953125,
+        "y1": 631.182861328125,
+        "y2": 637.6090087890625
+      },
+      "text": "Procedure"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 4,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 558.5840454101562,
+        "y1": 693.4895629882812,
+        "y2": 712.3289794921875
+      },
+      "text": "Given that our experimental design is a standard Fitts’s Law task, our dependent variables are time and error rate. We also"
+    }, {
+      "page": 4,
+      "region": {
+        "x1": 54.0,
+        "x2": 558.0009765625,
+        "y1": 750.914794921875,
+        "y2": 756.7197875976562
+      },
+      "text": "Paper 485 Page 5"
+    }, {
+      "page": 5,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 294.054443359375,
+        "y1": 95.73056030273438,
+        "y2": 114.57000732421875
+      },
+      "text": "collected the weighted NASA TLX ratings for each condition and ranking of feedback options."
+    }],
+    "title": {
+      "page": 4,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 360.74609375,
+        "y1": 679.0038452148438,
+        "y2": 685.4299926757812
+      },
+      "text": "Measures"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 5,
+      "region": {
+        "x1": 53.31999969482422,
+        "x2": 295.74072265625,
+        "y1": 149.52859497070312,
+        "y2": 228.14398193359375
+      },
+      "text": "We evaluate the following hypotheses during our experiment: [H1] Feedback improves targeting time compared to no feedback. [H2] Feedback lowers error rate compared to no feedback. [H3] Participants prefer feedback conditions over no feedback, and prefer phone feedback over watch feedback."
+    }],
+    "title": {
+      "page": 5,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 106.35282897949219,
+        "y1": 135.04286193847656,
+        "y2": 141.468994140625
+      },
+      "text": "Hypotheses"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 5,
+      "region": {
+        "x1": 53.31999969482422,
+        "x2": 295.7413024902344,
+        "y1": 263.1035461425781,
+        "y2": 712.3289794921875
+      },
+      "text": "We performed a repeated measures analysis of variance (RM-ANOVA) with time and error rate as dependent variables. Considering, first, time, Mauchly’s test of sphericity indicated that the sphericity assumption was not violated for condition; however, it was violated for width (p < 0.01, ϵ = 0.358) and for distance (p < 0.01, ϵ = 0.212) with respect to time. Greenhouse-Geisser correction was applied to RM-ANOVA tests for width, distance, and interactions. RM-ANOVA indicates a main effect for distance (F1.790,26.851 = 53.591,p < 0.001,η2 = 0.781), width (F1.061,15.917 = 18.136,p < 0.01,η2 = 0.547) and feedback condition (F3,45 = 3.686,p < 0.05,η2 = 0.197) on time. There also exists significant interactions between all factors, with significantly higher time for small, distant targets. Distance and width effects are to be expected due to the increasing complexity of small distant targets versus of large close targets (i.e. Fitts’s Law). Figure 7 depicts time versus ID for each of the conditions in our study. Post-hoc analysis using Fisher’s LSD indicates that phone feedback with delay and watch feedback are slower than no feedback (p < 0.01), but do not differ from phone feedback without delay. Phone feedback without delay does not differ significantly from any other feedback condition. Phone feedback with delay and watch feedback do not differ significantly. Figure 7 depicts time versus ID for each of the conditions in our study. Considering errors, Mauchly’s test of sphericity indicated that the sphericity assumption was violated for width on errors (p < 0.05, ϵ = 0.344); Greenhouse-Geisser correction was applied. RM-ANOVA indicates a main effect for width (F1.720,25.799 = 18.136,p < 0.05,η2 = 0.966) and feedback condition (F1.999,29.983 = 5.975,p < 0.01,η2 = 0.285) on error rate (but not distance). Interactions are also significant, with higher error rate for small targets, an expected result. Figure 8 depicts the effect of feedback condition on error rate at each target width. Post-hoc analysis using Fisher’s LSD indicates that no feedback differs significantly from phone feedback with delay and watch feedback (p < 0.01). No feedback has higher error. However, phone and watch feedback do not"
+    }, {
+      "page": 5,
+      "region": {
+        "x1": 317.70599365234375,
+        "x2": 558.2063598632812,
+        "y1": 95.73056030273438,
+        "y2": 114.57000732421875
+      },
+      "text": "vary significantly from each other. Figure 8 depicts the effect of feedback condition on error rate at each target width."
+    }],
+    "title": {
+      "page": 5,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 111.46385192871094,
+        "y1": 248.6178741455078,
+        "y2": 255.04400634765625
+      },
+      "text": "5 RESULTS"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 5,
+      "region": {
+        "x1": 317.2380065917969,
+        "x2": 559.89013671875,
+        "y1": 147.41958618164062,
+        "y2": 285.8110046386719
+      },
+      "text": "Recall that after each condition was complete, we asked participants to complete the six category NASA Task Load Index [13]. According to Mauchly’s test of sphericity, the Mental Demand category violated sphericity (p < 0.05, ϵ = 0.622); Greenhouse-Geisser correction was applied. An RMANOVA analysis indicated that the Mental Demand category displayed significant results across conditions (F3,45 = 6.193,p < 0.01). Particularly a significantly higher mental demand was shown for the no feedback condition as opposed to the remaining three conditions. The remaining NASA TLX categories (Physical Demand, Temporal Demand, Performance, Frustration, Effort) [13] showed no significance."
+    }],
+    "title": {
+      "page": 5,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 420.8628234863281,
+        "y1": 132.93385314941406,
+        "y2": 139.3599853515625
+      },
+      "text": "NASA Task Load Index"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 5,
+      "region": {
+        "x1": 317.5870056152344,
+        "x2": 559.8923950195312,
+        "y1": 318.6595764160156,
+        "y2": 421.18499755859375
+      },
+      "text": "Finally, we examine user preference for techniques. Overall, when asked to rank techniques, 9 participants selected phone feedback as their preferred condition and 4 participants selected watch feedback. 14 out of 16 participants preferred receiving vibrotactile feedback over no feedback. The one participant who chose no feedback first noted: “I chose no feedback first because I was more frustrated when I got the incorrect result [when selecting very small targets] with feedback”."
+    }],
+    "title": {
+      "page": 5,
+      "region": {
+        "x1": 317.95501708984375,
+        "x2": 419.4183654785156,
+        "y1": 304.1738586425781,
+        "y2": 310.6000061035156
+      },
+      "text": "Participant Preference"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 5,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 558.2066650390625,
+        "y1": 454.0345764160156,
+        "y2": 472.8739929199219
+      },
+      "text": "Overall, a straightforward interpretation of these results is as follows:"
+    }, {
+      "page": 5,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 559.8922729492188,
+        "y1": 483.6691589355469,
+        "y2": 622.489013671875
+      },
+      "text": "• H1 posited that feedback would reduce targeting time. However, we find that targeting time increases in two feedback conditions (Phone with delay and watch) versus the no feedback condition. Despite the fact that this appears due to Bluetooth delay, because feedback conditions are never statistically faster than no feedback, H1 is not supported. • H2 posited that feedback would reduce errors. We find that feedback does reduce errors; therefore H2 is supported. • H3 posited that participants would prefer feedback over no feedback and phone feedback over watch feedback. Given our user preferences, we find that H3 is supported."
+    }, {
+      "page": 5,
+      "region": {
+        "x1": 317.5870056152344,
+        "x2": 559.8980102539062,
+        "y1": 633.7135620117188,
+        "y2": 712.3289794921875
+      },
+      "text": "In Fitts’s Law tasks, performance is a function of the speed accuracy trade-off. Specifically, hitting smaller targets requires higher accuracy; hence, interaction times are longer [21]. Furthermore, even within Fitts’s law tasks, a bias toward speed or accuracy can measurably impact performance [2, 21]. Examining the above hypotheses, the overall effect of feedback is to bias response [2]. Participants were slower"
+    }, {
+      "page": 5,
+      "region": {
+        "x1": 54.0,
+        "x2": 558.0009765625,
+        "y1": 750.914794921875,
+        "y2": 756.7197875976562
+      },
+      "text": "Paper 485 Page 6"
+    }, {
+      "page": 6,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 295.7389221191406,
+        "y1": 681.5335083007812,
+        "y2": 712.3289794921875
+      },
+      "text": "but more accurate when feedback guided them to more accurate target acquisition. The results suggest that feedback encourages slower, more precise movements."
+    }, {
+      "page": 6,
+      "region": {
+        "x1": 317.5865173339844,
+        "x2": 559.8980102539062,
+        "y1": 486.1305847167969,
+        "y2": 696.2529907226562
+      },
+      "text": "The larger research question that this paper explores, however, is whether smartwatch feedback can serve as a proxy for under finger-feedback, particularly in situations (projected or multi-user displays) when under-finger feedback is not available or inconvenient. Our results provide evidence that phone feedback and watch feedback have similar performance characteristics, in terms of time and error rate. This, in turn, argues that smartwatch feedback is an effective alternative to interaction location feedback. In particular, we find no significant difference between watch and phone with and without delay in time and error rate. In fact, qualitatively we note that, while watch feedback is slower on average than phone feedback, watch feedback also has the lowest error rate. The primary difference between under-finger feedback and smartwatch feedback appears to be Bluetooth delay, due to the similarity between under-finger feedback with delay and smartwatch feedback, but this delay does not result in significant differences in timing. Adding Bluetooth delay,"
+    }, {
+      "page": 6,
+      "region": {
+        "x1": 54.0,
+        "x2": 558.0009765625,
+        "y1": 750.914794921875,
+        "y2": 756.7197875976562
+      },
+      "text": "Paper 485 Page 7"
+    }, {
+      "page": 7,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 294.05438232421875,
+        "y1": 95.73056030273438,
+        "y2": 114.57000732421875
+      },
+      "text": "performance converges to virtually identical times for phone and watch."
+    }],
+    "title": {
+      "page": 5,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 393.0062255859375,
+        "y1": 439.5488586425781,
+        "y2": 445.9750061035156
+      },
+      "text": "6 DISCUSSION"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 7,
+      "region": {
+        "x1": 53.429779052734375,
+        "x2": 295.739990234375,
+        "y1": 155.49356079101562,
+        "y2": 329.75
+      },
+      "text": "One unexpected result from H1 is the observation that feedback slows targeting tasks. While this slowing may be due to Bluetooth delay, our expectation was that feedback would speed targeting. In this section, we will more carefully examine variations in user performance, particularly with respect to time and error, to fully clarify the effects of error and provide guidance for future research. To more fully probe the increased time associated with feedback conditions, we examine an interaction effect that exists between feedback condition and target width. Figure 9 shows time per condition per width. Here, we can clearly see the Bluetooth delay slowing interaction, with both phone with delay and smartwatch conditions taking more time than the phone condition without delay and the no feedback condition."
+    }, {
+      "page": 7,
+      "region": {
+        "x1": 53.429779052734375,
+        "x2": 295.7389221191406,
+        "y1": 526.1165161132812,
+        "y2": 712.3289794921875
+      },
+      "text": "In Figure 9, for target sizes of 2cm and 1cm, we see similar performance across conditions. This is because targeting can be verified visually, i.e. the target is visible during interaction. For target sizes of 6.3mm and 3.2mm, the phone condition without delay (red bar) versus the no Feedback condition (gray bar) remain identical in timing; the watch conditions and phone with delay conditions are also similar in time, but slightly delayed, a result of about 40ms of Bluetooth delay. Finally, for smaller targets of 1.9mm and 1.3mm, we see significantly slower performance for feedback conditions than for the no feedback condition. We can consider target sizes of 2cm, 1cm, 6.3mm, and 3.2mm to be typical target sizes in interfaces as they represent common widgets such as icons, buttons, and keyboards. Returning to Figure 7, we plot Fitts’s Law curves using these typical target sizes (down to 3.2mm). Table 10 shows the"
+    }, {
+      "page": 7,
+      "region": {
+        "x1": 317.95452880859375,
+        "x2": 559.8977661132812,
+        "y1": 95.73056030273438,
+        "y2": 162.3909912109375
+      },
+      "text": "Fitts’s parameters for each of these lines. Recall that feedback seemed to slow interaction. However, for typical target sizes – down to 3.2mm – it seems that feedback does not harm performance. Phone feedback without delay is virtually identical in time to no feedback. Its sole effect is to improve error rate, particularly for the 3.2mm target (see Figure 8)."
+    }, {
+      "page": 7,
+      "region": {
+        "x1": 317.5870056152344,
+        "x2": 559.8966674804688,
+        "y1": 275.0585632324219,
+        "y2": 712.3289794921875
+      },
+      "text": "The 1.9mm targets and 1.3mm targets are exceptional targets, i.e. small, very difficult targets, where there is very limited visual feedback. There is some question as to whether it is even reasonable to include these targets in a targeting experiment. Our rationale was to include them simply because we do see these targeting tasks in interfaces, particularly when resolution is high and displays are small or packed with widgets. Alongside email editing, mentioned earlier, if one uses a standard web interface on a smartphone or one uses a mobile remote desktop application, widgets are sized for pixels significantly different in scale to the tightly packed pixels on a typical phone screen. In these exceptional targeting tasks, the Fitts’s curves on Figure 7 are instructive. Recall that these curves omit these targets when drawing the best-fit line. We do this because of Figure 9, where we see performance vary with these targets, and also because of Figure 8, where we see very high error rates. In the No Feedback condition, Figure 7d, the 1.3mm and 1.9mm target times are all under the Fitts’s Law curve, whereas in every other condition they are all, without exception, over the curve. We see a similar effect in Figure 9: 3.2mm, 1.9mm, and 1.3mm targets have very similar times in the no feedback condition. Let us perform a simple mental experiment: assume that, all other things being equal, any average time versus ID point is normally distributed around the Fitts’s Law curve with its mean centred on the curve. This is standard Fitts’s Law behaviour [8]: For any given point in a best-fit line, there is a 50-50 chance that a randomly chosen point will be above the line or below the line, with its expected location centred on the line. What is the likelihood, as observed in Figure 7, that all points for 1.3mm and 1.9mm target points are below the line in Figure 7d (control condition) and all 1.3mm and 1.9mm target points are above the line in each experimental condition? The answer, if we perform a mathematical equivalent such that we assume over in experimental conditions is equivalent to under in the control condition, is exactly"
+    }, {
+      "page": 7,
+      "region": {
+        "x1": 54.0,
+        "x2": 558.0009765625,
+        "y1": 750.914794921875,
+        "y2": 756.7197875976562
+      },
+      "text": "Paper 485 Page 8"
+    }, {
+      "page": 8,
+      "region": {
+        "x1": 53.29999923706055,
+        "x2": 294.24444580078125,
+        "y1": 93.66436004638672,
+        "y2": 138.48101806640625
+      },
+      "text": "p = 1248 , or about 1 in 256 trillion. Clearly, it is reasonable to seek an alternative explanation – i.e. to explore whether something changes participants’ behaviour on small targets with feedback versus in the control condition."
+    }, {
+      "page": 8,
+      "region": {
+        "x1": 53.43000030517578,
+        "x2": 295.7420654296875,
+        "y1": 143.55154418945312,
+        "y2": 341.718994140625
+      },
+      "text": "One reasonable explanation, posited here as potential future work, is to ask the question what if, instead, behaviour were different when feedback was present and targeting was difficult? For example, if the user simply gave up, realizing the targeting task was too difficult, and did not even particularly try to acquire small targets for the control condition, then the speed accuracy condition in control would break down and all points would be below the Fitts’s line. If, in vibrotactile conditions, the user, instead, assumed that they could complete the difficult task, then they might feel around, subtly try to position their finger, then recognize that the task was extremely hard and that their error rate was high, but that interaction was still possible. Thus, again, Fitts’s law might partially break down, but in the opposite way: because of errors, the participants would be biased toward being more careful and points would exist above the line [35]."
+    }, {
+      "page": 8,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 295.7410888671875,
+        "y1": 346.7895812988281,
+        "y2": 712.3289794921875
+      },
+      "text": "An additional issue to explore is whether vibrotactile feedback is worthwhile at all for typical targeting tasks. If we examine Figure 8, one thing that is clear is that the effect of feedback on error rate is marginal for targets larger than 6.3mm in size. This is undoubtedly because visual feedback is sufficient to ensure contact with target, a result previously hypothesized by McAdam and Brewster [24]. However, does this mean that vibrotactile feedback, where the phone vibrates when buttons are pressed, is to be avoided? We would argue that it does not. While there is no temporal or error rate advantage to vibrotactile feedback for these conditions, there is also no penalty. Furthermore, it does provide the user with confidence, during interaction, that the button was acquired and pressed, potentially allowing them to go on to the next task without awaiting on-screen confirmation. Due to the density of on-screen widgets in feature-rich smartphone applications, and to its ability to provide non-visual confirmation, we feel there exists a value to feedback that extends beyond raw time and error-rate values. This paper focused primarily on one type of distal vibrotactile feedback, provided by a smartwatch worn on the nondominant hand during dominant-hand interaction. Clearly a myriad of other distal vibration devices can be conceptualized: users could hold their phone in their non-preferred handwhile interacting; users couldwear their smartwatch on their dominant hand such that the vibration would be closer to the locus of interaction; we could design custom jewelry such as a wristband, ring, earring, necklace, or even use a piece of clothing; the device could be in the user’s pocket instead of in their hand; we could build complex external hardware that would make the air vibrate at an arbitrary"
+    }, {
+      "page": 8,
+      "region": {
+        "x1": 317.70599365234375,
+        "x2": 559.8982543945312,
+        "y1": 95.73056030273438,
+        "y2": 293.89801025390625
+      },
+      "text": "location. While there is merit in testing many variants of vibrotactile feedback, evaluation of the efficacy of an everyday device, a smartwatch, worn in it’s typical fashion, to support vibrotactile feedback for dominant-hand touch interactions is a valuable and logical first step in the exploration of these alternatives with respect to time, error, and user preference. Alongside additional contact locations, another avenue of future work could explore distal vibrotactile feedback in multi-user scenarios. Multi-user scenarios are a strong motivational factor for distal feedback because, when multiple users interact with a single screen, it becomes challenging to vibrate only a portion of the screen under a single user’s finger. Furthermore, when multiple users – beyond two, for example – all interact simultaneously, the need, to selectively provide tailored feedback for a subset of users further exacerbates hardware design challenges. Extending our exploration to this multi-user interaction is a clear next step."
+    }],
+    "title": {
+      "page": 7,
+      "region": {
+        "x1": 53.279998779296875,
+        "x2": 283.4551696777344,
+        "y1": 129.05287170410156,
+        "y2": 147.43402099609375
+      },
+      "text": "Synthesis of Time and Errors: An Outline of Future Work"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 8,
+      "region": {
+        "x1": 317.656005859375,
+        "x2": 559.8978271484375,
+        "y1": 325.53558349609375,
+        "y2": 571.5230102539062
+      },
+      "text": "Current vibrotactile hardware, while effective in providing simple feedback, cannot typically handle multi-user scenarios nor projected display scenarios (particularly when the projected surface is an inanimate artifact such as a wall or an artificial surface as in augmented or virtual reality). In these situations, it makes sense to leverage other existing devices that can offer vibrotactile feedback. Smartwatches, in particular, seem well-positioned to support interaction; they are readily available, and, without repositioning or grasping, can immediately be used to interact with external computation such that vibrotactile feedback from the watch can be used as a proxy for under-finger feedback. Our experiment demonstrates that the effects of distal feedback provided by the smartwatch are virtually identical to interaction location feedback on the touchscreen – particularly once Bluetooth delay is incorporated into the feedback. These results – in particular, the fact that distal feedback reduces error rate compared to know feedback as effectively as under-finger feedback – demonstrate that distal vibrotactile feedback can be an effective proxy for interaction location feedback."
+    }],
+    "title": {
+      "page": 8,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 399.6416320800781,
+        "y1": 311.04986572265625,
+        "y2": 317.47601318359375
+      },
+      "text": "7 CONCLUSION"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 8,
+      "region": {
+        "x1": 317.656005859375,
+        "x2": 558.2149658203125,
+        "y1": 603.1615600585938,
+        "y2": 645.9110107421875
+      },
+      "text": "The researchers thank all participants in our studies. Funding for this research was provided by the Natural Science and Engineering Research Council of Canada’s Discovery Grants Program and by the region Hauts-de-France."
+    }],
+    "title": {
+      "page": 8,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 431.6228942871094,
+        "y1": 588.6758422851562,
+        "y2": 595.1019897460938
+      },
+      "text": "ACKNOWLEDGEMENTS"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 8,
+      "region": {
+        "x1": 321.6609802246094,
+        "x2": 559.5447387695312,
+        "y1": 676.9337158203125,
+        "y2": 682.4409790039062
+      },
+      "text": "[1] Teemu Tuomas Ahmaniemi and Vuokko Tuulikki Lantz. 2009. Aug-"
+    }, {
+      "page": 8,
+      "region": {
+        "x1": 335.0270080566406,
+        "x2": 559.4229736328125,
+        "y1": 686.896728515625,
+        "y2": 712.3289794921875
+      },
+      "text": "mented Reality Target Finding Based on Tactile Cues. In Proceedings of the 2009 International Conference on Multimodal Interfaces (ICMIMLMI ’09). ACM, New York, NY, USA, 335–342. https://doi.org/10."
+    }, {
+      "page": 8,
+      "region": {
+        "x1": 54.0,
+        "x2": 558.0009765625,
+        "y1": 750.914794921875,
+        "y2": 756.7197875976562
+      },
+      "text": "Paper 485 Page 9"
+    }, {
+      "page": 9,
+      "region": {
+        "x1": 57.503997802734375,
+        "x2": 294.3389892578125,
+        "y1": 97.10771942138672,
+        "y2": 112.5780029296875
+      },
+      "text": "1145/1647314.1647383 [2] EmoryAl-Imam and Edward Lank. 2006. Biasing Response in Fitts’ Law"
+    }, {
+      "page": 9,
+      "region": {
+        "x1": 53.797996520996094,
+        "x2": 295.3920593261719,
+        "y1": 117.03270721435547,
+        "y2": 710.3359985351562
+      },
+      "text": "Tasks. In CHI ’06 Extended Abstracts on Human Factors in Computing Systems (CHI EA ’06). ACM, New York, NY, USA, 460–465. https: //doi.org/10.1145/1125451.1125553 [3] Olivier Bau, Ivan Poupyrev, Ali Israr, and Chris Harrison. 2010. TeslaTouch: Electrovibration for Touch Surfaces. In Proceedings of the 23Nd Annual ACM Symposium on User Interface Software and Technology (UIST ’10). ACM, New York, NY, USA, 283–292. https://doi.org/10.1145/ 1866029.1866074 [4] Stephen Brewster, Faraz Chohan, and Lorna Brown. 2007. Tactile Feedback for Mobile Interactions. In Proceedings of the SIGCHI Conference on Human Factors in Computing Systems (CHI ’07). ACM, New York, NY, USA, 159–162. https://doi.org/10.1145/1240624.1240649 [5] William Buxton, Ralph Hill, and Peter Rowley. 1985. Issues and Techniques in Touch-sensitive Tablet Input. In Proceedings of the 12th Annual Conference on Computer Graphics and Interactive Techniques (SIGGRAPH ’85). ACM, New York, NY, USA, 215–224. https: //doi.org/10.1145/325334.325239 [6] Tom Carter, Sue Ann Seah, Benjamin Long, Bruce Drinkwater, and Sriram Subramanian. 2013. UltraHaptics: Multi-point Mid-air Haptic Feedback for Touch Surfaces. In Proceedings of the 26th Annual ACM Symposium on User Interface Software and Technology (UIST ’13). ACM, New York, NY, USA, 505–514. https://doi.org/10.1145/2501988.2502018 [7] Géry Casiez, Nicolas Roussel, Romuald Vanbelleghem, and Frédéric Giraud. 2011. Surfpad: Riding Towards Targets on a Squeeze Film Effect. In Proceedings of the SIGCHI Conference on Human Factors in Computing Systems (CHI ’11). ACM, New York, NY, USA, 2491–2500. https://doi.org/10.1145/1978942.1979307 [8] Olivier Chapuis, Renaud Blanch, and Michel Beaudouin-Lafon. 2007. Fitts’ Law in the Wild: A Field Study of Aimed Movements. Technical Report. https://hal.archives-ouvertes.fr/hal-00612026 LRI Technical Repport Number 1480, Univ. Paris-Sud, 11 pages. [9] Andy Cockburn and Stephen Brewster. 2005. Multimodal feedback for the acquisition of small targets. Ergonomics 48, 9 (2005), 1129–1150. [10] Clifton Forlines and Ravin Balakrishnan. 2008. Evaluating Tactile Feedback and Direct vs. Indirect Stylus Input in Pointing and Crossing Selection Tasks. In Proceedings of the SIGCHI Conference on Human Factors in Computing Systems (CHI ’08). ACM, New York, NY, USA, 1563–1572. https://doi.org/10.1145/1357054.1357299 [11] Euan Freeman, Stephen Brewster, and Vuokko Lantz. 2014. Tactile Feedback for Above-Device Gesture Interfaces: Adding Touch to Touchless Interactions. In Proceedings of the 16th International Conference on Multimodal Interaction (ICMI ’14). ACM, New York, NY, USA, 419–426. https://doi.org/10.1145/2663204.2663280 [12] Google and Open Handset Alliance. 2017. Android API Guide. (Feb 2017). https://developer.android.com/guide/index.html [13] Sandra G Hart and Lowell E Staveland. 1988. Development of NASATLX (Task Load Index): Results of empirical and theoretical research. In Advances in psychology. Vol. 52. Elsevier, 139–183. [14] Eve Hoggan, Stephen A. Brewster, and Jody Johnston. 2008. Investigating the Effectiveness of Tactile Feedback for Mobile Touchscreens. In Proceedings of the SIGCHI Conference on Human Factors in Computing Systems (CHI ’08). ACM, New York, NY, USA, 1573–1582. https://doi.org/10.1145/1357054.1357300 [15] Wolfgang Hürst, Nina Rosa, and Jean-Paul van Bommel. 2016. Vibrotactile Experiences for Augmented Reality. In Proceedings of the 2016 ACM on Multimedia Conference (MM ’16). ACM, New York, NY, USA, 744–745. https://doi.org/10.1145/2964284.2973830 [16] Oliver Beren Kaul and Michael Rohs. 2016. HapticHead: 3D Guidance and Target Acquisition Through a Vibrotactile Grid. In Proceedings of the 2016 CHI Conference Extended Abstracts on Human Factors in"
+    }, {
+      "page": 9,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 559.5447387695312,
+        "y1": 97.10771942138672,
+        "y2": 710.3359985351562
+      },
+      "text": "Computing Systems (CHI EA ’16). ACM, New York, NY, USA, 2533–2539. https://doi.org/10.1145/2851581.2892355 [17] Emilia Koskinen, Topi Kaaresoja, and Pauli Laitinen. 2008. Feel-good Touch: Finding the Most Pleasant Tactile Feedback for a Mobile Touch Screen Button. In Proceedings of the 10th International Conference on Multimodal Interfaces (ICMI ’08). ACM, New York, NY, USA, 297–304. https://doi.org/10.1145/1452392.1452453 [18] Laurens R. Krol, Dzmitry Aliakseyeu, and Sriram Subramanian. 2009. Haptic Feedback in Remote Pointing. In CHI ’09 Extended Abstracts on Human Factors in Computing Systems (CHI EA ’09). ACM, New York, NY, USA, 3763–3768. https://doi.org/10.1145/1520340.1520568 [19] Johnny C. Lee, Paul H. Dietz, Darren Leigh, William S. Yerazunis, and Scott E. Hudson. 2004. Haptic Pen: A Tactile Feedback Stylus for Touch Screens. In Proceedings of the 17th Annual ACM Symposium on User Interface Software and Technology (UIST ’04). ACM, New York, NY, USA, 291–294. https://doi.org/10.1145/1029632.1029682 [20] Vincent Levesque, Louise Oram, Karon MacLean, Andy Cockburn, Nicholas D. Marchuk, Dan Johnson, J. Edward Colgate, and Michael A. Peshkin. 2011. Enhancing Physicality in Touch Interaction with Programmable Friction. In Proceedings of the SIGCHI Conference on Human Factors in Computing Systems (CHI ’11). ACM, New York, NY, USA, 2481–2490. https://doi.org/10.1145/1978942.1979306 [21] I. Scott MacKenzie. 1989. A Note on the Information-Theoretic Basis for Fitts’ Law. Journal of Motor Behavior 21, 3 (1989), 323–330. https: //doi.org/10.1080/00222895.1989.10735486 PMID: 15136269. [22] Tomosuke Maeda, Roshan Peiris, Nakatani Masashi, Yoshihiro Tanaka, and Kouta Minamizawa. 2016. HapticAid: Wearable Haptic Augmentation System for Enhanced, Enchanted and Empathised Haptic Experiences. In SIGGRAPH ASIA 2016 Emerging Technologies (SA ’16). ACM, New York, NY, USA, Article 4, 2 pages. https://doi.org/10.1145/ 2988240.2988253 [23] Tomosuke Maeda, Roshan Peiris, Masashi Nakatani, Yoshihiro Tanaka, and Kouta Minamizawa. 2016. Wearable Haptic Augmentation System Using Skin Vibration Sensor. In Proceedings of the 2016 Virtual Reality International Conference (VRIC ’16). ACM, New York, NY, USA, Article 25, 4 pages. https://doi.org/10.1145/2927929.2927946 [24] Christopher McAdam and Stephen Brewster. 2009. Distal Tactile Feedback for Text Entry on Tabletop Computers. In Proceedings of the 23rd British HCI Group Annual Conference on People and Computers: Celebrating People and Technology (BCS-HCI ’09). British Computer Society, Swinton, UK, UK, 504–511. http://dl.acm.org/citation.cfm?id= 1671011.1671076 [25] Christopher McAdam and Stephen Brewster. 2011. Mobile Phones As a Tactile Display for Tabletop Typing. In Proceedings of the ACM International Conference on Interactive Tabletops and Surfaces (ITS ’11). ACM, New York, NY, USA, 276–277. https://doi.org/10.1145/2076354. 2076413 [26] Yasuaki Monnai, Keisuke Hasegawa, Masahiro Fujiwara, Kazuma Yoshino, Seki Inoue, and Hiroyuki Shinoda. 2014. HaptoMime: Midair Haptic Interaction with a Floating Virtual Screen. In Proceedings of the 27th Annual ACM Symposium on User Interface Software and Technology (UIST ’14). ACM, New York, NY, USA, 663–667. https: //doi.org/10.1145/2642918.2647407 [27] Andrew Nashel and Sharif Razzaque. 2003. Tactile Virtual Buttons for Mobile Devices. In CHI ’03 Extended Abstracts on Human Factors in Computing Systems (CHI EA ’03). ACM, New York, NY, USA, 854–855. https://doi.org/10.1145/765891.766032 [28] Gunhyuk Park, Seungmoon Choi, Kyunghun Hwang, Sunwook Kim, Jaecheon Sa, and Moonchae Joung. 2011. Tactile Effect Design and Evaluation for Virtual Buttons on a Mobile Device Touchscreen. In Proceedings of the 13th International Conference on Human Computer Interaction with Mobile Devices and Services (MobileHCI ’11). ACM, New"
+    }, {
+      "page": 9,
+      "region": {
+        "x1": 54.0,
+        "x2": 558.001953125,
+        "y1": 750.914794921875,
+        "y2": 756.7197875976562
+      },
+      "text": "Paper 485 Page 10"
+    }, {
+      "page": 10,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 294.1927185058594,
+        "y1": 97.10771942138672,
+        "y2": 112.5780029296875
+      },
+      "text": "York, NY, USA, 11–20. https://doi.org/10.1145/2037373.2037376 [29] Ivan Poupyrev and Shigeaki Maruyama. 2003. Tactile Interfaces for"
+    }, {
+      "page": 10,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 295.3876953125,
+        "y1": 117.03270721435547,
+        "y2": 291.9049987792969
+      },
+      "text": "Small Touch Screens. In Proceedings of the 16th Annual ACM Symposium on User Interface Software and Technology (UIST ’03). ACM, New York, NY, USA, 217–220. https://doi.org/10.1145/964696.964721 [30] Hendrik Richter, Sebastian Loehmann, Florian Weinhart, and Andreas Butz. 2012. Comparing direct and remote tactile feedback on interactive surfaces. In International Conference on Human Haptic Sensing and Touch Enabled Computer Applications. Springer, 301–313. [31] Andrew Sears and Ben Shneiderman. 1991. High Precision Touchscreens: Design Strategies and Comparisons with a Mouse. Int. J. Man-Mach. Stud. 34, 4 (April 1991), 593–613. https://doi.org/10.1016/ 0020-7373(91)90037-8 [32] Shaishav Siddhpuria, Sylvain Malacria, Mathieu Nancel, and Edward Lank. 2018. Pointing at a Distance with Everyday Smart Devices. In Proceedings of the 2018 CHI Conference on Human Factors in Computing Systems (CHI ’18). ACM, New York, NY, USA, Article 173, 11 pages. https://doi.org/10.1145/3173574.3173747 [33] R William Soukoreff and I Scott MacKenzie. 2004. Towards a standard for pointing device evaluation, perspectives on 27 years of Fitts’ law"
+    }, {
+      "page": 10,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 559.5492553710938,
+        "y1": 97.10771942138672,
+        "y2": 271.97998046875
+      },
+      "text": "research in HCI. International journal of human-computer studies 61, 6 (2004), 751–789. [34] Y. Tanaka, T. Nagai, M. Sakaguchi, M. Fujiwara, and A. Sano. 2013. Tactile sensing system including bidirectionality and enhancement of haptic perception by tactile feedback to distant part. In 2013 World Haptics Conference (WHC). 145–150. https://doi.org/10.1109/WHC. 2013.6548399 [35] Shumin Zhai, Jing Kong, and Xiangshi Ren. 2004. Speed-accuracy tradeoff in Fitts’ law tasks on the equivalency of actual and nominal pointing precision. International Journal of Human-Computer Studies 61, 6 (2004), 823 – 856. https://doi.org/10.1016/j.ijhcs.2004.09.007 Fitts’ law 50 years later: applications and contributions from humancomputer interaction. [36] Yang Zhang and Chris Harrison. 2015. Quantifying the Targeting Performance Benefit of Electrostatic Haptic Feedback on Touchscreens. In Proceedings of the 2015 International Conference on Interactive Tabletops & Surfaces (ITS ’15). ACM, New York, NY, USA, 43–46. https://doi.org/10.1145/2817721.2817730"
+    }, {
+      "page": 10,
+      "region": {
+        "x1": 54.0,
+        "x2": 558.001953125,
+        "y1": 750.914794921875,
+        "y2": 756.7197875976562
+      },
+      "text": "Paper 485 Page 11"
+    }],
+    "title": {
+      "page": 8,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 380.7218933105469,
+        "y1": 663.0628662109375,
+        "y2": 669.489013671875
+      },
+      "text": "REFERENCES"
+    }
+  }]
+}

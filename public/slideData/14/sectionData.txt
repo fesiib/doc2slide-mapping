@@ -1,0 +1,118 @@
+CCS CONCEPTS
+KEYWORDS
+ACM Reference Format:
+ACM Reference Format:
+ACM Reference Format:
+1 INTRODUCTION
+1 INTRODUCTION
+1 INTRODUCTION
+1 INTRODUCTION
+1 INTRODUCTION
+1 INTRODUCTION
+1 INTRODUCTION
+1 INTRODUCTION
+1 INTRODUCTION
+1 INTRODUCTION
+2 RELATEDWORK
+Localized tactile feedback
+Localized tactile feedback
+Localized tactile feedback
+Peripheral haptic devices
+Peripheral haptic devices
+Peripheral haptic devices
+Peripheral haptic devices
+Peripheral haptic devices
+Peripheral haptic devices
+Peripheral haptic devices
+Peripheral haptic devices
+3 DESIGN SPACE
+3 DESIGN SPACE
+Dimensions
+Dimensions
+Dimensions
+Dimensions
+Dimensions
+Dimensions
+Dimensions
+Dimensions
+Dimensions
+4 HARDWARE
+Prototype evaluation
+Prototype evaluation
+5 EXPERIMENT
+Method, procedures and tasks
+Method, procedures and tasks
+Method, procedures and tasks
+Method, procedures and tasks
+Method, procedures and tasks
+Method, procedures and tasks
+Method, procedures and tasks
+Method, procedures and tasks
+Method, procedures and tasks
+Method, procedures and tasks
+Method, procedures and tasks
+6 RESULTS
+Angle
+Angle
+Touch resolution
+Touch resolution
+Touch resolution
+Touch resolution
+Touch resolution
+Touch resolution
+Touch resolution
+Touch resolution
+Touch resolution
+Touch resolution
+Touch resolution
+Touch resolution
+Touch resolution
+Touch resolution
+Touch resolution
+Touch resolution
+Touch resolution
+Touch resolution
+Touch resolution
+Touch resolution
+Touch resolution
+Touch resolution
+Touch resolution
+Touch resolution
+Touch resolution
+Touch resolution
+Size
+Speed
+Strength
+Strength
+Strength
+Strength
+Comfort
+Comfort
+Comfort
+Interview
+Interview
+Interview
+Interview
+7 DISCUSSION
+7 DISCUSSION
+7 DISCUSSION
+Use case scenarios
+Use case scenarios
+Use case scenarios
+Limitations and future work
+Limitations and future work
+Limitations and future work
+Limitations and future work
+Limitations and future work
+8 CONCLUSION
+9 ACKNOWLEDGMENT
+REFERENCES
+REFERENCES
+REFERENCES
+REFERENCES
+REFERENCES
+REFERENCES
+REFERENCES
+REFERENCES
+REFERENCES
+REFERENCES

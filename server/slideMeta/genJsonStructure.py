@@ -31,6 +31,9 @@ paperData = readFile("slideImages/paperData.txt")
 sectionData = readFile("slideImages/sectionData.txt")
 scriptData = readFile("slideImages/scriptData.txt")
 
+print(len(paperData))
+print(len(sectionData))
+
 while True :
     line = timestamp.readline()
     if not line :
@@ -61,6 +64,8 @@ for i in range(len(timestampData)) :
 
         if len(res) > 0 :
             ocrResult[-1] = ocrResult[-1] + ' ' + res
+
+print(ocrResult)
 
 interval = 3
 
@@ -127,6 +132,8 @@ for i in range(len(overall)) :
         else :
             v.append(sectionData[args[j]])
 
+    print(i)
+    print(v)
     topSections.append(v)
 
 Table = [ [ 0 for j in range(len(__scriptData))] for i in range(len(__scriptData)) ]
@@ -197,6 +204,8 @@ for i in range(len(Table)) :
         myMaxValue = Table[i][len(__scriptData)-1][2]
         myMaxIndex = i
 
+print(myMaxIndex, myMaxValue)
+
 finalResult = [ '' for i in range(len(__scriptData)) ]
 
 cur = myMaxIndex
@@ -238,6 +247,8 @@ for i in range(1, len(finalResult)) :
     else :
         outline[-1]['endSlideIndex'] = i
 
+print(outline)
+
 for i in range(len(timestampData)) :
     result['slideInfo'].append({
         "index": i,
@@ -248,15 +259,6 @@ for i in range(len(timestampData)) :
     })
 
 result['outline'] = outline
-result['topSections'] = topSections
-result['weight'] = weight
-
-for i in range(len(overall)):
-    for j in range(len(overall[i])):
-        if isinstance(overall[i][j], numpy.float32):
-            overall[i][j] = numpy.float64(overall[i][j])
-
-result["similarityTable"] = overall
 
 jsonFile = open("slideImages/result.json", "w")
 jsonFile.write(json.dumps(result))

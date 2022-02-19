@@ -1,0 +1,1318 @@
+{
+  "abstractText": {
+    "page": 0,
+    "region": {
+      "x1": 53.43000030517578,
+      "x2": 295.7410583496094,
+      "y1": 447.7818298339844,
+      "y2": 576.7490234375
+    },
+    "text": "ABSTRACT Around-device interaction methods expand the available interaction space for mobile devices; however, there is currently no way to simultaneously track a user’s input and provide haptic feedback at the tracked point away from the device. We present Magnetips, a simple, mobile solution for around-device tracking and mid-air haptic feedback. Magnetips combines magnetic tracking and electromagnetic feedback that works regardless of visual occlusion, through most common materials, and at a size that allows for integration with mobile devices. We demonstrate: (1) high-frequency"
+  },
+  "figures": [{
+    "caption": "Figure 6: Perceived strength of feedback for: a) All combinations of Duration and Pulse Length, b) Duration, c) Pulse Length.",
+    "captionBoundary": {
+      "x1": 54.58300018310547,
+      "x2": 557.3961791992188,
+      "y1": 214.00735473632812,
+      "y2": 219.64697265625
+    },
+    "figType": "Figure",
+    "imageText": ["Pulse", "Length", "is", "indicated", "on", "each", "bar", "Signal", "Duration:", "2", "2", "4", "6", "3", "12", "2", "6", "3", "4", "2", "ke", "r", "W", "ea", "d", "as", "ei", "ve", "Pe", "rc", "ng", "er", "S", "tro", "d", "as", "ei", "ve", "Pe", "rc", "ei", "ve", "d", "St", "re", "ng", "th", "Pe", "rc", "ag", "e", "Av", "er", "a)", "Perceived", "Strength", "of", "all", "Duration", "/", "Pulse", "Length", "Combinations", "b)", "Effect", "of", "Duration", "on", "Perceived", "Strength", "c)", "Effect", "of", "Pulse", "Length", "on", "Perceived", "Strength", "(log", "Scale)", "Error", "Bars", "indicate", "95%", "Confidence", "Interval", "Mean", "99.7", "%", "Confidence", "Interval", "95", "%", "Confidence", "Interval", "68", "%", "Confidence", "Interval", "Mean", "99.7", "%", "Confidence", "Interval", "95", "%", "Confidence", "Interval", "68", "%", "Confidence", "Interval", "2", "ms", "4", "ms", "6", "ms", "12", "ms", "12", "ms", "6", "ms", "4", "ms", "2", "ms", "12", "ms", "(~", "83", "Hz)", "6", "ms", "(~", "166", "Hz)", "3", "ms", "(~", "333", "Hz)", "4", "ms", "(250", "Hz)", "2", "ms", "(500", "Hz)"],
+    "name": "6",
+    "page": 6,
+    "regionBoundary": {
+      "x1": 63.534751892089844,
+      "x2": 559.0,
+      "y1": 95.46818542480469,
+      "y2": 199.41455078125
+    }
+  }, {
+    "caption": "Figure 7: a) Perceived Strength of Feedback sorted by distance to centre. b) Strength of Haptic Feedback as rated by participants. c) The magnitude of the magnetic field as measured with a magnetometer",
+    "captionBoundary": {
+      "x1": 53.79800033569336,
+      "x2": 559.7133178710938,
+      "y1": 222.38235473632812,
+      "y2": 238.98095703125
+    },
+    "figType": "Figure",
+    "imageText": ["z", "=", "0", "mm", "y", "x", "y", "x", "y", "x", "y", "x", "coil", "b)", "Perceived", "Strength", "of", "Haptic", "Feedback", "z", "=", "40", "mm", "z", "=", "60", "mm", "z", "=", "20", "mm", "coil", "z", "=", "0", "mm", "x", "xx", "x", "z", "=", "40", "mm", "z", "=", "60", "mm", "c)", "Magnitude", "of", "Magnetic", "Field", "z", "=", "20", "mm", "y", "=", "1/x3", "(Magnetic", "Field", "Strength", "as", "a", "function", "of", "Distance)", "a)", "Perceived", "Strength", "by", "Distance", "from", "Centre", "(in", "mm)", "50th", "Percentile", "Weakest", "Strongest", "20", "28", "4035", "45", "49", "57", "60", "63", "66", "69", "7275", "82", "85", "87", "94", "104", "ke", "r", "W", "ea", "d", "as", "ei", "ve", "Pe", "rc", "ng", "er", "S", "tro", "d", "as", "ei", "ve", "Pe", "rc", "ei", "ve", "d", "St", "re", "ng", "th", "Pe", "rc", "ag", "e", "Av", "er", "Mean", "99.7", "%", "Confidence", "Interval", "95", "%", "Confidence", "Interval", "68", "%", "Confidence", "Interval"],
+    "name": "7",
+    "page": 7,
+    "regionBoundary": {
+      "x1": 65.4430160522461,
+      "x2": 555.8040771484375,
+      "y1": 94.61507415771484,
+      "y2": 204.73138427734375
+    }
+  }, {
+    "caption": "Table 1: The average errors accumulated over the duration of data sampling in mm. Geomagnetism cancellation abbreviated to GC. *Relative to the sensor base.",
+    "captionBoundary": {
+      "x1": 317.65899658203125,
+      "x2": 559.7949829101562,
+      "y1": 649.7764282226562,
+      "y2": 677.333984375
+    },
+    "figType": "Table",
+    "imageText": ["Length", "of", "cube", "(mm)", "GC", "Sensor", "base", "Magnet", "40", "60", "80", "N/A", "Static", "Moving", "3.001", "5.055", "6.686", "Off", "Moving", "Static*", "7.790", "On", "Moving", "Static*", "5.514", "Off", "Moving", "Moving", "4.408", "7.502", "9.095", "On", "Moving", "Moving", "4.354", "6.379", "7.510"],
+    "name": "1",
+    "page": 4,
+    "regionBoundary": {
+      "x1": 324.0,
+      "x2": 552.0,
+      "y1": 563.3311767578125,
+      "y2": 647.0
+    }
+  }],
+  "sections": [{
+    "paragraphs": [{
+      "page": 0,
+      "region": {
+        "x1": 53.24800109863281,
+        "x2": 294.1925354003906,
+        "y1": 595.5426025390625,
+        "y2": 712.3289794921875
+      },
+      "text": "Permission to make digital or hard copies of all or part of this work for personal or classroom use is granted without fee provided that copies are not made or distributed for profit or commercial advantage and that copies bear this notice and the full citation on the first page. Copyrights for components of this work owned by others than ACMmust be honored. Abstracting with credit is permitted. To copy otherwise, or republish, to post on servers or to redistribute to lists, requires prior specific permission and/or a fee. Request permissions from permissions@acm.org. CHI 2019, May 4–9, 2019, Glasgow, Scotland Uk © 2019 Association for Computing Machinery. ACM ISBN 978-1-4503-5970-2/19/05. . . $15.00 https://doi.org/10.1145/3290605.3300638"
+    }, {
+      "page": 0,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 559.8980102539062,
+        "y1": 447.7021789550781,
+        "y2": 525.93896484375
+      },
+      "text": "around-device tracking and haptic feedback; (2) the accuracy and range of our tracking solution which corrects for the effects of geomagnetism, necessary for enabling mobile use; and (3) guidelines for maximising strength of haptic feedback, given a desired tracking frequency. We present technical and usability evaluations of our prototype, and demonstrate four example applications of its use."
+    }]
+  }, {
+    "paragraphs": [{
+      "page": 0,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 555.836181640625,
+        "y1": 563.5331420898438,
+        "y2": 570.0390014648438
+      },
+      "text": "• Human-centered computing→ Interaction devices."
+    }],
+    "title": {
+      "page": 0,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 392.6675109863281,
+        "y1": 548.6688232421875,
+        "y2": 555.094970703125
+      },
+      "text": "CCS CONCEPTS"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 0,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 491.1419372558594,
+        "y1": 607.6341552734375,
+        "y2": 614.1400146484375
+      },
+      "text": "Haptics, Mobile, Around-Device, Magnetic"
+    }],
+    "title": {
+      "page": 0,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 375.5511169433594,
+        "y1": 592.7698364257812,
+        "y2": 599.1959838867188
+      },
+      "text": "KEYWORDS"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 0,
+      "region": {
+        "x1": 317.4079895019531,
+        "x2": 559.7030029296875,
+        "y1": 651.67919921875,
+        "y2": 712.3289794921875
+      },
+      "text": "Jess McIntosh, Paul Strohmeier, Jarrod Knibbe, Sebastian Boring, and Kasper Hornbæk. 2019. Magnetips: Combining Fingertip Tracking and Haptic Feedback for Around-Device Interaction. In CHI Conference on Human Factors in Computing Systems Proceedings (CHI 2019), May 4–9, 2019, Glasgow, Scotland Uk. ACM, New York, NY, USA, 12 pages. https://doi.org/10.1145/3290605.3300638"
+    }, {
+      "page": 0,
+      "region": {
+        "x1": 54.0,
+        "x2": 558.001953125,
+        "y1": 750.914794921875,
+        "y2": 756.7197875976562
+      },
+      "text": "Paper 408 Page 1"
+    }],
+    "title": {
+      "page": 0,
+      "region": {
+        "x1": 317.62298583984375,
+        "x2": 415.4867248535156,
+        "y1": 640.9354248046875,
+        "y2": 646.5750122070312
+      },
+      "text": "ACM Reference Format:"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 1,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 295.7283630371094,
+        "y1": 111.05318450927734,
+        "y2": 177.33502197265625
+      },
+      "text": "Research is exploring ways to extend interaction beyond the physical boundaries of our devices, through Around-Device Interaction (e.g., [5, 11, 19, 22, 29]). This interaction style is especially promising for mobile and wearable devices, as their small displays can limit the available space for interaction and suffer from fat-thumb occlusion [6]."
+    }, {
+      "page": 1,
+      "region": {
+        "x1": 53.43000030517578,
+        "x2": 295.7411804199219,
+        "y1": 182.7841339111328,
+        "y2": 404.4830017089844
+      },
+      "text": "Integrating these techniques with mobile devices presents a range of challenges. The tracking techniques, for example, variously suffer from occlusion (e.g,. [29]), provide only coarse or two-dimensional positions [14], or require specific lighting requirements [19]. The feedback techniques either require active instrumentation of the user (e.g., [28, 34]), only work in limited directions (e.g., [36]), or have yet to be demonstrated in mobile form factors (e.g., [28, 36]). We present Magnetips, a device that uses magnetism to enable tracking and haptic feedback for around-device interaction on mobile devices. This combination enables full 3D tracking and feedback above, around, and below the device, all within a small mobile form-factor. Magnetips is the first realisation of a combined technique for around mobile device interaction that works in any spatial direction and through visual occlusions. Magnetips presents the first example of passive magnetic tracking in 3D that accounts for the effects of the earth’s magnetic field; affording a truly mobile setup with greater accuracy than previously demonstrated."
+    }, {
+      "page": 1,
+      "region": {
+        "x1": 53.43000030517578,
+        "x2": 295.58734130859375,
+        "y1": 409.9321594238281,
+        "y2": 571.9649658203125
+      },
+      "text": "We describe (1) the implementation of Magnetips, (2) an evaluation of the tracking accuracy, both whilst the device is stationary and in motion, and (3) a psychophysics study of the user perception of the feedback, describing the signal parameters that generate the strongest haptic sensation, and the relationship between feedback strength and position. These evaluations show that the maximum perceivable range of feedback is 56.6mm (at which distance tracking error is 6̃.38mm when under motion), and the ideal parameters (when tracking below 83Hz) are 12ms signals consisting of 4ms pulses. This allows a tracking frequency of up to 83Hz, beyond the frequency of most displays. We show that with geomagnetism cancellation algorithm, we improve the tracking accuracy by 17.4% while the device is under motion."
+    }],
+    "title": {
+      "page": 1,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 146.90223693847656,
+        "y1": 96.18885803222656,
+        "y2": 102.614990234375
+      },
+      "text": "1 INTRODUCTION"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 1,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 295.7381896972656,
+        "y1": 610.18115234375,
+        "y2": 712.3289794921875
+      },
+      "text": "Magnetips is a device that combines tracking and haptic feedback for around-device interaction. Figure 1 shows our device, consisting of: a copper coil, four small magnetometers, an IMU, a motor driver, a power source, and a magnet on the fingernail. The magnet (10x10x1mm disc magnet) is adhered to the users’ fingernail. Magnetips can be integrated in a smart-phone case or snapped on to a smart-watch, to allow for retrofitting onto existing systems. We envision that the system may also be integrated within the device itself."
+    }, {
+      "page": 1,
+      "region": {
+        "x1": 317.5870056152344,
+        "x2": 559.8978881835938,
+        "y1": 96.1091537475586,
+        "y2": 485.1809997558594
+      },
+      "text": "As the user moves their finger around the device, the four magnetometers collect field strength readings and estimate the position of the magnet in 3D. To create haptic feedback, we generate a magnetic field through the coil and alternate the polarity in order to induce vibration of the magnet. To reduce the size and weight requirements of the device, we use a coil without a magnetic core. The high frequency of Magnetips allows feedback and tracking to be interleaved, whilst maintaining a high tracking rate (>60Hz, the tracking rate of most devices’ screens). Another benefit of a magnet-based approach is that the tracking and feedback is not challenged by occlusion. Magnetips works through materials (such as sleeves, pockets, and bags), electronics (through displays and internal device circuitry), and through the body. Magnetips also works in three dimensions around the device, supporting above, beside, and behind device interaction. We include an IMU to track the orientation of the device. This enables Magnetips to reduce the effect of geomagnetism and maintain accurate tracking in mobile scenarios. To our knowledge, this is the first work that uses the orientation of the device to compensate for errors when tracking a passive magnet in 3D. As a result of the benefits of magnetic tracking and feedback, Magnetips affords a range of novel application scenarios. It allows tracking in all directions around the device. This enables behind device control and feedback when interacting with a smartphone, for example. This can also enable onskin interaction and feedback beside the device. As magnetic input and output techniques are not effected by occlusion from most common materials, Magnetips affords eyes-free interaction through clothes. We discuss the technical implementation and example applications in detail later."
+    }],
+    "title": {
+      "page": 1,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 126.21908569335938,
+        "y1": 595.3168334960938,
+        "y2": 601.7429809570312
+      },
+      "text": "2 MAGNETIPS"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 1,
+      "region": {
+        "x1": 317.5865173339844,
+        "x2": 559.8944702148438,
+        "y1": 526.4951171875,
+        "y2": 712.3289794921875
+      },
+      "text": "There have been a variety of approaches to using the space around mobile devices for interaction. Capacitive sensing has been used to extend the input abilities of smartwatches [22] and extend the sensing area of smartphones to include the area above a phone [15]. Infrared (IR) depth-sensors have been used to track regions off the device, within a line of sight of the sensors [7, 19]. Similarly, computer vision based systems have been deployed in wearable technology [29]. Alternative approaches include using the skin as an interactive area [23] or physically extending the size of mobile devices, by, for example, extending the interaction space to a watch’s wristband [24, 31] or to integrate with clothing [26]. Recently, electric field sensing has enabled 3D interaction around mobile devices [20, 37]. Although there is much work on increasing the input space, there is little complementary work on providing haptic feedback at the tracked point."
+    }, {
+      "page": 1,
+      "region": {
+        "x1": 54.0,
+        "x2": 558.0020141601562,
+        "y1": 750.914794921875,
+        "y2": 756.7197875976562
+      },
+      "text": "Paper 408 Page 2"
+    }],
+    "title": {
+      "page": 1,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 411.9559326171875,
+        "y1": 511.630859375,
+        "y2": 518.0570068359375
+      },
+      "text": "3 RELATEDWORK"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 2,
+      "region": {
+        "x1": 53.499000549316406,
+        "x2": 295.73687744140625,
+        "y1": 111.05318450927734,
+        "y2": 189.28997802734375
+      },
+      "text": "The mobility and size constraints of wearables and smartphones present challenges when integrating a mid-air haptic feedback system. Vibration, the most common feedback modality in mobile devices, for example, requires surface contact. To be used for off-device feedback, a vibration motor needs to be worn by the user (e.g., [11]), which may impede natural hand interactions."
+    }, {
+      "page": 2,
+      "region": {
+        "x1": 53.43000030517578,
+        "x2": 295.7409973144531,
+        "y1": 194.73915100097656,
+        "y2": 320.7969970703125
+      },
+      "text": "Several mid-air haptic feedback approaches do not require active components to be worn on the hands. Ultrahaptics uses focused ultrasound to create haptic feedback in midair [8]. Jets of air [33] and air vortices [27] have also been explored. While these approaches work well for larger, stationary applications, they currently lack portability, which renders them unsuitable for integration with mobile devices. In addition, they require an un-occluded position on the surface of the device to function. In contrast, magnetism can work through materials such as glass, ceramics, plastics and non-ferromagnetic metals, as commonly used in devices."
+    }, {
+      "page": 2,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 294.3101806640625,
+        "y1": 326.2461853027344,
+        "y2": 368.61798095703125
+      },
+      "text": "Spelmezan et al. presented a method that provides haptic feedback using electrical arcs [28]. However, this technology has only been demonstrated to work close to the surface of the device, which enables hover interaction up to 4mm."
+    }, {
+      "page": 2,
+      "region": {
+        "x1": 53.43000030517578,
+        "x2": 295.5884704589844,
+        "y1": 374.0671691894531,
+        "y2": 476.2139892578125
+      },
+      "text": "Finally, in FingerFlux,Weiss et al. showed that by attaching a permanent magnet to the fingertip, attracting and repelling forces can be felt via electromagnets [35]. By using an array of electromagnets, positioned beneath a surface, Weiss et al. were able to guide a users’ finger during screen-based interaction. We build on this work and tailor it to a mobile solution. We replace the array of small electromagnets with a single large coil. This design allows us to reduce the size, weight and power requirements of the FingerFlux approach."
+    }, {
+      "page": 2,
+      "region": {
+        "x1": 53.429840087890625,
+        "x2": 294.05841064453125,
+        "y1": 481.6631774902344,
+        "y2": 547.9450073242188
+      },
+      "text": "A benefit of using a passive magnet haptic feedback is that we can simultaneously use magnetic approaches to track the users’ finger around the device. This tracking benefits from the same features as the haptic system: tracking in three dimensions and through materials. In the next section, we present the existing literature on magnetic tracking."
+    }],
+    "title": {
+      "page": 2,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 124.42571258544922,
+        "y1": 96.18885803222656,
+        "y2": 102.614990234375
+      },
+      "text": "Mid-air Haptics"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 2,
+      "region": {
+        "x1": 53.31962203979492,
+        "x2": 295.7352294921875,
+        "y1": 598.2261352539062,
+        "y2": 676.4630126953125
+      },
+      "text": "There is much work in the area of magnetic sensing for magnet position estimation. In Finexus [10], users wore electromagnets on their fingertips to enable accurate tracking. We instead envision a system that relies on only passive instrumentation of the user, affording a less obtrusive and untethered setup. Therefore, we will focus on passive magnet tracking."
+    }, {
+      "page": 2,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 295.7350158691406,
+        "y1": 681.912109375,
+        "y2": 712.3289794921875
+      },
+      "text": "Research has explored the use of both single magnetometers, for lightweight yet spatially-restricted tracking, and multiple magnetometers, for full 3D tracking."
+    }, {
+      "page": 2,
+      "region": {
+        "x1": 317.5870056152344,
+        "x2": 559.8980712890625,
+        "y1": 96.1091537475586,
+        "y2": 293.89801025390625
+      },
+      "text": "As an example of single magnetometer use, Ketabdar et al. explored gesture tracking around the device while the user wears/holds a permanent magnet [18]. They used the euclidean norm of the magnetic field strength in order to determine the magnets’ distance from the device. While this did not enable precise location tracking, it did support gesture recognition proximal to the device. In similar work, Ashbrook et al. [1] devised a ring with an embedded magnet, where rotations and translations of the ring could be used as an additional input modality. Radial movements around a device can also be sensed by a single magnetometer as Harrison and Hudson demonstrated in Abracadabra [14]. In a variation on the device-mounted magnetometer approach, Han et al. [13] instrumented the users’ wrist with two magnetometers, in order to support 2D mid-air handwriting. In uTrack, Chen et al. [9] demonstrated 3D tracking of magnets with as few as two magnetometers."
+    }, {
+      "page": 2,
+      "region": {
+        "x1": 317.5865173339844,
+        "x2": 559.8951416015625,
+        "y1": 299.34716796875,
+        "y2": 485.1809997558594
+      },
+      "text": "One of the challenges with using magnetometers to track magnets is the effect of the Earth’s magnetic field, which needs to be taken into account during calibration, yet changes with any change in sensor orientation [10]. This can result is significant declines in tracking accuracy as a magnet moves just a few centimeters away from the sensors [10]. There have been a number of approaches to dealing with this challenge, from restricting input to limited dimensions [13], using large magnets in close proximity to the sensors [9], to using advanced signal filtering with electromagnets [10]. We present another novel solution to this approach, by using an IMU (inertial measurement unit) in order to track changes in orientation, which can then be used to cancel the effects of geomagnetism. This allows us to maintain accurate tracking without any limit to interaction, without a strong magnet, and without the use of electromagnets."
+    }],
+    "title": {
+      "page": 2,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 138.8820343017578,
+        "y1": 583.3618774414062,
+        "y2": 589.7880249023438
+      },
+      "text": "Magnetic Tracking"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 2,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 558.21142578125,
+        "y1": 516.5331420898438,
+        "y2": 534.9940185546875
+      },
+      "text": "Magnetips consists of two elements, a tracking system and a haptics system. We will describe this in the following."
+    }],
+    "title": {
+      "page": 2,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 422.34735107421875,
+        "y1": 501.6688537597656,
+        "y2": 508.0950012207031
+      },
+      "text": "4 IMPLEMENTATION"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 2,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 559.8961791992188,
+        "y1": 566.3461303710938,
+        "y2": 680.447998046875
+      },
+      "text": "Tracking. We use four three-axis magnetometers (LIS3DML), placed in a rectangular arrangement. Figure 2 shows the arrangement of the sensors, and the exact placements of the sensor ICs within the board (32.5 x 26.7 mm rectangle, small enough to fit within the dimensions of an Apple watch series 3, see Figure 1). Additionally, we use an IMU (LSM6DS33) to track the orientation of the sensor board / device. The sensors are able to sample at a frequency of 1kHz. This high frequency allows us to multiplex the haptics with the tracking, and is one of the main reasons for choosing this sensor."
+    }, {
+      "page": 2,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 559.89111328125,
+        "y1": 693.8681640625,
+        "y2": 712.3289794921875
+      },
+      "text": "Haptics. We provide haptic feedback by creating electromagnetic pulse-bursts with a hand-wound coil. As we intended"
+    }, {
+      "page": 2,
+      "region": {
+        "x1": 54.0,
+        "x2": 558.001953125,
+        "y1": 750.914794921875,
+        "y2": 756.7197875976562
+      },
+      "text": "Paper 408 Page 3"
+    }, {
+      "page": 3,
+      "region": {
+        "x1": 53.52000045776367,
+        "x2": 294.0330505371094,
+        "y1": 226.76437377929688,
+        "y2": 243.36297607421875
+      },
+      "text": "Figure 2: The array of sensors consisting of 4magnetometers (red) and an accelerometer and gyroscope (blue)."
+    }, {
+      "page": 3,
+      "region": {
+        "x1": 53.43000030517578,
+        "x2": 294.0570373535156,
+        "y1": 266.9851989746094,
+        "y2": 345.22198486328125
+      },
+      "text": "to use this technology with mobile devices, using the coil without a magnetic core is important to reduce the weight and size of the device. The coil is 45 mm by 55 mm and has 38 windings of 0.5 mm enamelled copper wire. The coil is driven with a Pololu VNH5019 Motor Driver Carrier. Each burst consists of a single pulse or a series of pulses with varying frequencies."
+    }, {
+      "page": 3,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 294.05657958984375,
+        "y1": 357.1321716308594,
+        "y2": 399.50299072265625
+      },
+      "text": "Controller. Haptic feedback and sensors measurements are controlled by a Teensy 3.6. The measurements are sent to a desktop PC via serial communication, ready to be processed by a host application."
+    }, {
+      "page": 3,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 294.0544738769531,
+        "y1": 414.4818420410156,
+        "y2": 495.62799072265625
+      },
+      "text": "Software Tracking Algorithm. We use the same algorithm as Chen et al. in Finexus [10] to estimate the position of the magnet in 3D. This algorithm uses the magnetic field strength that each magnetometer is subject to, in order to estimate the distance between the magnet and each magnetometer by using the inverse cubic relationship of field strength to distance."
+    }, {
+      "page": 3,
+      "region": {
+        "x1": 53.499000549316406,
+        "x2": 295.7391357421875,
+        "y1": 507.5381774902344,
+        "y2": 633.5960083007812
+      },
+      "text": "Geomagnetism cancellation. The earth’s magnetic field produces a bias in the magnetometers readings. The field consists of an inclination (the deviation between true north and magnetic north), a declination (the angle between the magnetic field lines and the earth’s surface) and an intensity. These three components can be represented as transformation matrixM , which describes the rotation between a true north coordinate system and the earth’s magnetic coordinate system. The field is relatively constant throughout a small geographical region, say a city, and can be calculated based on latitude and longitude 1."
+    }, {
+      "page": 3,
+      "region": {
+        "x1": 53.65599822998047,
+        "x2": 295.59295654296875,
+        "y1": 639.045166015625,
+        "y2": 712.3289794921875
+      },
+      "text": "Geomagnetism, however, is a hindrance to the tracking of magnetic objects as it skews the readings of magnetometers. During interaction, the wrist of the user will move (even if slightly), thus altering the readings of the magnetometers. Simultaneously, the magnet’s effect on the sensors will also 1Magnetic Field Calculator: https://www.ngdc.noaa.gov/geomag-web/"
+    }, {
+      "page": 3,
+      "region": {
+        "x1": 317.47698974609375,
+        "x2": 559.8984375,
+        "y1": 96.1091537475586,
+        "y2": 281.9429931640625
+      },
+      "text": "be present. It then becomes challenging to know how much signal change can be attributed to movement of the magnet or movement of the device. Our algorithm is one of the ways to overcome this challenge. To begin with, the sensor’s orientation (in world coordinates) has to be known. Yet, a magnetometer by itself cannot estimate the orientation of a device with 3 DoF (degrees of freedom) accurately. In the same way, an accelerometer cannot track the orientation with 3 DoF without drifting around the axis of gravity. A gyroscope can also be fused with the existing data, in order to give a more responsive estimation. Each of these sensors has 3 axes, for a total of 9 axes. A system that performs such an orientation estimation is called an attitude and heading reference system (AHRS). We implementMadgwick’s AHRS to get accurate estimations of the orientation in 3 DoF."
+    }, {
+      "page": 3,
+      "region": {
+        "x1": 317.656005859375,
+        "x2": 559.8958740234375,
+        "y1": 287.3921813964844,
+        "y2": 473.2250061035156
+      },
+      "text": "However, in the presence of a magnet, 9-axis AHRS cannot be used due to the magnet’s influence on the magnetometer. Fortunately, 6-axis AHRS can be used which uses only the accelerometer and gyro [21], which is sufficient for short interaction times. Over time, however, there will be accumulated drift due to the absence of magnetometer data. This minor accumulated drift can be corrected for after the magnet is taken away when the interaction is complete. The system also needs to know when to switch from 9-axis to 6-axis AHRS. We implement this detection with a simple threshold on the difference between the magnitude of the earths magnetic field vector and the current measurements. The AHRS is likely to have been given some biased magnetometer data shortly before reaching this threshold. To avoid this issue, we store the IMU data into a buffer, then recalculate the 6-axis AHRS from the past second of data."
+    }, {
+      "page": 3,
+      "region": {
+        "x1": 317.8059997558594,
+        "x2": 559.8906860351562,
+        "y1": 478.6751708984375,
+        "y2": 628.6430053710938
+      },
+      "text": "The key to our geomagnetism cancellation algorithm is to reverse the AHRS process in order to estimate magnetometer data from the orientation data. That is, given an absolute orientation of the device, we can calculate the expected magnetometer readings (using the local earth’s magnetic field components, represented as transformationM and intensity IM ) for each axis of the magnetometers. We do this as follows for each magnetometer: first, we calculate the representation of a magnetometer’s axes (as vectors) in the earth’s magnetic coordinate system using the earth’s magnetic field transform M , the intensity IM and the sensor orientation SR . Second, we project these transformed vectors onto the earth’s magnetic field vector (the x-axis ofM). The calculations are:"
+    }, {
+      "page": 3,
+      "region": {
+        "x1": 364.677978515625,
+        "x2": 509.6317138671875,
+        "y1": 642.9286499023438,
+        "y2": 679.718994140625
+      },
+      "text": "ISx = M −1 · SR · (1, 0, 0)T · (IM , 0, 0)T ISy = M −1 · SR · (0, 1, 0)T · (IM , 0, 0)T ISz = M −1 · SR · (0, 0, 1)T · (IM , 0, 0)T"
+    }, {
+      "page": 3,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 558.2091064453125,
+        "y1": 693.0611572265625,
+        "y2": 712.3289794921875
+      },
+      "text": "Resulting values fall into [−IM ,+IM ]. For example, if the x-axis of a magnetometer is properly aligned with the earth’s"
+    }, {
+      "page": 3,
+      "region": {
+        "x1": 54.0,
+        "x2": 558.001953125,
+        "y1": 750.914794921875,
+        "y2": 756.7197875976562
+      },
+      "text": "Paper 408 Page 4"
+    }, {
+      "page": 4,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 294.03289794921875,
+        "y1": 231.12539672851562,
+        "y2": 247.7239990234375
+      },
+      "text": "Figure 3: A setup of how the magnet and sensor board was tracked using OptiTrack."
+    }, {
+      "page": 4,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 295.7281494140625,
+        "y1": 269.4391784667969,
+        "y2": 323.7659912109375
+      },
+      "text": "magnetic field, it will have the full intensity, while both the yaxis and z-axis will read 0. The actual magnetometer readings are then corrected using the expected readings ISx,y,z . In an ideal case (i.e., no magnetic object being present near the sensor), the corrected readings would be 0 on all axes."
+    }],
+    "title": {
+      "page": 2,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 363.1072692871094,
+        "y1": 551.4818115234375,
+        "y2": 557.907958984375
+      },
+      "text": "Hardware"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 4,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 295.73663330078125,
+        "y1": 353.1321716308594,
+        "y2": 431.3689880371094
+      },
+      "text": "Next, we evaluate the accuracy of our tracking solution. Importantly, we demonstrate the effectiveness of our novel geomagnetism cancellation, showing an improvement of 17.4% tracking accuracy when the device is under motion. We also show how the magnetic field produced by our haptics system might interfere, and show that the minimum delay needed before and after producing a haptic signal is 2ms."
+    }],
+    "title": {
+      "page": 4,
+      "region": {
+        "x1": 53.79798889160156,
+        "x2": 185.2000732421875,
+        "y1": 338.2678527832031,
+        "y2": 344.6940002441406
+      },
+      "text": "5 TRACKING EVALUATION"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 4,
+      "region": {
+        "x1": 53.31999969482422,
+        "x2": 295.73797607421875,
+        "y1": 460.73516845703125,
+        "y2": 682.4340209960938
+      },
+      "text": "Static sensors. We tested the tracking accuracy by first keeping the sensor board static and moving the magnet in a 3D volume, centred around the sensors. For this condition, we calibrated the geomagnetism before measuring the data. As the sensor base is static, our geomagnetism cancellation algorithm does not provide any further benefits. In each of these tests, Magnetips was placed on a table. The magnet was attached to retro-reflective markers for optical tracking. We moved the magnet-marker in an 80 × 80 × 80 mm volume and tracked its position with both Magnetips and OptiTrack, where OptiTrack provided the ground truth for this data (Figure 3). Our results are shown in table 1. We present these results with varying volume sizes. The error is calculated by the euclidean distance between the OptiTrack position and the Magnetips position (mm) for each frame of the data. The error for each frame is then averaged. The magnetometer data sampling rate was set to 1KHz, with ±8 gauss sensitivity. The results show that there is an approximately linear increase in error from the 40 mm to the 80 mm cube lengths."
+    }, {
+      "page": 4,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 294.0541687011719,
+        "y1": 693.8681640625,
+        "y2": 712.3289794921875
+      },
+      "text": "Moving sensors. The previous results, however, show the upper bound of tracking accuracy where the sensing base"
+    }, {
+      "page": 4,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 558.1901245117188,
+        "y1": 233.11935424804688,
+        "y2": 249.71697998046875
+      },
+      "text": "Figure 4: A plot of the average magnetometer errors vs the time since a haptic pulse had ended."
+    }, {
+      "page": 4,
+      "region": {
+        "x1": 317.656005859375,
+        "x2": 559.89794921875,
+        "y1": 281.8011779785156,
+        "y2": 539.365966796875
+      },
+      "text": "is not moving and therefore the geomagnetism is constant. Therefore, we conducted two further tests. Firstly, we fixed the magnet at a known position away from the sensor board, using the green cage shown in figure 3 (in the middle indentation). We then recorded the data whilst moving and tilting the sensor board and magnet. In this test, the previously used algorithm performs poorly and results in an average error of 7.790 mm. After using our geomagnetism cancellation technique based on the AHRS, our findings show an average error of 5.514 mm (see table 1 for comparisons between geomagnetism cancellation on and off). This is an accuracy improvement of 2.276 mm, for a magnet position fixed at 5cm above the sensor base. Then finally, to simulate a more realistic scenario, we moved the base and the magnet simultaneously. Again, with our geomagnetism cancellation we observed reductions in the tracking error in each of the conditions. The mitigation technique seems to have a greater effect with a larger volume, probably due to the fact that the earths magnetic field has a stronger effect relative to the effect of the magnet when further away. In the largest volume, we see a decrease in the error of the tracking by 1.585 mm."
+    }, {
+      "page": 4,
+      "region": {
+        "x1": 54.0,
+        "x2": 558.001953125,
+        "y1": 750.914794921875,
+        "y2": 756.7197875976562
+      },
+      "text": "Paper 408 Page 5"
+    }],
+    "title": {
+      "page": 4,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 138.16468811035156,
+        "y1": 445.870849609375,
+        "y2": 452.2969970703125
+      },
+      "text": "Tracking Accuracy"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 5,
+      "region": {
+        "x1": 53.31999969482422,
+        "x2": 295.73583984375,
+        "y1": 111.05318450927734,
+        "y2": 320.7969970703125
+      },
+      "text": "The haptics system we use inevitably interferes with the magnetometer readings without careful timing. We investigated whether there is a lasting effect from the coil after the controller turns off power to it, or whether the latency of the reading is an issue. Indeed, we found that if we begin to sample data just afterwards, there is some error in the readings as shown in Figure 4. The error in this graph represents the average error from the earths magnetic field on a logarithmic scale. The interference stops after a 2ms delay, but it is very large and unpredictable before this. Due to a lack of control over timing with the hardware (continuous 1KHz sampling), we also added a 2ms delay after reading and before sending a haptic signal. With bespoke hardware to improve the timing of the sampling, these delays can be reduced significantly. In total, there must be a 4ms delay added onto the sampling period. This limits the sampling frequency of the tracking if haptic pulses are to be used often during the interactions. We discuss the implications of this in the next section."
+    }],
+    "title": {
+      "page": 5,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 217.31077575683594,
+        "y1": 96.18885803222656,
+        "y2": 102.614990234375
+      },
+      "text": "Multiplexing Tracking With Haptics"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 5,
+      "region": {
+        "x1": 53.31999969482422,
+        "x2": 295.7376403808594,
+        "y1": 351.1761779785156,
+        "y2": 477.2340087890625
+      },
+      "text": "We conducted a series of evaluations to demonstrate haptic feedback properties. Tracking accuracy can simply be measured, but the experience of haptic feedback is subjective and not as easy to quantify. Therefore, we spend more time on the feedback evaluation than on the tracking, though both parts are equally important for Magnetips. Although there is past work that explores vibrational feedback with similar parameters using conventional vibrotactile stimulation, there are a number of factors which could influence the transfer from signal frequency to experienced vibration. The main two factors include: the location of the"
+    }, {
+      "page": 5,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 294.0329895019531,
+        "y1": 670.5244140625,
+        "y2": 709.041015625
+      },
+      "text": "Figure 5: In both experiments, the participants finger was fixed in a single position. Top left shows the setup for the first experiment. Towards the bottom, the apparatus can be seen for moving the coil for the second experiment."
+    }, {
+      "page": 5,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 559.8906860351562,
+        "y1": 96.1091537475586,
+        "y2": 114.57000732421875
+      },
+      "text": "magnet on the fingernail; the transfer of electrical to electromagnetic to mechanical energy."
+    }, {
+      "page": 5,
+      "region": {
+        "x1": 317.5870056152344,
+        "x2": 559.8946533203125,
+        "y1": 120.0201644897461,
+        "y2": 234.12200927734375
+      },
+      "text": "The haptics evaluation consists of three parts. First, to better understand how to design haptic signals, we a) present a user study of possible parameters, given constraints in tracking frequency. Using the parameter combination that lead to the strongest feedback in study ’a’, we then b) present a user study that investigates how the finger’s position relative to the coil effects the strength of the feedback. Finally, to better understand variations in strength discovered in study ’b’, we c) present measures of the electromagnetic field produced when providing feedback."
+    }, {
+      "page": 5,
+      "region": {
+        "x1": 317.47698974609375,
+        "x2": 559.899169921875,
+        "y1": 248.6178741455078,
+        "y2": 365.6289978027344
+      },
+      "text": "a) Feedback Parameters We conducted an experiment to better understand what parameter combination provides the strongest haptic sensation. We recruited 10 participants. We affixed a magnet to the fingernail of the index finger of the dominant hand of each participant with double sided adhesive pads. For this experiment, we fixed the position of the finger (and thus magnet) with respect to the coil as illustrated in Figure 5, inlay. Participants were asked to rate how strongly they perceived haptic signals which varied in duration and frequency."
+    }, {
+      "page": 5,
+      "region": {
+        "x1": 317.5870056152344,
+        "x2": 559.8906860351562,
+        "y1": 380.12384033203125,
+        "y2": 533.0009765625
+      },
+      "text": "Independent Variables Signal Duration. The maximum duration of each signal is limited by the desired tracking frequency. As the electromagnetic field required for providing haptic feedback interferes with the magnetic tracking, tracking and feedback must be alternated. We found that we need to delay readings by 3ms after generating the electromagnetic field to ensure error free sampling of the magnet position. Measuring the magnets position takes 1 ms. Tracking at frequencies common with current touch solutions (60Hz or above) provides us with a total time window of at most 16.7 ms, which supports a maximum feedback duration of 12.7 ms (per the results of the section 5)."
+    }, {
+      "page": 5,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 559.89599609375,
+        "y1": 544.4281616210938,
+        "y2": 646.5750122070312
+      },
+      "text": "Pulse Length. The perception of a haptic signal is strongly linked to its frequency content [4]. To explore how the frequency effects perceived strength, we vary the length of electromagnetic pulses that each signal consists of. Signal Duration and Pulse Length interact: the Pulse Length cannot be longer than the Signal Duration, short Pulse Length enable signals consisting of multiple pulses, which might create stronger haptic signals. The Pulse Length is the reciprocal of its frequency."
+    }, {
+      "page": 5,
+      "region": {
+        "x1": 317.5870056152344,
+        "x2": 559.3079223632812,
+        "y1": 658.0021362304688,
+        "y2": 712.3289794921875
+      },
+      "text": "Combinations. To better understand the parameter space, we testes 11 combinations of Signal Duration and Pulse Length (12 ms duration: 2, 3, 4, 6 & 12 ms pulse length, 6ms duration: 2, 3 & 6 ms pulse length, 4 ms duration: 2 & 4ms pulse length, 2 ms duration: 2 ms pulse length)"
+    }, {
+      "page": 5,
+      "region": {
+        "x1": 54.0,
+        "x2": 558.001953125,
+        "y1": 750.914794921875,
+        "y2": 756.7197875976562
+      },
+      "text": "Paper 408 Page 6"
+    }, {
+      "page": 6,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 295.7427673339844,
+        "y1": 241.4158477783203,
+        "y2": 358.427001953125
+      },
+      "text": "Dependant Variable & Procedure For each combination, participants rated how strongly they perceived the haptic feedback. Following methodology suggested by Gescheider [12], we asked participants to freely assign values to the feedback strength. These ratings not only provide us with a guideline on choosing a Signal Duration / Pulse Length combination, but also allow us to create visual response scales for each independent variable, as done by Strohmeier and Hornbaek [32]. Participants rated each combination three times. Combination order was randomised."
+    }],
+    "title": {
+      "page": 5,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 175.61563110351562,
+        "y1": 336.3118591308594,
+        "y2": 342.7380065917969
+      },
+      "text": "6 HAPTICS EVALUATION"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 6,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 294.2472229003906,
+        "y1": 394.9881591796875,
+        "y2": 509.09100341796875
+      },
+      "text": "User ratings were normalized so that the maximum value per user was 1 and ratings were then averaged per user and condition using the geometric mean. We subtracted each users average rating from all values, so as to move all users data in the same frame of reference, where zero represents the average rating, positive values are above average and negative values below average, adapted from Strohmeier and Hornbaek [32]. The resulting scales are unit free, but the confidence intervals shown in Figure 6 a,b&c provide guidance concerning size of effects."
+    }, {
+      "page": 6,
+      "region": {
+        "x1": 53.49909973144531,
+        "x2": 295.7406311035156,
+        "y1": 514.5401611328125,
+        "y2": 712.3289794921875
+      },
+      "text": "Overall the combination of 12ms signal duration with 4ms pulses yielded the highest perceived strength. This result agrees with the literature, 4ms pulses produce a 250Hz signal, which is in the centre of the frequency range Pacinian cells respond to [16], stimulating the same cells responsible for texture perception [4]. The combination of 12ms signal duration and 4ms pulse duration supports tracking speeds up to 83Hz. If the tracking speed is increased to 166Hz or above (6ms duration or above) the strength of feedback that can be provided with a discrete signal becomes significantly weaker. Mean results and corresponding 95% confidence intervals for all combinations are shown in Figure 6a. To better understand the effects of Duration and Pulse Length on their own, we also plot them individually. Figure 6 b shows what appears to be a relatively linear relation between the signal’s length and it’s perceived strength for signal durations <12ms. Figure 6 c shows that the intensity"
+    }, {
+      "page": 6,
+      "region": {
+        "x1": 317.656005859375,
+        "x2": 559.74560546875,
+        "y1": 241.3361358642578,
+        "y2": 307.6180114746094
+      },
+      "text": "levels we found match those recorded using direct nerve readings of pacinian cells [25]. It should be noted that not all pulse lengths are combined with all signal durations, the graphs only show the combinations described previously. This is reflected in the wider confidence intervals for short durations and for the 4ms and 12ms pulses."
+    }, {
+      "page": 6,
+      "region": {
+        "x1": 317.5870056152344,
+        "x2": 559.8917236328125,
+        "y1": 327.50286865234375,
+        "y2": 420.60400390625
+      },
+      "text": "b) Actuation Volume The second experiment was designed to explore the uniformity of the haptic feedback based on where the tracked point is positioned relative to the coil, as well as establish an ideal range within which to provide haptic feedback. Based on the result of the previous study, we conducted our exploration of the actuation volume using a feedback duration of 12ms with a pulse duration of 4ms."
+    }, {
+      "page": 6,
+      "region": {
+        "x1": 317.95465087890625,
+        "x2": 559.8975830078125,
+        "y1": 437.420166015625,
+        "y2": 659.1190185546875
+      },
+      "text": "Apparatus. The apparatus for this experiment can be seen in figure 5, which uses a modified 3D printer, that moves the coil in 3 dimensions. The coil is held above the printer by acrylic to avoid magnetic field interference that may be present nearer to the bed of the printer. As with the previous experiment, the participant is asked to keep their finger in a fixed location throughout. The experiment moved the coil into 60 different positions around the device, in a 60x60x60 mm cube. The area inside the coil was not sampled. Figure 7 illustrates the volume that was sampled, from a Z height that starts with the coil level with the fingernail. At each location the participant was asked to rate how strongly they perceived the strength of the feedback. During the experiment, the participants were blind-folded and wore headphones to avoid any visual or audial biases. Each of the 60 locations were repeated 3 times. Since the field strength is symmetric about 3 axes, we decided to only sample an eighth of the field. The data is extrapolated in Figure 7 to mirror the x and y axes."
+    }],
+    "title": {
+      "page": 6,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 86.49657440185547,
+        "y1": 380.12384033203125,
+        "y2": 386.54998779296875
+      },
+      "text": "Results"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 6,
+      "region": {
+        "x1": 317.656005859375,
+        "x2": 558.2113037109375,
+        "y1": 693.8681640625,
+        "y2": 712.3289794921875
+      },
+      "text": "The independent variable of this experiment is the position of the finger in 3D space. The origin of this position is in the"
+    }, {
+      "page": 6,
+      "region": {
+        "x1": 54.0,
+        "x2": 558.001953125,
+        "y1": 750.914794921875,
+        "y2": 756.7197875976562
+      },
+      "text": "Paper 408 Page 7"
+    }, {
+      "page": 7,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 295.7337341308594,
+        "y1": 260.6701965332031,
+        "y2": 303.0409851074219
+      },
+      "text": "centre of the coil. We use the euclidean distance from the fingertip to the centre of the coil as a measurement to compare the strength against. Our dependant variable is the perceived strength of the feedback, as in previous experiment."
+    }],
+    "title": {
+      "page": 6,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 359.73980712890625,
+        "y1": 679.0038452148438,
+        "y2": 685.4299926757812
+      },
+      "text": "Variables"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 7,
+      "region": {
+        "x1": 53.31999969482422,
+        "x2": 295.7421569824219,
+        "y1": 347.1681823730469,
+        "y2": 712.3289794921875
+      },
+      "text": "We processed the strengths ratings the same way as we did for the previous experiment. We found that, up to 4cm, the ratings were relatively similar. Beyond that, the mean results aligned with strenдth = 1/distance3 (R = .993), which is the behavior one might expect if the feedback strength were directly proportional to magnetic field strength. Figure 7, left, shows the perceived strength plotted against the euclidean distance of the location to the centre of the coil. To understand the range that can reasonably be used for haptic feedback, we analyzed the differences in strength ratings along the distance axis. We assume that, moving from centre of the coil outward, users can clearly feel the haptic signal, as long as there is a significant difference to a weaker signal further out. We found that 56.6 mm was the last value to be significantly different from weaker signals further out (Bonferroni corrected, p < 0.01 for 84.9, 87.2, 93.8 & 103.9). While individual users might experience the signal beyond that, 56.6mm is the furthest out that users could clearly distinguish the feedback from even weaker signals. The full confusion matrix can be found in the supplementary material. To better understand how the positioning of the finger relative to the magnetic field effected the ratings, we created a heat-map figure 7, centre. The heat map demonstrates that, while the strength generally declines with distance, the pattern is more complex. For example, at z = 60mm the area directly on top of the centre of the coil provides relatively weak feedback, compared above or below the centre on the x-axis. With knowledge of such patterns, haptic widgets can be created that are even further away from the device than 56.6mm, if one places them in areas where the feedback can"
+    }, {
+      "page": 7,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 559.8980102539062,
+        "y1": 260.6701965332031,
+        "y2": 291.08599853515625
+      },
+      "text": "be clearly perceived. Alternatively, these variances in perceived strength could be corrected for, by taking the position of the finger into account when providing feedback."
+    }, {
+      "page": 7,
+      "region": {
+        "x1": 317.5870056152344,
+        "x2": 559.8980712890625,
+        "y1": 306.51885986328125,
+        "y2": 423.5299987792969
+      },
+      "text": "c) Measurements of Magnetic Field If the perceived strength correlated directly with the magnetic field, we could leverage the existing know-how of magnetic fields for strength calibration or widget-placement strategies, as discussed above. To better understand the patterns found in the previous user study, we therefore repeated the procedure. This time, instead of asking participants to rate the strength of the vibration, we placed a magnetometer where the participants finger would be and measured the strength of the magnetic field produced by the coil."
+    }],
+    "title": {
+      "page": 7,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 86.49657440185547,
+        "y1": 332.3038330078125,
+        "y2": 338.72998046875
+      },
+      "text": "Results"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 7,
+      "region": {
+        "x1": 317.656005859375,
+        "x2": 559.8981323242188,
+        "y1": 453.8271789550781,
+        "y2": 615.75
+      },
+      "text": "The magnitude of the field strength correlates well with the haptic feedback (R = .805, Figure 7, right) but does not completely explain all variations. At z = 60mm, the magnitude hardly correlated with the perceived strength at all (R = - 0.01). Instead the perceived strength correlated well with the strength measured with the y-axis of the magnetometer (R = .84). Looking at the measured dimensions of the magnetic field individually demonstrates that they contribute to the haptic experience differently: the y-dimension of the magnetic field measures appeared most strongly to influence perception (R = .721), followed by z (R = .62). The x dimension did not correlate well with perceived strength of the feedback (R = .08). Plots for the individual dimensions can be found in the supplementary material."
+    }],
+    "title": {
+      "page": 7,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 350.653564453125,
+        "y1": 438.9628601074219,
+        "y2": 445.3890075683594
+      },
+      "text": "Results"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 7,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 559.3048095703125,
+        "y1": 646.047119140625,
+        "y2": 712.3289794921875
+      },
+      "text": "Users could feel signals best at a frequency between 250 to 333Hz. Within the short durations tested, there was a linear relationship between perceived strength and signal duration. The longest possible signal duration (12ms) pairs nicely with 4ms pulses (250Hz), which was the combination users rated as strongest. Using the 12ms, 250Hz combination,"
+    }, {
+      "page": 7,
+      "region": {
+        "x1": 54.0,
+        "x2": 558.001953125,
+        "y1": 750.914794921875,
+        "y2": 756.7197875976562
+      },
+      "text": "Paper 408 Page 8"
+    }, {
+      "page": 8,
+      "region": {
+        "x1": 72.08599853515625,
+        "x2": 539.8958129882812,
+        "y1": 207.83535766601562,
+        "y2": 213.4749755859375
+      },
+      "text": "Figure 8: Magnetips enables these interactions: a) 3D mid-air, b) Behind arm, c) Back of device, d) Through material."
+    }, {
+      "page": 8,
+      "region": {
+        "x1": 53.43000030517578,
+        "x2": 295.47991943359375,
+        "y1": 235.1641387939453,
+        "y2": 301.4460144042969
+      },
+      "text": "we explored the volume around the coil and found that users could reliably detect the feedback to at least 56.6mm.We also found that there were non-linear effects, based on the relative position of the finger to the centre of the coil. This pattern correlated with the magnetic field strength to some extent (R = .84), but the exact relation requires further exploration."
+    }],
+    "title": {
+      "page": 7,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 415.4827880859375,
+        "y1": 631.182861328125,
+        "y2": 637.6090087890625
+      },
+      "text": "Summary of Findings"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 8,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 295.74102783203125,
+        "y1": 336.2591857910156,
+        "y2": 426.45098876953125
+      },
+      "text": "Magnetips can track and provide feedback in three dimensions around the device, and works regardless of visual occlusions. This enables a range of novel interaction scenarios. To demonstrate some of these opportunities, we built example applications that uses Magnetips capabilities, as shown in figure 8 and in the video figure. All the applications that we have built use haptic feedback in mid-air, which is the main benefit that Magnetips brings to around-device interaction."
+    }],
+    "title": {
+      "page": 8,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 140.4163818359375,
+        "y1": 321.3948669433594,
+        "y2": 327.8210144042969
+      },
+      "text": "7 APPLICATIONS"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 8,
+      "region": {
+        "x1": 53.54899978637695,
+        "x2": 295.7410583496094,
+        "y1": 461.2651672363281,
+        "y2": 611.2330322265625
+      },
+      "text": "In past literature, there has been work that demonstrates tracking of permanent magnets even in 3 dimensions. However, by adding haptics, this enables virtual elements in mid air to be feelable. To demonstrate 3-dimensional interaction, we created a clock application (figure 8 a). This application lets the user choose the time by rotating the finger in a radial movement around the device, similar to Abracadabra [14]. In this version, we let the user choose between minutes and hours by varying the depth of the radial movement. In addition, each step through a unit of time (second or minute) triggers a haptic signal. In this example, we demonstrate above device tracking, side of device tracking, and mid-air feedback."
+    }],
+    "title": {
+      "page": 8,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 155.66966247558594,
+        "y1": 446.4008483886719,
+        "y2": 452.8269958496094
+      },
+      "text": "3D Mid-air Interaction"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 8,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 294.3150329589844,
+        "y1": 646.047119140625,
+        "y2": 712.3289794921875
+      },
+      "text": "Magnetips enables interactions through occlusions made by the body itself. We prototyped an application for panning a map in 2D, by dragging the map underneath the arm (figure 8 b). Such an interaction modality may be useful when visual attention is still required for the task, as this does not occlude the display of the wearable device [3]. This interaction is also"
+    }, {
+      "page": 8,
+      "region": {
+        "x1": 317.5870056152344,
+        "x2": 558.211181640625,
+        "y1": 235.1641387939453,
+        "y2": 253.625
+      },
+      "text": "an example of skin input, which Magnetips can complement with localised haptic feedback."
+    }],
+    "title": {
+      "page": 8,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 109.15242004394531,
+        "y1": 631.182861328125,
+        "y2": 637.6090087890625
+      },
+      "text": "Behind Arm"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 8,
+      "region": {
+        "x1": 317.47698974609375,
+        "x2": 559.8978271484375,
+        "y1": 292.4241638183594,
+        "y2": 442.3919982910156
+      },
+      "text": "Back of device interaction is a common research topic in mobile device interaction [2], for smartphones in particular. We built a photo editing application to demonstrate that Magnetips also enables this interaction paradigm. In the application, while the user is preparing a photo for sharing on their smartphone, the user could press and hold the ’filters’ button and then use their index finger behind-the-device to scroll through the available list, receiving haptic feedback at every item boundary. This allows the user to also get visual feedback of the effect of the filter, without losing any onscreen space to displaying the list. Similarly, the technique could be used to create mid-air triggers with feedback behind the device for gaming."
+    }, {
+      "page": 8,
+      "region": {
+        "x1": 317.5867614746094,
+        "x2": 559.8969116210938,
+        "y1": 466.32684326171875,
+        "y2": 595.29296875
+      },
+      "text": "Eyes-free Interaction & Interacting Through Materials Magnetips can support eyes-free interaction in different ways. Current devices typically use vibration as eyes-free feedback channel. This causes the whole device to vibrate and can cause a buzzing sound when in contact with surfaces. Using Magnetips, the user can receive feedback off-device, directly onto their finger - supporting subtle interaction. A similar interaction can also work through clothes, for example, through a sleeve for a smartwatch or through trouser pockets, bags and purses for a smartphone."
+    }],
+    "title": {
+      "page": 8,
+      "region": {
+        "x1": 317.95501708984375,
+        "x2": 385.5141906738281,
+        "y1": 277.5598449707031,
+        "y2": 283.9859924316406
+      },
+      "text": "Back of Device"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 8,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 559.8945922851562,
+        "y1": 634.0921630859375,
+        "y2": 712.3289794921875
+      },
+      "text": "Magnetips enables reliable haptic sensations up to 56mm from the center of the coil. At that range, the tracking error is 6.38mm. This enables Magnetips to create a larger interaction space around mobile devices. Magnetips presents a range of new opportunities, which we explored above with our applications. There are, however, also limitations to Magnetips, which remain future work."
+    }, {
+      "page": 8,
+      "region": {
+        "x1": 54.0,
+        "x2": 558.001953125,
+        "y1": 750.914794921875,
+        "y2": 756.7197875976562
+      },
+      "text": "Paper 408 Page 9"
+    }],
+    "title": {
+      "page": 8,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 483.13153076171875,
+        "y1": 619.2278442382812,
+        "y2": 625.6539916992188
+      },
+      "text": "8 LIMITATIONS & FUTUREWORK"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 9,
+      "region": {
+        "x1": 53.31999969482422,
+        "x2": 295.74102783203125,
+        "y1": 111.05318450927734,
+        "y2": 440.3489990234375
+      },
+      "text": "We designed Magnetips to use a large coil that can easily in-case existing devices. In part, this was inspired by the Qi charging coils already found in many devices. We used a single coil for providing feedback around devices. In future work, different sizes of coils, tessellations of coils, and their impact on the haptic experience could be explored. For example, a phone-sized Magnetips device could consist of one large coil, spanning the majority of its size, or multiple smaller coils. By creating different designs of coil arrays, designers could experiment with different granularities of feedback in certain locations around the device. For example, an additional small coil at the bottom of a device could be used to drive a stronger sensation above the location of the traditional ’home’ button. While Magnetips has been designed to fit within mobile devices, we have yet to optimise its power requirements. The power supply in the studies was set to use a maximum of 20Vx4A = 80W , for 12 ms per tick of feedback. This equates to less than 1 Joule of energy (0.9576 Joules). This is much more than current vibration motors, for example, which would require ~0.02 Joules for the equivalent feedback. (For reference, the iPhone 7 can store 39,600 joules). The power consumption may be reduced by using an array of smaller coils. As the position of the magnet is known, one can then generate a directed magnetic field towards the position of the magnet, similar to the electromagnet array in FingerFlux [35]. This would allow the same strength of haptic feedback at a fraction of the power."
+    }, {
+      "page": 9,
+      "region": {
+        "x1": 53.54899978637695,
+        "x2": 294.3121337890625,
+        "y1": 445.79815673828125,
+        "y2": 500.125
+      },
+      "text": "In the studies we used a power supply rather than battery to remove any variation in energy use due to the battery discharging over the course of the study. However, a mobile version of the haptics system is feasible, with a 7.4V 600mAh 25C battery, as shown in the video figure and in Figure 9."
+    }, {
+      "page": 9,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 295.7366027832031,
+        "y1": 505.5741271972656,
+        "y2": 535.989990234375
+      },
+      "text": "Magnetips is limited to the use of a single magnet. Passive magnets cannot be individually enabled and disabled, therefore it remains a challenge to address individual magnets for"
+    }, {
+      "page": 9,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 294.3825988769531,
+        "y1": 681.4833984375,
+        "y2": 709.041015625
+      },
+      "text": "Figure 9: The haptics system can be operated with very few components, requiring only a coil, motor driver, battery and a microcontroller."
+    }, {
+      "page": 9,
+      "region": {
+        "x1": 317.5867614746094,
+        "x2": 559.8930053710938,
+        "y1": 96.1091537475586,
+        "y2": 150.43597412109375
+      },
+      "text": "either tracking or actuation. The tracking of multiple magnets may be solvable with a more complex optimiser and with more magnetometers, but we are currently unaware of an existing solution. However, for haptic feedback, a coil array may provide coarse addressability at the very least."
+    }],
+    "title": {
+      "page": 9,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 186.9833526611328,
+        "y1": 96.18885803222656,
+        "y2": 102.614990234375
+      },
+      "text": "Coil Design and Power Usage"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 9,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 559.8904418945312,
+        "y1": 187.76515197753906,
+        "y2": 289.9129943847656
+      },
+      "text": "Users are required towear amagnet.While this can be considered a drawback,MEMSmagnetometer sensors are becoming increasingly better in sensitivity. This means that with future improvements to technology, smaller magnets can be used to achieve the same level of tracking performance, making it easier and more viable to embed them into nail art [17], or even into the finger[30]. Aside from wearing the magnet, it is possible to embed magnets into interactive tools, such as a stylus, to track and provide feedback in mid-air."
+    }],
+    "title": {
+      "page": 9,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 382.4554748535156,
+        "y1": 172.90187072753906,
+        "y2": 179.3280029296875
+      },
+      "text": "Magnet Shape"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 9,
+      "region": {
+        "x1": 317.95465087890625,
+        "x2": 559.8978271484375,
+        "y1": 327.2421569824219,
+        "y2": 548.9409790039062
+      },
+      "text": "Magnetips improves on previous work by not only preventing occlusion of small displays, but also allowing users to interact whilst glancing away from the device, as users can receive haptic guidance. Magnetips does not require line-of sight between the device and the tracked point, allowing for interaction in locations previously not possible with haptic feedback. This enables, for example, on-skin input and output behind the arm. Through a series of technological evaluations and user studies, we showed that the current implementation can track the users finger with an average error of < 6.4mm during a mobile task within a volume of 60x60x60mm. Our results show that users can reliably feel the haptic feedback up to at least 56mm. We show that we can track the users finger at 60Hz and provide concurrent haptic feedback that is clearly perceivable. We suggest that haptic signals are optimised for strength at 12ms duration and 250Hz. If higher tracking and feedback frequencies are required, we suggest using 6ms duration at 330Hz for up to 166Hz tracking."
+    }, {
+      "page": 9,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 559.8945922851562,
+        "y1": 554.39111328125,
+        "y2": 644.5830078125
+      },
+      "text": "We presented four basic usage scenarios - aimed to demonstrate how magnetips might benefit familiar interactions. We believe, however, that the opportunities offered by the unique combination of colocated tracking and haptic feedback, in combination with the ability to interact through occluding materials, might extend far beyond these scenarios, and look forward to seeing how magnetips might be adapted in other form factors and contexts."
+    }],
+    "title": {
+      "page": 9,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 399.6416320800781,
+        "y1": 312.37884521484375,
+        "y2": 318.80499267578125
+      },
+      "text": "9 CONCLUSION"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 9,
+      "region": {
+        "x1": 317.656005859375,
+        "x2": 559.8937377929688,
+        "y1": 681.912109375,
+        "y2": 712.3289794921875
+      },
+      "text": "This work was supported by the European Research Council under the European Union’s Horizon 2020 research and innovation program (grant agreement 648785)."
+    }, {
+      "page": 9,
+      "region": {
+        "x1": 54.0,
+        "x2": 558.0040283203125,
+        "y1": 750.914794921875,
+        "y2": 756.7197875976562
+      },
+      "text": "Paper 408 Page 10"
+    }],
+    "title": {
+      "page": 9,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 451.8278503417969,
+        "y1": 667.0478515625,
+        "y2": 673.4739990234375
+      },
+      "text": "10 ACKNOWLEDGEMENTS"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 10,
+      "region": {
+        "x1": 57.50400161743164,
+        "x2": 294.98138427734375,
+        "y1": 110.36260986328125,
+        "y2": 115.5670166015625
+      },
+      "text": "[1] Daniel Ashbrook, Patrick Baudisch, and Sean White. 2011. Nenya:"
+    }, {
+      "page": 10,
+      "region": {
+        "x1": 53.797996520996094,
+        "x2": 295.3924865722656,
+        "y1": 120.3245849609375,
+        "y2": 693.4000244140625
+      },
+      "text": "subtle and eyes-free mobile input with a magnetically-tracked finger ring. In Proceedings of the SIGCHI Conference on Human Factors in Computing Systems. ACM, 2043–2046. [2] Matthias Baldauf, Sebastian Zambanini, Peter Fröhlich, and Peter Reichl. 2011. Markerless Visual Fingertip Detection for Natural Mobile Device Interaction. In Proceedings of the 13th International Conference on Human Computer Interaction with Mobile Devices and Services (MobileHCI ’11). ACM, New York, NY, USA, 539–544. https: //doi.org/10.1145/2037373.2037457 [3] Patrick Baudisch and Gerry Chu. 2009. Back-of-device Interaction Allows Creating Very Small Touch Devices. In Proceedings of the SIGCHI Conference on Human Factors in Computing Systems (CHI ’09). ACM, New York, NY, USA, 1923–1932. https://doi.org/10.1145/1518701. 1518995 [4] Sliman J Bensmaia and Mark Hollins. 2003. The vibrations of texture. Somatosensory and Motor Research 20, 1 (2003), 33–43. https://doi.org/ 10.1080/0899022031000083825 [5] Joanna Bergstrom-Lehtovirta, Sebastian Boring, and Kasper Hornbæk. 2017. Placing and Recalling Virtual Items on the Skin. In Proceedings of the 2017 CHI Conference on Human Factors in Computing Systems - CHI ’17. ACM Press, New York, New York, USA, 1497–1507. https: //doi.org/10.1145/3025453.3026030 [6] Sebastian Boring, David Ledo, Xiang ’Anthony’ Chen, Nicolai Marquardt, Anthony Tang, and Saul Greenberg. 2012. The Fat Thumb: Using the Thumb’s Contact Size for Single-handed Mobile Interaction. In Proceedings of the 14th International Conference on Human-computer Interaction with Mobile Devices and Services (MobileHCI ’12). ACM, New York, NY, USA, 39–48. https://doi.org/10.1145/2371574.2371582 [7] Alex Butler, Shahram Izadi, and Steve Hodges. 2008. SideSight: MultiâĂĲtouchâĂİ Interaction Around Small Devices. In Proceedings of the 21st annual ACM symposium on User interface software and technology - UIST ’08. ACM Press, New York, New York, USA, 201. https://doi. org/10.1145/1449715.1449746 [8] Tom Carter, Sue Ann Seah, Benjamin Long, Bruce Drinkwater, and Sriram Subramanian. 2013. UltraHaptics: multi-point mid-air haptic feedback for touch surfaces. In Proceedings of the 26th annual ACM symposium on User interface software and technology. ACM, 505–514. [9] Ke-Yu Chen, Kent Lyons, SeanWhite, and Shwetak Patel. 2013. uTrack: 3D input using two magnetic sensors. In Proceedings of the 26th annual ACM symposium on User interface software and technology. ACM, 237– 244. [10] Ke-Yu Chen, Shwetak N Patel, and Sean Keller. 2016. Finexus: Tracking precise motions of multiple fingertips using magnetic sensing. In Proceedings of the 2016 CHI Conference on Human Factors in Computing Systems. ACM, 1504–1514. [11] Euan Freeman, Stephen Brewster, and Vuokko Lantz. 2014. Tactile Feedback for Above-Device Gesture Interfaces: Adding Touch to Touchless Interactions. In Proceedings of the 16th International Conference on Multimodal Interaction (ICMI ’14). ACM, New York, NY, USA, 419–426. https://doi.org/10.1145/2663204.2663280 [12] George A Gescheider. 1988. Psychophysical Schaling. Ann. Rev. Psychol 39 (1988), 169–200. [13] Xinying Han, Hiroaki Seki, and M Hikizu. 2007. Wearable handwriting input device using magnetic field. In SICE, 2007 Annual Conference. IEEE, 365–368. [14] Chris Harrison and Scott E. Hudson. 2009. Abracadabra. Proceedings of the 22nd annual ACM symposium on User interface software and technology - UIST ’09 (2009), 121. https://doi.org/10.1145/1622176."
+    }, {
+      "page": 10,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 558.2003173828125,
+        "y1": 97.41058349609375,
+        "y2": 112.48602294921875
+      },
+      "text": "1622199 [15] Ken Hinckley, Seongkook Heo, Michel Pahud, Christian Holz, Hrvoje"
+    }, {
+      "page": 10,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 559.5449829101562,
+        "y1": 117.24456787109375,
+        "y2": 700.281982421875
+      },
+      "text": "Benko, Abigail Sellen, Richard Banks, Kenton O Hara, Gavin Smyth, and Bill Buxton. 2016. Pre-Touch Sensing for Mobile Interaction. Proceedings of the 2016 CHI Conference on Human Factors in Computing Systems (2016), 2869–2881. https://doi.org/10.1145/2858036.2858095 arXiv:1605.09782 [16] Roland S Johansson and J Randall Flanagan. 2009. Coding and use of tactile signals from the fingertips in object manipulation tasks. Nature reviews. Neuroscience 10, 5 (2009), 345–59. https://doi.org/10.1038/ nrn2621 [17] Azusa Kadomura and Itiro Siio. 2015. MagNail: user interaction with smart device throughmagnet attached to fingernail. InAdjunct Proceedings of the 2015 ACM International Joint Conference on Pervasive and Ubiquitous Computing and Proceedings of the 2015 ACM International Symposium on Wearable Computers. ACM, 309–312. [18] Hamed Ketabdar, Mehran Roshandel, and Kamer Ali Yüksel. 2010. Towards using embedded magnetic field sensor for around mobile device 3D interaction. In Proceedings of the 12th international conference on Human computer interaction with mobile devices and services. ACM, 153–156. [19] Jarrod Knibbe, Diego Martinez Plasencia, Christopher Bainbridge, Chee-Kin Chan, Jiawei Wu, Thomas Cable, Hassan Munir, and David Coyle. 2014. Extending interaction for smart watches. In Proceedings of the extended abstracts of the 32nd annual ACM conference on Human factors in computing systems - CHI EA ’14. ACM Press, New York, New York, USA, 1891–1896. https://doi.org/10.1145/2559206.2581315 [20] Mathieu Le Goc, Stuart Taylor, Shahram Izadi, and CemKeskin. 2014. A low-cost transparent electric field sensor for 3d interaction on mobile devices. In Proceedings of the 32nd annual ACM conference on Human factors in computing systems. ACM, 3167–3170. [21] Sebastian OHMadgwick, Andrew JL Harrison, and Ravi Vaidyanathan. 2011. Estimation of IMU and MARG orientation using a gradient descent algorithm. In Rehabilitation Robotics (ICORR), 2011 IEEE International Conference on. IEEE, 1–7. [22] Ian Oakley and Doyoung Lee. 2014. Interaction on the Edge: Offset Sensing for Small Devices. In Proceedings of the SIGCHI Conference on Human Factors in Computing Systems (CHI ’14). ACM, New York, NY, USA, 169–178. https://doi.org/10.1145/2556288.2557138 [23] Masa Ogata and Michita Imai. 2015. SkinWatch: Skin Gesture Interaction for Smart Watch. Proceedings of the 6th Augmented Human International Conference on - AH ’15 (2015), 21–24. https: //doi.org/10.1145/2735711.2735830 [24] Simon T Perrault, Eric Lecolinet, James Eagan, and Yves Guiard. 2013. WatchIt : Simple Gestures and Eyes-free Interaction for Wristwatches and Bracelets. In Proc. CHI. 1451–1460. [25] Robert F. Schmidt. 1986. Fundamentals of Sensory Physiology. Vol. 3. Berlin Heidelberg New York Tokyo. 25–33 pages. https://doi.org/10. 1017/CBO9781107415324.004 arXiv:arXiv:1011.1669v3 [26] Stefan Schneegass and Alexandra Voit. 2016. GestureSleeve: using touch sensitive fabrics for gestural input on the forearm for controlling smartwatches. Proceedings of the 2016 ACM International Symposium on Wearable Computers - ISWC ’16 (2016), 108–115. https://doi.org/10. 1145/2971763.2971797 [27] Rajinder Sodhi, Ivan Poupyrev, Matthew Glisson, and Ali Israr. 2013. AIREAL: interactive tactile experiences in free air. ACM Transactions on Graphics (TOG) 32, 4 (2013), 134. [28] Daniel Spelmezan, Deepak Ranjan Sahoo, and Sriram Subramanian. 2017. Sparkle: hover feedback with touchable electric arcs. In Proceedings of the 2017 CHI Conference on Human Factors in Computing Systems. ACM, 3705–3717."
+    }, {
+      "page": 10,
+      "region": {
+        "x1": 54.0,
+        "x2": 558.0040283203125,
+        "y1": 750.914794921875,
+        "y2": 756.7197875976562
+      },
+      "text": "Paper 408 Page 11"
+    }, {
+      "page": 11,
+      "region": {
+        "x1": 53.797996520996094,
+        "x2": 295.3929748535156,
+        "y1": 97.41058349609375,
+        "y2": 291.9049987792969
+      },
+      "text": "[29] Srinath Sridhar, Anders Markussen, Antti Oulasvirta, Christian Theobalt, and Sebastian Boring. 2017. WatchSense: On- and AboveSkin Input Sensing through aWearable Depth Sensor Srinath. In Proceedings of the 2017 CHI Conference on Human Factors in Computing Systems - CHI ’17. ACM Press, New York, New York, USA, 3891–3902. https://doi.org/10.1145/3025453.3026005 [30] Paul Strohmeier. 2013. Magnetic Implant. http://fkeel.blogspot.de/ 2013/01/magnetic-implant-sensing.html [31] Paul Strohmeier, Jesse Burstyn, and Roel Vertegaal. 2015. Effects of Display Sizes on a Scrolling Task using a Cylindrical Smartwatch. Proceedings of the 17th International Conference on Human-Computer Interaction with Mobile Devices and Services Adjunct - MobileHCI ’15 (2015), 846–853. https://doi.org/10.1145/2786567.2793710 [32] Paul Strohmeier and Kasper Hornbæk. 2017. Generating Haptic Textures with a Vibrotactile Actuator. In Proceedings of the 2017 CHI Conference on Human Factors in Computing Systems - CHI ’17. ACMPress, New York, New York, USA, 4994–5005. https://doi.org/10.1145/3025453. 3025812 [33] Yuriko Suzuki and Minoru Kobayashi. 2005. Air jet driven force feedback in virtual reality. IEEE computer graphics and applications 25, 1"
+    }, {
+      "page": 11,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 559.4234619140625,
+        "y1": 97.41058349609375,
+        "y2": 112.5780029296875
+      },
+      "text": "(2005), 44–47. [34] Radu-Daniel Vatavu, Annette Mossel, and Christian Schönauer. 2016."
+    }, {
+      "page": 11,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 559.4296264648438,
+        "y1": 117.3355712890625,
+        "y2": 291.9049987792969
+      },
+      "text": "Digital Vibrons: Understanding Users’ Perceptions of Interacting with Invisible, Zero-weight Matter. In Proceedings of the 18th International Conference on Human-Computer Interaction with Mobile Devices and Services (MobileHCI ’16). ACM, New York, NY, USA, 217–226. https: //doi.org/10.1145/2935334.2935364 [35] Malte Weiss, Chat Wacharamanotham, Simon Voelker, and Jan Borchers. 2011. FingerFlux: near-surface haptic feedback on tabletops. In Proceedings of the 24th annual ACM symposium on User interface software and technology. ACM, 615–620. [36] Graham Wilson, Thomas Carter, Sriram Subramanian, and Stephen A. Brewster. 2014. Perception of Ultrasonic Haptic Feedback on the Hand: Localisation and Apparent Motion. In Proceedings of the SIGCHI Conference on Human Factors in Computing Systems (CHI ’14). ACM, New York, NY, USA, 1133–1142. https://doi.org/10.1145/2556288.2557033 [37] Junhan Zhou, Yang Zhang, Gierad Laput, and Chris Harrison. 2016. AuraSense: enabling expressive around-smartwatch interactions with electric field sensing. In Proceedings of the 29th Annual Symposium on User Interface Software and Technology. ACM, 81–86."
+    }, {
+      "page": 11,
+      "region": {
+        "x1": 54.0,
+        "x2": 558.0039672851562,
+        "y1": 750.914794921875,
+        "y2": 756.7197875976562
+      },
+      "text": "Paper 408 Page 12"
+    }],
+    "title": {
+      "page": 10,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 116.56490325927734,
+        "y1": 96.18885803222656,
+        "y2": 102.614990234375
+      },
+      "text": "REFERENCES"
+    }
+  }]
+}

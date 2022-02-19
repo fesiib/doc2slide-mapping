@@ -1,0 +1,1616 @@
+{
+  "abstractText": {
+    "page": 0,
+    "region": {
+      "x1": 53.43000030517578,
+      "x2": 295.7413024902344,
+      "y1": 197.61488342285156,
+      "y2": 422.2229919433594
+    },
+    "text": "ABSTRACT Current haptic feedback techniques on handheld devices are applied to the finger pad or the palm of the user. These state-of-the-art approaches are coarse-grained and tend to be intrusive, rather than subtle. In contrast, we present a new feedback technique that applies stimuli around the periphery of the finger pulp, demonstrating how this can provide rich, nuanced haptic information. We use a reconfigurable haptic device employing a ferromagnetic marble for back-of-the device handheld use, which, for the first time, probes, without instrumenting the user, the periphery of the distal phalanx with localised stimulation. We present the design-space afforded by this new technique and evaluate the human-factors of finger-peripheral touch interaction in a controlled userstudy. We report results with marbles of different diameters, speeds and a combination of poking, lateral vibration and patterns; present the resulting design guidelines for fingerperiphery haptic feedback; and, illustrate its potential with use case scenarios."
+  },
+  "figures": [{
+    "caption": "Figure 5: Different Patterns used in the experiment. Fingers are seen from the pulp side. Each arrow schematically represents the motion described by the marble.",
+    "captionBoundary": {
+      "x1": 317.9549560546875,
+      "x2": 559.7994995117188,
+      "y1": 217.26437377929688,
+      "y2": 245.0909423828125
+    },
+    "figType": "Figure",
+    "imageText": ["LEFT", "COUNTER", "CLOCKWISE", "CLOCKWISE", "TOP", "RIGHT"],
+    "name": "5",
+    "page": 5,
+    "regionBoundary": {
+      "x1": 341.11669921875,
+      "x2": 535.0,
+      "y1": 93.94835662841797,
+      "y2": 203.422607421875
+    }
+  }, {
+    "caption": "Figure 6: User study setup. In the background, application used by the user to describe their perception of the stimuli.",
+    "captionBoundary": {
+      "x1": 317.9549865722656,
+      "x2": 558.1900024414062,
+      "y1": 411.1033935546875,
+      "y2": 427.97100830078125
+    },
+    "figType": "Figure",
+    "imageText": [],
+    "name": "6",
+    "page": 5,
+    "regionBoundary": {
+      "x1": 317.0,
+      "x2": 559.0,
+      "y1": 264.0,
+      "y2": 398.0
+    }
+  }, {
+    "caption": "Figure 1: Pulp Friction based haptic notification at the back of a device from a route planner application.",
+    "captionBoundary": {
+      "x1": 53.79800033569336,
+      "x2": 294.3109130859375,
+      "y1": 267.9114074707031,
+      "y2": 284.77899169921875
+    },
+    "figType": "Figure",
+    "imageText": [],
+    "name": "1",
+    "page": 1,
+    "regionBoundary": {
+      "x1": 54.0,
+      "x2": 294.0,
+      "y1": 92.0,
+      "y2": 254.0
+    }
+  }, {
+    "caption": "Table 1: Summary of the tested factors.",
+    "captionBoundary": {
+      "x1": 94.81600189208984,
+      "x2": 252.72511291503906,
+      "y1": 275.1374206542969,
+      "y2": 281.0460205078125
+    },
+    "figType": "Table",
+    "imageText": ["ErrorSize", "Absolute", "difference", "in", "mm", "between", "the", "recognized", "di-", "ameter", "and", "the", "actual", "one.", "Strength", "Perceived", "strength", "of", "the", "stimuli.", "Comfort", "Perceived", "comfort", "of", "the", "stimuli.", "Fast.", "Size", "Diameter", "of", "the", "ball", "bearing:", "Small", "or", "Large.", "Clockwise,", "Counter-Clockwise,", "Left,", "Right", "or", "Top.", "Speed", "Speed", "at", "which", "the", "ball", "bearing", "was", "rolling:", "Slow", "or", "is", "the", "aggregation", "of", "both.", "Surface", "Surface", "on", "the", "periphery", "of", "the", "finger", "pad", "on", "which", "participant", "felt", "the", "stimuli.", "Pattern", "Motion", "followed", "by", "the", "ball", "bearing", "along", "the", "finger:", "GuessedAngle", "Angle", "recognized", "by", "the", "participants.", "Type", "Type", "of", "stimuli:", "Poke", "or", "Vibration.", "Poke+Vibration", "direction", "of", "the", "motion", "centered", "in", "the", "middle", "of", "the", "first", "phalanx.", "Factor", "Definition", "Angle", "Angle", "between", "the", "axis", "of", "the", "finger", "and", "the", "general"],
+    "name": "1",
+    "page": 6,
+    "regionBoundary": {
+      "x1": 53.0,
+      "x2": 303.0,
+      "y1": 92.0,
+      "y2": 273.0
+    }
+  }, {
+    "caption": "Figure 7: Mean GuessedAngle and standard deviation for each stimuli Angle. The results can be visualized for the combination and each Type of sharpness (Poke and Vibration). The red line represents the ideal case where GuessedAngle and Angle are equal.",
+    "captionBoundary": {
+      "x1": 317.9549865722656,
+      "x2": 559.8063354492188,
+      "y1": 659.2964477539062,
+      "y2": 709.041015625
+    },
+    "figType": "Figure",
+    "imageText": ["Poke", "Vibration", "Poke+Vibration", "y=x", "90", "50", "-50", "-90", "0", "G", "U", "E", "S", "S", "E", "D", "A", "N", "G", "LE", "ANGLE", "-90", "-70", "-50", "-30", "-10", "10", "30", "50", "70", "90"],
+    "name": "7",
+    "page": 6,
+    "regionBoundary": {
+      "x1": 322.4703674316406,
+      "x2": 558.0,
+      "y1": 465.0,
+      "y2": 645.49462890625
+    }
+  }, {
+    "caption": "Figure 2: The stimuli dimensions of Pulp Friction illustrated at the back of a phone. (a) Marbles coming to poke the finger from different angles The left marble is rolling beside the finger describing a pattern. (b) Marbles poking and vibrating beside the finger resulting in different sharpness of stimuli. (c) Marbles rolling beside the finger at different speeds. (d) Marbles of different sizes contacting the finger periphery.",
+    "captionBoundary": {
+      "x1": 53.79800033569336,
+      "x2": 558.3688354492188,
+      "y1": 214.82839965820312,
+      "y2": 253.61395263671875
+    },
+    "figType": "Figure",
+    "imageText": ["a", "b", "c", "d"],
+    "name": "2",
+    "page": 2,
+    "regionBoundary": {
+      "x1": 90.0,
+      "x2": 522.0,
+      "y1": 92.0,
+      "y2": 201.0
+    }
+  }, {
+    "caption": "Figure 9: Mean recognized Surface and standard deviation for each stimuli Angle. The results can be visualized for each Type of sharpness (Poke and Vibration).",
+    "captionBoundary": {
+      "x1": 53.79798889160156,
+      "x2": 294.22259521484375,
+      "y1": 681.2144165039062,
+      "y2": 709.041015625
+    },
+    "figType": "Figure",
+    "imageText": ["60", "Poke", "Vibration", "40", "20", "-90", "-70", "-50", "-30", "-10", "10", "30", "50", "70", "90", "0", "S", "U", "R", "FA", "C", "E", "ANGLE"],
+    "name": "9",
+    "page": 7,
+    "regionBoundary": {
+      "x1": 58.49695587158203,
+      "x2": 294.0,
+      "y1": 568.3280639648438,
+      "y2": 667.4118041992188
+    }
+  }, {
+    "caption": "Figure 10: Confusion matrix and mean SpeedRecognition and standard deviation for the different Patterns.",
+    "captionBoundary": {
+      "x1": 317.9549865722656,
+      "x2": 558.1983032226562,
+      "y1": 404.5574035644531,
+      "y2": 421.42498779296875
+    },
+    "figType": "Figure",
+    "imageText": ["0", "2.5", "5", "RIGHT", "TOP", "LEFT", "COUNTER", "CLOCKWISE", "CLOCKWISE", "PATTERNS", "R", "R", "O", "RS", "IZ", "E", "(m", "m", ")", "IO", "N", "E", "N", "IT", "O", "G", "E", "C", "S", "P", "E", "E", "D", "R", "0.6", "0.4", "0.2", "0.0", "Recognized", "PATTERNS", "RIGHT", "TOPLEFTCOUNTER", "CLOCKWISE", "CLOCKWISE", "100%", "CLOCKWISE", "COUNTER", "CLOCKWISE", "LEFT", "TOP", "RIGHT", "S", "R", "N", "P", "A", "T", "T", "E", "te", "d", "se", "n", "P", "re", "80%", "60%", "40%", "20%", "0%", "0%", "0%", "0%0%", "0%", "0%", "0%", "0%", "0%", "0%", "3.2%", "7.9%", "89%", "1.6%", "95%", "3.2%", "1.6%", "98%", "9.5%", "89%", "1.6%", "91%", "7.8%", "0%", "1.6%"],
+    "name": "10",
+    "page": 7,
+    "regionBoundary": {
+      "x1": 320.6328125,
+      "x2": 558.4176025390625,
+      "y1": 93.0,
+      "y2": 390.7628479003906
+    }
+  }, {
+    "caption": "Figure 3: The prototype with its internal mechanism is shown. In our experiments, it was flipped and fixed upside down with the marble below the device.",
+    "captionBoundary": {
+      "x1": 317.9549865722656,
+      "x2": 558.1900634765625,
+      "y1": 279.8634033203125,
+      "y2": 307.69000244140625
+    },
+    "figType": "Figure",
+    "imageText": [],
+    "name": "3",
+    "page": 3,
+    "regionBoundary": {
+      "x1": 329.0,
+      "x2": 547.0,
+      "y1": 92.0,
+      "y2": 267.0
+    }
+  }, {
+    "caption": "Figure 12: Mean (in gray) and quartiles of the Comfort variable in function of the Patterns, Roll and each Type of sharpness (Poke and Vibration) and the two Sizes.",
+    "captionBoundary": {
+      "x1": 317.9549560546875,
+      "x2": 559.80615234375,
+      "y1": 681.2144165039062,
+      "y2": 709.041015625
+    },
+    "figType": "Figure",
+    "imageText": ["R", "T", "C", "O", "M", "FO", "5", "4", "3", "2", "1", "RIGHT", "TOP", "LEFT", "COUNTER", "CLOCKWISE", "CLOCKWISE", "PATTERNS", "ROLL", "POKE", "VIBRATION", "TYPE", "SMALL", "BIG", "SIZES", "R", "T", "C", "O", "M", "FO", "5", "4", "3", "2", "1"],
+    "name": "12",
+    "page": 8,
+    "regionBoundary": {
+      "x1": 339.1282958984375,
+      "x2": 541.0,
+      "y1": 423.7294616699219,
+      "y2": 667.4970092773438
+    }
+  }, {
+    "caption": "Figure 11: Mean (in gray) and quartiles of the Strength variable in function of the Patterns, Roll and each Type of sharpness (Poke and Vibration) and the two Sizes.",
+    "captionBoundary": {
+      "x1": 53.56500244140625,
+      "x2": 294.04388427734375,
+      "y1": 351.12640380859375,
+      "y2": 378.9530029296875
+    },
+    "figType": "Figure",
+    "imageText": ["S", "T", "R", "E", "N", "G", "T", "H", "5", "4", "3", "2", "1", "ROLL", "POKE", "VIBRATION", "TYPE", "SMALL", "BIG", "SIZES", "S", "T", "R", "E", "N", "G", "T", "H", "5", "4", "3", "2", "1", "RIGHT", "TOP", "LEFT", "COUNTER", "CLOCKWISE", "CLOCKWISE", "PATTERNS"],
+    "name": "11",
+    "page": 8,
+    "regionBoundary": {
+      "x1": 74.97129821777344,
+      "x2": 276.0,
+      "y1": 93.67684173583984,
+      "y2": 337.40899658203125
+    }
+  }, {
+    "caption": "Figure 4: (a) Measured position and noise (amplified and offset) of the marble in slow (blue) and fast (black) motion mode. (b) Example of clockwise (black) and counterclockwise (blue) motion in both fast (left) and slow (right) mode.",
+    "captionBoundary": {
+      "x1": 317.6050109863281,
+      "x2": 559.7951049804688,
+      "y1": 202.96438598632812,
+      "y2": 241.74896240234375
+    },
+    "figType": "Figure",
+    "imageText": ["(a)", "(b)"],
+    "name": "4",
+    "page": 4,
+    "regionBoundary": {
+      "x1": 322.0,
+      "x2": 555.0,
+      "y1": 92.0,
+      "y2": 196.00201416015625
+    }
+  }],
+  "sections": [{
+    "paragraphs": [{
+      "page": 0,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 295.73345947265625,
+        "y1": 453.61236572265625,
+        "y2": 472.13299560546875
+      },
+      "text": "• Human-centered computing → Human computer interaction (HCI)."
+    }],
+    "title": {
+      "page": 0,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 128.51052856445312,
+        "y1": 438.8078308105469,
+        "y2": 445.2339782714844
+      },
+      "text": "CCS CONCEPTS"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 0,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 169.52821350097656,
+        "y1": 503.6817626953125,
+        "y2": 510.0879821777344
+      },
+      "text": "Haptic, finger pad periphery"
+    }],
+    "title": {
+      "page": 0,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 111.39409637451172,
+        "y1": 488.71783447265625,
+        "y2": 495.14398193359375
+      },
+      "text": "KEYWORDS"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 0,
+      "region": {
+        "x1": 53.48400115966797,
+        "x2": 295.5482482910156,
+        "y1": 534.8118896484375,
+        "y2": 573.4539794921875
+      },
+      "text": "Alix Goguey, Deepak Ranjan Sahoo, Simon Robinson, Jennifer Pearson and Matt Jones. 2019. Pulp Friction: Exploring the Finger Pad Periphery for Subtle Haptic Feedback. In CHI Conference on Human Factors in Computing Systems Proceedings (CHI 2019), May 4–9,"
+    }, {
+      "page": 0,
+      "region": {
+        "x1": 53.24800109863281,
+        "x2": 294.192626953125,
+        "y1": 595.622314453125,
+        "y2": 712.3289794921875
+      },
+      "text": "Permission to make digital or hard copies of all or part of this work for personal or classroom use is granted without fee provided that copies are not made or distributed for profit or commercial advantage and that copies bear this notice and the full citation on the first page. Copyrights for components of this work owned by others than ACMmust be honored. Abstracting with credit is permitted. To copy otherwise, or republish, to post on servers or to redistribute to lists, requires prior specific permission and/or a fee. Request permissions from permissions@acm.org. CHI 2019, May 4–9, 2019, Glasgow, Scotland UK © 2019 Association for Computing Machinery. ACM ISBN 978-1-4503-5970-2/19/05. . . $15.00 https://doi.org/10.1145/3290605.3300871"
+    }, {
+      "page": 0,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 559.5750732421875,
+        "y1": 198.27587890625,
+        "y2": 215.0
+      },
+      "text": "2019, Glasgow, Scotland UK. ACM, New York, NY, USA, 13 pages. https://doi.org/10.1145/3290605.3300871"
+    }],
+    "title": {
+      "page": 0,
+      "region": {
+        "x1": 53.465999603271484,
+        "x2": 151.3298797607422,
+        "y1": 523.7094116210938,
+        "y2": 529.6179809570312
+      },
+      "text": "ACM Reference Format:"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 0,
+      "region": {
+        "x1": 317.5870056152344,
+        "x2": 559.8980102539062,
+        "y1": 250.60777282714844,
+        "y2": 484.1619873046875
+      },
+      "text": "Haptic feedback is widely available in commercial handheld devices including smartphones and game-controllers. Typically, this feedback has been used to provide the user with either a touch input confirmation during a finger-press or to provide a tactile notification to draw the attention of the user to an alert or message. In current commercial devices, the haptic stimulation for touch confirmation is applied on the finger pad, i.e. the underside of the pulp at the end of the finger. For tactile notification, the user receives the haptic stimulation in their hand if they are holding the device, or to the body or leg if the device is in the coat or trousers pocket. Currently, the stimulation is generated using small vibration motors that are programmed to provide vibrotactile feedback. The granularity of both these forms of feedback is relatively coarse. To provide more subtle and finer-grained haptic outputs, researchers have considered a range of fingerpad based displays [2, 12, 28]; and grasp oriented outputs on mobile devices through dynamic haptic systems at the edge of the mobile devices by changing their physical shape [8, 19]."
+    }, {
+      "page": 0,
+      "region": {
+        "x1": 317.5870056152344,
+        "x2": 559.8936767578125,
+        "y1": 489.7107849121094,
+        "y2": 603.7130126953125
+      },
+      "text": "In order to afford a wider range of possible tactile elements while accommodating the limited physical space available on mobiles, researchers have recently proposed the notion of using reconfigurable tactile elements [29]. These can emerge from a hidden reservoir when needed, move to the finger to provide haptic feedback, and then return to a hidden state [26, 29]. In this work, inspired by reconfigurable approach, we have developed a tactile element for back-of-device pleasant and useful interactions as illustrated in the following scenario:"
+    }, {
+      "page": 0,
+      "region": {
+        "x1": 317.47698974609375,
+        "x2": 559.7454833984375,
+        "y1": 622.8738403320312,
+        "y2": 701.010986328125
+      },
+      "text": "Eve is messaging on her smartphone sitting in a trainwhile holding it in one hand and inputting text with her thumb. While she is immersed in the unfolding text conversation, a small metal ball emerges from its dock on back of her phone. It moves towards the upper-third of her index finger, and slowly and gently rolls along from one side of her finger, over the tip, to the other side to subtly notify her of how"
+    }, {
+      "page": 0,
+      "region": {
+        "x1": 54.0,
+        "x2": 558.0009765625,
+        "y1": 750.914794921875,
+        "y2": 756.7197875976562
+      },
+      "text": "Paper 641 Page 1"
+    }, {
+      "page": 1,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 294.3180236816406,
+        "y1": 309.2177734375,
+        "y2": 351.489013671875
+      },
+      "text": "much of her journey remains. In addition, the marble lightly pokes the side of her finger to signify discrete locations at frequently used stops and rubs her finger pulp when her final stop is approaching."
+    }, {
+      "page": 1,
+      "region": {
+        "x1": 53.429718017578125,
+        "x2": 295.73687744140625,
+        "y1": 371.17779541015625,
+        "y2": 604.7319946289062
+      },
+      "text": "This example then demonstrates the palette of possibilities with the proposed approach using the extended area provided by the finger pulp periphery with the ability to provide locomotive, discrete poking and rubbing sensations. The periphery of the finger pad is mostly concentrated with type-2 mechanoreceptors. While less sensitive than the finger pad itself, it has the ability to discriminate between light touches, skin stretches and tapping [11, 31]. In this paper, we leverage it as a continuous surface to apply localized spatio-temporal haptic stimulation and explore the extent to which feedback on it can be perceived by users in a controlled laboratory experiment. Our goal is to rigorously scope the possible stimulation dimensions for usable perceptions while the finger pad is touching a surface. To do this we have built a motion controlled marble-based device and explore different factors such as the localization, marble size and motion speed. We present the results of the empirical user study, design guidelines to shape future deployments and illustrate the use of this new system through interaction and application scenarios."
+    }, {
+      "page": 1,
+      "region": {
+        "x1": 53.43000030517578,
+        "x2": 295.73834228515625,
+        "y1": 610.2808227539062,
+        "y2": 712.3289794921875
+      },
+      "text": "Previous work, such as [16] which conveyed bumps under a finger, showed evidence that non-wearable device fingertip haptic system could benefit user interaction. In this paper, we explore a wider output space not yet identified or evaluated. However, before tackling the technical challenge set by shape change interfaces (e.g. [4]), we first seek to determine the range and limitation of possibilities (in a similar fashion to other work such as [27]). Our approach to free the finger from any effector opens up the possibility of expansive, yet"
+    }, {
+      "page": 1,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 559.8907470703125,
+        "y1": 96.20877838134766,
+        "y2": 126.5260009765625
+      },
+      "text": "targeted, feedback on a larger surface, compared to requiring the user to wear a device which imposes a permanent sensation on a finger and onto a constrained area."
+    }, {
+      "page": 1,
+      "region": {
+        "x1": 327.9179992675781,
+        "x2": 495.057373046875,
+        "y1": 132.07481384277344,
+        "y2": 138.48101806640625
+      },
+      "text": "The main contributions of this paper are:"
+    }, {
+      "page": 1,
+      "region": {
+        "x1": 333.427001953125,
+        "x2": 559.8905029296875,
+        "y1": 147.20516967773438,
+        "y2": 238.2039794921875
+      },
+      "text": "• Exploring, for the first time, the use of the periphery of the finger pad for haptic feedback, • A new technique using a motion controlled marble for haptic feedback, • A controlled human-factor study informed by a designspace specification, • Guidelines to create a peripheral finger pad haptic feedback system, illustrated by use-cases."
+    }],
+    "title": {
+      "page": 0,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 411.0592041015625,
+        "y1": 235.6438751220703,
+        "y2": 242.07000732421875
+      },
+      "text": "1 INTRODUCTION"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 1,
+      "region": {
+        "x1": 317.656005859375,
+        "x2": 559.8984985351562,
+        "y1": 273.6407775878906,
+        "y2": 459.375
+      },
+      "text": "In the most contempoary handheld devices, the entire device vibrates to provide tactile feedback. This stimulus is coarse, and is generated by a small eccentric rotating mass vibration motor or a linear resonant actuator (as used in the Apple Taptic Engine) [5]. Poupyrev et al. developed a piezoelectric bending actuator (Touch Engine) for a similar effect [23]. In spite of being coarse, such tactile feedback has been shown to provide many useful applications. Complex vibration patterns were presented in Ambient Touch for intelligent touch notification, touch monitoring and tactile feedback during gesture control, for instance [22]. Vibrotactile feedback has also been shown to complement other output modalities, as in their combination with GUI elements [21]. In this case, as with others of this class, the user’s palm of the device holding hand also receives the stimuli as opposed to a highly localized feedback."
+    }],
+    "title": {
+      "page": 1,
+      "region": {
+        "x1": 317.95501708984375,
+        "x2": 411.9559631347656,
+        "y1": 258.67681884765625,
+        "y2": 265.10296630859375
+      },
+      "text": "2 RELATEDWORK"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 1,
+      "region": {
+        "x1": 317.6059875488281,
+        "x2": 559.8984375,
+        "y1": 490.7297668457031,
+        "y2": 712.3289794921875
+      },
+      "text": "Instead of vibrating the entire device, tactile stimuli can be generated on the device’s surface. In the electrovibration technique, then, tactile feedback is given through the capacitive coupling with the finger pad when the user slides the finger on the dielectric surface with a conductive under layer [2, 24]. Meanwhile, in the electrocutaneous stimulation technique, a mild DC current pulse is passed through the finger pad to create tactile sensation when the user touches the conductive surface [12]. In [28] an electric spark with mild AC current pulses is used to stimulate a tactile sensation when the finger is hovering over the conductive surface. All of these techniques use transparent surfaces and are particularly useful for touch interaction for a front of screen task, e.g. , for touch confirmation on content notification. In the case where the user is performing a task (e.g. typing on the keyboard and receiving haptic confirmations) it might be confusing and intrusive if additional haptic notifications (such as the ones in our scenario) are presented via the same medium. To overcome this, we, like others are considering"
+    }, {
+      "page": 1,
+      "region": {
+        "x1": 54.0,
+        "x2": 558.0009765625,
+        "y1": 750.914794921875,
+        "y2": 756.7197875976562
+      },
+      "text": "Paper 641 Page 2"
+    }, {
+      "page": 2,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 294.05645751953125,
+        "y1": 275.40179443359375,
+        "y2": 293.76300048828125
+      },
+      "text": "unobtrusive haptic feedback using the periphery, i.e. , edge or back of the device."
+    }],
+    "title": {
+      "page": 1,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 435.69775390625,
+        "y1": 475.7658386230469,
+        "y2": 482.1919860839844
+      },
+      "text": "Localized tactile feedback"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 2,
+      "region": {
+        "x1": 53.499000549316406,
+        "x2": 295.7394104003906,
+        "y1": 323.289794921875,
+        "y2": 437.2919921875
+      },
+      "text": "The electrovibration and electrocutaneous techniques mentioned above can be implemented at the periphery of a handheld device and it would not require a transparent surface on touchscreen based devices. Khurelbaatar et al. used the electrocutaneous tactile stimulation at the back of the device, for instance, to avoid giving tactile feedback to the entire palm [14]. The finger at the back of device receives the feedback instead of the finger touching the screen. Thus, there could be two channels - front and back - of tactile communication using two fingers."
+    }, {
+      "page": 2,
+      "region": {
+        "x1": 53.54899978637695,
+        "x2": 295.7337951660156,
+        "y1": 442.8417663574219,
+        "y2": 616.6199951171875
+      },
+      "text": "Recently, Jang et al. reported a tactile display at the edge of mobile devices using small piezoelectric actuators to provide haptic force feedback for both information input and output [8]. It created a rich haptic interaction experience on the side of the device. The user interacts with multiple fingers while holding the device in the same hand. There are many other implementations on the edges of devices to stimulate different haptic perceptions. Nakagawa et al. reported a shape memory alloy based device for information input as well as variable stiffness based haptic feedback [19]; and, Luk et al. explored feedback through lateral skin-stretching on the finger pad using piezoelectric actuators [17]. These devices are attractive because they do not instrument the user, however, the grip is modified and the user is required to learn the new haptic interaction mode."
+    }, {
+      "page": 2,
+      "region": {
+        "x1": 53.45000076293945,
+        "x2": 295.7406311035156,
+        "y1": 631.182861328125,
+        "y2": 712.3289794921875
+      },
+      "text": "Wearable haptic devices for the finger A number of wearable devices have been developed to provide haptic feedback around the finger, especially the index finger’s proximal phalanx. Gupta et al. reported a ring that clenches the finger using a shape memory alloy actuator [6]. Je et al. and Pece et al. presented TactoRing, PokeRing and MagTics to skin-drag and poke around the proximal"
+    }, {
+      "page": 2,
+      "region": {
+        "x1": 317.47698974609375,
+        "x2": 559.8983154296875,
+        "y1": 275.40179443359375,
+        "y2": 485.0459899902344
+      },
+      "text": "phalanx using a motorized tactor and electromagnetically actuated pins respectively [9, 10, 20]. Je et al. studied user’s ability to recognize distinct points around the finger and designed spatio-temporal patterns for haptic feedback [9, 10]. Minamizawa et al. built and studied a two-ring haptic system that provides kinesthetic feedback to the arm and tactile feedback on top of a finger [18]. Culbertson et al. presented WAVES a pair of voicecoil actuators embedded in a fingersleeve 3D guidance cues on the sides of the intermediate phalanx [3]. Kim et al. report on the HapCube which provides normal and tangential pseudo force feedback using asymmetric vibration on an enclosed finger [15]. Midair, e.g. , virtual and augmented reality applications could benefit from this approach. Karnik et al. explored the speed and direction as the tactile communication channels in the probing finger pad with a sliding corrugated surfaces giving shear force feedback [13]."
+    }, {
+      "page": 2,
+      "region": {
+        "x1": 317.70599365234375,
+        "x2": 559.8981323242188,
+        "y1": 490.59478759765625,
+        "y2": 592.6419677734375
+      },
+      "text": "The Eone Bradley tactile watch gives time with reconfigurable tactile elements [1]. It uses two magnetic ball bearings in two grooves, one on top and one on the side to display the time. Two sub-surface magnetic stages motorized by the mechanical actuation system of the watch control the motion of the ball bearings. The users locate the ball bearings visually or tactually to know the time. The ball bearings are constrained to the grooves and the users feel them as “bumps” or as a sliding ball under their finger pads."
+    }, {
+      "page": 2,
+      "region": {
+        "x1": 317.6561279296875,
+        "x2": 559.7457275390625,
+        "y1": 598.1907958984375,
+        "y2": 712.1939697265625
+      },
+      "text": "ShiftIO by Strasnick et al. is another closely related work [29]. It presented permanent disk magnets around the edge of a mobile device as the reconfigurable tactile elements. The locomotion of the magnets was controlled using thin flexible coils and switchable permanent magnets. The tactile elements could output information visually and tactually. In addition, it can sense touch input which allows the tactile element to be used as physical controls such as a button. It gives the haptic notifications as a “bump” to the user’s hand as they grip the device."
+    }, {
+      "page": 2,
+      "region": {
+        "x1": 54.0,
+        "x2": 558.0009765625,
+        "y1": 750.914794921875,
+        "y2": 756.7197875976562
+      },
+      "text": "Paper 641 Page 3"
+    }, {
+      "page": 3,
+      "region": {
+        "x1": 53.43000030517578,
+        "x2": 295.7374267578125,
+        "y1": 96.20877838134766,
+        "y2": 293.89801025390625
+      },
+      "text": "In this paper, we detail a haptic device related to the tactile watch; however, the ball bearing is not constrained to a groove. Furthermore, unlike shiftIO and the tactile watch, the tactile element is not designed to feel like a “bump”. That is, we move ball bearings of different sizes in different patterns on a flat surface. We stimulate the periphery of the finger pulp with these patterns to convey a range of tactile stimuli. In all of the previous literature, the haptic feedback in handheld devices is focussed on the finger pad or the palm. Haptic stimulation applied to the periphery of the finger pulp has not been reported. We believe that our technique could offer two main advantages. The first advantage is that it offers an additional peripheral channel for tactile feedback near the finger pad. The second is the ergonomic advantage where the users could receive multiple notifications without changing their grip while holding the device."
+    }],
+    "title": {
+      "page": 2,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 168.14334106445312,
+        "y1": 308.32586669921875,
+        "y2": 314.75201416015625
+      },
+      "text": "Peripheral haptic devices"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 3,
+      "region": {
+        "x1": 53.499000549316406,
+        "x2": 295.7408447265625,
+        "y1": 329.33477783203125,
+        "y2": 431.3819885253906
+      },
+      "text": "The motivation of our work is to explore and identify the possible dimensions than could be leveraged to convey information through the peripheral finger pad. This initial survey would help us motivate guidelines for designers and researchers to implement a reliable notification system with greater throughput than the common binary vibration based system. One motivation to use the periphery of the finger pad is to propose a system that is not in conflict with current and state-of-the-art haptic feedbacks."
+    }, {
+      "page": 3,
+      "region": {
+        "x1": 53.43000030517578,
+        "x2": 295.7410888671875,
+        "y1": 436.9307861328125,
+        "y2": 574.843994140625
+      },
+      "text": "In practice, such a system could be implemented using different technologies (e.g. liquid metal drops [26], pneumatic buttons [7]). We propose a technology which can be easily replicated using rapid prototyping. It employs a ferromagnetic marble whose motion is controlled via a computer that drives a magnetic stage. The technology is not used to create a new haptic feedback device. It is used to demonstrate the concept of peripheral finger pad haptic feedback and evaluate it in a user study. We argue that it has good properties for an initial study: it offers high control of different factors which are presented next, and does not require to take any precaution."
+    }],
+    "title": {
+      "page": 3,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 138.88201904296875,
+        "y1": 314.370849609375,
+        "y2": 320.7969970703125
+      },
+      "text": "3 DESIGN SPACE"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 3,
+      "region": {
+        "x1": 53.499000549316406,
+        "x2": 294.0569152832031,
+        "y1": 610.2808227539062,
+        "y2": 640.5980224609375
+      },
+      "text": "The dimensions that can be leveraged are closely related to the motion and physical factors of the marble. Below, we describe the principal dimensions that we considered."
+    }, {
+      "page": 3,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 295.7385559082031,
+        "y1": 658.101806640625,
+        "y2": 712.3289794921875
+      },
+      "text": "Angle. The 1D surface formed by the periphery of the finger pad is bent around the finger, which could be approximated to an arc of an ellipse. Contacting the marble on that surface brings an idea of localization that can be translated in directional motion. Different angles could be leveraged to convey"
+    }, {
+      "page": 3,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 558.2110595703125,
+        "y1": 329.3587951660156,
+        "y2": 347.7200012207031
+      },
+      "text": "different pieces of information (e.g. see the two rightmost arrows of figure 2-a)."
+    }, {
+      "page": 3,
+      "region": {
+        "x1": 317.656005859375,
+        "x2": 559.8910522460938,
+        "y1": 359.2417907714844,
+        "y2": 449.3340148925781
+      },
+      "text": "Sharpness. When contacting the finger pad, the sharpness of the contact depends on the current motion of the marble. The contact can be static if the marble is steadily pushing into the finger pulp. It can be dynamic if the marble is rapidly rolling bidirectionally along the finger pulp. These contact characteristics could be used as different style of contact: such as marble poking or marble vibrating (e.g. see figure 2- b)."
+    }, {
+      "page": 3,
+      "region": {
+        "x1": 317.5870056152344,
+        "x2": 559.7442626953125,
+        "y1": 460.85577392578125,
+        "y2": 527.0379638671875
+      },
+      "text": "Pattern. The previous dimension describes localized contact. On the other end of the spectrum, we find continuous contact. Continuous contact describe a motion along that 1D surface with the marble continuously in contact with the periphery of the finger pad. In this mode, different motion patterns could be leveraged (e.g. see the bottom arrow of figure 2-a)."
+    }, {
+      "page": 3,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 559.8906860351562,
+        "y1": 538.559814453125,
+        "y2": 580.8309936523438
+      },
+      "text": "Speed. A continuous motion on a surface implies a speed at which the marble is moving. Speed is therefore a dimension of motion patterns that could be used to increase the throughput (e.g. see figure 2-c)."
+    }, {
+      "page": 3,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 558.4041748046875,
+        "y1": 592.3528442382812,
+        "y2": 634.625
+      },
+      "text": "Size. Finally, a marble is a physical spherical object that has intrinsic physical dimensions. The most obvious one is its size. Varying its diameter and therefore its size, is another dimension that could be leveraged (e.g. see figure 2-d)."
+    }, {
+      "page": 3,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 558.3992919921875,
+        "y1": 646.1467895507812,
+        "y2": 712.3289794921875
+      },
+      "text": "Others. Other dimensions such as the type of material of the marble, or its surface roughness, stiffness, adhesion and temperature etc. could be tested in order to increase the throughput of the system. However, we chose the above five dimensions in order to keep subsequent human factor experiment feasible within a reasonable amount of time."
+    }, {
+      "page": 3,
+      "region": {
+        "x1": 54.0,
+        "x2": 558.0009765625,
+        "y1": 750.914794921875,
+        "y2": 756.7197875976562
+      },
+      "text": "Paper 641 Page 4"
+    }],
+    "title": {
+      "page": 3,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 107.48861694335938,
+        "y1": 595.3168334960938,
+        "y2": 601.7429809570312
+      },
+      "text": "Dimensions"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 4,
+      "region": {
+        "x1": 53.43000030517578,
+        "x2": 295.5885925292969,
+        "y1": 111.1528091430664,
+        "y2": 320.7969970703125
+      },
+      "text": "In order to stimulate peripheral haptic feedback, we built a prototype based on 4 mini DVD drive motors, metallic rods, neodymium magnets and ball bearings (see figure 3). The device controls the 2D position of a ball bearing within a 5cm-side square area. The motors were placed on each side of the square area and connected to an Arduino. Each opposite pair was bound to a perpendicular metallic rod and controlled the position of the rod along the side. A 3D printed platform was created to slide along the rods sitting at the intersection point. Neodymium magnets were glued atop of the platform. The whole device was enclosed in a laser cut box. A ferromagnetic ball bearing is placed on the box cover, with the magnets below it under the box cover. Due to the strong magnetic attraction, moving the platform rolled the ball bearing on the box cover. To control the position of the ball, we developed a C++ application with the Qt framework that communicated via serial port of the computer with the Arduino."
+    }],
+    "title": {
+      "page": 4,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 127.29505157470703,
+        "y1": 96.18885803222656,
+        "y2": 102.614990234375
+      },
+      "text": "4 HARDWARE"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 4,
+      "region": {
+        "x1": 53.31999969482422,
+        "x2": 295.73486328125,
+        "y1": 359.2227783203125,
+        "y2": 712.3289794921875
+      },
+      "text": "We evaluated the prototype in the back-of-device operation mode as it will be deployed for the user study. A marble with 7 mm diameter was chosen which was the common size for most participants. The motion of the marble was captured 1080×1920 high definition at 250 frames per second using a Sony RX10 III camera. Each frame of the movies was converted to a grey scale image and the motion was tracked using the imfindcircles function in Matlab. The distance was calibrated using the dimensions of the enclosure. We implemented two speed modes, slow and fast, based on a pilot study to test binary detection with the users. Figure 4 (a) shows the measured motion of the marble in both speed modes along one axis of the stage using two of the four linear actuators. The speed values were measured to be 10.8 mm/s and 21.4 mm/s in slow and fast modes. The noise amplified by five times and offset of 5 mm is shown in Figure 4 (a). We observed the 1/f noise below 10 Hz in the noise spectrum. There was also a small peak in the noise spectrum around 6 Hz. The standard deviation of the noise was 0.26 mm. Both the speed and vibration are generated by the stage. Similar speed and vibration were measured with marbles of different sizes. We observed similar performance when the marble motion was controlled along the other axis of the stage using the other two linear actuators. The general motion of the marble is controlled by triggering the two axes alternatively. This created minor oscillations in the marble motion. We evaluated the prototype in various cross axis motions. A clockwise and counterclockwise motion pattern used on the user’s finger is shown in Figure 4 (b). We observed minor"
+    }, {
+      "page": 4,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 558.2109375,
+        "y1": 263.5668029785156,
+        "y2": 281.9280090332031
+      },
+      "text": "hysteresis and intermittent oscillation at the higher speed mode."
+    }],
+    "title": {
+      "page": 4,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 148.9446563720703,
+        "y1": 344.25885009765625,
+        "y2": 350.68499755859375
+      },
+      "text": "Prototype evaluation"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 4,
+      "region": {
+        "x1": 317.47698974609375,
+        "x2": 559.8923950195312,
+        "y1": 311.394775390625,
+        "y2": 341.71099853515625
+      },
+      "text": "We conducted a controlled experiment, targeted at assessing what peripheral haptic feedback mechanisms can be leveraged to create passive notification."
+    }],
+    "title": {
+      "page": 4,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 396.20440673828125,
+        "y1": 296.43084716796875,
+        "y2": 302.85699462890625
+      },
+      "text": "5 EXPERIMENT"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 4,
+      "region": {
+        "x1": 317.656005859375,
+        "x2": 559.8986206054688,
+        "y1": 371.17779541015625,
+        "y2": 592.7769775390625
+      },
+      "text": "In this experiment, we asked 16 participants (40.8 mean age, 11.5 std dev, all right-handed, 6 females, only one computer scientist, recruited at the local university campus) to characterize various haptic stimuli. Our prototype was placed upside down (i.e. ball bearings facing down and hidden from the participant’s sight) on a stand in front of the participants. Participants were asked to place their elbow on an arm rest (to avoid the gorilla arm effect) and grab the device with the index finger at the bottom and thumb on top similar to holding their smart phone (see figure 6). We asked them to slightly adjust the positioning of the prototype so that the index finger would be placed at a known position and orientation with respect to frame of reference of the prototype. The participant could see neither the motion nor the size of the ball bearing. The goal is to evaluate participants’ ability to recognize various factors composing haptic stimuli located on the peripheral parts of their fingertip pulp. In addition, we also gathered qualitative data to describe how the stimuli were perceived."
+    }, {
+      "page": 4,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 559.8980712890625,
+        "y1": 598.3258056640625,
+        "y2": 712.3289794921875
+      },
+      "text": "After explaining the procedure to the participant, the experimenter asked the participant to place their index finger on the surface of the experimental device. The device embedded a 3D printed guide that helped placing the finger at a known orientation (e.g. perpendicular to the edge) and a tiny hole that gave a reference point when placing the pad of the finger. Those two features were added to ensure a consistent placement of the finger across the experiment. The experimenter then used a digital caliper to measure the dimensions of the finger while placed and slightly squeezed on"
+    }, {
+      "page": 4,
+      "region": {
+        "x1": 54.0,
+        "x2": 558.0009765625,
+        "y1": 750.914794921875,
+        "y2": 756.7197875976562
+      },
+      "text": "Paper 641 Page 5"
+    }, {
+      "page": 5,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 295.7409973144531,
+        "y1": 96.20877838134766,
+        "y2": 186.301025390625
+      },
+      "text": "the surface of the device. The measurements were: the width, depth and elevation of the finger. These measurements were used to adapt the stimuli to the different finger morphologies. Once the measurements were taken, the experimenter played different stimuli to the participants to ensure the measurements accuracy. In practice, this tailoring could be done by measuring the fully pressed finger print size using a touch sensor."
+    }, {
+      "page": 5,
+      "region": {
+        "x1": 53.31999969482422,
+        "x2": 295.73590087890625,
+        "y1": 191.85081481933594,
+        "y2": 712.3289794921875
+      },
+      "text": "The experiment was composed of two parts, each focusing on a particular type of stimuli. The first part aimed at assessing participants’ ability to recognize localized contact points. We used a ball bearing with a diameter corresponding to 65% of the elevation of the finger1 (rounded to the closest integer in millimeters). This part was composed of 20 stimuli varying 2 factors. The first factor was the Angle between the axis of the finger and the general direction of the motion centered in the middle of the first phalanx, which describes the location at which the ball bearing was touching the finger. Angle varied from −90° to 90° with a 20° increment (10 different angles in total). The second factor was Type which describes 2 different types of sharpness: Poke where the ball bearing performed a single contact with the finger lasting 100ms; and Vibration where the ball bearing performed a vibration composed of 5 localized back and forth roll in contact with the finger. The poking force depended on the skin stiffness of the users. However the prototype could exert a maximum 0.1N force. Similarly, the stage vibrated by 3mm but the actual vibration in contact with the skin depended on the skin friction of the users. After each stimuli and using a custom made application (see figure 6), we asked participants to place markers on a virtual finger in order to record: the location and the surface covered on which they felt the stimuli. We also asked them to rate on a 5-points Likert scale How strong was the stimulus (from very weak to very strong) and How comfortable was the stimulus (from very uncomfortable to very comfortable). The second part aimed at assessing participants’ ability to recognize patterns. This part was composed of 20 stimuli varying 3 factors. The first factor was the Pattern which describes the motion followed by the ball bearing along the finger. The different Patterns were (figure 5): rolling from the left part of the pulp to the right part of the pulp in a Clockwise motion, its Counter-Clockwise counter-part, rolling up and down on the Left or Right part of the pulp, and rolling left and right on the Top part of the pulp. The second factor was Speed which describes the speed at which the ball bearing was rolling on the surface. It has 2 different values2: Slow (11mm.s−1) and Fast (21mm.s−1). The third 165% of the elevation corresponds approximately to the height at which the finger is the widest. 2We chose the speeds in function of our device mechanical constraints, but also to ensure that the marbles would not fall due to sudden accelerations."
+    }, {
+      "page": 5,
+      "region": {
+        "x1": 317.656005859375,
+        "x2": 559.8916625976562,
+        "y1": 455.11376953125,
+        "y2": 497.385009765625
+      },
+      "text": "factor was Size which describes the size of the ball bearing. We chose two different sizes of ball bearing diameter corresponding to 40% and 90% the elevation of the finger3 (rounded to the closest integer in millimeters)."
+    }, {
+      "page": 5,
+      "region": {
+        "x1": 317.5870056152344,
+        "x2": 559.8943481445312,
+        "y1": 502.93377685546875,
+        "y2": 640.8469848632812
+      },
+      "text": "After each stimuli and using the same custom made application (see figure 6), we asked participants to select the pattern they recognized from a list, identify the size of the ball bearing using a visual comparison between a virtual representation of the ball bearing and an at-scale virtual representation of each participant’s finger, and identify the speed of the ball bearing from a list of 2 items (both speeds were demonstrated to the participants during the initial explanations). We also asked them to rate on a 5-points Likert scale How strong the stimuli was (from very weak to very strong) and How comfortable the stimuli was (from very uncomfortable to very comfortable)."
+    }, {
+      "page": 5,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 559.89453125,
+        "y1": 646.3958129882812,
+        "y2": 688.66796875
+      },
+      "text": "Throughout the experiment, a webcam pointed at the surface of the device was streaming the positioning of the finger to the experimenter who could, if needed, ask the participant to reposition their finger if they had shifted it. In both parts,"
+    }, {
+      "page": 5,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 502.2370300292969,
+        "y1": 705.4641723632812,
+        "y2": 712.3289794921875
+      },
+      "text": "3We chose these sizes to be centered around 65% (±25%)."
+    }, {
+      "page": 5,
+      "region": {
+        "x1": 54.0,
+        "x2": 558.0009765625,
+        "y1": 750.914794921875,
+        "y2": 756.7197875976562
+      },
+      "text": "Paper 641 Page 6"
+    }, {
+      "page": 6,
+      "region": {
+        "x1": 53.43000030517578,
+        "x2": 295.7331237792969,
+        "y1": 297.00177001953125,
+        "y2": 482.7359924316406
+      },
+      "text": "when a trial was completed, the experiment setup automatically progressed to the next stimuli and the experimenter systematically removed the ball bearing used before placing the next one (even if the same was used several time in row) to avoid giving up cues on the size between 2 successive trials. Participants had noise canceling headphones and were played a white noise sound to cover the noise made by our hardware. On average each trial took 30 seconds to complete. The experiment ended after a brief debriefing session. In total, the experiment lasted approximately 40 minutes. Half of the participants started with the first part of the experiment and the other half with the second part. Within each part, participants were presented the different stimuli in a pseudo-random order. The experimental design was: 10 Angles × 2 Types + 2 Sizes × 2 Speeds × 5 Patterns = 40 stimuli per participant."
+    }],
+    "title": {
+      "page": 4,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 453.71087646484375,
+        "y1": 356.2138671875,
+        "y2": 362.6400146484375
+      },
+      "text": "Method, procedures and tasks"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 6,
+      "region": {
+        "x1": 53.499000549316406,
+        "x2": 295.73907470703125,
+        "y1": 513.4177856445312,
+        "y2": 567.6439819335938
+      },
+      "text": "This section reports statistical analysis testing of the different dimensions aforementioned. We discuss the results and the feasibility of leveraging these different dimensions for a peripheral finger pad haptic feedback system in the next section. We summarise all the tested factors in table 1."
+    }],
+    "title": {
+      "page": 6,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 111.46385192871094,
+        "y1": 498.453857421875,
+        "y2": 504.8800048828125
+      },
+      "text": "6 RESULTS"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 6,
+      "region": {
+        "x1": 53.797637939453125,
+        "x2": 295.7409973144531,
+        "y1": 598.3258056640625,
+        "y2": 712.3289794921875
+      },
+      "text": "Our goal in this analysis was to identify the number of different angles we can reliably recognize. To analyze the main effects, we conducted standard within-subjects RM-ANOVA tests on the measured variable GuessedAngle. We used the ezANOVA package in the ez R environment. When significant effects were found, we carried out post-hoc analyses using Tukey tests. The mean GuessedAngle for all Angles are summarized in figure 7. For Type Poke+Vibration (i.e. aggregation of all Poke and Vibration trials), Poke and Vibration, we ran three"
+    }, {
+      "page": 6,
+      "region": {
+        "x1": 317.656005859375,
+        "x2": 559.8883666992188,
+        "y1": 96.20877838134766,
+        "y2": 162.3909912109375
+      },
+      "text": "separated tests and found a significant main effect of Angle (F9,15 = 159.7 and p < 0.001; F9,15 = 75.3 and p < 0.001; F9,15 = 83.1 and p < 0.001). We conducted post-hoc analysis to identify the Angles that could be statistically discriminated for all Type. When significantly different, all p < 0.04. Figure 8 summarizes the different clusters found."
+    }],
+    "title": {
+      "page": 6,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 80.4390640258789,
+        "y1": 583.36181640625,
+        "y2": 589.7879638671875
+      },
+      "text": "Angle"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 6,
+      "region": {
+        "x1": 317.5870056152344,
+        "x2": 558.2122192382812,
+        "y1": 193.93479919433594,
+        "y2": 248.1610107421875
+      },
+      "text": "Our goal in this analysis was to identify possible differences of touch resolution depending on the Angle of contact. We used RM-ANOVA and Tukey tests on the measured variable Surface (i.e. surface on the periphery of the finger pad on which they felt the stimuli)."
+    }, {
+      "page": 6,
+      "region": {
+        "x1": 317.656005859375,
+        "x2": 559.8883666992188,
+        "y1": 253.71080017089844,
+        "y2": 367.7130126953125
+      },
+      "text": "For Type Poke+Vibration and Vibration, we found a significant main effect of Angle (F9,15 = 2.8 and p < 0.005; F9,15 = 2.9 and p < 0.004). We conducted post-hoc analysis to identify the Angles that could be statistically discriminated. For Poke+Vibration, the Angle 70° was significantly different from −30° and 30° (all p < 0.04). For Vibration, the Angle 70° was significantly different from 30° (p < 0.04). There was no significant main effect of Angle for Poke (F9,15 = 0.9 and p = 0.49). Figure 9 summarizes the Surface of Poke and Vibration in function of Angle."
+    }, {
+      "page": 6,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 559.8856811523438,
+        "y1": 384.2928771972656,
+        "y2": 441.52801513671875
+      },
+      "text": "Patterns Figure 10 summarizes the recognition rates of the different Patterns. The overall recognition rate is 92.4%. 8 participants achieved a 100% recognition rate and 5 participants committed 2 or less errors."
+    }, {
+      "page": 6,
+      "region": {
+        "x1": 54.0,
+        "x2": 558.0009765625,
+        "y1": 750.914794921875,
+        "y2": 756.7197875976562
+      },
+      "text": "Paper 641 Page 7"
+    }, {
+      "page": 7,
+      "region": {
+        "x1": 133.2579803466797,
+        "x2": 216.6855926513672,
+        "y1": 219.52142333984375,
+        "y2": 225.83331298828125
+      },
+      "text": "Poke+Vibration"
+    }, {
+      "page": 7,
+      "region": {
+        "x1": 53.43107986450195,
+        "x2": 262.07257080078125,
+        "y1": 140.4122772216797,
+        "y2": 156.9488525390625
+      },
+      "text": "Poke Vibration -90°"
+    }, {
+      "page": 7,
+      "region": {
+        "x1": 55.99320602416992,
+        "x2": 72.01443481445312,
+        "y1": 124.92552185058594,
+        "y2": 129.2952880859375
+      },
+      "text": "-70°"
+    }, {
+      "page": 7,
+      "region": {
+        "x1": 63.37068176269531,
+        "x2": 93.19969940185547,
+        "y1": 101.41069030761719,
+        "y2": 116.51715087890625
+      },
+      "text": "-50° -30°"
+    }, {
+      "page": 7,
+      "region": {
+        "x1": 93.54840087890625,
+        "x2": 144.42906188964844,
+        "y1": 93.85935974121094,
+        "y2": 105.78045654296875
+      },
+      "text": "-10° -10° -30°"
+    }, {
+      "page": 7,
+      "region": {
+        "x1": 142.2056121826172,
+        "x2": 158.23681640625,
+        "y1": 112.14738464355469,
+        "y2": 116.51715087890625
+      },
+      "text": "-50°"
+    }, {
+      "page": 7,
+      "region": {
+        "x1": 149.58302307128906,
+        "x2": 165.61422729492188,
+        "y1": 126.17796325683594,
+        "y2": 130.5477294921875
+      },
+      "text": "-70°"
+    }, {
+      "page": 7,
+      "region": {
+        "x1": 152.14520263671875,
+        "x2": 196.03785705566406,
+        "y1": 140.4122772216797,
+        "y2": 144.78204345703125
+      },
+      "text": "-90° -90°"
+    }, {
+      "page": 7,
+      "region": {
+        "x1": 182.57875061035156,
+        "x2": 198.5999755859375,
+        "y1": 124.92552185058594,
+        "y2": 129.2952880859375
+      },
+      "text": "-70°"
+    }, {
+      "page": 7,
+      "region": {
+        "x1": 189.95620727539062,
+        "x2": 219.78524780273438,
+        "y1": 101.41069030761719,
+        "y2": 116.51715087890625
+      },
+      "text": "-50° -30°"
+    }, {
+      "page": 7,
+      "region": {
+        "x1": 220.13392639160156,
+        "x2": 271.01458740234375,
+        "y1": 93.85935974121094,
+        "y2": 105.78045654296875
+      },
+      "text": "-10° -10° -30°"
+    }, {
+      "page": 7,
+      "region": {
+        "x1": 268.7911376953125,
+        "x2": 284.82232666015625,
+        "y1": 112.14738464355469,
+        "y2": 116.51715087890625
+      },
+      "text": "-50°"
+    }, {
+      "page": 7,
+      "region": {
+        "x1": 276.1685791015625,
+        "x2": 292.19976806640625,
+        "y1": 126.17796325683594,
+        "y2": 130.5477294921875
+      },
+      "text": "-70°"
+    }, {
+      "page": 7,
+      "region": {
+        "x1": 278.73077392578125,
+        "x2": 294.761962890625,
+        "y1": 140.4122772216797,
+        "y2": 144.78204345703125
+      },
+      "text": "-90°"
+    }, {
+      "page": 7,
+      "region": {
+        "x1": 117.88479614257812,
+        "x2": 133.90602111816406,
+        "y1": 209.29661560058594,
+        "y2": 213.6663818359375
+      },
+      "text": "-90°"
+    }, {
+      "page": 7,
+      "region": {
+        "x1": 120.4469223022461,
+        "x2": 136.4681396484375,
+        "y1": 193.8098602294922,
+        "y2": 198.17962646484375
+      },
+      "text": "-70°"
+    }, {
+      "page": 7,
+      "region": {
+        "x1": 127.82439422607422,
+        "x2": 157.65341186523438,
+        "y1": 170.29502868652344,
+        "y2": 185.4014892578125
+      },
+      "text": "-50° -30°"
+    }, {
+      "page": 7,
+      "region": {
+        "x1": 158.00210571289062,
+        "x2": 208.88278198242188,
+        "y1": 162.7436981201172,
+        "y2": 174.664794921875
+      },
+      "text": "-10° -10° -30°"
+    }, {
+      "page": 7,
+      "region": {
+        "x1": 206.65933227539062,
+        "x2": 222.69053649902344,
+        "y1": 181.03172302246094,
+        "y2": 185.4014892578125
+      },
+      "text": "-50°"
+    }, {
+      "page": 7,
+      "region": {
+        "x1": 214.0367431640625,
+        "x2": 230.0679473876953,
+        "y1": 195.0623016357422,
+        "y2": 199.43206787109375
+      },
+      "text": "-70°"
+    }, {
+      "page": 7,
+      "region": {
+        "x1": 216.5989227294922,
+        "x2": 232.63014221191406,
+        "y1": 209.29661560058594,
+        "y2": 213.6663818359375
+      },
+      "text": "-90°"
+    }, {
+      "page": 7,
+      "region": {
+        "x1": 53.79798889160156,
+        "x2": 295.6417541503906,
+        "y1": 239.70541381835938,
+        "y2": 300.40802001953125
+      },
+      "text": "Figure 8: Angle discrimination for the combination and each Type of sharpness (Poke and Vibration). Red arc represent groups of angles that cannot be differentiated. For instance, an arc spanning from −90° to −50° means that −90°, −70° and −50° cannot be differentiated. Indented red arcs show the beginning of a new zone that can be discriminated."
+    }],
+    "title": {
+      "page": 6,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 394.2417297363281,
+        "y1": 178.97084045410156,
+        "y2": 185.39697265625
+      },
+      "text": "Touch resolution"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 7,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 294.2408447265625,
+        "y1": 338.7497863769531,
+        "y2": 440.7969970703125
+      },
+      "text": "Our goal in this analysis was to identify how far apart ball diameters should be to reliably differentiate them. We used RM-ANOVA on the measured variable ErrorSize (i.e. the absolute difference in mm between the recognized diameter and the actual one). The mean ErrorSize for all Patterns are summarized in figure 10. For ErrorSize, we found no significant main effect of Pattern (F4,15 = 0.5 and p = 0.76). The average ErrorSize is 2.1mm (SD 1.4mm)."
+    }],
+    "title": {
+      "page": 7,
+      "region": {
+        "x1": 53.798004150390625,
+        "x2": 72.18970489501953,
+        "y1": 323.785888671875,
+        "y2": 330.2120361328125
+      },
+      "text": "Size"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 7,
+      "region": {
+        "x1": 53.79764175415039,
+        "x2": 294.31805419921875,
+        "y1": 470.6587829589844,
+        "y2": 548.7960205078125
+      },
+      "text": "Our goal in this analysis was to identify if we would reliably differentiate two different speeds. We used RM-ANOVA on the measured variable SpeedRecognition (i.e. 1 if the right speed was recognized, 0 otherwise). For SpeedRecognition, we found no significant main effect of Pattern (F4,15 = 0.2 and p = 0.94). The average SpeedRecognition is 0.33mm (SD 0.5mm)."
+    }],
+    "title": {
+      "page": 7,
+      "region": {
+        "x1": 53.79801940917969,
+        "x2": 81.24607849121094,
+        "y1": 455.6948547363281,
+        "y2": 462.1210021972656
+      },
+      "text": "Speed"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 7,
+      "region": {
+        "x1": 317.5870056152344,
+        "x2": 559.8909912109375,
+        "y1": 466.81878662109375,
+        "y2": 628.6430053710938
+      },
+      "text": "Our goal in this analysis was to explore the perceived strength of the different stimuli. To analyze the main effects, we conducted standard Kruskal-Wallis H-test tests on the measured variable Strength. We used the scipy stats library in the Python environment. When significant effects were found, we carried out post-hoc analyses using T-test tests. The distributions of the perceived Strength for all Type, ball Sizes and Patterns are summarized in figure 11. We found a significant main effect of Type (Kru = 39.1 and p < 0.001). We conducted post-hoc analysis to identify the Types that could be statistically discriminated: all pairs between Poke (m = 2.5, SD = 1.1), Vibration (m = 3.3, SD = 1.1) and Pattern (m = 2.9, SD = 1.1) were significantly different (all p < 0.001)."
+    }, {
+      "page": 7,
+      "region": {
+        "x1": 317.5870056152344,
+        "x2": 559.7367553710938,
+        "y1": 634.1918334960938,
+        "y2": 664.5079956054688
+      },
+      "text": "We found a significant main effect of ball Size (Kru = 67.0 and p < 0.001). The respective mean and standard deviation were: Small (m = 2.4, SD = 1.0) and Big (m = 3.4, SD = 1.0)."
+    }, {
+      "page": 7,
+      "region": {
+        "x1": 317.6960144042969,
+        "x2": 559.8904418945312,
+        "y1": 670.0568237304688,
+        "y2": 712.3289794921875
+      },
+      "text": "We found no significant main effect of the different Patterns (Kru = 6.4 and p = 0.17), nor significant main effect of Angles for the different Types Poke+Vibration, Poke and Vibration (all Kru < 15.5 and all p > 0.07)."
+    }, {
+      "page": 7,
+      "region": {
+        "x1": 54.0,
+        "x2": 558.0009765625,
+        "y1": 750.914794921875,
+        "y2": 756.7197875976562
+      },
+      "text": "Paper 641 Page 8"
+    }],
+    "title": {
+      "page": 7,
+      "region": {
+        "x1": 317.95501708984375,
+        "x2": 357.1893310546875,
+        "y1": 451.8548278808594,
+        "y2": 458.2809753417969
+      },
+      "text": "Strength"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 8,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 295.73773193359375,
+        "y1": 418.3357849121094,
+        "y2": 472.56298828125
+      },
+      "text": "Our goal in this analysis was to explore the perceived comfort of the different stimuli. We used Kruskal-Wallis H-test and T-test tests on the measured variable Comfort. The distributions of the perceived Comfort for all Type, ball Sizes and Patterns are summarized in figure 12."
+    }, {
+      "page": 8,
+      "region": {
+        "x1": 53.43000030517578,
+        "x2": 295.5797424316406,
+        "y1": 478.1117858886719,
+        "y2": 508.4280090332031
+      },
+      "text": "We found a significant main effect of ball Size (Kru = 8.4 and p < 0.02). The respective mean and standard deviation were: Small (m = 3.1, SD = 0.9) and Big (m = 3.4, SD = 0.8)."
+    }, {
+      "page": 8,
+      "region": {
+        "x1": 53.79792785644531,
+        "x2": 295.1412658691406,
+        "y1": 513.976806640625,
+        "y2": 568.2039794921875
+      },
+      "text": "We found no significant main effect of Type (Kru = 4.4 and p = 0.11), nor significant main effect of the different Patterns (Kru = 2.7 and p = 0.62), nor significant main effect of Angles for the different Types Poke+Vibration, Poke and Vibration (all Kru < 5.5 and all p > 0.78)."
+    }],
+    "title": {
+      "page": 8,
+      "region": {
+        "x1": 53.798004150390625,
+        "x2": 92.36477661132812,
+        "y1": 403.3718566894531,
+        "y2": 409.7980041503906
+      },
+      "text": "Comfort"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 8,
+      "region": {
+        "x1": 52.672000885009766,
+        "x2": 295.1772155761719,
+        "y1": 598.3258056640625,
+        "y2": 712.3289794921875
+      },
+      "text": "During the interview, we asked participants how confident they were when reporting the guessed angle, the surface covered and the pattern. 13 of them said that they felt “pretty” or “very” confident in general. However one participant said “I was pretty confident. Sometime I was not quite sure but I double thought it and I got it”. Out of the 13, three stated that recognizing the surface covered was somehow more challenging. Another one said “I was confident with the [angle] but it was harder with the weak touches”. The three participants that were not so confident said: “It was quite"
+    }, {
+      "page": 8,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 559.7440185546875,
+        "y1": 96.20877838134766,
+        "y2": 174.34600830078125
+      },
+      "text": "challenging in general, I sort of remember what it was like. Strangely enoughwhen I look towardmy finger, even though hidden, I would bemore accurate”; “I was pretty confident but not that much in the end because starting to have numbness in the finger after a while.”; and “I think I did pretty good for the patterns. For the [angle] it felt as if it was always on the tip of my finger”."
+    }, {
+      "page": 8,
+      "region": {
+        "x1": 316.8290100097656,
+        "x2": 559.8980712890625,
+        "y1": 179.8948211669922,
+        "y2": 389.53900146484375
+      },
+      "text": "Two of our participants had overhanging fingernails (3mm and 1.5mm). We asked them a specific question on the difference of sensation between the nail part and the skin. The first one said “It was the same kind of sensation between the nail and the skin”. The second one said “Sensation on the nail were the same as on the skin”. While choosing the set of patterns, we narrowed down the selection to the presented five in order to keep the experiment under a reasonable time limit. However, we ideally wanted to test one way pattern on each side on the tip of the finger, suspecting that participants would be able to tell the difference. We therefore asked them if they would have been able to differentiate those one way patterns. 15 of them were “definitely sure” or “pretty confident” they would have been able to do so. The last participant told us that he used the 2-way motion to confirm the side and disambiguate between the side and circular patterns, and therefore “don’t know if [he] would have been able to”."
+    }, {
+      "page": 8,
+      "region": {
+        "x1": 54.0,
+        "x2": 558.0009765625,
+        "y1": 750.914794921875,
+        "y2": 756.7197875976562
+      },
+      "text": "Paper 641 Page 9"
+    }],
+    "title": {
+      "page": 8,
+      "region": {
+        "x1": 53.798004150390625,
+        "x2": 97.6551284790039,
+        "y1": 583.36181640625,
+        "y2": 589.7879638671875
+      },
+      "text": "Interview"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 9,
+      "region": {
+        "x1": 52.11488342285156,
+        "x2": 295.7410888671875,
+        "y1": 111.1528091430664,
+        "y2": 703.3619995117188
+      },
+      "text": "With the Pulp Friction study we aimed at exploring the use of the finger pad periphery for haptic feedback. Using the periphery of the finger has the advantage of expanding the realm of haptic feedback as it is not concurrent with existing feedback which are applied to finger pad or palm. We argue that one could still use the phone vibration mode alongside our marble multiplying the possibilities. Our objective was to layout the different dimensions that could be leveraged for a new haptic notification system, as well as proceeding in an initial test of these different dimensions. We compile our findings into a set of initial guidelines. Angle and sharpness. Figure 8 shows the distinct zones of the GuessedAngle variable that the participants perceived for poke, vibration and combined poke and vibration modes. For reliable haptic feedback, the designers could choose non-consecutive zones. For example, -90° to -70°, - 30° to -10°, 10° to 30° and 50° to 90° for vibration could be selected. When using a discrete poking stimuli, up to five different angles, e.g. -90°, -30°, 0°, 30° and 90° can be chosen spread around the finger. This number drops to four, e.g. -90°, -30°, 30° and 90° when using a discrete vibrating stimuli. This result correlates the fact that vibration feels more spread than poking. Looking at the analysis of the Surface variable, we are not able to characterize the haptic resolution of the periphery. However when looking at the figure 9, especially the vibration data, one could hypothesize that away from the finger tip, haptic resolution is less. More studies should be carried out to either infirm or confirm this hypothesis. Patterns. According to the analysis of the Pattern recognition alongside participants comments, designers can accurately rely on our five proposed patterns as well as orientation versions of the Left,Right andTop Patterns.When observing the participants, we noticed that the lack of attention after a certain number of trials, as well as a confusion due to their mental representation of the Clockwise and CounterClockwise Patterns can partly explain not achieving a 100% recognition score. If we assume that certain participants were confused between Clockwise and CounterClockwise, the recognition rate for both increased to 98.4%, and the overall rate to 95.9%. Size. The average ErrorSize found was 2.1mm with a standard deviation of 1.4mm. Designers can therefore consider that users are able to differentiate sizes that are more than 5mm of diameter apart. Speed. Our findings on Speed did not show any abilities in differentiating our 2 speeds. Our speeds revealed to be too close, but further testing needs to be done. We hypothesis that speeds more than 10mm.s−1 apart could be differentiated."
+    }, {
+      "page": 9,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 558.572998046875,
+        "y1": 96.04936981201172,
+        "y2": 210.21197509765625
+      },
+      "text": "Strength. Our analysis showed that there are differences in strength of the stimuli felt by the participants. Designers could therefore use Vibration for stronger stimuli rather than Poke. They could also use bigger marbles to convey a stronger stimuli. Comfort. In terms of comfort, our analysis did not show any evidence supporting differences of comfort between stimuli (apart for the Size). Therefore, designers should only consider using Small marbles if necessary (e.g. conveying critical application states)."
+    }, {
+      "page": 9,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 558.2152099609375,
+        "y1": 215.7607879638672,
+        "y2": 258.031982421875
+      },
+      "text": "Although this should be taken carefully aswe only had two participants with long fingernails, we expected fingernails to affect the ability to sense the stimuli. However it did not seem to be the case."
+    }],
+    "title": {
+      "page": 9,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 128.84927368164062,
+        "y1": 96.18885803222656,
+        "y2": 102.614990234375
+      },
+      "text": "7 DISCUSSION"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 9,
+      "region": {
+        "x1": 317.47698974609375,
+        "x2": 559.898193359375,
+        "y1": 299.44677734375,
+        "y2": 712.3289794921875
+      },
+      "text": "We envision the use of the finger pad periphery as a new haptic notification system. In the following, we present several use cases in which such a system could be used. All of these use cases were also mentioned by our participants during the debriefing. Discrete notifications. With current implementations, devices deliver notification from different applications at the same level. Whether a smartphone receives a notification for an email, a text message or a news application, the whole device vibrates. In order to disambiguate the stimuli, users are required to pull their phone out of their pocket and visually check the type of the notification. Using our haptic notification system, when feeling a vibration, users can discretely filter notifications by simply sensing the marble from their pocket. Using strong magnets and small marbles such in-pocket notification could be implemented. One participant referred to it as an alternative to phone notifications which would convey more information discretely and without looking. Eye-free compass.When discovering a new city, applications such as Google map are often used to navigate from current location to a point of interests (e.g. conference centre, train station, etc.). After having set the destination, users are required to switch their focus from their surroundings to their phone in order to orientate themselves. In order to keep their visual focus on their surroundings, our haptic notification system could act as a compass. While keeping their phone in their pockets, the marble could vibrate left, front or right to indicate which way to go at a crossing. Again strong magnets and small marbles could be used for this in-pocket implementation. One participant particularly stressed that such a system would be eye-free and in your pocket, keeping the user aware and preventing phone-snatching. Another participant even envisioned this compass system useful for navigating in games with open-worlds."
+    }, {
+      "page": 9,
+      "region": {
+        "x1": 54.0,
+        "x2": 558.001953125,
+        "y1": 750.914794921875,
+        "y2": 756.7197875976562
+      },
+      "text": "Paper 641 Page 10"
+    }, {
+      "page": 10,
+      "region": {
+        "x1": 53.499000549316406,
+        "x2": 295.1466369628906,
+        "y1": 96.04936981201172,
+        "y2": 222.1669921875
+      },
+      "text": "Accessibility features.Most of the accessibility features implemented in commercial devices use visual modifications that could potentially reduce the available screen real estate (e.g. increasing the font size, use of amagnifier, etc.). Similarly, using the peripheral haptic channel could help conveying information or awareness on the current state of the device to visually impaired users. However it would not consume screen space. For instance, a gentle left roll on the finger could indicate a spelling mistake in the current message and a right roll could indicate that the message cannot be sent because of network issues."
+    }],
+    "title": {
+      "page": 9,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 400.58819580078125,
+        "y1": 284.48284912109375,
+        "y2": 290.90899658203125
+      },
+      "text": "Use case scenarios"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 10,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 295.7408142089844,
+        "y1": 251.6257781982422,
+        "y2": 377.5840148925781
+      },
+      "text": "In this paper, we started tackling the design space enabled by the peripheral haptic channel. Although we tested several dimensions, keeping our user study under a reasonable amount of time imposed some constraints. Our study helped identifying which dimensions are suitable candidates to leverage. However, further studies focusing on only one dimension are needed to fully characterize the design space. Furthermore, dimensions such as the type of material composing the marble, the surface roughness, the surface stiffness, adhesion and temperature still needs to be tested. Our current guidelines are therefore meant to be iteratively refined."
+    }, {
+      "page": 10,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 294.2457580566406,
+        "y1": 383.1327819824219,
+        "y2": 461.2699890136719
+      },
+      "text": "In the study, the marble movement was tweaked for each participants based on their morphology and the imposed position of the finger. Our setup was tailored for a single user and could not be dynamically updated. However, one could imagine the use of a touch sensor to track the finger position, orientation and morphology using a system such as AnglePose [25] to dynamically adapt the stimuli."
+    }, {
+      "page": 10,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 295.73773193359375,
+        "y1": 466.81878662109375,
+        "y2": 628.6430053710938
+      },
+      "text": "On a similar note, the hardware we used required the marbles to be manually put on the surface by the experimenter. In order for such a system to be viable, the hardware could be improved to include a docking mechanism at the edge of the device that would store marbles of different sizes. Going even further, since we rely on the use of magnets, one could envision to expand the area of operation reachable by the marbles to other faces of the device. The footprint of the current mechanism could be reduced and integrated into a mobile device by using smaller stepper motors and deploying them at the edges away from the hand grip. This would allow storing the marble at the edge of a device. A different drive mechanism with a matrix of planar electromagnetic coils could reduce the profile further [29]."
+    }, {
+      "page": 10,
+      "region": {
+        "x1": 53.54899978637695,
+        "x2": 295.739013671875,
+        "y1": 634.1918334960938,
+        "y2": 712.3289794921875
+      },
+      "text": "Our current prototype imposes several limitations to convey subtle notifications. The four linear actuators create vibrations which are transmitted through the enclosure. A vibrotactile sensation is felt on the user’s finger pad and the palm while moving the marble in different patterns. The sensation was constant during uniform velocity. However, certain tactile cues could be discerned if the velocity is changed"
+    }, {
+      "page": 10,
+      "region": {
+        "x1": 317.5870056152344,
+        "x2": 559.8988037109375,
+        "y1": 96.20877838134766,
+        "y2": 353.67401123046875
+      },
+      "text": "rapidly. However, the pilot testings indicated that this sensation was weak and did not affect the sensation at the finger periphery. The vibration could be further reduced by mounting the actuators with adequate damping. The linear actuators also created audible noise. The participants used a headphone with white noise audio during the study. In a practical implementation of the technique, a silent operation of the marble is desired. The current prototype was built to evaluate the haptic feedback technique. It imposes several limitations which need to be addressed before it could be deployed on a handheld device. One requirement is to hold the existing devices with minimally altering our grip. The size of the prototype could be reduced using smaller and thinner actuators. Individual mini motors could consume between 0.3–2.7 W power. Smooth trajectories for the patterns and efficient transmission of motion from the motors to the magnetic stage is required for low-power operation. In this way compact driver circuits could be developed due to low heat generation. Subtle input using the marble could also be implemented by placing a 2-axis magnetic sensor with flexible wiring on top of the disc magnets [30]."
+    }],
+    "title": {
+      "page": 10,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 182.09158325195312,
+        "y1": 236.66188049316406,
+        "y2": 243.0880126953125
+      },
+      "text": "Limitations and future work"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 10,
+      "region": {
+        "x1": 317.47698974609375,
+        "x2": 559.8906860351562,
+        "y1": 386.4537658691406,
+        "y2": 524.3670043945312
+      },
+      "text": "We presented Pulp Friction, a new haptic feedback modality that uses localized stimulation at the periphery of the finger pad. We proposed a technology using a motion controlled marble to demonstrate and explore the usability of Pulp Friction. Our empirical experiment indicated that users would be able to perceive localized haptic feedback in up to five peripheral zones on the finger pulp for poking and vibration; discriminate between poking and vibration; and, at least five different locomotive patterns around their finger. We provide design space description and design guidelines to leverage peripheral haptic channel, and use case examples for future implementation of Pulp Friction."
+    }],
+    "title": {
+      "page": 10,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 399.6416320800781,
+        "y1": 371.4898681640625,
+        "y2": 377.916015625
+      },
+      "text": "8 CONCLUSION"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 10,
+      "region": {
+        "x1": 317.656005859375,
+        "x2": 558.2113037109375,
+        "y1": 557.1467895507812,
+        "y2": 575.509033203125
+      },
+      "text": "This work was supported by the Engineering and Physical Sciences Research Council award number EP/N013948/1."
+    }],
+    "title": {
+      "page": 10,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 435.388916015625,
+        "y1": 542.182861328125,
+        "y2": 548.6090087890625
+      },
+      "text": "9 ACKNOWLEDGMENT"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 10,
+      "region": {
+        "x1": 321.6609802246094,
+        "x2": 559.4253540039062,
+        "y1": 607.5773315429688,
+        "y2": 612.7020263671875
+      },
+      "text": "[1] [n. d.]. Eone Time Eone Bradley tactile watch. https://www.eone-time."
+    }, {
+      "page": 10,
+      "region": {
+        "x1": 321.6610107421875,
+        "x2": 559.5471801757812,
+        "y1": 617.540283203125,
+        "y2": 632.6279907226562
+      },
+      "text": "com. Accessed: 2018-08-21. [2] Olivier Bau, Ivan Poupyrev, Ali Israr, and Chris Harrison. 2010. Tesla-"
+    }, {
+      "page": 10,
+      "region": {
+        "x1": 321.6609802246094,
+        "x2": 559.4292602539062,
+        "y1": 637.4652709960938,
+        "y2": 712.3289794921875
+      },
+      "text": "Touch: Electrovibration for Touch Surfaces. In Proceedings of the 23Nd Annual ACM Symposium on User Interface Software and Technology (UIST ’10). ACM, New York, NY, USA, 283–292. https://doi.org/10. 1145/1866029.1866074 [3] Heather Culbertson, Julie M. Walker, Michael Raitor, and Allison M. Okamura. 2017. WAVES: AWearable Asymmetric Vibration Excitation System for Presenting Three-Dimensional Translation and Rotation Cues. In Proceedings of the 2017 CHI Conference on Human Factors in"
+    }, {
+      "page": 10,
+      "region": {
+        "x1": 54.0,
+        "x2": 558.001953125,
+        "y1": 750.914794921875,
+        "y2": 756.7197875976562
+      },
+      "text": "Paper 641 Page 11"
+    }, {
+      "page": 11,
+      "region": {
+        "x1": 53.797996520996094,
+        "x2": 295.3885192871094,
+        "y1": 97.49028015136719,
+        "y2": 700.3740234375
+      },
+      "text": "Computing Systems (CHI ’17). ACM, New York, NY, USA, 4972–4982. https://doi.org/10.1145/3025453.3025741 [4] Panteleimon Dimitriadis and Jason Alexander. 2014. Evaluating the Effectiveness of Physical Shape-change for In-pocket Mobile Device Notifications. In Proceedings of the SIGCHI Conference on Human Factors in Computing Systems (CHI ’14). ACM, New York, NY, USA, 2589–2592. https://doi.org/10.1145/2556288.2557164 [5] Masaaki Fukumoto and Toshiaki Sugimura. 2001. Active Click: Tactile Feedback for Touch Panels. In CHI ’01 Extended Abstracts on Human Factors in Computing Systems (CHI EA ’01). ACM, New York, NY, USA, 121–122. https://doi.org/10.1145/634067.634141 [6] Aakar Gupta, Antony Albert Raj Irudayaraj, and Ravin Balakrishnan. 2017. HapticClench: Investigating Squeeze Sensations Using Memory Alloys. In Proceedings of the 30th Annual ACM Symposium on User Interface Software and Technology (UIST ’17). ACM, New York, NY, USA, 109–117. https://doi.org/10.1145/3126594.3126598 [7] Chris Harrison and Scott E. Hudson. 2009. Providing Dynamically Changeable Physical Buttons on a Visual Display. In Proceedings of the SIGCHI Conference on Human Factors in Computing Systems (CHI ’09). ACM, New York, NY, USA, 299–308. https://doi.org/10.1145/1518701. 1518749 [8] Sungjune Jang, LawrenceH. Kim, Kesler Tanner, Hiroshi Ishii, and Sean Follmer. 2016. Haptic Edge Display for Mobile Tactile Interaction. In Proceedings of the 2016 CHI Conference on Human Factors in Computing Systems (CHI ’16). ACM, New York, NY, USA, 3706–3716. https://doi. org/10.1145/2858036.2858264 [9] Seungwoo Je, Minkyeong Lee, Yoonji Kim, Liwei Chan, Xing-Dong Yang, and Andrea Bianchi. 2018. PokeRing: Notifications by Poking Around the Finger. In Proceedings of the 2018 CHI Conference on Human Factors in Computing Systems (CHI ’18). ACM, New York, NY, USA, Article 542, 10 pages. https://doi.org/10.1145/3173574.3174116 [10] Seungwoo Je, Brendan Rooney, Liwei Chan, and Andrea Bianchi. 2017. tactoRing: A Skin-Drag Discrete Display. In Proceedings of the 2017 CHI Conference on Human Factors in Computing Systems (CHI ’17). ACM, NewYork, NY, USA, 3106–3114. https://doi.org/10.1145/3025453. 3025703 [11] Roland S Johansson and J Randall Flanagan. 2009. Coding and use of tactile signals from the fingertips in object manipulation tasks. Nature Reviews Neuroscience 10 (apr 2009), 345. http://dx.doi.org/10.1038/ nrn2621http://10.0.4.14/nrn2621 [12] Hiroyuki Kajimoto. 2012. Skeletouch: Transparent Electro-tactile Display for Mobile Surfaces. In SIGGRAPH Asia 2012 Emerging Technologies (SA ’12). ACM, New York, NY, USA, Article 21, 3 pages. https://doi.org/10.1145/2407707.2407728 [13] Abhijit Anil Karnik, Jason Mark Alexander, Kian Meng Yap, Hong Jian Wong, and Pavels Dembo. 2018. FingerSlide: Investigating Passive Haptic Sliding As A Tacton Channel. IEEE. [14] Sugarragchaa Khurelbaatar, Yuriko Nakai, Ryuta Okazaki, Vibol Yem, and Hiroyuki Kajimoto. 2016. Tactile Presentation to the Back of a Smartphone with Simultaneous Screen Operation. In Proceedings of the 2016 CHI Conference on Human Factors in Computing Systems (CHI ’16). ACM, New York, NY, USA, 3717–3721. https://doi.org/10.1145/ 2858036.2858099 [15] Hwan Kim, HyeonBeom Yi, Hyein Lee, and Woohun Lee. 2018. HapCube: A Wearable Tactile Device to Provide Tangential and Normal Pseudo-Force Feedback on a Fingertip. In Proceedings of the 2018 CHI Conference on Human Factors in Computing Systems (CHI ’18). ACM, New York, NY, USA, Article 501, 13 pages. https://doi.org/10. 1145/3173574.3174075 [16] Qiuyu Lu, ChengpengMao, LiyuanWang, andHaipengMi. 2016. LIME: LIquid MEtal Interfaces for Non-Rigid Interaction. In Proceedings of"
+    }, {
+      "page": 11,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 559.5492553710938,
+        "y1": 97.81306457519531,
+        "y2": 708.43896484375
+      },
+      "text": "the 29th Annual Symposium on User Interface Software and Technology (UIST ’16). ACM, New York, NY, USA, 449–452. https://doi.org/10. 1145/2984511.2984562 [17] Joseph Luk, Jerome Pasquero, Shannon Little, Karon MacLean, Vincent Levesque, and Vincent Hayward. 2006. A Role for Haptics in Mobile Interaction: Initial Design Using a Handheld Tactile Display Prototype. In Proceedings of the SIGCHI Conference on Human Factors in Computing Systems (CHI ’06). ACM, New York, NY, USA, 171–180. https://doi. org/10.1145/1124772.1124800 [18] K. Minamizawa, D. Prattichizzo, and S. Tachi. 2010. Simplified design of haptic display by extending one-point kinesthetic feedback to multipoint tactile feedback. In 2010 IEEE Haptics Symposium. 257–260. https://doi.org/10.1109/HAPTIC.2010.5444646 [19] Yusuke Nakagawa, Akiya Kamimura, and Yoichiro Kawaguchi. 2012. MimicTile: A Variable Stiffness Deformable User Interface for Mobile Devices. In Proceedings of the SIGCHI Conference on Human Factors in Computing Systems (CHI ’12). ACM, New York, NY, USA, 745–748. https://doi.org/10.1145/2207676.2207782 [20] Fabrizio Pece, Juan Jose Zarate, Velko Vechev, Nadine Besse, Olexandr Gudozhnik, Herbert Shea, and Otmar Hilliges. 2017. MagTics: Flexible and Thin Form Factor Magnetic Actuators for Dynamic and Wearable Haptic Feedback. In Proceedings of the 30th Annual ACM Symposium on User Interface Software and Technology (UIST ’17). ACM, New York, NY, USA, 143–154. https://doi.org/10.1145/3126594.3126609 [21] Ivan Poupyrev and Shigeaki Maruyama. 2003. Tactile Interfaces for Small Touch Screens. In Proceedings of the 16th Annual ACM Symposium on User Interface Software and Technology (UIST ’03). ACM, New York, NY, USA, 217–220. https://doi.org/10.1145/964696.964721 [22] Ivan Poupyrev, Shigeaki Maruyama, and Jun Rekimoto. 2002. Ambient Touch: Designing Tactile Interfaces for Handheld Devices. In Proceedings of the 15th Annual ACM Symposium on User Interface Software and Technology (UIST ’02). ACM, New York, NY, USA, 51–60. https://doi.org/10.1145/571985.571993 [23] Ivan Poupyrev, Jun Rekimoto, and Shigeaki Maruyama. 2002. TouchEngine: A Tactile Display for Handheld Devices. In CHI ’02 Extended Abstracts on Human Factors in Computing Systems (CHI EA ’02). ACM, New York, NY, USA, 644–645. https://doi.org/10.1145/ 506443.506525 [24] Z. Radivojevic, P. Beecher, C. Bower, S. Haque, P. Andrew, T. Hasan, F. Bonaccorso, A. C. Ferrari, and B. Henson. 2012. Electrotactile Touch Surface by Using Transparent Graphene. In Proceedings of the 2012 Virtual Reality International Conference (VRIC ’12). ACM, New York, NY, USA, Article 16, 3 pages. https://doi.org/10.1145/2331714.2331733 [25] Simon Rogers, John Williamson, Craig Stewart, and Roderick MurraySmith. 2011. AnglePose: Robust, Precise Capacitive Touch Tracking via 3D Orientation Estimation. In Proceedings of the SIGCHI Conference on Human Factors in Computing Systems (CHI ’11). ACM, New York, NY, USA, 2575–2584. https://doi.org/10.1145/1978942.1979318 [26] Deepak Ranjan Sahoo, Timothy Neate, Yutaka Tokuda, Jennifer Pearson, Simon Robinson, Sriram Subramanian, and Matt Jones. 2018. Tangible Drops: A Visio-Tactile Display Using Actuated Liquid-Metal Droplets. In Proceedings of the 2018 CHI Conference on Human Factors in Computing Systems (CHI ’18). ACM, New York, NY, USA, Article 177, 14 pages. https://doi.org/10.1145/3173574.3173751 [27] Deepak Ranjan Sahoo, Timothy Neate, Yutaka Tokuda, Jennifer Pearson, Simon Robinson, Sriram Subramanian, and Matt Jones. 2018. Tangible Drops: A Visio-Tactile Display Using Actuated Liquid-Metal Droplets. In Proceedings of the 2018 CHI Conference on Human Factors in Computing Systems (CHI ’18). ACM, New York, NY, USA, Article 177, 14 pages. https://doi.org/10.1145/3173574.3173751 [28] Daniel Spelmezan, Deepak Ranjan Sahoo, and Sriram Subramanian. 2017. Sparkle: Hover Feedback with Touchable Electric Arcs. In"
+    }, {
+      "page": 11,
+      "region": {
+        "x1": 54.0,
+        "x2": 558.0020141601562,
+        "y1": 750.914794921875,
+        "y2": 756.7197875976562
+      },
+      "text": "Paper 641 Page 12"
+    }, {
+      "page": 12,
+      "region": {
+        "x1": 53.798004150390625,
+        "x2": 295.2740478515625,
+        "y1": 97.81306457519531,
+        "y2": 172.35400390625
+      },
+      "text": "Proceedings of the 2017 CHI Conference on Human Factors in Computing Systems (CHI ’17). ACM, New York, NY, USA, 3705–3717. https://doi.org/10.1145/3025453.3025782 [29] Evan Strasnick, Jackie Yang, Kesler Tanner, Alex Olwal, and Sean Follmer. 2017. shiftIO: Reconfigurable Tactile Elements for Dynamic Affordances and Mobile Interaction. In Proceedings of the 2017 CHI Conference on Human Factors in Computing Systems (CHI ’17). ACM, New York, NY, USA, 5075–5086. https://doi.org/10.1145/3025453.3025988"
+    }, {
+      "page": 12,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 559.427978515625,
+        "y1": 97.49028015136719,
+        "y2": 172.35400390625
+      },
+      "text": "[30] Marc Teyssier, Gilles Bailly, Catherine Pelachaud, and Eric Lecolinet. 2018. MobiLimb: Augmenting Mobile Devices with a Robotic Limb. In Proceedings of the 31st Annual ACM Symposium on User Interface Software and Technology (UIST ’18). ACM, New York, NY, USA, 53–63. https://doi.org/10.1145/3242587.3242626 [31] Ake B. Vallbo and Roland S. Johansson. 1984. Properties of cutaneous mechanoreceptors in the human hand related to touch sensation. Human neurobiology 3 1 (1984), 3–14."
+    }, {
+      "page": 12,
+      "region": {
+        "x1": 54.0,
+        "x2": 558.001953125,
+        "y1": 750.914794921875,
+        "y2": 756.7197875976562
+      },
+      "text": "Paper 641 Page 13"
+    }],
+    "title": {
+      "page": 10,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 380.7218933105469,
+        "y1": 593.3248291015625,
+        "y2": 599.7509765625
+      },
+      "text": "REFERENCES"
+    }
+  }]
+}

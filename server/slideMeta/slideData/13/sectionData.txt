@@ -1,0 +1,49 @@
+CCS CONCEPTS
+CCS CONCEPTS
+KEYWORDS
+ACM Reference Format:
+1 INTRODUCTION
+1 INTRODUCTION
+1 INTRODUCTION
+1 INTRODUCTION
+1 INTRODUCTION
+1 INTRODUCTION
+2 RELATEDWORK
+2 RELATEDWORK
+2 RELATEDWORK
+2 RELATEDWORK
+3 VOICEASSIST
+3 VOICEASSIST
+3 VOICEASSIST
+Interface
+Interface
+Interface
+Interface
+Room acoustics quality
+Room acoustics quality
+Room acoustics quality
+Background noise
+Background noise
+Background noise
+Background noise
+Putting it all together
+4 USER STUDY DESIGN
+Recruitment and setup
+Recruitment and setup
+Procedure
+Procedure
+Procedure
+Procedure
+5 USER STUDY RESULTS
+Audio quality measures
+Third-party listener preference
+Third-party listener preference
+Third-party listener preference
+Third-party listener preference
+Self-reported evaluation
+6 CONCLUSION
+6 CONCLUSION
+REFERENCES
+REFERENCES
+REFERENCES
+REFERENCES

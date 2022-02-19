@@ -1,0 +1,1279 @@
+{
+  "abstractText": {
+    "page": 0,
+    "region": {
+      "x1": 53.499000549316406,
+      "x2": 295.7411193847656,
+      "y1": 437.6898498535156,
+      "y2": 554.7009887695312
+    },
+    "text": "ABSTRACT Technologies such as blockchains, smart contracts and programmable batteries facilitate emerging models of energy distribution, trade and consumption, and generate a considerable number of opportunities for energy markets. However, these developments complicate relationships between stakeholders, disrupting traditional notions of value, control and ownership. Discussing these issues with the public is particularly challenging as energy consumption habits often obscure the competing values and interests that shape"
+  },
+  "figures": [{
+    "caption": "Figure 2: Acting GigBliss: \"Can I just plug in?\" (top), \"Invisible flatmate\" (middle), \"It’s like the cat\" (bottom)",
+    "captionBoundary": {
+      "x1": 53.79800033569336,
+      "x2": 295.6379089355469,
+      "y1": 498.84136962890625,
+      "y2": 515.4400024414062
+    },
+    "figType": "Figure",
+    "imageText": [],
+    "name": "2",
+    "page": 6,
+    "regionBoundary": {
+      "x1": 58.0,
+      "x2": 290.0,
+      "y1": 92.0,
+      "y2": 485.0
+    }
+  }],
+  "sections": [{
+    "paragraphs": [{
+      "page": 0,
+      "region": {
+        "x1": 53.24800109863281,
+        "x2": 295.0179748535156,
+        "y1": 585.2767333984375,
+        "y2": 712.3289794921875
+      },
+      "text": "Permission to make digital or hard copies of all or part of this work for personal or classroom use is granted without fee provided that copies are not made or distributed for profit or commercial advantage and that copies bear this notice and the full citation on the first page. Copyrights for components of this work owned by others than the author(s) must be honored. Abstracting with credit is permitted. To copy otherwise, or republish, to post on servers or to redistribute to lists, requires prior specific permission and/or a fee. Request permissions from permissions@acm.org. CHI 2019, May 4–9, 2019, Glasgow, Scotland UK © 2019 Copyright held by the owner/author(s). Publication rights licensed to ACM. ACM ISBN 978-1-4503-5970-2/19/05. . . $15.00 https://doi.org/10.1145/3290605.3300617"
+    }, {
+      "page": 0,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 559.89794921875,
+        "y1": 437.2315673828125,
+        "y2": 563.66796875
+      },
+      "text": "stakeholders’ relationships. To make such difficult discussions more approachable and examine the missing relational aspect of autonomous energy systems, we combined the design of speculative hairdryers with performance and deliberation. This integrated method of inquiry makes visible the competing values and interests, eliciting people’s wishes to negotiate these terms. We argue that the complexity of mediated energy distribution and its convoluted stakeholder relationships requires more sophisticated methods of inquiry to engage people in debates concerning distributed energy systems."
+    }]
+  }, {
+    "paragraphs": [{
+      "page": 0,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 558.209716796875,
+        "y1": 593.8685302734375,
+        "y2": 612.7080078125
+      },
+      "text": "• Human-centered computing → Interaction design process and methods."
+    }],
+    "title": {
+      "page": 0,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 392.6675109863281,
+        "y1": 579.3828735351562,
+        "y2": 585.8090209960938
+      },
+      "text": "CCS CONCEPTS"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 0,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 560.7401733398438,
+        "y1": 642.9085083007812,
+        "y2": 661.7479858398438
+      },
+      "text": "Distributed Energy, Blockchain, Theatre, Improvisation, Speculative Design, Critical Design, Deliberation"
+    }],
+    "title": {
+      "page": 0,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 375.55108642578125,
+        "y1": 628.4228515625,
+        "y2": 634.8489990234375
+      },
+      "text": "KEYWORDS"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 0,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 566.872802734375,
+        "y1": 684.2155151367188,
+        "y2": 712.3289794921875
+      },
+      "text": "Larissa Pschetz, Kruakae Pothong, andChris Speed. 2019. Autonomous Distributed Energy Systems: Problematising the Invisible through Design, Drama and Deliberation. In CHI Conference on Human"
+    }, {
+      "page": 0,
+      "region": {
+        "x1": 54.0,
+        "x2": 558.0009765625,
+        "y1": 750.914794921875,
+        "y2": 756.7197875976562
+      },
+      "text": "Paper 387 Page 1"
+    }, {
+      "page": 1,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 295.41827392578125,
+        "y1": 97.21297454833984,
+        "y2": 124.53302001953125
+      },
+      "text": "Factors in Computing Systems Proceedings (CHI 2019), May 4–9, 2019, Glasgow, Scotland UK. ACM, New York, NY, USA, 14 pages. https://doi.org/10.1145/3290605.3300617"
+    }],
+    "title": {
+      "page": 0,
+      "region": {
+        "x1": 317.62298583984375,
+        "x2": 415.4867858886719,
+        "y1": 673.8124389648438,
+        "y2": 679.4520263671875
+      },
+      "text": "ACM Reference Format:"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 1,
+      "region": {
+        "x1": 53.31926345825195,
+        "x2": 295.74139404296875,
+        "y1": 167.46157836914062,
+        "y2": 664.5079956054688
+      },
+      "text": "Energy provision inmost countries is traditionally centralised and heavily regulated. Facilitated by progressive technology innovations, however, new models for energy provision are emerging with the potential to disrupt the existing supply model and alter relationships of trade. New distributed energy systems are facilitated by emerging technologies that are able to collect, process and profile information about consumption and, based on this profiling, make decisions on supply, demand and pricing with limited or no human intervention. This way, algorithms become the new mediators, legislators and regulators of transactions, introducing new layers of complexity into the relationships between suppliers, distributors and consumers. The use of these technologies also raises concerns about exclusion, inequality, security and data protection. Hardwired into algorithms are the values and interests of a diverse range of stakeholders, which might not align with the values and interests of consumers. The traditional top-down approach in the provision and regulation of energy supply and the complexity of the technology and trade relationships exclude people from decisionmaking processes in new autonomous and distributed energy systems. The increasingly seamless design features of connected technologies render the dynamics behind these systems and their implications for social and economic welfare elusive. The fading visibility of such relationships and their implications constrain people’s ability to question, negotiate and influence practices and norms in this context. Given the critical importance of energy to the economy and to citizens, we argue that greater participation is required in the design and development of emerging energy provision models. To overcome barriers for participation in the decisionmaking and design process at the level of both ‘code’ and energy provision models, we devised a method of enquiry that combines speculative design, drama and deliberation. We use speculative design and drama to expose people to the complexity, levels of transparency, difficulties in setting priorities, and the multitude of stakeholders with various interests involved in distributed energy systems. Problematising these dynamics through design and drama reinstates the constrained capabilities, while deliberation provides a protocol for people to exercise them."
+    }, {
+      "page": 1,
+      "region": {
+        "x1": 53.54899978637695,
+        "x2": 295.7377624511719,
+        "y1": 669.5785522460938,
+        "y2": 712.3289794921875
+      },
+      "text": "Our aim is to elicit what people find problematic about automated distributed energy systems and how they would like to engage with these technologies and energy trading. The value of this method lies in its ability to bring speculative"
+    }, {
+      "page": 1,
+      "region": {
+        "x1": 317.1583557128906,
+        "x2": 559.8985595703125,
+        "y1": 95.73056030273438,
+        "y2": 246.0770263671875
+      },
+      "text": "design into debates and in the narratives and recommendations that derive from what people define as a problem, based on their experience and exposure to aspects of automated systems. We contribute this method of inquiry as an alternative for designers and HCI researchers to explore people’s anticipation of how control, ownership, choice and fairness can be designed into automated systems, or into ‘code’. The ultimate aim is to mobilize discussion in order to find common ground between stakeholders, and to enhance participation and citizenship. This paper further offers insights into how participants anticipate such issues in the context of distributed energy systems through two pilot studies that apply this methodology."
+    }],
+    "title": {
+      "page": 1,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 146.90223693847656,
+        "y1": 152.9759063720703,
+        "y2": 159.40203857421875
+      },
+      "text": "1 INTRODUCTION"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 1,
+      "region": {
+        "x1": 317.5870056152344,
+        "x2": 558.474853515625,
+        "y1": 298.96856689453125,
+        "y2": 401.4939880371094
+      },
+      "text": "Distributed energy Infrastructure. Currently, energy supply in most countries is based on large power plants that generate and transmit energy to national grids, which send the supply on to cities, industry and households. National grids are well-established, regulated, and centralised. A few emerging trends, however, suggest different energy futures. One such model is that of distributed energy generation which allows smaller companies and even households to produce and sell energy in a free-market economy."
+    }, {
+      "page": 1,
+      "region": {
+        "x1": 317.1579895019531,
+        "x2": 559.8980712890625,
+        "y1": 406.5655822753906,
+        "y2": 712.3289794921875
+      },
+      "text": "Distributed energy generation is often considered as a way to support more flexible energy infrastructures and incentivise the development of alternative and more sustainable energy sources. In contrast to centralised national grids, it could require lower initial investment, opening the market to smaller enterprises. This mode of energy supply relies on data management and processing, and fast and secure transactions. Blockchain technologies are often seen as the optimal infrastructure to enable such transactions [1], as their record structure is continuously encrypted, distributed and synchronized across multiple geographic sites, which guarantees data immutability. Most importantly, its replication and synchronization of files assures the integrity of selfexecuting protocols, also known as smart contracts. Once distributed, these protocols cannot be modified and become ‘contracts’. Without central management, they are designed to be autonomous. They can automate payments and negotiations according to predefined parameters, thus reducing friction and intermediaries. Blockchain infrastructures can also support full transparency of data and transactions. This way, they are often seen as a trusted way to authenticate transactions across disparate institutions and economies while providing information about the process. However, research has also indicated the potential of these technologies to support a concentration of power by technological elites [31]."
+    }, {
+      "page": 1,
+      "region": {
+        "x1": 54.0,
+        "x2": 558.0009765625,
+        "y1": 750.914794921875,
+        "y2": 756.7197875976562
+      },
+      "text": "Paper 387 Page 2"
+    }, {
+      "page": 2,
+      "region": {
+        "x1": 53.43000030517578,
+        "x2": 295.7410888671875,
+        "y1": 95.73056030273438,
+        "y2": 616.68701171875
+      },
+      "text": "Algorithmic balancing and distributed storage. Another key aspect of energy systems involves balancing peak supply and demand for electricity. Proposals have looked at algorithmic predictions, planning and real-time control of consuming sources, and how smart contracts could be used to regulate energy transactions between the grid and cars, homes and appliances. This way, devices could be turned on and off according to predicted user behaviour in the home [34] and homes could ‘collaborate’ with each other in order to regulate supply and demand in a neighbourhood [13]. Distributed storage complements algorithmic balancing of supply and demand. Smart programmable batteries can connect with the grid and carry out energy transactions by selling and buying energy according to fluctuations in demand. Vehicleto-grid [27] is arguably the best known of these storage protocols and has been explored not only to transact energy with the grid, but also to redistribute power to a network of vehicles. This way, each vehicle not only consumes, but also distributes energy. With a steady increase in consumption and the increasing production of electric cars, domestic energy demand is expected to rise, stressing existing infrastructures. This situation has led researchers and companies to look for new business models around energy. Nissan, for example, has test-run offers of free parking in order to use idle electric cars for energy distribution. Grid storage technologies have also been tested in domestic appliances, often combined with blockchain technologies. Hewlett-Packard has incorporated distributed storage with smart contracts to allow an iRobot Roomba vacuum cleaner to buy electricity and recharge itself1, and IBM has patented protocols for connected devices to securely execute blockchain-based smart contracts2. Such trends promise to reduce energy spending and guarantee energy provision for increased demand. In technical discourses, the aim is often to provide seamless distribution that reduces complexity and cognitive effort from end consumers. This paper questions the implications of these discourses and the user-centric approaches of distributed energy systems, particularly given the reported impact of such systems on privacy and a greater requirement for transparency [25]. In doing so, this paper examines the buy-in for people in their role of consumers, as well as the opportunities for new businesses, and the shared values and responsibilities which distributed energy systems promise."
+    }],
+    "title": {
+      "page": 1,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 500.22821044921875,
+        "y1": 269.53887939453125,
+        "y2": 290.9090270996094
+      },
+      "text": "2 BACKGROUND Autonomous distributed energy systems"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 2,
+      "region": {
+        "x1": 53.43000030517578,
+        "x2": 294.1523742675781,
+        "y1": 647.4935302734375,
+        "y2": 666.333984375
+      },
+      "text": "In 2012, Pierce and Paulos [37] identified that HCI researchers were mostly focused on exploring energy feedback systems"
+    }, {
+      "page": 2,
+      "region": {
+        "x1": 53.65599822998047,
+        "x2": 294.4661865234375,
+        "y1": 685.51171875,
+        "y2": 712.3289794921875
+      },
+      "text": "1http://fortune.com/2017/11/10/blockchain-hpe/ 2https://www.coindesk.com/ibm-reimagines-proof-work-blockchain-iotdevices/"
+    }, {
+      "page": 2,
+      "region": {
+        "x1": 317.5870056152344,
+        "x2": 559.8980712890625,
+        "y1": 95.73056030273438,
+        "y2": 293.89801025390625
+      },
+      "text": "to communicate household behaviour or energy provenance. More recently, researchers started to explore fluctuations of renewable energy sources, by looking at ways to communicate spikes and dips in availability [40], exploring ways to facilitate understanding of how blockchain technologies manage energy transactions in microgrids [32], as well as looking into possibilities for devices with a certain degree of autonomy to minimize household energy costs [17]. These efforts communicate new possibilities in energy infrastructures, which are unfamiliar to most. Other researchers have looked at implications in low-income [18] and developing contexts [36]. We contribute to this work by focusing on critical aspects of these systems and how to support discussion with the public. Given the top-down approach to traditional energy systems, energy infrastructures are rarely a subject of public engagement unless they threaten the wellbeing of a group or the ecosystem of an area."
+    }, {
+      "page": 2,
+      "region": {
+        "x1": 316.8290100097656,
+        "x2": 559.8980712890625,
+        "y1": 298.96856689453125,
+        "y2": 616.68701171875
+      },
+      "text": "Design has long been considered as a way to tackle wicked problems [12] which are always unique and symptoms of “higher level” problems [39]. Boucher et al. [10] use design in an attempt to bridge the gap between infrastructure and household behaviours, looking at the potential of domestic consumption to affect energy levels in the national grid. Rather than seeing consumption as an individual concern, the researchers provide design proposals for community members to manage energy usage collectively. Other designers have created concepts that adopt a more critical approach to energy availability and usage. David Chatting designed the Peak Boil (2010), an electrical socket that prevents a kettle being turned onwhen the National Grid is under strain. In “Politics of Power” (2016), Automato.Farm conceptualised multiplugs that demonstrate differences in the ideology of designers, engineers and stakeholders in energy usage: the D-model represents a democratic, selfbalancing network; the T-model is centralised by a leader who can shut down the system; and the M-model supports monarch firmwares and hierarchical functionalities. Auger, Hanna and Encinas designed the Gravity Battery (2017) which combines natural and cultural materials that are made, recycled, and re-appropriated as an expression of their concept of Reconstrained Design [4]. These examples provide insights into how design can help surface critical issues around energy distribution, beyond communicating or building on the capability of these systems."
+    }],
+    "title": {
+      "page": 2,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 114.54241943359375,
+        "y1": 633.0088500976562,
+        "y2": 639.4349975585938
+      },
+      "text": "Related work"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 2,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 559.891357421875,
+        "y1": 650.4795532226562,
+        "y2": 681.2750244140625
+      },
+      "text": "Discussing the latent effects of distributed autonomous systems and underlining socio-economic issues in the context of energy systems presents three main challenges:"
+    }, {
+      "page": 2,
+      "region": {
+        "x1": 333.427001953125,
+        "x2": 558.2103881835938,
+        "y1": 693.0611572265625,
+        "y2": 712.3289794921875
+      },
+      "text": "• The seamlessness of technology that is designed to process and share information, but makes decisions"
+    }, {
+      "page": 2,
+      "region": {
+        "x1": 54.0,
+        "x2": 558.0009765625,
+        "y1": 750.914794921875,
+        "y2": 756.7197875976562
+      },
+      "text": "Paper 387 Page 3"
+    }, {
+      "page": 3,
+      "region": {
+        "x1": 69.27000427246094,
+        "x2": 295.7415466308594,
+        "y1": 95.73056030273438,
+        "y2": 210.21197509765625
+      },
+      "text": "in the background, so rendering implications of such activities invisible. • The absence of a bridge between emerging technology, which appears unfamiliar, and people’s experience with familiar technology. Without this connection, people do not have a reference to explore what appears unfamiliar to them. • The nature of a conceptual space for experience sharing, reflection, collective problem-solving and decisionmaking needs greater consideration."
+    }, {
+      "page": 3,
+      "region": {
+        "x1": 53.31999969482422,
+        "x2": 295.7366638183594,
+        "y1": 217.83358764648438,
+        "y2": 275.09002685546875
+      },
+      "text": "We address these challenges by devising a method based on: • Speculative Design, and more specifically Critical Design, Design Fictions and Design for Debate, where artefacts embody critical issues and provoke an emotional response that leads to discussion."
+    }, {
+      "page": 3,
+      "region": {
+        "x1": 69.27000427246094,
+        "x2": 299.19952392578125,
+        "y1": 279.7331848144531,
+        "y2": 394.6419982910156
+      },
+      "text": "• Drama, used to a) create a bridge between the critique (embedded in the speculative design objects) and a familiar context and b) allow participants to enact the roles of different stakeholders to understand the complexity of stakeholder relationships involved. • Deliberation method, employed to facilitate a discussion that moves participants from their initial emotional reactions to collective problem-defining, problemsolving and decision-making, building on the participants’ sharing of experiences and reflection."
+    }],
+    "title": {
+      "page": 2,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 493.42333984375,
+        "y1": 635.9938354492188,
+        "y2": 642.4199829101562
+      },
+      "text": "3 PROBLEMATISING THE INVISIBLE"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 3,
+      "region": {
+        "x1": 53.31999969482422,
+        "x2": 295.7410583496094,
+        "y1": 424.0605773925781,
+        "y2": 658.093017578125
+      },
+      "text": "We formulated our designs around the key issues of control, autonomy and ownership, creating three speculative hairdryers: GigBliss Plus, GigBliss Balance and GigBliss Auto. Each hairdryer varied in its level of speculation and critique, from feasible to impractical and improbable. The choice of hairdryers as the artefact that would incorporate this critique referred to its portability as well as its high level of electricity consumption. In our speculation, the hairdryers would be supplied with a battery able to connect to the grid and carry out transactions. The strangeness of a hairdryer charging itself, instead of a vacuum cleaner (e.g., Roomba) or a toothbrush, helped to reinforce the fictitious nature of the scenario. The three concepts were developed into functioning prototypes, which worked based on simulated data stored in each device. The embedded data was set to portray quick changes in the network, which allowed us to provide an experience of the context in the short period of time in which participants were expected to interact and understand the devices. While the prototypes can blow air, their heating systems have been removed for health and safety reasons."
+    }, {
+      "page": 3,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 294.0544128417969,
+        "y1": 669.5785522460938,
+        "y2": 712.3289794921875
+      },
+      "text": "GigBliss Plus. The first hairdryer, GigBliss Plus, represents a user-centred design approach where end-users are put in control of energy transactions. Users can follow fluctuations in the market through a small display integrated in the device"
+    }, {
+      "page": 3,
+      "region": {
+        "x1": 316.8290100097656,
+        "x2": 559.3411254882812,
+        "y1": 95.73056030273438,
+        "y2": 293.89801025390625
+      },
+      "text": "and are able to buy, store and trade energy through three buttons above and below the display to buy (pull) and sell (push) energy. The device can be activated through a third “on” button. In our speculative scenario, GigBliss Plus would be acquired at a high price but would allow end-users to make a profit, which could also cover the initial outlay. The scenario alludes to a tendency of recent systems to support flexible and ad-hoc forms of employment where workers use their own tools. This form of work contrasts to “traditional” forms of work as it includes no security and little guarantee of long-term contracts. In our critical scenario, individuals would use their hairdryers and potentially other appliances to store energy and make money, e.g., possibly from carrying out other services such as riding in their Uber taxis and renting out spare bedrooms through Airbnb. This device was the first concept developed and its name is an allusion to the gig economy."
+    }, {
+      "page": 3,
+      "region": {
+        "x1": 317.7060546875,
+        "x2": 559.89794921875,
+        "y1": 310.923583984375,
+        "y2": 533.0009765625
+      },
+      "text": "GigBliss Balance. The second model attempts to problematise algorithmic capabilities in order to balance energy in a network of devices. This is illustrated by the GigBliss Balance, which would be acquired cheaply or simply borrowed and returned to the GigBliss Corporation when no longer needed. Entry level would be facilitated and energy prices to users minimised. In return, the corporation would utilise the device to carry out energy transactions through predefined smart contracts hosted on a blockchain. While users can operate the device through an “on/off” button on the interface, its background operations are beyond their control. Such operations are indicated through an LED light that changes colour (green, yellow or red) to indicate that the device is available, available with a waiting time or unavailable, respectively. Waiting time and time of usage are indicated through a seven-segment numeric display. Overall, the usage of the device is affected, but costs are dramatically reduced to end-users and profit and potential losses from energy transactions are returned to the GigBliss Corporation."
+    }, {
+      "page": 3,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 559.8980102539062,
+        "y1": 550.0275268554688,
+        "y2": 712.3289794921875
+      },
+      "text": "GigBliss Auto. The third concept, GigBliss Auto, represents a model where a third party would subsidise costs of both devices and electricity supply for the device for a particular group. In this context, a local Council, community service, or charity establishes an agreement with an energy provider and the hairdryer company, paying a fixed price and setting up conditions for energy access. Here we invite reflection on the interests of stakeholders and what happens if this agreement attempts to reduce costs in order to maximise the number of households served by this scheme or if, for example, energy provision is set to occur during very specific or off-peak times in a way that regulates people’s actions rather than vice versa. Illustrating a rather dystopian scenario, GigBliss Auto has no buttons on its panel and offers"
+    }, {
+      "page": 3,
+      "region": {
+        "x1": 54.0,
+        "x2": 558.0009765625,
+        "y1": 750.914794921875,
+        "y2": 756.7197875976562
+      },
+      "text": "Paper 387 Page 4"
+    }, {
+      "page": 4,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 294.05438232421875,
+        "y1": 95.73056030273438,
+        "y2": 114.57000732421875
+      },
+      "text": "users no control. An LED light and bar display indicate if the device is about to turn on and for how long."
+    }, {
+      "page": 4,
+      "region": {
+        "x1": 53.31999969482422,
+        "x2": 295.734375,
+        "y1": 144.74212646484375,
+        "y2": 258.031982421875
+      },
+      "text": "Speculative design, critical design and the need for dialogue. Wedesigned the GigBliss hairdryers as an embodiment of scenarios that raise critical questions of distributed autonomous systems. Speculative Design and, more specifically, Critical Design and Design Fictions have been extensively employed in HCI as a way to reflect on future technologies or critique current practice. According to Auger [3] a key aspect of Speculative Design is the construction of a ‘perceptual bridge’ by which designers engage their audiences, and which demands a careful management of the speculation."
+    }, {
+      "page": 4,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 295.7410888671875,
+        "y1": 263.1035461425781,
+        "y2": 712.3289794921875
+      },
+      "text": "Critical Design was originally defined by Dunne and Raby [20] as a sort of “design that asks carefully crafted questions and makes us think”, and which contrasts with an affirmative form of design that focused on “solving problems and findings answers” [20]. This approach has received great attention in HCI despite differences in methods [5, 38]. The Peak Boil, Politics of Power and Gravity Battery projects presented above can all be framed within this definition. In our approach, however it was important to expand the critique into a discussion on issues around the design. Gallery spaces are the classical venues for designers to exhibit and engage audiences with critical design pieces [22]. Pieces in the gallery space are often meant to provoke an emotional response that would lead to further conversations beyond this context. The GigBliss hairdryers have been exhibited on two occasions. In our experience, the gallery space did not allow for an analysis of the impact of the designs or a more systematic conversation with participants. Furthermore, although the unfamiliar interface suggests some level of strangeness, in order to trigger discussion, the hairdryers require active interaction and some degree of contextualization. There has been much discussion in HCI about the value of Design Fictions or “diegetic” prototypes that incorporate story worlds [43]. While Bleecker [6] presents it as the creation of artefacts that foster imagination about possible near future worlds in order to tell stories that provoke reactions and raise questions, Bruce Sterling [43] defines it as the creation of stories that speculate about social practices that may be constructed around and through designed artefacts and systems. In HCI, design fictions have been explored around and even without the need of any technological artefact[7]. They have been employed as a tool to criticise [9], comment on, [8] and imagine[7] future approaches to technology as well as to engage participants and test these fictions [29]. We contribute to this work, turning to drama to co-create a fiction in order to contextualize the hairdryers within the intricacies and complexities of algorithmic profiling and energy systems."
+    }, {
+      "page": 4,
+      "region": {
+        "x1": 317.70599365234375,
+        "x2": 559.8977661132812,
+        "y1": 95.73056030273438,
+        "y2": 317.8080139160156
+      },
+      "text": "Finally, our approach is in line with the less discussed concept of Design for Debate [21] presented as a way to enhance discussion on new technologies, scientific developments or sociopolitical issues [28]. Once brought to the public, designs that attempt to embody critical issues or create a sense of connection with participants would help to elicit reactions and prompt dialogue. The way to engage people in discussion vary from face to face conversations with designers, to engaging larger audiences through popular media, where fictitious designs are often portrayed as real-world products. Ultimately the hairdryers were used in two ways 1) to support the performance of the sketches, with GigBliss Plus and Balance in operation, and GigBliss Auto turned off as explained below, and 2) to provide participants with some experience of the infrastructure behind the devices. While in current approaches the discussion seems to end in the ability to raise awareness and critique, our aim was to generate discussion and potentially reconcile the critique with the values and solutions proposed by participants."
+    }],
+    "title": {
+      "page": 3,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 155.09182739257812,
+        "y1": 409.5748596191406,
+        "y2": 416.0010070800781
+      },
+      "text": "Designing the critique"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 4,
+      "region": {
+        "x1": 317.47698974609375,
+        "x2": 559.7471313476562,
+        "y1": 349.7785949707031,
+        "y2": 416.43798828125
+      },
+      "text": "We worked with three actors to devise sketches around the hairdryers as a way to contextualise the design within the critical issues around distributed energy systems. The actors were recruited through word-of-mouth and social media, where we called for artists with strong improvisational skills. We divided the dramatic element into two parts."
+    }, {
+      "page": 4,
+      "region": {
+        "x1": 317.5870056152344,
+        "x2": 559.3048706054688,
+        "y1": 421.50958251953125,
+        "y2": 583.81103515625
+      },
+      "text": "The first part focused on producing three sketches to be used as vignettes to prompt reflective discussion. The second focused on involving participants in role-playing of different stakeholders, as a way to engage them in the deliberation process. In the first part the aim was to provoke an emotional response to critical issues in order to stir discussion. The three actors were briefed with the rationale of each hairdryer, the project aims and the scenarios described above. Each one then devised a sketch for the storyline around their chosen hairdryer; this process took about 15 minutes. Each sketch was rehearsed by all actors three to four times in front of a camera. The whole process took about five hours, including setting up the camera and lighting. The resulting dramatic sketches were:"
+    }, {
+      "page": 4,
+      "region": {
+        "x1": 317.6059875488281,
+        "x2": 559.899169921875,
+        "y1": 597.8475341796875,
+        "y2": 712.3289794921875
+      },
+      "text": "GigBliss Plus sketch: Can I just plug in? This sketch focused on end-user energy transactions through the GigBliss Plus. Anna is visiting Harry and Sarah and asks to plug in the hairdryer as she is waiting for the moment to complete an energy transaction. The strangeness of plugging in a hairdryer prompts Harry’s and Sarah’s interest. Anna explains that the device could earn money and tells them the story of successful transactions that allowed her to afford a nice hotel when going to a wedding. Harry demonstrates interest. Sarah skeptically compares this trading action to the stock"
+    }, {
+      "page": 4,
+      "region": {
+        "x1": 54.0,
+        "x2": 558.0009765625,
+        "y1": 750.914794921875,
+        "y2": 756.7197875976562
+      },
+      "text": "Paper 387 Page 5"
+    }, {
+      "page": 5,
+      "region": {
+        "x1": 53.42951965332031,
+        "x2": 294.3180236816406,
+        "y1": 95.73056030273438,
+        "y2": 186.301025390625
+      },
+      "text": "exchange market and asks if they would get a cut since Anna is using their mains power. Anna explains that she is actually waiting to sell the stored energy. Sarah wonders if Anna ever has time to relax if she is so often using her appliances to make money. Anna talks about the excitement of carrying out transactions and making money. She then focuses on the device rather than on the conversation. Harry continues to demonstrate interest and suggests that Sarah gets one."
+    }, {
+      "page": 5,
+      "region": {
+        "x1": 53.43000030517578,
+        "x2": 295.73895263671875,
+        "y1": 209.30459594726562,
+        "y2": 395.5169982910156
+      },
+      "text": "GigBliss Balance sketch: It’s like the cat. The second sketch featured GigBliss Balance as a stylish, hi-tech device that is sold at a low price. In exchange for the price-cut, users may sometimes be required to wait until the device finishes transacting energy to be able to use it. In this sketch, Anna again is visiting Harry and Sarah. Sarah talks about the new hairdryer she has received as a birthday present. Harry explains how the device operates. Anna questions if it was worth waiting for a better deal on the energy when one has their hair wet. Sarah compares the hairdryer to Uber, as ride prices rise during rush hours. Harry argues that people don’t wait because they start planning ahead to avoid using the hairdryer in peak hours. The sketch finishes with Sarah making a metaphorical comparison of this model to a cat: “it depends on how much you like to control things, it is like the cat, it is ours but we don’t quite control it.”"
+    }, {
+      "page": 5,
+      "region": {
+        "x1": 53.45018005371094,
+        "x2": 295.7366638183594,
+        "y1": 418.52056884765625,
+        "y2": 712.3289794921875
+      },
+      "text": "GigBliss Auto sketch: Invisible flatmate. The third sketch featured GigBliss Auto and was situated in a council flat. Sarah and Anna are having a cup of tea in the kitchen when Harry arrives and says that he received a new hairdryer as part of a trial scheme that an energy company is carrying out with the council. Sarah and Anna are suspicious. Harry explains that both the device and the energy are free, but there could be certain times when they would not be able to use the device, because the energy company would be using it to carry out transactions. Sarah asks when those times might be. Harry says they needed to test the system first in order to know. Anna questions the usefulness of the device and says that they might need the hairdryer at a time when they couldn’t use it. Sarah becomes even more frustrated and says that they would only be allowed to dry their hair when no one else wants to, e.g. at 2am. Harry says it isn’t that bad and they just needed to imagine the energy company as a fourth flatmate. Sarah remarks that this would be a very wealthy flatmate, as this person would have preference in the hair drying queue. The interpretation of the actors helped to frame the designs as real world contexts while bringing forward issues of recent technologies, such as stock market operations, addiction to devices and social isolation, price variation in Uber taxi services as well as issues of control and social justice."
+    }, {
+      "page": 5,
+      "region": {
+        "x1": 317.5871887207031,
+        "x2": 559.8953857421875,
+        "y1": 96.92113494873047,
+        "y2": 640.5980224609375
+      },
+      "text": "Using performance to support the design process vs its critical framing. HCI has a long history of using performance as way to gain insights into new concepts and possibilities. According to Spence et al. [41], performance has been used to portray technologies, to allow participants to enact or embody the experience of using a technology, to stage or represent the experience as a group to an audience, or to engage participants and make sense of a technology. Taylor et al. [44] further look at the role of researchers as performers. Briggs et al [11] uses film to convey novel functions and outcomes of a design without giving it form. These ‘invisible designs’ are used to support discussion in participatory design sessions in a way that focuses on the intangible, experiential aspects rather than on features of a device. Chatting [14] devises the concept of Speculation by Improvisation, which uses designed props and improvisation to examine alternatives for constructing meaning around in early design stages. This is later developed into Speculative Enactments [23] where participants, either professional actors or the general public, help to co-construct the action around designs through a form of empirical inquiry. Our approach draws from this work, as it uses performance to bring forward aspects of novel technologies that go beyond device features. However, our focus is not on the design itself but on creating a bridge between the critique and the public. We used performance in two moments: a) first, we engaged professional actors in the co-creation of the critique. The enactment of different scenarios of usage resulted in sketches that were selected and used as vignettes to prompt deliberation, b) second, we used improvisation to engage participants in the deliberation process, by inviting them to perform aspects of the technology. We integrated this role-play exercise to give participants a taste of negotiation, creating an event that engages people with unfamiliar technologies through a constructed multi-dimensional experience. Drama exposes participants to the sensational dimension of human experience with the complexity of technologies, a technical or functional aspect of experience. The fusion of theatre techniques is an adaptation of the work of Coleman et al. [15]. This form of storytelling either embodies or supports arguments, providing evidence for claims [24]. Such storytelling also supports participants to slot their personal experience into the larger tapestry of the complex and elusive relationships of stakeholders in the autonomous distributed energy systems at the heart of this deliberative process [26]."
+    }],
+    "title": {
+      "page": 4,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 429.5107727050781,
+        "y1": 335.2928771972656,
+        "y2": 341.7190246582031
+      },
+      "text": "Dramatising the critique"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 5,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 559.8908081054688,
+        "y1": 669.5785522460938,
+        "y2": 712.3289794921875
+      },
+      "text": "Deliberation provides an open and respectful space for problematizing the latent effects of autonomous distributed energy systems. Deliberative theorists [19, 30] describe deliberation as a talk-based process to achieve mutually acceptable"
+    }, {
+      "page": 5,
+      "region": {
+        "x1": 54.0,
+        "x2": 558.0009765625,
+        "y1": 750.914794921875,
+        "y2": 756.7197875976562
+      },
+      "text": "Paper 387 Page 6"
+    }, {
+      "page": 6,
+      "region": {
+        "x1": 53.429779052734375,
+        "x2": 295.7423400878906,
+        "y1": 561.9825439453125,
+        "y2": 712.3289794921875
+      },
+      "text": "solutions to social problems through open exchange and reflection on experience, storytelling, opinions, argumentation and persuasion. The value of this process lies in its principles of open and reflective exchanges which accommodate diverse views, needs and calls for actions. While practices of public deliberation have been widely explored in the social sciences [16, 35, 42], deliberative practices have not yet been applied to critical design, particularly in the context of autonomous distributed energy systems. Deliberation can move emotional reactions toward speculative prototypes, which was often negative, and the sensational experience from drama to problem exploration, definition and solving through four steps [16]:"
+    }, {
+      "page": 6,
+      "region": {
+        "x1": 327.8080139160156,
+        "x2": 559.8971557617188,
+        "y1": 95.73056030273438,
+        "y2": 222.1669921875
+      },
+      "text": "(1) Storytelling: an exchange of participants’ experience related to the issues raised by the dramatic sketch; (2) Problem definition: a scoping exercise leading to definition of problems by participants through reflecting on responsibilities, accountability, relevant values and interests; (3) Solution brainstorming: a brainstorming exercise to develop and debate the merits of potential solutions; (4) Resolution: a shortlisting and collective decision exercise to filter in recommendations relevant to the problems identified"
+    }, {
+      "page": 6,
+      "region": {
+        "x1": 317.5870056152344,
+        "x2": 558.2151489257812,
+        "y1": 232.46755981445312,
+        "y2": 275.218017578125
+      },
+      "text": "In our study, we carried out two pilot deliberative sessions with a mixed demographic of 9 and 13 participants, with ages varying between 25 and 35 in the first group and from 25 to 65 in the second."
+    }],
+    "title": {
+      "page": 5,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 552.1851806640625,
+        "y1": 655.0928955078125,
+        "y2": 661.51904296875
+      },
+      "text": "4 FUSING DESIGN, DRAMA AND DELIBERATION"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 6,
+      "region": {
+        "x1": 317.5870056152344,
+        "x2": 559.8980102539062,
+        "y1": 307.18756103515625,
+        "y2": 612.9509887695312
+      },
+      "text": "The two deliberative sessions opened with an improvisation exercise led by one of the professional actors who played the role of a connected technology, in this case Uber. Uber was chosen because of the many parallels established between Uber and the distributed energy system that GigBliss incorporated. Participants were asked to volunteer for the roles of consumer, entrepreneur and mischief-maker. The remaining participants, in the roles of audience members, were allowed to interject, make suggestions, ask questions and otherwise interact with the professional and volunteer actors at any point during the improvisation. The exercise was facilitated by a moderator whose role was to prompt interaction between volunteer actors and the professional actor through questions about the scenarios and the use of technology according to the roles each one played. This introductory improvisation session was designed to ease participants into the world of connected autonomous technology and start engaging with the dynamics of relationships with technology and others in this environment at an empirical, sensational level. Such progression required participants to think aloud, act out and interact with the impersonated technology as well as with other participants who volunteered to be actors. Through role-play improvisation, participants started asking questions to the impersonated technology, articulating an internal dialogue that could otherwise be obscured by the habits of use or immediate demands for services."
+    }, {
+      "page": 6,
+      "region": {
+        "x1": 342.364013671875,
+        "x2": 534.8854370117188,
+        "y1": 624.13427734375,
+        "y2": 642.0919799804688
+      },
+      "text": "Participant in the role of consumer: Yes, I’m scared. I don’t know if I trust you, [Mr. technology]."
+    }, {
+      "page": 6,
+      "region": {
+        "x1": 342.364013671875,
+        "x2": 512.91064453125,
+        "y1": 653.2753295898438,
+        "y2": 659.2780151367188
+      },
+      "text": "Actor, impersonating technology: Why not?"
+    }, {
+      "page": 6,
+      "region": {
+        "x1": 342.364013671875,
+        "x2": 534.8917846679688,
+        "y1": 670.4603271484375,
+        "y2": 712.3289794921875
+      },
+      "text": "Participant in the role of consumer: I don’t know. You’re very anonymous. You’re very ambiguous. I get the feeling that you’re not as safe as a regular taxi somehow."
+    }, {
+      "page": 6,
+      "region": {
+        "x1": 54.0,
+        "x2": 558.0009765625,
+        "y1": 750.914794921875,
+        "y2": 756.7197875976562
+      },
+      "text": "Paper 387 Page 7"
+    }, {
+      "page": 7,
+      "region": {
+        "x1": 78.20700073242188,
+        "x2": 270.6401062011719,
+        "y1": 96.6122817993164,
+        "y2": 174.34600830078125
+      },
+      "text": "Participant from audience: I am sorry, Mr. [Technology], but you depend on other connected services. I’m assuming if there’re road works, then our local council would let you know, so you could direct your service to take an alternate route. What happens if those [connected services] are compromised?"
+    }, {
+      "page": 7,
+      "region": {
+        "x1": 53.499000549316406,
+        "x2": 295.7395324707031,
+        "y1": 182.83255004882812,
+        "y2": 261.447998046875
+      },
+      "text": "These dialogues, elicited by the role-play improvisation, prompted comments and discussions concerning various issues underpinning people’s relationships with technology and others who use such technologies to provide services. These issues include trust, security, control, data protection, choice, terms of use, reliability, accountability and exploitation."
+    }, {
+      "page": 7,
+      "region": {
+        "x1": 78.20700073242188,
+        "x2": 269.6446533203125,
+        "y1": 270.8162536621094,
+        "y2": 336.5950012207031
+      },
+      "text": "A: I switch, don’t trust anyone anymore from any companies or organizations. Our data is out there but we don’t have much say on it... they are going to have to make money some way, but then it’s still not hugely comfortable, that there is not much choice."
+    }, {
+      "page": 7,
+      "region": {
+        "x1": 78.20700073242188,
+        "x2": 270.7250671386719,
+        "y1": 345.9632873535156,
+        "y2": 435.6520080566406
+      },
+      "text": "B: I think when it comes to data, it’s not possible to keep track of it. Even now we have this consent where you have to click okay or you don’t agree. If you don’t agree you don’t have access to the website sometimes... People don’t know the consequences really and I think you need to be a very high-tech person to know what’s going on with your data"
+    }, {
+      "page": 7,
+      "region": {
+        "x1": 78.20700073242188,
+        "x2": 270.6405334472656,
+        "y1": 445.0202941894531,
+        "y2": 498.843994140625
+      },
+      "text": "C: I think anything that has access to all the functions on your phone, I’m a bit wary of those... you wouldn’t make the connection to whatever it is they’re asking for in return... I’d question why they want it."
+    }, {
+      "page": 7,
+      "region": {
+        "x1": 78.20700073242188,
+        "x2": 269.64459228515625,
+        "y1": 508.2122497558594,
+        "y2": 550.0800170898438
+      },
+      "text": "D: It’s just about transparency, I suppose... it’s knowing what you actually want from me... if you’re open with me and say, “These are the things I want,” I can make that decision and say no."
+    }, {
+      "page": 7,
+      "region": {
+        "x1": 78.20700073242188,
+        "x2": 270.7251281738281,
+        "y1": 559.4483032226562,
+        "y2": 601.3170166015625
+      },
+      "text": "E: If it’s a free service, you tend to be warier in terms of what you’re actually giving... If it’s free, I’m accepting that I’m going to have to give up a couple of golden nuggets of information."
+    }, {
+      "page": 7,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 295.7342224121094,
+        "y1": 609.8025512695312,
+        "y2": 712.3289794921875
+      },
+      "text": "Participants’ responses to the introductory improvisation demonstrated a high level of value for human agency. Such agency is exhibited in forms of demands that include transparency, choice and opportunities to negotiate the terms of exchange (e.g. personal data for service) which are often obscured by the term ‘free’ and increasingly by the seamlessness of connected autonomous technology. These demands highlight the benefits of role-play improvisation in triggering people to consider their habitual technology engagement"
+    }, {
+      "page": 7,
+      "region": {
+        "x1": 317.95452880859375,
+        "x2": 559.8971557617188,
+        "y1": 95.73056030273438,
+        "y2": 186.301025390625
+      },
+      "text": "and the use of connected autonomous technologies. This enabled participants to start questioning and reflecting on their relationships with technologies and other stakeholders and, as a result, to see through the opacity, technical and relational complexity of connected autonomous technologies. Subsequently, participants could draw on their personal experience to critique these technologies and start negotiating for what they deemed acceptable terms of exchange."
+    }],
+    "title": {
+      "page": 6,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 442.0841064453125,
+        "y1": 292.7018737792969,
+        "y2": 299.1280212402344
+      },
+      "text": "Introductory improvisation"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 7,
+      "region": {
+        "x1": 317.5865173339844,
+        "x2": 559.8931274414062,
+        "y1": 216.82559204101562,
+        "y2": 307.39599609375
+      },
+      "text": "Once participants started to connect what they are familiar with (their technology engagement) to technologies they were less familiar with, they were quick to pick up on the social and economic issues embedded in the dramatised artifacts that represented different models of distributed energy systems. After presenting each of these sketches, participants were prompted to express their reactions to the specific models of such systems."
+    }, {
+      "page": 7,
+      "region": {
+        "x1": 317.5870056152344,
+        "x2": 559.8958740234375,
+        "y1": 319.986572265625,
+        "y2": 386.6470031738281
+      },
+      "text": "GigBliss Balance: It’s like the cat. The first sketch presented to participants was “GigBliss Balance: It’s Like a Cat” wherein users declared that they owned the device, but did not quite control it. The immediate response to this speculative design was negative. However, drawing on their personal experience, they started to explain why they rejected the design."
+    }, {
+      "page": 7,
+      "region": {
+        "x1": 342.364013671875,
+        "x2": 533.80078125,
+        "y1": 396.311279296875,
+        "y2": 462.0899963378906
+      },
+      "text": "A: No... Because it’s not functional, like this is a hairdryer that is one of the very few really on demand things... Uber, I get that because that’s a different person involved... If you don’t have the option to pay the higher price to the energy that’s different, that’s restricting your access."
+    }, {
+      "page": 7,
+      "region": {
+        "x1": 342.364013671875,
+        "x2": 534.7976684570312,
+        "y1": 471.7542724609375,
+        "y2": 537.5330200195312
+      },
+      "text": "B: For me, I think technology is useful for people because we take control of it, and we can use technology for our benefit, but in that case [referring to the sketch] the technology is taking control of our lives... I’d rather pay full price to wholly control the technology I need to use."
+    }, {
+      "page": 7,
+      "region": {
+        "x1": 317.6059875488281,
+        "x2": 559.89892578125,
+        "y1": 546.3155517578125,
+        "y2": 684.70703125
+      },
+      "text": "Participants’ reactions and discussions featured significant anxiety towards the perceived restrictions on their control. According to participants’ responses, control is manifested in forms of choices, on-demand access and abilities to negotiate terms of use or access. Participants determined that choice and transparency about the price facilitated further negotiation. Both groups indicated an intention to pay extra for on-demand access. Underlying demands for on-demand access is a willingness to negotiate, which is a common social practice in human relations. Underpinning participants’ quest for opportunities to negotiate is a consideration of trade-offs based on a cost-benefit calculation."
+    }, {
+      "page": 7,
+      "region": {
+        "x1": 342.364013671875,
+        "x2": 533.8017578125,
+        "y1": 694.371337890625,
+        "y2": 712.3289794921875
+      },
+      "text": "A: [If the price of the device] was [to drop] from 100 pounds to five pounds. Your bar says 23.5 hours"
+    }, {
+      "page": 7,
+      "region": {
+        "x1": 54.0,
+        "x2": 558.0009765625,
+        "y1": 750.914794921875,
+        "y2": 756.7197875976562
+      },
+      "text": "Paper 387 Page 8"
+    }, {
+      "page": 8,
+      "region": {
+        "x1": 78.20700073242188,
+        "x2": 270.30169677734375,
+        "y1": 96.6122817993164,
+        "y2": 138.48101806640625
+      },
+      "text": "a day... that’s a sacrifice you can deal with. But if it was like a hundred pounds down to 80 pounds; you can only use it six hours a day, it’s not worth it."
+    }, {
+      "page": 8,
+      "region": {
+        "x1": 78.20700073242188,
+        "x2": 269.6477355957031,
+        "y1": 149.94529724121094,
+        "y2": 203.76898193359375
+      },
+      "text": "B: It depends how big the price surge gets. At the end of the day, if I always use it at peak time but I only spend two pounds extra per month on bills, I don’t see it as a huge problem. But if you’re talking about... times 10 price surge... then sorry."
+    }, {
+      "page": 8,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 295.5819396972656,
+        "y1": 214.35159301757812,
+        "y2": 245.14697265625
+      },
+      "text": "However, some participants warned about the practicality of such calculation, noting that it consumes quite a lot of mental space:‘everything becomes such a conscious choice’ (C)."
+    }, {
+      "page": 8,
+      "region": {
+        "x1": 53.43000030517578,
+        "x2": 295.73382568359375,
+        "y1": 259.4525451660156,
+        "y2": 361.9779968261719
+      },
+      "text": "GigBliss Plus: “can I just plug in?” The second sketch presented was the “GigBliss Plus: Can I just Plug in?” which was presented as giving users full control over energy trading, allowing them to monitor energy price fluctuation and decide when to sell or buy energy. This sketch also produced an immediate negative reaction with varying degrees of conviction. However, when participants were asked to elucidate why the prototype was rejected, they started examining the implications of this transaction model."
+    }, {
+      "page": 8,
+      "region": {
+        "x1": 78.20700073242188,
+        "x2": 269.6480712890625,
+        "y1": 373.4422912597656,
+        "y2": 463.1319885253906
+      },
+      "text": "A: Wouldn’t it be better off getting regular stocks and bonds rather than doing the miniature version on your hairdryer?... Why do you have to basically do it in a product that you are using? Whereas stocks, you can... clearly delineate as this is my pile of money that I use for that rather than tie that all up in each other and make everything so complex."
+    }, {
+      "page": 8,
+      "region": {
+        "x1": 78.20700073242188,
+        "x2": 269.6456604003906,
+        "y1": 474.5962829589844,
+        "y2": 516.4639892578125
+      },
+      "text": "B: We have that in a form, so you had a phone but now it became your camera, your memory card, your everything else, you do everything on the phone."
+    }, {
+      "page": 8,
+      "region": {
+        "x1": 78.20700073242188,
+        "x2": 269.6477355957031,
+        "y1": 527.9293212890625,
+        "y2": 605.6629638671875
+      },
+      "text": "C: Yes. In the phone it’s not tied to like that... You can store a kilowatt hour on it and then I can resell it. But if I go on the web and I buy some stocks and if I know it’s going to be cheap now and then expensive later I’ll buy a megawatt hour and then sell that and make a bigger profit. Then I don’t need to tie it to my hairdryer."
+    }, {
+      "page": 8,
+      "region": {
+        "x1": 78.20700073242188,
+        "x2": 269.6436767578125,
+        "y1": 617.1273193359375,
+        "y2": 658.9959716796875
+      },
+      "text": "A: I think... It’s like doing stocks with just your normal every day checking account. You should never do that with the same money you buy your groceries."
+    }, {
+      "page": 8,
+      "region": {
+        "x1": 78.20700073242188,
+        "x2": 270.6450500488281,
+        "y1": 670.4603271484375,
+        "y2": 712.3289794921875
+      },
+      "text": "C: I think like he said, the technology is good. It’s just the wrong product, but maybe if it was connected to my house like the whole electricity system, then yes."
+    }, {
+      "page": 8,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 559.899169921875,
+        "y1": 95.73056030273438,
+        "y2": 305.8529968261719
+      },
+      "text": "In the excerpts above, participants drew a parallel between a hairdryer and a mobile phone when critiquing the functionality bundle of the hairdryer. They also engaged with the concept of energy trading and built on their understanding of a stock exchange. Initially, discussions in both groups concentrated on the mismatch of the functionality bundle which appeared to have resulted from two factors: 1) the added functionality of energy trading was far too big a stretch of imagination for participants to see as added value to the traditional functionality of a hairdryer and 2) the capital tied to the hairdryer (the energy a hairdryer can stock up to trade) did not seem to generate a worthwhile profit margin. However, the parallel that participants drew between energy trading and the stock exchange further accommodated participants’ reflections on the relationships of trade, unearthing issues of cultivated dependence in technology design that results in addiction, exploitation, market failure and increased economic disparity."
+    }, {
+      "page": 8,
+      "region": {
+        "x1": 342.364013671875,
+        "x2": 534.8853149414062,
+        "y1": 314.1962890625,
+        "y2": 650.1619873046875
+      },
+      "text": "A: It feels like more of a game as well. The stakes are so low there is no control over the market, just it says sell... I don’t know if this price is a good price. B: I’m thinking of the treadmills. It has exploitation with people, wanting people to run for them to make more energy. C: You see how addicted people are to their phones... and if you had an appliance like that suddenly you’re constantly checking everything in your house that’s going to tell you when the best time to do this or that is, or when you can use this or when you can use that... I don’t like the idea of living in a world where everybody is enslaved to all their different pieces of technology. D: One thing that’s already happened with that solar thing... because it’s not a free market, but in Germany the government wanted to promote, still wants to promote renewable energy, so they give you a very good price on energy you sell back to the grid from your solar panels... what happens is all farmers and very rich people with houses or a lot of land just build a lot of solar panels and they feed it back into the system making money. They already have a lot of money and it’s all subsidized by people living in flats or people who don’t have a lot of money. So that’s a big social financial issue to consider."
+    }, {
+      "page": 8,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 559.89794921875,
+        "y1": 657.62353515625,
+        "y2": 712.3289794921875
+      },
+      "text": "These comments show that participants managed to work out the interests of different stakeholders, saw through the ideals of the underlying gig-economy and realized the consequences of such relationships of trade. The social and financial concerns that participants raised implied the need"
+    }, {
+      "page": 8,
+      "region": {
+        "x1": 54.0,
+        "x2": 558.0009765625,
+        "y1": 750.914794921875,
+        "y2": 756.7197875976562
+      },
+      "text": "Paper 387 Page 9"
+    }, {
+      "page": 9,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 294.2471923828125,
+        "y1": 95.73056030273438,
+        "y2": 186.301025390625
+      },
+      "text": "for market and trade practice oversight. Such a requirement resulted from the underpinning power asymmetry in the relationship of trade between consumers and suppliers that is facilitated by technology. This relationship becomes even more complicated when consumers can also be suppliers, in this case, of energy. Connected to this asymmetric power relation is control, subtly manifested in forms of abilities to dictate or negotiate the terms of trade."
+    }, {
+      "page": 9,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 294.0565185546875,
+        "y1": 197.47659301757812,
+        "y2": 264.13702392578125
+      },
+      "text": "GigBliss Auto: “invisible flatmate”. The third sketch featured GigBliss Auto, wherein a device only allowed usage during the agreed time between the manufacturer and a sponsoring partner who subsidised both the energy and device costs to end users. The immediate reaction across both groups of participants reflected frustration."
+    }, {
+      "page": 9,
+      "region": {
+        "x1": 78.20700073242188,
+        "x2": 270.73101806640625,
+        "y1": 272.3152770996094,
+        "y2": 478.5039978027344
+      },
+      "text": "A: No, I don’t think it’s going to work in this society. B: Unless you have short hair. A: It is too risky I mean we are used to using our devices when we want, when we need them. We don’t want to risk to stay wet and to go to work with wet hair, no? B: They didn’t even give them like a fixed time, no? Like if I buy an off-peak gym membership at least I know like I am going in the morning anyway. I don’t need to go there in peak time. Then I can plan that. But [in this sketch] the energy companies suddenly decide: “between six and nine in the morning you can use your hairdryer” C: I’d like to feel free to decide what I want to do. So, I need to have a plan B, otherwise, I don’t care if I can get the hairdryer for free."
+    }, {
+      "page": 9,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 295.15167236328125,
+        "y1": 485.799560546875,
+        "y2": 612.2359619140625
+      },
+      "text": "The negotiation of terms of use on an ad-hoc basis between the manufacturers of the device and the associated energy companies without people’s involvement was interpreted by participants as an encroachment on autonomy. Again, a careful reading of these responses indicates that what really struck a chord wasn’t the fact that they could not get what they wanted when they wanted it. Rather, it was the absence of opportunities to negotiate. As part of the negotiation, participants showed a willingness to trade away some of their personal gains (e.g., convenience, time, freedom) for the greater good of society or to pay extra for some gains."
+    }, {
+      "page": 9,
+      "region": {
+        "x1": 78.20700073242188,
+        "x2": 269.6480712890625,
+        "y1": 620.414306640625,
+        "y2": 712.3289794921875
+      },
+      "text": "A: Maybe 10 years ago when I was just out of high school with little money but a lot of time, I would have always taken the cheapest route even if it means more hassle for me, but now earning a bit more... having less time, I’m happy to pay a bit more to have more free time or less hassle. B: Yes, how much do you value your time or, in the hairdryer cases, how much do you value your"
+    }, {
+      "page": 9,
+      "region": {
+        "x1": 342.364013671875,
+        "x2": 534.8854370117188,
+        "y1": 96.6122817993164,
+        "y2": 210.21197509765625
+      },
+      "text": "freedom of using a hairdryer anytime you want. That’s why I think that the second model is the most interesting one, especially if it’s not just a hairdryer, but a whole system of home appliances... if I could have a centralized system I could interact on my phone... that becomes a much more interesting proposition because that gives me control of my energy consumption, but also it incentivises me to say “buy more when price’s low and then sell them off to make a quick buck”"
+    }, {
+      "page": 9,
+      "region": {
+        "x1": 342.364013671875,
+        "x2": 534.8878784179688,
+        "y1": 219.58030700683594,
+        "y2": 309.2690124511719
+      },
+      "text": "C: I think I’d be quite willing to accept the concept of that if that worked for environmental reasons rather than any financial profits... If I know that I have to dry my hair at a certain time of the day because that means I’m helping the environment, then yes, that’d be much more convincing. If I’m just saving up money so that the energy company, could use that profit otherwise, then probably not."
+    }, {
+      "page": 9,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 559.3085327148438,
+        "y1": 317.7555847167969,
+        "y2": 360.5050048828125
+      },
+      "text": "Prompted by participants’ natural inclination to negotiate the terms of relationships and calculate trade-offs, questions about the actual purposes of the design, power relations, beneficiaries, ethics and oversight were raised."
+    }, {
+      "page": 9,
+      "region": {
+        "x1": 342.364013671875,
+        "x2": 533.802978515625,
+        "y1": 369.873291015625,
+        "y2": 447.60699462890625
+      },
+      "text": "A: Do the consumers have mutual choice or it’s the corporations that gives them the illusion of choice?... Am I only given these three options? Or can I go to a different supplier and they’ll give me different options that can change? Or is it a different energy consumption to other consumers or other stakeholders?"
+    }, {
+      "page": 9,
+      "region": {
+        "x1": 342.364013671875,
+        "x2": 534.8880004882812,
+        "y1": 456.97528076171875,
+        "y2": 558.6190185546875
+      },
+      "text": "B: It’s the energy company that owns the grid. [They can] just say like, “[Participant name], we’ve decided we own the grid that delivers the electricity to your flat and we’ve now decided you pay 200% more from tomorrow on. You can take it or live in the dark.” If this was the case, I was probably going to my local MP or something... It would take a while, but then the government might introduce fines."
+    }, {
+      "page": 9,
+      "region": {
+        "x1": 342.364013671875,
+        "x2": 534.8880004882812,
+        "y1": 567.9873046875,
+        "y2": 621.81103515625
+      },
+      "text": "C: It’s like we were talking about earlier. It’s not free, there’s got to be a catch... I think, if you’ve got the capacity, if an energy company has the capacity to control when people are using appliances, that’s going to be taken advantage of."
+    }, {
+      "page": 9,
+      "region": {
+        "x1": 342.364013671875,
+        "x2": 533.801513671875,
+        "y1": 631.1793212890625,
+        "y2": 661.0919799804688
+      },
+      "text": "D: I just think that there’s a lot of people who would look for convenience. It’s convenience versus ethics."
+    }, {
+      "page": 9,
+      "region": {
+        "x1": 317.5874328613281,
+        "x2": 558.2151489257812,
+        "y1": 669.5785522460938,
+        "y2": 712.3289794921875
+      },
+      "text": "These responses highlight strong skepticism about the way technology is communicated as bringing benefits to consumers. Underpinning the questions is a mix of distrust in corporate practices, expectations of government to keep"
+    }, {
+      "page": 9,
+      "region": {
+        "x1": 54.0,
+        "x2": 558.001953125,
+        "y1": 750.914794921875,
+        "y2": 756.7197875976562
+      },
+      "text": "Paper 387 Page 10"
+    }, {
+      "page": 10,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 294.0572814941406,
+        "y1": 95.73056030273438,
+        "y2": 126.5260009765625
+      },
+      "text": "the relationships of trade in check, uncertainty about the hidden agenda of both corporations and government, and a sense of agency."
+    }],
+    "title": {
+      "page": 7,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 439.5933837890625,
+        "y1": 202.3399200439453,
+        "y2": 208.76605224609375
+      },
+      "text": "Deliberation with sketches"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 10,
+      "region": {
+        "x1": 52.672000885009766,
+        "x2": 295.7410888671875,
+        "y1": 191.37265014648438,
+        "y2": 676.4630126953125
+      },
+      "text": "The core features of the conversations excerpted in Section 4 are negotiation and an exploration of what participants find problematic and the strategies to deal with these problems. Both groups of participants moved away from initial negative reaction naturally and relatively quickly, drawing on their experience and interactions with present technologies, products and services. The discussions concentrated on particular aspects of their experience with technologies, involving questions about their levels of agency, control, the beneficiaries that are invisible to them, and the knock-on effects of these arrangements. Participants moved from a position of rejecting the designs to one of reflective and open discussions about the issues underpinning the speculative hairdryers. This demonstrates the success of the combination of design, drama and deliberation in engaging the public to explore possible consequences of the complex technologies involved in autonomous distributed energy systems. The contribution of drama to speculative design and public engagement is the narrative and enactment of human feelings towards aspects of these technologies. Such feelings serve to convey a sense of the problem without formally defining or framing the problem for participants, which is one of the factors undermining meaningful public engagement [33]. The narrative and sensation conveyed by drama make the unfamiliar technologies and abstract concepts or issues underlying the deployment of these technologies relevant to people who are not experts in these areas. Deliberation exposed participants to the rational aspect and exchange of their empirical experience with technologies. This rational engagement led them to explore and define what they find problematic about ownership and control in relation to algorithmic capabilities (GigBliss Balance), gigeconomy (GigBliss Plus) and third-party beneficiaries (GigBliss Auto). The four-step process of deliberation in this research helped to engage people in problem definition, which serves the objective of critical design as defined by Dunne and Raby [20], as well as problem solving. However, unlike “affirmative” design [20], problem-solving in the deliberative process focuses more on how people think these problems are best addressed given their resources and capabilities rather than on industry or business solutions."
+    }, {
+      "page": 10,
+      "region": {
+        "x1": 53.43000030517578,
+        "x2": 294.0584411621094,
+        "y1": 681.5335083007812,
+        "y2": 712.3289794921875
+      },
+      "text": "The participants’ exchange of ideas regarding what would work for them show that the solution brainstorming and resolution phases of deliberation can move the emotional"
+    }, {
+      "page": 10,
+      "region": {
+        "x1": 317.656005859375,
+        "x2": 559.890625,
+        "y1": 95.73056030273438,
+        "y2": 186.301025390625
+      },
+      "text": "reaction provoked by critical design towards a discussion of how to address what brought about these negative reactions in the first place. This result demonstrates that deliberation can support critical design to achieve its societal aim, empowering people to contribute toward features they anticipated. This is particularly important in the context of distributed energy systems that touch sensitive aspects of access to basic resources."
+    }, {
+      "page": 10,
+      "region": {
+        "x1": 317.656005859375,
+        "x2": 559.8906860351562,
+        "y1": 200.79689025878906,
+        "y2": 329.76300048828125
+      },
+      "text": "Articulating the desired human experience with autonomous technologies The initial responses from participants were characterized by distrust due in part to the invisibility of the processing of information. Distrust also resulted from the perceived lack of human empathy in the automated decisions based on algorithmic data processing and/or profiling taking place quietly in the background. Participants appeared more receptive to digitally mediated relationships with service providers and third-party beneficiaries that have degrees of emotional intelligence."
+    }, {
+      "page": 10,
+      "region": {
+        "x1": 317.5870056152344,
+        "x2": 559.8946533203125,
+        "y1": 334.8345642089844,
+        "y2": 712.3289794921875
+      },
+      "text": "Analysis of the transcript of participant deliberation shows that control and ownership are interdependent and a running thread across all the discussions prompted by the dramatic sketches. The interdependency between control and ownership is most prominent in the discussion about algorithmic capabilities underpinning the dramatic sketch featuring GigBliss Balance. Here control manifests in forms of on-demand usage of the device and access to electricity. Participants are most anxious about having access to basic necessities such as electricity managed by technologies that operate quietly in the background and in ways that they cannot understand because if something goes wrong, they would not easily be able to fix it. Participants were most nervous about the absence of options to override automated decisions and, in line with previous research [2], they were more receptive to delegating control to technologies when they could negotiate the level of delegation. Participants were most satisfied with the level of control offered by GigBliss Plus, its included resources, access to resources and values. However, they were concerned that only economically affluent people would be able to afford the resources required to generate and trade electricity for profit, ultimately resulting in an unequal energy distribution and price manipulation. Such a situation would be the opposite of the ideals to expand opportunities for people to generate electricity and trade it for profit. Worse still, participants were concerned that this transaction model would reinforce the gap between the resource-rich and the resource-poor. In exploring approaches to address issues of a free market energy economy, most participants seemed keen on economic regulation. They were also concerned that people would constantly check when the best time to trade is, drawing a"
+    }, {
+      "page": 10,
+      "region": {
+        "x1": 54.0,
+        "x2": 558.001953125,
+        "y1": 750.914794921875,
+        "y2": 756.7197875976562
+      },
+      "text": "Paper 387 Page 11"
+    }, {
+      "page": 11,
+      "region": {
+        "x1": 53.499000549316406,
+        "x2": 295.7337646484375,
+        "y1": 95.73056030273438,
+        "y2": 401.4939880371094
+      },
+      "text": "parallel between people’s behaviour with their phones and social media. In this context, participants admitted that exercising self-control was not an easy task, which implies that people need help to disconnect. The absence of control over the subsidised device and access to energy featured in the GigBliss Auto generated the strongest negative emotional reaction. Participants were clear in their responses that they would not exchange control for access. Here, the desired control manifests in forms of transparency regarding the actual beneficiaries, ownership (e.g. those who are profiting from people’s compromising of the convenience of on-demand access), clarity in terms of use and real choice. Participants drew a parallel between the model of access to electricity coded in GigBliss Auto and the tiered model of access to a gym. The similarity between the two models of regulation is the restriction of access. The difference, however, are that the hours during which access is allowed are not clearly detailed in the terms of use for GigBliss Auto and that opting out could result in no access to electricity at all. These differences triggered strong resistance. However, participants became more receptive to the idea of delegating control over access to third parties on the condition that the terms of access are clear and consistent and they could say ‘no’ to the terms of access that they did not want, or deemed unfair, without being excluded from the service."
+    }, {
+      "page": 11,
+      "region": {
+        "x1": 53.43000030517578,
+        "x2": 295.7427978515625,
+        "y1": 406.5655822753906,
+        "y2": 712.3289794921875
+      },
+      "text": "The aspects of delegated autonomy that participants found problematic and the propositions that reduced participants’ aversion to various limits of their control implied that a technological design that rules out opportunities to negotiate is likely to face strong resistance. Participants’ responses demonstrated that their ultimate concern is that any design and use of technology would leave them little room for negotiation to achieve an acceptable compromise. In exploring approaches to maintain or make available abilities to negotiate, take back control and meaningfully exercise such choices, participants ranked transparency of business purposes and technology as top priorities. Participants’ responses also showed that they value the ability to opt in or out and choose from various models of access and service provision without being excluded or trapped in exploitative deals. That said, participants clearly stated that they did not want to be overwhelmed with information and choices to constantly process either. Aware of the limits of individual agency and autonomy, participants also considered governance mechanisms that could shape technology design and deployment that are consistent with their values for negotiation, choice, transparency and fair terms of use. Participants were open to both binding and non-binding governance mechanisms, whichever best minimised exploitation. Some of the mechanisms considered included standards, certification logos and product labelling"
+    }, {
+      "page": 11,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 559.8912963867188,
+        "y1": 95.73056030273438,
+        "y2": 162.3909912109375
+      },
+      "text": "that build consumer trust in the autonomous distributed technologies. Given the high level of agency observed in participants’ articulation of values and preferences, governance mechanisms that empower participants to meaningfully exercise choice without resulting in information and conscious choice fatigue are likely to be favoured."
+    }],
+    "title": {
+      "page": 10,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 241.87954711914062,
+        "y1": 149.9868927001953,
+        "y2": 183.31304931640625
+      },
+      "text": "5 DISCUSSION Design, drama and deliberation: enabling meaningful public engagement"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 11,
+      "region": {
+        "x1": 317.656005859375,
+        "x2": 559.8980102539062,
+        "y1": 191.37258911132812,
+        "y2": 652.552978515625
+      },
+      "text": "The flow of deliberation, the articulation and rationalisation of what participants found problematic and approaches to address these challenges, all highlight the potential for the combination of speculative design, drama and deliberation in engaging the public with critical issues. The match between the socio-economic issues explored by each hairdryer and the issues participants focused their attention on in subsequent deliberations demonstrated the potential for design and drama to prompt reflective responses. The parallel that participants drew, for example, between the stock exchange and the GigBliss Plus in terms of purpose of use or between dependence on smartphones and dependence that technologies that provide means of profit could cultivate, highlighted the potential of drama in connecting participants’ experience with unfamiliar aspects of technologies. This experience sharing served as a departure point for participants to examine why they felt the way they did âĂŞ reflecting on their experience. The four steps of deliberation helped guide participants’ thinking about the sensational aspect of their experience with technology, moving them from a negative reaction toward collective problem-solving. The combination of speculative design, drama and deliberation offers an alternative to engage the public with complex technology development and relevant policies. The design-based dramatised deliberation provides insights into participants’ values and preferences for autonomous distributed technologies. These insights contribute to design the societal and civic values that are often overwhelmed by economic values, underpinning the focus of affirmative design on market and innovation. These societal and civic values are deduced from participants’ expressions of function, sensibility and rationality of human experience. The basis from which insights are drawn can be generalised because others who are exposed to a similar experience are likely able to relate to these insights. Given the potential of this method, we propose it as a contribution to the existing literature in HCI on distributed energy systems as well as to the ongoing debate on emerging technologies and their implications for society."
+    }],
+    "title": {
+      "page": 11,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 399.6416320800781,
+        "y1": 176.88685607910156,
+        "y2": 183.31298828125
+      },
+      "text": "6 CONCLUSION"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 11,
+      "region": {
+        "x1": 317.656005859375,
+        "x2": 559.8992919921875,
+        "y1": 681.5335083007812,
+        "y2": 712.3289794921875
+      },
+      "text": "The GigBliss hairdryers were commissioned for the #Blockchain4EU project by the EU Policy Lab of the Joint Research Centre, European Commission. Involvement of actors was"
+    }, {
+      "page": 11,
+      "region": {
+        "x1": 54.0,
+        "x2": 558.0020141601562,
+        "y1": 750.914794921875,
+        "y2": 756.7197875976562
+      },
+      "text": "Paper 387 Page 12"
+    }, {
+      "page": 12,
+      "region": {
+        "x1": 53.43000030517578,
+        "x2": 295.5809631347656,
+        "y1": 95.73056030273438,
+        "y2": 198.25701904296875
+      },
+      "text": "made possible by the Challenge Investment Fund granted by the University of Edinburgh, and the deliberation sessions were supported by the Engineering and Physical Sciences Research Council project PETRAS (EPN02334X1). We thank Katherine Snow, Linda Ma, Rory Gianni, Joe Revans and Chris Chong for their help with the design, development and production of the prototypes at various stages of the project. We also would like to thank the talented actors, and all participants that contributed to the deliberation sessions."
+    }],
+    "title": {
+      "page": 11,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 440.7888488769531,
+        "y1": 667.0478515625,
+        "y2": 673.4739990234375
+      },
+      "text": "7 ACKNOWLEDGMENTS"
+    }
+  }, {
+    "paragraphs": [{
+      "page": 12,
+      "region": {
+        "x1": 57.50400161743164,
+        "x2": 294.2523193359375,
+        "y1": 226.62274169921875,
+        "y2": 232.1300048828125
+      },
+      "text": "[1] Nurzhan Zhumabekuly Aitzhan and Davor Svetinovic. 2018. Security"
+    }, {
+      "page": 12,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 295.3889465332031,
+        "y1": 236.584716796875,
+        "y2": 710.3359985351562
+      },
+      "text": "and privacy in decentralized energy trading through multi-signatures, blockchain and anonymous messaging streams. IEEE Transactions on Dependable and Secure Computing 15, 5 (2018), 840–852. [2] Alper T. Alan, Enrico Costanza, Sarvapali D. Ramchurn, Joel Fischer, Tom Rodden, and Nicholas R. Jennings. 2016. Tariff Agent: Interacting with a Future Smart Energy System at Home. ACM Trans. Comput.Hum. Interact. 23, 4, Article 25 (Aug. 2016), 28 pages. https://doi.org/ 10.1145/2943770 [3] James Auger. 2013. Speculative design: crafting the speculation. Digital Creativity 24, 1 (2013), 11–35. [4] James Auger, Julian Hanna, and Enrique Encinas. 2017. Reconstrained Design: Confronting Oblique Design Constraints. In Design + Power. Nordes, Oslo. [5] Jeffrey Bardzell and Shaowen Bardzell. 2013. What is \"critical\" about critical design?. In Proceedings of the SIGCHI Conference on Human Factors in Computing Systems (CHI ’13). ACM, New York, NY, USA, 3297–3306. https://doi.org/10.1145/2470654.2466451 [6] Julian Bleecker. 2009. Design Fiction: A short essay on design, science, fact and fiction. http://drbfw5wfjlxon.cloudfront.net/writing/ DesignFiction_WebEdition.pdf. Online, Last accessed: 19.01.2018. [7] Mark Blythe. 2014. Research through design fiction: narrative in real and imaginary abstracts. In Proceedings of the SIGCHI Conference on Human Factors in Computing Systems. ACM, 703–712. [8] Mark Blythe, Kristina Andersen, Rachel Clarke, and PeterWright. 2016. Anti-solutionist strategies: Seriously silly design fiction. In Proceedings of the 2016 CHI Conference on Human Factors in Computing Systems. ACM, 4968–4978. [9] Mark Blythe, Jamie Steane, Jenny Roe, and Caroline Oliver. 2015. Solutionism, the game: design fictions for positive aging. In Proceedings of the 33rd Annual ACM Conference on Human Factors in Computing Systems. ACM, 3849–3858. [10] Andy Boucher, David Cameron, and Nadine Jarvis. 2012. Power to the People: Dynamic Energy Management Through Communal Cooperation. In Proceedings of the Designing Interactive Systems Conference (DIS ’12). ACM, New York, NY, USA, 612–620. https://doi.org/10.1145/ 2317956.2318048 [11] Pam Briggs, Mark Blythe, John Vines, Stephen Lindsay, Paul Dunphy, James Nicholson, David Green, Jim Kitson, Andrew Monk, and Patrick Olivier. 2012. Invisible Design: Exploring Insights and Ideas Through Ambiguous Film Scenarios. In Proceedings of the Designing Interactive Systems Conference (DIS ’12). ACM, New York, NY, USA, 534–543. https://doi.org/10.1145/2317956.2318036 [12] Richard Buchanan. 1992. Wicked problems in design thinking. Design issues 8, 2 (1992), 5–21. [13] T. Chang, M. Alizadeh, and A. Scaglione. 2013. Real-Time Power Balancing Via Decentralized Coordinated Home Energy Scheduling. IEEE Transactions on Smart Grid 4, 3 (Sept 2013), 1490–1504. https: //doi.org/10.1109/TSG.2013.2250532"
+    }, {
+      "page": 12,
+      "region": {
+        "x1": 317.9549865722656,
+        "x2": 559.549560546875,
+        "y1": 97.10771942138672,
+        "y2": 710.3359985351562
+      },
+      "text": "[14] David Chatting. 2014. Speculation by Improvisation. In DIS 2014 Workshop on Human-Computer Improvisation. [15] Stephen Coleman, Kruakae Pothong, and Sarah Weston. 2018. Dramatizing Deliberation: A method for encouraging young people to think about their rights. Journal of Public Deliberation 14, 1 (2018), 2. [16] Stephen Coleman, Anna Przybylska, and Yves Sintomer. 2015. Deliberation and Democracy: innovative processes and institutions. Peter Lang. [17] Enrico Costanza, Joel E. Fischer, James A. Colley, Tom Rodden, Sarvapali D. Ramchurn, and Nicholas R. Jennings. 2014. Doing the Laundry with Agents: A Field Trial of a Future Smart Energy System in the Home. In Proceedings of the SIGCHI Conference on Human Factors in Computing Systems (CHI ’14). ACM, New York, NY, USA, 813–822. https://doi.org/10.1145/2556288.2557167 [18] Tawanna Dillahunt, Jennifer Mankoff, Eric Paulos, and Susan Fussell. 2009. It’s Not All About \"Green\": Energy Use in Low-income Communities. In Proceedings of the 11th International Conference on Ubiquitous Computing (UbiComp ’09). ACM, New York, NY, USA, 255–264. https://doi.org/10.1145/1620545.1620583 [19] John S Dryzek. 2009. Democratization as deliberative capacity building. Comparative political studies 42, 11 (2009), 1379–1402. [20] Anthony Dunne and Fiona Raby. 2001. Design Noir: The Secret Life of Electronic Objects (1 ed.). Birkhaeuser Basel. http://www.worldcat. org/isbn/3764365668 [21] A. Dunne and F. Raby. 2007. Design for Debate. http://www. dunneandraby.co.uk/content/bydandr/36/0. Online, Last accessed: 09.09.2014. [22] A. Dunne and F. Raby. 2013. Speculative Everything: Design, Fiction, and Social Dreaming. MIT Press. http://books.google.co.uk/books? id=9gQyAgAAQBAJ [23] Chris Elsden, David Chatting, Abigail C Durrant, Andrew Garbett, Bettina Nissen, John Vines, and David S Kirk. 2017. On speculative enactments. In Proceedings of the 2017 CHI Conference on Human Factors in Computing Systems. ACM, 5386–5399. [24] Frank Fischer and Herbert Gottweis. 2013. The argumentative turn in public policy revisited: twenty years later. Critical Policy Studies 7, 4 (2013), 425–433. [25] Vincenzo Giordano and Gianluca Fulli. 2012. A business case for Smart Grid technologies: A systemic perspective. Energy Policy 40 (2012), 252–259. [26] Maarten Hajer, Maarten A Hajer, and Hendrik Wagenaar. 2003. Deliberative policy analysis: understanding governance in the network society. Cambridge University Press. [27] Willett Kempton and Jasna TomiÄĞ. 2005. Vehicle-to-grid power fundamentals: Calculating capacity and net revenue. Journal of Power Sources 144, 1 (2005), 268 – 279. https://doi.org/10.1016/j.jpowsour. 2004.12.025 [28] Tobie Kerridge. 2009. Does speculative design contribute to public engagement of science and technology?. https://www.gold.ac.uk/media/Does%20Speculative%20Design% 20Contribute%20to%20Public%20Engagement%20of.pdf. In Proceedings of Multiple Ways to Design Research. Online, Last accessed: 19.01.2018. [29] Joseph Lindley, Dhruv Sharma, and Robert Potts. 2015. Operationalizing design fiction with anticipatory ethnography. In Ethnographic Praxis in Industry Conference Proceedings, Vol. 2015. Wiley Online Library, 58–71. [30] Jane Mansbridge, James Bohman, Simone Chambers, David Estlund, Andreas Føllesdal, Archon Fung, Cristina Lafont, Bernard Manin, and José Luis Martí. 2010. The place of self-interest and the role of power in deliberative democracy. Journal of political philosophy 18, 1 (2010), 64–100."
+    }, {
+      "page": 12,
+      "region": {
+        "x1": 54.0,
+        "x2": 558.001953125,
+        "y1": 750.914794921875,
+        "y2": 756.7197875976562
+      },
+      "text": "Paper 387 Page 13"
+    }, {
+      "page": 13,
+      "region": {
+        "x1": 53.79798889160156,
+        "x2": 295.386962890625,
+        "y1": 97.10771942138672,
+        "y2": 351.6809997558594
+      },
+      "text": "[31] Sarah Manski. 2017. Building the blockchain world: Technological commonwealth or just more of the same? Strategic Change 26, 5 (2017), 511–522. [32] Arne Meeuw, Sandro Schopfer, Benjamin Ryder, and Felix Wortmann. 2018. LokalPower: Enabling Local Energy Markets with User-Driven Engagement. In Extended Abstracts of the 2018 CHI Conference on Human Factors in Computing Systems (CHI EA ’18). ACM, New York, NY, USA, Article LBW613, 6 pages. https://doi.org/10.1145/3170427. 3188610 [33] Mike Michael. 2012. âĂĲWhat are we busy doing?âĂİ Engaging the idiot. Science, Technology, & Human Values 37, 5 (2012), 528–554. [34] A.Molderink, V. Bakker, M. G. C. Bosman, J. L. Hurink, andG. J. M. Smit. 2010. Management and Control of Domestic Smart Grid Technology. IEEE Transactions on Smart Grid 1, 2 (Sept 2010), 109–119. https: //doi.org/10.1109/TSG.2010.2055904 [35] John Parkinson and Jane Mansbridge. 2012. Deliberative systems: deliberative democracy at the large scale. Cambridge University Press. [36] Lara S. G. Piccolo, Cecília Baranauskas, and Rodolfo Azevedo. 2017. A socially inspired energy feedback technology: challenges in a developing scenario. AI & SOCIETY 32, 3 (01 Aug 2017), 383–399. https://doi.org/10.1007/s00146-016-0653-8 [37] James Pierce and Eric Paulos. 2012. Beyond Energy Monitors: Interaction, Energy, and Emerging Energy Systems. In Proceedings of the SIGCHI Conference on Human Factors in Computing Systems (CHI ’12). ACM, New York, NY, USA, 665–674. https://doi.org/10.1145/2207676. 2207771"
+    }, {
+      "page": 13,
+      "region": {
+        "x1": 317.95501708984375,
+        "x2": 559.0741577148438,
+        "y1": 97.10771942138672,
+        "y2": 152.427978515625
+      },
+      "text": "[38] James Pierce, Phoebe Sengers, Tad Hirsch, Tom Jenkins, William Gaver, and Carl DiSalvo. 2015. Expanding and refining design and criticality in HCI. In Proceedings of the 33rd Annual ACM Conference on Human Factors in Computing Systems. ACM, 2083–2092. [39] Horst WJ Rittel. 1988. The reasoning of designers. IGP. [40] Will Simm, Maria Angela Ferrario, Adrian Friday, Peter Newman,"
+    }, {
+      "page": 13,
+      "region": {
+        "x1": 317.95501708984375,
+        "x2": 559.5447998046875,
+        "y1": 156.88372802734375,
+        "y2": 331.7560119628906
+      },
+      "text": "Stephen Forshaw, Mike Hazas, and Alan Dix. 2015. Tiree Energy Pulse: Exploring Renewable Energy Forecasts on the Edge of the Grid. In Proceedings of the 33rd Annual ACM Conference on Human Factors in Computing Systems (CHI ’15). ACM, New York, NY, USA, 1965–1974. https://doi.org/10.1145/2702123.2702285 [41] Jocelyn Spence, David M Frohlich, and Stuart Andrews. 2013. Performative experience design. In CHI’13 Extended Abstracts on Human Factors in Computing Systems. ACM, 2049–2058. [42] Jürg Steiner. 2012. The foundations of deliberative democracy: Empirical research and normative implications. Cambridge University Press. [43] Bruce Sterling. 2012. Sci-Fi Writer Bruce Sterling Explains the Intriguing New Concept of Design Fiction. http://www.slate.com/blogs/ future_tense/2012/03/02/bruce_sterling_on_design_fictions_.html. Online, Last accessed: 19.01.2018. [44] Robyn Taylor, Jocelyn Spence, Brendan Walker, Bettina Nissen, and Peter Wright. 2017. Performing research: Four contributions to HCI. In Proceedings of the 2017 CHI Conference on Human Factors in Computing Systems. ACM, 4825–4837."
+    }, {
+      "page": 13,
+      "region": {
+        "x1": 54.0,
+        "x2": 558.001953125,
+        "y1": 750.914794921875,
+        "y2": 756.7197875976562
+      },
+      "text": "Paper 387 Page 14"
+    }],
+    "title": {
+      "page": 12,
+      "region": {
+        "x1": 53.79800033569336,
+        "x2": 116.56490325927734,
+        "y1": 212.75184631347656,
+        "y2": 219.177978515625
+      },
+      "text": "REFERENCES"
+    }
+  }]
+}
