@@ -7,14 +7,14 @@ from flask import request
 
 import pandas as pd
 
-from processData import process
+from process_data import process
 
 SLIDE_DATA_PATH = './slideMeta/slideData'
 
 app = Flask(__name__)
 CORS(app)
 
-def readTXT(path):
+def read_txt(path):
     paragraphs = []
     with open(path, 'r') as f:
         while True:
@@ -25,7 +25,7 @@ def readTXT(path):
             paragraphs.append(line)
     return paragraphs
 
-def readJSON(path):
+def read_json(path):
     obj = {}
     with open(path, 'r') as f:
         encoded = f.read()
@@ -35,20 +35,20 @@ def readJSON(path):
 @app.route('/getData', methods=['POST'])
 def prediction():
     decoded = request.data.decode('utf-8')
-    requestJSON = json.loads(decoded)
-    presentationId = requestJSON["presentationId"]
+    request_json = json.loads(decoded)
+    presentation_id = request_json["presentationId"]
 
-    parent_path = os.path.join(SLIDE_DATA_PATH, str(presentationId))
-    parent_path_2 = os.path.join(SLIDE_DATA_PATH, str(presentationId))
+    parent_path = os.path.join(SLIDE_DATA_PATH, str(presentation_id))
+    parent_path_2 = os.path.join(SLIDE_DATA_PATH, str(presentation_id))
 
     paper_path = os.path.join(parent_path, 'paperData.txt')
     script_path = os.path.join(parent_path_2, 'scriptData.txt')
     #data_path = os.path.join(parent_path, 'result.json')
 
     return json.dumps({
-        "paper": readTXT(paper_path),
-        "script": readTXT(script_path),
-        "data": process(parent_path, parent_path_2),
+        "paper": read_txt(paper_path),
+        "script": read_txt(script_path),
+        "data": process(parent_path, approach="classifier"),
     })
 
 app.run(host='0.0.0.0', port=3555)
