@@ -37,6 +37,7 @@ def prediction():
     decoded = request.data.decode('utf-8')
     request_json = json.loads(decoded)
     presentation_id = request_json["presentationId"]
+    approach = request_json["processingApproach"]
 
     parent_path = os.path.join(SLIDE_DATA_PATH, str(presentation_id))
     parent_path_2 = os.path.join(SLIDE_DATA_PATH, str(presentation_id))
@@ -48,7 +49,7 @@ def prediction():
     return json.dumps({
         "paper": read_txt(paper_path),
         "script": read_txt(script_path),
-        "data": process(parent_path, approach="classifier"),
+        "data": process(parent_path, approach),
     })
 
 app.run(host='0.0.0.0', port=3555)

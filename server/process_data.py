@@ -140,9 +140,7 @@ def get_similarity_classifier(paper_data, script_data, section_data, paper_sente
             section_ids = section_ids[-top_k:]
         sections = []
         for section_id in section_ids:
-            if is_section_skipped(section_data[section_id]):
-                continue
-            sections.append((section_data[section_id], int(section_id), overall[i][section_id]))
+            sections.append((label_dict[section_id], int(section_id), overall[i][section_id]))
         top_sections.append(sections)
         script_sentence_start += script_sentence_range[i]
 
@@ -191,8 +189,6 @@ def get_similarity_embeddings(paper_data, script_data, section_data, paper_sente
                 section_ids = section_ids[-top_k:]
         sections = []
         for section_id in section_ids:
-            if is_section_skipped(section_data[section_id]):
-                continue
             sections.append((section_data[section_id], int(section_id), section_scores[section_id]))
 
         top_sections.append(sections)
@@ -261,8 +257,6 @@ def get_similarity_keywords(paper_data, script_data, section_data, paper_sentenc
             section_ids = section_ids[-top_k:]
         sections = []
         for section_id in section_ids:
-            if is_section_skipped(section_data[section_id]):
-                continue
             sections.append((section_data[section_id], int(section_id), section_scores[section_id]))
 
         top_sections.append(sections)
@@ -271,12 +265,8 @@ def get_similarity_keywords(paper_data, script_data, section_data, paper_sentenc
     return overall, top_sections, paper_keywords, script_keywords
 
 def get_outline_dp(section_data, top_sections, script_sentence_range):
-    label_dict = []
-    for section in section_data:
-        if is_section_skipped(section) or section in label_dict:
-            continue
-        label_dict.append(section)
-
+    label_dict = sorted(list(set(section_data)))
+    
     INF = (len(script_sentence_range) + 1) * 100
     n = len(label_dict)
 
@@ -366,11 +356,7 @@ def get_outline_dp(section_data, top_sections, script_sentence_range):
     return outline, weights
 
 def get_outline_dp_mask(section_data, top_sections, script_sentence_range, target_mask = None):
-    label_dict = []
-    for section in section_data:
-        if is_section_skipped(section) or section in label_dict:
-            continue
-        label_dict.append(section)
+    label_dict = sorted(list(set(section_data)))
 
     for i, section in enumerate(label_dict):
         print(i, ":", section)
@@ -455,10 +441,11 @@ def get_outline_simple(top_sections):
         })
     return outline
 
-def fix_section_titles(section_titles):
-    ret_titles = []
+def fix_section_titles(section_data, paper_data):
+    ret_section_data = []
+    ret_paper_data = []
 
-    title_num = 0
+    #cnt_title = 0
 
     last_section = None
 
@@ -467,14 +454,18 @@ def fix_section_titles(section_titles):
             return True
         return False
 
-
-    for title in section_titles:
-        if is_main_section(title) or last_section is None:
-            ret_titles.append(title)
-            last_section = title
+    for (section, paragraph) in zip(section_data, paper_data):
+        if is_section_skipped(section):
+            continue
+        if is_main_section(section) or last_section is None:
+            ret_section_data.append(section)
+            ret_paper_data.append(paragraph)
+            last_section = section
         else:
-            ret_titles.append(last_section) 
-    return ret_titles
+            ret_section_data.append(last_section)
+            ret_paper_data.append(paragraph)
+
+    return ret_section_data, ret_paper_data
 
 def process(path, approach = "keywords"):
     timestamp = open(os.path.join(path, "frameTimestamp.txt"), "r")
@@ -486,7 +477,7 @@ def process(path, approach = "keywords"):
     section_data = read_file(os.path.join(path, "sectionData.txt"))
     script_data = read_file(os.path.join(path, "scriptData.txt"))
 
-    section_data = fix_section_titles(section_data)
+    section_data, paper_data = fix_section_titles(section_data, paper_data)
 
     while True :
         line = timestamp.readline()
@@ -542,7 +533,7 @@ def process(path, approach = "keywords"):
 
     paper_sentence_id = []
     for i, paragraph in enumerate(paper_data):
-        if (is_section_skipped(section_data[i]) or len(word_tokenize(paragraph)) < MIN_PARAGRAPH_LENGTH):
+        if (len(word_tokenize(paragraph)) < MIN_PARAGRAPH_LENGTH):
             continue
         # if (len(ret_paper_data) > 10):
         #     break
@@ -588,7 +579,7 @@ def process(path, approach = "keywords"):
     return result
 
 if __name__ == "__main__":
-    output = process('./slideMeta/slideData/0', approach="classifier")
-    #output = process('./slideMeta/slideData/0', approach="keywords")
+    #output = process('./slideMeta/slideData/0', approach="classifier")
+    output = process('./slideMeta/slideData/0', approach="keywords")
     #output = process('./slideMeta/slideData/0', approach="embeddings")
     print(output["outline"])
