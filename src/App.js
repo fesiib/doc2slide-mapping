@@ -19,9 +19,9 @@ function App() {
 	const getData = () => {
 		axios.post('http://localhost:3555/getData', {
 			presentationId: presentationID,
-			//processingApproach: "keywords",
-			processingApproach: "embeddings",
-			//processingApproach: "classifier",
+			similarityType: "classifier",
+			outliningApproach: "dp_mask",
+			applyThresholding: false,
 		}).then( (response) => {
 			console.log(response);
 			setParagraphs(response.data.paper);

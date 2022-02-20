@@ -37,7 +37,12 @@ def prediction():
     decoded = request.data.decode('utf-8')
     request_json = json.loads(decoded)
     presentation_id = request_json["presentationId"]
-    approach = request_json["processingApproach"]
+    similarity_type = request_json["similarityType"]
+    outlining_approach = request_json["outliningApproach"]
+    apply_thresholding = request_json["applyThresholding"]
+
+    print(request_json)
+
 
     parent_path = os.path.join(SLIDE_DATA_PATH, str(presentation_id))
     parent_path_2 = os.path.join(SLIDE_DATA_PATH, str(presentation_id))
@@ -49,7 +54,7 @@ def prediction():
     return json.dumps({
         "paper": read_txt(paper_path),
         "script": read_txt(script_path),
-        "data": process(parent_path, approach),
+        "data": process(parent_path, similarity_type, outlining_approach, apply_thresholding),
     })
 
 app.run(host='0.0.0.0', port=3555)

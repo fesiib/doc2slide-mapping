@@ -83,15 +83,13 @@ def apply_thresholds_2darray(array_2d, top_k, val_threshold):
     
     return ret_array
 
-def get_similarity_classifier(paper_data, script_data, section_data, paper_sentence_id, script_sentence_range):
-    apply_thresholding = False
-    top_k = 4
+def get_similarity_classifier(paper_data, script_data, section_data, paper_sentence_id, script_sentence_range, apply_thresholding):
+    top_k = 5
     val_threshold = 0.1
 
     vectorizer = TfidfVectorizer(ngram_range=(1, 3))
     X = vectorizer.fit_transform(paper_data)
 
-    print(vectorizer.get_feature_names_out())
     print(X.shape)
 
     label_dict = sorted(list(set(section_data)))
@@ -146,15 +144,14 @@ def get_similarity_classifier(paper_data, script_data, section_data, paper_sente
 
     return overall, top_sections, paper_data_by_section
 
-def get_similarity_embeddings(paper_data, script_data, section_data, paper_sentence_id, script_sentence_range):
+def get_similarity_embeddings(paper_data, script_data, section_data, paper_sentence_id, script_sentence_range, apply_thresholding):
     model = SentenceTransformer('all-MiniLM-L6-v2')
 
     paper_embeddings = model.encode(paper_data)
     script_embeddings = model.encode(script_data)
 
-    apply_thresholding = False
-    top_k = 5
-    val_threshold = 0.3
+    top_k = 10
+    val_threshold = 0.6
     
     overall = cosine_similarity(paper_embeddings, script_embeddings)
 
@@ -197,16 +194,15 @@ def get_similarity_embeddings(paper_data, script_data, section_data, paper_sente
     return overall, top_sections
 
 
-def get_similarity_keywords(paper_data, script_data, section_data, paper_sentence_id, script_sentence_range):
+def get_similarity_keywords(paper_data, script_data, section_data, paper_sentence_id, script_sentence_range, apply_thresholding):
     nlp = spacy.load("en_core_web_sm")
     overall = numpy.zeros((len(paper_data), len(script_data)))
 
     paper_keywords = []
     script_keywords = []
 
-    apply_thresholding = False
-    top_k = 5
-    val_threshold = 0.3
+    top_k = 10
+    val_threshold = 0.2
     
     for paper_sentence in paper_data:
         paper_keywords.append(get_keywords(paper_sentence, nlp))
@@ -421,6 +417,7 @@ def get_outline_dp_mask(section_data, top_sections, script_sentence_range, targe
 
 def get_outline_simple(top_sections):
     outline = []
+    weights = []
 
     for i in range(1, len(top_sections)):
         scores = {
@@ -439,12 +436,32 @@ def get_outline_simple(top_sections):
             "startSlideIndex": i,
             "endSlideIndex": i,
         })
-    return outline
+        weights.append(scores[section])
+    return outline, weights
+
+def get_outline_generic(outlining_approach, section_data, top_sections, script_sentence_range, target_mask = None):
+    if outlining_approach == 'dp_mask':
+        return get_outline_dp_mask(section_data, top_sections, script_sentence_range, target_mask)
+    if outlining_approach == 'simple':
+        return get_outline_simple(top_sections)
+    
+    return get_outline_dp(section_data, top_sections, script_sentence_range)
+
+def add_sections_as_paragraphs(section_data, paper_data):
+    ret_section_data = []
+    ret_paper_data = []
+
+    for i in range(0, len(section_data)):
+        if i == 0 or section_data[i] != section_data[i - 1]:
+            ret_section_data.append(section_data[i])
+            ret_paper_data.append(section_data[i] + ".")
+        ret_section_data.append(section_data[i])
+        ret_paper_data.append(paper_data[i])
+    return ret_section_data, ret_paper_data
 
 def fix_section_titles(section_data, paper_data):
     ret_section_data = []
     ret_paper_data = []
-
     #cnt_title = 0
 
     last_section = None
@@ -467,7 +484,7 @@ def fix_section_titles(section_data, paper_data):
 
     return ret_section_data, ret_paper_data
 
-def process(path, approach = "keywords"):
+def process(path, similarity_type, outlining_approach, apply_thresholding):
     timestamp = open(os.path.join(path, "frameTimestamp.txt"), "r")
 
     timestamp_data = []
@@ -476,6 +493,8 @@ def process(path, approach = "keywords"):
     paper_data = read_file(os.path.join(path, "paperData.txt"))
     section_data = read_file(os.path.join(path, "sectionData.txt"))
     script_data = read_file(os.path.join(path, "scriptData.txt"))
+
+    section_data, paper_data = add_sections_as_paragraphs(section_data, paper_data)
 
     section_data, paper_data = fix_section_titles(section_data, paper_data)
 
@@ -523,7 +542,7 @@ def process(path, approach = "keywords"):
     for i, (script, ocr) in enumerate(zip(script_data, ocr_data)):
         # if (len(ret_script_data) > 10):
         #     break
-        if (approach == "classifier"):
+        if (similarity_type == "classifier"):
             sentences = [script + " " + ocr]
         else:
             sentences = get_sentences(script)
@@ -545,28 +564,36 @@ def process(path, approach = "keywords"):
     print("Sentences# {} Scripts# {}".format(len(_script_data), len(script_data)))
     print("Sentences# {} Paragraphs# {}".format(len(_paper_data), len(paper_data)))
 
-    if approach == 'keywords':
-        overall, top_sections, paper_keywords, script_keywords = get_similarity_keywords(_paper_data, _script_data, section_data, paper_sentence_id, script_sentence_range)
-        outline, weights = get_outline_dp_mask(section_data, top_sections, script_sentence_range)
+    if similarity_type == 'keywords':
+        overall, top_sections, paper_keywords, script_keywords = get_similarity_keywords(
+            _paper_data, _script_data, section_data, paper_sentence_id, script_sentence_range, apply_thresholding
+        )
+        outline, weights = get_outline_generic(outlining_approach, section_data, top_sections, script_sentence_range)
+
         result['topSections'] = top_sections
         result['outline'] = outline
         result['weights'] = weights
         result["similarityTable"] = numpy.float64(overall).tolist()
         result["scriptSentences"] = script_keywords
         result["paperSentences"] = paper_keywords
-    elif approach == 'embeddings':
-        overall, top_sections = get_similarity_embeddings(_paper_data, _script_data, section_data, paper_sentence_id, script_sentence_range)
-        outline, weights = get_outline_dp_mask(section_data, top_sections, script_sentence_range)
+    elif similarity_type == 'embeddings':
+        overall, top_sections = get_similarity_embeddings(
+            _paper_data, _script_data, section_data, paper_sentence_id, script_sentence_range, apply_thresholding
+        )
+        outline, weights = get_outline_generic(outlining_approach, section_data, top_sections, script_sentence_range)
+
         result['topSections'] = top_sections
         result['outline'] = outline
         result['weights'] = weights
         result["similarityTable"] = numpy.float64(overall).tolist()
         result["scriptSentences"] = _script_data
         result["paperSentences"] = _paper_data
-    elif approach == "classifier":
-        overall, top_sections, paper_data_by_section = get_similarity_classifier(_paper_data, _script_data, section_data, paper_sentence_id, script_sentence_range)
-        outline, weights = get_outline_dp_mask(section_data, top_sections, script_sentence_range)
-
+    elif similarity_type == "classifier":
+        overall, top_sections, paper_data_by_section = get_similarity_classifier(
+            _paper_data, _script_data, section_data, paper_sentence_id, script_sentence_range, apply_thresholding
+        )
+        outline, weights = get_outline_generic(outlining_approach, section_data, top_sections, script_sentence_range)
+        
         result['topSections'] = top_sections
         result['outline'] = outline
         result['weights'] = weights
@@ -580,6 +607,7 @@ def process(path, approach = "keywords"):
 
 if __name__ == "__main__":
     #output = process('./slideMeta/slideData/0', approach="classifier")
-    output = process('./slideMeta/slideData/0', approach="keywords")
+    output = process('./slideMeta/slideData/0', similarity_type="keywords", outlining_approach="dp_mask", apply_thresholding=True)
     #output = process('./slideMeta/slideData/0', approach="embeddings")
     print(output["outline"])
+    print(len(output["topSections"][0]))
