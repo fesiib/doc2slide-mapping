@@ -1,0 +1,39 @@
+{
+    "groundTruthSegments": [
+        {
+            "sectionTitle": "title",
+            "startSlideIndex": 1,
+            "endSlideIndex": 1
+        },
+        {
+            "sectionTitle": "1 INTRODUCTION",
+            "startSlideIndex": 2,
+            "endSlideIndex": 7
+        },
+        {
+            "sectionTitle": "2 BACKGROUND",
+            "startSlideIndex": 8,
+            "endSlideIndex": 8
+        },
+        {
+            "sectionTitle": "3 PROBLEMATISING THE INVISIBLE",
+            "startSlideIndex": 9,
+            "endSlideIndex": 19
+        },
+        {
+            "sectionTitle": "4 FUSING DESIGN, DRAMA AND DELIBERATION",
+            "startSlideIndex": 20,
+            "endSlideIndex": 26
+        },
+        {
+            "sectionTitle": "5 DISCUSSION",
+            "startSlideIndex": 27,
+            "endSlideIndex": 29
+        },
+        {
+            "sectionTitle": "end",
+            "startSlideIndex": 30,
+            "endSlideIndex": 30
+        }
+    ]
+}

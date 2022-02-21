@@ -49,11 +49,14 @@ def prediction():
 
     paper_path = os.path.join(parent_path, 'paperData.txt')
     script_path = os.path.join(parent_path_2, 'scriptData.txt')
+    section_path = os.path.join(parent_path, 'sectionData.txt')
+
     #data_path = os.path.join(parent_path, 'result.json')
 
     return json.dumps({
         "paper": read_txt(paper_path),
         "script": read_txt(script_path),
+        "sections": read_txt(section_path),
         "data": process(parent_path, similarity_type, outlining_approach, apply_thresholding),
     })
 

@@ -25,6 +25,29 @@ SKIPPED_SECTIONS = [
     "ACKNOWLEDGMENTS"
 ]
 MIN_PARAGRAPH_LENGTH = 10
+
+class Vectorizer(object):
+    def __init__(self, method='tf-idf'):
+        self.method = method
+        self.vectorizer = None
+
+        if method == 'tf-idf':
+            self.vectorizer = TfidfVectorizer(ngram_range=(1, 4))
+        elif method == 'embedding':
+            self.vectorizer = SentenceTransformer('all-MiniLM-L6-v2')
+    
+    def fit_transform(self, data):
+        if self.method == 'tf-idf':
+            return self.vectorizer.fit_transform(data)
+        return self.vectorizer.encode(data)
+    
+    def transform(self, data):
+        if self.method == 'tf-idf':
+            return self.vectorizer.transform(data)
+        elif self.method == 'embedding':
+            return self.vectorizer.encode(data)
+        return None
+
     
 def read_file(filename) :
     ret_list = []
@@ -55,20 +78,23 @@ def actual_word(word):
             return False
     return True
 
+
+def preprocess_text(t):
+    t = re.sub(r'[^\w\s]', '', t)
+    return t.lower().strip()
+
 def get_keywords(text, nlp):
     STOP_WORDS = spacy.lang.en.stop_words.STOP_WORDS
+    text = preprocess_text(text)
     tokens = nlp(text)
     tokens = [ make_lemma(word) for word in tokens if word.lemma_ != "-PRON-"]
     tokens = [ word for word in tokens if word not in STOP_WORDS and word not in punctuation]
-    tokens = [ word for word in tokens if actual_word(word)]
+    #tokens = [ word for word in tokens if actual_word(word)]
 
-    return list(set(tokens))
+    return list(tokens)
 
 def get_sentences(t) :
-    t = re.sub("\[.*?\]", "", t)
     sentences = sent_tokenize(t)
-    
-    # sentences = [ ' '.join(re.sub(r'[^\w]', ' ', s).split()) for s in sentences ]
     return sentences
 
 def apply_thresholds_2darray(array_2d, top_k, val_threshold):
@@ -83,34 +109,73 @@ def apply_thresholds_2darray(array_2d, top_k, val_threshold):
     
     return ret_array
 
+def get_top_sections(overall, section_data, script_sentence_range, paper_sentence_id, apply_thresholding, top_k):
+    overall = numpy.array(overall)
+
+    top_paragraphs = []
+
+    script_sentence_start = 0
+
+    for i in range(len(script_sentence_range)):
+        section_scores = numpy.zeros(len(section_data), dtype=numpy.float64)
+        for j in range(script_sentence_start, script_sentence_start + script_sentence_range[i]):
+            args = numpy.argsort(overall[:, j])
+            if apply_thresholding is True:
+                args = args[-top_k:]
+            for pos in args:
+                section_scores[paper_sentence_id[pos]] += overall[pos][j]
+        section_ids = numpy.argsort(section_scores)
+        if apply_thresholding is True:
+            section_ids = section_ids[-top_k:]
+        sections = []
+        for section_id in section_ids:
+            sections.append((section_data[section_id], int(section_id), section_scores[section_id]))
+
+        top_paragraphs.append(sections)
+        script_sentence_start += script_sentence_range[i]
+    
+    top_sections = []
+
+    for paragraphs in top_paragraphs:
+        map_sections = {}
+        for top_paragraph in paragraphs:
+            if top_paragraph[0] not in map_sections:
+                map_sections[top_paragraph[0]] = top_paragraph[2]
+            else:
+                # Sum -> biased, max -> might not be the best
+                map_sections[top_paragraph[0]] = max(map_sections[top_paragraph[0]], top_paragraph[2])
+        sections = []
+        for (k, v) in map_sections.items():
+            sections.append([k, v])
+        top_sections.append(sections)
+    return top_sections
+
 def get_similarity_classifier(paper_data, script_data, section_data, paper_sentence_id, script_sentence_range, apply_thresholding):
     top_k = 5
     val_threshold = 0.1
 
-    vectorizer = TfidfVectorizer(ngram_range=(1, 3))
-    X = vectorizer.fit_transform(paper_data)
-
-    print(X.shape)
-
     label_dict = sorted(list(set(section_data)))
     label_categories = [ label_dict.index(section_data[sentence_id]) for sentence_id in paper_sentence_id ]
 
-    paper_data_by_section = [[] for i in range(len(label_dict))]
-    for i, sentence in enumerate(paper_data):
-        paper_data_by_section[label_categories[i]].append(" " + sentence)
+    model = RandomForestClassifier()
+    
+    vectorizer = Vectorizer(method = 'tf-idf')
+    X = vectorizer.fit_transform(list(map(preprocess_text, paper_data)))
+    print(X.shape)
 
     Y = numpy.array(*[label_categories])
     print(Y.shape)
 
-    model = RandomForestClassifier()
     model.fit(X, Y)
 
     def get_all_probs(t) :
-        pre = ' '.join(get_sentences(t))
-        
+        pre = ' '.join(map(preprocess_text, get_sentences(t)))
         X2 = vectorizer.transform([pre])
-        
         return model.predict_proba(X2)[0]
+
+    paper_data_by_section = [[] for i in range(len(label_dict))]
+    for i, sentence in enumerate(paper_data):
+        paper_data_by_section[label_categories[i]].append(" " + sentence)
 
     overall = []
     for script in script_data:
@@ -138,17 +203,17 @@ def get_similarity_classifier(paper_data, script_data, section_data, paper_sente
             section_ids = section_ids[-top_k:]
         sections = []
         for section_id in section_ids:
-            sections.append((label_dict[section_id], int(section_id), overall[i][section_id]))
+            sections.append((label_dict[section_id], overall[i][section_id]))
         top_sections.append(sections)
         script_sentence_start += script_sentence_range[i]
 
     return overall, top_sections, paper_data_by_section
 
 def get_similarity_embeddings(paper_data, script_data, section_data, paper_sentence_id, script_sentence_range, apply_thresholding):
-    model = SentenceTransformer('all-MiniLM-L6-v2')
+    vectorizer = Vectorizer(method='embedding')
 
-    paper_embeddings = model.encode(paper_data)
-    script_embeddings = model.encode(script_data)
+    paper_embeddings = vectorizer.transform(paper_data)
+    script_embeddings = vectorizer.transform(script_data)
 
     top_k = 10
     val_threshold = 0.6
@@ -167,35 +232,15 @@ def get_similarity_embeddings(paper_data, script_data, section_data, paper_sente
             for j in range(len(overall[i])):
                 overall[i][j] = max(overall[i][j], overall_t[i][j])
 
-    # y-axis : slides, x-axis : paper
-
-    top_sections = []
-
-    script_sentence_start = 0
-
-    for i in range(len(script_sentence_range)):
-        section_scores = numpy.zeros(len(section_data), dtype=numpy.float64)
-        for j in range(script_sentence_start, script_sentence_start + script_sentence_range[i]):
-            args = numpy.argsort(overall[:][j])
-            if apply_thresholding is True:
-                args = args[-top_k:]
-            for pos in args:
-                section_scores[paper_sentence_id[pos]] += overall[pos][j]
-        section_ids = numpy.argsort(section_scores)
-        if apply_thresholding is True:
-                section_ids = section_ids[-top_k:]
-        sections = []
-        for section_id in section_ids:
-            sections.append((section_data[section_id], int(section_id), section_scores[section_id]))
-
-        top_sections.append(sections)
-        script_sentence_start += script_sentence_range[i]
+    top_sections = get_top_sections(overall, section_data, script_sentence_range, paper_sentence_id, apply_thresholding, top_k)
     
     return overall, top_sections
 
 
 def get_similarity_keywords(paper_data, script_data, section_data, paper_sentence_id, script_sentence_range, apply_thresholding):
     nlp = spacy.load("en_core_web_sm")
+    vectorizer = TfidfVectorizer(ngram_range=(1, 1), min_df=0, max_df=1.0)
+
     overall = numpy.zeros((len(paper_data), len(script_data)))
 
     paper_keywords = []
@@ -207,22 +252,44 @@ def get_similarity_keywords(paper_data, script_data, section_data, paper_sentenc
     for paper_sentence in paper_data:
         paper_keywords.append(get_keywords(paper_sentence, nlp))
 
-    
     for script_sentence in script_data:
         script_keywords.append(get_keywords(script_sentence, nlp))
 
-    for i in range(len(paper_keywords)):
-        for j in range(len(script_keywords)):
-            intersection = 0
-            union = 0
-            for keyword in paper_keywords[i]:
-                if keyword in script_keywords[j]:
-                    intersection += 1
-            union = (len(paper_keywords[i]) + len(script_keywords[j])) - intersection
-            ## intersection over union
-            overall[i][j] = 0
-            if union > 0:
-                overall[i][j] = intersection / union
+    LOL = vectorizer.fit_transform(map(' '.join, paper_keywords))
+    vectorizer_features = vectorizer.get_feature_names_out().tolist()
+
+    print(LOL.shape, vectorizer_features)
+
+    # for i in range(len(paper_keywords)):
+    #     for j in range(len(script_keywords)):
+    #         intersection = 0
+    #         union = 0
+    #         for keyword in paper_keywords[i]:
+    #             if keyword in script_keywords[j]:
+    #                 intersection += 1
+    #         union = (len(paper_keywords[i]) + len(script_keywords[j])) - intersection
+    #         ## intersection over union
+    #         overall[i][j] = 0
+    #         if union > 0:
+    #             overall[i][j] = intersection / union
+
+    for j in range(len(script_keywords)):
+        X = vectorizer.transform([' '.join(script_keywords[j])])
+        unique_keywords = list(set(script_keywords[j]))
+        score_for_each = []
+        for word in unique_keywords:
+            try:
+                score_for_each.append(1.0 - X[0, vectorizer_features.index(word)])
+            except:
+                score_for_each.append(0.0)
+
+        # if 'intelligent' in unique_keywords and 'response' in unique_keywords:
+        #     print([(word, score) for (word, score) in zip(unique_keywords, score_for_each)])
+        for i in range(len(paper_keywords)):
+            for k, word in enumerate(unique_keywords):
+                if word in paper_keywords[i]:
+                    overall[i][j] += score_for_each[k]
+            
 
     if apply_thresholding is True:
         overall_t = numpy.transpose(overall)
@@ -236,27 +303,9 @@ def get_similarity_keywords(paper_data, script_data, section_data, paper_sentenc
             for j in range(len(overall[i])):
                 overall[i][j] = max(overall[i][j], overall_t[i][j])
 
-    top_sections = []
+    
 
-    script_sentence_start = 0
-
-    for i in range(len(script_sentence_range)):
-        section_scores = numpy.zeros(len(section_data), dtype=numpy.float64)
-        for j in range(script_sentence_start, script_sentence_start + script_sentence_range[i]):
-            args = numpy.argsort(overall[:][j])
-            if apply_thresholding is True:
-                args = args[-top_k:]
-            for pos in args:
-                section_scores[paper_sentence_id[pos]] += overall[pos][j]
-        section_ids = numpy.argsort(section_scores)
-        if apply_thresholding is True:
-            section_ids = section_ids[-top_k:]
-        sections = []
-        for section_id in section_ids:
-            sections.append((section_data[section_id], int(section_id), section_scores[section_id]))
-
-        top_sections.append(sections)
-        script_sentence_start += script_sentence_range[i]
+    top_sections = get_top_sections(overall, section_data, script_sentence_range, paper_sentence_id, apply_thresholding, top_k)
     
     return overall, top_sections, paper_keywords, script_keywords
 
@@ -274,13 +323,9 @@ def get_outline_dp(section_data, top_sections, script_sentence_range):
 
         scores = [0 for i in range(n)]
         for i in range(start, end):
-            inner_scores = [-INF for i in range(n)]
             for top_section in top_sections[i]:
                 pos = label_dict.index(top_section[0])
-                inner_scores[pos] = max(inner_scores[pos], top_section[2])
-            for j in range(n):
-                if inner_scores[j] > 0:
-                    scores[j] += inner_scores[j]
+                scores[pos] += top_section[1]
         result_section = -1
         for i in range(n):
             if result_section == -1 or scores[result_section] < scores[i]:
@@ -367,9 +412,9 @@ def get_outline_dp_mask(section_data, top_sections, script_sentence_range, targe
     for i in range(m):
         scores = [0 for k in range(n)]
         for j in range(i + 1, m):
-            for topSection in top_sections[j]:
-                pos = label_dict.index(topSection[0])
-                scores[pos] += topSection[2]
+            for top_section in top_sections[j]:
+                pos = label_dict.index(top_section[0])
+                scores[pos] += top_section[1]
 
             for mask in range(0, (1 << n)):
                 if dp[mask][i][0] < 0:
@@ -426,7 +471,7 @@ def get_outline_simple(top_sections):
         for j in range(0, len(top_sections[i])):
             if top_sections[i][j][0] not in scores:
                 scores[top_sections[i][j][0]] = 0    
-            scores[top_sections[i][j][0]] = max(scores[top_sections[i][j][0]], top_sections[i][j][2])
+            scores[top_sections[i][j][0]] = max(scores[top_sections[i][j][0]], top_sections[i][j][1])
         section = "NO_SECTION"
         for (k, v) in scores.items():
             if v > scores[section]:
@@ -607,7 +652,7 @@ def process(path, similarity_type, outlining_approach, apply_thresholding):
 
 if __name__ == "__main__":
     #output = process('./slideMeta/slideData/0', approach="classifier")
-    output = process('./slideMeta/slideData/0', similarity_type="keywords", outlining_approach="dp_mask", apply_thresholding=True)
+    output = process('./slideMeta/slideData/0', similarity_type="keywords", outlining_approach="dp_mask", apply_thresholding=False)
     #output = process('./slideMeta/slideData/0', approach="embeddings")
     print(output["outline"])
     print(len(output["topSections"][0]))

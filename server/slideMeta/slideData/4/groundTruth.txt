@@ -1,0 +1,54 @@
+{
+    "groundTruthSegments": [
+        {
+            "sectionTitle": "title",
+            "startSlideIndex": 1,
+            "endSlideIndex": 3
+        },
+        {
+            "sectionTitle": "1 INTRODUCTION",
+            "startSlideIndex": 4,
+            "endSlideIndex": 4
+        },
+        {
+            "sectionTitle": "2 RELATEDWORK Career Research in HCI",
+            "startSlideIndex": 5,
+            "endSlideIndex": 13
+        },
+        {
+            "sectionTitle": "1 INTRODUCTION",
+            "startSlideIndex": 14,
+            "endSlideIndex": 16
+        },
+        {
+            "sectionTitle": "3 USER STUDY 1: CLENCH FORCE CONTROL",
+            "startSlideIndex": 17,
+            "endSlideIndex": 22
+        },
+        {
+            "sectionTitle": "4 CLENCH INTERACTION DESIGN",
+            "startSlideIndex": 23,
+            "endSlideIndex": 27
+        },
+        {
+            "sectionTitle": "5 USER STUDY 2: PERFORMANCE EVALUATION",
+            "startSlideIndex": 28,
+            "endSlideIndex": 36
+        },
+        {
+            "sectionTitle": "6 USER STUDY 3: CLENCH USE CASE STUDY",
+            "startSlideIndex": 37,
+            "endSlideIndex": 38
+        },
+        {
+            "sectionTitle": "7 DISCUSSION",
+            "startSlideIndex": 39,
+            "endSlideIndex": 45
+        },
+        {
+            "sectionTitle": "end",
+            "startSlideIndex": 46,
+            "endSlideIndex": 47
+        }
+    ]
+}
