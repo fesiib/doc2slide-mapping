@@ -15,6 +15,7 @@ function App() {
 	const [data, setData] = useState(null);
 	const [paragraphs, setParagraphs] = useState([]);
 	const [scripts, setScripts] = useState([]);
+	const [sections, setSections] = useState([]);
 
 	const getData = () => {
 		axios.post('http://localhost:3555/getData', {
@@ -26,6 +27,7 @@ function App() {
 			console.log(response);
 			setParagraphs(response.data.paper);
 			setScripts(response.data.script);
+			setSections(response.data.sections);
 			setData(response.data.data);
 		});
 	}
@@ -35,8 +37,13 @@ function App() {
 			return "LOADING";
 		}
 		const output = data.outline.map((val, idx) => {
+			const startSlide = data.slideInfo[val.startSlideIndex]
+			const endSlide = data.slideInfo[val.endSlideIndex]
+
+			const duration = new Date(0);
+			duration.setSeconds(endSlide.endTime - startSlide.startTime);
 			return (<li key={idx}>
-				({val.startSlideIndex} - {val.endSlideIndex}) {"\t"} {val.section} 
+				({val.startSlideIndex} - {val.endSlideIndex}) {"\t"} {val.section} {"\t"} {duration.getMinutes()}:{duration.getSeconds()}
 			</li>);
 		});
 		return (<ol>
@@ -103,7 +110,8 @@ function App() {
 				}}>
 					{idx}
 					<div>
-						{paragraph}
+						<p> { sections[idx] }</p>
+						<p> { paragraph } </p>
 					</div>
 				</div>
 			)
@@ -165,7 +173,7 @@ function App() {
 				{outputSlideThumbnails(data)}
 			</div>
 			<div>
-				{outputTable(paragraphs, scripts)}
+				{outputTable(paragraphs, scripts, sections)}
 			</div>
 		</div>
 	);
