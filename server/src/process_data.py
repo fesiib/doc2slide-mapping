@@ -9,9 +9,13 @@ from nltk.tokenize import word_tokenize
 
 #nltk.download('punkt')
 
-from gen_similarity_table import get_sentences, get_similarity_classifier, get_similarity_embeddings, get_similarity_keywords
-from gen_outline import get_outline_generic
-from evaluate_outline import evaluate_outline
+from src.gen_similarity_table import \
+    get_sentences, get_similarity_classifier,\
+    get_similarity_embeddings, get_similarity_keywords
+
+from src.gen_outline import get_outline_generic
+
+from src.evaluate_outline import evaluate_outline
 
 sys.path.insert(0, '../')
 
@@ -205,7 +209,9 @@ def process(path, similarity_type, outlining_approach, apply_thresholding):
         result["scriptSentences"] = paper_data_by_section
         result["paperSentences"] = _script_data
 
-    result["evaluationData"] = evaluate_outline(result["outline"], result["groundTruthOutline"], result["slideInfo"])
+    result["evaluationData"] = evaluate_outline(
+        result["outline"], result["groundTruthOutline"], result["slideInfo"], result["topSections"]
+    )
 
     json_file = open(os.path.join(path, "result.json"), "w")
     json_file.write(json.dumps(result))
