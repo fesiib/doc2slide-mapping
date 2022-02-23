@@ -54,7 +54,7 @@ function App() {
 				<Outline isGenerated={true} outline={data?.outline} slideInfo={data?.slideInfo} />
 				<Outline isGenerated={false} outline={data?.groundTruthOutline} slideInfo={data?.slideInfo} />
 			</div>
-			<PipelineAccuracy evaluationData={null}/>
+			<PipelineAccuracy evaluationData={data?.evaluationData}/>
 			<ComparisonTable paragraphs={paragraphs} scripts={scripts} sections={sections}/>
 		</div>
 	);

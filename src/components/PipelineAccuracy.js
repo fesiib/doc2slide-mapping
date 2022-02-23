@@ -12,10 +12,10 @@ function PipelineAccuracy(props) {
         margin: "2em"
     }}>
         <h2> Accuracy: </h2>
-        <p> Video Overview (Boundaries): {boundariesAccuracy} </p>
-        <p> Sections Duration (Time): {timeAccuracy} </p>
-        <p> Presentation Structure (Order): {structureAccuracy} </p>
-        <p> Paper Presentation Content (Mapping): {mappingAccuracy} </p>
+        <p> Video Overview (Boundaries): {boundariesAccuracy}% </p>
+        <p> Sections Duration (Time): {timeAccuracy}% </p>
+        <p> Presentation Structure (Order): {structureAccuracy}% </p>
+        <p> Paper Presentation Content (Mapping): {mappingAccuracy}% </p>
     </div>);
 }
 
