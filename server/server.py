@@ -7,30 +7,12 @@ from flask import request
 
 import pandas as pd
 
-from process_data import process
+from process_data import process, read_txt, read_json
 
 SLIDE_DATA_PATH = './slideMeta/slideData'
 
 app = Flask(__name__)
-CORS(app)
-
-def read_txt(path):
-    paragraphs = []
-    with open(path, 'r') as f:
-        while True:
-            line = f.readline()
-            if not line:
-                break
-            line = line.strip()
-            paragraphs.append(line)
-    return paragraphs
-
-def read_json(path):
-    obj = {}
-    with open(path, 'r') as f:
-        encoded = f.read()
-        obj = json.loads(encoded)
-    return obj        
+CORS(app)   
 
 @app.route('/getData', methods=['POST'])
 def prediction():

@@ -49,19 +49,24 @@ class Vectorizer(object):
         return None
 
     
-def read_file(filename) :
-    ret_list = []
-    f = open(filename, "r")
+def read_txt(path) :
+    lines = []
+    with open(path, "r") as f:
+        while True :
+            line = f.readline()
+            if not line :
+                break
+            lines.append(line.strip())
+    return lines
 
-    while True :
-        line = f.readline()
 
-        if not line :
-            break
-    
-        ret_list.append(line.strip())
-    
-    return ret_list
+def read_json(path):
+    obj = {}
+    with open(path, 'r') as f:
+        encoded = f.read()
+        obj = json.loads(encoded)
+    return obj     
+
 
 def is_section_skipped(section):
     for skipped_section in SKIPPED_SECTIONS:
@@ -380,15 +385,15 @@ def get_outline_dp(section_data, top_sections, script_sentence_range):
     outline = []
 
     outline.append({
-        'section': "NO_SECTION",
+        'sectionTitle': "NO_SECTION",
         'startSlideIndex': 0,
         'endSlideIndex': 0
     })
 
     for i in range(1, len(final_result)) :
-        if outline[-1]['section'] != label_dict[final_result[i]]:
+        if outline[-1]['sectionTitle'] != label_dict[final_result[i]]:
             outline.append({
-                'section': label_dict[final_result[i]],
+                'sectionTitle': label_dict[final_result[i]],
                 'startSlideIndex': i,
                 'endSlideIndex': i
             })
@@ -451,7 +456,7 @@ def get_outline_dp_mask(section_data, top_sections, script_sentence_range, targe
         next_recover_mask = recover_mask ^ (1 << section_id)
         next_recover_slide_id = dp[recover_mask][recover_slide_id][2]
         outline.append({
-            "section": label_dict[section_id],
+            "sectionTitle": label_dict[section_id],
             "startSlideIndex": next_recover_slide_id + 1,
             "endSlideIndex": recover_slide_id,
         })
@@ -477,7 +482,7 @@ def get_outline_simple(top_sections):
             if v > scores[section]:
                 section = k
         outline.append({
-            "section": section,
+            "sectionTitle": section,
             "startSlideIndex": i,
             "endSlideIndex": i,
         })
@@ -535,9 +540,10 @@ def process(path, similarity_type, outlining_approach, apply_thresholding):
     timestamp_data = []
     script_data = []
 
-    paper_data = read_file(os.path.join(path, "paperData.txt"))
-    section_data = read_file(os.path.join(path, "sectionData.txt"))
-    script_data = read_file(os.path.join(path, "scriptData.txt"))
+    paper_data = read_txt(os.path.join(path, "paperData.txt"))
+    section_data = read_txt(os.path.join(path, "sectionData.txt"))
+    script_data = read_txt(os.path.join(path, "scriptData.txt"))
+    gt_data = read_json(os.path.join(path, "groundTruth.txt"))
 
     section_data, paper_data = add_sections_as_paragraphs(section_data, paper_data)
 
@@ -570,6 +576,7 @@ def process(path, similarity_type, outlining_approach, apply_thresholding):
     result['title'] = "tempTitle"
     result['slideCnt'] = len(timestamp_data)
     result['slideInfo']= []
+    result['groundTruthOutline'] = gt_data['groundTruthSegments']
     for i in range(len(timestamp_data)) :
         result['slideInfo'].append({
             "index": i,
