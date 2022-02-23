@@ -9,15 +9,15 @@ from nltk.tokenize import word_tokenize
 
 #nltk.download('punkt')
 
-from src.gen_similarity_table import \
+sys.path.insert(0, '../')
+
+from gen_similarity_table import \
     get_sentences, get_similarity_classifier,\
     get_similarity_embeddings, get_similarity_keywords
 
-from src.gen_outline import get_outline_generic
+from gen_outline import get_outline_generic
 
-from src.evaluate_outline import evaluate_outline
-
-sys.path.insert(0, '../')
+from evaluate_outline import evaluate_outline, evaluate_performance
 
 SKIPPED_SECTIONS = [
     "CCS CONCEPTS",
@@ -217,9 +217,41 @@ def process(path, similarity_type, outlining_approach, apply_thresholding):
     json_file.write(json.dumps(result))
     return result
 
+def evaluate_model(parent_path, similarity_type, outlining_approach, apply_thresholding):
+    ground_truth_exists = [0, 4, 6, 7, 9]
+
+    evaluations = []
+
+    for id in ground_truth_exists:
+        path = parent_path + str(id)
+        output = process(path, similarity_type, outlining_approach, apply_thresholding)
+        evaluations.append(output["evaluationData"])
+
+    return evaluate_performance(evaluations, ground_truth_exists)
+
+def evaluate_all_models():
+    similarity_types = ["classifier", "keywords", "embeddings"]
+    outlining_approaches = ["dp_mask", "dp_simple", "simple"]
+    thresholdings = [False, True]
+
+    with open("./performance.txt", "w") as f:
+        for similarity_type in similarity_types:
+            for outlining_approach in outlining_approaches:
+                for apply_thresholding in thresholdings:
+                    print(f'Testing Model: similarity={similarity_type}, outlining={outlining_approach} thresholding={apply_thresholding}')
+                    print(f'\n\nTesting Model: similarity={similarity_type}, outlining={outlining_approach} thresholding={apply_thresholding}', file=f)
+                    output = evaluate_model('slideMeta/slideData/', similarity_type, outlining_approach, apply_thresholding)
+                    json.dump(output, fp=f, indent=2)
+
 if __name__ == "__main__":
-    output = process('slideMeta/slideData/0', similarity_type="classifier", outlining_approach="dp_simple", apply_thresholding=True)
-    output = process('slideMeta/slideData/0', similarity_type="keywords", outlining_approach="dp_mask", apply_thresholding=False)
-    output = process('slideMeta/slideData/0', similarity_type="embeddings", outlining_approach="simple", apply_thresholding=True)
-    print(output["outline"])
-    print(len(output["topSections"][0]))
+
+    evaluate_all_models()
+
+    #output = evaluate_model('slideMeta/slideData/', similarity_type="classifier", outlining_approach="dp_simple", apply_thresholding=True)
+    #print(json.dumps(output, indent=4))
+
+
+    #output = process('slideMeta/slideData/0', similarity_type="classifier", outlining_approach="dp_simple", apply_thresholding=True)
+    #output = process('slideMeta/slideData/0', similarity_type="keywords", outlining_approach="dp_mask", apply_thresholding=False)
+    #output = process('slideMeta/slideData/0', similarity_type="embeddings", outlining_approach="simple", apply_thresholding=True)
+    #print(output["evaluationData"])

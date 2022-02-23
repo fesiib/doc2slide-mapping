@@ -1,0 +1,523 @@
+
+
+Testing Model: similarity=classifier, outlining=dp_mask thresholding=False
+{
+  "boundariesAccuracy",[
+    [
+      64.0
+    ]
+    64.0
+  ]
+  "timeAccuracy",[
+    [
+      6.29
+    ]
+    6.29
+  ]
+  "structureAccuracy",[
+    [
+      28.57
+    ]
+    28.57
+  ]
+  "mappingAccuracy",[
+    [
+      98.7
+    ]
+    98.7
+  ]
+  "cntEvaluations",1
+}
+
+Testing Model: similarity=classifier, outlining=dp_mask thresholding=True
+{
+  "boundariesAccuracy",[
+    [
+      66.0
+    ]
+    66.0
+  ]
+  "timeAccuracy",[
+    [
+      13.52
+    ]
+    13.52
+  ]
+  "structureAccuracy",[
+    [
+      57.14
+    ]
+    57.14
+  ]
+  "mappingAccuracy",[
+    [
+      98.43
+    ]
+    98.43
+  ]
+  "cntEvaluations",1
+}
+
+Testing Model: similarity=classifier, outlining=dp_simple thresholding=False
+{
+  "boundariesAccuracy",[
+    [
+      74.0
+    ]
+    74.0
+  ]
+  "timeAccuracy",[
+    [
+      12.19
+    ]
+    12.19
+  ]
+  "structureAccuracy",[
+    [
+      57.14
+    ]
+    57.14
+  ]
+  "mappingAccuracy",[
+    [
+      100.0
+    ]
+    100.0
+  ]
+  "cntEvaluations",1
+}
+
+Testing Model: similarity=classifier, outlining=dp_simple thresholding=True
+{
+  "boundariesAccuracy",[
+    [
+      78.0
+    ]
+    78.0
+  ]
+  "timeAccuracy",[
+    [
+      12.27
+    ]
+    12.27
+  ]
+  "structureAccuracy",[
+    [
+      57.14
+    ]
+    57.14
+  ]
+  "mappingAccuracy",[
+    [
+      99.6
+    ]
+    99.6
+  ]
+  "cntEvaluations",1
+}
+
+Testing Model: similarity=classifier, outlining=simple thresholding=False
+{
+  "boundariesAccuracy",[
+    [
+      100.0
+    ]
+    100.0
+  ]
+  "timeAccuracy",[
+    [
+      14.75
+    ]
+    14.75
+  ]
+  "structureAccuracy",[
+    [
+      57.14
+    ]
+    57.14
+  ]
+  "mappingAccuracy",[
+    [
+      100.0
+    ]
+    100.0
+  ]
+  "cntEvaluations",1
+}
+
+Testing Model: similarity=classifier, outlining=simple thresholding=True
+{
+  "boundariesAccuracy",[
+    [
+      100.0
+    ]
+    100.0
+  ]
+  "timeAccuracy",[
+    [
+      15.06
+    ]
+    15.06
+  ]
+  "structureAccuracy",[
+    [
+      57.14
+    ]
+    57.14
+  ]
+  "mappingAccuracy",[
+    [
+      100.0
+    ]
+    100.0
+  ]
+  "cntEvaluations",1
+}
+
+Testing Model: similarity=keywords, outlining=dp_mask thresholding=False
+{
+  "boundariesAccuracy",[
+    [
+      74.0
+    ]
+    74.0
+  ]
+  "timeAccuracy",[
+    [
+      53.22
+    ]
+    53.22
+  ]
+  "structureAccuracy",[
+    [
+      42.86
+    ]
+    42.86
+  ]
+  "mappingAccuracy",[
+    [
+      99.28
+    ]
+    99.28
+  ]
+  "cntEvaluations",1
+}
+
+Testing Model: similarity=keywords, outlining=dp_mask thresholding=True
+{
+  "boundariesAccuracy",[
+    [
+      80.0
+    ]
+    80.0
+  ]
+  "timeAccuracy",[
+    [
+      50.67
+    ]
+    50.67
+  ]
+  "structureAccuracy",[
+    [
+      85.71
+    ]
+    85.71
+  ]
+  "mappingAccuracy",[
+    [
+      97.15
+    ]
+    97.15
+  ]
+  "cntEvaluations",1
+}
+
+Testing Model: similarity=keywords, outlining=dp_simple thresholding=False
+{
+  "boundariesAccuracy",[
+    [
+      72.0
+    ]
+    72.0
+  ]
+  "timeAccuracy",[
+    [
+      -4.66
+    ]
+    -4.66
+  ]
+  "structureAccuracy",[
+    [
+      42.86
+    ]
+    42.86
+  ]
+  "mappingAccuracy",[
+    [
+      99.6
+    ]
+    99.6
+  ]
+  "cntEvaluations",1
+}
+
+Testing Model: similarity=keywords, outlining=dp_simple thresholding=True
+{
+  "boundariesAccuracy",[
+    [
+      88.0
+    ]
+    88.0
+  ]
+  "timeAccuracy",[
+    [
+      32.96
+    ]
+    32.96
+  ]
+  "structureAccuracy",[
+    [
+      85.71
+    ]
+    85.71
+  ]
+  "mappingAccuracy",[
+    [
+      99.26
+    ]
+    99.26
+  ]
+  "cntEvaluations",1
+}
+
+Testing Model: similarity=keywords, outlining=simple thresholding=False
+{
+  "boundariesAccuracy",[
+    [
+      100.0
+    ]
+    100.0
+  ]
+  "timeAccuracy",[
+    [
+      11.64
+    ]
+    11.64
+  ]
+  "structureAccuracy",[
+    [
+      85.71
+    ]
+    85.71
+  ]
+  "mappingAccuracy",[
+    [
+      100.0
+    ]
+    100.0
+  ]
+  "cntEvaluations",1
+}
+
+Testing Model: similarity=keywords, outlining=simple thresholding=True
+{
+  "boundariesAccuracy",[
+    [
+      100.0
+    ]
+    100.0
+  ]
+  "timeAccuracy",[
+    [
+      38.85
+    ]
+    38.85
+  ]
+  "structureAccuracy",[
+    [
+      85.71
+    ]
+    85.71
+  ]
+  "mappingAccuracy",[
+    [
+      100.0
+    ]
+    100.0
+  ]
+  "cntEvaluations",1
+}
+
+Testing Model: similarity=embeddings, outlining=dp_mask thresholding=False
+{
+  "boundariesAccuracy",[
+    [
+      30.0
+    ]
+    30.0
+  ]
+  "timeAccuracy",[
+    [
+      -9.64
+    ]
+    -9.64
+  ]
+  "structureAccuracy",[
+    [
+      28.57
+    ]
+    28.57
+  ]
+  "mappingAccuracy",[
+    [
+      99.05
+    ]
+    99.05
+  ]
+  "cntEvaluations",1
+}
+
+Testing Model: similarity=embeddings, outlining=dp_mask thresholding=True
+{
+  "boundariesAccuracy",[
+    [
+      74.0
+    ]
+    74.0
+  ]
+  "timeAccuracy",[
+    [
+      60.84
+    ]
+    60.84
+  ]
+  "structureAccuracy",[
+    [
+      85.71
+    ]
+    85.71
+  ]
+  "mappingAccuracy",[
+    [
+      98.85
+    ]
+    98.85
+  ]
+  "cntEvaluations",1
+}
+
+Testing Model: similarity=embeddings, outlining=dp_simple thresholding=False
+{
+  "boundariesAccuracy",[
+    [
+      80.0
+    ]
+    80.0
+  ]
+  "timeAccuracy",[
+    [
+      6.29
+    ]
+    6.29
+  ]
+  "structureAccuracy",[
+    [
+      57.14
+    ]
+    57.14
+  ]
+  "mappingAccuracy",[
+    [
+      99.55
+    ]
+    99.55
+  ]
+  "cntEvaluations",1
+}
+
+Testing Model: similarity=embeddings, outlining=dp_simple thresholding=True
+{
+  "boundariesAccuracy",[
+    [
+      90.0
+    ]
+    90.0
+  ]
+  "timeAccuracy",[
+    [
+      17.86
+    ]
+    17.86
+  ]
+  "structureAccuracy",[
+    [
+      71.43
+    ]
+    71.43
+  ]
+  "mappingAccuracy",[
+    [
+      98.48
+    ]
+    98.48
+  ]
+  "cntEvaluations",1
+}
+
+Testing Model: similarity=embeddings, outlining=simple thresholding=False
+{
+  "boundariesAccuracy",[
+    [
+      100.0
+    ]
+    100.0
+  ]
+  "timeAccuracy",[
+    [
+      13.21
+    ]
+    13.21
+  ]
+  "structureAccuracy",[
+    [
+      57.14
+    ]
+    57.14
+  ]
+  "mappingAccuracy",[
+    [
+      100.0
+    ]
+    100.0
+  ]
+  "cntEvaluations",1
+}
+
+Testing Model: similarity=embeddings, outlining=simple thresholding=True
+{
+  "boundariesAccuracy",[
+    [
+      100.0
+    ]
+    100.0
+  ]
+  "timeAccuracy",[
+    [
+      26.25
+    ]
+    26.25
+  ]
+  "structureAccuracy",[
+    [
+      71.43
+    ]
+    71.43
+  ]
+  "mappingAccuracy",[
+    [
+      100.0
+    ]
+    100.0
+  ]
+  "cntEvaluations",1
+}

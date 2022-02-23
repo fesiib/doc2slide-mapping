@@ -1,4 +1,8 @@
 import os
+import sys
+
+
+sys.path.insert(0, './src/')
 
 import json
 from flask import Flask
@@ -7,7 +11,7 @@ from flask import request
 
 import pandas as pd
 
-from src.process_data import process, read_txt, read_json
+from process_data import process, read_txt, read_json
 
 SLIDE_DATA_PATH = './slideMeta/slideData'
 

@@ -26,7 +26,7 @@
             "endSlideIndex": 10
         },
         {
-            "sectionTitle": "4 ANALYSIS,
+            "sectionTitle": "4 ANALYSIS",
             "startSlideIndex": 11,
             "endSlideIndex": 14
         },
