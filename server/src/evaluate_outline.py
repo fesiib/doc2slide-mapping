@@ -81,6 +81,9 @@ def _evaluate_time(outline, gt_outline, slide_info):
         end_slide = slide_info[section["endSlideIndex"]]
 
         duration = end_slide["endTime"] - start_slide["startTime"]
+        if (duration < 0):
+            print("Negative Duration:", title, duration, section["startSlideIndex"], section["endSlideIndex"])
+            duration = -duration
         total_duration += duration
         if title not in gt_sections_duration:
             gt_sections_duration[title] = 0
