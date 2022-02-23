@@ -7,7 +7,7 @@ from flask import request
 
 import pandas as pd
 
-from process_data import process, read_txt, read_json
+from src.process_data import process, read_txt, read_json
 
 SLIDE_DATA_PATH = './slideMeta/slideData'
 
