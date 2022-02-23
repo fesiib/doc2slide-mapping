@@ -173,6 +173,13 @@ def _evaluate_structure(outline, gt_outline, slide_info):
     return round((score / m) * 100, 2)
 
 def _evaluate_mapping(outline, gt_outline, top_sections):
+    '''
+        What to do when ground truth mapping score is less than generated mapping score?
+        - absolute?
+        - give big penalty
+        In general, has to see if such cases are frequent....
+    '''
+
     section_idx = 0
     gt_section_idx = 0
 
