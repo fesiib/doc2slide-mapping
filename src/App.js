@@ -3,14 +3,14 @@ import axios from 'axios'
 import {useState, useEffect} from 'react';
 import './App.css';
 import HeatMap from './components/HeatMap';
-
-const WIDTH = 500;
-const HEIGHT = WIDTH * 9 / 16;
+import Outline from './components/Outline';
+import SlideThumbnails from './components/SlideThumbnails';
+import ComparisonTable from './components/ComparisonTable';
 
 function App() {
 	const queryString = window.location.search;
     const urlParams = new URLSearchParams(queryString);
-    const presentationID = parseInt(urlParams.get('id'));
+    const presentationId = parseInt(urlParams.get('id'));
 
 	const [data, setData] = useState(null);
 	const [paragraphs, setParagraphs] = useState([]);
@@ -19,7 +19,7 @@ function App() {
 
 	const getData = () => {
 		axios.post('http://localhost:3555/getData', {
-			presentationId: presentationID,
+			presentationId: presentationId,
 			similarityType: "classifier",
 			outliningApproach: "dp_mask",
 			applyThresholding: false,
@@ -32,124 +32,10 @@ function App() {
 		});
 	}
 
-	const outputOutline = (data) => {
-		if (!data) {
-			return "LOADING";
-		}
-		const output = data.outline.map((val, idx) => {
-			const startSlide = data.slideInfo[val.startSlideIndex]
-			const endSlide = data.slideInfo[val.endSlideIndex]
-
-			const duration = new Date(0);
-			duration.setSeconds(endSlide.endTime - startSlide.startTime);
-			return (<li key={idx}>
-				({val.startSlideIndex} - {val.endSlideIndex}) {"\t"} {val.section} {"\t"} {duration.getMinutes()}:{duration.getSeconds()}
-			</li>);
-		});
-		return (<ol>
-			{output}
-		</ol>);
-	}
-
-	const outputSlideThumbnails = (data) => {
-		if (!data) {
-			return;
-		}
-		const thumbnailsPath = '/slideData/' + presentationID + '/images/';
-		const output = data.slideInfo.map((slide, idx) => {
-			const thumbnailPath = thumbnailsPath + slide.index.toString() + '.jpg';
-			const title = "Script:\n\n" + slide.script + "\n\n\n\n\nOCR Result:\n\n" + slide.ocrResult;
-
-			const startTime = new Date(0);
-			startTime.setSeconds(slide.startTime);
-
-			const endTime = new Date(0);
-			endTime.setSeconds(slide.endTime);
-
-			return (
-				<div key={idx} 
-				>
-					<div style={{
-						overflow: "hidden",
-						width: WIDTH,
-						height: HEIGHT,
-						display: "flex",
-						flexDirection: "column",
-						justifyContent: "center",
-						marginRight: 5,
-					}}>
-						<img src={thumbnailPath} title={title} style={{
-							width: WIDTH,
-							objectFit: 'cover',
-						}}/>
-					</div>
-					<div> 
-						{idx} {" "}
-						({startTime.getMinutes()}:{startTime.getSeconds()} - {endTime.getMinutes()}:{endTime.getSeconds()})
-					</div>	
-				</div>
-			)
-		});
-		return <div style={{
-			display: "flex",
-			flexWrap: "nowrap",
-			overflowX: "scroll",
-			margin: 20,
-		}}>
-			{output}
-		</div>;
-	}
-
-	const outputTable = (paragraphs, scripts) => {
-		const outputParagraphs = paragraphs.map((paragraph, idx) => {
-			return (
-				<div style={{
-					display:  "flex",
-					gap: 10,
-					margin: 10,
-				}}>
-					{idx}
-					<div>
-						<p> { sections[idx] }</p>
-						<p> { paragraph } </p>
-					</div>
-				</div>
-			)
-		});
-
-		const outputScripts = scripts.map((script, idx) => {
-			return (
-				<div style={{
-					display:  "block",
-					gap: 10,
-					margin: 10,
-				}}>
-					{idx}
-					<div>
-						{script}
-					</div>
-				</div>
-			)
-		});
-
-		return <div style={{
-			display: "flex",
-			flexDirection: "row",
-			textAlign: "left",
-			margin: 20,
-		}}>
-			<div style={{
-				width: "50%",
-			}}>
-				{outputParagraphs}
-			</div>
-			
-			<div style={{
-				width: "50%",
-			}}>
-				{outputScripts}
-			</div>
-		</div>
+	const evaluateOutline = (outline, gtOutline, slideInfo) => {
+		return (<div>
+			TODO!
+		</div>);
 	}
 	
 	useEffect(()=>{
@@ -162,19 +48,18 @@ function App() {
 				paragraphs={data ? data.paperSentences : []}
 				scripts={data ? data.scriptSentences : []}
 			/>
-			<h1> Presentation {presentationID} </h1>
+			<h1> Presentation {presentationId} </h1>
+			<div> Accuracy: {evaluateOutline(data?.outline, data?.groundTruthOutline, data?.slideInfo)} </div>
 			<div style={{
 				textAlign: "left",
 				fontSize: "15pt",
+				display: "flex",
 			}}> 
-				{outputOutline(data)} 
+				<Outline outline={data?.outline} slideInfo={data?.slideInfo} />
+				<Outline outline={data?.groundTruthOutline} slideInfo={data?.slideInfo} />
 			</div>
-			<div>
-				{outputSlideThumbnails(data)}
-			</div>
-			<div>
-				{outputTable(paragraphs, scripts, sections)}
-			</div>
+			<SlideThumbnails presentationId={presentationId} slideInfo={data?.slideInfo}/>
+			<ComparisonTable paragraphs={paragraphs} scripts={scripts} sections={sections}/>
 		</div>
 	);
 }
