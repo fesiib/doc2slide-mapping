@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import axios from 'axios'
 import {useState, useEffect} from 'react';
 import './App.css';
@@ -17,7 +16,13 @@ function App() {
 	const [scripts, setScripts] = useState([]);
 	const [sections, setSections] = useState([]);
 
-	const getData = () => {
+	const evaluateOutline = (outline, gtOutline, slideInfo) => {
+		return (<div>
+			TODO!
+		</div>);
+	}
+	
+	useEffect(() => {
 		axios.post('http://localhost:3555/getData', {
 			presentationId: presentationId,
 			similarityType: "classifier",
@@ -30,17 +35,8 @@ function App() {
 			setSections(response.data.sections);
 			setData(response.data.data);
 		});
-	}
 
-	const evaluateOutline = (outline, gtOutline, slideInfo) => {
-		return (<div>
-			TODO!
-		</div>);
-	}
-	
-	useEffect(()=>{
-		getData();
-	}, []);
+	}, [presentationId]);
 	return (
 		<div className="App">
 			<HeatMap 

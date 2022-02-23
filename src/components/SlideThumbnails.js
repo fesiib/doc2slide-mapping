@@ -30,7 +30,7 @@ function SlideThumbnails(props) {
                     justifyContent: "center",
                     marginRight: 5,
                 }}>
-                    <img src={thumbnailPath} title={title} style={{
+                    <img src={thumbnailPath} title={title} alt={"slide"} style={{
                         width: WIDTH,
                         objectFit: 'cover',
                     }}/>
