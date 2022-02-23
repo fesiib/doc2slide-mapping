@@ -36,24 +36,27 @@ function ComparisonTable(props) {
         )
     });
 
-    return <div style={{
-        display: "flex",
-        flexDirection: "row",
-        textAlign: "left",
-        margin: 20,
-    }}>
+    return (<div>
+        <h2> Comparison: Paper paragraphs (left) - Slide Scripts (right) </h2>
         <div style={{
-            width: "50%",
+            display: "flex",
+            flexDirection: "row",
+            textAlign: "left",
+            margin: 20,
         }}>
-            {outputParagraphs}
+            <div style={{
+                width: "50%",
+            }}>
+                {outputParagraphs}
+            </div>
+            
+            <div style={{
+                width: "50%",
+            }}>
+                {outputScripts}
+            </div>
         </div>
-        
-        <div style={{
-            width: "50%",
-        }}>
-            {outputScripts}
-        </div>
-    </div>
+    </div>)
 }
 
 export default ComparisonTable;

@@ -5,6 +5,7 @@ import HeatMap from './components/HeatMap';
 import Outline from './components/Outline';
 import SlideThumbnails from './components/SlideThumbnails';
 import ComparisonTable from './components/ComparisonTable';
+import PipelineAccuracy from './components/PipelineAccuracy';
 
 function App() {
 	const queryString = window.location.search;
@@ -15,12 +16,6 @@ function App() {
 	const [paragraphs, setParagraphs] = useState([]);
 	const [scripts, setScripts] = useState([]);
 	const [sections, setSections] = useState([]);
-
-	const evaluateOutline = (outline, gtOutline, slideInfo) => {
-		return (<div>
-			TODO!
-		</div>);
-	}
 	
 	useEffect(() => {
 		axios.post('http://localhost:3555/getData', {
@@ -37,6 +32,10 @@ function App() {
 		});
 
 	}, [presentationId]);
+
+	if (!data) {
+		return <div> LOADING !!! </div>
+	}
 	return (
 		<div className="App">
 			<HeatMap 
@@ -45,16 +44,17 @@ function App() {
 				scripts={data ? data.scriptSentences : []}
 			/>
 			<h1> Presentation {presentationId} </h1>
-			<div> Accuracy: {evaluateOutline(data?.outline, data?.groundTruthOutline, data?.slideInfo)} </div>
+
+			<SlideThumbnails presentationId={presentationId} slideInfo={data?.slideInfo}/>
 			<div style={{
 				textAlign: "left",
 				fontSize: "15pt",
 				display: "flex",
 			}}> 
-				<Outline outline={data?.outline} slideInfo={data?.slideInfo} />
-				<Outline outline={data?.groundTruthOutline} slideInfo={data?.slideInfo} />
+				<Outline isGenerated={true} outline={data?.outline} slideInfo={data?.slideInfo} />
+				<Outline isGenerated={false} outline={data?.groundTruthOutline} slideInfo={data?.slideInfo} />
 			</div>
-			<SlideThumbnails presentationId={presentationId} slideInfo={data?.slideInfo}/>
+			<PipelineAccuracy evaluationData={null}/>
 			<ComparisonTable paragraphs={paragraphs} scripts={scripts} sections={sections}/>
 		</div>
 	);

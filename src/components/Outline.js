@@ -1,6 +1,7 @@
 import React from 'react'
 
 function Outline(props) {
+    const isGenerated = props?.isGenerated;
     const outline = props?.outline;
     const slideInfo = props?.slideInfo;
 
@@ -17,9 +18,14 @@ function Outline(props) {
             ({val.startSlideIndex} - {val.endSlideIndex}) {"\t"} {val.sectionTitle} {"\t"} {duration.getMinutes()}:{duration.getSeconds()}
         </li>);
     });
-    return (<ol>
-        {output}
-    </ol>);
+    return (<div style={{
+        margin: "1em",
+    }}>
+        <h3> {isGenerated ? "Generated Outline" : "Ground Truth Outline"} </h3>
+        <ol>
+            {output}
+        </ol>
+    </div>);
 }
 
 export default Outline;
