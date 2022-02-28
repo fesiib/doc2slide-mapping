@@ -1,0 +1,1012 @@
+{
+  "evaluationResults": [
+    {
+      "modelConfig": {
+        "similarityType": "classifier",
+        "outliningApproach": "dp_mask",
+        "thresholding": false
+      },
+      "result": {
+        "boundariesAccuracy": [
+          [
+            64.0,
+            42.55,
+            -42.86,
+            33.33,
+            56.1
+          ],
+          30.62
+        ],
+        "timeAccuracy": [
+          [
+            6.6,
+            13.76,
+            -93.7,
+            -2.85,
+            -6.71
+          ],
+          -16.58
+        ],
+        "structureAccuracy": [
+          [
+            28.57,
+            25.0,
+            28.57,
+            60.0,
+            33.33
+          ],
+          35.09
+        ],
+        "mappingAccuracy": [
+          [
+            99.16,
+            94.32,
+            83.01,
+            95.55,
+            96.59
+          ],
+          93.73
+        ],
+        "presentation_ids": [
+          0,
+          4,
+          6,
+          7,
+          9
+        ]
+      }
+    },
+    {
+      "modelConfig": {
+        "similarityType": "classifier",
+        "outliningApproach": "dp_mask",
+        "thresholding": true
+      },
+      "result": {
+        "boundariesAccuracy": [
+          [
+            66.0,
+            -2.13,
+            -42.86,
+            33.33,
+            48.78
+          ],
+          20.62
+        ],
+        "timeAccuracy": [
+          [
+            13.52,
+            -30.57,
+            -92.33,
+            -2.85,
+            -13.35
+          ],
+          -25.12
+        ],
+        "structureAccuracy": [
+          [
+            42.86,
+            25.0,
+            42.86,
+            60.0,
+            33.33
+          ],
+          40.81
+        ],
+        "mappingAccuracy": [
+          [
+            98.8,
+            88.69,
+            78.3,
+            97.23,
+            94.65
+          ],
+          91.53
+        ],
+        "presentation_ids": [
+          0,
+          4,
+          6,
+          7,
+          9
+        ]
+      }
+    },
+    {
+      "modelConfig": {
+        "similarityType": "classifier",
+        "outliningApproach": "dp_simple",
+        "thresholding": false
+      },
+      "result": {
+        "boundariesAccuracy": [
+          [
+            76.0,
+            85.11,
+            28.57,
+            80.0,
+            73.17
+          ],
+          68.57
+        ],
+        "timeAccuracy": [
+          [
+            3.49,
+            26.43,
+            -71.27,
+            -64.22,
+            -12.67
+          ],
+          -23.65
+        ],
+        "structureAccuracy": [
+          [
+            42.86,
+            87.5,
+            28.57,
+            40.0,
+            55.56
+          ],
+          50.9
+        ],
+        "mappingAccuracy": [
+          [
+            99.38,
+            99.05,
+            100.0,
+            94.94,
+            98.18
+          ],
+          98.31
+        ],
+        "presentation_ids": [
+          0,
+          4,
+          6,
+          7,
+          9
+        ]
+      }
+    },
+    {
+      "modelConfig": {
+        "similarityType": "classifier",
+        "outliningApproach": "dp_simple",
+        "thresholding": true
+      },
+      "result": {
+        "boundariesAccuracy": [
+          [
+            64.0,
+            91.49,
+            38.1,
+            86.67,
+            90.24
+          ],
+          74.1
+        ],
+        "timeAccuracy": [
+          [
+            6.68,
+            35.89,
+            -66.55,
+            -3.28,
+            -30.02
+          ],
+          -11.46
+        ],
+        "structureAccuracy": [
+          [
+            42.86,
+            62.5,
+            28.57,
+            40.0,
+            55.56
+          ],
+          45.9
+        ],
+        "mappingAccuracy": [
+          [
+            99.29,
+            99.14,
+            100.0,
+            96.96,
+            95.71
+          ],
+          98.22
+        ],
+        "presentation_ids": [
+          0,
+          4,
+          6,
+          7,
+          9
+        ]
+      }
+    },
+    {
+      "modelConfig": {
+        "similarityType": "classifier",
+        "outliningApproach": "simple",
+        "thresholding": false
+      },
+      "result": {
+        "boundariesAccuracy": [
+          [
+            100.0,
+            100.0,
+            100.0,
+            100.0,
+            100.0
+          ],
+          100.0
+        ],
+        "timeAccuracy": [
+          [
+            19.57,
+            8.84,
+            -54.73,
+            2.0,
+            10.11
+          ],
+          -2.84
+        ],
+        "structureAccuracy": [
+          [
+            57.14,
+            87.5,
+            28.57,
+            60.0,
+            66.67
+          ],
+          59.98
+        ],
+        "mappingAccuracy": [
+          [
+            100.0,
+            100.0,
+            100.0,
+            100.0,
+            100.0
+          ],
+          100.0
+        ],
+        "presentation_ids": [
+          0,
+          4,
+          6,
+          7,
+          9
+        ]
+      }
+    },
+    {
+      "modelConfig": {
+        "similarityType": "classifier",
+        "outliningApproach": "simple",
+        "thresholding": true
+      },
+      "result": {
+        "boundariesAccuracy": [
+          [
+            100.0,
+            100.0,
+            100.0,
+            100.0,
+            100.0
+          ],
+          100.0
+        ],
+        "timeAccuracy": [
+          [
+            19.88,
+            14.0,
+            -54.73,
+            -3.42,
+            23.53
+          ],
+          -0.15
+        ],
+        "structureAccuracy": [
+          [
+            57.14,
+            75.0,
+            28.57,
+            80.0,
+            77.78
+          ],
+          63.7
+        ],
+        "mappingAccuracy": [
+          [
+            100.0,
+            100.0,
+            100.0,
+            100.0,
+            100.0
+          ],
+          100.0
+        ],
+        "presentation_ids": [
+          0,
+          4,
+          6,
+          7,
+          9
+        ]
+      }
+    },
+    {
+      "modelConfig": {
+        "similarityType": "keywords",
+        "outliningApproach": "dp_mask",
+        "thresholding": false
+      },
+      "result": {
+        "boundariesAccuracy": [
+          [
+            70.0,
+            57.45,
+            57.14,
+            70.0,
+            41.46
+          ],
+          59.21
+        ],
+        "timeAccuracy": [
+          [
+            17.4,
+            7.27,
+            -22.99,
+            33.64,
+            -1.13
+          ],
+          6.84
+        ],
+        "structureAccuracy": [
+          [
+            42.86,
+            50.0,
+            42.86,
+            40.0,
+            44.44
+          ],
+          44.03
+        ],
+        "mappingAccuracy": [
+          [
+            99.28,
+            94.57,
+            75.18,
+            89.45,
+            95.52
+          ],
+          90.8
+        ],
+        "presentation_ids": [
+          0,
+          4,
+          6,
+          7,
+          9
+        ]
+      }
+    },
+    {
+      "modelConfig": {
+        "similarityType": "keywords",
+        "outliningApproach": "dp_mask",
+        "thresholding": true
+      },
+      "result": {
+        "boundariesAccuracy": [
+          [
+            70.0,
+            57.45,
+            61.9,
+            56.67,
+            56.1
+          ],
+          60.42
+        ],
+        "timeAccuracy": [
+          [
+            14.85,
+            38.47,
+            -35.1,
+            -16.25,
+            2.49
+          ],
+          0.89
+        ],
+        "structureAccuracy": [
+          [
+            57.14,
+            50.0,
+            42.86,
+            60.0,
+            55.56
+          ],
+          53.11
+        ],
+        "mappingAccuracy": [
+          [
+            93.13,
+            95.92,
+            75.3,
+            85.64,
+            84.47
+          ],
+          86.89
+        ],
+        "presentation_ids": [
+          0,
+          4,
+          6,
+          7,
+          9
+        ]
+      }
+    },
+    {
+      "modelConfig": {
+        "similarityType": "keywords",
+        "outliningApproach": "dp_simple",
+        "thresholding": false
+      },
+      "result": {
+        "boundariesAccuracy": [
+          [
+            72.0,
+            87.23,
+            38.1,
+            90.0,
+            82.93
+          ],
+          74.05
+        ],
+        "timeAccuracy": [
+          [
+            -4.66,
+            -33.93,
+            -49.0,
+            21.03,
+            -4.22
+          ],
+          -14.16
+        ],
+        "structureAccuracy": [
+          [
+            42.86,
+            75.0,
+            57.14,
+            60.0,
+            55.56
+          ],
+          58.11
+        ],
+        "mappingAccuracy": [
+          [
+            99.6,
+            99.33,
+            100.0,
+            99.66,
+            99.94
+          ],
+          99.71
+        ],
+        "presentation_ids": [
+          0,
+          4,
+          6,
+          7,
+          9
+        ]
+      }
+    },
+    {
+      "modelConfig": {
+        "similarityType": "keywords",
+        "outliningApproach": "dp_simple",
+        "thresholding": true
+      },
+      "result": {
+        "boundariesAccuracy": [
+          [
+            88.0,
+            91.49,
+            85.71,
+            83.33,
+            87.8
+          ],
+          87.27
+        ],
+        "timeAccuracy": [
+          [
+            32.96,
+            11.96,
+            -11.6,
+            -1.71,
+            38.84
+          ],
+          14.09
+        ],
+        "structureAccuracy": [
+          [
+            85.71,
+            75.0,
+            71.43,
+            60.0,
+            55.56
+          ],
+          69.54
+        ],
+        "mappingAccuracy": [
+          [
+            99.26,
+            97.47,
+            96.6,
+            97.96,
+            97.81
+          ],
+          97.82
+        ],
+        "presentation_ids": [
+          0,
+          4,
+          6,
+          7,
+          9
+        ]
+      }
+    },
+    {
+      "modelConfig": {
+        "similarityType": "keywords",
+        "outliningApproach": "simple",
+        "thresholding": false
+      },
+      "result": {
+        "boundariesAccuracy": [
+          [
+            100.0,
+            100.0,
+            100.0,
+            100.0,
+            100.0
+          ],
+          100.0
+        ],
+        "timeAccuracy": [
+          [
+            11.64,
+            -11.34,
+            -37.68,
+            42.77,
+            22.62
+          ],
+          5.6
+        ],
+        "structureAccuracy": [
+          [
+            85.71,
+            75.0,
+            57.14,
+            60.0,
+            77.78
+          ],
+          71.13
+        ],
+        "mappingAccuracy": [
+          [
+            100.0,
+            100.0,
+            100.0,
+            100.0,
+            100.0
+          ],
+          100.0
+        ],
+        "presentation_ids": [
+          0,
+          4,
+          6,
+          7,
+          9
+        ]
+      }
+    },
+    {
+      "modelConfig": {
+        "similarityType": "keywords",
+        "outliningApproach": "simple",
+        "thresholding": true
+      },
+      "result": {
+        "boundariesAccuracy": [
+          [
+            100.0,
+            100.0,
+            100.0,
+            100.0,
+            100.0
+          ],
+          100.0
+        ],
+        "timeAccuracy": [
+          [
+            38.85,
+            11.82,
+            0.72,
+            -2.14,
+            50.68
+          ],
+          19.99
+        ],
+        "structureAccuracy": [
+          [
+            85.71,
+            87.5,
+            85.71,
+            100.0,
+            88.89
+          ],
+          89.56
+        ],
+        "mappingAccuracy": [
+          [
+            100.0,
+            100.0,
+            100.0,
+            100.0,
+            100.0
+          ],
+          100.0
+        ],
+        "presentation_ids": [
+          0,
+          4,
+          6,
+          7,
+          9
+        ]
+      }
+    },
+    {
+      "modelConfig": {
+        "similarityType": "embeddings",
+        "outliningApproach": "dp_mask",
+        "thresholding": false
+      },
+      "result": {
+        "boundariesAccuracy": [
+          [
+            22.0,
+            -91.49,
+            -33.33,
+            10.0,
+            36.59
+          ],
+          -11.25
+        ],
+        "timeAccuracy": [
+          [
+            -45.45,
+            -108.99,
+            -61.68,
+            -44.83,
+            -33.33
+          ],
+          -58.86
+        ],
+        "structureAccuracy": [
+          [
+            28.57,
+            25.0,
+            42.86,
+            40.0,
+            22.22
+          ],
+          31.73
+        ],
+        "mappingAccuracy": [
+          [
+            99.05,
+            96.08,
+            81.5,
+            95.0,
+            99.05
+          ],
+          94.14
+        ],
+        "presentation_ids": [
+          0,
+          4,
+          6,
+          7,
+          9
+        ]
+      }
+    },
+    {
+      "modelConfig": {
+        "similarityType": "embeddings",
+        "outliningApproach": "dp_mask",
+        "thresholding": true
+      },
+      "result": {
+        "boundariesAccuracy": [
+          [
+            76.0,
+            63.83,
+            61.9,
+            33.33,
+            56.1
+          ],
+          58.23
+        ],
+        "timeAccuracy": [
+          [
+            39.25,
+            17.44,
+            -35.1,
+            3.07,
+            1.88
+          ],
+          5.31
+        ],
+        "structureAccuracy": [
+          [
+            57.14,
+            50.0,
+            42.86,
+            60.0,
+            55.56
+          ],
+          53.11
+        ],
+        "mappingAccuracy": [
+          [
+            96.07,
+            94.34,
+            84.91,
+            85.4,
+            87.2
+          ],
+          89.58
+        ],
+        "presentation_ids": [
+          0,
+          4,
+          6,
+          7,
+          9
+        ]
+      }
+    },
+    {
+      "modelConfig": {
+        "similarityType": "embeddings",
+        "outliningApproach": "dp_simple",
+        "thresholding": false
+      },
+      "result": {
+        "boundariesAccuracy": [
+          [
+            80.0,
+            91.49,
+            -85.71,
+            60.0,
+            80.49
+          ],
+          45.25
+        ],
+        "timeAccuracy": [
+          [
+            6.29,
+            -33.85,
+            -72.56,
+            -51.75,
+            -14.71
+          ],
+          -33.32
+        ],
+        "structureAccuracy": [
+          [
+            57.14,
+            50.0,
+            14.29,
+            40.0,
+            33.33
+          ],
+          38.95
+        ],
+        "mappingAccuracy": [
+          [
+            99.55,
+            99.87,
+            100.0,
+            99.49,
+            100.0
+          ],
+          99.78
+        ],
+        "presentation_ids": [
+          0,
+          4,
+          6,
+          7,
+          9
+        ]
+      }
+    },
+    {
+      "modelConfig": {
+        "similarityType": "embeddings",
+        "outliningApproach": "dp_simple",
+        "thresholding": true
+      },
+      "result": {
+        "boundariesAccuracy": [
+          [
+            90.0,
+            93.62,
+            76.19,
+            80.0,
+            75.61
+          ],
+          83.08
+        ],
+        "timeAccuracy": [
+          [
+            17.86,
+            35.73,
+            0.14,
+            13.61,
+            44.64
+          ],
+          22.4
+        ],
+        "structureAccuracy": [
+          [
+            71.43,
+            75.0,
+            71.43,
+            80.0,
+            66.67
+          ],
+          72.91
+        ],
+        "mappingAccuracy": [
+          [
+            98.48,
+            96.22,
+            99.98,
+            99.56,
+            99.74
+          ],
+          98.8
+        ],
+        "presentation_ids": [
+          0,
+          4,
+          6,
+          7,
+          9
+        ]
+      }
+    },
+    {
+      "modelConfig": {
+        "similarityType": "embeddings",
+        "outliningApproach": "simple",
+        "thresholding": false
+      },
+      "result": {
+        "boundariesAccuracy": [
+          [
+            100.0,
+            100.0,
+            100.0,
+            100.0,
+            100.0
+          ],
+          100.0
+        ],
+        "timeAccuracy": [
+          [
+            13.21,
+            -28.54,
+            -60.17,
+            -16.75,
+            7.69
+          ],
+          -16.91
+        ],
+        "structureAccuracy": [
+          [
+            57.14,
+            50.0,
+            42.86,
+            40.0,
+            55.56
+          ],
+          49.11
+        ],
+        "mappingAccuracy": [
+          [
+            100.0,
+            100.0,
+            100.0,
+            100.0,
+            100.0
+          ],
+          100.0
+        ],
+        "presentation_ids": [
+          0,
+          4,
+          6,
+          7,
+          9
+        ]
+      }
+    },
+    {
+      "modelConfig": {
+        "similarityType": "embeddings",
+        "outliningApproach": "simple",
+        "thresholding": true
+      },
+      "result": {
+        "boundariesAccuracy": [
+          [
+            100.0,
+            100.0,
+            100.0,
+            100.0,
+            100.0
+          ],
+          100.0
+        ],
+        "timeAccuracy": [
+          [
+            26.25,
+            46.52,
+            3.73,
+            -3.85,
+            55.73
+          ],
+          25.68
+        ],
+        "structureAccuracy": [
+          [
+            71.43,
+            87.5,
+            71.43,
+            80.0,
+            88.89
+          ],
+          79.85
+        ],
+        "mappingAccuracy": [
+          [
+            100.0,
+            100.0,
+            100.0,
+            100.0,
+            100.0
+          ],
+          100.0
+        ],
+        "presentation_ids": [
+          0,
+          4,
+          6,
+          7,
+          9
+        ]
+      }
+    }
+  ]
+}

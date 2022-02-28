@@ -18,7 +18,7 @@ SLIDE_DATA_PATH = './slideMeta/slideData'
 app = Flask(__name__)
 CORS(app)   
 
-@app.route('/getData', methods=['POST'])
+@app.route('/get_data', methods=['POST'])
 def prediction():
     decoded = request.data.decode('utf-8')
     request_json = json.loads(decoded)
@@ -44,6 +44,16 @@ def prediction():
         "script": read_txt(script_path),
         "sections": read_txt(section_path),
         "data": process(parent_path, similarity_type, outlining_approach, apply_thresholding),
+    })
+
+@app.route('/get_evaluation_results', methods=['POST'])
+def get_evaluation_result():
+    result_path = os.path.join(SLIDE_DATA_PATH, 'performance.json')
+
+    results = read_json(result_path)
+
+    return json.dumps({
+        "evaluationResults": results["evaluationResults"],
     })
 
 app.run(host='0.0.0.0', port=3555)

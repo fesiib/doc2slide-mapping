@@ -223,6 +223,8 @@ def evaluate_model(parent_path, similarity_type, outlining_approach, apply_thres
     evaluations = []
 
     for id in ground_truth_exists:
+        print("Evaluating: ", id)
+
         path = parent_path + str(id)
         output = process(path, similarity_type, outlining_approach, apply_thresholding)
         evaluations.append(output["evaluationData"])
@@ -234,14 +236,27 @@ def evaluate_all_models():
     outlining_approaches = ["dp_mask", "dp_simple", "simple"]
     thresholdings = [False, True]
 
-    with open("./performance.txt", "w") as f:
+    results = []
+
+    with open("./slideMeta/slideData/performance.json", "w") as f:
         for similarity_type in similarity_types:
             for outlining_approach in outlining_approaches:
                 for apply_thresholding in thresholdings:
                     print(f'Testing Model: similarity={similarity_type}, outlining={outlining_approach} thresholding={apply_thresholding}')
-                    print(f'\n\nTesting Model: similarity={similarity_type}, outlining={outlining_approach} thresholding={apply_thresholding}', file=f)
                     output = evaluate_model('slideMeta/slideData/', similarity_type, outlining_approach, apply_thresholding)
-                    json.dump(output, fp=f, indent=2)
+                    
+                    json_output = {
+                        "modelConfig": {
+                            "similarityType": similarity_type,
+                            "outliningApproach": outlining_approach,
+                            "thresholding": apply_thresholding,
+                        },
+                        "result": output
+                    }
+                    results.append(json_output)
+        json.dump({
+            "evaluationResults": results
+        }, fp=f, indent=2)
 
 if __name__ == "__main__":
 

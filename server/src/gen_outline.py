@@ -1,3 +1,6 @@
+PENALTY = 0.5
+MIN_SEGMENTS = 3
+
 def get_outline_dp(section_data, top_sections, script_sentence_range):
     label_dict = sorted(list(set(section_data)))
     
@@ -108,12 +111,16 @@ def get_outline_dp_mask(section_data, top_sections, script_sentence_range, targe
             for mask in range(0, (1 << n)):
                 if dp[mask][i][0] < 0:
                     continue
-                for k in range (n):
+                penalty = 0
+                inc_penalty = 0
+                for k in range (n-1,0,-1):
+                    penalty += inc_penalty
                     if mask & (1 << k) > 0:
+                        inc_penalty = PENALTY
                         continue
                     nmask = mask | (1 << k)
-                    if (dp[nmask][j][0] < dp[mask][i][0] + scores[k]):
-                        dp[nmask][j] = (dp[mask][i][0] + scores[k], k, i)
+                    if (dp[nmask][j][0] < dp[mask][i][0] + scores[k] - penalty):
+                        dp[nmask][j] = (dp[mask][i][0] + scores[k] - penalty, k, i)
 
     recover_mask = 0
     recover_slide_id = m - 1
@@ -123,7 +130,8 @@ def get_outline_dp_mask(section_data, top_sections, script_sentence_range, targe
     for mask in range(1 << n):
         cnt_segments = bin(mask).count('1')
         weights[cnt_segments] = max(weights[cnt_segments], dp[mask][recover_slide_id][0])
-
+        if cnt_segments < MIN_SEGMENTS:
+            continue
         if dp[mask][recover_slide_id][0] > dp[recover_mask][recover_slide_id][0]:
             recover_mask = mask
         if cnt_segments < bin(recover_mask).count('1') and dp[mask][recover_slide_id][0] == dp[recover_mask][recover_slide_id][0]:
