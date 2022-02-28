@@ -1,4 +1,5 @@
 SKIPPED_TITLES = ['title', 'end', "no_section"]
+GROUND_TRUTH_EXISTS = [0, 4, 6, 7, 9]
 
 def process_title(title):
     return title.lower().strip()
@@ -46,7 +47,7 @@ def _evaluate_boundaries(outline, gt_outline):
         error += cur_error
 
     if total_slides_cnt == 0:
-        total_slides_cnt = 1
+        return 0
     return round(100 - (error / total_slides_cnt) * 100, 2)
 
 def _evaluate_time(outline, gt_outline, slide_info):
@@ -102,7 +103,7 @@ def _evaluate_time(outline, gt_outline, slide_info):
             error += gt_duration
     
     if total_duration == 0:
-        total_duration = 1
+        return 0
     return round(100 - (error / total_duration) * 100, 2)
 
 def _evaluate_structure(outline, gt_outline, slide_info):
@@ -139,37 +140,40 @@ def _evaluate_structure(outline, gt_outline, slide_info):
     n = len(gen_section_ids)
     m = len(gt_section_ids)
 
-    # for (k, v) in section_ids.items():
-    #     print("\t", k, " - ", v)
-    
-    # print(gen_section_ids)
-    # print(gt_section_ids)
+    score = 0
 
-    dp = [[-m for j in range(m)] for i in range(n)]
-    for i in range(n):
-        dp[i][0] = 0
-        if gen_section_ids[i] == gt_section_ids[0]:
-            dp[i][0] = 1
-    for j in range(m):
-        dp[0][j] = 0
-        if gen_section_ids[0] == gt_section_ids[j]:
-            dp[0][j] = 1
+    if m > 0:
+        # for (k, v) in section_ids.items():
+        #     print("\t", k, " - ", v)
+        
+        # print(gen_section_ids)
+        # print(gt_section_ids)
 
-    for i in range(1, n):
-        for j in range(1, m):
-            if gen_section_ids[i] == gt_section_ids[j]:
-                dp[i][j] = max(dp[i][j], dp[i-1][j-1] + 1)
-            dp[i][j] = max(dp[i][j], dp[i-1][j])
-            dp[i][j] = max(dp[i][j], dp[i][j-1])
+        dp = [[-m for j in range(m)] for i in range(n)]
+        for i in range(n):
+            dp[i][0] = 0
+            if gen_section_ids[i] == gt_section_ids[0]:
+                dp[i][0] = 1
+        for j in range(m):
+            dp[0][j] = 0
+            if gen_section_ids[0] == gt_section_ids[j]:
+                dp[0][j] = 1
 
-    # print("DP:")
-    # for i in range(n):
-    #     print("\t", dp[i])
+        for i in range(1, n):
+            for j in range(1, m):
+                if gen_section_ids[i] == gt_section_ids[j]:
+                    dp[i][j] = max(dp[i][j], dp[i-1][j-1] + 1)
+                dp[i][j] = max(dp[i][j], dp[i-1][j])
+                dp[i][j] = max(dp[i][j], dp[i][j-1])
 
-    score = dp[n-1][m-1]
-    if score < 0:
-        score = 0
+        # print("DP:")
+        # for i in range(n):
+        #     print("\t", dp[i])
 
+        score = dp[n-1][m-1]
+
+    if m == 0:
+        return 0
     return round((score / m) * 100, 2)
 
 def _evaluate_mapping(outline, gt_outline, top_sections):
@@ -229,6 +233,8 @@ def _evaluate_mapping(outline, gt_outline, top_sections):
         if gt_score > gen_score:
             error += (gt_score - gen_score)
 
+    if total_score == 0:
+        return 0
     return round(100 - (error / total_score) * 100, 2)
 
 def evaluate_outline(outline, gt_outline, slide_info, top_sections):

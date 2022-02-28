@@ -2,9 +2,11 @@ import React from 'react';
 import styled from 'styled-components';
 import { useTable, useExpanded } from 'react-table';
 import { Link } from 'react-router-dom';
+import Outline from './Outline';
+import PipelineAccuracy from './PipelineAccuracy';
 
 
-const Styles = styled.div`
+const TableStyles = styled.div`
   padding: 1rem;
 
   table {
@@ -59,7 +61,7 @@ function Table(props) {
     );
 
     return (
-        <>
+        <TableStyles>
             <table {...getTableProps()}>
                 <thead>
                     {headerGroups.map(headerGroup => (
@@ -130,7 +132,7 @@ function Table(props) {
             </table>
             <br />
             <div>Showing the first 20 results of {rows.length} rows</div>
-        </>
+        </TableStyles>
     );
 }
 
@@ -228,26 +230,25 @@ function EvaluationTable(props) {
         return dataObject;
     }) : [];
 
-  // Create a function that will render our row sub components
-  const renderRowSubComponent = React.useCallback(
-    ({ row }) => {        
-        return (
-            <div>
-                {}
+    // Create a function that will render our row sub components
+    const renderRowSubComponent = React.useCallback(
+        ({ row }) => {        
+            return <div>
+                {JSON.stringify(row.original.evaluationResult, null, 2)}
             </div>
-        );
-    },[]
-  );
+        },[]
+    );
 
-  return (
-    <Styles>
-      <Table
+    return (
+        <Table
         columns={columns}
         data={data}
         renderRowSubComponent={renderRowSubComponent}
-      />
-    </Styles>
-  )
+        />
+    );
 }
 
-export default EvaluationTable
+export default EvaluationTable;
+export {
+    Table
+};

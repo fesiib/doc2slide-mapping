@@ -17,7 +17,7 @@ from gen_similarity_table import \
 
 from gen_outline import get_outline_generic
 
-from evaluate_outline import evaluate_outline, evaluate_performance
+from evaluate_outline import evaluate_outline, evaluate_performance, GROUND_TRUTH_EXISTS
 
 SKIPPED_SECTIONS = [
     "CCS CONCEPTS",
@@ -90,7 +90,7 @@ def fix_section_titles(section_data, paper_data):
 
     return ret_section_data, ret_paper_data
 
-def process(path, similarity_type, outlining_approach, apply_thresholding):
+def process(path, presentation_id, similarity_type, outlining_approach, apply_thresholding):
     timestamp = open(os.path.join(path, "frameTimestamp.txt"), "r")
 
     timestamp_data = []
@@ -99,7 +99,12 @@ def process(path, similarity_type, outlining_approach, apply_thresholding):
     paper_data = read_txt(os.path.join(path, "paperData.txt"))
     section_data = read_txt(os.path.join(path, "sectionData.txt"))
     script_data = read_txt(os.path.join(path, "scriptData.txt"))
-    gt_data = read_json(os.path.join(path, "groundTruth.txt"))
+
+    gt_data = {
+        'groundTruthSegments': [],
+    }
+    if (presentation_id in GROUND_TRUTH_EXISTS):
+        gt_data = read_json(os.path.join(path, "groundTruth.txt"))
 
     section_data, paper_data = add_sections_as_paragraphs(section_data, paper_data)
 
@@ -218,18 +223,16 @@ def process(path, similarity_type, outlining_approach, apply_thresholding):
     return result
 
 def evaluate_model(parent_path, similarity_type, outlining_approach, apply_thresholding):
-    ground_truth_exists = [0, 4, 6, 7, 9]
-
     evaluations = []
 
-    for id in ground_truth_exists:
+    for id in GROUND_TRUTH_EXISTS:
         print("Evaluating: ", id)
 
         path = parent_path + str(id)
-        output = process(path, similarity_type, outlining_approach, apply_thresholding)
+        output = process(path, id, similarity_type, outlining_approach, apply_thresholding)
         evaluations.append(output["evaluationData"])
 
-    return evaluate_performance(evaluations, ground_truth_exists)
+    return evaluate_performance(evaluations, GROUND_TRUTH_EXISTS)
 
 def evaluate_all_models():
     similarity_types = ["classifier", "keywords", "embeddings"]
@@ -266,7 +269,5 @@ if __name__ == "__main__":
     #print(json.dumps(output, indent=4))
 
 
-    #output = process('slideMeta/slideData/0', similarity_type="classifier", outlining_approach="dp_simple", apply_thresholding=True)
-    #output = process('slideMeta/slideData/0', similarity_type="keywords", outlining_approach="dp_mask", apply_thresholding=False)
-    #output = process('slideMeta/slideData/0', similarity_type="embeddings", outlining_approach="simple", apply_thresholding=True)
+    #output = process('slideMeta/slideData/0', 0, similarity_type="classifier", outlining_approach="dp_simple", apply_thresholding=True)
     #print(output["evaluationData"])

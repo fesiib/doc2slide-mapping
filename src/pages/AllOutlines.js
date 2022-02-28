@@ -4,7 +4,7 @@ import Outline from '../components/Outline';
 import PipelineAccuracy from '../components/PipelineAccuracy';
 import ModelConfig from '../components/ModelConfig';
 
-const PRESENTATION_IDS = [0];
+const PRESENTATION_IDS = [0, 4, 6, 7, 9, 10, 12, 13, 14, 15, 16, 17, 18, 19, 20];
 
 function AllOutlines(props) {
     const similarityType = props?.similarityType;
@@ -14,21 +14,26 @@ function AllOutlines(props) {
 	const [data, setData] = useState({});
 	
 	useEffect(() => {
+        let requests = [];
         for (let presentationId of PRESENTATION_IDS) {
-            axios.post('http://localhost:3555/get_data', {
+            requests.push(axios.post('http://localhost:3555/get_data', {
                 presentationId: presentationId,
                 similarityType: similarityType,
                 outliningApproach: outliningApproach,
                 applyThresholding: applyThresholding,
-            }).then( (response) => {
-                console.log(response);
-                setData({
-                    ...data,
-                    [presentationId]: response.data.data,
-                });
-            });
+            }))
         }
-
+        Promise.all(requests).then( (responses) => {
+            let curData = {};
+            for (let response of responses) {
+                console.log(response);
+                curData = {
+                    ...curData,
+                    [response.data.presentationId]: response.data.data,
+                };
+            }
+            setData(curData);
+        });
 	}, [similarityType, outliningApproach, applyThresholding]);
 
 	if (!data) {
@@ -47,8 +52,8 @@ function AllOutlines(props) {
                 }}> 
                     <Outline isGenerated={true} outline={curData?.outline} slideInfo={curData?.slideInfo} />
                     <Outline isGenerated={false} outline={curData?.groundTruthOutline} slideInfo={curData?.slideInfo} />
+                    <PipelineAccuracy evaluationData={curData?.evaluationData}/>
                 </div>
-                <PipelineAccuracy evaluationData={curData?.evaluationData}/>
             </div>
         });
     }

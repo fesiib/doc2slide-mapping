@@ -43,7 +43,7 @@ def prediction():
         "paper": read_txt(paper_path),
         "script": read_txt(script_path),
         "sections": read_txt(section_path),
-        "data": process(parent_path, similarity_type, outlining_approach, apply_thresholding),
+        "data": process(parent_path, presentation_id, similarity_type, outlining_approach, apply_thresholding),
         "presentationId": presentation_id,
     })
 
