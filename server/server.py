@@ -44,6 +44,7 @@ def prediction():
         "script": read_txt(script_path),
         "sections": read_txt(section_path),
         "data": process(parent_path, similarity_type, outlining_approach, apply_thresholding),
+        "presentationId": presentation_id,
     })
 
 @app.route('/get_evaluation_results', methods=['POST'])
