@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import { useTable, useExpanded } from 'react-table';
+import { Link } from 'react-router-dom';
+
 
 const Styles = styled.div`
   padding: 1rem;
@@ -30,6 +32,8 @@ const Styles = styled.div`
     }
   }
 `;
+
+const MODEL_NAME = 'modelName';
 
 function Table(props) {
 
@@ -75,6 +79,27 @@ function Table(props) {
                             <React.Fragment key={rowKey}>
                                 <tr>
                                     {row.cells.map(cell => {
+                                        if (cell.column.id === MODEL_NAME) {
+                                            const evaluationResult = cell.row.original.evaluationResult;
+                                            const modelConfig = evaluationResult.modelConfig;
+                                            return (
+                                                <td
+                                                    {...cell.getCellProps({
+                                                    })}
+                                                >
+                                                    <Link to={{
+                                                        search: `?mode=${1}`
+                                                            + `&similarityType=${modelConfig.similarityType}`
+                                                            + `&outliningApproach=${modelConfig.outliningApproach}`
+                                                            + `&applyThresholding=${modelConfig.thresholding}`,
+                                                        state: null,
+                                                    }}>
+                                                        {cell.render('Cell')}
+                                                    </Link>
+                                                </td>
+                                            )
+                                        }
+                                            console.log();
                                         return (
                                             <td {...cell.getCellProps()}>{cell.render('Cell')}</td>
                                         )
@@ -114,10 +139,13 @@ function EvaluationTable(props) {
 
     const presentationsCnt = 0;
 
-    const presentationIds = [];
-    for (let presentationId = 1; presentationId <= presentationsCnt; presentationId++){
-        presentationIds.push(presentationId);
-    }
+    const presentationIds = React.useMemo(() => {
+        let retList = []
+        for (let presentationId = 1; presentationId <= presentationsCnt; presentationId++){
+            retList.push(presentationId);
+        }
+        return retList;
+    }, [presentationsCnt]);
 
     const columns = React.useMemo(() => {
         const generateInnerColumns = (header, accessor) => {
@@ -148,7 +176,7 @@ function EvaluationTable(props) {
                 ),
             },{
                 Header: 'Model Name',
-                accessor: 'modelName',
+                accessor: MODEL_NAME,
             }, {
                 Header: 'Video Overview',
                 columns: generateInnerColumns("", "boundariesAccuracy"),
@@ -163,7 +191,7 @@ function EvaluationTable(props) {
                 columns: generateInnerColumns("", "mappingAccuracy"),
             },
         ];
-    }, [evaluationResults]);
+    }, [presentationIds]);
 
     const data = evaluationResults ? evaluationResults.map((evaluationResult, idx) => {
         let modelName = "";
@@ -187,6 +215,7 @@ function EvaluationTable(props) {
         let dataObject = {
             idx,
             modelName,
+            evaluationResult,
         };
 
         for (let accessor in evaluationResult.result) {
