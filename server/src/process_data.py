@@ -7,7 +7,8 @@ from string import digits
 
 from nltk.tokenize import word_tokenize
 
-#nltk.download('punkt')
+import nltk
+nltk.download('punkt')
 
 sys.path.insert(0, '../')
 
@@ -104,7 +105,7 @@ def process(path, presentation_id, similarity_type, outlining_approach, apply_th
         'groundTruthSegments': [],
     }
     if (presentation_id in GROUND_TRUTH_EXISTS):
-        gt_data = read_json(os.path.join(path, "groundTruth.txt"))
+        gt_data = read_json(os.path.join(path, "groundTruth.json"))
 
     section_data, paper_data = add_sections_as_paragraphs(section_data, paper_data)
 
@@ -222,8 +223,8 @@ def process(path, presentation_id, similarity_type, outlining_approach, apply_th
         result["outline"], result["groundTruthOutline"], result["slideInfo"], result["topSections"]
     )
 
-    json_file = open(os.path.join(path, "result.json"), "w")
-    json_file.write(json.dumps(result))
+    with open(os.path.join(path, "result.json"), "w") as f:
+        f.write(json.dumps(result))
     return result
 
 def evaluate_model(parent_path, similarity_type, outlining_approach, apply_thresholding, apply_heuristics):

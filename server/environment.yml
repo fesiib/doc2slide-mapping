@@ -3,7 +3,6 @@ channels:
   - conda-forge
   - defaults
 dependencies:
-  - appnope=0.1.2
   - argon2-cffi=21.3.0
   - argon2-cffi-bindings=21.2.0
   - asttokens=2.0.5
@@ -57,7 +56,6 @@ dependencies:
   - lcms2=2.12
   - libcxx=12.0.0
   - libffi=3.3
-  - libgfortran=3.0.1
   - libpng=1.6.37
   - libsodium=1.0.18
   - libtiff=4.2.0
@@ -178,4 +176,3 @@ dependencies:
     - torchvision==0.11.3
     - transformers==4.16.2
     - werkzeug==2.0.3
-prefix: /usr/local/anaconda3/envs/doc2slide_mapping
