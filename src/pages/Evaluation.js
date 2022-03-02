@@ -6,7 +6,7 @@ function Evaluation() {
 	const [evaluationResults, setEvaluationResults] = useState([]);
 	
 	useEffect(() => {
-		axios.post('http://localhost:3555/get_evaluation_results', {
+		axios.post('http://server.hyungyu.com:7777/mapping/evaluation_results', {
 		}).then( (response) => {
 			console.log("Evaluation", response);
             setEvaluationResults(response.data.evaluationResults)

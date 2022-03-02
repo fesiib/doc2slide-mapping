@@ -20,7 +20,7 @@ function AllOutlines(props) {
 	useEffect(() => {
         let requests = [];
         for (let presentationId of PRESENTATION_IDS) {
-            requests.push(axios.post('http://localhost:3555/get_data', {
+            requests.push(axios.post('http://server.hyungyu.com:7777/mapping/process_presentation', {
                 presentationId: presentationId,
                 similarityType: similarityType,
                 outliningApproach: outliningApproach,

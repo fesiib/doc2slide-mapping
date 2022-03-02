@@ -20,7 +20,7 @@ function SingleExample(props) {
 	const [sections, setSections] = useState([]);
 	
 	useEffect(() => {
-		axios.post('http://localhost:3555/get_data', {
+		axios.post('http://server.hyungyu.com:7777/mapping/process_presentation', {
 			presentationId: presentationId,
 			similarityType: similarityType,
 			outliningApproach: outliningApproach,
