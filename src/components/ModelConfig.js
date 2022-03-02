@@ -4,6 +4,7 @@ function ModelConfig(props) {
     const similarityType = props?.similarityType;
     const outliningApproach = props?.outliningApproach;
     const applyThresholding = props?.applyThresholding;
+    const applyHeuristics = props?.applyHeuristics;
 
     return (<div style={{
         textAlign: "left",
@@ -14,6 +15,7 @@ function ModelConfig(props) {
         <p> Similarity: {similarityType} </p>
         <p> Outlining: {outliningApproach} </p>
         <p> Thresholding: {applyThresholding ? "True" : "False"} </p>
+        <p> Heuristics: {applyHeuristics ? "True" : "False"} </p>
     </div>);
 }
 

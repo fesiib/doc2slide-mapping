@@ -93,7 +93,8 @@ function Table(props) {
                                                         search: `?mode=${1}`
                                                             + `&similarityType=${modelConfig.similarityType}`
                                                             + `&outliningApproach=${modelConfig.outliningApproach}`
-                                                            + `&applyThresholding=${modelConfig.thresholding}`,
+                                                            + `&applyThresholding=${modelConfig.applyThresholding}`
+                                                            + `&applyHeuristics=${modelConfig.applyHeuristics}`,
                                                         state: null,
                                                     }}>
                                                         {cell.render('Cell')}

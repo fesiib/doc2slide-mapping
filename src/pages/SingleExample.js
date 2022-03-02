@@ -12,6 +12,7 @@ function SingleExample(props) {
     const similarityType = props?.similarityType;
     const outliningApproach = props?.outliningApproach;
     const applyThresholding = props?.applyThresholding;
+	const applyHeuristics = props?.applyHeuristics;
 
 	const [data, setData] = useState(null);
 	const [paragraphs, setParagraphs] = useState([]);
@@ -24,6 +25,7 @@ function SingleExample(props) {
 			similarityType: similarityType,
 			outliningApproach: outliningApproach,
 			applyThresholding: applyThresholding,
+			applyHeuristics: applyHeuristics,
 		}).then( (response) => {
 			console.log(response);
 			setParagraphs(response.data.paper);
@@ -32,7 +34,7 @@ function SingleExample(props) {
 			setData(response.data.data);
 		});
 
-	}, [presentationId, similarityType, outliningApproach, applyThresholding]);
+	}, [presentationId, similarityType, outliningApproach, applyThresholding, applyHeuristics]);
 
 	if (!data) {
 		return <div> LOADING !!! </div>
@@ -43,6 +45,7 @@ function SingleExample(props) {
                 similarityType={similarityType}
                 outliningApproach={outliningApproach}
                 applyThresholding={applyThresholding}
+				applyHeuristics={applyHeuristics}
             />
 			<HeatMap 
 				data={data ? data.similarityTable : []}

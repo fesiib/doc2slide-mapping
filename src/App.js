@@ -11,7 +11,8 @@ function App() {
 
 	const similartiyType = urlParams.get('similarityType');
 	const outliningApproach = urlParams.get('outliningApproach');
-	const applyThresholding = Boolean(urlParams.get('applyThresholding'));
+	const applyThresholding = urlParams.get('applyThresholding') === 'true' ? true : false;
+	const applyHeuristics = urlParams.get('applyHeuristics') === 'true' ? true : false;
 
 	if (mode === 0) {
 		return ( <div className='App'>
@@ -20,6 +21,7 @@ function App() {
 				similarityType={similartiyType}
 				outliningApproach={outliningApproach}
 				applyThresholding={applyThresholding}
+				applyHeuristics={applyHeuristics}
 			/>
 		</div>);
 	}
@@ -29,6 +31,7 @@ function App() {
 				similarityType={similartiyType}
 				outliningApproach={outliningApproach}
 				applyThresholding={applyThresholding}
+				applyHeuristics={applyHeuristics}
 			/>
 		</div>);
 	}

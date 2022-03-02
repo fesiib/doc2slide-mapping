@@ -4,12 +4,16 @@ import Outline from '../components/Outline';
 import PipelineAccuracy from '../components/PipelineAccuracy';
 import ModelConfig from '../components/ModelConfig';
 
-const PRESENTATION_IDS = [0, 4, 6, 7, 9, 10, 12, 13, 14, 15, 16, 17, 18, 19, 20];
+//const PRESENTATION_IDS = [0, 4, 6, 7, 9, 10, 12, 13, 14, 15, 16, 17, 18, 19, 20];
+
+const PRESENTATION_IDS = [0, 4, 6, 7, 9];
+
 
 function AllOutlines(props) {
     const similarityType = props?.similarityType;
     const outliningApproach = props?.outliningApproach;
     const applyThresholding = props?.applyThresholding;
+	const applyHeuristics = props?.applyHeuristics;
 
 	const [data, setData] = useState({});
 	
@@ -21,6 +25,7 @@ function AllOutlines(props) {
                 similarityType: similarityType,
                 outliningApproach: outliningApproach,
                 applyThresholding: applyThresholding,
+                applyHeuristics: applyHeuristics,
             }))
         }
         Promise.all(requests).then( (responses) => {
@@ -34,7 +39,7 @@ function AllOutlines(props) {
             }
             setData(curData);
         });
-	}, [similarityType, outliningApproach, applyThresholding]);
+	}, [similarityType, outliningApproach, applyThresholding, applyHeuristics]);
 
 	if (!data) {
 		return <div> LOADING !!! </div>
@@ -64,6 +69,7 @@ function AllOutlines(props) {
                 similarityType={similarityType}
                 outliningApproach={outliningApproach}
                 applyThresholding={applyThresholding}
+                applyHeuristics={applyHeuristics}
             />
             {outputOutlines()}
 		</div>
