@@ -26,6 +26,7 @@ def prediction():
     similarity_type = request_json["similarityType"]
     outlining_approach = request_json["outliningApproach"]
     apply_thresholding = request_json["applyThresholding"]
+    apply_heuristics = request_json["applyHeuristics"]
 
     print(request_json)
 
@@ -43,7 +44,7 @@ def prediction():
         "paper": read_txt(paper_path),
         "script": read_txt(script_path),
         "sections": read_txt(section_path),
-        "data": process(parent_path, presentation_id, similarity_type, outlining_approach, apply_thresholding),
+        "data": process(parent_path, presentation_id, similarity_type, outlining_approach, apply_thresholding, apply_heuristics),
         "presentationId": presentation_id,
     })
 

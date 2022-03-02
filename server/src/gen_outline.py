@@ -1,5 +1,7 @@
 PENALTY = 0.5
 MIN_SEGMENTS = 3
+MIN_CNT_SLIDES_PER_SEGMENT = 3
+MIN_DURATION_PER_SEGMENT = 30 # seconds
 
 def get_outline_dp(section_data, top_sections, script_sentence_range):
     label_dict = sorted(list(set(section_data)))
@@ -53,7 +55,6 @@ def get_outline_dp(section_data, top_sections, script_sentence_range):
     final_result = [ 0 for i in range(len(script_sentence_range)) ]
 
     cur_slide = len(script_sentence_range) - 1
-    print(max_value, optimal_segments)
 
     while optimal_segments > 0:
         start = Table[optimal_segments][cur_slide][2]
@@ -88,7 +89,7 @@ def get_outline_dp(section_data, top_sections, script_sentence_range):
             outline[-1]['endSlideIndex'] = i
     return outline, weights
 
-def get_outline_dp_mask(section_data, top_sections, script_sentence_range, target_mask = None):
+def get_outline_dp_mask(section_data, apply_heuristics, slide_info, top_sections, script_sentence_range, target_mask = None):
     label_dict = sorted(list(set(section_data)))
 
     for i, section in enumerate(label_dict):
@@ -107,6 +108,14 @@ def get_outline_dp_mask(section_data, top_sections, script_sentence_range, targe
             for top_section in top_sections[j]:
                 pos = label_dict.index(top_section[0])
                 scores[pos] += top_section[1]
+            
+            # Heuristics
+            if apply_heuristics is True:
+                if j - i < MIN_CNT_SLIDES_PER_SEGMENT and m > 2 * MIN_CNT_SLIDES_PER_SEGMENT:
+                    continue
+                if slide_info[j]["endTime"] - slide_info[i + 1]["startTime"] < MIN_DURATION_PER_SEGMENT \
+                    and slide_info[m - 1]["endTime"] - slide_info[0]["startTime"] > 2 * MIN_DURATION_PER_SEGMENT:
+                    continue
 
             for mask in range(0, (1 << n)):
                 if dp[mask][i][0] < 0:
@@ -119,8 +128,15 @@ def get_outline_dp_mask(section_data, top_sections, script_sentence_range, targe
                         inc_penalty = PENALTY
                         continue
                     nmask = mask | (1 << k)
-                    if (dp[nmask][j][0] < dp[mask][i][0] + scores[k] - penalty):
-                        dp[nmask][j] = (dp[mask][i][0] + scores[k] - penalty, k, i)
+
+                    # Heuristics
+                    if apply_heuristics is True:
+                        if (dp[nmask][j][0] < dp[mask][i][0] + scores[k] - penalty):
+                            dp[nmask][j] = (dp[mask][i][0] + scores[k] - penalty, k, i)
+                    else:
+                        if (dp[nmask][j][0] < dp[mask][i][0] + scores[k]):
+                            dp[nmask][j] = (dp[mask][i][0] + scores[k], k, i)
+
 
     recover_mask = 0
     recover_slide_id = m - 1
@@ -181,9 +197,9 @@ def get_outline_simple(top_sections):
         weights.append(scores[section])
     return outline, weights
 
-def get_outline_generic(outlining_approach, section_data, top_sections, script_sentence_range, target_mask = None):
+def get_outline_generic(outlining_approach, apply_heuristics, slide_info, section_data, top_sections, script_sentence_range, target_mask = None):
     if outlining_approach == 'dp_mask':
-        return get_outline_dp_mask(section_data, top_sections, script_sentence_range, target_mask)
+        return get_outline_dp_mask(section_data, apply_heuristics, slide_info, top_sections, script_sentence_range, target_mask)
     if outlining_approach == 'simple':
         return get_outline_simple(top_sections)
     

@@ -90,7 +90,7 @@ def fix_section_titles(section_data, paper_data):
 
     return ret_section_data, ret_paper_data
 
-def process(path, presentation_id, similarity_type, outlining_approach, apply_thresholding):
+def process(path, presentation_id, similarity_type, outlining_approach, apply_thresholding, apply_heuristics):
     timestamp = open(os.path.join(path, "frameTimestamp.txt"), "r")
 
     timestamp_data = []
@@ -136,17 +136,21 @@ def process(path, presentation_id, similarity_type, outlining_approach, apply_th
 
     result['title'] = "tempTitle"
     result['slideCnt'] = len(timestamp_data)
-    result['slideInfo']= []
     result['groundTruthOutline'] = gt_data['groundTruthSegments']
+
+    slide_info = []
+    startTimeStamp = 0
     for i in range(len(timestamp_data)) :
-        result['slideInfo'].append({
+        slide_info.append({
             "index": i,
-            "startTime": timestamp_data[i][0],
+            "startTime": startTimeStamp,
             "endTime": timestamp_data[i][1],
             "script": script_data[i],
             "ocrResult": ocr_data[i],
         })
-    
+        startTimeStamp = timestamp_data[i][1]
+    result['slideInfo'] = slide_info   
+
 
     _paper_data = []
     _script_data = []
@@ -181,7 +185,7 @@ def process(path, presentation_id, similarity_type, outlining_approach, apply_th
         overall, top_sections, paper_keywords, script_keywords = get_similarity_keywords(
             _paper_data, _script_data, section_data, paper_sentence_id, script_sentence_range, apply_thresholding
         )
-        outline, weights = get_outline_generic(outlining_approach, section_data, top_sections, script_sentence_range)
+        outline, weights = get_outline_generic(outlining_approach, apply_heuristics, slide_info, section_data, top_sections, script_sentence_range)
 
         result['topSections'] = top_sections
         result['outline'] = outline
@@ -193,7 +197,7 @@ def process(path, presentation_id, similarity_type, outlining_approach, apply_th
         overall, top_sections = get_similarity_embeddings(
             _paper_data, _script_data, section_data, paper_sentence_id, script_sentence_range, apply_thresholding
         )
-        outline, weights = get_outline_generic(outlining_approach, section_data, top_sections, script_sentence_range)
+        outline, weights = get_outline_generic(outlining_approach, apply_heuristics, slide_info, section_data, top_sections, script_sentence_range)
 
         result['topSections'] = top_sections
         result['outline'] = outline
@@ -205,7 +209,7 @@ def process(path, presentation_id, similarity_type, outlining_approach, apply_th
         overall, top_sections, paper_data_by_section = get_similarity_classifier(
             _paper_data, _script_data, section_data, paper_sentence_id, script_sentence_range, apply_thresholding
         )
-        outline, weights = get_outline_generic(outlining_approach, section_data, top_sections, script_sentence_range)
+        outline, weights = get_outline_generic(outlining_approach, apply_heuristics, slide_info, section_data, top_sections, script_sentence_range)
         
         result['topSections'] = top_sections
         result['outline'] = outline
@@ -222,22 +226,23 @@ def process(path, presentation_id, similarity_type, outlining_approach, apply_th
     json_file.write(json.dumps(result))
     return result
 
-def evaluate_model(parent_path, similarity_type, outlining_approach, apply_thresholding):
+def evaluate_model(parent_path, similarity_type, outlining_approach, apply_thresholding, apply_heuristics):
     evaluations = []
 
     for id in GROUND_TRUTH_EXISTS:
-        print("Evaluating: ", id)
-
+        print(f'Testing: id={id} similarity={similarity_type} outlining={outlining_approach} thresholding={apply_thresholding} heuristics={apply_heuristics}')
         path = parent_path + str(id)
-        output = process(path, id, similarity_type, outlining_approach, apply_thresholding)
+        output = process(path, id, similarity_type, outlining_approach, apply_thresholding, apply_heuristics)
         evaluations.append(output["evaluationData"])
 
     return evaluate_performance(evaluations, GROUND_TRUTH_EXISTS)
 
 def evaluate_all_models():
     similarity_types = ["classifier", "keywords", "embeddings"]
-    outlining_approaches = ["dp_mask", "dp_simple", "simple"]
+    #outlining_approaches = ["dp_mask", "dp_simple", "simple"]
+    outlining_approaches = ["dp_mask"]
     thresholdings = [False, True]
+    heuristics = [False, True]
 
     results = []
 
@@ -245,18 +250,18 @@ def evaluate_all_models():
         for similarity_type in similarity_types:
             for outlining_approach in outlining_approaches:
                 for apply_thresholding in thresholdings:
-                    print(f'Testing Model: similarity={similarity_type}, outlining={outlining_approach} thresholding={apply_thresholding}')
-                    output = evaluate_model('slideMeta/slideData/', similarity_type, outlining_approach, apply_thresholding)
-                    
-                    json_output = {
-                        "modelConfig": {
-                            "similarityType": similarity_type,
-                            "outliningApproach": outlining_approach,
-                            "thresholding": apply_thresholding,
-                        },
-                        "result": output
-                    }
-                    results.append(json_output)
+                    for apply_heuristics in heuristics:
+                        output = evaluate_model('slideMeta/slideData/', similarity_type, outlining_approach, apply_thresholding, apply_heuristics)
+                        json_output = {
+                            "modelConfig": {
+                                "similarityType": similarity_type,
+                                "outliningApproach": outlining_approach,
+                                "applyThresholding": apply_thresholding,
+                                "applyHeuristics": apply_heuristics,
+                            },
+                            "result": output
+                        }
+                        results.append(json_output)
         json.dump({
             "evaluationResults": results
         }, fp=f, indent=2)
@@ -269,5 +274,5 @@ if __name__ == "__main__":
     #print(json.dumps(output, indent=4))
 
 
-    #output = process('slideMeta/slideData/0', 0, similarity_type="classifier", outlining_approach="dp_simple", apply_thresholding=True)
+    #output = process('slideMeta/slideData/4', 4, similarity_type="embeddings", outlining_approach="dp_mask", apply_thresholding=False, apply_heuristics=True)
     #print(output["evaluationData"])

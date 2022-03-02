@@ -31,7 +31,8 @@ def _evaluate_boundaries(outline, gt_outline):
     #print(gt_boundaries)
 
     error = 0
-
+    total_score = len(gt_boundaries)
+    
     boundary_idx = 0
     for gt_boundary in gt_boundaries:
         #print("Searching for: ", gt_boundary)
@@ -43,12 +44,13 @@ def _evaluate_boundaries(outline, gt_outline):
         if boundary_idx > 0:
             #print("\tLeft: ", boundaries[boundary_idx - 1])
             cur_error = min(cur_error, abs(boundaries[boundary_idx - 1] - gt_boundary))
-        #print("\t\tCurrent Error: ", cur_error)
-        error += cur_error
+        cur_total = max(1, min(gt_boundary, total_slides_cnt - gt_boundary))
+        error += cur_error / cur_total
+        #print("\t\tCurrent Error & Total: ", cur_error, cur_total)
 
-    if total_slides_cnt == 0:
-        return 0
-    return round(100 - (error / total_slides_cnt) * 100, 2)
+    if total_score == 0:
+        return 50
+    return round(((total_score - error) * 100) / total_score, 2)
 
 def _evaluate_time(outline, gt_outline, slide_info):
     '''
@@ -69,7 +71,6 @@ def _evaluate_time(outline, gt_outline, slide_info):
             sections_duration[title] = 0
         sections_duration[title] += duration
 
-    total_duration = 0
 
     for section in gt_outline:
         title = section["sectionTitle"]
@@ -82,29 +83,28 @@ def _evaluate_time(outline, gt_outline, slide_info):
         end_slide = slide_info[section["endSlideIndex"]]
 
         duration = end_slide["endTime"] - start_slide["startTime"]
-        if (duration < 0):
-            print("Negative Duration:", title, duration, section["startSlideIndex"], section["endSlideIndex"])
-            duration = -duration
-        total_duration += duration
         if title not in gt_sections_duration:
             gt_sections_duration[title] = 0
         gt_sections_duration[title] += duration
 
     error = 0
-
+    cnt_gt_sections = 0
     for (gt_title, gt_duration) in gt_sections_duration.items():
+        if gt_duration == 0:
+            continue
+        cnt_gt_sections += 1
         found_pair = False
         for (title, duration) in sections_duration.items():
             if are_same_section_titles(title, gt_title):
                 found_pair = True
-                error += abs(duration - gt_duration)
+                error += min(1, abs(duration - gt_duration) / gt_duration)
                 break
         if found_pair is False:
-            error += gt_duration
-    
-    if total_duration == 0:
-        return 0
-    return round(100 - (error / total_duration) * 100, 2)
+            error += 1
+
+    if cnt_gt_sections == 0:
+        return 50
+    return round(100 - (error / cnt_gt_sections) * 100, 2)
 
 def _evaluate_structure(outline, gt_outline, slide_info):
     section_ids = {}
@@ -173,7 +173,7 @@ def _evaluate_structure(outline, gt_outline, slide_info):
         score = dp[n-1][m-1]
 
     if m == 0:
-        return 0
+        return 50
     return round((score / m) * 100, 2)
 
 def _evaluate_mapping(outline, gt_outline, top_sections):
@@ -234,7 +234,7 @@ def _evaluate_mapping(outline, gt_outline, top_sections):
             error += (gt_score - gen_score)
 
     if total_score == 0:
-        return 0
+        return 50
     return round(100 - (error / total_score) * 100, 2)
 
 def evaluate_outline(outline, gt_outline, slide_info, top_sections):
