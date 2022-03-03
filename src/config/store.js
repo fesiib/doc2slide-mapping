@@ -1,0 +1,32 @@
+import reducers from '../reducers';
+import {createStore, applyMiddleware} from 'redux';
+import {composeWithDevTools} from 'redux-devtools-extension';
+
+import {persistStore, persistReducer} from 'redux-persist';
+import storage from 'redux-persist/lib/storage';
+import { createStateSyncMiddleware, initStateWithPrevTab } from 'redux-state-sync';
+import thunkMiddleware from 'redux-thunk';
+
+const persistConfig = {
+    key: 'root',
+    storage
+}
+
+const reduxStateSyncConfig = {
+    blacklist: ["persist/PERSIST", "persist/REHYDRATE"],
+};
+
+const enhancedReducer = persistReducer(persistConfig, reducers);
+
+export default function configureStore() {
+    const store = createStore(
+        enhancedReducer,
+        undefined,
+        composeWithDevTools(
+            applyMiddleware(thunkMiddleware, createStateSyncMiddleware(reduxStateSyncConfig))
+        ),
+    );
+    initStateWithPrevTab(store);
+    const persistor = persistStore(store);
+    return {store, persistor};
+} 

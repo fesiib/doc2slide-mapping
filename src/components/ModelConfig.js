@@ -2,6 +2,7 @@ import React from "react";
 
 function ModelConfig(props) {
     const similarityType = props?.similarityType;
+    const similarityMethod = props?.similarityMethod;
     const outliningApproach = props?.outliningApproach;
     const applyThresholding = props?.applyThresholding;
     const applyHeuristics = props?.applyHeuristics;
@@ -13,6 +14,7 @@ function ModelConfig(props) {
     }}>
         <h2> Model: </h2>
         <p> Similarity: {similarityType} </p>
+        <p> Method: {similarityMethod} </p>
         <p> Outlining: {outliningApproach} </p>
         <p> Thresholding: {applyThresholding ? "True" : "False"} </p>
         <p> Heuristics: {applyHeuristics ? "True" : "False"} </p>

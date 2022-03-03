@@ -11,6 +11,7 @@ const PRESENTATION_IDS = [0, 4, 6, 7, 9];
 
 function AllOutlines(props) {
     const similarityType = props?.similarityType;
+    const similarityMethod= props?.similarityMethod;
     const outliningApproach = props?.outliningApproach;
     const applyThresholding = props?.applyThresholding;
 	const applyHeuristics = props?.applyHeuristics;
@@ -20,9 +21,10 @@ function AllOutlines(props) {
 	useEffect(() => {
         let requests = [];
         for (let presentationId of PRESENTATION_IDS) {
-            requests.push(axios.post('http://server.hyungyu.com:7777/mapping/process_presentation', {
+            requests.push(axios.post('http://localhost:7777/mapping/process_presentation', {
                 presentationId: presentationId,
                 similarityType: similarityType,
+                similarityMethod: similarityMethod,
                 outliningApproach: outliningApproach,
                 applyThresholding: applyThresholding,
                 applyHeuristics: applyHeuristics,
@@ -39,7 +41,7 @@ function AllOutlines(props) {
             }
             setData(curData);
         });
-	}, [similarityType, outliningApproach, applyThresholding, applyHeuristics]);
+	}, [similarityType, similarityMethod, outliningApproach, applyThresholding, applyHeuristics]);
 
 	if (!data) {
 		return <div> LOADING !!! </div>
@@ -67,6 +69,7 @@ function AllOutlines(props) {
 		<div>
             <ModelConfig
                 similarityType={similarityType}
+                similarityMethod={similarityMethod}
                 outliningApproach={outliningApproach}
                 applyThresholding={applyThresholding}
                 applyHeuristics={applyHeuristics}

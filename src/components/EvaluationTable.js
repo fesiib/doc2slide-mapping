@@ -92,6 +92,7 @@ function Table(props) {
                                                     <Link to={{
                                                         search: `?mode=${1}`
                                                             + `&similarityType=${modelConfig.similarityType}`
+                                                            + `&similarityMethod=${modelConfig.similarityMethod}`
                                                             + `&outliningApproach=${modelConfig.outliningApproach}`
                                                             + `&applyThresholding=${modelConfig.applyThresholding}`
                                                             + `&applyHeuristics=${modelConfig.applyHeuristics}`,

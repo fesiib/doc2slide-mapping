@@ -10,6 +10,7 @@ import ModelConfig from '../components/ModelConfig';
 function SingleExample(props) {
     const presentationId = props?.presentationId;
     const similarityType = props?.similarityType;
+	const similarityMethod = props?.similarityMethod;
     const outliningApproach = props?.outliningApproach;
     const applyThresholding = props?.applyThresholding;
 	const applyHeuristics = props?.applyHeuristics;
@@ -20,9 +21,10 @@ function SingleExample(props) {
 	const [sections, setSections] = useState([]);
 	
 	useEffect(() => {
-		axios.post('http://server.hyungyu.com:7777/mapping/process_presentation', {
+		axios.post('http://localhost:7777/mapping/process_presentation', {
 			presentationId: presentationId,
 			similarityType: similarityType,
+			similarityMethod: similarityMethod,
 			outliningApproach: outliningApproach,
 			applyThresholding: applyThresholding,
 			applyHeuristics: applyHeuristics,
@@ -34,7 +36,7 @@ function SingleExample(props) {
 			setData(response.data.data);
 		});
 
-	}, [presentationId, similarityType, outliningApproach, applyThresholding, applyHeuristics]);
+	}, [presentationId, similarityType, similarityMethod, outliningApproach, applyThresholding, applyHeuristics]);
 
 	if (!data) {
 		return <div> LOADING !!! </div>
@@ -43,6 +45,7 @@ function SingleExample(props) {
 		<div>
             <ModelConfig
                 similarityType={similarityType}
+				similarityMethod={similarityMethod}
                 outliningApproach={outliningApproach}
                 applyThresholding={applyThresholding}
 				applyHeuristics={applyHeuristics}
