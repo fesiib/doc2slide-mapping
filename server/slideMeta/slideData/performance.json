@@ -2,235 +2,8 @@
   "evaluationResults": [
     {
       "modelConfig": {
-        "similarityType": "classifier",
-        "outliningApproach": "dp_mask",
-        "applyThresholding": false,
-        "applyHeuristics": false
-      },
-      "result": {
-        "boundariesAccuracy": [
-          [
-            54.89,
-            56.19,
-            69.06,
-            41.98,
-            65.37
-          ],
-          57.5
-        ],
-        "timeAccuracy": [
-          [
-            13.25,
-            32.72,
-            0.0,
-            27.4,
-            13.69
-          ],
-          17.41
-        ],
-        "structureAccuracy": [
-          [
-            28.57,
-            50.0,
-            28.57,
-            40.0,
-            33.33
-          ],
-          36.09
-        ],
-        "mappingAccuracy": [
-          [
-            99.02,
-            95.92,
-            91.72,
-            97.11,
-            96.15
-          ],
-          95.98
-        ],
-        "presentation_ids": [
-          0,
-          4,
-          6,
-          7,
-          9
-        ]
-      }
-    },
-    {
-      "modelConfig": {
-        "similarityType": "classifier",
-        "outliningApproach": "dp_mask",
-        "applyThresholding": false,
-        "applyHeuristics": true
-      },
-      "result": {
-        "boundariesAccuracy": [
-          [
-            54.89,
-            57.6,
-            75.83,
-            41.59,
-            65.37
-          ],
-          59.06
-        ],
-        "timeAccuracy": [
-          [
-            13.25,
-            18.41,
-            0.0,
-            16.29,
-            13.69
-          ],
-          12.33
-        ],
-        "structureAccuracy": [
-          [
-            28.57,
-            25.0,
-            28.57,
-            60.0,
-            33.33
-          ],
-          35.09
-        ],
-        "mappingAccuracy": [
-          [
-            98.41,
-            97.42,
-            95.12,
-            98.22,
-            95.07
-          ],
-          96.85
-        ],
-        "presentation_ids": [
-          0,
-          4,
-          6,
-          7,
-          9
-        ]
-      }
-    },
-    {
-      "modelConfig": {
-        "similarityType": "classifier",
-        "outliningApproach": "dp_mask",
-        "applyThresholding": true,
-        "applyHeuristics": false
-      },
-      "result": {
-        "boundariesAccuracy": [
-          [
-            50.55,
-            56.81,
-            43.23,
-            29.13,
-            65.37
-          ],
-          49.02
-        ],
-        "timeAccuracy": [
-          [
-            10.4,
-            31.64,
-            1.79,
-            10.11,
-            13.69
-          ],
-          13.53
-        ],
-        "structureAccuracy": [
-          [
-            28.57,
-            50.0,
-            28.57,
-            40.0,
-            33.33
-          ],
-          36.09
-        ],
-        "mappingAccuracy": [
-          [
-            99.37,
-            94.51,
-            84.58,
-            84.45,
-            96.0
-          ],
-          91.78
-        ],
-        "presentation_ids": [
-          0,
-          4,
-          6,
-          7,
-          9
-        ]
-      }
-    },
-    {
-      "modelConfig": {
-        "similarityType": "classifier",
-        "outliningApproach": "dp_mask",
-        "applyThresholding": true,
-        "applyHeuristics": true
-      },
-      "result": {
-        "boundariesAccuracy": [
-          [
-            54.89,
-            60.96,
-            66.88,
-            41.59,
-            63.55
-          ],
-          57.57
-        ],
-        "timeAccuracy": [
-          [
-            13.25,
-            47.86,
-            23.62,
-            16.29,
-            5.36
-          ],
-          21.28
-        ],
-        "structureAccuracy": [
-          [
-            28.57,
-            62.5,
-            42.86,
-            60.0,
-            33.33
-          ],
-          45.45
-        ],
-        "mappingAccuracy": [
-          [
-            99.75,
-            97.9,
-            88.97,
-            94.71,
-            96.28
-          ],
-          95.52
-        ],
-        "presentation_ids": [
-          0,
-          4,
-          6,
-          7,
-          9
-        ]
-      }
-    },
-    {
-      "modelConfig": {
         "similarityType": "keywords",
+        "similarityMethod": "tf-idf",
         "outliningApproach": "dp_mask",
         "applyThresholding": false,
         "applyHeuristics": false
@@ -238,43 +11,43 @@
       "result": {
         "boundariesAccuracy": [
           [
-            56.85,
-            57.65,
-            85.42,
-            71.27,
-            79.46
+            84.46,
+            55.65,
+            92.31,
+            58.26,
+            72.32
           ],
-          70.13
+          72.6
         ],
         "timeAccuracy": [
           [
-            31.03,
+            42.5,
             34.82,
-            31.38,
-            22.09,
-            26.67
+            30.79,
+            22.65,
+            27.31
           ],
-          29.2
+          31.61
         ],
         "structureAccuracy": [
           [
-            42.86,
-            50.0,
-            42.86,
+            72.73,
+            66.67,
+            54.55,
             40.0,
-            44.44
+            66.67
           ],
-          44.03
+          60.12
         ],
         "mappingAccuracy": [
           [
             99.28,
             94.57,
-            75.18,
+            74.18,
             89.45,
             95.71
           ],
-          90.84
+          90.64
         ],
         "presentation_ids": [
           0,
@@ -288,6 +61,7 @@
     {
       "modelConfig": {
         "similarityType": "keywords",
+        "similarityMethod": "tf-idf",
         "outliningApproach": "dp_mask",
         "applyThresholding": false,
         "applyHeuristics": true
@@ -295,43 +69,43 @@
       "result": {
         "boundariesAccuracy": [
           [
-            56.85,
-            65.87,
-            80.94,
-            69.84,
-            69.02
+            84.46,
+            60.75,
+            95.13,
+            61.86,
+            59.86
           ],
-          68.5
+          72.41
         ],
         "timeAccuracy": [
           [
-            31.03,
-            30.32,
-            30.04,
-            19.39,
-            22.52
+            42.5,
+            26.11,
+            27.86,
+            18.95,
+            22.75
           ],
-          26.66
+          27.63
         ],
         "structureAccuracy": [
           [
-            42.86,
-            50.0,
-            42.86,
-            40.0,
-            33.33
+            72.73,
+            71.43,
+            54.55,
+            44.44,
+            46.15
           ],
-          41.81
+          57.86
         ],
         "mappingAccuracy": [
           [
             99.28,
-            94.21,
-            74.86,
-            88.37,
-            95.21
+            94.08,
+            73.85,
+            87.24,
+            95.52
           ],
-          90.39
+          89.99
         ],
         "presentation_ids": [
           0,
@@ -345,6 +119,7 @@
     {
       "modelConfig": {
         "similarityType": "keywords",
+        "similarityMethod": "tf-idf",
         "outliningApproach": "dp_mask",
         "applyThresholding": true,
         "applyHeuristics": false
@@ -352,43 +127,43 @@
       "result": {
         "boundariesAccuracy": [
           [
-            70.36,
-            58.35,
-            87.5,
-            64.52,
-            75.61
+            65.56,
+            77.79,
+            96.3,
+            35.72,
+            82.73
           ],
-          71.27
+          71.62
         ],
         "timeAccuracy": [
           [
             22.76,
-            46.63,
-            21.65,
-            18.84,
-            24.32
+            53.51,
+            27.5,
+            14.22,
+            39.46
           ],
-          26.84
+          31.49
         ],
         "structureAccuracy": [
           [
-            57.14,
+            66.67,
+            66.67,
             50.0,
-            42.86,
             60.0,
-            44.44
+            66.67
           ],
-          50.89
+          62.0
         ],
         "mappingAccuracy": [
           [
-            93.13,
+            93.37,
             95.92,
-            76.21,
+            76.31,
             85.64,
-            83.84
+            84.13
           ],
-          86.95
+          87.07
         ],
         "presentation_ids": [
           0,
@@ -402,6 +177,7 @@
     {
       "modelConfig": {
         "similarityType": "keywords",
+        "similarityMethod": "tf-idf",
         "outliningApproach": "dp_mask",
         "applyThresholding": true,
         "applyHeuristics": true
@@ -409,43 +185,43 @@
       "result": {
         "boundariesAccuracy": [
           [
-            54.89,
-            58.6,
-            82.6,
-            64.52,
-            63.49
+            73.16,
+            72.76,
+            95.13,
+            31.66,
+            89.45
           ],
-          64.82
+          72.43
         ],
         "timeAccuracy": [
           [
-            9.92,
-            43.11,
-            15.3,
-            18.84,
-            20.63
+            21.39,
+            47.71,
+            27.86,
+            14.22,
+            22.71
           ],
-          21.56
+          26.78
         ],
         "structureAccuracy": [
           [
-            42.86,
-            50.0,
-            42.86,
+            72.73,
+            71.43,
+            54.55,
             60.0,
-            44.44
+            61.54
           ],
-          48.03
+          64.05
         ],
         "mappingAccuracy": [
           [
-            93.13,
+            93.37,
             95.43,
-            75.3,
+            74.25,
             85.64,
-            83.51
+            83.5
           ],
-          86.6
+          86.44
         ],
         "presentation_ids": [
           0,
@@ -458,7 +234,8 @@
     },
     {
       "modelConfig": {
-        "similarityType": "embeddings",
+        "similarityType": "classifier",
+        "similarityMethod": "tf-idf",
         "outliningApproach": "dp_mask",
         "applyThresholding": false,
         "applyHeuristics": false
@@ -466,43 +243,739 @@
       "result": {
         "boundariesAccuracy": [
           [
-            39.34,
-            15.94,
-            47.81,
-            32.5,
-            59.76
+            82.75,
+            68.61,
+            75.37,
+            39.4,
+            77.36
           ],
-          39.07
+          68.7
         ],
         "timeAccuracy": [
           [
-            0.85,
-            14.3,
-            2.4,
-            18.33,
-            0.0
+            24.71,
+            14.79,
+            3.93,
+            36.37,
+            9.64
           ],
-          7.18
+          17.89
         ],
         "structureAccuracy": [
           [
-            28.57,
-            12.5,
-            42.86,
+            60.0,
+            30.77,
             40.0,
-            22.22
+            75.0,
+            61.54
           ],
-          29.23
+          53.46
+        ],
+        "mappingAccuracy": [
+          [
+            99.18,
+            90.04,
+            86.23,
+            92.96,
+            95.68
+          ],
+          92.82
+        ],
+        "presentation_ids": [
+          0,
+          4,
+          6,
+          7,
+          9
+        ]
+      }
+    },
+    {
+      "modelConfig": {
+        "similarityType": "classifier",
+        "similarityMethod": "tf-idf",
+        "outliningApproach": "dp_mask",
+        "applyThresholding": false,
+        "applyHeuristics": true
+      },
+      "result": {
+        "boundariesAccuracy": [
+          [
+            82.75,
+            60.09,
+            91.96,
+            42.76,
+            76.31
+          ],
+          70.77
+        ],
+        "timeAccuracy": [
+          [
+            24.71,
+            19.83,
+            8.52,
+            17.86,
+            11.0
+          ],
+          16.38
+        ],
+        "structureAccuracy": [
+          [
+            60.0,
+            66.67,
+            60.0,
+            75.0,
+            61.54
+          ],
+          64.64
+        ],
+        "mappingAccuracy": [
+          [
+            98.5,
+            95.41,
+            96.19,
+            97.7,
+            95.99
+          ],
+          96.76
+        ],
+        "presentation_ids": [
+          0,
+          4,
+          6,
+          7,
+          9
+        ]
+      }
+    },
+    {
+      "modelConfig": {
+        "similarityType": "classifier",
+        "similarityMethod": "tf-idf",
+        "outliningApproach": "dp_mask",
+        "applyThresholding": true,
+        "applyHeuristics": false
+      },
+      "result": {
+        "boundariesAccuracy": [
+          [
+            83.32,
+            73.27,
+            75.37,
+            60.54,
+            77.0
+          ],
+          73.9
+        ],
+        "timeAccuracy": [
+          [
+            26.85,
+            46.4,
+            3.93,
+            18.95,
+            8.45
+          ],
+          20.92
+        ],
+        "structureAccuracy": [
+          [
+            60.0,
+            71.43,
+            40.0,
+            25.0,
+            61.54
+          ],
+          51.59
+        ],
+        "mappingAccuracy": [
+          [
+            97.4,
+            98.56,
+            87.63,
+            87.64,
+            95.51
+          ],
+          93.35
+        ],
+        "presentation_ids": [
+          0,
+          4,
+          6,
+          7,
+          9
+        ]
+      }
+    },
+    {
+      "modelConfig": {
+        "similarityType": "classifier",
+        "similarityMethod": "tf-idf",
+        "outliningApproach": "dp_mask",
+        "applyThresholding": true,
+        "applyHeuristics": true
+      },
+      "result": {
+        "boundariesAccuracy": [
+          [
+            83.32,
+            60.61,
+            92.31,
+            65.25,
+            76.31
+          ],
+          75.56
+        ],
+        "timeAccuracy": [
+          [
+            26.85,
+            13.34,
+            13.66,
+            14.09,
+            11.0
+          ],
+          15.79
+        ],
+        "structureAccuracy": [
+          [
+            60.0,
+            66.67,
+            60.0,
+            50.0,
+            61.54
+          ],
+          59.64
+        ],
+        "mappingAccuracy": [
+          [
+            99.09,
+            95.72,
+            96.64,
+            98.5,
+            95.25
+          ],
+          97.04
+        ],
+        "presentation_ids": [
+          0,
+          4,
+          6,
+          7,
+          9
+        ]
+      }
+    },
+    {
+      "modelConfig": {
+        "similarityType": "classifier",
+        "similarityMethod": "embedding",
+        "outliningApproach": "dp_mask",
+        "applyThresholding": false,
+        "applyHeuristics": false
+      },
+      "result": {
+        "boundariesAccuracy": [
+          [
+            83.89,
+            34.96,
+            94.34,
+            37.79,
+            63.02
+          ],
+          62.8
+        ],
+        "timeAccuracy": [
+          [
+            40.71,
+            19.8,
+            24.55,
+            8.87,
+            20.65
+          ],
+          22.92
+        ],
+        "structureAccuracy": [
+          [
+            72.73,
+            66.67,
+            54.55,
+            50.0,
+            61.54
+          ],
+          61.1
+        ],
+        "mappingAccuracy": [
+          [
+            99.67,
+            94.37,
+            98.48,
+            90.8,
+            98.01
+          ],
+          96.27
+        ],
+        "presentation_ids": [
+          0,
+          4,
+          6,
+          7,
+          9
+        ]
+      }
+    },
+    {
+      "modelConfig": {
+        "similarityType": "classifier",
+        "similarityMethod": "embedding",
+        "outliningApproach": "dp_mask",
+        "applyThresholding": false,
+        "applyHeuristics": true
+      },
+      "result": {
+        "boundariesAccuracy": [
+          [
+            83.78,
+            42.37,
+            92.31,
+            69.05,
+            64.49
+          ],
+          70.4
+        ],
+        "timeAccuracy": [
+          [
+            24.66,
+            10.85,
+            13.66,
+            5.63,
+            33.38
+          ],
+          17.64
+        ],
+        "structureAccuracy": [
+          [
+            60.0,
+            54.55,
+            60.0,
+            75.0,
+            61.54
+          ],
+          62.22
+        ],
+        "mappingAccuracy": [
+          [
+            99.53,
+            91.21,
+            93.94,
+            93.49,
+            97.18
+          ],
+          95.07
+        ],
+        "presentation_ids": [
+          0,
+          4,
+          6,
+          7,
+          9
+        ]
+      }
+    },
+    {
+      "modelConfig": {
+        "similarityType": "classifier",
+        "similarityMethod": "embedding",
+        "outliningApproach": "dp_mask",
+        "applyThresholding": true,
+        "applyHeuristics": false
+      },
+      "result": {
+        "boundariesAccuracy": [
+          [
+            73.16,
+            54.57,
+            93.33,
+            75.0,
+            63.02
+          ],
+          71.82
+        ],
+        "timeAccuracy": [
+          [
+            26.85,
+            17.52,
+            13.66,
+            34.83,
+            20.95
+          ],
+          22.76
+        ],
+        "structureAccuracy": [
+          [
+            54.55,
+            50.0,
+            54.55,
+            50.0,
+            61.54
+          ],
+          54.13
+        ],
+        "mappingAccuracy": [
+          [
+            99.79,
+            91.96,
+            98.91,
+            95.28,
+            95.25
+          ],
+          96.24
+        ],
+        "presentation_ids": [
+          0,
+          4,
+          6,
+          7,
+          9
+        ]
+      }
+    },
+    {
+      "modelConfig": {
+        "similarityType": "classifier",
+        "similarityMethod": "embedding",
+        "outliningApproach": "dp_mask",
+        "applyThresholding": true,
+        "applyHeuristics": true
+      },
+      "result": {
+        "boundariesAccuracy": [
+          [
+            92.3,
+            42.64,
+            92.31,
+            58.91,
+            88.82
+          ],
+          75.0
+        ],
+        "timeAccuracy": [
+          [
+            47.46,
+            5.43,
+            13.66,
+            12.3,
+            25.35
+          ],
+          20.84
+        ],
+        "structureAccuracy": [
+          [
+            72.73,
+            54.55,
+            60.0,
+            75.0,
+            61.54
+          ],
+          64.76
+        ],
+        "mappingAccuracy": [
+          [
+            100.0,
+            94.44,
+            97.1,
+            92.92,
+            96.63
+          ],
+          96.22
+        ],
+        "presentation_ids": [
+          0,
+          4,
+          6,
+          7,
+          9
+        ]
+      }
+    },
+    {
+      "modelConfig": {
+        "similarityType": "cosine",
+        "similarityMethod": "tf-idf",
+        "outliningApproach": "dp_mask",
+        "applyThresholding": false,
+        "applyHeuristics": false
+      },
+      "result": {
+        "boundariesAccuracy": [
+          [
+            92.78,
+            69.14,
+            75.28,
+            78.95,
+            55.89
+          ],
+          74.41
+        ],
+        "timeAccuracy": [
+          [
+            55.0,
+            51.84,
+            22.04,
+            16.23,
+            26.17
+          ],
+          34.26
+        ],
+        "structureAccuracy": [
+          [
+            83.33,
+            66.67,
+            40.0,
+            60.0,
+            62.5
+          ],
+          62.5
+        ],
+        "mappingAccuracy": [
+          [
+            95.39,
+            95.92,
+            78.0,
+            93.45,
+            80.51
+          ],
+          88.65
+        ],
+        "presentation_ids": [
+          0,
+          4,
+          6,
+          7,
+          9
+        ]
+      }
+    },
+    {
+      "modelConfig": {
+        "similarityType": "cosine",
+        "similarityMethod": "tf-idf",
+        "outliningApproach": "dp_mask",
+        "applyThresholding": false,
+        "applyHeuristics": true
+      },
+      "result": {
+        "boundariesAccuracy": [
+          [
+            93.27,
+            73.5,
+            71.93,
+            52.57,
+            68.24
+          ],
+          71.9
+        ],
+        "timeAccuracy": [
+          [
+            63.11,
+            43.93,
+            28.69,
+            35.53,
+            14.89
+          ],
+          37.23
+        ],
+        "structureAccuracy": [
+          [
+            83.33,
+            85.71,
+            60.0,
+            60.0,
+            71.43
+          ],
+          72.09
+        ],
+        "mappingAccuracy": [
+          [
+            95.39,
+            96.82,
+            75.56,
+            90.64,
+            80.33
+          ],
+          87.75
+        ],
+        "presentation_ids": [
+          0,
+          4,
+          6,
+          7,
+          9
+        ]
+      }
+    },
+    {
+      "modelConfig": {
+        "similarityType": "cosine",
+        "similarityMethod": "tf-idf",
+        "outliningApproach": "dp_mask",
+        "applyThresholding": true,
+        "applyHeuristics": false
+      },
+      "result": {
+        "boundariesAccuracy": [
+          [
+            60.28,
+            42.49,
+            56.83,
+            64.34,
+            35.44
+          ],
+          51.88
+        ],
+        "timeAccuracy": [
+          [
+            14.26,
+            1.36,
+            2.4,
+            19.18,
+            15.02
+          ],
+          10.44
+        ],
+        "structureAccuracy": [
+          [
+            60.0,
+            36.36,
+            40.0,
+            50.0,
+            50.0
+          ],
+          47.27
+        ],
+        "mappingAccuracy": [
+          [
+            96.97,
+            100.0,
+            43.52,
+            100.0,
+            30.59
+          ],
+          74.22
+        ],
+        "presentation_ids": [
+          0,
+          4,
+          6,
+          7,
+          9
+        ]
+      }
+    },
+    {
+      "modelConfig": {
+        "similarityType": "cosine",
+        "similarityMethod": "tf-idf",
+        "outliningApproach": "dp_mask",
+        "applyThresholding": true,
+        "applyHeuristics": true
+      },
+      "result": {
+        "boundariesAccuracy": [
+          [
+            76.4,
+            57.63,
+            78.61,
+            69.05,
+            62.63
+          ],
+          68.86
+        ],
+        "timeAccuracy": [
+          [
+            23.74,
+            11.97,
+            12.02,
+            0.81,
+            0.0
+          ],
+          9.71
+        ],
+        "structureAccuracy": [
+          [
+            60.0,
+            54.55,
+            40.0,
+            50.0,
+            33.33
+          ],
+          47.58
+        ],
+        "mappingAccuracy": [
+          [
+            96.97,
+            100.0,
+            43.52,
+            100.0,
+            30.59
+          ],
+          74.22
+        ],
+        "presentation_ids": [
+          0,
+          4,
+          6,
+          7,
+          9
+        ]
+      }
+    },
+    {
+      "modelConfig": {
+        "similarityType": "cosine",
+        "similarityMethod": "embedding",
+        "outliningApproach": "dp_mask",
+        "applyThresholding": false,
+        "applyHeuristics": false
+      },
+      "result": {
+        "boundariesAccuracy": [
+          [
+            58.71,
+            42.49,
+            75.28,
+            37.79,
+            70.73
+          ],
+          57.0
+        ],
+        "timeAccuracy": [
+          [
+            12.32,
+            3.67,
+            22.04,
+            27.07,
+            4.28
+          ],
+          13.88
+        ],
+        "structureAccuracy": [
+          [
+            60.0,
+            36.36,
+            40.0,
+            50.0,
+            33.33
+          ],
+          43.94
         ],
         "mappingAccuracy": [
           [
             99.05,
             96.08,
-            81.5,
-            95.0,
+            80.25,
+            95.26,
             99.05
           ],
-          94.14
+          93.94
         ],
         "presentation_ids": [
           0,
@@ -515,7 +988,8 @@
     },
     {
       "modelConfig": {
-        "similarityType": "embeddings",
+        "similarityType": "cosine",
+        "similarityMethod": "embedding",
         "outliningApproach": "dp_mask",
         "applyThresholding": false,
         "applyHeuristics": true
@@ -523,43 +997,43 @@
       "result": {
         "boundariesAccuracy": [
           [
-            41.45,
-            29.12,
-            58.75,
-            50.79,
-            59.76
+            60.36,
+            39.13,
+            71.06,
+            67.22,
+            70.73
           ],
-          47.97
+          61.7
         ],
         "timeAccuracy": [
           [
-            2.75,
-            12.01,
-            7.0,
+            14.22,
+            6.32,
+            23.56,
             0.0,
-            0.0
+            4.28
           ],
-          4.35
+          9.68
         ],
         "structureAccuracy": [
           [
-            28.57,
-            12.5,
-            42.86,
-            40.0,
-            22.22
+            60.0,
+            18.18,
+            60.0,
+            50.0,
+            33.33
           ],
-          29.23
+          44.3
         ],
         "mappingAccuracy": [
           [
             99.05,
-            90.47,
-            81.07,
+            85.21,
+            79.91,
             96.79,
             99.05
           ],
-          93.29
+          92.0
         ],
         "presentation_ids": [
           0,
@@ -572,7 +1046,8 @@
     },
     {
       "modelConfig": {
-        "similarityType": "embeddings",
+        "similarityType": "cosine",
+        "similarityMethod": "embedding",
         "outliningApproach": "dp_mask",
         "applyThresholding": true,
         "applyHeuristics": false
@@ -580,43 +1055,43 @@
       "result": {
         "boundariesAccuracy": [
           [
-            81.47,
-            56.72,
-            84.69,
-            51.94,
-            52.78
+            70.29,
+            65.99,
+            95.33,
+            56.78,
+            52.71
           ],
-          65.52
+          68.22
         ],
         "timeAccuracy": [
           [
             40.62,
-            28.44,
-            10.76,
-            21.77,
+            33.86,
+            10.16,
+            23.96,
             19.97
           ],
-          24.31
+          25.71
         ],
         "structureAccuracy": [
           [
-            57.14,
-            62.5,
-            42.86,
-            60.0,
-            44.44
+            71.43,
+            66.67,
+            50.0,
+            66.67,
+            50.0
           ],
-          53.39
+          60.95
         ],
         "mappingAccuracy": [
           [
             96.07,
             92.42,
-            86.07,
+            85.82,
             85.4,
             75.28
           ],
-          87.05
+          87.0
         ],
         "presentation_ids": [
           0,
@@ -629,7 +1104,8 @@
     },
     {
       "modelConfig": {
-        "similarityType": "embeddings",
+        "similarityType": "cosine",
+        "similarityMethod": "embedding",
         "outliningApproach": "dp_mask",
         "applyThresholding": true,
         "applyHeuristics": true
@@ -637,43 +1113,43 @@
       "result": {
         "boundariesAccuracy": [
           [
-            70.36,
-            59.34,
-            82.6,
-            51.94,
-            64.4
+            83.14,
+            73.24,
+            91.26,
+            56.78,
+            80.49
           ],
-          65.73
+          76.98
         ],
         "timeAccuracy": [
           [
             27.74,
-            29.14,
-            15.3,
-            21.77,
-            13.05
+            34.56,
+            19.89,
+            23.96,
+            22.2
           ],
-          21.4
+          25.67
         ],
         "structureAccuracy": [
           [
-            57.14,
-            50.0,
-            42.86,
+            66.67,
+            71.43,
             60.0,
-            44.44
+            50.0,
+            71.43
           ],
-          50.89
+          63.91
         ],
         "mappingAccuracy": [
           [
-            96.07,
+            93.87,
             92.24,
-            84.91,
+            84.51,
             85.4,
             85.39
           ],
-          88.8
+          88.28
         ],
         "presentation_ids": [
           0,

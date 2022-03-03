@@ -1,5 +1,6 @@
 SKIPPED_TITLES = ['title', 'end', "no_section"]
 GROUND_TRUTH_EXISTS = [0, 4, 6, 7, 9]
+ACC_BOUNDARY_RANGE = 1
 
 def process_title(title):
     return title.lower().strip()
@@ -7,50 +8,86 @@ def process_title(title):
 def are_same_section_titles(title, gt_title):
     return title.startswith(gt_title) or gt_title.startswith(title)
 
+def f1_score(precision, recall):
+    return 2 * (precision * recall) / (precision + recall)
+
+def __calculate_boundary_coverage(a_boundaries, b_boundaries, total_cnt):
+    coverage = 0
+    a_boundaries.append(total_cnt + 1)    
+    boundary_idx = 0
+    for b_boundary in b_boundaries:
+        #print("Searching for: ", gt_boundary)
+        while a_boundaries[boundary_idx] <= b_boundary and boundary_idx < len(a_boundaries):
+            boundary_idx += 1
+        
+        #print("\tRight: ", boundaries[boundary_idx])    
+        cur_error = a_boundaries[boundary_idx] - b_boundary - 1
+        if boundary_idx > 0:
+            #print("\tLeft: ", boundaries[boundary_idx - 1])
+            cur_error = min(cur_error, b_boundary - a_boundaries[boundary_idx - 1])
+        cur_total = min(b_boundary, total_cnt - b_boundary)
+        coverage += (cur_total - cur_error) / cur_total
+        #print("\t\tCurrent Error & Total: ", cur_error, cur_total)
+
+    if len(b_boundaries) > 0:
+        coverage /= len(b_boundaries)
+    else:
+        coverage = 1
+
+    a_boundaries.pop()
+    return coverage
+
 def _evaluate_boundaries(outline, gt_outline):
     '''
         User might as well linearly navigate through video,
     and can only start scanning from segmentation boundaries
     either backwards or forward
     '''
-
-    boundaries = [0]
-    gt_boundaries = []
-
-    for section in outline:
-        boundaries.append(section["startSlideIndex"])
-
     total_slides_cnt = 0
     for section in gt_outline:
-        gt_boundaries.append(section["startSlideIndex"])
         total_slides_cnt = max(total_slides_cnt, section["endSlideIndex"])
 
-    boundaries.append(total_slides_cnt + 1)
 
-    #print(boundaries)
-    #print(gt_boundaries)
+    boundaries = []
+    for section in outline:
+        title = section["sectionTitle"]
+        title = process_title(title)
 
-    error = 0
-    total_score = len(gt_boundaries)
+        if title in SKIPPED_TITLES:
+            continue
+
+        if section["startSlideIndex"] < total_slides_cnt:
+            boundaries.append(section["startSlideIndex"])
+
+    gt_boundaries = []
+    for section in gt_outline:
+        title = section["sectionTitle"]
+        title = process_title(title)
+
+        if title in SKIPPED_TITLES:
+            continue
+
+        if section["startSlideIndex"] < total_slides_cnt:
+            gt_boundaries.append(section["startSlideIndex"])
+
+    accurate_boundaries_cnt = 0
+    gt_boundary_idx = 0
+    for boundary in boundaries:
+        while gt_boundary_idx < len(gt_boundaries) \
+            and boundary - gt_boundaries[gt_boundary_idx] > ACC_BOUNDARY_RANGE:
+            gt_boundary_idx += 1
+        if gt_boundary_idx == len(gt_boundaries):
+            break
     
-    boundary_idx = 0
-    for gt_boundary in gt_boundaries:
-        #print("Searching for: ", gt_boundary)
-        while boundaries[boundary_idx] < gt_boundary and boundary_idx < len(boundaries):
-            boundary_idx += 1
-        
-        #print("\tRight: ", boundaries[boundary_idx])    
-        cur_error = abs(boundaries[boundary_idx] - gt_boundary)
-        if boundary_idx > 0:
-            #print("\tLeft: ", boundaries[boundary_idx - 1])
-            cur_error = min(cur_error, abs(boundaries[boundary_idx - 1] - gt_boundary))
-        cur_total = max(1, min(gt_boundary, total_slides_cnt - gt_boundary))
-        error += cur_error / cur_total
-        #print("\t\tCurrent Error & Total: ", cur_error, cur_total)
+        if abs(boundary - gt_boundaries[gt_boundary_idx]) <= ACC_BOUNDARY_RANGE:
+            accurate_boundaries_cnt += 1
+            gt_boundary_idx += 1
 
-    if total_score == 0:
-        return 50
-    return round(((total_score - error) * 100) / total_score, 2)
+
+    precision = accurate_boundaries_cnt / max(1, len(boundaries))
+    recall = __calculate_boundary_coverage(boundaries, gt_boundaries, total_slides_cnt)
+
+    return round(f1_score(precision, recall) * 100, 2)
 
 def _evaluate_time(outline, gt_outline, slide_info):
     '''
@@ -62,6 +99,9 @@ def _evaluate_time(outline, gt_outline, slide_info):
     for section in outline:
         title = section["sectionTitle"]
         title = process_title(title)
+
+        if title in SKIPPED_TITLES:
+            continue
 
         start_slide = slide_info[section["startSlideIndex"]]
         end_slide = slide_info[section["endSlideIndex"]]
@@ -115,6 +155,9 @@ def _evaluate_structure(outline, gt_outline, slide_info):
         title = section["sectionTitle"]
         title = process_title(title)
 
+        if title in SKIPPED_TITLES:
+            continue
+
         if title not in section_ids:
             section_ids[title] = section_cnt
             section_cnt += 1
@@ -142,7 +185,7 @@ def _evaluate_structure(outline, gt_outline, slide_info):
 
     score = 0
 
-    if m > 0:
+    if m > 0 and n > 0:
         # for (k, v) in section_ids.items():
         #     print("\t", k, " - ", v)
         
@@ -150,12 +193,13 @@ def _evaluate_structure(outline, gt_outline, slide_info):
         # print(gt_section_ids)
 
         dp = [[-m for j in range(m)] for i in range(n)]
-        for i in range(n):
-            dp[i][0] = 0
+        dp[0][0] = int(gen_section_ids[0] == gt_section_ids[0])
+        for i in range(1, n):
+            dp[i][0] = dp[i-1][0]
             if gen_section_ids[i] == gt_section_ids[0]:
                 dp[i][0] = 1
-        for j in range(m):
-            dp[0][j] = 0
+        for j in range(1, m):
+            dp[0][j] = dp[0][j-1]
             if gen_section_ids[0] == gt_section_ids[j]:
                 dp[0][j] = 1
 
@@ -172,9 +216,10 @@ def _evaluate_structure(outline, gt_outline, slide_info):
 
         score = dp[n-1][m-1]
 
-    if m == 0:
-        return 50
-    return round((score / m) * 100, 2)
+    precision = score / max(1, n)
+    recall = score / max(1, m)
+
+    return round(f1_score(precision, recall) * 100, 2)
 
 def _evaluate_mapping(outline, gt_outline, top_sections):
     '''

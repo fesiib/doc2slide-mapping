@@ -24,6 +24,8 @@ def presentation_data():
     request_json = json.loads(decoded)
     presentation_id = request_json["presentationId"]
 
+    print(request_json)
+
     data = None
 
     parent_path = os.path.join(SLIDE_DATA_PATH, str(presentation_id))    
@@ -55,6 +57,7 @@ def process_presentation():
     request_json = json.loads(decoded)
     presentation_id = request_json["presentationId"]
     similarity_type = request_json["similarityType"]
+    similarity_method = request_json["similarityMethod"]
     outlining_approach = request_json["outliningApproach"]
     apply_thresholding = request_json["applyThresholding"]
     apply_heuristics = request_json["applyHeuristics"]
@@ -75,7 +78,7 @@ def process_presentation():
         "paper": read_txt(paper_path),
         "script": read_txt(script_path),
         "sections": read_txt(section_path),
-        "data": process(parent_path, presentation_id, similarity_type, outlining_approach, apply_thresholding, apply_heuristics),
+        "data": process(parent_path, presentation_id, similarity_type, similarity_method, outlining_approach, apply_thresholding, apply_heuristics),
         "presentationId": presentation_id,
     })
 
@@ -90,9 +93,7 @@ def evaluation_results():
     })
 
 @app.route("/images/<presentation_id>/<filename>", methods=["GET"])
-def get_cropped_image(presentation_id, filename):
-    print(presentation_id, filename)
-
+def get_image(presentation_id, filename):
     image_path = os.path.join(SLIDE_DATA_PATH, str(presentation_id), "images", filename)
     return send_file(image_path, mimetype='image/jpg')
 

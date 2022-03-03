@@ -100,7 +100,7 @@ def get_outline_dp_mask(section_data, apply_heuristics, slide_info, top_sections
     INF = (m + 1) * 100
 
     dp = [[(-INF, n, -1) for j in range(m)] for i in range(1 << n)]
-    dp[0][0] = (0, n)
+    dp[0][1] = (0, n)
 
     for i in range(m):
         scores = [0 for k in range(n)]
@@ -137,9 +137,12 @@ def get_outline_dp_mask(section_data, apply_heuristics, slide_info, top_sections
                         if (dp[nmask][j][0] < dp[mask][i][0] + scores[k]):
                             dp[nmask][j] = (dp[mask][i][0] + scores[k], k, i)
 
+    # Slide #1 -> title
+    # Slide #last -> end
+
 
     recover_mask = 0
-    recover_slide_id = m - 1
+    recover_slide_id = m-2
 
     weights = [-1 for i in range(n + 1)]
 
@@ -157,8 +160,12 @@ def get_outline_dp_mask(section_data, apply_heuristics, slide_info, top_sections
         recover_mask = target_mask
         print(bin(target_mask), bin(recover_mask), dp[target_mask][recover_slide_id][0])
     
-    outline = []
-    while recover_slide_id > 0:
+    outline = [{
+        "sectionTitle": "end",
+        "startSlideIndex": m-1,
+        "endSlideIndex": m-1,
+    }]
+    while recover_mask > 0:
         print(recover_mask, recover_slide_id, dp[recover_mask][recover_slide_id])
         section_id = dp[recover_mask][recover_slide_id][1]
         next_recover_mask = recover_mask ^ (1 << section_id)
@@ -171,6 +178,12 @@ def get_outline_dp_mask(section_data, apply_heuristics, slide_info, top_sections
         recover_mask = next_recover_mask
         recover_slide_id = next_recover_slide_id
     
+    outline.append({
+        "sectionTitle": "title",
+        "startSlideIndex": 1,
+        "endSlideIndex": 1,
+    })
+
     return outline[::-1], weights
 
 def get_outline_simple(top_sections):

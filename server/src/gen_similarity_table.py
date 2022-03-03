@@ -14,12 +14,12 @@ from string import ascii_lowercase, punctuation, digits
 
 
 class Vectorizer(object):
-    def __init__(self, method='tf-idf'):
+    def __init__(self, method='tf-idf', ngram_range=(1, 4)):
         self.method = method
         self.vectorizer = None
 
         if method == 'tf-idf':
-            self.vectorizer = TfidfVectorizer(ngram_range=(1, 4))
+            self.vectorizer = TfidfVectorizer(ngram_range=ngram_range)
         elif method == 'embedding':
             self.vectorizer = SentenceTransformer('all-MiniLM-L6-v2')
     
@@ -34,6 +34,12 @@ class Vectorizer(object):
         elif self.method == 'embedding':
             return self.vectorizer.encode(data)
         return None
+    
+    def get_feature_names(self):
+        if self.method == 'tf-idf':
+            return self.vectorizer.get_feature_names_out().tolist()
+        else:
+            return []
 
 
 def make_lemma(token):
@@ -118,7 +124,7 @@ def get_top_sections(overall, section_data, script_sentence_range, paper_sentenc
         top_sections.append(sections)
     return top_sections
 
-def get_similarity_classifier(paper_data, script_data, section_data, paper_sentence_id, script_sentence_range, apply_thresholding):
+def get_classifier_similarity(method, paper_data, script_data, section_data, paper_sentence_id, script_sentence_range, apply_thresholding):
     top_k = 5
     val_threshold = 0.1
 
@@ -127,7 +133,7 @@ def get_similarity_classifier(paper_data, script_data, section_data, paper_sente
 
     model = RandomForestClassifier()
     
-    vectorizer = Vectorizer(method = 'tf-idf')
+    vectorizer = Vectorizer(method)
     X = vectorizer.fit_transform(list(map(preprocess_text, paper_data)))
     print(X.shape)
 
@@ -136,7 +142,9 @@ def get_similarity_classifier(paper_data, script_data, section_data, paper_sente
 
     model.fit(X, Y)
 
-    def get_all_probs(t) :
+    def get_all_probs(t):
+        if t == "":
+            return [0.0 for i in range(len(label_dict))]
         pre = ' '.join(map(preprocess_text, get_sentences(t)))
         X2 = vectorizer.transform([pre])
         return model.predict_proba(X2)[0]
@@ -177,10 +185,10 @@ def get_similarity_classifier(paper_data, script_data, section_data, paper_sente
 
     return overall, top_sections, paper_data_by_section
 
-def get_similarity_embeddings(paper_data, script_data, section_data, paper_sentence_id, script_sentence_range, apply_thresholding):
-    vectorizer = Vectorizer(method='embedding')
+def get_cosine_similarity(method, paper_data, script_data, section_data, paper_sentence_id, script_sentence_range, apply_thresholding):
+    vectorizer = Vectorizer(method=method)
 
-    paper_embeddings = vectorizer.transform(paper_data)
+    paper_embeddings = vectorizer.fit_transform(paper_data)
     script_embeddings = vectorizer.transform(script_data)
 
     top_k = 10
@@ -205,9 +213,9 @@ def get_similarity_embeddings(paper_data, script_data, section_data, paper_sente
     return overall, top_sections
 
 
-def get_similarity_keywords(paper_data, script_data, section_data, paper_sentence_id, script_sentence_range, apply_thresholding):
+def get_keywords_similarity(method, paper_data, script_data, section_data, paper_sentence_id, script_sentence_range, apply_thresholding):
     nlp = spacy.load("en_core_web_sm")
-    vectorizer = TfidfVectorizer(ngram_range=(1, 1), min_df=0, max_df=1.0)
+    vectorizer = Vectorizer(method, (1, 1))
 
     overall = numpy.zeros((len(paper_data), len(script_data)))
 
@@ -224,7 +232,7 @@ def get_similarity_keywords(paper_data, script_data, section_data, paper_sentenc
         script_keywords.append(get_keywords(script_sentence, nlp))
 
     LOL = vectorizer.fit_transform(map(' '.join, paper_keywords))
-    vectorizer_features = vectorizer.get_feature_names_out().tolist()
+    vectorizer_features = vectorizer.get_feature_names()
 
     print(LOL.shape, vectorizer_features)
 
@@ -270,8 +278,6 @@ def get_similarity_keywords(paper_data, script_data, section_data, paper_sentenc
         for i in range(len(overall)):
             for j in range(len(overall[i])):
                 overall[i][j] = max(overall[i][j], overall_t[i][j])
-
-    
 
     top_sections = get_top_sections(overall, section_data, script_sentence_range, paper_sentence_id, apply_thresholding, top_k)
     
