@@ -6,19 +6,25 @@ import { resetApp } from "../reducers";
 import { setStep } from "../reducers/annotationState";
 
 import SlideThumbnails from "../components/SlideThumbnails";
+import AnnotationTable from "../components/AnnotationTable";
+import GenericButton from "../components/GenericButton";
 
 const INTRO = 0;
 const WARM_UP = 1;
 const TASK_1 = 2;
 const TASK_2 = 3;
 const TASK_3 = 4;
-const SUBMITED = 5;
+const SUBMITTED = 5;
 
 function WarmUp(props) {
     const presentationId = props?.presentationId;
     const data = props?.data;
     return (<div>
-        <SlideThumbnails presentationId={presentationId} slideInfo={data?.slideInfo}/>
+        <AnnotationTable
+            presentationId={presentationId}
+            slideInfo={data?.slideInfo}
+            enableBoundaries={false}
+        />
     </div>);
 }
 
@@ -35,7 +41,7 @@ function Introduction(props) {
                 return "Currently in " + "Task 2";
             case TASK_3:
                 return "Currently in " + "Task 3";
-            case SUBMITED:
+            case SUBMITTED:
                 return "Your work is recorded! Thank You for Participation!"
             default:
                 return null;
@@ -125,31 +131,49 @@ function Annotation(props) {
         switch(step) {
             case INTRO:
                 return (<div>
-                    <button onClick={() => _setStep(WARM_UP)}> Start Warm-up! </button>
+                    <GenericButton
+                        title={"Start Warm-up!"}
+                        onClick={() => _setStep(WARM_UP)}
+                    />
                 </div>);
             
             case WARM_UP:
                 return (<div>
                     <WarmUp presentationId={presentationId}  data={data}/>
 
-                    <button onClick={() => _setStep(TASK_1)}> Start Task 1 </button>
+                    <GenericButton
+                        title={"Start Task 1"}
+                        onClick={() => _setStep(TASK_1)}
+                    />
                 </div>);
             
             case TASK_1:
                 return (<div>
-                    <button onClick={() => _setStep(TASK_2)}> Start Task 2 </button>
+                    <GenericButton
+                        title={"Start Task 2"}
+                        onClick={() => _setStep(TASK_2)}
+                    />
                 </div>);
             case TASK_2:
                 return (<div>
-                    <button onClick={() => _setStep(TASK_3)}> Start Task 3 </button>
+                    <GenericButton
+                        title={"Start Task 3"}
+                        onClick={() => _setStep(TASK_3)}
+                    />
                 </div>);
             case TASK_3:
                 return (<div>
-                    <button onClick={() => _setStep(SUBMITED)}> Submit </button>
+                    <GenericButton
+                        title={"Finish & Submit"}
+                        onClick={() => _setStep(SUBMITTED)}
+                    />
                 </div>);
             default:
                 return <div>
-                    <button onClick={() => dispatch(resetApp())}> Restart </button>
+                    <GenericButton
+                        title={"Restart"}
+                        onClick={() => dispatch(resetApp())}
+                    />
                 </div>
         }
     }
