@@ -39,14 +39,6 @@ function App() {
 			/>
 		</div>);
 	}
-	else if (mode === 2) {
-		console.log(presentationId)
-		return ( <div className='App'>
-			<Annotation
-				presentationId={presentationId}
-			/>
-		</div>)
-	}
 	return (<div className='App'>
 		<Evaluation/>
 	</div>)

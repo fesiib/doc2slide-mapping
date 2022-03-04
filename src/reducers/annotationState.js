@@ -1,12 +1,18 @@
 import { v4 } from "uuid";
 
 const SET_STEP = "SET_STEP";
+const SET_PRESENTATION_ID = "SET_PRESENTATION_ID";
 const SUBMIT = "SUBMIT";
 
 const ADD_BOUNDARY = "ADD_BOUNDARY";
 const REMOVE_BOUNDARY = "REMOVE_BOUNDARY";
 
 const SET_LABEL = "SET_LABEL";
+
+export const setPresentationid = (payload) => ({
+    type: SET_PRESENTATION_ID,
+    payload
+});
 
 export const setStep = (payload) => ({
     type: SET_STEP,
@@ -34,6 +40,8 @@ function randomId() {
 }
 
 const initialState = {
+    presentationData: null,
+    presentationId: -1,
     submissionId: randomId(),
     step: 0,
     labels: {
@@ -50,6 +58,15 @@ const annotationState = (
         submissionId: randomId(),
     }, action) => {
     switch (action.type) {
+        case SET_PRESENTATION_ID: {
+            const presentationId = action.payload.presentationId;
+            const presentationData = action.payload.presentationData;
+            return {
+                ...state,
+                presentationId,
+                presentationData,
+            }
+        }
         case SET_STEP: {
             const new_step = action.payload.step;
             return {

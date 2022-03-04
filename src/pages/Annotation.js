@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import '../App.css';
 
 import { useDispatch, useSelector } from "react-redux";
 import { resetApp } from "../reducers";
-import { addBoundary, NO_LABEL, setLabel, setStep } from "../reducers/annotationState";
+import { addBoundary, NO_LABEL, setLabel, setPresentationid, setStep } from "../reducers/annotationState";
 
 import AnnotationTable from "../components/AnnotationTable";
 import GenericButton from "../components/GenericButton";
@@ -16,6 +17,8 @@ const TASK_1 = 2;
 const TASK_2 = 3;
 const TASK_3 = 44;
 const SUBMITTED = 4;
+
+const GOOGLE_FORM_LINK = "https://docs.google.com/forms/d/e/1FAIpQLSfMRNceok4P5pLvu9ofROTUcFr_AKYPBzv6lKu8CX3qBP3B9g/viewform?usp=sf_link"
 
 function WarmUp(props) {
     const presentationId = props?.presentationId;
@@ -142,7 +145,7 @@ function Task2(props) {
     return (<div>
         {
             subStep === totalNumSteps ?
-            <h4> Summary: You annotated {totalNumSteps} segments </h4>
+            <h4> Summary: You labeled {totalNumSteps} segments. </h4>
             :
             <h4> Segment {subStep + 1}: ({startIdx} - {endIdx}) </h4>
         }
@@ -256,7 +259,7 @@ function Summary(props) {
     }
 
     return (<div>
-        <h4> Summary: You annotated {totalNumSteps} segments </h4>
+        <h4> Summary: You labeled {totalNumSteps} segments </h4>
         <div>
             <Outline
                 isGenerated={false}
@@ -275,8 +278,19 @@ function Summary(props) {
     </div>);
 }
 
-function Introduction(props) {
+function Instructions(props) {
+    const presentationId = props?.presentationId;
+    const presentationData = props?.presentationData;
     const step = props?.step;
+
+    const { submissionId } = useSelector(state => state.annotationState);
+
+    let presentationVideo = null;
+    for (let key in presentationData) {
+        if (presentationData[key].includes("youtube")) {
+            presentationVideo = presentationData[key];
+        }
+    }
 
     const stepTitle = (step) => {
         switch (step) {
@@ -289,26 +303,14 @@ function Introduction(props) {
             case TASK_3:
                 return "Currently in " + "Task 3";
             case SUBMITTED:
-                return "Your work is recorded! Thank You for Participation!"
+                return "Your work is recorded!"
             default:
                 return null;
         }
     }
 
-    return (<div>
-        <div style={{
-            "textAlign": "left",
-            "margin": "2em",
-            "padding": "1em",
-            "background": "lightgray"
-        }}>
-            <h3> Motivation: </h3>
-            <p>
-                Project Doc2Slide is constructing a corpus of outlines for conference presentations.
-                The aim is to evaluate our outline generation algorithm.
-            </p>
-        </div>
-        
+    return (<div>        
+        <h2> Presentation {presentationId} </h2>
         <div style={{
             "textAlign": "left",
             "margin": "2em",
@@ -318,27 +320,35 @@ function Introduction(props) {
             <h3> Instructions: </h3>
             <ol start={0}>
                 {step === WARM_UP ? 
-                    <li> <b>  {" -> "} Warm-up: </b> Scim through slides & scripts to general sense of the presentation</li>
+                    <li> <b>  {" -> "} Warm-up: </b> Skim through slides & scripts to get a general sense of the presentation</li>
                     :
                     <li> Warm-up: Skim through slides & scripts to general sense of the presentation</li>
                 }
                 <ul> 
-                    <li>
-                        You can watch the entire presentation video here:{" "}
-                        <a href={"https://www.youtube.com/watch?v=oFRiEZO_5Dk,N"}>Youtube ~15 mins </a>
-                        <i>(but just skimming slides & scripts should be faster)</i>
-                    </li>
+                    {
+                        presentationVideo ? 
+                        <li>
+                            You can watch the entire presentation video here:{" "}
+                            <a href={presentationVideo}>Youtube ~15 mins </a>
+                            <i>(but just skimming slides & scripts should be faster)</i>
+                        </li>
+                        :
+                        null
+                    }
                 </ul>
 
                 {step === TASK_1 ?
-                    <li> <b> {" -> "} Task: </b> Detect main section transitions in slides </li>
+                    <li> 
+                        <b> {" -> "} Task: </b>
+                        Detect main <a href={"section_transition_examples"}> section transitions </a> in slides
+                    </li>
                     :
-                    <li> Task: Detect main section transitions in slides </li>
+                    <li> Task: Detect main <a href={"section_transition_examples"}> section transitions </a>  in slides </li>
                 }
                 {step === TASK_2 ? 
-                    <li> <b> {" -> "} Task: </b> Label produced segments of slides with an appropriate label </li>
+                    <li> <b> {" -> "} Task: </b> Label produced segments of slides. Feel free to enter any label you find fitting.  </li>
                     :
-                    <li> Task: Label produced segments of slides with an appropriate label </li>
+                    <li> Task: Label produced segments of slides. Feel free to enter any label you find fitting. </li>
                 }
                 {/* {step === TASK_3 ?
                     <li> <b> {" -> "} Task: </b> Bonus </li>
@@ -351,31 +361,112 @@ function Introduction(props) {
             margin: "1em"
         }}>
             <h2> {stepTitle(step)} </h2>
+            {
+                step === SUBMITTED ?
+                <div>
+                    <span> Your Submission Id (copy-paste it to the form): </span>
+                    <h4> {submissionId} </h4>
+                    <h3> <a href={GOOGLE_FORM_LINK}> Please Fill out the Form </a> </h3>
+                </div>
+                : 
+                null
+            }
         </div>
+    </div>);
+}
+
+
+function Motivation(props) {
+    return (<div>
+        <div style={{
+            "textAlign": "left",
+            "margin": "2em",
+            "padding": "1em",
+            "background": "lightgray"
+        }}>
+            <h3> Motivation: </h3>
+            <p>
+                Project Doc2Slide (KIXLAB) is constructing a corpus of outlines for conference presentations.
+                The aim is to evaluate our outline generation algorithm.
+            </p>
+            <p>
+                If you have any questions please contact me through Slack DM or email to
+                <a href={"mailto:tlekbay.b@gmail.com"}> tlekbay.b@gmail.com </a>
+            </p>
+        </div>
+    </div>);
+}
+
+function PresentationGallery(props) {
+    const dispatch = useDispatch();
+
+    const summary = props?.summary;
+
+    if (!summary) {
+        return null;
+    }
+
+    const summaryData = summary?.summaryData;
+    const presentationsData = summary?.presentationData;
+
+    const validPresentationIds = summaryData?.valid_presentation_index;
+
+    const handleButtonClick = (presentationId, presentationData) => {
+        dispatch(setPresentationid({
+            presentationId,
+            presentationData,
+        }));
+        window.scrollTo(0, 0);
+        dispatch(setStep({ step: WARM_UP }));
+    }
+
+    return (<div>
+        {
+            validPresentationIds.map((presentationId) => {
+                const presentationData = presentationsData[presentationId];
+                return (<GenericButton
+                    key={"button" + presentationId.toString()}
+                    title={"Presentation " + presentationId.toString()}
+                    onClick={() => handleButtonClick(presentationId, presentationData)}
+                />);
+            })
+        }
     </div>);
 }
 
 function Annotation(props) {
     const dispatch = useDispatch();
     
-    const presentationId = props?.presentationId;
-    const { step, } = useSelector(state => state.annotationState);
+    const { step, presentationId, presentationData } = useSelector(state => state.annotationState);
 
     const [data, setData] = useState([]);
 
-    useEffect(() => {
-		axios.post('http://server.hyungyu.com:7777/mapping/presentation_data', {
-			presentationId: presentationId,
-		}).then( (response) => {
-			console.log(response);
-			setData(response.data.data);
-            dispatch(setLabel({
-                boundary: response.data.data.slideCnt - 1,
-                label: "end"
-            }));
-		});
+    const [summary, setSummary] = useState(null);
 
+    useEffect(() => {
+        if (step > INTRO) {
+            axios.post('http://server.hyungyu.com:7777/mapping/presentation_data', {
+                presentationId: presentationId,
+            }).then( (response) => {
+                console.log(response);
+                setData(response.data.data);
+                dispatch(setLabel({
+                    boundary: response.data.data.slideCnt - 1,
+                    label: "end"
+                }));
+            });
+        }
 	}, [presentationId]);
+
+    useEffect(() => {
+        if (step === INTRO) {
+            axios.post('http://localhost:7777/mapping/summary_data', {
+            }).then( (response) => {
+                console.log(response);
+                setSummary(response.data);
+            });
+        }
+    }, [step])
 
     const _setStep = (new_step) => {
         window.scrollTo(0, 0);
@@ -386,14 +477,18 @@ function Annotation(props) {
         switch(step) {
             case INTRO:
                 return (<div>
-                    <GenericButton
-                        title={"Start Warm-up!"}
-                        onClick={() => _setStep(WARM_UP)}
+                    <PresentationGallery
+                        summary={summary}
                     />
                 </div>);
             
             case WARM_UP:
                 return (<div>
+                    <Instructions
+                        presentationId={presentationId}
+                        presentationData={presentationData}
+                        step={step}
+                    />
                     <WarmUp presentationId={presentationId}  data={data}/>
 
                     <GenericButton
@@ -404,6 +499,11 @@ function Annotation(props) {
             
             case TASK_1:
                 return (<div>
+                    <Instructions
+                        presentationId={presentationId}
+                        presentationData={presentationData}
+                        step={step}
+                    />
                     <Task1 presentationId={presentationId}  data={data}/>
                     <GenericButton
                         title={"Start Task 2"}
@@ -412,25 +512,38 @@ function Annotation(props) {
                 </div>);
             case TASK_2:
                 return (<div>
+                    <Instructions
+                        presentationId={presentationId}
+                        presentationData={presentationData}
+                        step={step}
+                    />
                     <Task2 presentationId={presentationId}  data={data}/>
                 </div>);
             // case TASK_3:
             default:
                 return <div>
-                    <Summary presentationId={presentationId}  data={data}/>
-                    <GenericButton
-                        title={"Restart"}
-                        onClick={() => dispatch(resetApp())}
+                    <Instructions
+                        presentationId={presentationId}
+                        presentationData={presentationData}
+                        step={step}
                     />
+                    <Summary presentationId={presentationId}  data={data}/>
                 </div>
         }
     }
 
-    return (<div>
+    return (<div className="App">
         <h2> Ground Truth Construction for Presentation Outlines</h2>
-        <Introduction
-            step={step}
-        />
+        <div style={{
+            textAlign: "right",
+            marginRight: "1em"
+        }}>
+            <GenericButton
+                title={"Restart"}
+                onClick={() => dispatch(resetApp())}
+            />
+        </div>
+        <Motivation/>
         <div style={{
             display: "flex",
             justifyContent: "space-between",
@@ -447,7 +560,7 @@ function Annotation(props) {
                 <div> </div>
             }
             {
-                step < TASK_2 ? 
+                step < TASK_2 && step >= WARM_UP ? 
                 <GenericButton
                     title={"Next Task ->"}
                     onClick={() => _setStep(step + 1)}
