@@ -303,7 +303,10 @@ function Introduction(props) {
             "background": "lightgray"
         }}>
             <h3> Motivation: </h3>
-            <p> Project  </p>
+            <p>
+                Project Doc2Slide is constructing a corpus of outlines for conference presentations.
+                The aim is to evaluate our outline generation algorithm.
+            </p>
         </div>
         
         <div style={{
@@ -317,7 +320,7 @@ function Introduction(props) {
                 {step === WARM_UP ? 
                     <li> <b>  {" -> "} Warm-up: </b> Scim through slides & scripts to general sense of the presentation</li>
                     :
-                    <li> Warm-up: Scim through slides & scripts to general sense of the presentation</li>
+                    <li> Warm-up: Skim through slides & scripts to general sense of the presentation</li>
                 }
                 <ul> 
                     <li>
