@@ -460,7 +460,7 @@ function Annotation(props) {
 
     useEffect(() => {
         if (step === INTRO) {
-            axios.post('http://localhost:7777/mapping/summary_data', {
+            axios.post('http://server.hyungyu.com:7777/mapping/summary_data', {
             }).then( (response) => {
                 console.log(response);
                 setSummary(response.data);
