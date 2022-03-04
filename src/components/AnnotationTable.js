@@ -58,7 +58,6 @@ function AnnotationTable(props) {
     const { labels } = useSelector(state => state.annotationState);
 
     const transitionButtonClickHandler = (idx) => {
-        console.log(idx);
         if (labels.hasOwnProperty(idx)) {
             dispatch(removeBoundary( {boundary: idx} ));
         }

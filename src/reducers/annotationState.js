@@ -1,3 +1,5 @@
+import { v4 } from "uuid";
+
 const SET_STEP = "SET_STEP";
 const SUBMIT = "SUBMIT";
 
@@ -26,7 +28,13 @@ export const setLabel = (payload) => ({
     payload
 });
 
+function randomId() {
+    let strId = v4().toString();
+    return strId.replaceAll("-", "");
+}
+
 const initialState = {
+    submissionId: randomId(),
     step: 0,
     labels: {
         1: "Title",
@@ -36,7 +44,11 @@ const initialState = {
 export const NO_LABEL = "NO_LABEL";
 
 
-const annotationState = (state = initialState, action) => {
+const annotationState = (
+    state = {
+        ...initialState,
+        submissionId: randomId(),
+    }, action) => {
     switch (action.type) {
         case SET_STEP: {
             const new_step = action.payload.step;
@@ -47,7 +59,6 @@ const annotationState = (state = initialState, action) => {
         }
         case ADD_BOUNDARY: {
             const new_boundary = action.payload.boundary;
-            console.log(new_boundary);
             if (new_boundary < 2
                 || state.labels.hasOwnProperty(new_boundary)
             ) {
@@ -83,10 +94,6 @@ const annotationState = (state = initialState, action) => {
             const boundary = action.payload.boundary;
             const label = action.payload.label === "" ? NO_LABEL : action.payload.label;
 
-            if (!state.labels.hasOwnProperty(boundary)
-            ) {
-                return state;
-            }
             const new_labels = {
                 ...state.labels,
                 [boundary]: label,

@@ -3,7 +3,7 @@ import axios from "axios";
 
 import { useDispatch, useSelector } from "react-redux";
 import { resetApp } from "../reducers";
-import { NO_LABEL, setLabel, setStep } from "../reducers/annotationState";
+import { addBoundary, NO_LABEL, setLabel, setStep } from "../reducers/annotationState";
 
 import AnnotationTable from "../components/AnnotationTable";
 import GenericButton from "../components/GenericButton";
@@ -14,8 +14,8 @@ const INTRO = 0;
 const WARM_UP = 1;
 const TASK_1 = 2;
 const TASK_2 = 3;
-const TASK_3 = 4;
-const SUBMITTED = 5;
+const TASK_3 = 44;
+const SUBMITTED = 4;
 
 function WarmUp(props) {
     const presentationId = props?.presentationId;
@@ -39,7 +39,7 @@ function Task1(props) {
         let strTransitions = "";
         let firstTransition = true;
         for (let key in labels) {
-            if (key <= 1) {
+            if (key <= 1 || key >= data?.slideInfo?.length - 1) {
                 continue;
             }
             if (!firstTransition) { 
@@ -83,32 +83,32 @@ function Task2(props) {
     const presentationId = props?.presentationId;
     const data = props?.data;
 
-    const { labels } = useSelector(state => state.annotationState);
+    const { labels, submissionId } = useSelector(state => state.annotationState);
 
-    const startIdxs = Object.keys(labels).map((val) => parseInt(val)).sort((p1, p2) => p1 - p2);
+    const endIdxs = [ ...Object.keys(labels).map((val) => parseInt(val)).sort((p1, p2) => p1 - p2)];
 
-    const totalNumSteps = startIdxs.length;
+    const totalNumSteps = endIdxs.length;
 
     const [subStep, setSubStep] = useState(0);
 
     let startIdx = 1
-    let endIdx = data?.slideInfo?.length;
+    let endIdx = data?.slideInfo?.length - 1;
 
-    if (subStep < startIdxs.length) {
-        startIdx = startIdxs[subStep];
+    if (subStep > 0 && subStep < endIdxs.length) {
+        startIdx = endIdxs[subStep - 1] + 1;
     }
-    if (subStep < startIdxs.length - 1) {
-        endIdx = startIdxs[subStep + 1];
+    if (subStep < endIdxs.length) {
+        endIdx = endIdxs[subStep];
     }
 
     const generateOutline = () => {
         let outline = [];
 
-        for (let i = 0; i < startIdxs.length; i++) {
-            const start = startIdxs[i];
-            const end = i + 1 < startIdxs.length ? startIdxs[i + 1] - 1 : data?.slideInfo?.length - 1;
+        for (let i = 0; i < endIdxs.length; i++) {
+            const start = i > 0 ? endIdxs[i - 1] + 1 : 1;
+            const end = endIdxs[i];
             outline.push({
-                sectionTitle: labels[start],
+                sectionTitle: labels[end],
                 startSlideIndex: start,
                 endSlideIndex: end,
             });
@@ -120,8 +120,23 @@ function Task2(props) {
     const handleLabelChange = (event) => {
         dispatch(setLabel({
             label: event.target.value,
-            boundary: startIdx,
+            boundary: endIdx,
         }));
+    }
+
+    const submitAnnotation = () => {
+        axios.post('http://localhost:7777/annotation/submit_annotation', {
+			presentationId: presentationId,
+            submissionId: submissionId,
+            outline: generateOutline(),
+		}).then( (response) => {
+			console.log(response);
+		});
+    };
+
+    const _setStep = (new_step) => {
+        window.scrollTo(0, 0);
+        dispatch(setStep({ step: new_step }));
     }
 
     return (<div>
@@ -183,7 +198,7 @@ function Task2(props) {
                     autoFocus={true}
                     type={"text"} 
                     onChange={handleLabelChange}
-                    value={labels[startIdx] === NO_LABEL ? "" : labels[startIdx]}
+                    value={labels[endIdx] === NO_LABEL ? "" : labels[endIdx]}
                 />
             </div>
         }
@@ -192,11 +207,72 @@ function Task2(props) {
                 presentationId={presentationId}
                 slideInfo={data?.slideInfo}
                 startIdx={startIdx}
-                endIdx={endIdx}
+                endIdx={endIdx + 1}
             />
         </div>
-    </div>)
+        {
+            subStep === totalNumSteps ?
+            <div>
+                <GenericButton
+                    title={"Finish & Submit"}
+                    onClick={() => {
+                        submitAnnotation();
+                        _setStep(SUBMITTED);
+                    }
+                    }
+                />
+            </div>
+            :
+            <div>
+               
+            </div>
+        }
+    </div>);
+}
 
+function Summary(props) {
+    const presentationId = props?.presentationId;
+    const data = props?.data;
+
+    const { labels } = useSelector(state => state.annotationState);
+
+    const endIdxs = [ ...Object.keys(labels).map((val) => parseInt(val)).sort((p1, p2) => p1 - p2)];
+
+    const totalNumSteps = endIdxs.length;
+
+    let startIdx = 1
+    let endIdx = data?.slideInfo?.length - 1;
+
+    let outline = [];
+
+    for (let i = 0; i < endIdxs.length; i++) {
+        const start = i > 0 ? endIdxs[i - 1] + 1 : 1;
+        const end = endIdxs[i];
+        outline.push({
+            sectionTitle: labels[end],
+            startSlideIndex: start,
+            endSlideIndex: end,
+        });
+    }
+
+    return (<div>
+        <h4> Summary: You annotated {totalNumSteps} segments </h4>
+        <div>
+            <Outline
+                isGenerated={false}
+                outline={outline}
+                slideInfo={data?.slideInfo}
+            />
+        </div>
+        <div>
+            <SlideThumbnails 
+                presentationId={presentationId}
+                slideInfo={data?.slideInfo}
+                startIdx={startIdx}
+                endIdx={endIdx + 1}
+            />
+        </div>
+    </div>);
 }
 
 function Introduction(props) {
@@ -261,11 +337,11 @@ function Introduction(props) {
                     :
                     <li> Task: Label produced segments of slides with an appropriate label </li>
                 }
-                {step === TASK_3 ?
+                {/* {step === TASK_3 ?
                     <li> <b> {" -> "} Task: </b> Bonus </li>
                     :
                     <li> Task: Bonus </li>
-                }
+                } */}
             </ol>
         </div>
         <div style={{
@@ -280,7 +356,7 @@ function Annotation(props) {
     const dispatch = useDispatch();
     
     const presentationId = props?.presentationId;
-    const { step } = useSelector(state => state.annotationState);
+    const { step, } = useSelector(state => state.annotationState);
 
     const [data, setData] = useState([]);
 
@@ -290,6 +366,10 @@ function Annotation(props) {
 		}).then( (response) => {
 			console.log(response);
 			setData(response.data.data);
+            dispatch(setLabel({
+                boundary: response.data.data.slideCnt - 1,
+                label: "end"
+            }));
 		});
 
 	}, [presentationId]);
@@ -330,20 +410,11 @@ function Annotation(props) {
             case TASK_2:
                 return (<div>
                     <Task2 presentationId={presentationId}  data={data}/>
-                    <GenericButton
-                        title={"Start Task 3"}
-                        onClick={() => _setStep(TASK_3)}
-                    />
                 </div>);
-            case TASK_3:
-                return (<div>
-                    <GenericButton
-                        title={"Finish & Submit"}
-                        onClick={() => _setStep(SUBMITTED)}
-                    />
-                </div>);
+            // case TASK_3:
             default:
                 return <div>
+                    <Summary presentationId={presentationId}  data={data}/>
                     <GenericButton
                         title={"Restart"}
                         onClick={() => dispatch(resetApp())}
@@ -354,7 +425,9 @@ function Annotation(props) {
 
     return (<div>
         <h2> Ground Truth Construction for Presentation Outlines</h2>
-        <Introduction step={step} />
+        <Introduction
+            step={step}
+        />
         <div style={{
             display: "flex",
             justifyContent: "space-between",

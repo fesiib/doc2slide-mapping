@@ -5,7 +5,7 @@ function Outline(props) {
     const outline = props?.outline;
     const slideInfo = props?.slideInfo;
 
-    if (!outline) {
+    if (!outline | !slideInfo) {
         return <div> {"LOADING"} </div>;
     }
     const output = outline.map((val, idx) => {
