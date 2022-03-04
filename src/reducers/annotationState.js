@@ -4,8 +4,7 @@ const SUBMIT = "SUBMIT";
 const ADD_BOUNDARY = "ADD_BOUNDARY";
 const REMOVE_BOUNDARY = "REMOVE_BOUNDARY";
 
-const ADD_LABEL = "ADD_LABEL";
-const REMOVE_LABEL = "REMOVE_LABEL";
+const SET_LABEL = "SET_LABEL";
 
 export const setStep = (payload) => ({
     type: SET_STEP,
@@ -22,12 +21,19 @@ export const removeBoundary = (payload) => ({
     payload
 });
 
+export const setLabel = (payload) => ({
+    type: SET_LABEL,
+    payload
+});
+
 const initialState = {
     step: 0,
     labels: {
-        1: "title",
+        1: "Title",
     },
 };
+
+export const NO_LABEL = "NO_LABEL";
 
 
 const annotationState = (state = initialState, action) => {
@@ -51,7 +57,7 @@ const annotationState = (state = initialState, action) => {
                 ...state,
                 labels: {
                     ...state.labels,
-                    [new_boundary]: "NO_LABEL",
+                    [new_boundary]: NO_LABEL,
                 }
             };
         }
@@ -68,6 +74,23 @@ const annotationState = (state = initialState, action) => {
             }
             delete new_labels[boundary];
 
+            return {
+                ...state, 
+                labels: new_labels,
+            };
+        }
+        case SET_LABEL: {
+            const boundary = action.payload.boundary;
+            const label = action.payload.label === "" ? NO_LABEL : action.payload.label;
+
+            if (!state.labels.hasOwnProperty(boundary)
+            ) {
+                return state;
+            }
+            const new_labels = {
+                ...state.labels,
+                [boundary]: label,
+            };
             return {
                 ...state, 
                 labels: new_labels,

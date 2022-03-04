@@ -7,8 +7,18 @@ function SlideThumbnails(props) {
     const presentationId = props?.presentationId;
     const slideInfo = props?.slideInfo;
 
+    const startIdx = props?.startIdx;
+    const endIdx = props?.endIdx;
+
     const thumbnailsPath = '/slideData/' + presentationId + '/images/';
     const output = slideInfo?.map((slide, idx) => {
+        if (startIdx && startIdx > idx) {
+            return null;
+        }
+        if (endIdx && endIdx <= idx) {
+            return null;
+        }
+
         const thumbnailPath = thumbnailsPath + slide.index.toString() + '.jpg';
         const title = "Script:\n\n" + slide.script + "\n\n\n\n\nOCR Result:\n\n" + slide.ocrResult;
 

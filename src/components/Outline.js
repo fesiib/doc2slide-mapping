@@ -15,14 +15,41 @@ function Outline(props) {
         const duration = new Date(0);
         duration.setSeconds(endSlide.endTime - startSlide.startTime);
         return (<li key={idx}>
-            ({val.startSlideIndex} - {val.endSlideIndex}) {"\t"} {val.sectionTitle} {"\t"} {duration.getMinutes()}:{duration.getSeconds()}
+            <div style={{
+                display:"flex",
+            }}>
+
+                <span style={{
+                    padding: "1em"
+                }}>
+                    ({val.startSlideIndex} - {val.endSlideIndex}) 
+                </span>
+                
+                <span style={{
+                    padding: "1em"
+                }}>
+                    {val.sectionTitle} 
+                </span>
+                
+                <span style={{
+                    padding: "1em"
+                }}>
+                       {duration.getMinutes()}:{duration.getSeconds()} mins
+                </span>
+            </div>
         </li>);
     });
     return (<div style={{
         margin: "1em",
+        display: "flex",
+        flexDirection: "column",
     }}>
-        <h3> {isGenerated ? "Generated Outline" : "Ground Truth Outline"} </h3>
-        <ol>
+        <h4> {isGenerated ? "Generated Outline" : "Ground Truth Outline"} </h4>
+        <ol style={{
+            alignSelf: "center",
+            margin: "0em",
+            textAlign: "left"
+        }}>
             {output}
         </ol>
     </div>);

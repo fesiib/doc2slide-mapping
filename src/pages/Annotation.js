@@ -3,10 +3,12 @@ import axios from "axios";
 
 import { useDispatch, useSelector } from "react-redux";
 import { resetApp } from "../reducers";
-import { setStep } from "../reducers/annotationState";
+import { NO_LABEL, setLabel, setStep } from "../reducers/annotationState";
 
 import AnnotationTable from "../components/AnnotationTable";
 import GenericButton from "../components/GenericButton";
+import SlideThumbnails from "../components/SlideThumbnails";
+import Outline from "../components/Outline";
 
 const INTRO = 0;
 const WARM_UP = 1;
@@ -73,6 +75,128 @@ function Task1(props) {
             enableBoundaries={true}
         />
     </div>);
+}
+
+function Task2(props) {
+    const dispatch = useDispatch();
+
+    const presentationId = props?.presentationId;
+    const data = props?.data;
+
+    const { labels } = useSelector(state => state.annotationState);
+
+    const startIdxs = Object.keys(labels).map((val) => parseInt(val)).sort((p1, p2) => p1 - p2);
+
+    const totalNumSteps = startIdxs.length;
+
+    const [subStep, setSubStep] = useState(0);
+
+    let startIdx = 1
+    let endIdx = data?.slideInfo?.length;
+
+    if (subStep < startIdxs.length) {
+        startIdx = startIdxs[subStep];
+    }
+    if (subStep < startIdxs.length - 1) {
+        endIdx = startIdxs[subStep + 1];
+    }
+
+    const generateOutline = () => {
+        let outline = [];
+
+        for (let i = 0; i < startIdxs.length; i++) {
+            const start = startIdxs[i];
+            const end = i + 1 < startIdxs.length ? startIdxs[i + 1] - 1 : data?.slideInfo?.length - 1;
+            outline.push({
+                sectionTitle: labels[start],
+                startSlideIndex: start,
+                endSlideIndex: end,
+            });
+        }
+
+        return outline;
+    }
+
+    const handleLabelChange = (event) => {
+        dispatch(setLabel({
+            label: event.target.value,
+            boundary: startIdx,
+        }));
+    }
+
+    return (<div>
+        {
+            subStep === totalNumSteps ?
+            <h4> Summary: You annotated {totalNumSteps} segments </h4>
+            :
+            <h4> Segment {subStep + 1}: ({startIdx} - {endIdx}) </h4>
+        }
+        <div style={{
+            display: "flex",
+            justifyContent: "space-between",
+            margin: "1em"
+        }}>
+            {
+                subStep > 0 ? 
+                <GenericButton
+                    title={"<- Segment " + (subStep).toString()}
+                    onClick={() => setSubStep(subStep - 1)}
+                    color="brown"
+                />
+                :
+                <div> </div>
+            }
+            {
+                subStep < totalNumSteps - 1 ? 
+                <GenericButton
+                    title={" -> Segment " + (subStep + 2).toString()}
+                    onClick={() => setSubStep(subStep + 1)}
+                    color="brown"
+                />
+                :
+                (
+                    subStep === totalNumSteps - 1 ?
+                    <GenericButton
+                        title={" Summary "}
+                        onClick={() => setSubStep(subStep + 1)}
+                        color="darkGreen"
+                    />
+                    :
+                    null
+                )
+            }
+        </div>
+        {
+            subStep === totalNumSteps ?
+            <div>
+                <Outline
+                    isGenerated={false}
+                    outline={generateOutline()}
+                    slideInfo={data?.slideInfo}
+                />
+            </div>
+            :
+            <div>
+                <label htmlFor={"labelInput"}> Label: </label>
+                <input
+                    id={"labelInput"}
+                    autoFocus={true}
+                    type={"text"} 
+                    onChange={handleLabelChange}
+                    value={labels[startIdx] === NO_LABEL ? "" : labels[startIdx]}
+                />
+            </div>
+        }
+        <div>
+            <SlideThumbnails 
+                presentationId={presentationId}
+                slideInfo={data?.slideInfo}
+                startIdx={startIdx}
+                endIdx={endIdx}
+            />
+        </div>
+    </div>)
+
 }
 
 function Introduction(props) {
@@ -205,6 +329,7 @@ function Annotation(props) {
                 </div>);
             case TASK_2:
                 return (<div>
+                    <Task2 presentationId={presentationId}  data={data}/>
                     <GenericButton
                         title={"Start Task 3"}
                         onClick={() => _setStep(TASK_3)}
@@ -238,8 +363,9 @@ function Annotation(props) {
             {
                 step >= TASK_1 ? 
                 <GenericButton
-                    title={"<- Back"}
+                    title={"<- Previous Task"}
                     onClick={() => _setStep(step - 1)}
+                    color="black"
                 />
                 :
                 <div> </div>
@@ -247,8 +373,9 @@ function Annotation(props) {
             {
                 step < SUBMITTED ? 
                 <GenericButton
-                    title={"Next ->"}
+                    title={"Next Task ->"}
                     onClick={() => _setStep(step + 1)}
+                    color="black"
                 />
                 :
                 null
