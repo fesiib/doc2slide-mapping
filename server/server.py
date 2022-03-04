@@ -18,7 +18,27 @@ from pathlib import Path
 SLIDE_DATA_PATH = './slideMeta/slideData'
 
 app = Flask(__name__)
-CORS(app)   
+CORS(app)
+
+def read_csv(path):
+    lines = []
+
+    data = {}
+
+    with open(path, "r") as f:
+        line = f.readline()
+        column_titles = line.strip().split(",")
+        while True :
+            line = f.readline()
+            if not line :
+                break
+            entries = line.strip().split(",")
+            id = int(entries[0])
+            data[id] = {}
+            for i in range(1, min(len(entries), len(column_titles))):
+                column = column_titles[i]
+                data[id][column] = entries[i]
+    return data
 
 @app.route('/mapping/presentation_data', methods=['POST'])
 def presentation_data():
@@ -44,13 +64,16 @@ def presentation_data():
     })
 
 @app.route('/mapping/summary_data', methods=['POST'])
-def summaryData():
+def summary_data():
     summary_path = os.path.join(SLIDE_DATA_PATH, "summary.json")
 
     summary = read_json(summary_path)
 
+    presentations_data = read_csv("./data.csv")
+
     return json.dumps({
         "summaryData": summary,
+        "presentationData": presentations_data,
     })
 
 @app.route('/mapping/process_presentation', methods=['POST'])
