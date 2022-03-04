@@ -40,7 +40,8 @@ const annotationState = (state = initialState, action) => {
             }
         }
         case ADD_BOUNDARY: {
-            const new_boundary = action.payload.boundary
+            const new_boundary = action.payload.boundary;
+            console.log(new_boundary);
             if (new_boundary < 2
                 || state.labels.hasOwnProperty(new_boundary)
             ) {
@@ -55,7 +56,7 @@ const annotationState = (state = initialState, action) => {
             };
         }
         case REMOVE_BOUNDARY: {
-            const boundary = action.payload.boundary
+            const boundary = action.payload.boundary;
             if (boundary < 2
                 || !state.labels.hasOwnProperty(boundary)
             ) {

@@ -1,4 +1,6 @@
 import React from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { addBoundary, removeBoundary } from "../reducers/annotationState";
 import GenericButton from "./GenericButton";
 
 const WIDTH = 500;
@@ -47,10 +49,23 @@ function SingleSlideThumbnail(props) {
 }
 
 function AnnotationTable(props) {
+    const dispatch = useDispatch();
+
     const enableBoundaries = props?.enableBoundaries;
     const presentationId = props?.presentationId;
     const slideInfo = props?.slideInfo;
 
+    const { labels } = useSelector(state => state.annotationState);
+
+    const transitionButtonClickHandler = (idx) => {
+        console.log(idx);
+        if (labels.hasOwnProperty(idx)) {
+            dispatch(removeBoundary( {boundary: idx} ));
+        }
+        else {
+            dispatch(addBoundary({boundary: idx}));
+        }
+    }
     const outputTable = () => {
         if (!slideInfo) {
             return [];
@@ -89,24 +104,34 @@ function AnnotationTable(props) {
                     </div>
                 </div>
                 {
-                    (enableBoundaries && idx < slideInfo.length - 1) ?
-                    (
-                        <div>
-                            <hr/>
-                            <GenericButton
-                                title={"Transition Here"}
-                            />
-                        </div>
-                    )
+                    (idx === 1) ? 
+                    <div>
+                        <hr/>
+                        TITLE PAGE
+                    </div>
                     :
-                    null
+                    (
+                        (enableBoundaries && idx < slideInfo.length - 1) ?
+                        (
+                            <div>
+                                <hr/>
+                                <GenericButton
+                                    title={ labels.hasOwnProperty(idx) ? "Remove Transition" : "Transition Here" }
+                                    onClick={() => transitionButtonClickHandler(idx)}
+                                    color={ labels.hasOwnProperty(idx) ? "red" : "green" }
+                                />
+                            </div>
+                        )
+                        :
+                        null   
+                    )
                 }
             </div>)
         })
     }
 
     return (<div>
-        <h2> Table: Slides(left) - Scripts(right) </h2>
+        <h3> Table: Slides(left) - Scripts(right) </h3>
         <div style={{
             display: "flex",
             flexDirection: "column",

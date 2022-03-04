@@ -5,7 +5,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { resetApp } from "../reducers";
 import { setStep } from "../reducers/annotationState";
 
-import SlideThumbnails from "../components/SlideThumbnails";
 import AnnotationTable from "../components/AnnotationTable";
 import GenericButton from "../components/GenericButton";
 
@@ -24,6 +23,54 @@ function WarmUp(props) {
             presentationId={presentationId}
             slideInfo={data?.slideInfo}
             enableBoundaries={false}
+        />
+    </div>);
+}
+
+function Task1(props) {
+    const presentationId = props?.presentationId;
+    const data = props?.data;
+
+    const { labels } = useSelector(state => state.annotationState);
+
+    const printTransitionBoundaries = () => {
+        let strTransitions = "";
+        let firstTransition = true;
+        for (let key in labels) {
+            if (key <= 1) {
+                continue;
+            }
+            if (!firstTransition) { 
+                strTransitions += ", ";
+            }
+            strTransitions += key;
+            firstTransition = false;
+        }
+
+        if (firstTransition) {
+            strTransitions = "Please Select Transitions";
+        }
+        return " " + strTransitions;
+    }
+
+    return (<div>
+
+        <div style={{
+            fontSize: "20px",
+            padding: "1em",
+        }}>
+            <i>
+                Selected Transitions: 
+            </i>
+            <pre> 
+                {printTransitionBoundaries()}
+            </pre>
+        </div>
+
+        <AnnotationTable
+            presentationId={presentationId}
+            slideInfo={data?.slideInfo}
+            enableBoundaries={true}
         />
     </div>);
 }
@@ -66,7 +113,7 @@ function Introduction(props) {
             "background": "lightgray"
         }}>
             <h3> Instructions: </h3>
-            <ol>
+            <ol start={0}>
                 {step === WARM_UP ? 
                     <li> <b>  {" -> "} Warm-up: </b> Scim through slides & scripts to general sense of the presentation</li>
                     :
@@ -75,7 +122,7 @@ function Introduction(props) {
                 <ul> 
                     <li>
                         You can watch the entire presentation video here:{" "}
-                        <a href={"https://www.youtube.com/watch?v=bP_XQz5v9Cc,N"}>Youtube ~15 mins </a>
+                        <a href={"https://www.youtube.com/watch?v=oFRiEZO_5Dk,N"}>Youtube ~15 mins </a>
                         <i>(but just skimming slides & scripts should be faster)</i>
                     </li>
                 </ul>
@@ -100,7 +147,7 @@ function Introduction(props) {
         <div style={{
             margin: "1em"
         }}>
-            <h3> {stepTitle(step)} </h3>
+            <h2> {stepTitle(step)} </h2>
         </div>
     </div>);
 }
@@ -124,6 +171,7 @@ function Annotation(props) {
 	}, [presentationId]);
 
     const _setStep = (new_step) => {
+        window.scrollTo(0, 0);
         dispatch(setStep({ step: new_step }));
     }
 
@@ -149,6 +197,7 @@ function Annotation(props) {
             
             case TASK_1:
                 return (<div>
+                    <Task1 presentationId={presentationId}  data={data}/>
                     <GenericButton
                         title={"Start Task 2"}
                         onClick={() => _setStep(TASK_2)}
@@ -181,6 +230,30 @@ function Annotation(props) {
     return (<div>
         <h2> Ground Truth Construction for Presentation Outlines</h2>
         <Introduction step={step} />
+        <div style={{
+            display: "flex",
+            justifyContent: "space-between",
+            margin: "1em"
+        }}>
+            {
+                step >= TASK_1 ? 
+                <GenericButton
+                    title={"<- Back"}
+                    onClick={() => _setStep(step - 1)}
+                />
+                :
+                <div> </div>
+            }
+            {
+                step < SUBMITTED ? 
+                <GenericButton
+                    title={"Next ->"}
+                    onClick={() => _setStep(step + 1)}
+                />
+                :
+                null
+            }
+        </div>
         {outputMainSection()}
     </div>)
 }
