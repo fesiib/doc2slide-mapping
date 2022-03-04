@@ -125,7 +125,7 @@ function Task2(props) {
     }
 
     const submitAnnotation = () => {
-        axios.post('http://localhost:7777/annotation/submit_annotation', {
+        axios.post('http://server.hyungyu.com:7777/annotation/submit_annotation', {
 			presentationId: presentationId,
             submissionId: submissionId,
             outline: generateOutline(),
@@ -361,7 +361,7 @@ function Annotation(props) {
     const [data, setData] = useState([]);
 
     useEffect(() => {
-		axios.post('http://localhost:7777/mapping/presentation_data', {
+		axios.post('http://server.hyungyu.com:7777/mapping/presentation_data', {
 			presentationId: presentationId,
 		}).then( (response) => {
 			console.log(response);
@@ -444,7 +444,7 @@ function Annotation(props) {
                 <div> </div>
             }
             {
-                step < SUBMITTED ? 
+                step < TASK_2 ? 
                 <GenericButton
                     title={"Next Task ->"}
                     onClick={() => _setStep(step + 1)}

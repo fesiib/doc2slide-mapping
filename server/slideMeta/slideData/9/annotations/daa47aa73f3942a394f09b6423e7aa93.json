@@ -1,0 +1,54 @@
+{
+    "groundTruthSegments": [
+        {
+            "sectionTitle": "Title",
+            "startSlideIndex": 1,
+            "endSlideIndex": 1
+        },
+        {
+            "sectionTitle": "Introduction",
+            "startSlideIndex": 2,
+            "endSlideIndex": 5
+        },
+        {
+            "sectionTitle": "conventional approaches",
+            "startSlideIndex": 6,
+            "endSlideIndex": 7
+        },
+        {
+            "sectionTitle": "Experimental Design",
+            "startSlideIndex": 8,
+            "endSlideIndex": 14
+        },
+        {
+            "sectionTitle": "Hypotheses",
+            "startSlideIndex": 15,
+            "endSlideIndex": 17
+        },
+        {
+            "sectionTitle": "Detail 1",
+            "startSlideIndex": 18,
+            "endSlideIndex": 24
+        },
+        {
+            "sectionTitle": "Detail 2",
+            "startSlideIndex": 25,
+            "endSlideIndex": 30
+        },
+        {
+            "sectionTitle": "Detail 3",
+            "startSlideIndex": 31,
+            "endSlideIndex": 31
+        },
+        {
+            "sectionTitle": "Discussion",
+            "startSlideIndex": 32,
+            "endSlideIndex": 40
+        },
+        {
+            "sectionTitle": "end",
+            "startSlideIndex": 41,
+            "endSlideIndex": 41
+        }
+    ]
+}

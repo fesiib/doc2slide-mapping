@@ -1,0 +1,14 @@
+{
+    "groundTruthSegments": [
+        {
+            "sectionTitle": "Title",
+            "startSlideIndex": 1,
+            "endSlideIndex": 1
+        },
+        {
+            "sectionTitle": "end",
+            "startSlideIndex": 2,
+            "endSlideIndex": 41
+        }
+    ]
+}
