@@ -13,6 +13,8 @@ import pandas as pd
 
 from process_data import process, read_txt, read_json
 
+from pathlib import Path
+
 SLIDE_DATA_PATH = './slideMeta/slideData'
 
 app = Flask(__name__)
@@ -96,5 +98,30 @@ def evaluation_results():
 def get_image(presentation_id, filename):
     image_path = os.path.join(SLIDE_DATA_PATH, str(presentation_id), "images", filename)
     return send_file(image_path, mimetype='image/jpg')
+
+@app.route("/annotation/submit_annotation", methods=["POST"])
+def submit_annotation():
+    decoded = request.data.decode('utf-8')
+    request_json = json.loads(decoded)
+    presentation_id = request_json["presentationId"]
+    submission_id = request_json["submissionId"]
+    outline = request_json["outline"]
+
+    print(presentation_id, submission_id)
+
+    filename = submission_id + ".json"
+    path = Path(os.path.join(SLIDE_DATA_PATH, str(presentation_id), "annotations"))
+
+    path.mkdir(parents=True, exist_ok=True)
+
+    file_path = os.path.join(path, filename)
+
+    with open(file_path, "w") as f:
+        json.dump({
+            "groundTruthSegments": outline,
+        }, fp=f, indent=4)
+    return json.dumps({
+        "status": "Recorded",
+    })
 
 app.run(host='0.0.0.0', port=7777)
