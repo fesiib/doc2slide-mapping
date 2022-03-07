@@ -22,7 +22,7 @@ function AllOutlines(props) {
 	useEffect(() => {
         let requests = [];
         for (let presentationId of PRESENTATION_IDS) {
-            requests.push(axios.post('http://server.hyungyu.com:7777/mapping/process_presentation', {
+            requests.push(axios.post('http://server.hyungyu.com:7777/mapping/presentation_data_specific', {
                 presentationId: presentationId,
                 similarityType: similarityType,
                 similarityMethod: similarityMethod,
