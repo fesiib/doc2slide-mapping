@@ -221,6 +221,20 @@ def process(path, presentation_id, similarity_type, similarity_method, outlining
         result["outline"], result["groundTruthOutline"], result["slideInfo"], result["topSections"]
     )
 
+    apply_thresholding_str = "T1"
+    if apply_thresholding is False:
+        apply_thresholding_str = "T0"
+
+    apply_heuristics_str = "H1"
+    if apply_heuristics:    
+        apply_heuristics_str = "H0"
+
+    resultname = "result_" + \
+        similarity_type + "_" + similarity_method + "_" + outlining_approach + "_" + \
+        apply_thresholding_str + "_" + apply_heuristics_str + ".json"
+
+    with open(os.path.join(path, resultname), "w") as f:
+        f.write(json.dumps(result))
     with open(os.path.join(path, "result.json"), "w") as f:
         f.write(json.dumps(result))
     return result

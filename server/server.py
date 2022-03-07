@@ -41,6 +41,31 @@ def read_csv(path):
                 data[id][column] = entries[i]
     return data
 
+def __process_presentation(
+    presentation_id,
+    similarity_type,
+    similarity_method,
+    outlining_approach,
+    apply_thresholding,
+    apply_heuristics,
+):
+    parent_path = os.path.join(SLIDE_DATA_PATH, str(presentation_id))
+    parent_path_2 = os.path.join(SLIDE_DATA_PATH, str(presentation_id))
+
+    paper_path = os.path.join(parent_path, 'paperData.txt')
+    script_path = os.path.join(parent_path_2, 'scriptData.txt')
+    section_path = os.path.join(parent_path, 'sectionData.txt')
+
+    #data_path = os.path.join(parent_path, 'result.json')
+
+    return {
+        "paper": read_txt(paper_path),
+        "script": read_txt(script_path),
+        "sections": read_txt(section_path),
+        "data": process(parent_path, presentation_id, similarity_type, similarity_method, outlining_approach, apply_thresholding, apply_heuristics),
+        "presentationId": presentation_id,
+    }
+
 @app.route('/mapping/presentation_data', methods=['POST'])
 def presentation_data():
     decoded = request.data.decode('utf-8')
@@ -59,6 +84,55 @@ def presentation_data():
         result_path = os.path.join(parent_path, "result.json")
         data = read_json(result_path)
     
+    return json.dumps({
+        "presentationId": presentation_id,
+        "data": data,
+    })
+
+@app.route('/mapping/presentation_data_specific', methods=['POST'])
+def presentation_data_specific():
+    decoded = request.data.decode('utf-8')
+    request_json = json.loads(decoded)
+    presentation_id = request_json["presentationId"]
+    similarity_type = request_json["similarityType"]
+    similarity_method = request_json["similarityMethod"]
+    outlining_approach = request_json["outliningApproach"]
+    apply_thresholding = request_json["applyThresholding"]
+    apply_heuristics = request_json["applyHeuristics"]
+
+    apply_thresholding_str = "T1"
+    if apply_thresholding is False:
+        apply_thresholding_str = "T0"
+
+    apply_heuristics_str = "H1"
+    if apply_heuristics:    
+        apply_heuristics_str = "H0"
+
+    resultname = "result_" + \
+        similarity_type + "_" + similarity_method + "_" + outlining_approach + "_" + \
+        apply_thresholding_str + "_" + apply_heuristics_str + ".json"
+
+    print(request_json)
+
+    data = None
+
+    parent_path = os.path.join(SLIDE_DATA_PATH, str(presentation_id))    
+    summary_path = os.path.join(SLIDE_DATA_PATH, "summary.json")
+    summary = read_json(summary_path)
+
+    if presentation_id in summary["valid_presentation_index"]:
+        result_path = os.path.join(parent_path, resultname)
+        if os.path.isfile(result_path) is True:
+            data = read_json(result_path)
+        else:
+            data = __process_presentation(
+                presentation_id,
+                similarity_type,
+                similarity_method,
+                outlining_approach,
+                apply_thresholding,
+                apply_heuristics,
+            )
     return json.dumps({
         "presentationId": presentation_id,
         "data": data,
@@ -89,24 +163,14 @@ def process_presentation():
     apply_heuristics = request_json["applyHeuristics"]
 
     print(request_json)
-
-
-    parent_path = os.path.join(SLIDE_DATA_PATH, str(presentation_id))
-    parent_path_2 = os.path.join(SLIDE_DATA_PATH, str(presentation_id))
-
-    paper_path = os.path.join(parent_path, 'paperData.txt')
-    script_path = os.path.join(parent_path_2, 'scriptData.txt')
-    section_path = os.path.join(parent_path, 'sectionData.txt')
-
-    #data_path = os.path.join(parent_path, 'result.json')
-
-    return json.dumps({
-        "paper": read_txt(paper_path),
-        "script": read_txt(script_path),
-        "sections": read_txt(section_path),
-        "data": process(parent_path, presentation_id, similarity_type, similarity_method, outlining_approach, apply_thresholding, apply_heuristics),
-        "presentationId": presentation_id,
-    })
+    return json.dumps(__process_presentation(
+        presentation_id,
+        similarity_type,
+        similarity_method,
+        outlining_approach,
+        apply_thresholding,
+        apply_heuristics,
+    ))    
 
 @app.route('/mapping/evaluation_results', methods=['POST'])
 def evaluation_results():
