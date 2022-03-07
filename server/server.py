@@ -133,6 +133,7 @@ def presentation_data_specific():
                 apply_thresholding,
                 apply_heuristics,
             )
+            data = data["data"]
     return json.dumps({
         "presentationId": presentation_id,
         "data": data,
