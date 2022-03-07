@@ -2,6 +2,7 @@ import axios from 'axios'
 import {useState, useEffect} from 'react';
 import Outline from '../components/Outline';
 import PipelineAccuracy from '../components/PipelineAccuracy';
+import AnnotationList from '../components/AnnotationList';
 import ModelConfig from '../components/ModelConfig';
 
 //const PRESENTATION_IDS = [0, 4, 6, 7, 9, 10, 12, 13, 14, 15, 16, 17, 18, 19, 20];
@@ -21,7 +22,7 @@ function AllOutlines(props) {
 	useEffect(() => {
         let requests = [];
         for (let presentationId of PRESENTATION_IDS) {
-            requests.push(axios.post('http://localhost:7777/mapping/process_presentation', {
+            requests.push(axios.post('http://server.hyungyu.com:7777/mapping/process_presentation', {
                 presentationId: presentationId,
                 similarityType: similarityType,
                 similarityMethod: similarityMethod,
@@ -58,7 +59,7 @@ function AllOutlines(props) {
                     display: "flex",
                 }}> 
                     <Outline isGenerated={true} outline={curData?.outline} slideInfo={curData?.slideInfo} />
-                    <Outline isGenerated={false} outline={curData?.groundTruthOutline} slideInfo={curData?.slideInfo} />
+                    <AnnotationList gtOutline={curData?.groundTruthOutline} annotations={curData?.annotations} slideInfo={curData?.slideInfo} />
                     <PipelineAccuracy evaluationData={curData?.evaluationData}/>
                 </div>
             </div>

@@ -22,7 +22,7 @@ function SingleExample(props) {
 	const [sections, setSections] = useState([]);
 	
 	useEffect(() => {
-		axios.post('http://localhost:7777/mapping/process_presentation', {
+		axios.post('http://server.hyungyu.com:7777/mapping/process_presentation', {
 			presentationId: presentationId,
 			similarityType: similarityType,
 			similarityMethod: similarityMethod,
@@ -64,8 +64,7 @@ function SingleExample(props) {
 				display: "flex",
 			}}> 
 				<Outline isGenerated={true} outline={data?.outline} slideInfo={data?.slideInfo} />
-				<Outline isGenerated={false} outline={data?.groundTruthOutline} slideInfo={data?.slideInfo} />
-				<AnnotationList annotations={data?.annotations} slideInfo={data?.slideInfo}/>
+				<AnnotationList gtOutline={data?.groundTruthOutline} annotations={data?.annotations} slideInfo={data?.slideInfo}/>
 				
 			</div>
 			<PipelineAccuracy evaluationData={data?.evaluationData}/>
