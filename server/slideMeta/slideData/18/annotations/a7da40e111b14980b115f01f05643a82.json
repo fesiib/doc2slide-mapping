@@ -1,0 +1,49 @@
+{
+    "groundTruthSegments": [
+        {
+            "sectionTitle": "Title",
+            "startSlideIndex": 1,
+            "endSlideIndex": 1
+        },
+        {
+            "sectionTitle": "Approach",
+            "startSlideIndex": 2,
+            "endSlideIndex": 4
+        },
+        {
+            "sectionTitle": "Methods",
+            "startSlideIndex": 5,
+            "endSlideIndex": 5
+        },
+        {
+            "sectionTitle": "Terminology",
+            "startSlideIndex": 6,
+            "endSlideIndex": 10
+        },
+        {
+            "sectionTitle": "Example",
+            "startSlideIndex": 11,
+            "endSlideIndex": 21
+        },
+        {
+            "sectionTitle": "Approach",
+            "startSlideIndex": 22,
+            "endSlideIndex": 24
+        },
+        {
+            "sectionTitle": "Design Concerns",
+            "startSlideIndex": 25,
+            "endSlideIndex": 29
+        },
+        {
+            "sectionTitle": "Conclusion",
+            "startSlideIndex": 30,
+            "endSlideIndex": 31
+        },
+        {
+            "sectionTitle": "Demo",
+            "startSlideIndex": 32,
+            "endSlideIndex": 32
+        }
+    ]
+}

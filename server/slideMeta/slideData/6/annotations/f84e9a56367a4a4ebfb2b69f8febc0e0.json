@@ -1,0 +1,44 @@
+{
+    "groundTruthSegments": [
+        {
+            "sectionTitle": "Title",
+            "startSlideIndex": 1,
+            "endSlideIndex": 1
+        },
+        {
+            "sectionTitle": "Background and problem",
+            "startSlideIndex": 2,
+            "endSlideIndex": 6
+        },
+        {
+            "sectionTitle": "Two research questions",
+            "startSlideIndex": 7,
+            "endSlideIndex": 7
+        },
+        {
+            "sectionTitle": "Methodology",
+            "startSlideIndex": 8,
+            "endSlideIndex": 10
+        },
+        {
+            "sectionTitle": "Results",
+            "startSlideIndex": 11,
+            "endSlideIndex": 15
+        },
+        {
+            "sectionTitle": "Conclusion of this study",
+            "startSlideIndex": 16,
+            "endSlideIndex": 16
+        },
+        {
+            "sectionTitle": "Ongoing their campaign (application of this study)",
+            "startSlideIndex": 17,
+            "endSlideIndex": 20
+        },
+        {
+            "sectionTitle": "end",
+            "startSlideIndex": 21,
+            "endSlideIndex": 21
+        }
+    ]
+}

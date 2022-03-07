@@ -1,0 +1,59 @@
+{
+    "groundTruthSegments": [
+        {
+            "sectionTitle": "Title",
+            "startSlideIndex": 1,
+            "endSlideIndex": 1
+        },
+        {
+            "sectionTitle": "Motivation",
+            "startSlideIndex": 2,
+            "endSlideIndex": 4
+        },
+        {
+            "sectionTitle": "Existing work",
+            "startSlideIndex": 5,
+            "endSlideIndex": 6
+        },
+        {
+            "sectionTitle": "Research question",
+            "startSlideIndex": 7,
+            "endSlideIndex": 7
+        },
+        {
+            "sectionTitle": "Study device",
+            "startSlideIndex": 8,
+            "endSlideIndex": 8
+        },
+        {
+            "sectionTitle": "Pilot study",
+            "startSlideIndex": 9,
+            "endSlideIndex": 11
+        },
+        {
+            "sectionTitle": "Evaluation design",
+            "startSlideIndex": 12,
+            "endSlideIndex": 16
+        },
+        {
+            "sectionTitle": "Evaluation results",
+            "startSlideIndex": 17,
+            "endSlideIndex": 20
+        },
+        {
+            "sectionTitle": "Future work",
+            "startSlideIndex": 21,
+            "endSlideIndex": 21
+        },
+        {
+            "sectionTitle": "Conclusion",
+            "startSlideIndex": 22,
+            "endSlideIndex": 22
+        },
+        {
+            "sectionTitle": "end",
+            "startSlideIndex": 23,
+            "endSlideIndex": 23
+        }
+    ]
+}
