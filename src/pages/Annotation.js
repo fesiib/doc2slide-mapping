@@ -342,10 +342,10 @@ function Instructions(props) {
                 {step === TASK_1 ?
                     <li> 
                         <b> {" -> "} Task: </b>
-                        Identify main <a href={"section_transition_examples"}> section transitions </a> in slides
+                        Identify main <b> (up to 6 in total) </b> <a href={"section_transition_examples"}> section transitions </a> in slides
                     </li>
                     :
-                    <li> Task: Identify main <a href={"section_transition_examples"}> section transitions </a>  in slides </li>
+                    <li> Task: Identify main <b> (up to 6 in total) </b> <a href={"section_transition_examples"}> section transitions </a>  in slides </li>
                 }
                 {step === TASK_2 ? 
                     <li> <b> {" -> "} Task: </b> Label produced segments of slides. Feel free to enter any label you find fitting.  </li>

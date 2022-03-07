@@ -11,6 +11,9 @@ function SectionTransitionExamples() {
         <h2> Definition: Section Transition </h2>
         <div>
             <p>
+                Please specify <b> not more than 5-6 transitions </b>.
+            </p>
+            <p>
                 It would be great to give some specific examples, but...
             </p>
             <p>
