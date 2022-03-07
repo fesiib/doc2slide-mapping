@@ -20,6 +20,8 @@ from gen_outline import get_outline_generic
 
 from evaluate_outline import evaluate_outline, evaluate_performance, GROUND_TRUTH_EXISTS
 
+from annotation import scan_annotations, read_json
+
 SKIPPED_SECTIONS = [
     "CCS CONCEPTS",
     "KEYWORDS",
@@ -38,15 +40,7 @@ def read_txt(path) :
             if not line :
                 break
             lines.append(line.strip())
-    return lines
-
-
-def read_json(path):
-    obj = {}
-    with open(path, 'r') as f:
-        encoded = f.read()
-        obj = json.loads(encoded)
-    return obj     
+    return lines  
 
 def is_section_skipped(section):
     for skipped_section in SKIPPED_SECTIONS:
@@ -107,6 +101,8 @@ def process(path, presentation_id, similarity_type, similarity_method, outlining
     if (presentation_id in GROUND_TRUTH_EXISTS):
         gt_data = read_json(os.path.join(path, "groundTruth.json"))
 
+    annotations = scan_annotations(os.path.join(path, "annotations"))
+
     section_data, paper_data = add_sections_as_paragraphs(section_data, paper_data)
 
     section_data, paper_data = fix_section_titles(section_data, paper_data)
@@ -138,6 +134,7 @@ def process(path, presentation_id, similarity_type, similarity_method, outlining
     result['title'] = "tempTitle"
     result['slideCnt'] = len(timestamp_data)
     result['groundTruthOutline'] = gt_data['groundTruthSegments']
+    result['annotations'] = annotations
 
     slide_info = []
     startTimeStamp = 0
@@ -282,5 +279,5 @@ if __name__ == "__main__":
     #print(json.dumps(output, indent=4))
 
 
-    #output = process('slideMeta/slideData/4', 4, similarity_type="cosine", similarity_method="tf-idf", outlining_approach="dp_mask", apply_thresholding=False, apply_heuristics=True)
-    #print(output["evaluationData"])
+    #output = process('slideMeta/slideData/20', 20, similarity_type="cosine", similarity_method="tf-idf", outlining_approach="dp_mask", apply_thresholding=False, apply_heuristics=True)
+    #print(output["annotations"])

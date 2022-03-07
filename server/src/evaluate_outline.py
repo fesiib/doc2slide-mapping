@@ -9,6 +9,8 @@ def are_same_section_titles(title, gt_title):
     return title.startswith(gt_title) or gt_title.startswith(title)
 
 def f1_score(precision, recall):
+    if precision + recall == 0:
+        return 0
     return 2 * (precision * recall) / (precision + recall)
 
 def __calculate_boundary_coverage(a_boundaries, b_boundaries, total_cnt):

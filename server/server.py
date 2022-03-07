@@ -11,7 +11,8 @@ from flask import request, send_file
 
 import pandas as pd
 
-from process_data import process, read_txt, read_json
+from process_data import process, read_txt
+from annotation import read_json
 
 from pathlib import Path
 
