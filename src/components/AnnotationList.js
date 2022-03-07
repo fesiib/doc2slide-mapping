@@ -23,7 +23,7 @@ function AnnotationList(props) {
             onChange={handleSelectChange}
             value={selectedAnnotationId}
         >
-            <option value={GT_ID}> Ground Truth - Bekzat </option>
+            <option value={GT_ID}> Paper-based Ground Truth </option>
             {
                 annotationIds.map((annotationId, idx) => {
                     return (<option 
@@ -35,7 +35,12 @@ function AnnotationList(props) {
         </select>
         {
             selectedAnnotationId === GT_ID ?
-            <Outline isGenerated={false} outline={gtOutline} slideInfo={slideInfo} />
+            (
+                gtOutline ? 
+                <Outline isGenerated={false} outline={gtOutline} slideInfo={slideInfo} />
+                :
+                <div> No Paper-based Ground Truth </div>
+            )
             :
             <Outline isGenerated={false} outline={annotations[selectedAnnotationId]} slideInfo={slideInfo} />
         }

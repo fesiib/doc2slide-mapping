@@ -7,7 +7,7 @@ import ModelConfig from '../components/ModelConfig';
 
 //const PRESENTATION_IDS = [0, 4, 6, 7, 9, 10, 12, 13, 14, 15, 16, 17, 18, 19, 20];
 
-const PRESENTATION_IDS = [0, 4, 6, 7, 9];
+const PRESENTATION_IDS = [0, 4, 6, 7, 9, 10];
 
 
 function AllOutlines(props) {
