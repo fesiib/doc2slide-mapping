@@ -279,6 +279,8 @@ function Summary(props) {
 }
 
 function Instructions(props) {
+    const dispatch = useDispatch();
+
     const presentationId = props?.presentationId;
     const presentationData = props?.presentationData;
     const step = props?.step;
@@ -367,6 +369,10 @@ function Instructions(props) {
                     <span> Your Submission Id (copy-paste it to the form): </span>
                     <h4> {submissionId} </h4>
                     <h3> <a href={GOOGLE_FORM_LINK}> Please Fill out the Form </a> </h3>
+                    <GenericButton
+                        title={"Start new Annotation"}
+                        onClick={() => dispatch(resetApp())}
+                    />
                 </div>
                 : 
                 null
@@ -538,10 +544,15 @@ function Annotation(props) {
             textAlign: "right",
             marginRight: "1em"
         }}>
-            <GenericButton
-                title={"Restart"}
-                onClick={() => dispatch(resetApp())}
-            />
+            {
+                step < SUBMITTED ?      
+                <GenericButton
+                    title={"Restart"}
+                    onClick={() => dispatch(resetApp())}
+                />
+                :
+                null
+            }
         </div>
         <Motivation/>
         <div style={{
