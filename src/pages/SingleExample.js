@@ -6,6 +6,7 @@ import SlideThumbnails from '../components/SlideThumbnails';
 import ComparisonTable from '../components/ComparisonTable';
 import PipelineAccuracy from '../components/PipelineAccuracy';
 import ModelConfig from '../components/ModelConfig';
+import AnnotationList from '../components/AnnotationList';
 
 function SingleExample(props) {
     const presentationId = props?.presentationId;
@@ -64,6 +65,8 @@ function SingleExample(props) {
 			}}> 
 				<Outline isGenerated={true} outline={data?.outline} slideInfo={data?.slideInfo} />
 				<Outline isGenerated={false} outline={data?.groundTruthOutline} slideInfo={data?.slideInfo} />
+				<AnnotationList annotations={data?.annotations} slideInfo={data?.slideInfo}/>
+				
 			</div>
 			<PipelineAccuracy evaluationData={data?.evaluationData}/>
 			<ComparisonTable paragraphs={paragraphs} scripts={scripts} sections={sections}/>

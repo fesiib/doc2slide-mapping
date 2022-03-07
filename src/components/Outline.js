@@ -48,7 +48,8 @@ function Outline(props) {
         <ol style={{
             alignSelf: "center",
             margin: "0em",
-            textAlign: "left"
+            textAlign: "left",
+            fontSize: "10px",
         }}>
             {output}
         </ol>
