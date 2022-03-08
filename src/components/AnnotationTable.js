@@ -3,8 +3,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { addBoundary, removeBoundary } from "../reducers/annotationState";
 import GenericButton from "./GenericButton";
 
-const WIDTH = 500;
-const HEIGHT = WIDTH * 9 / 16;
+export const WIDTH = 500;
+export const HEIGHT = WIDTH * 9 / 16;
 
 function SingleSlideThumbnail(props) {
     const slide = props?.slide; // slideInfo element

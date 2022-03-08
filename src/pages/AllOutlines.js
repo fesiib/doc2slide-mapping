@@ -4,10 +4,7 @@ import Outline from '../components/Outline';
 import PipelineAccuracy from '../components/PipelineAccuracy';
 import AnnotationList from '../components/AnnotationList';
 import ModelConfig from '../components/ModelConfig';
-
-//const PRESENTATION_IDS = [0, 4, 6, 7, 9, 10, 12, 13, 14, 15, 16, 17, 18, 19, 20];
-
-const PRESENTATION_IDS = [0, 4, 6, 7, 9, 10];
+import { ANNOTATION_PRESENTATION_IDS } from './Annotation';
 
 
 function AllOutlines(props) {
@@ -21,7 +18,7 @@ function AllOutlines(props) {
 	
 	useEffect(() => {
         let requests = [];
-        for (let presentationId of PRESENTATION_IDS) {
+        for (let presentationId of ANNOTATION_PRESENTATION_IDS) {
             requests.push(axios.post('http://server.hyungyu.com:7777/mapping/presentation_data_specific', {
                 presentationId: presentationId,
                 similarityType: similarityType,

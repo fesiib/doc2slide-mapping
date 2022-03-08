@@ -20,6 +20,8 @@ const SUBMITTED = 4;
 
 const GOOGLE_FORM_LINK = "https://docs.google.com/forms/d/e/1FAIpQLSfMRNceok4P5pLvu9ofROTUcFr_AKYPBzv6lKu8CX3qBP3B9g/viewform?usp=sf_link"
 
+export const ANNOTATION_PRESENTATION_IDS = [4, 6, 7, 9, 19];
+
 function WarmUp(props) {
     const presentationId = props?.presentationId;
     const data = props?.data;
@@ -332,7 +334,6 @@ function Instructions(props) {
                         <li>
                             You can watch the entire presentation video here:{" "}
                             <a href={presentationVideo}>Youtube ~15 mins </a>
-                            <i>(but just skimming slides & scripts should be faster)</i>
                         </li>
                         :
                         null
@@ -348,9 +349,9 @@ function Instructions(props) {
                     <li> Task: Identify main <b> (up to 6 in total) </b> <a href={"section_transition_examples"}> section transitions </a>  in slides </li>
                 }
                 {step === TASK_2 ? 
-                    <li> <b> {" -> "} Task: </b> Label produced segments of slides. Feel free to enter any label you find fitting.  </li>
+                    <li> <b> {" -> "} Task: </b> Label produced segments of slides  </li>
                     :
-                    <li> Task: Label produced segments of slides. Feel free to enter any label you find fitting. </li>
+                    <li> Task: Label produced segments of slides. </li>
                 }
                 {/* {step === TASK_3 ?
                     <li> <b> {" -> "} Task: </b> Bonus </li>
@@ -358,6 +359,14 @@ function Instructions(props) {
                     <li> Task: Bonus </li>
                 } */}
             </ol>
+            <ul>
+
+                <li>
+                    You can jump back & forth between Tasks 1 and 2 <i>
+                        (just press on the <span style={{color: "darkBlue"}}> blue </span> buttons above)
+                    </i>
+                </li>
+            </ul>
         </div>
         <div style={{
             margin: "1em"
@@ -415,7 +424,9 @@ function PresentationGallery(props) {
     const summaryData = summary?.summaryData;
     const presentationsData = summary?.presentationData;
 
-    const validPresentationIds = summaryData?.valid_presentation_index;
+    const validPresentationIds = summaryData?.valid_presentation_index.filter(
+        presentationId => ANNOTATION_PRESENTATION_IDS.includes(presentationId)
+    );
 
     const handleButtonClick = (presentationId, presentationData) => {
         dispatch(setPresentationid({
@@ -565,7 +576,7 @@ function Annotation(props) {
                 <GenericButton
                     title={"<- Previous Task"}
                     onClick={() => _setStep(step - 1)}
-                    color="black"
+                    color="darkBlue"
                 />
                 :
                 <div> </div>
@@ -575,7 +586,7 @@ function Annotation(props) {
                 <GenericButton
                     title={"Next Task ->"}
                     onClick={() => _setStep(step + 1)}
-                    color="black"
+                    color="darkBlue"
                 />
                 :
                 null
