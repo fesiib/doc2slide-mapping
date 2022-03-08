@@ -115,20 +115,25 @@ def process(path, presentation_id, similarity_type, similarity_method, outlining
 
     ocr_data = []
     for i in range(len(timestamp_data)) :
-        ocr_file = open(os.path.join(path, "ocr", str(i) + ".jpg.txt"), "r")
+        ocr_file_path = os.path.join(path, "ocr", str(i) + ".jpg.txt")
         ocr_data.append('')
-        first_line = False
-        while True :
-            line = ocr_file.readline()
-            if not line :
-                break
-            if first_line is True:
+        try:
+            with open(ocr_file_path, "r") as (ocr_file, err):
+                if err:
+                    print(err)
                 first_line = False
-                continue
-            res = line.split('\t')[-1].strip()
-            if len(res) > 0 :
-                ocr_data[-1] = ocr_data[-1] + ' ' + res
-    
+                while True :
+                    line = ocr_file.readline()
+                    if not line :
+                        break
+                    if first_line is True:
+                        first_line = False
+                        continue
+                    res = line.split('\t')[-1].strip()
+                    if len(res) > 0 :
+                        ocr_data[-1] = ocr_data[-1] + ' ' + res
+        except:
+            continue
     result = {}
 
     result['title'] = "tempTitle"
