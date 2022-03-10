@@ -179,7 +179,7 @@ function AnnotationTable(props) {
                 <div>
                     <hr/>
                     {
-                        enableBoundaries && false ?
+                        enableBoundaries ?
                         (
                             <div>
                                 {

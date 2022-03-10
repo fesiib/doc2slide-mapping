@@ -324,59 +324,70 @@ function Annotation(props) {
         }
         return (<div>
             {instructions ?
-                <div style={{
-                    position: "-webkit-sticky",
-                    position: "sticky",
-                    top: "0px",
-                    paddingTop: "1em",
-                    background: "white",
-                }}>        
-                    <h2> Presentation {presentationId} </h2>
-                    <Instructions
-                        presentationData={presentationData}
-                        presentationId={presentationId}
-                        sectionTitles={data?.sectionTitles ? data.sectionTitles : []}
-                        step={step}
-                        collapsed={collapsed}
-                    />
-                    <GenericButton
-                        title={collapsed ? "Expand Instructions" : "Collapse"}
-                        onClick={() => setCollapsed(!collapsed)}
-                    />
-                    <div style={{
-                        display: "flex",
-                        justifyContent: "space-between",
-                        marginLeft: "1em",
-                        marginRight: "1em"
-                    }}> 
-                        <GenericButton
-                            title={"<- Previous"}
-                            onClick={() => _setStep(step - 1)}
-                            color="darkBlue"
-                            disabled={step < TASK_1 || step >= SUBMITTED}
+                <div>
+                    <div>
+                        <h2> Presentation {presentationId} </h2>
+                        <Instructions
+                            presentationData={presentationData}
+                            presentationId={presentationId}
+                            sectionTitles={data?.sectionTitles ? data.sectionTitles : []}
+                            step={step}
                         />
-                        <h3> {stepTitle(step)} </h3>
-                        <GenericButton
-                            title={"Next ->"}
-                            onClick={() => _setStep(step + 1)}
-                            color="darkBlue"
-                            disabled={step >= TASK_1 || step < WARM_UP}
-                        />
+                        <div style={{
+                            display: "flex",
+                            justifyContent: "space-between",
+                            marginLeft: "1em",
+                            marginRight: "1em"
+                        }}> 
+                            <GenericButton
+                                title={"<- Previous"}
+                                onClick={() => _setStep(step - 1)}
+                                color="darkBlue"
+                                disabled={step < TASK_1 || step >= SUBMITTED}
+                            />
+                            <h3> {stepTitle(step)} </h3>
+                            <GenericButton
+                                title={"Next ->"}
+                                onClick={() => _setStep(step + 1)}
+                                color="darkBlue"
+                                disabled={step >= TASK_1 || step < WARM_UP}
+                            />
+                        </div>
                     </div>
-                    {
-                        step > WARM_UP ?
-                        <Outline
-                            title={"Annotation Summary"}
-                            outline={outline}
-                            slideInfo={data?.slideInfo}
-                        />
-                        :
-                        null
-                    }
-                    <hr/>
                 </div>
                 :
                 null
+            }
+            {
+                true && step > WARM_UP ?
+                (
+                    <div style={{
+                        position: "-webkit-sticky",
+                        position: "sticky",
+                        top: "0px",
+                        paddingTop: "1em",
+                        background: "white",
+                    }}> 
+                        <GenericButton
+                            title={collapsed ? "Expand Summary" : "Collapse"}
+                            onClick={() => setCollapsed(!collapsed)}
+                        />    
+                        {
+                            collapsed ?
+                                null
+                            :
+                            <Outline
+                                title={"Annotation Summary"}
+                                outline={outline}
+                                slideInfo={data?.slideInfo}
+                            />
+                            
+                        }
+                        <hr/>
+                    </div>
+                )
+                :
+                <hr/>
             }
             {middleSection}
             {lastButton}
