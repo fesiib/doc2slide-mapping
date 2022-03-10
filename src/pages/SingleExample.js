@@ -4,7 +4,6 @@ import HeatMap from '../components/HeatMap';
 import Outline from '../components/Outline';
 import SlideThumbnails from '../components/SlideThumbnails';
 import ComparisonTable from '../components/ComparisonTable';
-import PipelineAccuracy from '../components/PipelineAccuracy';
 import ModelConfig from '../components/ModelConfig';
 import AnnotationList from '../components/AnnotationList';
 
@@ -64,10 +63,13 @@ function SingleExample(props) {
 				display: "flex",
 			}}> 
 				<Outline isGenerated={true} outline={data?.outline} slideInfo={data?.slideInfo} />
-				<AnnotationList gtOutline={data?.groundTruthOutline} annotations={data?.annotations} slideInfo={data?.slideInfo}/>
-				
+				<AnnotationList
+					gtOutline={data?.groundTruthOutline}
+					annotations={data?.annotations}
+					slideInfo={data?.slideInfo}
+					evaluationData={data?.evaluationData}
+				/>
 			</div>
-			<PipelineAccuracy evaluationData={data?.evaluationData}/>
 			<ComparisonTable paragraphs={paragraphs} scripts={scripts} sections={sections}/>
 		</div>
 	);

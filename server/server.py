@@ -41,6 +41,14 @@ def read_csv(path):
                 data[id][column] = entries[i]
     return data
 
+def __filter_data(data):
+    return {
+        "slideCnt": data["slideCnt"],
+        "metaInfo": data["metaInfo"],
+        "slideInfo": data["slideInfo"],
+        "outline": data["outline"],
+        "evaluationData": data["evaluationData"]
+    }
 def __process_presentation(
     presentation_id,
     similarity_type,
@@ -66,13 +74,12 @@ def __process_presentation(
         "presentationId": presentation_id,
     }
 
-@app.route('/mapping/presentation_data', methods=['POST'])
-def presentation_data():
-    decoded = request.data.decode('utf-8')
-    request_json = json.loads(decoded)
-    presentation_id = request_json["presentationId"]
-
-    print(request_json)
+def __presentation_data(presentation_id):
+    similarity_type = "classifier"
+    similarity_method = "tf-idf"
+    outlining_approach = "dp_mask"
+    apply_thresholding = False
+    apply_heuristics = True
 
     data = None
 
@@ -82,7 +89,30 @@ def presentation_data():
 
     if presentation_id in summary["valid_presentation_index"]:
         result_path = os.path.join(parent_path, "result.json")
-        data = read_json(result_path)
+        if os.path.isfile(result_path) is True:
+            data = read_json(result_path)
+        else:
+            data = __process_presentation(
+                presentation_id,
+                similarity_type,
+                similarity_method,
+                outlining_approach,
+                apply_thresholding,
+                apply_heuristics,
+            )
+            data = data["data"]
+    return data
+
+@app.route('/mapping/presentation_data', methods=['POST'])
+def presentation_data():
+    decoded = request.data.decode('utf-8')
+    request_json = json.loads(decoded)
+    presentation_id = request_json["presentationId"]
+
+    print(request_json)
+
+    data = __presentation_data(presentation_id)
+    data = __filter_data(data)
     
     return json.dumps({
         "presentationId": presentation_id,
@@ -121,7 +151,7 @@ def presentation_data_specific():
     summary = read_json(summary_path)
 
     if presentation_id in summary["valid_presentation_index"]:
-        result_path = os.path.join(parent_path, resultname)
+        result_path = os.path.join(parent_path, "results", resultname)
         if os.path.isfile(result_path) is True:
             data = read_json(result_path)
         else:
@@ -150,6 +180,27 @@ def summary_data():
     return json.dumps({
         "summaryData": summary,
         "presentationData": presentations_data,
+    })
+
+
+@app.route('/mapping/all_data', methods=['POST'])
+def all_data():
+    summary_path = os.path.join(SLIDE_DATA_PATH, "summary.json")
+    summary = read_json(summary_path)
+
+    valid_presentation_ids = summary["valid_presentation_index"]
+
+    all_data = []
+
+    for presentation_id in valid_presentation_ids:
+        data = __presentation_data(presentation_id)
+        all_data.append({
+            "presentationId": presentation_id,
+            "data": __filter_data(data),
+        })
+    
+    return json.dumps({
+        "allData": all_data,
     })
 
 @app.route('/mapping/process_presentation', methods=['POST'])

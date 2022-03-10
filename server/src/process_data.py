@@ -65,23 +65,32 @@ def fix_section_titles(section_data, paper_data):
     ret_paper_data = []
     #cnt_title = 0
 
-    last_section = None
+    existing_section_titles = {
+        "last": None
+    }
 
-    def is_main_section(title):
-        if title[0] in digits or title.isupper() is True:
-            return True
-        return False
+    def get_main_section(title):
+        id = title.strip().split(" ")[0]
+        if id[0] in digits:
+            fst = id.strip().split(".")[0]
+            if not fst in existing_section_titles:
+                existing_section_titles[fst] = title
+                existing_section_titles["last"] = title
+            return existing_section_titles[fst]
+        elif title.isupper():
+            return title
+        elif not existing_section_titles["last"] is None:
+            return existing_section_titles["last"]
+        else:
+            return title
+            
 
     for (section, paragraph) in zip(section_data, paper_data):
         if is_section_skipped(section):
             continue
-        if is_main_section(section) or last_section is None:
-            ret_section_data.append(section)
-            ret_paper_data.append(paragraph)
-            last_section = section
-        else:
-            ret_section_data.append(last_section)
-            ret_paper_data.append(paragraph)
+
+        ret_section_data.append(get_main_section(section))
+        ret_paper_data.append(paragraph)
 
     return ret_section_data, ret_paper_data
 
@@ -100,6 +109,14 @@ def process(path, presentation_id, similarity_type, similarity_method, outlining
     }
     if (presentation_id in GROUND_TRUTH_EXISTS):
         gt_data = read_json(os.path.join(path, "groundTruth.json"))
+
+    meta_info = {
+        "keywords": ["empty"],
+        "title": ["empty"],
+        "authors": ["empty"],
+    }
+    if os.path.isfile(os.path.join(path, "keywords.json")):
+        meta_info = read_json(os.path.join(path, "keywords.json"))
 
     annotations = scan_annotations(os.path.join(path, "annotations"))
 
@@ -140,6 +157,7 @@ def process(path, presentation_id, similarity_type, similarity_method, outlining
     result['slideCnt'] = len(timestamp_data)
     result['groundTruthOutline'] = gt_data['groundTruthSegments']
     result['annotations'] = annotations
+    result['metaInfo'] = meta_info
 
     slide_info = []
     startTimeStamp = 0
@@ -222,9 +240,14 @@ def process(path, presentation_id, similarity_type, similarity_method, outlining
         result["scriptSentences"] = paper_data_by_section
         result["paperSentences"] = _script_data
 
-    result["evaluationData"] = evaluate_outline(
-        result["outline"], result["groundTruthOutline"], result["slideInfo"], result["topSections"]
-    )
+    result["evaluationData"] = {
+        "groundTruth": 
+            evaluate_outline(result["outline"], result["groundTruthOutline"], result["slideInfo"], result["topSections"]),
+    }
+    for ground_truth_id, ground_truth_outline in annotations.items():
+        result["evaluationData"][ground_truth_id] = evaluate_outline(
+            result["outline"], ground_truth_outline, result["slideInfo"], result["topSections"]
+        )
 
     apply_thresholding_str = "T1"
     if apply_thresholding is False:
@@ -238,7 +261,9 @@ def process(path, presentation_id, similarity_type, similarity_method, outlining
         similarity_type + "_" + similarity_method + "_" + outlining_approach + "_" + \
         apply_thresholding_str + "_" + apply_heuristics_str + ".json"
 
-    with open(os.path.join(path, resultname), "w") as f:
+    os.makedirs(os.path.join(path, "results"), exist_ok=True)
+
+    with open(os.path.join(path, "results", resultname), "w") as f:
         f.write(json.dumps(result))
     with open(os.path.join(path, "result.json"), "w") as f:
         f.write(json.dumps(result))
@@ -292,11 +317,11 @@ def evaluate_all_models():
 
 if __name__ == "__main__":
 
-    evaluate_all_models()
+    #evaluate_all_models()
 
     #output = evaluate_model('slideMeta/slideData/', similarity_type="classifier", outlining_approach="dp_simple", apply_thresholding=True)
     #print(json.dumps(output, indent=4))
 
 
-    #output = process('slideMeta/slideData/20', 20, similarity_type="cosine", similarity_method="tf-idf", outlining_approach="dp_mask", apply_thresholding=False, apply_heuristics=True)
-    #print(output["annotations"])
+    output = process('slideMeta/slideData/0', 0, similarity_type="cosine", similarity_method="tf-idf", outlining_approach="dp_mask", apply_thresholding=False, apply_heuristics=True)
+    print(output["metaInfo"])

@@ -2,8 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 import { useTable, useExpanded } from 'react-table';
 import { Link } from 'react-router-dom';
-import Outline from './Outline';
-import PipelineAccuracy from './PipelineAccuracy';
 
 
 const TableStyles = styled.div`
