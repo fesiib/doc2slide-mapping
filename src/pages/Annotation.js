@@ -275,12 +275,9 @@ function Annotation(props) {
 
         switch(step) {
             case INTRO:
-                middleSection = (<div>
-                    <h2> Please choose a Presentation </h2>
-                    <PresentationGallery
-                        summary={summary}
-                    />
-                </div>);
+                middleSection = (<PresentationGallery
+                    summary={summary}
+                />);
                 break;
             case WARM_UP:
                 instructions = true;
@@ -323,43 +320,46 @@ function Annotation(props) {
                 />);
         }
         return (<div>
+            {
+                presentationId < 0 ?
+                    <h2> Please choose a Presentation </h2>
+                :
+                    <h2> Presentation {presentationId} </h2>
+            }
             {instructions ?
                 <div>
-                    <div>
-                        <h2> Presentation {presentationId} </h2>
-                        <Instructions
-                            presentationData={presentationData}
-                            presentationId={presentationId}
-                            sectionTitles={data?.sectionTitles ? data.sectionTitles : []}
-                            step={step}
+                    <Instructions
+                        presentationData={presentationData}
+                        presentationId={presentationId}
+                        sectionTitles={data?.sectionTitles ? data.sectionTitles : []}
+                        step={step}
+                    />
+                    <div style={{
+                        display: "flex",
+                        justifyContent: "space-between",
+                        marginLeft: "1em",
+                        marginRight: "1em"
+                    }}> 
+                        <GenericButton
+                            title={"<- Previous"}
+                            onClick={() => _setStep(step - 1)}
+                            color="darkBlue"
+                            disabled={step < TASK_1 || step >= SUBMITTED}
                         />
-                        <div style={{
-                            display: "flex",
-                            justifyContent: "space-between",
-                            marginLeft: "1em",
-                            marginRight: "1em"
-                        }}> 
-                            <GenericButton
-                                title={"<- Previous"}
-                                onClick={() => _setStep(step - 1)}
-                                color="darkBlue"
-                                disabled={step < TASK_1 || step >= SUBMITTED}
-                            />
-                            <h3> {stepTitle(step)} </h3>
-                            <GenericButton
-                                title={"Next ->"}
-                                onClick={() => _setStep(step + 1)}
-                                color="darkBlue"
-                                disabled={step >= TASK_1 || step < WARM_UP}
-                            />
-                        </div>
+                        <h3> {stepTitle(step)} </h3>
+                        <GenericButton
+                            title={"Next ->"}
+                            onClick={() => _setStep(step + 1)}
+                            color="darkBlue"
+                            disabled={step >= TASK_1 || step < WARM_UP}
+                        />
                     </div>
                 </div>
                 :
                 null
             }
             {
-                true && step > WARM_UP ?
+                step < SUBMITTED && step > WARM_UP ?
                 (
                     <div style={{
                         position: "-webkit-sticky",
