@@ -4,394 +4,125 @@ import '../App.css';
 
 import { useDispatch, useSelector } from "react-redux";
 import { resetApp } from "../reducers";
-import { addBoundary, NO_LABEL, setLabel, setPresentationid, setStep } from "../reducers/annotationState";
+import { setLabel, setPresentationid, setStep } from "../reducers/annotationState";
 
-import AnnotationTable from "../components/AnnotationTable";
 import GenericButton from "../components/GenericButton";
-import SlideThumbnails from "../components/SlideThumbnails";
+import { AfterSubmission, AnnotationTask0, AnnotationTask1 } from "../components/AnnotationTasks";
 import Outline from "../components/Outline";
 
 const INTRO = 0;
 const WARM_UP = 1;
 const TASK_1 = 2;
-const TASK_2 = 3;
+const TASK_2 = 33;
 const TASK_3 = 44;
-const SUBMITTED = 4;
+const SUBMITTED = 3;
 
 const GOOGLE_FORM_LINK = "https://docs.google.com/forms/d/e/1FAIpQLSfMRNceok4P5pLvu9ofROTUcFr_AKYPBzv6lKu8CX3qBP3B9g/viewform?usp=sf_link"
 
 export const ANNOTATION_PRESENTATION_IDS = [4, 6, 7, 9, 19];
 
-function WarmUp(props) {
-    const presentationId = props?.presentationId;
-    const data = props?.data;
-    return (<div>
-        <AnnotationTable
-            presentationId={presentationId}
-            slideInfo={data?.slideInfo}
-            enableBoundaries={false}
-        />
-    </div>);
-}
-
-function Task1(props) {
-    const presentationId = props?.presentationId;
-    const data = props?.data;
-
-    const { labels } = useSelector(state => state.annotationState);
-
-    const printTransitionBoundaries = () => {
-        let strTransitions = "";
-        let firstTransition = true;
-        for (let key in labels) {
-            if (key <= 1 || key >= data?.slideInfo?.length - 1) {
-                continue;
-            }
-            if (!firstTransition) { 
-                strTransitions += ", ";
-            }
-            strTransitions += key;
-            firstTransition = false;
-        }
-
-        if (firstTransition) {
-            strTransitions = "Please Select Transitions";
-        }
-        return " " + strTransitions;
-    }
-
-    return (<div>
-
-        <div style={{
-            fontSize: "20px",
-            padding: "1em",
-        }}>
-            <i>
-                Selected Transitions: 
-            </i>
-            <pre> 
-                {printTransitionBoundaries()}
-            </pre>
-        </div>
-
-        <AnnotationTable
-            presentationId={presentationId}
-            slideInfo={data?.slideInfo}
-            enableBoundaries={true}
-        />
-    </div>);
-}
-
-function Task2(props) {
-    const dispatch = useDispatch();
-
-    const presentationId = props?.presentationId;
-    const data = props?.data;
-
-    const { labels, submissionId } = useSelector(state => state.annotationState);
-
-    const endIdxs = [ ...Object.keys(labels).map((val) => parseInt(val)).sort((p1, p2) => p1 - p2)];
-
-    const totalNumSteps = endIdxs.length;
-
-    const [subStep, setSubStep] = useState(0);
-
-    let startIdx = 1
-    let endIdx = data?.slideInfo?.length - 1;
-
-    if (subStep > 0 && subStep < endIdxs.length) {
-        startIdx = endIdxs[subStep - 1] + 1;
-    }
-    if (subStep < endIdxs.length) {
-        endIdx = endIdxs[subStep];
-    }
-
-    const generateOutline = () => {
-        let outline = [];
-
-        for (let i = 0; i < endIdxs.length; i++) {
-            const start = i > 0 ? endIdxs[i - 1] + 1 : 1;
-            const end = endIdxs[i];
-            outline.push({
-                sectionTitle: labels[end],
-                startSlideIndex: start,
-                endSlideIndex: end,
-            });
-        }
-
-        return outline;
-    }
-
-    const handleLabelChange = (event) => {
-        dispatch(setLabel({
-            label: event.target.value,
-            boundary: endIdx,
-        }));
-    }
-
-    const submitAnnotation = () => {
-        axios.post('http://server.hyungyu.com:7777/annotation/submit_annotation', {
-			presentationId: presentationId,
-            submissionId: submissionId,
-            outline: generateOutline(),
-		}).then( (response) => {
-			console.log(response);
-		});
-    };
-
-    const _setStep = (new_step) => {
-        window.scrollTo(0, 0);
-        dispatch(setStep({ step: new_step }));
-    }
-
-    return (<div>
-        {
-            subStep === totalNumSteps ?
-            <h4> Summary: You labeled {totalNumSteps} segments. </h4>
-            :
-            <h4> Segment {subStep + 1}: ({startIdx} - {endIdx}) </h4>
-        }
-        <div style={{
-            display: "flex",
-            justifyContent: "space-between",
-            margin: "1em"
-        }}>
-            {
-                subStep > 0 ? 
-                <GenericButton
-                    title={"<- Segment " + (subStep).toString()}
-                    onClick={() => setSubStep(subStep - 1)}
-                    color="brown"
-                />
-                :
-                <div> </div>
-            }
-            {
-                subStep < totalNumSteps - 1 ? 
-                <GenericButton
-                    title={" -> Segment " + (subStep + 2).toString()}
-                    onClick={() => setSubStep(subStep + 1)}
-                    color="brown"
-                />
-                :
-                (
-                    subStep === totalNumSteps - 1 ?
-                    <GenericButton
-                        title={" Summary "}
-                        onClick={() => setSubStep(subStep + 1)}
-                        color="darkGreen"
-                    />
-                    :
-                    null
-                )
-            }
-        </div>
-        {
-            subStep === totalNumSteps ?
-            <div>
-                <Outline
-                    isGenerated={false}
-                    outline={generateOutline()}
-                    slideInfo={data?.slideInfo}
-                />
-            </div>
-            :
-            <div>
-                <label htmlFor={"labelInput"}> Label: </label>
-                <input
-                    id={"labelInput"}
-                    autoFocus={true}
-                    type={"text"} 
-                    onChange={handleLabelChange}
-                    value={labels[endIdx] === NO_LABEL ? "" : labels[endIdx]}
-                />
-            </div>
-        }
-        <div>
-            <SlideThumbnails 
-                presentationId={presentationId}
-                slideInfo={data?.slideInfo}
-                startIdx={startIdx}
-                endIdx={endIdx + 1}
-            />
-        </div>
-        {
-            subStep === totalNumSteps ?
-            <div>
-                <GenericButton
-                    title={"Finish & Submit"}
-                    onClick={() => {
-                        submitAnnotation();
-                        _setStep(SUBMITTED);
-                    }
-                    }
-                />
-            </div>
-            :
-            <div>
-               
-            </div>
-        }
-    </div>);
-}
-
-function Summary(props) {
-    const presentationId = props?.presentationId;
-    const data = props?.data;
-
-    const { labels } = useSelector(state => state.annotationState);
-
-    const endIdxs = [ ...Object.keys(labels).map((val) => parseInt(val)).sort((p1, p2) => p1 - p2)];
-
-    const totalNumSteps = endIdxs.length;
-
-    let startIdx = 1
-    let endIdx = data?.slideInfo?.length - 1;
-
-    let outline = [];
-
-    for (let i = 0; i < endIdxs.length; i++) {
-        const start = i > 0 ? endIdxs[i - 1] + 1 : 1;
-        const end = endIdxs[i];
-        outline.push({
-            sectionTitle: labels[end],
-            startSlideIndex: start,
-            endSlideIndex: end,
-        });
-    }
-
-    return (<div>
-        <h4> Summary: You labeled {totalNumSteps} segments </h4>
-        <div>
-            <Outline
-                isGenerated={false}
-                outline={outline}
-                slideInfo={data?.slideInfo}
-            />
-        </div>
-        <div>
-            <SlideThumbnails 
-                presentationId={presentationId}
-                slideInfo={data?.slideInfo}
-                startIdx={startIdx}
-                endIdx={endIdx + 1}
-            />
-        </div>
-    </div>);
-}
-
 function Instructions(props) {
-    const dispatch = useDispatch();
-
-    const presentationId = props?.presentationId;
     const presentationData = props?.presentationData;
+    const sectionTitles = props?.sectionTitles;
     const step = props?.step;
-
-    const { submissionId } = useSelector(state => state.annotationState);
+    const collapsed = props?.collapsed;
 
     let presentationVideo = null;
+    let presentationPaper = null;
     for (let key in presentationData) {
         if (presentationData[key].includes("youtube")) {
             presentationVideo = presentationData[key];
         }
-    }
-
-    const stepTitle = (step) => {
-        switch (step) {
-            case WARM_UP:
-                return "Currently in " + "Warm-up";
-            case TASK_1:
-                    return "Currently in " + "Task 1";
-            case TASK_2:
-                return "Currently in " + "Task 2";
-            case TASK_3:
-                return "Currently in " + "Task 3";
-            case SUBMITTED:
-                return "Your work is recorded!"
-            default:
-                return null;
+        if (presentationData[key].endsWith(".pdf")) {
+            const link = presentationData[key].replace(".pdf", "");
+            presentationPaper = "https://dl.acm.org/doi/pdf/10.1145/" + link;
         }
     }
 
-    return (<div>        
-        <h2> Presentation {presentationId} </h2>
-        <div style={{
-            "textAlign": "left",
-            "margin": "2em",
-            "padding": "1em",
-            "background": "lightgray"
-        }}>
-            <h3> Instructions: </h3>
-            <ol start={0}>
-                {step === WARM_UP ? 
-                    <li> <b>  {" -> "} Warm-up: </b> Skim through slides & scripts to get a general sense of the presentation</li>
-                    :
-                    <li> Warm-up: Skim through slides & scripts to general sense of the presentation</li>
-                }
-                <ul> 
-                    {
-                        presentationVideo ? 
-                        <li>
-                            You can watch the entire presentation video here:{" "}
-                            <a href={presentationVideo}>Youtube ~15 mins </a>
-                        </li>
-                        :
-                        null
-                    }
-                </ul>
-
-                {step === TASK_1 ?
-                    <li> 
-                        <b> {" -> "} Task: </b>
-                        Identify main <b> (up to 6 in total) </b> <a href={"section_transition_examples"}> section transitions </a> in slides
+    return (<div style={{
+        display: collapsed ? "none" : "block", 
+        textAlign: "left",
+        marginTop: "1em",
+        padding: "1em",
+        background: "lightgray"
+    }}>
+        <h3> Instructions: </h3>
+        <ol start={0}>
+            {step === WARM_UP ? 
+                <li> <b>  {" -> "} Warm-up: </b> Skim through slides & scripts to get a general sense of the presentation</li>
+                :
+                <li> Warm-up: Skim through slides & scripts to general sense of the presentation</li>
+            }
+            <ul> 
+                {
+                    presentationVideo ? 
+                    <li>
+                        You can watch the entire presentation video here:{" "}
+                        <a href={presentationVideo}>Youtube ~15 mins </a>
                     </li>
                     :
-                    <li> Task: Identify main <b> (up to 6 in total) </b> <a href={"section_transition_examples"}> section transitions </a>  in slides </li>
+                    null
                 }
-                {step === TASK_2 ? 
-                    <li> <b> {" -> "} Task: </b> Label produced segments of slides  </li>
+                {
+                    presentationPaper ? 
+                    <li>
+                        You can read the original paper here:{" "}
+                        <a href={presentationPaper}> PDF </a>
+                    </li>
                     :
-                    <li> Task: Label produced segments of slides. </li>
+                    null
                 }
-                {/* {step === TASK_3 ?
-                    <li> <b> {" -> "} Task: </b> Bonus </li>
-                    :
-                    <li> Task: Bonus </li>
-                } */}
-            </ol>
-            <ul>
-
-                <li>
-                    You can jump back & forth between Tasks 1 and 2 <i>
-                        (just press on the <span style={{color: "darkBlue"}}> blue </span> buttons above)
-                    </i>
-                </li>
             </ul>
-        </div>
-        <div style={{
-            margin: "1em"
-        }}>
-            <h2> {stepTitle(step)} </h2>
-            {
-                step === SUBMITTED ?
-                <div>
-                    <span> Your Submission Id (copy-paste it to the form): </span>
-                    <h4> {submissionId} </h4>
-                    <h3> <a href={GOOGLE_FORM_LINK}> Please Fill out the Form </a> </h3>
-                    <GenericButton
-                        title={"Start new Annotation"}
-                        onClick={() => dispatch(resetApp())}
-                    />
-                </div>
-                : 
-                null
-            }
-        </div>
-    </div>);
+
+            <li>
+                {step === TASK_1 ?
+                    <b> {" -> "} Task: </b>
+                    :
+                    <span> Task </span>
+                }
+                <ul>
+                    <li>
+                        Identify main <a href={"section_transition_examples"}> section transitions </a> in slides
+                    </li>
+                    <li>
+                        Label them with below section titles from the paper:
+                        <ul>
+                            {  
+                                sectionTitles.map((val, idx) => {
+                                    let title = val;
+                                    return (<li key={"sectionTitle_" + idx}>
+                                        {title}
+                                    </li>);
+                                })
+                            }
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            {/* {step === TASK_2 ? 
+                <li> <b> {" -> "} Task: </b> Label produced segments of slides  </li>
+                :
+                <li> Task: Label produced segments of slides. </li>
+            } */}
+            {/* {step === TASK_3 ?
+                <li> <b> {" -> "} Task: </b> Bonus </li>
+                :
+                <li> Task: Bonus </li>
+            } */}
+        </ol>
+        {/* <ul>
+
+            <li>
+                You can jump back & forth between Tasks 1 and 2 <i>
+                    (just press on the <span style={{color: "darkBlue"}}> blue </span> buttons above)
+                </i>
+            </li>
+        </ul> */}
+    </div>); 
 }
 
 
-function Motivation(props) {
+function Motivation() {
     return (<div>
         <div style={{
             "textAlign": "left",
@@ -454,11 +185,29 @@ function PresentationGallery(props) {
 function Annotation(props) {
     const dispatch = useDispatch();
     
-    const { step, presentationId, presentationData } = useSelector(state => state.annotationState);
+    const { step,
+        presentationId,
+        presentationData,
+        submissionId,
+        labels
+    } = useSelector(state => state.annotationState);
 
     const [data, setData] = useState([]);
-
     const [summary, setSummary] = useState(null);
+    const [collapsed, setCollapsed] = useState(false);
+
+    let outline = [];
+    const endIdxs = [ ...Object.keys(labels).map((val) => parseInt(val)).sort((p1, p2) => p1 - p2)];
+
+    for (let i = 0; i < endIdxs.length; i++) {
+        const start = i > 0 ? endIdxs[i - 1] + 1 : 1;
+        const end = endIdxs[i];
+        outline.push({
+            sectionTitle: labels[end],
+            startSlideIndex: start,
+            endSlideIndex: end,
+        });
+    }
 
     useEffect(() => {
         if (step > INTRO) {
@@ -469,7 +218,7 @@ function Annotation(props) {
                 setData(response.data.data);
                 dispatch(setLabel({
                     boundary: response.data.data.slideCnt - 1,
-                    label: "end"
+                    label: "End"
                 }));
             });
         }
@@ -483,70 +232,155 @@ function Annotation(props) {
                 setSummary(response.data);
             });
         }
-    }, [step])
+    }, [step]);
+
 
     const _setStep = (new_step) => {
         window.scrollTo(0, 0);
         dispatch(setStep({ step: new_step }));
     }
 
+    const submitAnnotation = () => {
+        _setStep(SUBMITTED);
+        axios.post('http://server.hyungyu.com:7777/annotation/submit_annotation', {
+            presentationId: presentationId,
+            submissionId: submissionId,
+            outline: outline,
+        }).then( (response) => {
+            console.log(response);
+        });
+    };
+
+    const stepTitle = (step) => {
+        switch (step) {
+            case WARM_UP:
+                return "Currently in " + "Warm-up";
+            case TASK_1:
+                    return "Currently in " + "Task 1";
+            case TASK_2:
+                return "Currently in " + "Task 2";
+            case TASK_3:
+                return "Currently in " + "Task 3";
+            case SUBMITTED:
+                return "Your work is recorded!"
+            default:
+                return null;
+        }
+    }
+
     const outputMainSection = () => {
+        let instructions = false;
+        let middleSection = null;
+        let lastButton = null;
+
         switch(step) {
             case INTRO:
-                return (<div>
+                middleSection = (<div>
+                    <h2> Please choose a Presentation </h2>
                     <PresentationGallery
                         summary={summary}
                     />
                 </div>);
-            
+                break;
             case WARM_UP:
-                return (<div>
-                    <Instructions
-                        presentationId={presentationId}
-                        presentationData={presentationData}
-                        step={step}
-                    />
-                    <WarmUp presentationId={presentationId}  data={data}/>
-
-                    <GenericButton
-                        title={"Start Task 1"}
-                        onClick={() => _setStep(TASK_1)}
-                    />
-                </div>);
-            
+                instructions = true;
+                middleSection = (<AnnotationTask0
+                    presentationId={presentationId}
+                    data={data}
+                />);
+                lastButton = (<GenericButton
+                    title={"Start Task 1"}
+                    onClick={() => _setStep(TASK_1)}
+                    color="darkBlue"
+                />);
+                break;
             case TASK_1:
-                return (<div>
-                    <Instructions
-                        presentationId={presentationId}
-                        presentationData={presentationData}
-                        step={step}
-                    />
-                    <Task1 presentationId={presentationId}  data={data}/>
-                    <GenericButton
-                        title={"Start Task 2"}
-                        onClick={() => _setStep(TASK_2)}
-                    />
-                </div>);
+                instructions = true;
+                middleSection = (<AnnotationTask1
+                    presentationId={presentationId}
+                    data={data}
+                />);
+                lastButton = (<GenericButton
+                    title={"Submit"}
+                    onClick={submitAnnotation}
+                    color="darkBlue"
+                />);
+                break;
             case TASK_2:
-                return (<div>
-                    <Instructions
-                        presentationId={presentationId}
-                        presentationData={presentationData}
-                        step={step}
-                    />
-                    <Task2 presentationId={presentationId}  data={data}/>
-                </div>);
-            // case TASK_3:
+            case TASK_3:
             default:
-                return <div>
-                    <Instructions
-                        presentationId={presentationId}
-                        presentationData={presentationData}
-                        step={step}
-                    />
-                    <Summary presentationId={presentationId}  data={data}/>
-                </div>
+                middleSection = (<AfterSubmission
+                    presentationId={presentationId}
+                    data={data}
+                    formLink={GOOGLE_FORM_LINK}
+                    outline={outline}
+                />);
+
+                lastButton = (<GenericButton
+                    title={"Start new Annotation"}
+                    onClick={() => dispatch(resetApp())}
+                    color="darkBlue"
+                />);
         }
+        return (<div>
+            {instructions ?
+                <div style={{
+                    position: "-webkit-sticky",
+                    position: "sticky",
+                    top: "0px",
+                    paddingTop: "1em",
+                    background: "white",
+                }}>        
+                    <h2> Presentation {presentationId} </h2>
+                    <Instructions
+                        presentationData={presentationData}
+                        presentationId={presentationId}
+                        sectionTitles={data?.sectionTitles ? data.sectionTitles : []}
+                        step={step}
+                        collapsed={collapsed}
+                    />
+                    <GenericButton
+                        title={collapsed ? "Expand Instructions" : "Collapse"}
+                        onClick={() => setCollapsed(!collapsed)}
+                    />
+                    <div style={{
+                        display: "flex",
+                        justifyContent: "space-between",
+                        marginLeft: "1em",
+                        marginRight: "1em"
+                    }}> 
+                        <GenericButton
+                            title={"<- Previous"}
+                            onClick={() => _setStep(step - 1)}
+                            color="darkBlue"
+                            disabled={step < TASK_1 || step >= SUBMITTED}
+                        />
+                        <h3> {stepTitle(step)} </h3>
+                        <GenericButton
+                            title={"Next ->"}
+                            onClick={() => _setStep(step + 1)}
+                            color="darkBlue"
+                            disabled={step >= TASK_1 || step < WARM_UP}
+                        />
+                    </div>
+                    {
+                        step > WARM_UP ?
+                        <Outline
+                            title={"Annotation Summary"}
+                            outline={outline}
+                            slideInfo={data?.slideInfo}
+                        />
+                        :
+                        null
+                    }
+                    <hr/>
+                </div>
+                :
+                null
+            }
+            {middleSection}
+            {lastButton}
+        </div>);
     }
 
     return (<div className="App">
@@ -565,33 +399,12 @@ function Annotation(props) {
                 null
             }
         </div>
-        <Motivation/>
-        <div style={{
-            display: "flex",
-            justifyContent: "space-between",
-            margin: "1em"
-        }}>
-            {
-                step >= TASK_1 ? 
-                <GenericButton
-                    title={"<- Previous Task"}
-                    onClick={() => _setStep(step - 1)}
-                    color="darkBlue"
-                />
-                :
-                <div> </div>
-            }
-            {
-                step < TASK_2 && step >= WARM_UP ? 
-                <GenericButton
-                    title={"Next Task ->"}
-                    onClick={() => _setStep(step + 1)}
-                    color="darkBlue"
-                />
-                :
-                null
-            }
-        </div>
+        {
+            step === INTRO ?
+            <Motivation/>
+            :
+            null
+        }
         {outputMainSection()}
     </div>)
 }

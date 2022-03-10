@@ -71,7 +71,7 @@ function AllOutlines(props) {
                     fontSize: "15pt",
                     display: "flex",
                 }}> 
-                    <Outline isGenerated={true} outline={curData?.outline} slideInfo={curData?.slideInfo} />
+                    <Outline title="Generated" outline={curData?.outline} slideInfo={curData?.slideInfo} />
                     <AnnotationList 
                         gtOutline={curData?.groundTruthOutline}
                         annotations={curData?.annotations}

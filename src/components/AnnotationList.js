@@ -44,12 +44,12 @@ function AnnotationList(props) {
                     selectedAnnotationId === GT_ID ?
                     (
                         gtOutline.length > 0 ? 
-                        <Outline isGenerated={false} outline={gtOutline} slideInfo={slideInfo} />
+                        <Outline title="Ground Truth" outline={gtOutline} slideInfo={slideInfo} />
                         :
                         <p> No Paper-based Ground Truth </p>
                     )
                     :
-                    <Outline isGenerated={false} outline={annotations[selectedAnnotationId]} slideInfo={slideInfo} />
+                    <Outline title="Ground Truth" outline={annotations[selectedAnnotationId]} slideInfo={slideInfo} />
                 }
             </div>
             <div>

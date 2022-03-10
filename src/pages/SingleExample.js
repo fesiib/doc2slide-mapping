@@ -62,7 +62,7 @@ function SingleExample(props) {
 				fontSize: "15pt",
 				display: "flex",
 			}}> 
-				<Outline isGenerated={true} outline={data?.outline} slideInfo={data?.slideInfo} />
+				<Outline title="Generated" outline={data?.outline} slideInfo={data?.slideInfo} />
 				<AnnotationList
 					gtOutline={data?.groundTruthOutline}
 					annotations={data?.annotations}

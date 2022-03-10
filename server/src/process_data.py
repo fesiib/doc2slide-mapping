@@ -158,6 +158,7 @@ def process(path, presentation_id, similarity_type, similarity_method, outlining
     result['groundTruthOutline'] = gt_data['groundTruthSegments']
     result['annotations'] = annotations
     result['metaInfo'] = meta_info
+    result['sectionTitles'] = sorted(list(set(section_data)))
 
     slide_info = []
     startTimeStamp = 0

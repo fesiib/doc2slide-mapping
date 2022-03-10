@@ -1,7 +1,7 @@
 import React from 'react'
 
 function Outline(props) {
-    const isGenerated = props?.isGenerated;
+    const title = props?.title
     const outline = props?.outline;
     const slideInfo = props?.slideInfo;
 
@@ -44,7 +44,7 @@ function Outline(props) {
         display: "flex",
         flexDirection: "column",
     }}>
-        <h4> {isGenerated ? "Generated Outline" : "Ground Truth Outline"} </h4>
+        <h4> {title} </h4>
         <ol style={{
             alignSelf: "center",
             margin: "0em",

@@ -47,6 +47,7 @@ def __filter_data(data):
         "metaInfo": data["metaInfo"],
         "slideInfo": data["slideInfo"],
         "outline": data["outline"],
+        "sectionTitles": data["sectionTitles"],
         "evaluationData": data["evaluationData"]
     }
 def __process_presentation(
