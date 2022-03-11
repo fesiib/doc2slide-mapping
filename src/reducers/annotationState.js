@@ -45,7 +45,7 @@ const initialState = {
     submissionId: randomId(),
     step: 0,
     labels: {
-        1: "Title"
+        1: "TITLE"
     },
 };
 

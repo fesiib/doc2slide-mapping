@@ -4,14 +4,15 @@ import '../App.css';
 
 import { useDispatch, useSelector } from "react-redux";
 import { resetApp } from "../reducers";
-import { setLabel, setPresentationid, setStep } from "../reducers/annotationState";
+import { NO_LABEL, setLabel, setPresentationid, setStep } from "../reducers/annotationState";
 
 import GenericButton from "../components/GenericButton";
 import { AfterSubmission, AnnotationTask0, AnnotationTask1 } from "../components/AnnotationTasks";
 import Outline from "../components/Outline";
+import ReactPlayer from "react-player";
 
 const INTRO = 0;
-const WARM_UP = 1;
+const BROWSING = 1;
 const TASK_1 = 2;
 const TASK_2 = 33;
 const TASK_3 = 44;
@@ -39,6 +40,8 @@ function Instructions(props) {
         }
     }
 
+    presentationVideo = null;
+
     return (<div style={{
         display: collapsed ? "none" : "block", 
         textAlign: "left",
@@ -47,11 +50,22 @@ function Instructions(props) {
         background: "lightgray"
     }}>
         <h3> Instructions: </h3>
+
+        <p>
+            The goal of the annotation task is to generate an outline for a chosen presentation.
+            Below, the presentation slides and script are given. They were extracted from the presentation video.
+        </p>
+        <p>
+            In short, in <b> Browsing </b> you will be asked to skim through both slides & scripts, so in the <b> Task 1 </b>
+            you could identify the transitions and label each resultant segment. <br/>
+            The labels are section titles from the original paper of the presentation or default <i> Title Page and End Page </i>.
+        </p>
+
         <ol start={0}>
-            {step === WARM_UP ? 
-                <li> <b>  {" -> "} Warm-up: </b> Skim through slides & scripts to get a general sense of the presentation</li>
+            {step === BROWSING ? 
+                <li> <b>  {" -> "} Browsing: </b> Skim through slides & scripts to get a general sense of the presentation</li>
                 :
-                <li> Warm-up: Skim through slides & scripts to general sense of the presentation</li>
+                <li> Browsing: Skim through slides & scripts to general sense of the presentation</li>
             }
             <ul> 
                 {
@@ -85,8 +99,9 @@ function Instructions(props) {
                         Identify main <a href={"section_transition_examples"}> section transitions </a> in slides
                     </li>
                     <li>
-                        Label them with below section titles from the paper:
+                        Label them with default TITLE & END, and below section titles from the paper:
                         <ul>
+                            <li> TITLE </li>
                             {  
                                 sectionTitles.map((val, idx) => {
                                     let title = val;
@@ -95,6 +110,7 @@ function Instructions(props) {
                                     </li>);
                                 })
                             }
+                            <li> END </li>
                         </ul>
                     </li>
                 </ul>
@@ -132,14 +148,56 @@ function Motivation() {
         }}>
             <h3> Motivation: </h3>
             <p>
-                Project Doc2Slide (KIXLAB) is constructing a corpus of outlines for conference presentations.
-                The aim is to evaluate our outline generation algorithm.
+                Project Doc2Slide (KIXLAB) is constructing a corpus of outlines of conference presentations.
+                The aim is to evaluate the accuracy of our outline generation algorithm.
             </p>
             <p>
-                If you have any questions please contact me through Slack DM or email to
+                There is no strict universal definition of an outline. 
+                In our case, we are concerned about outlines of presentations, more specifically the slides.
+            </p>
+            <p>
+                In other words, the outline is a segmentation of presentation slides that consist of:
+            </p>
+            <ul>
+                <li> Labels of segments. </li>
+                <li> Each segment's starting & ending points </li>
+                <li> Time spent on each segment </li>
+            </ul>
+            <p>
+                So for example, the below could have been an appropriate outline:
+            </p>
+
+            <ol>
+                <li> Title Page (1 - 1) (30 seconds)</li>
+                <li> Introduction (2 - 5) (1 minute)</li>
+                <li> System (6 - 20) (5 minutes)</li>
+                <li> Discussion (21 - 25) (3 minutes)</li>
+                <li> End (26 - 26) (20 seconds )</li>
+            </ol>
+            <p>
+                You will be given presentation slides, corresponding scripts, and labels.
+                The task is to segment the slides by selecting appropriate transitions and annotating each segment with given labels.
+            </p>
+            <p>
+                If you have any questions please email me to
                 <a href={"mailto:tlekbay.b@gmail.com"}> tlekbay.b@gmail.com </a>
             </p>
         </div>
+    </div>);
+}
+
+function TutorialVideo(props) {
+    const TUTORIAL_VIDEO = "/annotationTutorials/tutorial_1.mp4";
+    return (<div>
+        <h2> Tutorial Video </h2>
+        <ReactPlayer
+            style={{
+                margin: "auto"
+            }}
+            url={TUTORIAL_VIDEO}
+            height={"500px"}
+            controls={true}
+        />
     </div>);
 }
 
@@ -165,7 +223,7 @@ function PresentationGallery(props) {
             presentationData,
         }));
         window.scrollTo(0, 0);
-        dispatch(setStep({ step: WARM_UP }));
+        dispatch(setStep({ step: BROWSING }));
     }
 
     return (<div>
@@ -218,7 +276,7 @@ function Annotation(props) {
                 setData(response.data.data);
                 dispatch(setLabel({
                     boundary: response.data.data.slideCnt - 1,
-                    label: "End"
+                    label: "END"
                 }));
             });
         }
@@ -241,6 +299,17 @@ function Annotation(props) {
     }
 
     const submitAnnotation = () => {
+        let noLabels = [];
+        for (let endIdx in labels) {
+            if (labels[endIdx] === NO_LABEL) {
+                noLabels.push(endIdx);
+            }
+        }
+
+        if (noLabels.length > 0) {
+            return;
+        }
+
         _setStep(SUBMITTED);
         axios.post('http://server.hyungyu.com:7777/annotation/submit_annotation', {
             presentationId: presentationId,
@@ -253,8 +322,8 @@ function Annotation(props) {
 
     const stepTitle = (step) => {
         switch (step) {
-            case WARM_UP:
-                return "Currently in " + "Warm-up";
+            case BROWSING:
+                return "Currently in " + "Browsing";
             case TASK_1:
                     return "Currently in " + "Task 1";
             case TASK_2:
@@ -279,7 +348,7 @@ function Annotation(props) {
                     summary={summary}
                 />);
                 break;
-            case WARM_UP:
+            case BROWSING:
                 instructions = true;
                 middleSection = (<AnnotationTask0
                     presentationId={presentationId}
@@ -351,7 +420,7 @@ function Annotation(props) {
                             title={"Next ->"}
                             onClick={() => _setStep(step + 1)}
                             color="darkBlue"
-                            disabled={step >= TASK_1 || step < WARM_UP}
+                            disabled={step >= TASK_1 || step < BROWSING}
                         />
                     </div>
                 </div>
@@ -359,7 +428,7 @@ function Annotation(props) {
                 null
             }
             {
-                step < SUBMITTED && step > WARM_UP ?
+                step < SUBMITTED && step > BROWSING ?
                 (
                     <div style={{
                         position: "-webkit-sticky",
@@ -395,7 +464,7 @@ function Annotation(props) {
     }
 
     return (<div className="App">
-        <h2> Ground Truth Construction for Presentation Outlines</h2>
+        <h2> Outline Construction for Presentations </h2>
         <div style={{
             textAlign: "right",
             marginRight: "1em"
@@ -412,7 +481,10 @@ function Annotation(props) {
         </div>
         {
             step === INTRO ?
-            <Motivation/>
+            <div>            
+                <Motivation/>
+                <TutorialVideo/>
+            </div>
             :
             null
         }

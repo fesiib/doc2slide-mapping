@@ -20,19 +20,19 @@ function Outline(props) {
             }}>
 
                 <span style={{
-                    padding: "1em"
+                    padding: "5px"
                 }}>
                     ({val.startSlideIndex} - {val.endSlideIndex}) 
                 </span>
                 
                 <span style={{
-                    padding: "1em"
+                    padding: "5px"
                 }}>
                     {val.sectionTitle} 
                 </span>
                 
                 <span style={{
-                    padding: "1em"
+                    padding: "5px"
                 }}>
                        {duration.getMinutes()}:{duration.getSeconds()} mins
                 </span>
@@ -40,7 +40,7 @@ function Outline(props) {
         </li>);
     });
     return (<div style={{
-        margin: "1em",
+        margin: "5px",
         display: "flex",
         flexDirection: "column",
     }}>

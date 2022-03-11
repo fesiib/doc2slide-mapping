@@ -54,8 +54,9 @@ function LabelSelector(props) {
     const valueTitle = props?.valueTitle;
     const sectionTitles = props?.sectionTitles;
     const boundary = props?.boundary;
+    const labelTitle = props?.labelTitle;
 
-    const options = [NO_LABEL, "Title", ...sectionTitles, "End"];
+    const options = [NO_LABEL, "TITLE", ...sectionTitles, "END"];
 
     const curValue = options.findIndex((val) => val === valueTitle);
 
@@ -65,17 +66,30 @@ function LabelSelector(props) {
             label: options[idx],
             boundary: boundary,
         }));
-    }
+    }; 
     return (<div>
-        <select onChange={(event) => handleLabelChange(event)} value={curValue}>
+        <label htmlFor={"selector_" + boundary + labelTitle}> {labelTitle} </label> 
+        <select id={"selector_" + boundary + labelTitle} onChange={(event) => handleLabelChange(event)} value={curValue}>
             {
                 options.map((val, idx) => {
                     return (<option key={"labelOption_" + idx} value={idx}>
-                        {val}
+                        {val === NO_LABEL ? "" : val}
                     </option>)
                 })
             }
         </select>
+        {
+            curValue === 0 ?
+            <p style={{
+                color: "red",
+                margin: 0,
+                padding: 0,
+            }}>
+                Please choose a label
+            </p>
+            :
+            null
+        }
     </div>);
 }
 
@@ -90,6 +104,23 @@ function AnnotationTable(props) {
     const { labels } = useSelector(state => state.annotationState);
 
     const endIdxs = [ ...Object.keys(labels).map((val) => parseInt(val)).sort((p1, p2) => p1 - p2)];
+
+    let noLabels = [];
+    for (let endIdx in labels) {
+        if (labels[endIdx] === NO_LABEL) {
+            noLabels.push(endIdx);
+        }
+    }
+    let noLabelMessage = "Unlabeled segment end" + (noLabels.length > 1 ? "s: " : ": ");
+
+    if (noLabels.length > 0) {
+        for (let i = 0; i < noLabels.length; i++) {
+            noLabelMessage += noLabels[i];
+            if (i < noLabels.length - 1) {
+                noLabelMessage += ", ";
+            }
+        }
+    }
 
     const getNextEndIdx = (target_idx) => {
         const label_idx = endIdxs.find((value, idx) => {
@@ -136,6 +167,7 @@ function AnnotationTable(props) {
                                 {
                                     (labels.hasOwnProperty(idx - 1) || idx === 1) ?
                                     <LabelSelector
+                                        labelTitle={"Segment Start: "}
                                         sectionTitles={sectionTitles}
                                         valueTitle={labels[nextEndIdx]}
                                         boundary={nextEndIdx}
@@ -185,6 +217,7 @@ function AnnotationTable(props) {
                                 {
                                     labels.hasOwnProperty(idx) ?
                                     <LabelSelector
+                                        labelTitle={"Segment End: "}
                                         sectionTitles={sectionTitles}
                                         valueTitle={labels[idx]}
                                         boundary={idx}
@@ -211,6 +244,16 @@ function AnnotationTable(props) {
             margin: "1em",
         }}> 
             {outputTable()}
+        </div>
+        <div>
+            {
+                noLabels.length > 0 ?
+                    <p>
+                        {noLabelMessage}
+                    </p>
+                :
+                    null 
+            }
         </div>
     </div>)
 }
