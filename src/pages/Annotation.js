@@ -7,20 +7,27 @@ import { resetApp } from "../reducers";
 import { NO_LABEL, setLabel, setPresentationid, setStep } from "../reducers/annotationState";
 
 import GenericButton from "../components/GenericButton";
-import { AfterSubmission, AnnotationTask0, AnnotationTask1 } from "../components/AnnotationTasks";
+import { AfterSubmission, AnnotationTask0, AnnotationTask1, AnnotationTask2, AnnotationVerify } from "../components/AnnotationTasks";
 import Outline from "../components/Outline";
 import ReactPlayer from "react-player";
 
 const INTRO = 0;
 const BROWSING = 1;
 const TASK_1 = 2;
-const TASK_2 = 33;
+const TASK_2 = 3;
 const TASK_3 = 44;
-const SUBMITTED = 3;
+const SUBMITTED = 4;
 
 const GOOGLE_FORM_LINK = "https://docs.google.com/forms/d/e/1FAIpQLSfMRNceok4P5pLvu9ofROTUcFr_AKYPBzv6lKu8CX3qBP3B9g/viewform?usp=sf_link"
 
-export const ANNOTATION_PRESENTATION_IDS = [4, 6, 7, 9, 19];
+export const USER_PRESENTATION_IDS = [
+    [4, 6, 7],
+    [7, 9, 19],
+    [4, 6, 9],
+    [4, 9, 19],
+    [7, 6, 19],
+    //[4, 6, 7, 9, 19],
+];
 
 function Instructions(props) {
     const presentationData = props?.presentationData;
@@ -115,11 +122,16 @@ function Instructions(props) {
                     </li>
                 </ul>
             </li>
-            {/* {step === TASK_2 ? 
-                <li> <b> {" -> "} Task: </b> Label produced segments of slides  </li>
-                :
-                <li> Task: Label produced segments of slides. </li>
-            } */}
+            <li>
+                {step === TASK_2 ? 
+                        <span> <b> {" -> "} Verification: </b> Verify Segments and Labels   </span>
+                    :
+                        <span> Verification: Verify Segments and Labels </span>
+                }
+                <ul>
+                    <li> You can go to Task 1 by clicking <b> {" <- "} Previous </b>  button. </li>
+                </ul>
+            </li>
             {/* {step === TASK_3 ?
                 <li> <b> {" -> "} Task: </b> Bonus </li>
                 :
@@ -148,24 +160,29 @@ function Motivation() {
         }}>
             <h3> Motivation: </h3>
             <p>
-                Project Doc2Slide (KIXLAB) is constructing a corpus of outlines of conference presentations.
+                Project Doc2Slide (KIXLAB) is constructing a corpus of outlines for conference presentations.
                 The aim is to evaluate the accuracy of our outline generation algorithm.
             </p>
             <p>
-                There is no strict universal definition of an outline. 
-                In our case, we are concerned about outlines of presentations, more specifically the slides.
+                There is no universal definition of an outlines for presentations. 
+                In our case, we define the outline as a segmentation of slides in the presentation.
             </p>
             <p>
-                In other words, the outline is a segmentation of presentation slides that consist of:
+                In other words, the outline consist of:
             </p>
             <ul>
-                <li> Labels of segments. </li>
-                <li> Each segment's starting & ending points </li>
-                <li> Time spent on each segment </li>
+                <li> Set of segments that cover all presentation slides; </li>
+                <li> Labels of segments; </li>
+                <li> Each segment's starting & ending points; </li>
+                <li> Time spent on each segment; </li>
             </ul>
             <p>
                 So for example, the below could have been an appropriate outline:
             </p>
+            <p style={{textIndent: "2em", fontSize: "0.8em"}}>
+                Format: [Label] ([Start Slide] - [End Slide]) ([Time Spent])
+            </p>
+                
 
             <ol>
                 <li> Title Page (1 - 1) (30 seconds)</li>
@@ -174,10 +191,16 @@ function Motivation() {
                 <li> Discussion (21 - 25) (3 minutes)</li>
                 <li> End (26 - 26) (20 seconds )</li>
             </ol>
-            <p>
-                You will be given presentation slides, corresponding scripts, and labels.
-                The task is to segment the slides by selecting appropriate transitions and annotating each segment with given labels.
-            </p>
+
+            <div style={{color: "red"}}>
+                <p>
+                    You will be given 3 different presentations, and you can proceed in any order you prefer. 
+                </p>
+                <p>
+                    For each presentation, the slides, corresponding scripts, and labels are given. <br/>
+                    The task is to segment the slides by selecting appropriate transitions and annotating each segment with given labels.
+                </p>
+            </div>
             <p>
                 If you have any questions please email me to
                 <a href={"mailto:tlekbay.b@gmail.com"}> tlekbay.b@gmail.com </a>
@@ -192,16 +215,23 @@ function TutorialVideo(props) {
         <h2> Tutorial Video </h2>
         <ReactPlayer
             style={{
-                margin: "auto"
+                margin: "auto",
             }}
             url={TUTORIAL_VIDEO}
-            height={"500px"}
             controls={true}
         />
     </div>);
 }
 
 function PresentationGallery(props) {
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+	let userId = parseInt(urlParams.get('userId'));
+
+    if (!(userId >= 0 && userId < USER_PRESENTATION_IDS.length)) {
+        userId = 0;
+    }
+
     const dispatch = useDispatch();
 
     const summary = props?.summary;
@@ -214,7 +244,7 @@ function PresentationGallery(props) {
     const presentationsData = summary?.presentationData;
 
     const validPresentationIds = summaryData?.valid_presentation_index.filter(
-        presentationId => ANNOTATION_PRESENTATION_IDS.includes(presentationId)
+        presentationId => USER_PRESENTATION_IDS[userId].includes(presentationId)
     );
 
     const handleButtonClick = (presentationId, presentationData) => {
@@ -298,7 +328,7 @@ function Annotation(props) {
         dispatch(setStep({ step: new_step }));
     }
 
-    const submitAnnotation = () => {
+    const verifyOutline = () => {
         let noLabels = [];
         for (let endIdx in labels) {
             if (labels[endIdx] === NO_LABEL) {
@@ -306,10 +336,13 @@ function Annotation(props) {
             }
         }
 
-        if (noLabels.length > 0) {
+        return noLabels.length === 0;
+    }
+
+    const submitAnnotation = () => {
+        if (!verifyOutline()) {
             return;
         }
-
         _setStep(SUBMITTED);
         axios.post('http://server.hyungyu.com:7777/annotation/submit_annotation', {
             presentationId: presentationId,
@@ -327,7 +360,7 @@ function Annotation(props) {
             case TASK_1:
                     return "Currently in " + "Task 1";
             case TASK_2:
-                return "Currently in " + "Task 2";
+                return "Currently in " + "Verification";
             case TASK_3:
                 return "Currently in " + "Task 3";
             case SUBMITTED:
@@ -367,12 +400,29 @@ function Annotation(props) {
                     data={data}
                 />);
                 lastButton = (<GenericButton
-                    title={"Submit"}
-                    onClick={submitAnnotation}
+                    title={"Finish"}
+                    onClick={() => {
+                        if (!verifyOutline()) {
+                            return;
+                        }
+                        _setStep(TASK_2);
+                    }}
                     color="darkBlue"
                 />);
                 break;
             case TASK_2:
+                instructions = true;
+                middleSection = (<AnnotationVerify
+                    presentationId={presentationId}
+                    data={data}
+                    outline={outline}
+                />)
+                lastButton = (<GenericButton
+                    title={"Verify & Submit"}
+                    onClick={submitAnnotation}
+                    color="darkBlue"
+                />);
+                break;
             case TASK_3:
             default:
                 middleSection = (<AfterSubmission
@@ -470,11 +520,19 @@ function Annotation(props) {
             marginRight: "1em"
         }}>
             {
-                step < SUBMITTED ?      
-                <GenericButton
-                    title={"Restart"}
-                    onClick={() => dispatch(resetApp())}
-                />
+                step > INTRO && step < SUBMITTED ?  
+                <div>
+                    <GenericButton
+                        title={"Restart"}
+                        onClick={() => dispatch(resetApp())}
+                    />
+                    <p style={{color: "red", margin: 0}}>
+                        By restarting, you will <br/>
+                        <b> destroy the annotation </b> done <br/>
+                        for presentation {presentationId} <br/>
+                        and will <b> go to the first page. </b>
+                    </p>
+                </div>    
                 :
                 null
             }

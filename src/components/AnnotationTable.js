@@ -238,6 +238,17 @@ function AnnotationTable(props) {
 
     return (<div>
         <h3> Table: Slides(left) - Scripts(right) </h3>
+        <div>
+            {
+                noLabels.length > 0 ?
+                    <p>
+                        {noLabelMessage}
+                    </p>
+                :
+                    null 
+            }
+        </div>
+        <hr/>
         <div style={{
             display: "flex",
             flexDirection: "column",

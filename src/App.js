@@ -7,7 +7,7 @@ import SingleExample from './pages/SingleExample';
 function App() {
 	const queryString = window.location.search;
     const urlParams = new URLSearchParams(queryString);
-	const mode = parseInt(urlParams.get('mode'))
+	const mode = parseInt(urlParams.get('mode'));
 	const presentationId = parseInt(urlParams.get('id'));
 
 	const similartiyType = urlParams.get('similarityType');

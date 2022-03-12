@@ -3,7 +3,7 @@ import axios from "axios";
 import "../App.css";
 import SlideThumbnails from "../components/SlideThumbnails";
 
-const EXAMPLES = {
+const EXAMPLE_OUTLINE_DICT = {
     ["Title Page (1-1)"]: {
         startIdx: 1,
         endIdx: 1,
@@ -30,6 +30,69 @@ const EXAMPLES = {
     },
 };
 
+const EXAMPLE_OUTLINE = [
+    {
+        "sectionTitle": "TITLE",
+        "startSlideIndex": 1,
+        "endSlideIndex": 1
+    },
+    {
+        "sectionTitle": "2 RELATEDWORK",
+        "startSlideIndex": 2,
+        "endSlideIndex": 5
+    },
+    {
+        "sectionTitle": "1 INTRODUCTION",
+        "startSlideIndex": 6,
+        "endSlideIndex": 13
+    },
+    {
+        "sectionTitle": "4 STUDY 1: QUALITATIVE STUDY OF REQUESTS AND RESPONSES",
+        "startSlideIndex": 14,
+        "endSlideIndex": 30
+    },
+    {
+        "sectionTitle": "5 STUDY 2: REQUEST TYPES, RESPONSE FUNCTIONS, AND THE VALUE OF RESPONSES Methods",
+        "startSlideIndex": 31,
+        "endSlideIndex": 46
+    },
+    {
+        "sectionTitle": "7 DESIGN IMPLICATIONS",
+        "startSlideIndex": 47,
+        "endSlideIndex": 49
+    },
+    {
+        "sectionTitle": "END",
+        "startSlideIndex": 50,
+        "endSlideIndex": 50
+    }
+];
+
+function AnnotationSummary(props) {
+    const outline = props?.outline;
+    const presentationId = props?.presentationId;
+    const slideInfo = props?.slideInfo;
+
+    return (<div>
+        <ul>
+            {
+                outline.map((segment, idx) => {
+                    return (
+                        <li key={idx}> {segment.sectionTitle}
+                            <SlideThumbnails 
+                                presentationId={presentationId}
+                                slideInfo={slideInfo}
+                                startIdx={segment.startSlideIndex}
+                                endIdx={segment.endSlideIndex + 1}
+                            />       
+                        </li>
+                    )
+                })
+            }
+        </ul>
+    </div>)
+}
+
 function SectionTransitionExamples() {
     const presentationId = 0;
 
@@ -54,29 +117,15 @@ function SectionTransitionExamples() {
         <h2> Definition: Section Transition </h2>
         <div>
             <p>
-                Please specify <b> not more than 5-6 transitions</b>.
-            </p>
-            <p>
             <b> Section Transition </b> is a major topic/section transitions that can be detected from slides {"&"} scripts.
             </p>
             <div>
                 Example Transitions: 
-                <ul>
-                    {
-                        Object.keys(EXAMPLES).map((exampleTitle, idx) => {
-                            return (
-                                <li key={idx}> {exampleTitle}
-                                    <SlideThumbnails 
-                                        presentationId={presentationId}
-                                        slideInfo={data?.slideInfo}
-                                        startIdx={EXAMPLES[exampleTitle].startIdx}
-                                        endIdx={EXAMPLES[exampleTitle].endIdx + 1}
-                                    />       
-                                </li>
-                            )
-                        })
-                    }
-                </ul>
+                <AnnotationSummary
+                    presentationId={presentationId}
+                    outline={EXAMPLE_OUTLINE}
+                    slideInfo={data?.slideInfo}
+                />
             </div>
         </div>
         <a href={"annotation"}> Go Back </a>
@@ -84,3 +133,6 @@ function SectionTransitionExamples() {
 }
 
 export default SectionTransitionExamples;
+export {
+    AnnotationSummary
+};

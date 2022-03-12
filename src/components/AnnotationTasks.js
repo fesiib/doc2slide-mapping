@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { AnnotationSummary } from "../pages/SectionTransitionExamples";
 import { NO_LABEL, setLabel } from "../reducers/annotationState";
 import AnnotationTable from "./AnnotationTable";
 import GenericButton from "./GenericButton";
@@ -47,6 +48,7 @@ function AfterSubmission(props) {
             <h3> Your Submission Id <small> (copy-paste it to the form) </small>: </h3>
             <h4> {submissionId} </h4>
             <h3> <a href={formLink}> Please Fill out the Form </a> </h3>
+            <h3> If you have annotated all 3 presentations, you can leave, if not, please start a new annotation. </h3>
         </div>
         <div>
             <Outline
@@ -163,9 +165,31 @@ function AnnotationTask2(props) {
     </div>);
 }
 
+function AnnotationVerify(props) {
+    const presentationId = props?.presentationId;
+    const data = props?.data;
+    const outline = props?.outline;
+    return (<div>
+        <h3> Please Verify Segments & Lables </h3>
+        <div
+            style={{
+                textAlign: "left",
+                margin: "2em",
+            }}
+        >
+            <AnnotationSummary
+                presentationId={presentationId}
+                outline={outline}
+                slideInfo={data?.slideInfo}
+            />
+        </div>
+    </div>);
+}
+
 export {
     AnnotationTask0,
     AnnotationTask1,
     AnnotationTask2,
     AfterSubmission,
+    AnnotationVerify,
 };
