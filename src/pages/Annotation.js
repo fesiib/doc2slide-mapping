@@ -7,7 +7,7 @@ import { resetApp } from "../reducers";
 import { NO_LABEL, setLabel, setPresentationid, setStep } from "../reducers/annotationState";
 
 import GenericButton from "../components/GenericButton";
-import { AfterSubmission, AnnotationTask0, AnnotationTask1, AnnotationTask2, AnnotationVerify } from "../components/AnnotationTasks";
+import { AfterSubmission, AnnotationTask0, AnnotationTask1, AnnotationVerify } from "../components/AnnotationTasks";
 import Outline from "../components/Outline";
 import ReactPlayer from "react-player";
 
@@ -20,14 +20,123 @@ const SUBMITTED = 4;
 
 const GOOGLE_FORM_LINK = "https://docs.google.com/forms/d/e/1FAIpQLSfMRNceok4P5pLvu9ofROTUcFr_AKYPBzv6lKu8CX3qBP3B9g/viewform?usp=sf_link"
 
-export const USER_PRESENTATION_IDS = [
-    [4, 6, 7],
-    [7, 9, 19],
-    [4, 6, 9],
-    [4, 9, 19],
-    [7, 6, 19],
-    //[4, 6, 7, 9, 19],
+const ALL_PRESENTATION_IDS_LONG = [
+    0, 4, 6, 7, 9, 10, 12, 13, 14, 15, 16, 17, 18, 19, 20,
+    21, 22, 24, 26, 27, 28, 29, 31, 32, 33,
+    42, 43, 44, 46, 49, 72, 75, 78, 79, 80, 81, 82, 83, 84,
+    85, 86, 87, 88, 89, 90, 91, 92, 94, 95, 96, 97, 98, 99,
+    100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111,
+    112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123,
+    124, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134, 135,
+    136, 137, 138, 139, 140, 141, 142, 143, 144, 145, 146, 147,
+    148, 149, 150, 151, 152, 153, 154, 155, 156, 157, 158, 159,
+    160, 161, 162, 163, 164, 165, 166, 167, 168, 169, 171, 172,
+    173, 174, 175, 176, 177, 178, 179, 180, 181, 182, 183, 184,
+    185, 186, 188, 191, 192, 193, 194, 195, 196, 197, 198, 199,
+    200, 201, 202, 204, 205, 207, 208, 209, 210, 211, 212
 ];
+
+const ALL_PRESENTATION_IDS_SHORT = [
+]
+
+const USER_PRESENTATION_IDS = [
+    [
+        142,
+        202,
+        94
+    ],
+    [
+        175,
+        92,
+        202
+    ],
+    [
+        202,
+        92,
+        185
+    ],
+    [
+        175,
+        147,
+        118
+    ],
+    [
+        94,
+        118,
+        147
+    ],
+    [
+        135,
+        185,
+        92
+    ],
+    [
+        142,
+        27,
+        175
+    ],
+    [
+        27,
+        175,
+        92
+    ],
+    [
+        175,
+        185,
+        92
+    ],
+    [
+        27,
+        147,
+        92
+    ]
+    // [147, 202, 185, 135, 142, 94, 175, 118, 27, 92]
+];
+
+function randomlyChoose(presentationIds, cnt) {
+    if (presentationIds.length <= cnt) {
+        return presentationIds;
+    }
+
+    let chosen = [];
+    while (cnt > 0) {
+        const randIdx = Math.floor(Math.random() * presentationIds.length);
+        chosen.push(presentationIds[randIdx]);
+        presentationIds.splice(randIdx, 1);
+        cnt--;
+    }
+    return chosen;
+}
+
+function assignPresenationIds(presentationIds, perPresentationCnt, userCnt, perUserCnt) {
+    let unassigned = {};
+    if (perPresentationCnt > 0) {
+        for (let presentationId of presentationIds) {
+            unassigned[presentationId] = perPresentationCnt;
+        }
+    }
+    else {
+        presentationIds = [];
+    }
+
+    let assignment = [];
+    for (let userId = 0; userId < userCnt; userId++) {
+        assignment.push([]);
+        let curUserCnt = perUserCnt;
+        let curPresentationIds = [ ...presentationIds ];
+        while (curUserCnt > 0 && curPresentationIds.length > 0) {
+            const randIdx = Math.floor(Math.random() * curPresentationIds.length);
+            const presentationId = (curPresentationIds.splice(randIdx, 1))[0];
+            unassigned[presentationId]--;
+            if (unassigned[presentationId] === 0) {
+                presentationIds.splice(randIdx, 1);
+            }
+            assignment[userId].push(presentationId);
+            curUserCnt--;
+        }
+    }
+    return assignment;
+}
 
 function Instructions(props) {
     const presentationData = props?.presentationData;
@@ -271,6 +380,9 @@ function PresentationGallery(props) {
 }
 
 function Annotation(props) {
+    //console.log(randomlyChoose(ALL_PRESENTATION_IDS_LONG, 10));
+    //console.log(assignPresenationIds([147, 202, 185, 135, 142, 94, 175, 118, 27, 92], 3, 10, 3));
+
     const dispatch = useDispatch();
     
     const { step,
