@@ -20,6 +20,8 @@ const SUBMITTED = 4;
 
 const GOOGLE_FORM_LINK = "https://docs.google.com/forms/d/e/1FAIpQLSfMRNceok4P5pLvu9ofROTUcFr_AKYPBzv6lKu8CX3qBP3B9g/viewform?usp=sf_link"
 
+export const LONG_PRESENTATION_IDS = [147, 202, 185, 135, 142, 94, 175, 118, 27, 92];
+
 const USER_PRESENTATION_IDS = [
     [
         142,
@@ -71,7 +73,6 @@ const USER_PRESENTATION_IDS = [
         147,
         92
     ]
-    // [147, 202, 185, 135, 142, 94, 175, 118, 27, 92]
 ];
 
 function randomlyChoose(presentationIds, cnt) {

@@ -3,6 +3,7 @@ import {useState, useEffect} from 'react';
 import Outline from '../components/Outline';
 import AnnotationList from '../components/AnnotationList';
 import ModelConfig from '../components/ModelConfig';
+import { LONG_PRESENTATION_IDS } from './Annotation';
 
 const PRESENTATION_IDS = [
     0, 4, 6, 7, 9, 10, 12, 13, 14, 15, 16, 17, 18, 19, 20,
@@ -33,7 +34,7 @@ function AllOutlines(props) {
 	
 	useEffect(() => {
         let requests = [];
-        for (let presentationId of PRESENTATION_IDS) {
+        for (let presentationId of LONG_PRESENTATION_IDS) {
             requests.push(axios.post('http://server.hyungyu.com:7777/mapping/presentation_data_specific', {
                 presentationId: presentationId,
                 similarityType: similarityType,

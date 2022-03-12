@@ -161,7 +161,7 @@ def get_outline_dp_mask(section_data, apply_heuristics, slide_info, top_sections
         print(bin(target_mask), bin(recover_mask), dp[target_mask][recover_slide_id][0])
     
     outline = [{
-        "sectionTitle": "end",
+        "sectionTitle": "END",
         "startSlideIndex": m-1,
         "endSlideIndex": m-1,
     }]
@@ -179,7 +179,7 @@ def get_outline_dp_mask(section_data, apply_heuristics, slide_info, top_sections
         recover_slide_id = next_recover_slide_id
     
     outline.append({
-        "sectionTitle": "title",
+        "sectionTitle": "TITLE",
         "startSlideIndex": 1,
         "endSlideIndex": 1,
     })

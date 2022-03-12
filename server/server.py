@@ -155,7 +155,7 @@ def presentation_data_specific():
     summary_path = os.path.join(SLIDE_DATA_PATH, "summary.json")
     summary = read_json(summary_path)
 
-    if presentation_id in summary["valid_presentation_index"]:
+    if presentation_id in summary["all_presentation_index"]:
         result_path = os.path.join(parent_path, "results", resultname)
         if os.path.isfile(result_path) is True:
             data = read_json(result_path)
@@ -193,11 +193,11 @@ def all_data():
     summary_path = os.path.join(SLIDE_DATA_PATH, "summary.json")
     summary = read_json(summary_path)
 
-    valid_presentation_ids = summary["valid_presentation_index"]
+    computed_presentation_index = summary["computed_presentation_index"]
 
     all_data = []
 
-    for presentation_id in valid_presentation_ids:
+    for presentation_id in computed_presentation_index:
         data = __presentation_data(presentation_id)
         all_data.append({
             "presentationId": presentation_id,

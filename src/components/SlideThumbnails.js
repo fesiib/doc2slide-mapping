@@ -10,7 +10,6 @@ function SlideThumbnails(props) {
     const startIdx = props?.startIdx;
     const endIdx = props?.endIdx;
 
-    const thumbnailsPath = '/slideData/' + presentationId + '/images/';
     const output = slideInfo?.map((slide, idx) => {
         if (startIdx && startIdx > idx) {
             return null;
@@ -19,7 +18,7 @@ function SlideThumbnails(props) {
             return null;
         }
 
-        const thumbnailPath = thumbnailsPath + slide.index.toString() + '.jpg';
+        const thumbnailPath = `http://server.hyungyu.com:7777/images/${presentationId}/${slide.index}.jpg`;
         const title = "Script:\n\n" + slide.script + "\n\n\n\n\nOCR Result:\n\n" + slide.ocrResult;
 
         const startTime = new Date(0);

@@ -11,8 +11,7 @@ function SingleSlideThumbnail(props) {
     const idx = props?.idx; // key
     const presentationId = props?.presentationId; //presentationId
 
-    const thumbnailsPath = '/slideData/' + presentationId + '/images/';
-    const thumbnailPath = thumbnailsPath + slide.index.toString() + '.jpg';
+    const thumbnailPath = `http://server.hyungyu.com:7777/images/${presentationId}/${slide.index}.jpg`;
     const title = "Script:\n\n" + slide.script + "\n\n\n\n\nOCR Result:\n\n" + slide.ocrResult;
 
     const startTime = new Date(0);

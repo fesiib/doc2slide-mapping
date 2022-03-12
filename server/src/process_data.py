@@ -153,7 +153,7 @@ def process(path, presentation_id, similarity_type, similarity_method, outlining
             continue
     result = {}
 
-    result['title'] = "tempTitle"
+    #result['title'] = "tempTitle"
     result['slideCnt'] = len(timestamp_data)
     result['groundTruthOutline'] = gt_data['groundTruthSegments']
     result['annotations'] = annotations
