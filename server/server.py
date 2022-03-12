@@ -42,6 +42,10 @@ def read_csv(path):
     return data
 
 def __filter_data(data):
+    if data == None:
+        return {
+            "status": "No Such Presentation",
+        }
     return {
         "slideCnt": data["slideCnt"],
         "metaInfo": data["metaInfo"],
@@ -88,7 +92,7 @@ def __presentation_data(presentation_id):
     summary_path = os.path.join(SLIDE_DATA_PATH, "summary.json")
     summary = read_json(summary_path)
 
-    if presentation_id in summary["valid_presentation_index"]:
+    if presentation_id in summary["all_presentation_index"]:
         result_path = os.path.join(parent_path, "result.json")
         if os.path.isfile(result_path) is True:
             data = read_json(result_path)
@@ -239,6 +243,11 @@ def evaluation_results():
 def get_image(presentation_id, filename):
     image_path = os.path.join(SLIDE_DATA_PATH, str(presentation_id), "images", filename)
     return send_file(image_path, mimetype='image/jpg')
+
+@app.route("/papers/<presentation_id>/<filename>", methods=["GET"])
+def get_paper(presentation_id, filename):
+    paper_path = os.path.join(SLIDE_DATA_PATH, str(presentation_id), filename)
+    return send_file(paper_path, mimetype='application/pdf')
 
 @app.route("/annotation/submit_annotation", methods=["POST"])
 def submit_annotation():

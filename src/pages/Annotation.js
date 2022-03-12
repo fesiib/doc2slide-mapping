@@ -20,25 +20,6 @@ const SUBMITTED = 4;
 
 const GOOGLE_FORM_LINK = "https://docs.google.com/forms/d/e/1FAIpQLSfMRNceok4P5pLvu9ofROTUcFr_AKYPBzv6lKu8CX3qBP3B9g/viewform?usp=sf_link"
 
-const ALL_PRESENTATION_IDS_LONG = [
-    0, 4, 6, 7, 9, 10, 12, 13, 14, 15, 16, 17, 18, 19, 20,
-    21, 22, 24, 26, 27, 28, 29, 31, 32, 33,
-    42, 43, 44, 46, 49, 72, 75, 78, 79, 80, 81, 82, 83, 84,
-    85, 86, 87, 88, 89, 90, 91, 92, 94, 95, 96, 97, 98, 99,
-    100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111,
-    112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123,
-    124, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134, 135,
-    136, 137, 138, 139, 140, 141, 142, 143, 144, 145, 146, 147,
-    148, 149, 150, 151, 152, 153, 154, 155, 156, 157, 158, 159,
-    160, 161, 162, 163, 164, 165, 166, 167, 168, 169, 171, 172,
-    173, 174, 175, 176, 177, 178, 179, 180, 181, 182, 183, 184,
-    185, 186, 188, 191, 192, 193, 194, 195, 196, 197, 198, 199,
-    200, 201, 202, 204, 205, 207, 208, 209, 210, 211, 212
-];
-
-const ALL_PRESENTATION_IDS_SHORT = [
-]
-
 const USER_PRESENTATION_IDS = [
     [
         142,
@@ -146,17 +127,24 @@ function Instructions(props) {
 
     let presentationVideo = null;
     let presentationPaper = null;
-    for (let key in presentationData) {
-        if (presentationData[key].includes("youtube")) {
-            presentationVideo = presentationData[key];
-        }
-        if (presentationData[key].endsWith(".pdf")) {
-            const link = presentationData[key].replace(".pdf", "");
-            presentationPaper = "https://dl.acm.org/doi/pdf/10.1145/" + link;
-        }
+
+    if (presentationData.hasOwnProperty("video")) {
+        presentationPaper = presentationData["video"];
     }
 
-    presentationVideo = null;
+    if (presentationData.hasOwnProperty("paper")) {
+        presentationPaper = presentationData["paper"];
+    }
+    
+    // for (let key in presentationData) {
+    //     if (presentationData[key].includes("youtube")) {
+    //         presentationVideo = presentationData[key];
+    //     }
+    //     if (presentationData[key].endsWith(".pdf")) {
+    //         const link = presentationData[key].replace(".pdf", "");
+    //         presentationPaper = "https://dl.acm.org/doi/pdf/10.1145/" + link;
+    //     }
+    // }
 
     return (<div style={{
         display: collapsed ? "none" : "block", 
@@ -350,9 +338,8 @@ function PresentationGallery(props) {
     }
 
     const summaryData = summary?.summaryData;
-    const presentationsData = summary?.presentationData;
 
-    const validPresentationIds = summaryData?.valid_presentation_index.filter(
+    const validPresentationIds = summaryData?.all_presentation_index.filter(
         presentationId => USER_PRESENTATION_IDS[userId].includes(presentationId)
     );
 
@@ -368,7 +355,9 @@ function PresentationGallery(props) {
     return (<div>
         {
             validPresentationIds.map((presentationId) => {
-                const presentationData = presentationsData[presentationId];
+                const presentationData = {
+                    "paper": `http://server.hyungyu.com:7777/papers/${presentationId}/paper.pdf`,
+                };
                 return (<GenericButton
                     key={"button" + presentationId.toString()}
                     title={"Presentation " + presentationId.toString()}

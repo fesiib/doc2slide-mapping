@@ -1,9 +1,0 @@
-level	page_num	block_num	par_num	line_num	word_num	left	top	width	height	conf	text
-1	1	0	0	0	0	0	0	640	720	-1	
-2	1	1	0	0	0	88	291	12	138	-1	
-3	1	1	1	0	0	88	291	12	138	-1	
-4	1	1	1	1	0	88	291	12	138	-1	
-5	1	1	1	1	1	88	291	12	55	35	ET
-5	1	1	1	1	2	79	343	28	24	16	Mer
-5	1	1	1	1	3	88	371	12	58	22	Ee]
-
