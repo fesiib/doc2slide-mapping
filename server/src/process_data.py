@@ -128,7 +128,8 @@ def process(path, presentation_id, similarity_type, similarity_method, outlining
         line = timestamp.readline()
         if not line :
             break
-        timestamp_data.append([float(line.split('\t')[0]), float(line.split('\t')[1])])
+        start_time, end_time = float(line.split('\t')[0]), float(line.split('\t')[1])
+        timestamp_data.append([start_time, end_time])
 
     ocr_data = []
     for i in range(len(timestamp_data)) :
@@ -154,35 +155,45 @@ def process(path, presentation_id, similarity_type, similarity_method, outlining
     result = {}
 
     #result['title'] = "tempTitle"
-    result['slideCnt'] = len(timestamp_data)
     result['groundTruthOutline'] = gt_data['groundTruthSegments']
     result['annotations'] = annotations
     result['metaInfo'] = meta_info
     result['sectionTitles'] = sorted(list(set(section_data)))
 
     slide_info = []
-    startTimeStamp = 0
-    for i in range(len(timestamp_data)) :
+    start_time_stamp = 0
+    for i in range(len(timestamp_data)):
+        end_time_stamp = timestamp_data[i][1]
+
+        if i > 1:
+            if (start_time_stamp - slide_info[1]["startTime"]) >= 15.1 * 60:
+                break
+            if (end_time_stamp - slide_info[1]["startTime"]) >= 15.1 * 60:
+                end_time_stamp = slide_info[1]["startTime"] + (15.1 * 60) + 1
+
         slide_info.append({
             "index": i,
-            "startTime": startTimeStamp,
-            "endTime": timestamp_data[i][1],
+            "startTime": start_time_stamp,
+            "endTime": end_time_stamp,
             "script": script_data[i],
             "ocrResult": ocr_data[i],
         })
-        startTimeStamp = timestamp_data[i][1]
-    result['slideInfo'] = slide_info   
+        start_time_stamp = end_time_stamp
 
+    result['slideInfo'] = slide_info   
+    result['slideCnt'] = len(slide_info)
 
     _paper_data = []
     _script_data = []
 
     script_sentence_range = []
-    for i, (script, ocr) in enumerate(zip(script_data, ocr_data)):
+    for i in range(len(slide_info)):
+        script = slide_info[i]["script"]
+        ocr = slide_info[i]["ocrResult"]
         sentences = []
         # if (len(ret_script_data) > 10):
         #     break
-        if i == 0 or i == len(script_data) - 1:
+        if i == 0 or i == len(slide_info) - 1:
             sentences = [""]
         elif (similarity_type == "classifier"):
             sentences = [script + " " + ocr]
@@ -201,7 +212,7 @@ def process(path, presentation_id, similarity_type, similarity_method, outlining
             paper_sentence_id.append(i)
         _paper_data.extend(sentences)
 
-    print("Sentences# {} Scripts# {}".format(len(_script_data), len(script_data)))
+    print("Sentences# {} Scripts# {}".format(len(_script_data), len(slide_info)))
     print("Sentences# {} Paragraphs# {}".format(len(_paper_data), len(paper_data)))
 
     if similarity_type == 'keywords':

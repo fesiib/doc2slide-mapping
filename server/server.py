@@ -18,6 +18,8 @@ from pathlib import Path
 
 SLIDE_DATA_PATH = './slideMeta/slideData'
 
+USE_SAVED = True
+
 app = Flask(__name__)
 CORS(app)
 
@@ -94,7 +96,7 @@ def __presentation_data(presentation_id):
 
     if presentation_id in summary["all_presentation_index"]:
         result_path = os.path.join(parent_path, "result.json")
-        if os.path.isfile(result_path) is True:
+        if os.path.isfile(result_path) is True and USE_SAVED:
             data = read_json(result_path)
         else:
             data = __process_presentation(
@@ -157,7 +159,7 @@ def presentation_data_specific():
 
     if presentation_id in summary["all_presentation_index"]:
         result_path = os.path.join(parent_path, "results", resultname)
-        if os.path.isfile(result_path) is True:
+        if os.path.isfile(result_path) is True and USE_SAVED:
             data = read_json(result_path)
         else:
             data = __process_presentation(
@@ -242,6 +244,7 @@ def evaluation_results():
 @app.route("/images/<presentation_id>/<filename>", methods=["GET"])
 def get_image(presentation_id, filename):
     image_path = os.path.join(SLIDE_DATA_PATH, str(presentation_id), "images", filename)
+    print(image_path)
     return send_file(image_path, mimetype='image/jpg')
 
 @app.route("/papers/<presentation_id>/<filename>", methods=["GET"])
@@ -274,4 +277,22 @@ def submit_annotation():
         "status": "Recorded",
     })
 
-app.run(host='0.0.0.0', port=7777)
+def clear_results():
+    summary_path = os.path.join(SLIDE_DATA_PATH, "summary.json")
+    summary = read_json(summary_path)
+
+    all_presentation_index = summary["all_presentation_index"]
+    for presentation_id in all_presentation_index:
+        path = os.path.join(SLIDE_DATA_PATH, str(presentation_id))
+        result_path = os.path.join(path, "result.json")
+        if os.path.isfile(result_path) is True:
+            os.remove(result_path)
+        results_folder = os.path.join(path, "results")
+        if os.path.isdir(results_folder):
+            for filename in os.listdir(results_folder):
+                result_path = os.path.join(results_folder, filename)
+                os.remove(result_path)
+
+if __name__ == "__main__":
+    clear_results()
+    app.run(host='0.0.0.0', port=7777)
