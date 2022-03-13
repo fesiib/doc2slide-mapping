@@ -20,59 +20,11 @@ const SUBMITTED = 4;
 
 const GOOGLE_FORM_LINK = "https://docs.google.com/forms/d/e/1FAIpQLSfMRNceok4P5pLvu9ofROTUcFr_AKYPBzv6lKu8CX3qBP3B9g/viewform?usp=sf_link"
 
-export const LONG_PRESENTATION_IDS = [147, 202, 185, 135, 142, 94, 175, 118, 27, 92];
+export const LONG_PRESENTATION_IDS = [147, 126, 141, 135, 142, 94, 154, 118, 27, 92];
+/// 202, 185, 175 is bad
 
 const USER_PRESENTATION_IDS = [
-    [
-        142,
-        202,
-        94
-    ],
-    [
-        175,
-        92,
-        202
-    ],
-    [
-        202,
-        92,
-        185
-    ],
-    [
-        175,
-        147,
-        118
-    ],
-    [
-        94,
-        118,
-        147
-    ],
-    [
-        135,
-        185,
-        92
-    ],
-    [
-        142,
-        27,
-        175
-    ],
-    [
-        27,
-        175,
-        92
-    ],
-    [
-        175,
-        185,
-        92
-    ],
-    [
-        27,
-        147,
-        92
-    ]
+    LONG_PRESENTATION_IDS,
 ];
 
 function randomlyChoose(presentationIds, cnt) {
@@ -161,9 +113,8 @@ function Instructions(props) {
             Below, the presentation slides and script are given. They were extracted from the presentation video.
         </p>
         <p>
-            In short, in <b> Browsing </b> you will be asked to skim through both slides & scripts, so in the <b> Task 1 </b>
-            you could identify the transitions and label each resultant segment. <br/>
-            The labels are section titles from the original paper of the presentation or default <i> Title Page and End Page </i>.
+            Shortly, in <b> Browsing </b> you will be asked to skim through both slides & paper, so in the <b> Task 1 </b>
+            you could identify section transitions and label each resultant segment with section titles from the paper. <br/>
         </p>
 
         <ol start={0}>
@@ -185,7 +136,7 @@ function Instructions(props) {
                 {
                     presentationPaper ? 
                     <li>
-                        You can read the original paper here:{" "}
+                        Please go through paper to make sure that you are familiar with contents of each section:{" "}
                         <a href={presentationPaper}> PDF </a>
                     </li>
                     :
@@ -204,9 +155,8 @@ function Instructions(props) {
                         Identify main <a href={"section_transition_examples"}> section transitions </a> in slides
                     </li>
                     <li>
-                        Label them with default TITLE & END, and below section titles from the paper:
+                        Label them with below section titles from the paper:
                         <ul>
-                            <li> TITLE </li>
                             {  
                                 sectionTitles.map((val, idx) => {
                                     let title = val;
@@ -215,9 +165,9 @@ function Instructions(props) {
                                     </li>);
                                 })
                             }
-                            <li> END </li>
                         </ul>
                     </li>
+                    <li> Also the TITLE & END labels are given for title and finishing slides </li>
                 </ul>
             </li>
             <li>
@@ -308,7 +258,14 @@ function Motivation() {
 }
 
 function TutorialVideo(props) {
+    const handlePresentationClick = props?.handlePresentationClick;
     const TUTORIAL_VIDEO = "/annotationTutorials/tutorial_1.mp4";
+    const presentationId = 0;
+
+    const presentationData = {
+        "paper": `http://server.hyungyu.com:7777/papers/${presentationId}/paper.pdf`,
+    };
+
     return (<div>
         <h2> Tutorial Video </h2>
         <ReactPlayer
@@ -318,21 +275,26 @@ function TutorialVideo(props) {
             url={TUTORIAL_VIDEO}
             controls={true}
         />
+        <h3> Warm-up Presentation with a <a href="/section_transition_examples"> true annotation</a>: </h3>
+        <GenericButton
+            key={"button" + presentationId.toString()}
+            title={"Presentation " + presentationId.toString()}
+            onClick={() => handlePresentationClick(presentationId, presentationData)}
+        />
     </div>);
 }
 
 function PresentationGallery(props) {
-    const queryString = window.location.search;
-    const urlParams = new URLSearchParams(queryString);
-	let userId = parseInt(urlParams.get('userId'));
-
-    if (!(userId >= 0 && userId < USER_PRESENTATION_IDS.length)) {
-        userId = 0;
-    }
-
-    const dispatch = useDispatch();
+    // const queryString = window.location.search;
+    // const urlParams = new URLSearchParams(queryString);
+	// let userId = parseInt(urlParams.get('userId'));
+    // if (!(userId >= 0 && userId < USER_PRESENTATION_IDS.length)) {
+    //     userId = 0;
+    // }
+    const userId = 0;
 
     const summary = props?.summary;
+    const handlePresentationClick = props?.handlePresentationClick;
 
     if (!summary) {
         return null;
@@ -344,15 +306,6 @@ function PresentationGallery(props) {
         presentationId => USER_PRESENTATION_IDS[userId].includes(presentationId)
     );
 
-    const handleButtonClick = (presentationId, presentationData) => {
-        dispatch(setPresentationid({
-            presentationId,
-            presentationData,
-        }));
-        window.scrollTo(0, 0);
-        dispatch(setStep({ step: BROWSING }));
-    }
-
     return (<div>
         {
             validPresentationIds.map((presentationId) => {
@@ -362,7 +315,7 @@ function PresentationGallery(props) {
                 return (<GenericButton
                     key={"button" + presentationId.toString()}
                     title={"Presentation " + presentationId.toString()}
-                    onClick={() => handleButtonClick(presentationId, presentationData)}
+                    onClick={() => handlePresentationClick(presentationId, presentationData)}
                 />);
             })
         }
@@ -430,6 +383,15 @@ function Annotation(props) {
         dispatch(setStep({ step: new_step }));
     }
 
+    const handlePresentationClick = (presentationId, presentationData) => {
+        dispatch(setPresentationid({
+            presentationId,
+            presentationData,
+        }));
+        window.scrollTo(0, 0);
+        dispatch(setStep({ step: BROWSING }));
+    }
+
     const verifyOutline = () => {
         let noLabels = [];
         for (let endIdx in labels) {
@@ -458,7 +420,7 @@ function Annotation(props) {
     const stepTitle = (step) => {
         switch (step) {
             case BROWSING:
-                return "Currently in " + "Browsing";
+                return "Currently in " + "Browsing Slides & Scripts";
             case TASK_1:
                     return "Currently in " + "Task 1";
             case TASK_2:
@@ -481,6 +443,7 @@ function Annotation(props) {
             case INTRO:
                 middleSection = (<PresentationGallery
                     summary={summary}
+                    handlePresentationClick={handlePresentationClick}
                 />);
                 break;
             case BROWSING:
@@ -643,7 +606,9 @@ function Annotation(props) {
             step === INTRO ?
             <div>            
                 <Motivation/>
-                <TutorialVideo/>
+                <TutorialVideo
+                    handlePresentationClick={handlePresentationClick}
+                />
             </div>
             :
             null

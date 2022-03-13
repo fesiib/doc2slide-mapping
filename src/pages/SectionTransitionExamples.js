@@ -120,7 +120,7 @@ function SectionTransitionExamples() {
             <b> Section Transition </b> is a major topic/section transitions that can be detected from slides {"&"} scripts.
             </p>
             <div>
-                Example Transitions: 
+                Presentation 0 Annotation: the slides were segmented based on high-level section titles in the original paper: 
                 <AnnotationSummary
                     presentationId={presentationId}
                     outline={EXAMPLE_OUTLINE}
