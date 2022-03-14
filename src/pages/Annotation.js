@@ -4,7 +4,7 @@ import '../App.css';
 
 import { useDispatch, useSelector } from "react-redux";
 import { resetApp } from "../reducers";
-import { NO_LABEL, setLabel, setPresentationid, setStep } from "../reducers/annotationState";
+import { addAnnotation, delAnnotation, NO_LABEL, setLabel, setPresentationid, setStep } from "../reducers/annotationState";
 
 import GenericButton from "../components/GenericButton";
 import { AfterSubmission, AnnotationTask0, AnnotationTask1, AnnotationVerify } from "../components/AnnotationTasks";
@@ -20,7 +20,7 @@ const SUBMITTED = 4;
 
 const GOOGLE_FORM_LINK = "https://docs.google.com/forms/d/e/1FAIpQLSfMRNceok4P5pLvu9ofROTUcFr_AKYPBzv6lKu8CX3qBP3B9g/viewform?usp=sf_link"
 
-export const LONG_PRESENTATION_IDS = [147, 126, 141, 135, 142, 94, 154, 118, 27, 92];
+export const LONG_PRESENTATION_IDS = [4, 147, 126, 141, 135, 142, 94, 154, 118, 27, 92];
 /// 202, 185, 175 is bad
 
 const USER_PRESENTATION_IDS = [
@@ -136,7 +136,8 @@ function Instructions(props) {
                 {
                     presentationPaper ? 
                     <li>
-                        Please go through paper to make sure that you are familiar with contents of each section:{" "}
+                        You can go through the original paper while annotating to make sure that
+                        the section contents match well with slides & scripts:{" "}
                         <a href={presentationPaper}> PDF </a>
                     </li>
                     :
@@ -267,20 +268,21 @@ function TutorialVideo(props) {
     };
 
     return (<div>
-        <h2> Tutorial Video </h2>
+        {/* <h2> Tutorial Video </h2>
         <ReactPlayer
             style={{
                 margin: "auto",
             }}
             url={TUTORIAL_VIDEO}
             controls={true}
-        />
-        <h3> Warm-up Presentation with a <a href="/section_transition_examples"> true annotation</a>: </h3>
+        /> */}
+        <h2> Warm-up Presentation with a <a href="/section_transition_examples"> true annotation</a>: </h2>
         <GenericButton
             key={"button" + presentationId.toString()}
             title={"Presentation " + presentationId.toString()}
             onClick={() => handlePresentationClick(presentationId, presentationData)}
         />
+        <hr/>
     </div>);
 }
 
@@ -322,6 +324,99 @@ function PresentationGallery(props) {
     </div>);
 }
 
+function RefAnnotations(props) {
+    const dispatch = useDispatch();
+    const {
+        presentationId,
+        refAnnotations,
+    } = useSelector(state => state.annotationState);
+
+    const curOutline = props?.curOutline;
+    const slideInfo = props?.slideInfo;
+    const review = props?.review;
+
+    const [refSubmissionId, setRefSubmissionId] = useState("");
+
+    if (!refAnnotations || !slideInfo) {
+        return null;
+    }
+
+    const _addAnnotation = (submissionId) => {
+        axios.post('http://server.hyungyu.com:7777/annotation/get_annotation', {
+            presentationId,
+            submissionId,
+        }).then( (response) => {
+            console.log(response);
+            if (response.data.status === "error") {
+                alert("Incorrect submissionId");
+                return;
+            }
+            const outline = response.data.outline;
+            dispatch(addAnnotation({
+                submissionId,
+                outline,
+            }));
+        });        
+    }
+
+    const _delAnnotation = (submissionId) => {
+        dispatch(delAnnotation({
+            submissionId,
+        }));
+    }
+
+    return (<div>
+        {
+            review ? 
+            (<div>
+                <input 
+                    type="text"
+                    value={refSubmissionId}
+                    onChange={(event) => setRefSubmissionId(event.target.value)}
+                />
+                <GenericButton
+                    title={"Add Reference Annotation"}
+                    onClick={() => _addAnnotation(refSubmissionId)}
+                /> 
+            </div>)
+            :
+            null
+        }
+        <div style={{
+            display: "flex",
+            flexDirection: "row",
+            justifyContent: "space-evenly",
+        }}>
+            {review ?
+                Object.keys(refAnnotations).map((key, idx) => {
+                    const outline = refAnnotations[key]
+                    return (<div key={idx} style={{
+                        display: "flex",
+                        flexDirection: "column",
+                    }}>
+                        <Outline
+                            title={"Annotation " + (idx + 1) + ": " + key}
+                            outline={outline}
+                            slideInfo={slideInfo}
+                        />
+                        <GenericButton
+                            title={"Remove Annotation"}
+                            onClick={() => _delAnnotation(key)}
+                        />
+                    </div>);
+                })
+                :
+                null
+            }
+            <Outline
+                title={"Current Annotation"}
+                outline={curOutline}
+                slideInfo={slideInfo}
+            />
+        </div>
+    </div>);
+}
+
 function Annotation(props) {
     //console.log(randomlyChoose(ALL_PRESENTATION_IDS_LONG, 10));
     //console.log(assignPresenationIds([147, 202, 185, 135, 142, 94, 175, 118, 27, 92], 3, 10, 3));
@@ -332,12 +427,13 @@ function Annotation(props) {
         presentationId,
         presentationData,
         submissionId,
-        labels
+        labels,
     } = useSelector(state => state.annotationState);
 
     const [data, setData] = useState([]);
     const [summary, setSummary] = useState(null);
     const [collapsed, setCollapsed] = useState(false);
+    const [review, setReview] = useState(false);
 
     let outline = [];
     const endIdxs = [ ...Object.keys(labels).map((val) => parseInt(val)).sort((p1, p2) => p1 - p2)];
@@ -463,6 +559,7 @@ function Annotation(props) {
                 middleSection = (<AnnotationTask1
                     presentationId={presentationId}
                     data={data}
+                    review={review}
                 />);
                 lastButton = (<GenericButton
                     title={"Finish"}
@@ -555,23 +652,31 @@ function Annotation(props) {
                         <GenericButton
                             title={collapsed ? "Expand Summary" : "Collapse"}
                             onClick={() => setCollapsed(!collapsed)}
-                        />    
+                        />
+                        <div>
+                            <label htmlFor={"checkbox_review"}> Review: </label>
+                            <input
+                                id="checkbox_review"
+                                type="checkbox"
+                                checked={review}
+                                onChange={() => setReview(!review)}
+                            />
+                        </div>    
                         {
                             collapsed ?
                                 null
                             :
-                            <Outline
-                                title={"Annotation Summary"}
-                                outline={outline}
+                            <RefAnnotations 
+                                curOutline={outline}
                                 slideInfo={data?.slideInfo}
+                                review={review}
                             />
-                            
                         }
                         <hr/>
                     </div>
                 )
                 :
-                <hr/>
+                null
             }
             {middleSection}
             {lastButton}

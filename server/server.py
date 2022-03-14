@@ -252,6 +252,35 @@ def get_paper(presentation_id, filename):
     paper_path = os.path.join(SLIDE_DATA_PATH, str(presentation_id), filename)
     return send_file(paper_path, mimetype='application/pdf')
 
+@app.route("/annotation/get_annotation", methods=["POST"])
+def get_annotation():
+    decoded = request.data.decode('utf-8')
+    request_json = json.loads(decoded)
+
+    presentation_id = request_json["presentationId"]
+    submission_id = request_json["submissionId"]
+
+
+    filename = submission_id + ".json"
+    path = Path(os.path.join(SLIDE_DATA_PATH, str(presentation_id), "annotations"))
+
+    file_path = os.path.join(path, filename)
+
+    if os.path.isfile(file_path) is True:
+        annotation = read_json(file_path)
+        outline = annotation["groundTruthSegments"]
+        return json.dumps({
+            "presentationId": presentation_id,
+            "submissionId": submission_id,
+            "outline": outline,
+            "status": "success"
+        })
+    return json.dumps({
+        "presentationId": presentation_id,
+        "submissionId": submission_id,
+        "status": "error"
+    })
+
 @app.route("/annotation/submit_annotation", methods=["POST"])
 def submit_annotation():
     decoded = request.data.decode('utf-8')

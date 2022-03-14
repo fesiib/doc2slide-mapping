@@ -68,7 +68,12 @@ function LabelSelector(props) {
     }; 
     return (<div>
         <label htmlFor={"selector_" + boundary + labelTitle}> {labelTitle} </label> 
-        <select id={"selector_" + boundary + labelTitle} onChange={(event) => handleLabelChange(event)} value={curValue}>
+        <select
+            id={"selector_" + boundary + labelTitle}
+            onChange={(event) => handleLabelChange(event)}
+            value={curValue}
+            style={{width: "20%"}}
+        >
             {
                 options.map((val, idx) => {
                     return (<option key={"labelOption_" + idx} value={idx}>
@@ -99,8 +104,9 @@ function AnnotationTable(props) {
     const presentationId = props?.presentationId;
     const slideInfo = props?.slideInfo ? props.slideInfo : [];
     const sectionTitles = props?.sectionTitles ? props.sectionTitles : [];
+    const review = props?.review;
 
-    const { labels } = useSelector(state => state.annotationState);
+    const { refAnnotations, labels } = useSelector(state => state.annotationState);
 
     const endIdxs = [ ...Object.keys(labels).map((val) => parseInt(val)).sort((p1, p2) => p1 - p2)];
 
@@ -151,20 +157,37 @@ function AnnotationTable(props) {
                     {
                         enableBoundaries ?
                         (
-                            <div>
-
+                            <div style={{
+                                display: "flex",
+                                flexDirection: "row",
+                                alignItems: "flex-end",
+                                justifyContent: review ? "space-between" : "space-around",
+                            }}>
                                 {
-                                    idx > 1 ?      
+                                    review ?
+                                    Object.keys(refAnnotations).map((key, refIdx) => {
+                                        const outline = refAnnotations[key];
+                                        const segment = outline.find((val) => val.startSlideIndex === idx);
+                                        if (segment) {
+                                            return (<div key={refIdx} style={{width: "20%"}}>
+                                                Start {refIdx + 1}: <b> {segment.sectionTitle} </b>
+                                            </div>);
+                                        }
+                                        return <div key={refIdx}> </div>;
+                                    })
+                                    :
+                                    null
+                                }
+                                <div>
+                                    { idx > 1 ?      
                                     <GenericButton
                                         title={ labels.hasOwnProperty(idx - 1) ? "Remove Transition" : "Transition Here" }
                                         onClick={() => transitionButtonClickHandler(idx - 1)}
                                         color={ labels.hasOwnProperty(idx - 1) ? "red" : "green" }
                                     />
                                     :
-                                    null
-                                }
-                                {
-                                    (labels.hasOwnProperty(idx - 1) || idx === 1) ?
+                                    null }
+                                    { (labels.hasOwnProperty(idx - 1) || idx === 1) ?
                                     <LabelSelector
                                         labelTitle={"Segment Start: "}
                                         sectionTitles={sectionTitles}
@@ -172,9 +195,9 @@ function AnnotationTable(props) {
                                         boundary={nextEndIdx}
                                     />
                                     :
-                                    null
-                                }  
-                            </div>
+                                    <div> </div> } 
+                                </div>
+                            </div> 
                         )
                         :
                         null
@@ -212,7 +235,26 @@ function AnnotationTable(props) {
                     {
                         enableBoundaries ?
                         (
-                            <div>
+                            <div style={{
+                                display: "flex",
+                                flexDirection: "row",
+                                justifyContent: review ? "space-between" : "space-around"
+                            }}>
+                                {
+                                    review ?
+                                    Object.keys(refAnnotations).map((key, refIdx) => {
+                                        const outline = refAnnotations[key];
+                                        const segment = outline.find((val) => val.endSlideIndex === idx);
+                                        if (segment) {
+                                            return (<div key={refIdx} style={{width: "20%"}}>
+                                                End {refIdx + 1}: <b> {segment.sectionTitle} </b>
+                                            </div>);
+                                        }
+                                        return <div key={refIdx}> </div>;
+                                    })
+                                    :
+                                    null
+                                }
                                 {
                                     labels.hasOwnProperty(idx) ?
                                     <LabelSelector
@@ -222,7 +264,7 @@ function AnnotationTable(props) {
                                         boundary={idx}
                                     />
                                     :
-                                    null
+                                    <div> </div>
                                 }
                             </div>
                         )

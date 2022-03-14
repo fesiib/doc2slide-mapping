@@ -165,11 +165,11 @@ def process(path, presentation_id, similarity_type, similarity_method, outlining
     for i in range(len(timestamp_data)):
         end_time_stamp = timestamp_data[i][1]
 
-        if i > 1:
-            if (start_time_stamp - slide_info[1]["startTime"]) >= 15.1 * 60:
-                break
-            if (end_time_stamp - slide_info[1]["startTime"]) >= 15.1 * 60:
-                end_time_stamp = slide_info[1]["startTime"] + (15.1 * 60) + 1
+        # if i > 1:
+        #     if (start_time_stamp - slide_info[1]["startTime"]) >= 16 * 60:
+        #         break
+        #     if (end_time_stamp - slide_info[1]["startTime"]) >= 16 * 60:
+        #         end_time_stamp = slide_info[1]["startTime"] + (16 * 60) + 1
 
         slide_info.append({
             "index": i,

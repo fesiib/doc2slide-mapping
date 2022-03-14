@@ -23,6 +23,7 @@ function AnnotationTask0(props) {
 function AnnotationTask1(props) {
     const presentationId = props?.presentationId;
     const data = props?.data;
+    const review = props?.review;
 
     return (<div>
         <AnnotationTable
@@ -30,6 +31,7 @@ function AnnotationTask1(props) {
             slideInfo={data?.slideInfo}
             enableBoundaries={true}
             sectionTitles={data?.sectionTitles}
+            review={review}
         />
     </div>);
 }
@@ -48,7 +50,6 @@ function AfterSubmission(props) {
             <h3> Your Submission Id <small> (copy-paste it to the form) </small>: </h3>
             <h4> {submissionId} </h4>
             <h3> <a href={formLink}> Please Fill out the Form </a> </h3>
-            <h3> If you have annotated all 3 presentations, you can leave, if not, please start a new annotation. </h3>
         </div>
         <div>
             <Outline

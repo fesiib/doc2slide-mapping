@@ -9,6 +9,9 @@ const REMOVE_BOUNDARY = "REMOVE_BOUNDARY";
 
 const SET_LABEL = "SET_LABEL";
 
+const ADD_ANNOTATION = "ADD_ANNOTATION";
+const DEL_ANNOTATION = "DEL_ANNOTATION";
+
 export const setPresentationid = (payload) => ({
     type: SET_PRESENTATION_ID,
     payload
@@ -34,6 +37,16 @@ export const setLabel = (payload) => ({
     payload
 });
 
+export const addAnnotation = (payload) => ({
+    type: ADD_ANNOTATION,
+    payload
+})
+
+export const delAnnotation = (payload) => ({
+    type: DEL_ANNOTATION,
+    payload
+})
+
 function randomId() {
     let strId = v4().toString();
     return strId.replaceAll("-", "");
@@ -43,6 +56,7 @@ const initialState = {
     presentationData: null,
     presentationId: -1,
     submissionId: randomId(),
+    refAnnotations: {},
     step: 0,
     labels: {
         1: "TITLE"
@@ -134,6 +148,28 @@ const annotationState = (
                 return {
                     ...state, 
                     labels: new_labels,
+                };
+            }
+            case ADD_ANNOTATION: {
+                const submissionId = action.payload.submissionId;
+                const outline = action.payload.outline;
+                return {
+                    ...state,
+                    refAnnotations: {
+                        ...state.refAnnotations,
+                        [submissionId]: outline,
+                    },
+                };
+            }
+            case DEL_ANNOTATION: {
+                const submissionId = action.payload.submissionId;
+
+                let newRefAnnotations = { ...state.refAnnotations };
+                delete newRefAnnotations[submissionId];
+
+                return {
+                    ...state,
+                    refAnnotations: newRefAnnotations,
                 };
             }
             default:
