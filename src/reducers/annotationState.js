@@ -2,7 +2,6 @@ import { v4 } from "uuid";
 
 const SET_STEP = "SET_STEP";
 const SET_PRESENTATION_ID = "SET_PRESENTATION_ID";
-const SUBMIT = "SUBMIT";
 
 const ADD_BOUNDARY = "ADD_BOUNDARY";
 const REMOVE_BOUNDARY = "REMOVE_BOUNDARY";
@@ -11,6 +10,8 @@ const SET_LABEL = "SET_LABEL";
 
 const ADD_ANNOTATION = "ADD_ANNOTATION";
 const DEL_ANNOTATION = "DEL_ANNOTATION";
+
+const RESTART_ANNOTATION = "RESTART_ANNOTATION";
 
 export const setPresentationid = (payload) => ({
     type: SET_PRESENTATION_ID,
@@ -47,6 +48,11 @@ export const delAnnotation = (payload) => ({
     payload
 })
 
+export const restartAnnotation = (payload) => ({
+    type: RESTART_ANNOTATION,
+    payload
+});
+
 function randomId() {
     let strId = v4().toString();
     return strId.replaceAll("-", "");
@@ -61,6 +67,7 @@ const initialState = {
     labels: {
         1: "TITLE"
     },
+    submissions: {},
 };
 
 export const NO_LABEL = "NO_LABEL";
@@ -170,6 +177,33 @@ const annotationState = (
                 return {
                     ...state,
                     refAnnotations: newRefAnnotations,
+                };
+            }
+            case RESTART_ANNOTATION: {
+                const submitted = action.payload.submitted;
+                if (!submitted) {
+                    return {
+                        ...initialState,
+                        submissionId: randomId(),
+                        submissions: {
+                            ...state.submissions,
+                        }
+                    };
+                }
+                const presentationId = state.presentationId;
+                const submissionId = state.submissionId;
+
+                const new_submissions = { ...state.submissions };
+                if (!new_submissions.hasOwnProperty(presentationId)) {
+                    new_submissions[presentationId] = [];
+                }
+                new_submissions[presentationId].push(submissionId);
+                return {
+                    ...initialState,
+                    submissionId: randomId(),
+                    submissions: {
+                        ...new_submissions,
+                    }
                 };
             }
             default:

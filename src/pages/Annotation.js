@@ -3,13 +3,21 @@ import axios from "axios";
 import '../App.css';
 
 import { useDispatch, useSelector } from "react-redux";
-import { resetApp } from "../reducers";
-import { addAnnotation, delAnnotation, NO_LABEL, setLabel, setPresentationid, setStep } from "../reducers/annotationState";
+import { 
+    addAnnotation,
+    delAnnotation,
+    NO_LABEL,
+    restartAnnotation,
+    setLabel,
+    setPresentationid,
+    setStep
+} from "../reducers/annotationState";
 
 import GenericButton from "../components/GenericButton";
 import { AfterSubmission, AnnotationTask0, AnnotationTask1, AnnotationVerify } from "../components/AnnotationTasks";
 import Outline from "../components/Outline";
 import ReactPlayer from "react-player";
+import { resetApp } from "../reducers";
 
 const INTRO = 0;
 const BROWSING = 1;
@@ -298,6 +306,10 @@ function PresentationGallery(props) {
     const summary = props?.summary;
     const handlePresentationClick = props?.handlePresentationClick;
 
+    const {
+        submissions,
+    } = useSelector(state => state.annotationState);
+
     if (!summary) {
         return null;
     }
@@ -308,17 +320,43 @@ function PresentationGallery(props) {
         presentationId => USER_PRESENTATION_IDS[userId].includes(presentationId)
     );
 
-    return (<div>
+    return (<div
+        style={{
+            display: "flex",
+            flexDirection: "row",
+            justifyContent: "space-around",
+            flexWrap: "wrap",
+        }}
+    >
         {
             validPresentationIds.map((presentationId) => {
                 const presentationData = {
                     "paper": `http://server.hyungyu.com:7777/papers/${presentationId}/paper.pdf`,
                 };
-                return (<GenericButton
+                const submissionsList = submissions.hasOwnProperty(presentationId) ? submissions[presentationId] : [];
+                return (<div 
                     key={"button" + presentationId.toString()}
-                    title={"Presentation " + presentationId.toString()}
-                    onClick={() => handlePresentationClick(presentationId, presentationData)}
-                />);
+                    style={{
+                        display: "flex",
+                        flexDirection: "column",
+                        margin: "1em"
+                    }}
+                >
+                    <GenericButton
+                        title={"Presentation " + presentationId.toString()}
+                        onClick={() => handlePresentationClick(presentationId, presentationData)}
+                        color={submissionsList.length == 0 ? "black" : "gray"}
+                    />
+                    <div> 
+                        Submitted Annotations: {submissionsList.length}
+                        <div>
+                            {submissionsList.map((val, idx) => {
+                                return (<div key={idx}> {idx + 1}: {val} </div>);
+                            })}
+                        </div>
+                    </div>
+                </div>
+                );
             })
         }
     </div>);
@@ -428,6 +466,7 @@ function Annotation(props) {
         presentationData,
         submissionId,
         labels,
+        submissions,
     } = useSelector(state => state.annotationState);
 
     const [data, setData] = useState([]);
@@ -596,16 +635,31 @@ function Annotation(props) {
 
                 lastButton = (<GenericButton
                     title={"Start new Annotation"}
-                    onClick={() => dispatch(resetApp())}
+                    onClick={() => dispatch(restartAnnotation({submitted: true}))}
                     color="darkBlue"
                 />);
         }
+        
+        const submissionsList = submissions.hasOwnProperty(presentationId) ? submissions[presentationId] : [];
+
         return (<div>
             {
                 presentationId < 0 ?
                     <h2> Please choose a Presentation </h2>
                 :
-                    <h2> Presentation {presentationId} </h2>
+                    <div>
+                        <h2> Presentation {presentationId} </h2>
+                        {submissionsList.length > 0 ?
+                            <div>
+                                <h3> Your submissions: </h3>
+                                {submissionsList.map((val, idx) => {
+                                    return (<div key={idx}> {idx + 1}: {val} </div>);
+                                })}
+                            </div>
+                            :
+                            null
+                        }
+                    </div>
             }
             {instructions ?
                 <div>
@@ -685,6 +739,20 @@ function Annotation(props) {
 
     return (<div className="App">
         <h2> Outline Construction for Presentations </h2>
+        {
+           step === INTRO ?
+           <div style={{
+                margin: "2em"
+            }}> 
+                <GenericButton 
+                    title={"System Reset"}
+                    onClick={() => dispatch(resetApp())}
+                />
+                <div> All annotations will be deleted </div>
+            </div>
+            :
+            null
+        }
         <div style={{
             textAlign: "right",
             marginRight: "1em"
@@ -694,7 +762,7 @@ function Annotation(props) {
                 <div>
                     <GenericButton
                         title={"Restart"}
-                        onClick={() => dispatch(resetApp())}
+                        onClick={() => dispatch(restartAnnotation({submitted: false}))}
                     />
                     <p style={{color: "red", margin: 0}}>
                         By restarting, you will <br/>
