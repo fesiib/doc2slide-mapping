@@ -6,14 +6,13 @@ import eventhook
 
 class ChangeDetection:
     # minimum contour area (1000)
-    frames = []
-    minArea = 1000
+    min_area = 1000
     # maximum frames before firstFrame reset (3)
-    maxIdle = 3
+    max_idle = 3
     # frame step size
-    stepSize = 20
+    step_size = 20
     # amount of percent between each progress event
-    progressInterval = 1
+    progress_interval = 1
     # event that fires when motion is confirmed
     onTrigger = eventhook.EventHook()
     # event that gives feedback of how far the detection is
@@ -21,12 +20,12 @@ class ChangeDetection:
 
     TH_MARGIN = 20
 
-    def __init__(self, stepSize, progressInterval, showDebug=False):
+    def __init__(self, step_size, progress_interval, show_debug=False):
         self.frames = []
-        self.selectedFrames = []
-        self.stepSize = stepSize
-        self.progressInterval = progressInterval
-        self.showDebug = showDebug
+        self.selected_frames = []
+        self.step_size = step_size
+        self.progress_interval = progress_interval
+        self.show_debug = show_debug
 
     def __transform_frame(self, frame, mask):
         gray = imutils.resize(frame, width=500)
@@ -36,54 +35,51 @@ class ChangeDetection:
         return gray
 
     
-    def calcThresh(self, frame, threshold=25):
+    def __calc_thresh(self, frame, threshold=25):
         thresh = cv2.threshold(frame, threshold, 255, cv2.THRESH_BINARY)[1]
         return cv2.dilate(thresh, None, iterations=2)
 
-    def detectContours(self, thresh):
+    def __detect_contours(self, thresh):
         cnts = cv2.findContours(
             thresh.copy(), cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
         # cnts = cnts[0] if imutils.is_cv2() else cnts[1]
         print("Contours", cnts[0], cnts[1])
         cnts = cnts[0]
-        validCnts = []
+        valid_cnts = []
         # loop over the contours
         for c in cnts:
             # if the contour is too small, ignore it
-            if cv2.contourArea(c) < self.minArea:
+            if cv2.contourArea(c) < self.min_area:
                 continue
-            validCnts.append(c)
-        return validCnts
+            valid_cnts.append(c)
+        return valid_cnts
 
     def start(self, camera, mask):
-        firstFrame = None
-        prevFrame = None
+        prev_slide_frame = None
+        prev_frame = None
 
         # amount of contours
-        contAmount = 0
+        cnts_cnt = 0
 
         # amount of idle frames that were the same
-        # used to determine if that frame should become the new firstFrame
-        idleCount = 0
+        # used to determine if that frame should become the new prev_slide_frame
+        idle_cnt = 0
 
         # current pos in vid
-        currentPosition = 0
-        lastProgress = 0
+        cur_frame = 0
+        last_progress = 0
 
         fps = int(camera.get(cv2.CAP_PROP_FPS))
 
         print('change detection initiated')
 
-        totalFrames = camera.get(cv2.CAP_PROP_FRAME_COUNT) - 1
+        total_frames = camera.get(cv2.CAP_PROP_FRAME_COUNT) - 1
 
-        while currentPosition < totalFrames:
+        while cur_frame < total_frames:
             (_, frame) = camera.read()
 
             if frame is None:
                 break
-
-            # if currentPosition > 500:
-            #     break
 
             # frame = frame[:, 640:1280]
             # if chi2019:
@@ -94,8 +90,6 @@ class ChangeDetection:
             # convert grabbed frame to gray and blur
             gray = self.__transform_frame(frame, mask)
 
-
-
             self.frames.append({
                 "frame": original,
                 "curFrameCount": camera.get(cv2.CAP_PROP_POS_FRAMES),
@@ -103,49 +97,49 @@ class ChangeDetection:
                 "transformed_frame": gray,
             })
 
-            if firstFrame is None:
-                firstFrame = np.zeros(gray.shape, np.uint8)
+            if prev_slide_frame is None:
+                prev_slide_frame = np.zeros(gray.shape, np.uint8)
 
-            if prevFrame is None:
-                prevFrame = np.zeros(gray.shape, np.uint8)
+            if prev_frame is None:
+                prev_frame = np.zeros(gray.shape, np.uint8)
 
-            frameDelta = cv2.absdiff(firstFrame, gray)
-            thresh = self.calcThresh(frameDelta)
-            cnts = self.detectContours(thresh)
+            frame_delta = cv2.absdiff(prev_slide_frame, gray)
+            thresh = self.__calc_thresh(frame_delta)
+            cnts = self.__detect_contours(thresh)
 
-            # we have motion, possible new firstFrame?
+            # we have motion, possible new prev_slide_frame?
             if len(cnts) > 0:
-                prevDelta = cv2.absdiff(prevFrame, gray)
-                prevThresh = self.calcThresh(prevDelta)
+                prev_delta = cv2.absdiff(prev_frame, gray)
+                prev_thresh = self.__calc_thresh(prev_delta)
                 
                 # we have no changes from the previous frame
-                if cv2.countNonZero(prevThresh) == 0:
-                    idleCount += 1
+                if cv2.countNonZero(prev_thresh) == 0:
+                    idle_cnt += 1
                 else:
-                    idleCount = 0
+                    idle_cnt = 0
 
-            # we have now seen the same image for too long, reset firstImage
-            if idleCount > self.maxIdle:
-                firstFrame = prevFrame
-                self.selectedFrames.append(len(self.frames) - 1)
+            # we have now seen the same image for too long, reset prev_slide_frame
+            if idle_cnt > self.max_idle:
+                prev_slide_frame = prev_frame
+                self.selected_frames.append(len(self.frames) - 1)
                 self.onTrigger.fire(original)
                 self.onTrigger.fire(gray, "masked_")
-                idleCount = 0
+                idle_cnt = 0
 
-            prevFrame = gray
+            prev_frame = gray
 
-            progress = (currentPosition / totalFrames) * 100
+            progress = (cur_frame / total_frames) * 100
 
-            if progress - lastProgress >= self.progressInterval:
-                lastProgress = progress
-                self.onProgress.fire(progress, currentPosition)
+            if progress - last_progress >= self.progress_interval:
+                last_progress = progress
+                self.onProgress.fire(progress, cur_frame)
 
-            camera.set(1, min(currentPosition +
-                              self.stepSize, totalFrames))
+            camera.set(1, min(cur_frame +
+                              self.step_size, total_frames))
 
-            currentPosition = camera.get(cv2.CAP_PROP_POS_FRAMES)
+            cur_frame = camera.get(cv2.CAP_PROP_POS_FRAMES)
 
-            if self.showDebug:
+            if self.show_debug:
                 # loop over the contours
                 for c in cnts:
                     # compute the bounding box for the contour, draw it on the frame
@@ -153,11 +147,11 @@ class ChangeDetection:
                     cv2.rectangle(frame, (x, y), (x + w, y + h),
                                   (0, 255, 0), 2)
 
-                cv2.putText(frame, "contours: " + str(contAmount),
+                cv2.putText(frame, "contours: " + str(cnts_cnt),
                             (10, 20), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 0, 255), 2)
-                cv2.putText(frame, "idle: " + str(idleCount), (140, 20),
+                cv2.putText(frame, "idle: " + str(idle_cnt), (140, 20),
                             cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 0, 255), 2)
-                cv2.putText(frame, "frame: " + str(currentPosition), (10, 40),
+                cv2.putText(frame, "frame: " + str(cur_frame), (10, 40),
                             cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 0, 255), 2)
                 # self.onTrigger.fire(frame, "Frame")
                 # self.onTrigger.fire(frameDelta, "Delta")
@@ -171,60 +165,50 @@ class ChangeDetection:
         cv2.destroyAllWindows()
 
         print(len(self.frames))
-        print(len(self.selectedFrames))
+        print(len(self.selected_frames))
 
-        frameRange = []
+        frame_range = []
 
-        for pos in self.selectedFrames :
+        for pos in self.selected_frames :
+            _g1 = self.selected_frames[pos]['transformed_frame']
 
-            tmp = [ 987987987 for i in range(len(self.frames)) ]
-
-            _g1 = self.selectedFrames[pos]['transformed_frame']
-
-            myRange = [pos, pos]
+            cur_range = [self.frames[pos]["curFrameCount"], self.frames[pos]["curFrameCount"]]
 
             for k in [-1, 1] :
                 cur = pos + k
-
-                if not (0 <= cur and cur < len(self.frames)) :
+                if not (0 <= cur and cur < len(self.frames)):
                     continue
-
-                tmp[pos] = 0
-
-                while 0 <= cur and cur < len(self.frames) :
+                while 0 <= cur and cur < len(self.frames):
                     _g2 = self.__transform_frame(self.frames[cur]["transformed_frame"])
 
                     delta = cv2.absdiff(_g1, _g2)
-                    thresh = self.calcThresh(delta)
-                    cnts = self.detectContours(thresh)
+                    thresh = self.__calc_thresh(delta)
+                    cnts = self.__detect_contours(thresh)
 
                     if len(cnts) > 0 :
                         break
 
-                    tmp[cur] = 0
-                    myRange[ 0 if k == -1 else 1 ] = self.frames[cur]["curFrameCount"]
-
+                    cur_range[ 0 if k == -1 else 1 ] = self.frames[cur]["curFrameCount"]
                     cur = cur + k
+            frame_range.append(cur_range)
 
-            frameRange.append(myRange)
+        return frame_range, fps
 
-        return frameRange, fps
+    def get_acc_frame(self, camera):
+        acc_frame = None
+        acc_frames_cnt = 0
 
-    def getAccFrame(self, camera):
-        accFrame = None
-        accedFrames = 0
-
-        prevFrame = None
+        prev_frame = None
 
         # current pos in vid
-        currentPosition = 0
-        lastProgress = 0
+        cur_frame = 0
+        last_progress = 0
 
         print('talking head detection initiated')
 
-        totalFrames = camera.get(cv2.CAP_PROP_FRAME_COUNT) - 1
+        total_frames = camera.get(cv2.CAP_PROP_FRAME_COUNT) - 1
 
-        while currentPosition < totalFrames:
+        while cur_frame < total_frames:
             (_, frame) = camera.read()
 
             if frame is None:
@@ -233,52 +217,47 @@ class ChangeDetection:
             # convert grabbed frame to gray and blur
             gray = self.__transform_frame(frame, 1)
 
-            if prevFrame is None:
-                accFrame = np.zeros(gray.shape, np.float64)
-                prevFrame = np.zeros(gray.shape, np.uint8)
+            if prev_frame is None:
+                acc_frame = np.zeros(gray.shape, np.float64)
+                prev_frame = np.zeros(gray.shape, np.uint8)
 
-            frameDelta = cv2.absdiff(prevFrame, gray)
-            thresh = cv2.threshold(frameDelta, 0, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU)[1]
+            prev_delta = cv2.absdiff(prev_frame, gray)
+            thresh = cv2.threshold(prev_delta, 0, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU)[1]
 
             thresh_np = np.asarray(thresh).astype(np.float64)
-            accFrame = accFrame + thresh_np
-            accedFrames += 1
+            acc_frame = acc_frame + thresh_np
+            acc_frames_cnt += 1
 
-            prevFrame = gray
+            prev_frame = gray
 
-            progress = (currentPosition / totalFrames) * 100
+            progress = (cur_frame / total_frames) * 100
+            if progress - last_progress >= self.progress_interval:
+                last_progress = progress
+                self.onProgress.fire(progress, cur_frame)
 
-            if progress - lastProgress >= self.progressInterval:
-                lastProgress = progress
-                self.onProgress.fire(progress, currentPosition)
+            camera.set(1, min(cur_frame +
+                              self.step_size, total_frames))
 
-            camera.set(1, min(currentPosition +
-                              self.stepSize, totalFrames))
-
-            currentPosition = camera.get(cv2.CAP_PROP_POS_FRAMES)
-
-            key = cv2.waitKey(1) & 0xFF
-            if key == ord('q'):
-                break
+            cur_frame = camera.get(cv2.CAP_PROP_POS_FRAMES)
 
         camera.release()
 
-        accFrame /= accedFrames
-        accFrame_img = accFrame.astype(np.uint8)
-        self.onTrigger.fire(accFrame_img, "accFrame_")
-        return accFrame_img
+        acc_frame /= acc_frames_cnt
+        acc_frame_img = acc_frame.astype(np.uint8)
+        self.onTrigger.fire(acc_frame_img, "acc_frame_")
+        return acc_frame_img
 
-    def mask_talking_head(self, accFrame):
-        (n, m) = accFrame.shape
+    def mask_talking_head(self, acc_frame):
+        (n, m) = acc_frame.shape
 
         mask = np.ones((n, m), np.uint8)
 
-        accFrame_img = self.calcThresh(accFrame, 50)
-        accFrame_blur = cv2.GaussianBlur(accFrame_img, (5, 5), 0)
-        edges = cv2.Canny(accFrame_blur, 0, 100)
+        thresh = self.__calc_thresh(acc_frame, 50)
+        blur_thresh = cv2.GaussianBlur(thresh, (5, 5), 0)
+        edges = cv2.Canny(blur_thresh, 0, 100)
 
-        self.onTrigger.fire(accFrame_img, "blurred_accFrame")
-        self.onTrigger.fire(edges, "edges_")
+        self.onTrigger.fire(blur_thresh, "blur_thresh_acc_frame_")
+        self.onTrigger.fire(edges, "edges_acc_frame_")
 
         while True:
             dp = [[0 for j in range(m)] for i in range(n)]
@@ -316,7 +295,7 @@ class ChangeDetection:
 
                             px_sum /= (bottom - top + 1) * (right - left + 1)
 
-                            if ((bottom - top + 1) * (right - left + 1) < self.minArea):
+                            if ((bottom - top + 1) * (right - left + 1) < self.min_area):
                                 continue
 
                             if px_sum > px_max_sum:
@@ -336,7 +315,7 @@ class ChangeDetection:
 
             for i in range(top, bottom):
                 for j in range(left, right):
-                    accFrame_blur[i][j] = 255
+                    blur_thresh[i][j] = 255
                     edges[i][j] = 0
                     mask[i][j] = 0
         return mask

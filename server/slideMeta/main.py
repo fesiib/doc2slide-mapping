@@ -29,13 +29,14 @@ args = vars(parser.parse_args())
 
 
 class Main:
-    def __init__(self, debug, vidpath, output, stepSize, progressInterval):
-        self.slideCounters = {}
+    def __init__(self, debug, vidpath, output, step_size, progress_interval):
+        self.slide_counters = {}
         self.vidpath = vidpath
         self.output = output
+        self.start_time = 0
         self.detection = changedetection.ChangeDetection(
-            stepSize, progressInterval, debug)
-        self.dupeHandler = duplicatehandler.DuplicateHandler(1)
+            step_size, progress_interval, debug)
+        self.dup_handler = duplicatehandler.DuplicateHandler(1)
 
     def strfdelta(self, tdelta, fmt):
         d = {"days": tdelta.days}
@@ -44,7 +45,7 @@ class Main:
         return fmt.format(**d)
 
     # crop image to slide size
-    def cropImage(self, frame):
+    def __crop_image(self, frame):
         return frame
 
         min_area = (frame.shape[0] * frame.shape[1]) * (2 / 3)
@@ -60,33 +61,33 @@ class Main:
                 crop = frame[y:y+h, x:x+w]
                 return crop
 
-    def checkRatio(self, frame, min, max):
+    def check_ratio(self, frame, min, max):
         ratio = frame.shape[1] / frame.shape[0]
         return ratio >= min and ratio <= max
 
     def onTrigger(self, frame, title=""):
-        frame = self.cropImage(frame)
+        frame = self.__crop_image(frame)
         if frame is not None:
-            if self.dupeHandler.check(frame):
+            if self.dup_handler.check(frame):
                 print("Found a new slide!")
-            self.saveSlide(frame, title)
+            self.save_slide(frame, title)
 
-    def saveSlide(self, slide, title=""):
+    def save_slide(self, slide, title=""):
         parent_path = os.path.join(self.output, "images")
         if not os.path.exists(parent_path):
             os.makedirs(parent_path)
 
-        if not title in self.slideCounters:
-            self.slideCounters[title] = 0
-        slideCounter = self.slideCounters[title]
-        self.slideCounters[title] += 1
+        if not title in self.slide_counters:
+            self.slide_counters[title] = 0
+        cur_slide = self.slide_counters[title]
+        self.slide_counters[title] += 1
 
-        img_path = os.path.join(parent_path, title + str(slideCounter) + ".jpg")
-        print("Saving slide " + str(slideCounter) + " to " + img_path + " ...\n")
+        img_path = os.path.join(parent_path, title + str(cur_slide) + ".jpg")
+        print("Saving slide " + str(cur_slide) + " to " + img_path + " ...\n")
         cv2.imwrite(img_path, slide)
 
     def onProgress(self, percent, pos):
-        elapsed = time.time() - self.startTime
+        elapsed = time.time() - self.start_time
         eta = (elapsed / percent) * (100 - percent)
         fps = pos / elapsed
         etaString = self.strfdelta(datetime.timedelta(seconds=eta),
@@ -98,7 +99,7 @@ class Main:
         imgs = []
         cnt = 0
 
-        for i in self.dupeHandler.entries:
+        for i in self.dup_handler.entries:
             imgs.append(cv2.imencode('.jpg', i)[1].tostring())
 
         with open(self.output, "wb") as f:
@@ -130,11 +131,11 @@ class Main:
             frame_range.append((scene[0].get_seconds(), scene[1].get_seconds()))
             
             video_stream.seek(scene[0].get_frames())
-            self.saveSlide(video_stream.read())
+            self.save_slide(video_stream.read())
 
             if i == len(scene_list) - 1:
                 video_stream.seek(scene[1].get_frames())
-                self.saveSlide(video_stream.read())
+                self.save_slide(video_stream.read())
         
         stats_manager.save_to_csv(path=stats_file_path)
         return frame_range, fps
@@ -143,38 +144,38 @@ class Main:
         self.detection.onTrigger += self.onTrigger
         self.detection.onProgress += self.onProgress
 
-        self.startTime = time.time()
+        self.start_time = time.time()
 
         #frame_range, fps = self.find_scenes(10.0)
 
         
         # for id in range(11):
-        #     accFrame = self.detection.getAccFrame(cv2.VideoCapture(
+        #     acc_frame = self.detection.get_acc_frame(cv2.VideoCapture(
         #         os.path.join(self.vidpath.strip(), str(id) + ".mp4")
         #     ))
 
-        #     self.saveSlide(accFrame, "th_")
+        #     self.save_slide(acc_frame, "th_")
 
         # for id in range(11):
         #     path = "./5min/ths_better/" + "th_" + str(id) + ".jpg"
         #     print(path)
-        #     accFrame = cv2.imread(path, cv2.IMREAD_GRAYSCALE)
-        #     self.detection.mask_talking_head(accFrame)
+        #     acc_frame = cv2.imread(path, cv2.IMREAD_GRAYSCALE)
+        #     self.detection.mask_talking_head(acc_frame)
 
         prev_output = self.output
 
         for id in range(6, 7):
             video_path = os.path.join(self.vidpath.strip(), str(id) + ".mp4")
             self.output = os.path.join(prev_output, str(id))
-            self.slideCounters = {}
+            self.slide_counters = {}
 
-            accFrame = self.detection.getAccFrame(cv2.VideoCapture(
+            acc_frame = self.detection.get_acc_frame(cv2.VideoCapture(
                 video_path
             ))
             # path = "./5min/ths_better/" + "th_" + str(id) + ".jpg"
-            # accFrame = cv2.imread(path, cv2.IMREAD_GRAYSCALE)
+            # acc_frame = cv2.imread(path, cv2.IMREAD_GRAYSCALE)
             
-            mask = self.detection.mask_talking_head(accFrame)
+            mask = self.detection.mask_talking_head(acc_frame)
 
             frame_range, fps = self.detection.start(
                 cv2.VideoCapture(video_path),
@@ -191,6 +192,8 @@ class Main:
 main = Main(
     args['debug'],
     os.path.join(args['video'].strip()),
-    os.path.join(args['output']),
-    args['step-size'], args['progress-interval'])
+    os.path.join(args['output'].strip()),
+    args['step-size'], args['progress-interval']
+)
+
 main.start()
