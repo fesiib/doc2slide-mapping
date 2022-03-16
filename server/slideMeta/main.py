@@ -7,6 +7,10 @@ import imutils
 import img2pdf
 import changedetection
 import duplicatehandler
+from scenedetect import open_video
+from scenedetect import SceneManager
+from scenedetect import StatsManager
+from scenedetect.detectors import ContentDetector
 
 
 parser = argparse.ArgumentParser()
@@ -14,7 +18,7 @@ parser.add_argument("-v", "--video", dest="video", required=True,
                     help="the path to your video file to be analyzed")
 parser.add_argument("-o", "--output", dest="output", default="slides.pdf",
                     help="the output pdf file where the extracted slides will be saved")
-parser.add_argument("-s", "--step-size", dest="step-size", default=20,
+parser.add_argument("-s", "--step-size", dest="step-size", default=10,
                     help="the amount of frames skipped in every iteration")
 parser.add_argument("-p", "--progress-interval", dest="progress-interval", default=1,
                     help="how many percent should be skipped between each progress output")
@@ -25,9 +29,8 @@ args = vars(parser.parse_args())
 
 
 class Main:
-    slideCounter = 0
-
     def __init__(self, debug, vidpath, output, stepSize, progressInterval):
+        self.slideCounters = {}
         self.vidpath = vidpath
         self.output = output
         self.detection = changedetection.ChangeDetection(
@@ -61,23 +64,26 @@ class Main:
         ratio = frame.shape[1] / frame.shape[0]
         return ratio >= min and ratio <= max
 
-    def onTrigger(self, frame):
+    def onTrigger(self, frame, title=""):
         frame = self.cropImage(frame)
-
-        print(frame.shape)
-
         if frame is not None:
             if self.dupeHandler.check(frame):
                 print("Found a new slide!")
-            self.saveSlide(frame)
+            self.saveSlide(frame, title)
 
-    def saveSlide(self, slide):
-        if not os.path.exists(self.output):
-            os.makedirs(self.output)
-        print("Saving slide " + str(self.slideCounter) + "...")
-        cv2.imwrite(os.path.join(
-            self.output, str(self.slideCounter) + ".jpg"), slide)
-        self.slideCounter += 1
+    def saveSlide(self, slide, title=""):
+        parent_path = os.path.join(self.output, "images")
+        if not os.path.exists(parent_path):
+            os.makedirs(parent_path)
+
+        if not title in self.slideCounters:
+            self.slideCounters[title] = 0
+        slideCounter = self.slideCounters[title]
+        self.slideCounters[title] += 1
+
+        img_path = os.path.join(parent_path, title + str(slideCounter) + ".jpg")
+        print("Saving slide " + str(slideCounter) + " to " + img_path + " ...\n")
+        cv2.imwrite(img_path, slide)
 
     def onProgress(self, percent, pos):
         elapsed = time.time() - self.startTime
@@ -98,20 +104,93 @@ class Main:
         with open(self.output, "wb") as f:
             f.write(img2pdf.convert(imgs))
 
+    def find_scenes(self, threshold=30.0):
+        # Create our video & scene managers, then add the detector.
+        video_stream = open_video(path=self.vidpath.strip())
+        stats_manager = StatsManager()
+        scene_manager = SceneManager(stats_manager)
+        scene_manager.add_detector(
+            ContentDetector(threshold=threshold))
+
+        stats_file_path = os.path.join(self.output, "stats.csv")
+        scene_manager.detect_scenes(video=video_stream)
+        # Each returned scene is a tuple of the (start, end) timecode.
+        scene_list = scene_manager.get_scene_list()
+
+        frame_range = []
+        fps = video_stream.frame_rate
+
+        for i, scene in enumerate(scene_list):
+            print(
+                'Scene %2d: Start %s / Frame %d, End %s / Frame %d' % (
+                i+1,
+                scene[0].get_timecode(), scene[0].get_frames(),
+                scene[1].get_timecode(), scene[1].get_frames(),))
+
+            frame_range.append((scene[0].get_seconds(), scene[1].get_seconds()))
+            
+            video_stream.seek(scene[0].get_frames())
+            self.saveSlide(video_stream.read())
+
+            if i == len(scene_list) - 1:
+                video_stream.seek(scene[1].get_frames())
+                self.saveSlide(video_stream.read())
+        
+        stats_manager.save_to_csv(path=stats_file_path)
+        return frame_range, fps
+
     def start(self):
         self.detection.onTrigger += self.onTrigger
         self.detection.onProgress += self.onProgress
 
         self.startTime = time.time()
 
-        self.detection.start(cv2.VideoCapture(self.vidpath.strip()))
+        #frame_range, fps = self.find_scenes(10.0)
 
-# print("Saving PDF...")
-# self.convertToPDF()
+        
+        # for id in range(11):
+        #     accFrame = self.detection.getAccFrame(cv2.VideoCapture(
+        #         os.path.join(self.vidpath.strip(), str(id) + ".mp4")
+        #     ))
+
+        #     self.saveSlide(accFrame, "th_")
+
+        # for id in range(11):
+        #     path = "./5min/ths_better/" + "th_" + str(id) + ".jpg"
+        #     print(path)
+        #     accFrame = cv2.imread(path, cv2.IMREAD_GRAYSCALE)
+        #     self.detection.mask_talking_head(accFrame)
+
+        prev_output = self.output
+
+        for id in range(6, 7):
+            video_path = os.path.join(self.vidpath.strip(), str(id) + ".mp4")
+            self.output = os.path.join(prev_output, str(id))
+            self.slideCounters = {}
+
+            accFrame = self.detection.getAccFrame(cv2.VideoCapture(
+                video_path
+            ))
+            # path = "./5min/ths_better/" + "th_" + str(id) + ".jpg"
+            # accFrame = cv2.imread(path, cv2.IMREAD_GRAYSCALE)
+            
+            mask = self.detection.mask_talking_head(accFrame)
+
+            frame_range, fps = self.detection.start(
+                cv2.VideoCapture(video_path),
+                mask,
+            )
+            with open(os.path.join(self.output, "frameTimestamp.txt"), "w")  as f:
+                for i in range(len(frame_range)) :
+                    f.write(str(round((frame_range[i][0]-1)/fps, 2)) + '\t' + str(round((frame_range[i][1]-1)/fps, 2)))
+                    f.write('\n')
 
         print("All done!")
 
 
-main = Main(args['debug'], args['video'], args['output'],
-            args['step-size'], args['progress-interval'])
+main = Main(
+    args['debug'],
+    os.path.join(args['video'].strip()),
+    os.path.join(args['output']),
+    args['step-size'], args['progress-interval'])
 main.start()

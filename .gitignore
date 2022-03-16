@@ -133,5 +133,6 @@ node_modules
 package-lock.json
 
 server/slideMeta/slideData/
+server/slideMeta/slideDataOld/
 public/slideData/
 public/annotationTutorials/

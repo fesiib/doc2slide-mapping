@@ -16,7 +16,7 @@ from annotation import read_json
 
 from pathlib import Path
 
-SLIDE_DATA_PATH = './slideMeta/slideData'
+SLIDE_DATA_PATH = './slideMeta/slideDataOld'
 
 USE_SAVED = True
 

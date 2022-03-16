@@ -2,8 +2,10 @@ import os
 from pytube import Playlist, YouTube
 import pandas as pd
 
+DATA_FILENAME = "5_min_data";
+
 try :
-    df = pd.read_csv("__data.csv")
+    df = pd.read_csv(DATA_FILENAME + ".csv")
 except :
     df = pd.DataFrame(columns=['title', 'paper_file', 'video_file', 'subtitle_file', 'video_url', 'data_imported'])
 
@@ -16,6 +18,8 @@ cnt = 0
 print(len(p.video_urls))
 
 for url in p.video_urls:
+    if cnt > 10:
+        break
     if cnt < len(df.index) :
         cnt = cnt + 1
         continue
@@ -52,5 +56,5 @@ for url in p.video_urls:
 
     cnt = cnt + 1
 
-    df.to_csv('__data.csv')
+    df.to_csv(DATA_FILENAME + ".csv")
 
