@@ -5,17 +5,16 @@ import pandas as pd
 import os
 
 flag = 0 # 1 : already created, 0: newly create
-datasetFile = "../videoDataset/chi2019/dataset_chi2019.csv"
+datasetFile = "../chi2021/dataset_chi2021.csv"
 
-paperDataPath = "../videoDataset/chi2019/papers_chi2019/"
-subtitleDataPath = "../videoDataset/chi2019/subtitle_chi2019/"
-videoDataPath = "../videoDataset/chi2019/video_chi2019/"
+paperDataPath = "../chi2021/chi2021_papers/"
+subtitleDataPath = "../chi2021/chi2021_subtitles/"
+videoDataPath = "../chi2021/chi2021_videos/"
 
 def getKeyword() :
     import csv
 
-    jsonData = json.load(open('./slideImages/paperData.json'))
-    grobidData = json.load(open('./slideImages/grobidResult.json'))
+    jsonData = json.load(open('./slideImages/grobidResult.json'))
 
     keywords = []
 
@@ -43,8 +42,8 @@ def getKeyword() :
 
         keywordFile.write(json.dumps(
             {"keywords": keywords,
-            "title": grobidData["title"] ,
-            "authors": grobidData["authors"] 
+            "title": jsonData["title"] ,
+            "authors": jsonData["authors"] 
             }
         ))
 
@@ -54,12 +53,15 @@ def getKeyword() :
 
 
 def getSectionStructure() :
-    jsonData = json.load(open('./slideImages/paperData.json'))
+    jsonData = json.load(open('./slideImages/grobidResult.json'))
     
     bodyText = []
     sectionInfo = []
     
     for p in jsonData['sections'] :
+        print(p.keys())
+        continue
+
         sectionTitle = ''
     
         if 'title' in p and 'text' in p['title']:
@@ -126,18 +128,18 @@ for index, row in dataFile.iterrows() :
         os.system("mkdir slideImages")
 
         print('cp ' + paperDataPath + str(paper) + ' ./slideImages/paper.pdf')
-        print('cp '+ paperDataPath + str(paper) + ' ../../../pdffigures2/paper.pdf')
+        #print('cp '+ paperDataPath + str(paper) + ' ../../../pdffigures2/paper.pdf')
 
         os.system('cp ' + paperDataPath + str(paper) + ' ./slideImages/paper.pdf')
-        os.system('cp '+ paperDataPath + str(paper) + ' ../../../pdffigures2/paper.pdf')
+        #os.system('cp '+ paperDataPath + str(paper) + ' ../../../pdffigures2/paper.pdf')
 
-        os.chdir('../../../pdffigures2')
-        os.system('pwd')
+        #os.chdir('../../../pdffigures2')
+        #os.system('pwd')
 
-        os.system('sbt "runMain org.allenai.pdffigures2.FigureExtractorBatchCli paper.pdf -g myPrefix"')
+        #os.system('sbt "runMain org.allenai.pdffigures2.FigureExtractorBatchCli paper.pdf -g myPrefix"')
 
-        os.system('cp myPrefixpaper.json ../browsingMapping/server/slideMeta/slideImages/paperData.json')
-        os.chdir('../browsingMapping/server/slideMeta')
+        #os.system('cp myPrefixpaper.json ../browsingMapping/server/slideMeta/slideImages/paperData.json')
+        #os.chdir('../browsingMapping/server/slideMeta')
 
         
         article_dict = scipdf.parse_pdf_to_dict('./slideImages/paper.pdf')  # return dictionary
@@ -145,11 +147,9 @@ for index, row in dataFile.iterrows() :
         paper_grobid.write(json.dumps(article_dict))
         paper_grobid.close()
 
-
-
         getSectionStructure()
-        getKeyword()
-
+        #getKeyword()
+        break
 
 # os.system('cd ../browsingMapping/server')
         os.system("sh genSlides.sh")
@@ -199,6 +199,6 @@ _f.write(json.dumps({
 
 _f.close()
 
-os.system("rm -rf ../../public/slideData")
-os.system("cp -rp ./slideData ../../public")
+#os.system("rm -rf ../../public/slideData")
+#os.system("cp -rp ./slideData ../../public")
 

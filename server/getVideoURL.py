@@ -2,7 +2,7 @@ import os
 from pytube import Playlist, YouTube
 import pandas as pd
 
-DATA_FILENAME = "5_min_data";
+DATA_FILENAME = "dataset_chi2021"
 
 try :
     df = pd.read_csv(DATA_FILENAME + ".csv")
@@ -18,8 +18,6 @@ cnt = 0
 print(len(p.video_urls))
 
 for url in p.video_urls:
-    if cnt > 10:
-        break
     if cnt < len(df.index) :
         cnt = cnt + 1
         continue

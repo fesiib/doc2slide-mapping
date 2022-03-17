@@ -74,6 +74,7 @@ class Main:
 
     def save_slide(self, slide, title=""):
         parent_path = os.path.join(self.output, "images")
+        #parent_path = self.output
         if not os.path.exists(parent_path):
             os.makedirs(parent_path)
 
@@ -164,27 +165,29 @@ class Main:
 
         prev_output = self.output
 
-        for id in range(6, 7):
-            video_path = os.path.join(self.vidpath.strip(), str(id) + ".mp4")
-            self.output = os.path.join(prev_output, str(id))
-            self.slide_counters = {}
+        # for id in range(0, 744):
+        #     video_path = os.path.join(self.vidpath.strip(), str(id) + ".mp4")
+        #     self.output = os.path.join(prev_output, str(id))
+        #     self.slide_counters = {}
 
-            acc_frame = self.detection.get_acc_frame(cv2.VideoCapture(
-                video_path
-            ))
-            # path = "./5min/ths_better/" + "th_" + str(id) + ".jpg"
-            # acc_frame = cv2.imread(path, cv2.IMREAD_GRAYSCALE)
-            
-            mask = self.detection.mask_talking_head(acc_frame)
+        video_path = self.vidpath
 
-            frame_range, fps = self.detection.start(
-                cv2.VideoCapture(video_path),
-                mask,
-            )
-            with open(os.path.join(self.output, "frameTimestamp.txt"), "w")  as f:
-                for i in range(len(frame_range)) :
-                    f.write(str(round((frame_range[i][0]-1)/fps, 2)) + '\t' + str(round((frame_range[i][1]-1)/fps, 2)))
-                    f.write('\n')
+        acc_frame = self.detection.get_acc_frame(cv2.VideoCapture(
+            video_path
+        ))
+        # path = "./5min/ths_better/" + "th_" + str(id) + ".jpg"
+        # acc_frame = cv2.imread(path, cv2.IMREAD_GRAYSCALE)
+        
+        mask, mask_rects = self.detection.mask_talking_head(acc_frame)
+
+        frame_range, fps = self.detection.start(
+            cv2.VideoCapture(video_path),
+            mask, mask_rects
+        )
+        with open(os.path.join(self.output, "frameTimestamp.txt"), "w")  as f:
+            for i in range(len(frame_range)) :
+                f.write(str(round((frame_range[i][0]-1)/fps, 2)) + '\t' + str(round((frame_range[i][1]-1)/fps, 2)))
+                f.write('\n')
 
         print("All done!")
 

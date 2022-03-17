@@ -43,7 +43,7 @@ class ChangeDetection:
         cnts = cv2.findContours(
             thresh.copy(), cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
         # cnts = cnts[0] if imutils.is_cv2() else cnts[1]
-        print("Contours", cnts[0], cnts[1])
+        #print("Contours", cnts[0], cnts[1])
         cnts = cnts[0]
         valid_cnts = []
         # loop over the contours
@@ -54,7 +54,7 @@ class ChangeDetection:
             valid_cnts.append(c)
         return valid_cnts
 
-    def start(self, camera, mask):
+    def start(self, camera, mask, mask_rects):
         prev_slide_frame = None
         prev_frame = None
 
@@ -80,6 +80,9 @@ class ChangeDetection:
 
             if frame is None:
                 break
+
+            # if cur_frame > 450:
+            #     break
 
             # frame = frame[:, 640:1280]
             # if chi2019:
@@ -122,8 +125,19 @@ class ChangeDetection:
             if idle_cnt > self.max_idle:
                 prev_slide_frame = prev_frame
                 self.selected_frames.append(len(self.frames) - 1)
+
+                y_magn = original.shape[0] / gray.shape[0]
+                x_magn = original.shape[1] / gray.shape[1]
+
+                for mask_rect in mask_rects:
+                    x1 = int((mask_rect["left"]) * x_magn)
+                    y1 = int(mask_rect["top"] * y_magn)
+                    x2 = int((mask_rect["right"] + 1) * x_magn)
+                    y2 = int((mask_rect["bottom"] + 1) * y_magn)
+
+                    cv2.rectangle(original, (x1, y1), (x2, y2),
+                                  (0, 255, 0), 2)
                 self.onTrigger.fire(original)
-                self.onTrigger.fire(gray, "masked_")
                 idle_cnt = 0
 
             prev_frame = gray
@@ -170,7 +184,7 @@ class ChangeDetection:
         frame_range = []
 
         for pos in self.selected_frames :
-            _g1 = self.selected_frames[pos]['transformed_frame']
+            _g1 = self.frames[pos]['transformed_frame']
 
             cur_range = [self.frames[pos]["curFrameCount"], self.frames[pos]["curFrameCount"]]
 
@@ -179,7 +193,7 @@ class ChangeDetection:
                 if not (0 <= cur and cur < len(self.frames)):
                     continue
                 while 0 <= cur and cur < len(self.frames):
-                    _g2 = self.__transform_frame(self.frames[cur]["transformed_frame"])
+                    _g2 = self.frames[cur]["transformed_frame"]
 
                     delta = cv2.absdiff(_g1, _g2)
                     thresh = self.__calc_thresh(delta)
@@ -214,6 +228,9 @@ class ChangeDetection:
             if frame is None:
                 break
 
+            # if cur_frame > 450:
+            #     break
+
             # convert grabbed frame to gray and blur
             gray = self.__transform_frame(frame, 1)
 
@@ -241,7 +258,9 @@ class ChangeDetection:
             cur_frame = camera.get(cv2.CAP_PROP_POS_FRAMES)
 
         camera.release()
-
+        if acc_frames_cnt == 0:
+            print("No frames", cur_frame, total_frames)
+            return None
         acc_frame /= acc_frames_cnt
         acc_frame_img = acc_frame.astype(np.uint8)
         self.onTrigger.fire(acc_frame_img, "acc_frame_")
@@ -251,6 +270,8 @@ class ChangeDetection:
         (n, m) = acc_frame.shape
 
         mask = np.ones((n, m), np.uint8)
+
+        mask_rects = []
 
         thresh = self.__calc_thresh(acc_frame, 50)
         blur_thresh = cv2.GaussianBlur(thresh, (5, 5), 0)
@@ -313,9 +334,16 @@ class ChangeDetection:
             left = max(side_j * (boundary_j + 1) - self.TH_MARGIN, 0)
             right = min((1 - side_j) * (boundary_j + 1) + (side_j * m) + self.TH_MARGIN, m) 
 
+            mask_rects.append({
+                "top": top,
+                "bottom": bottom - 1,
+                "left": left,
+                "right": right - 1,
+            })
+
             for i in range(top, bottom):
                 for j in range(left, right):
                     blur_thresh[i][j] = 255
                     edges[i][j] = 0
                     mask[i][j] = 0
-        return mask
+        return mask, mask_rects

@@ -1,5 +1,6 @@
 import os
 import sys
+from xml.etree.ElementTree import QName
 
 
 sys.path.insert(0, './src/')
@@ -16,7 +17,7 @@ from annotation import read_json
 
 from pathlib import Path
 
-SLIDE_DATA_PATH = './slideMeta/slideDataOld'
+SLIDE_DATA_PATH = './slideMeta/slideData'
 
 USE_SAVED = True
 
@@ -323,5 +324,5 @@ def clear_results():
                 os.remove(result_path)
 
 if __name__ == "__main__":
-    clear_results()
-    app.run(host='0.0.0.0', port=7777)
+    #clear_results()
+    app.run(host='0.0.0.0', port=7778)
