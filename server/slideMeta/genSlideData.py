@@ -59,7 +59,7 @@ def getSectionStructure() :
     sectionInfo = []
     
     for p in jsonData['sections'] :
-        print(p.keys())
+        print(p["heading"])
         continue
 
         sectionTitle = ''
@@ -109,6 +109,11 @@ for index, row in dataFile.iterrows() :
     videoURL = row['video_url']
     data_imported = row['data_imported']
 
+
+    if index > 5:
+        break
+
+
     if paper == '' or paper == 'nan' or data_imported == 'Y':
         continue
 
@@ -128,10 +133,10 @@ for index, row in dataFile.iterrows() :
         os.system("mkdir slideImages")
 
         print('cp ' + paperDataPath + str(paper) + ' ./slideImages/paper.pdf')
-        #print('cp '+ paperDataPath + str(paper) + ' ../../../pdffigures2/paper.pdf')
-
         os.system('cp ' + paperDataPath + str(paper) + ' ./slideImages/paper.pdf')
-        #os.system('cp '+ paperDataPath + str(paper) + ' ../../../pdffigures2/paper.pdf')
+        
+        # print('cp '+ paperDataPath + str(paper) + ' ../../../pdffigures2/paper.pdf')
+        # os.system('cp '+ paperDataPath + str(paper) + ' ../../../pdffigures2/paper.pdf')
 
         #os.chdir('../../../pdffigures2')
         #os.system('pwd')
@@ -142,14 +147,14 @@ for index, row in dataFile.iterrows() :
         #os.chdir('../browsingMapping/server/slideMeta')
 
         
-        article_dict = scipdf.parse_pdf_to_dict('./slideImages/paper.pdf')  # return dictionary
-        paper_grobid = open("./slideImages/grobidResult.json", "w")
-        paper_grobid.write(json.dumps(article_dict))
-        paper_grobid.close()
+        # article_dict = scipdf.parse_pdf_to_dict('./slideImages/paper.pdf')  # return dictionary
+        # paper_grobid = open("./slideImages/grobidResult.json", "w")
+        # paper_grobid.write(json.dumps(article_dict))
+        # paper_grobid.close()
 
-        getSectionStructure()
-        #getKeyword()
-        break
+        # getSectionStructure()
+        # getKeyword()
+
 
 # os.system('cd ../browsingMapping/server')
         os.system("sh genSlides.sh")
@@ -186,9 +191,6 @@ for index, row in dataFile.iterrows() :
     
         os.system("rm -rf ./slideData/" + str(index))
         os.system("mv slideImages slideData/" + str(index))
-    
-#    if index >= 20 :
-#        break
 
 _f = open("./slideData/summary.json", "w")
 

@@ -19,6 +19,7 @@ class ChangeDetection:
     onProgress = eventhook.EventHook()
 
     TH_MARGIN = 20
+    RESIZE_WIDTH = 500
 
     def __init__(self, step_size, progress_interval, show_debug=False):
         self.frames = []
@@ -28,7 +29,7 @@ class ChangeDetection:
         self.show_debug = show_debug
 
     def __transform_frame(self, frame, mask):
-        gray = imutils.resize(frame, width=500)
+        gray = imutils.resize(frame, width=self.RESIZE_WIDTH)
         gray = cv2.cvtColor(gray, cv2.COLOR_BGR2GRAY)
         gray = cv2.GaussianBlur(gray, (21, 21), 0)
         gray = gray * mask
@@ -209,9 +210,6 @@ class ChangeDetection:
         return frame_range, fps
 
     def get_acc_frame(self, camera):
-        acc_frame = None
-        acc_frames_cnt = 0
-
         prev_frame = None
 
         # current pos in vid
@@ -222,7 +220,18 @@ class ChangeDetection:
 
         total_frames = camera.get(cv2.CAP_PROP_FRAME_COUNT) - 1
 
+        frame_width = round(camera.get(cv2.CAP_PROP_FRAME_WIDTH))
+        frame_height = round(camera.get(cv2.CAP_PROP_FRAME_HEIGHT))
+
+        acc_frame = np.zeros((frame_height, frame_width), np.float64)
+        acc_frame = imutils.resize(acc_frame, width=self.RESIZE_WIDTH)
+
+        acc_frames_cnt = 0
+
         while cur_frame < total_frames:
+            # if acc_frames_cnt % 50 == 1:
+            #     acc_frame_img = (acc_frame.copy() / acc_frames_cnt).astype(np.uint8)
+            #     self.onTrigger.fire(acc_frame_img, "acc_frame_")
             (_, frame) = camera.read()
 
             if frame is None:
@@ -235,17 +244,19 @@ class ChangeDetection:
             gray = self.__transform_frame(frame, 1)
 
             if prev_frame is None:
-                acc_frame = np.zeros(gray.shape, np.float64)
-                prev_frame = np.zeros(gray.shape, np.uint8)
+                prev_frame = gray.copy()
+            else:
+                prev_delta = cv2.absdiff(prev_frame, gray)
+                thresh = cv2.threshold(prev_delta, 0, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU)[1]
 
-            prev_delta = cv2.absdiff(prev_frame, gray)
-            thresh = cv2.threshold(prev_delta, 0, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU)[1]
+                # if acc_frames_cnt % 50 == 1:
+                #     self.onTrigger.fire(thresh, "thresh_")
 
-            thresh_np = np.asarray(thresh).astype(np.float64)
-            acc_frame = acc_frame + thresh_np
-            acc_frames_cnt += 1
+                thresh_np = np.asarray(thresh).astype(np.float64)
+                acc_frame = acc_frame + thresh_np
+                acc_frames_cnt += 1
 
-            prev_frame = gray
+                prev_frame = gray
 
             progress = (cur_frame / total_frames) * 100
             if progress - last_progress >= self.progress_interval:
@@ -258,10 +269,11 @@ class ChangeDetection:
             cur_frame = camera.get(cv2.CAP_PROP_POS_FRAMES)
 
         camera.release()
-        if acc_frames_cnt == 0:
-            print("No frames", cur_frame, total_frames)
-            return None
-        acc_frame /= acc_frames_cnt
+        if acc_frames_cnt > 0:
+            acc_frame /= acc_frames_cnt
+        
+        print(acc_frames_cnt)
+
         acc_frame_img = acc_frame.astype(np.uint8)
         self.onTrigger.fire(acc_frame_img, "acc_frame_")
         return acc_frame_img

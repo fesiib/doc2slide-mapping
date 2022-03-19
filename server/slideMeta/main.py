@@ -3,10 +3,14 @@ import datetime
 import os
 import argparse
 import cv2
+import numpy as np
 import imutils
 import img2pdf
+import json
+
 import changedetection
 import duplicatehandler
+
 from scenedetect import open_video
 from scenedetect import SceneManager
 from scenedetect import StatsManager
@@ -24,12 +28,14 @@ parser.add_argument("-p", "--progress-interval", dest="progress-interval", defau
                     help="how many percent should be skipped between each progress output")
 parser.add_argument("-d", "--debug", dest="debug", default=False, action="store_true",
                     help="the path to your video file to be analyzed")
+parser.add_argument("--use-stored-mask", dest="use-stored-mask", default=False, action="store_true",
+                    help="if already stored masks should be used for processing")
 
 args = vars(parser.parse_args())
 
 
 class Main:
-    def __init__(self, debug, vidpath, output, step_size, progress_interval):
+    def __init__(self, debug, vidpath, output, step_size, progress_interval, use_stored_mask):
         self.slide_counters = {}
         self.vidpath = vidpath
         self.output = output
@@ -37,6 +43,7 @@ class Main:
         self.detection = changedetection.ChangeDetection(
             step_size, progress_interval, debug)
         self.dup_handler = duplicatehandler.DuplicateHandler(1)
+        self.use_stored_mask = use_stored_mask
 
     def strfdelta(self, tdelta, fmt):
         d = {"days": tdelta.days}
@@ -75,8 +82,7 @@ class Main:
     def save_slide(self, slide, title=""):
         parent_path = os.path.join(self.output, "images")
         #parent_path = self.output
-        if not os.path.exists(parent_path):
-            os.makedirs(parent_path)
+        os.makedirs(parent_path, exist_ok=True)
 
         if not title in self.slide_counters:
             self.slide_counters[title] = 0
@@ -141,6 +147,39 @@ class Main:
         stats_manager.save_to_csv(path=stats_file_path)
         return frame_range, fps
 
+    def save_mask(self, mask_rects, img_height, img_width):
+        save_path = os.path.join(self.output, "talkingHeadMask.json")
+        with open(save_path, "w") as f:
+            json.dump({
+                "talkingHeadMaskRects": mask_rects,
+                "imageSize": {
+                    "height": img_height,
+                    "width": img_width,
+                },
+            }, fp=f)
+
+    def load_mask(self):
+        th_path = os.path.join(self.output, "talkingHeadMask.json")
+        mask, mask_rects = None, []
+
+        if os.path.isfile(th_path) is False or self.use_stored_mask is False:
+            acc_frame = self.detection.get_acc_frame(cv2.VideoCapture(
+                self.vidpath
+            ))
+            mask, mask_rects = self.detection.mask_talking_head(acc_frame)
+            self.save_mask(mask_rects, mask.shape[0], mask.shape[1]) 
+        else:
+            with open(th_path, "r") as th_file:
+                th_json = json.load(fp=th_file)
+                mask_rects = th_json["talkingHeadMaskRects"]
+                image_size = th_json["imageSize"]["height"], th_json["imageSize"]["width"]
+                mask = np.ones(image_size, np.uint8)
+                for mask_rect in mask_rects:
+                    for i in range(mask_rect["top"], mask_rect["bottom"] + 1):
+                        for j in range(mask_rect["left"], mask_rect["right"] + 1):
+                            mask[i][j] = 0
+        return mask, mask_rects
+
     def start(self):
         self.detection.onTrigger += self.onTrigger
         self.detection.onProgress += self.onProgress
@@ -149,39 +188,10 @@ class Main:
 
         #frame_range, fps = self.find_scenes(10.0)
 
-        
-        # for id in range(11):
-        #     acc_frame = self.detection.get_acc_frame(cv2.VideoCapture(
-        #         os.path.join(self.vidpath.strip(), str(id) + ".mp4")
-        #     ))
-
-        #     self.save_slide(acc_frame, "th_")
-
-        # for id in range(11):
-        #     path = "./5min/ths_better/" + "th_" + str(id) + ".jpg"
-        #     print(path)
-        #     acc_frame = cv2.imread(path, cv2.IMREAD_GRAYSCALE)
-        #     self.detection.mask_talking_head(acc_frame)
-
-        prev_output = self.output
-
-        # for id in range(0, 744):
-        #     video_path = os.path.join(self.vidpath.strip(), str(id) + ".mp4")
-        #     self.output = os.path.join(prev_output, str(id))
-        #     self.slide_counters = {}
-
-        video_path = self.vidpath
-
-        acc_frame = self.detection.get_acc_frame(cv2.VideoCapture(
-            video_path
-        ))
-        # path = "./5min/ths_better/" + "th_" + str(id) + ".jpg"
-        # acc_frame = cv2.imread(path, cv2.IMREAD_GRAYSCALE)
-        
-        mask, mask_rects = self.detection.mask_talking_head(acc_frame)
+        mask, mask_rects = self.load_mask()
 
         frame_range, fps = self.detection.start(
-            cv2.VideoCapture(video_path),
+            cv2.VideoCapture(self.vidpath),
             mask, mask_rects
         )
         with open(os.path.join(self.output, "frameTimestamp.txt"), "w")  as f:
@@ -191,12 +201,12 @@ class Main:
 
         print("All done!")
 
-
 main = Main(
     args['debug'],
     os.path.join(args['video'].strip()),
     os.path.join(args['output'].strip()),
-    args['step-size'], args['progress-interval']
+    args['step-size'], args['progress-interval'],
+    args["use-stored-mask"]
 )
 
 main.start()
