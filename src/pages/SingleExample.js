@@ -1,4 +1,4 @@
-import axios from 'axios'
+import axios from 'axios';
 import {useState, useEffect} from 'react';
 import HeatMap from '../components/HeatMap';
 import Outline from '../components/Outline';

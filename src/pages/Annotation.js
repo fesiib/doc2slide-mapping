@@ -28,8 +28,8 @@ const SUBMITTED = 4;
 
 const GOOGLE_FORM_LINK = "https://docs.google.com/forms/d/e/1FAIpQLSfMRNceok4P5pLvu9ofROTUcFr_AKYPBzv6lKu8CX3qBP3B9g/viewform?usp=sf_link"
 
-export const LONG_PRESENTATION_IDS = [4, 147, 126, 141, 135, 142, 94, 154, 118, 27, 92];
-/// 202, 185, 175 is bad
+export const LONG_PRESENTATION_IDS = [100004, 100147, 100126, 100141, 100135, 100142, 1000094, 100154, 100118, 100027, 100092];
+/// 202, 185, 175 are bad
 
 const USER_PRESENTATION_IDS = [
     LONG_PRESENTATION_IDS,
@@ -269,7 +269,7 @@ function Motivation() {
 function TutorialVideo(props) {
     const handlePresentationClick = props?.handlePresentationClick;
     const TUTORIAL_VIDEO = "/annotationTutorials/tutorial_1.mp4";
-    const presentationId = 0;
+    const presentationId = 100000;
 
     const presentationData = {
         "paper": `http://server.hyungyu.com:7777/papers/${presentationId}/paper.pdf`,
@@ -468,6 +468,8 @@ function Annotation(props) {
         labels,
         submissions,
     } = useSelector(state => state.annotationState);
+
+    console.log(submissions)
 
     const [data, setData] = useState([]);
     const [summary, setSummary] = useState(null);
