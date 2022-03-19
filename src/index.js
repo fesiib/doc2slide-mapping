@@ -16,6 +16,7 @@ import {PersistGate} from 'redux-persist/integration/react';
 import configureStore from './config/store';
 import SectionTransitionExamples from './pages/SectionTransitionExamples';
 import Annotation from './pages/Annotation';
+import Experiments from './pages/Experiments';
 const {store, persistor} = configureStore();
 
 ReactDOM.render(
@@ -26,6 +27,7 @@ ReactDOM.render(
 					<Route path="/" element={<App />} />
 					<Route path="/section_transition_examples" element={<SectionTransitionExamples/>} />
 					<Route path="/annotation" element={<Annotation/>} />
+					<Route path="/experiments" element={<Experiments/>} />
 				</Routes>
 			</BrowserRouter>
 		</PersistGate>
