@@ -17,7 +17,7 @@ from annotation import read_json
 
 from pathlib import Path
 
-SLIDE_DATA_PATH = './slideMeta/slideData'
+SLIDE_DATA_PATH = "./slideMeta/slideData"
 
 USE_SAVED = True
 
@@ -49,6 +49,18 @@ def __filter_data(data):
         return {
             "status": "No Such Presentation",
         }
+    if "slideCnt" not in data:
+        data["slideCnt"] = 0
+    if "metaInfo" not in data:
+        data["metaInfo"] = None
+    if "slideInfo" not in data:
+        data["slideInfo"] = []
+    if "outline" not in data:
+        data["outline"] = []
+    if "sectionTitles" not in data:
+        data["sectionTitles"] = []
+    if "evaluationData" not in data:
+        data["evaluationData"] = []
     return {
         "slideCnt": data["slideCnt"],
         "metaInfo": data["metaInfo"],
@@ -65,14 +77,23 @@ def __process_presentation(
     apply_thresholding,
     apply_heuristics,
 ):
-    parent_path = os.path.join(SLIDE_DATA_PATH, str(presentation_id))
-    parent_path_2 = os.path.join(SLIDE_DATA_PATH, str(presentation_id))
 
+    parent_path = os.path.join(SLIDE_DATA_PATH, str(presentation_id))
+    
     paper_path = os.path.join(parent_path, 'paperData.txt')
-    script_path = os.path.join(parent_path_2, 'scriptData.txt')
+    script_path = os.path.join(parent_path, 'scriptData.txt')
     section_path = os.path.join(parent_path, 'sectionData.txt')
 
-    #data_path = os.path.join(parent_path, 'result.json')
+    # if presentation_id < 100000:
+    #     return {
+    #         "paper": [],
+    #         "script": read_txt(script_path),
+    #         "sections": [],
+    #         "data": process(parent_path, presentation_id, similarity_type, similarity_method, outlining_approach, apply_thresholding, apply_heuristics),
+    #         "presentationId": presentation_id,
+    #     }
+
+    # #data_path = os.path.join(parent_path, 'result.json')
 
     return {
         "paper": read_txt(paper_path),
@@ -183,11 +204,11 @@ def summary_data():
 
     summary = read_json(summary_path)
 
-    presentations_data = read_csv("./data.csv")
+    #presentations_data = read_csv("./data.csv")
 
     return json.dumps({
         "summaryData": summary,
-        "presentationData": presentations_data,
+        #"presentationData": presentations_data,
     })
 
 
@@ -209,6 +230,30 @@ def all_data():
     
     return json.dumps({
         "allData": all_data,
+    })
+
+@app.route('/mapping/bulk_data', methods=['POST'])
+def bulk_data():
+    decoded = request.data.decode('utf-8')
+    request_json = json.loads(decoded)
+    presentation_ids = request_json["presentationIds"]
+
+    summary_path = os.path.join(SLIDE_DATA_PATH, "summary.json")
+    summary = read_json(summary_path)
+
+    all_presentation_ids = summary["all_presentation_index"]
+
+    bulk_data = []
+
+    for presentation_id in presentation_ids:
+        if presentation_id in all_presentation_ids:
+            data = __presentation_data(presentation_id)
+            bulk_data.append({
+                "presentationId": presentation_id,
+                "data": __filter_data(data),
+            })
+    return json.dumps({
+        "bulkData": bulk_data,
     })
 
 @app.route('/mapping/process_presentation', methods=['POST'])
@@ -323,6 +368,34 @@ def clear_results():
                 result_path = os.path.join(results_folder, filename)
                 os.remove(result_path)
 
+def fix_presentation_ids():
+    summary_path = os.path.join(SLIDE_DATA_PATH, "summary.json")
+    summary = read_json(summary_path)
+
+    possible_presentation_index = []
+    all_presentation_index = []
+    computed_presentation_index = []
+
+    for presentation_id in summary["computed_presentation_index"]:
+        computed_presentation_index.append(presentation_id)
+    for presentation_id in summary["all_presentation_index"]:
+        check_paper_path = os.path.join(SLIDE_DATA_PATH, str(presentation_id), "paperData.json")
+        if os.path.isfile(check_paper_path):
+            all_presentation_index.append(presentation_id)
+    for presentation_id in summary["possible_presentation_index"]:
+        check_paper_path = os.path.join(SLIDE_DATA_PATH, str(presentation_id), "paperData.json")
+        if os.path.isfile(check_paper_path):
+            possible_presentation_index.append(presentation_id)
+    
+    with open(summary_path, "w") as f:
+        json.dump({
+            "presentationCnt": len(all_presentation_index),
+            "computed_presentation_index": computed_presentation_index,
+            "all_presentation_index": all_presentation_index,
+            "possible_presentation_index": possible_presentation_index,
+        }, fp=f)
+
 if __name__ == "__main__":
-    #clear_results()
-    app.run(host='0.0.0.0', port=7778)
+    clear_results()
+    #fix_presentation_ids()
+    app.run(host='0.0.0.0', port=7777)

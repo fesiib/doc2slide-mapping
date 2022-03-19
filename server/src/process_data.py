@@ -100,8 +100,6 @@ def process(path, presentation_id, similarity_type, similarity_method, outlining
     timestamp_data = []
     script_data = []
 
-    paper_data = read_txt(os.path.join(path, "paperData.txt"))
-    section_data = read_txt(os.path.join(path, "sectionData.txt"))
     script_data = read_txt(os.path.join(path, "scriptData.txt"))
 
     gt_data = {
@@ -117,12 +115,6 @@ def process(path, presentation_id, similarity_type, similarity_method, outlining
     }
     if os.path.isfile(os.path.join(path, "keywords.json")):
         meta_info = read_json(os.path.join(path, "keywords.json"))
-
-    annotations = scan_annotations(os.path.join(path, "annotations"))
-
-    section_data, paper_data = add_sections_as_paragraphs(section_data, paper_data)
-
-    section_data, paper_data = fix_section_titles(section_data, paper_data)
 
     while True :
         line = timestamp.readline()
@@ -154,12 +146,6 @@ def process(path, presentation_id, similarity_type, similarity_method, outlining
             continue
     result = {}
 
-    #result['title'] = "tempTitle"
-    result['groundTruthOutline'] = gt_data['groundTruthSegments']
-    result['annotations'] = annotations
-    result['metaInfo'] = meta_info
-    result['sectionTitles'] = sorted(list(set(section_data)))
-
     slide_info = []
     start_time_stamp = 0
     for i in range(len(timestamp_data)):
@@ -182,6 +168,23 @@ def process(path, presentation_id, similarity_type, similarity_method, outlining
 
     result['slideInfo'] = slide_info   
     result['slideCnt'] = len(slide_info)
+    result['metaInfo'] = meta_info
+    result['groundTruthOutline'] = gt_data['groundTruthSegments']
+
+    # if presentation_id < 100000:
+    #     return result
+
+    paper_data = read_txt(os.path.join(path, "paperData.txt"))
+    section_data = read_txt(os.path.join(path, "sectionData.txt"))
+    annotations = scan_annotations(os.path.join(path, "annotations"))
+
+    section_data, paper_data = add_sections_as_paragraphs(section_data, paper_data)
+
+    section_data, paper_data = fix_section_titles(section_data, paper_data)
+
+    #result['title'] = "tempTitle"
+    result['annotations'] = annotations
+    result['sectionTitles'] = sorted(list(set(section_data)))
 
     _paper_data = []
     _script_data = []
