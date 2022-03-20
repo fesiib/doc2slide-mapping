@@ -18,6 +18,7 @@ from annotation import read_json
 from pathlib import Path
 
 SLIDE_DATA_PATH = "./slideMeta/slideData"
+ZIP_SLIDE_DATA_PATH = "./slideMeta/slideData.zip"
 
 USE_SAVED = True
 
@@ -351,6 +352,10 @@ def submit_annotation():
     return json.dumps({
         "status": "Recorded",
     })
+
+@app.route("/mapping/zip_slide_data", methods=["GET"])
+def zip_slide_data():
+    return send_file(ZIP_SLIDE_DATA_PATH, mimetype='application/zip')
 
 def clear_results():
     summary_path = os.path.join(SLIDE_DATA_PATH, "summary.json")
