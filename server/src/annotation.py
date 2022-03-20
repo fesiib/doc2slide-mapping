@@ -6,7 +6,10 @@ def read_json(path):
     obj = {}
     with open(path, 'r') as f:
         encoded = f.read()
-        obj = json.loads(encoded)
+        try:
+            obj = json.loads(encoded)
+        except:
+            obj = {}
     return obj   
 
 def scan_annotations(path):

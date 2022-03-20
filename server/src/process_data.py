@@ -22,6 +22,8 @@ from evaluate_outline import evaluate_outline, evaluate_performance, GROUND_TRUT
 
 from annotation import scan_annotations, read_json
 
+from __init__ import sort_section_data
+
 SKIPPED_SECTIONS = [
     "CCS CONCEPTS",
     "KEYWORDS",
@@ -60,36 +62,37 @@ def add_sections_as_paragraphs(section_data, paper_data):
         ret_paper_data.append(paper_data[i])
     return ret_section_data, ret_paper_data
 
-def fix_section_titles(section_data, paper_data):
+def fix_section_titles(section_data, paper_data, paper_data_json):
+    rev_mapping = {}
+
+    def get_main_section(title):
+        title_parts = title.strip().split(" ")
+        if (title_parts[0] in digits) is False:
+            return False
+        for title_part in title_parts[1:]:
+            if title_part.isupper() is False or title_part in digits:
+                return False
+        return True
+
+    last_title = None    
+
+    if "sections" in paper_data_json:
+        for section in paper_data_json["sections"]:
+            if "title" in section and "text" in section["title"]:
+                title = section["title"]["text"]
+                if get_main_section(title) is True:
+                    last_title = title
+                if last_title is not None:
+                    rev_mapping[title] = last_title
+
     ret_section_data = []
     ret_paper_data = []
     #cnt_title = 0
-
-    existing_section_titles = {
-        "last": None
-    }
-
-    def get_main_section(title):
-        id = title.strip().split(" ")[0]
-        if id[0] in digits:
-            fst = id.strip().split(".")[0]
-            if not fst in existing_section_titles:
-                existing_section_titles[fst] = title
-                existing_section_titles["last"] = title
-            return existing_section_titles[fst]
-        elif title.isupper():
-            return title
-        elif not existing_section_titles["last"] is None:
-            return existing_section_titles["last"]
-        else:
-            return title
             
-
     for (section, paragraph) in zip(section_data, paper_data):
-        if is_section_skipped(section):
+        if is_section_skipped(section) or section not in rev_mapping:
             continue
-
-        ret_section_data.append(get_main_section(section))
+        ret_section_data.append(rev_mapping[section])
         ret_paper_data.append(paragraph)
 
     return ret_section_data, ret_paper_data
@@ -114,7 +117,10 @@ def process(path, presentation_id, similarity_type, similarity_method, outlining
         "authors": ["empty"],
     }
     if os.path.isfile(os.path.join(path, "keywords.json")):
-        meta_info = read_json(os.path.join(path, "keywords.json"))
+        new_meta_info = read_json(os.path.join(path, "keywords.json"))
+        for key in meta_info.keys():
+            if key in new_meta_info:
+                meta_info[key] = new_meta_info[key]
 
     while True :
         line = timestamp.readline()
@@ -174,17 +180,18 @@ def process(path, presentation_id, similarity_type, similarity_method, outlining
     # if presentation_id < 100000:
     #     return result
 
+    paper_data_json = read_json(os.path.join(path, "paperData.json"))
     paper_data = read_txt(os.path.join(path, "paperData.txt"))
     section_data = read_txt(os.path.join(path, "sectionData.txt"))
     annotations = scan_annotations(os.path.join(path, "annotations"))
 
     section_data, paper_data = add_sections_as_paragraphs(section_data, paper_data)
 
-    section_data, paper_data = fix_section_titles(section_data, paper_data)
+    section_data, paper_data = fix_section_titles(section_data, paper_data, paper_data_json)
 
     #result['title'] = "tempTitle"
     result['annotations'] = annotations
-    result['sectionTitles'] = sorted(list(set(section_data)))
+    result['sectionTitles'] = sort_section_data(section_data)
 
     _paper_data = []
     _script_data = []
@@ -215,8 +222,8 @@ def process(path, presentation_id, similarity_type, similarity_method, outlining
             paper_sentence_id.append(i)
         _paper_data.extend(sentences)
 
-    print("Sentences# {} Scripts# {}".format(len(_script_data), len(slide_info)))
     print("Sentences# {} Paragraphs# {}".format(len(_paper_data), len(paper_data)))
+    print("Sentences# {} Scripts# {}".format(len(_script_data), len(slide_info)))
 
     if similarity_type == 'keywords':
         overall, top_sections, paper_keywords, script_keywords = get_keywords_similarity(similarity_method,
@@ -247,7 +254,6 @@ def process(path, presentation_id, similarity_type, similarity_method, outlining
             _paper_data, _script_data, section_data, paper_sentence_id, script_sentence_range, apply_thresholding
         )
         outline, weights = get_outline_generic(outlining_approach, apply_heuristics, slide_info, section_data, top_sections, script_sentence_range)
-        
         result['topSections'] = top_sections
         result['outline'] = outline
         result['weights'] = weights
@@ -288,8 +294,8 @@ def evaluate_model(parent_path, similarity_type, similarity_method, outlining_ap
     evaluations = []
 
     for id in GROUND_TRUTH_EXISTS:
-        print(f'Testing: id={id} similarity={similarity_type} method={similarity_method} outlining={outlining_approach} thresholding={apply_thresholding} heuristics={apply_heuristics}')
         path = parent_path + str(id)
+        print(f'Testing: id={id} similarity={similarity_type} method={similarity_method} outlining={outlining_approach} thresholding={apply_thresholding} heuristics={apply_heuristics}')
         output = process(path, id, similarity_type, similarity_method, outlining_approach, apply_thresholding, apply_heuristics)
         evaluations.append(output["evaluationData"])
 
@@ -335,8 +341,8 @@ if __name__ == "__main__":
     #evaluate_all_models()
 
     #output = evaluate_model('slideMeta/slideData/', similarity_type="classifier", outlining_approach="dp_simple", apply_thresholding=True)
+
     #print(json.dumps(output, indent=4))
 
-
-    output = process('slideMeta/slideData/0', 0, similarity_type="cosine", similarity_method="tf-idf", outlining_approach="dp_mask", apply_thresholding=False, apply_heuristics=True)
+    output = process('slideMeta/slideData/50', 50, similarity_type="classifier", similarity_method="tf-idf", outlining_approach="dp_mask", apply_thresholding=False, apply_heuristics=True)
     print(output["metaInfo"])

@@ -1,10 +1,13 @@
+from __init__ import sort_section_data
+
+
 PENALTY = 0.5
 MIN_SEGMENTS = 3
 MIN_CNT_SLIDES_PER_SEGMENT = 3
 MIN_DURATION_PER_SEGMENT = 30 # seconds
 
 def get_outline_dp(section_data, top_sections, script_sentence_range):
-    label_dict = sorted(list(set(section_data)))
+    label_dict = sort_section_data(section_data)
     
     INF = (len(script_sentence_range) + 1) * 100
     n = len(label_dict)
@@ -90,7 +93,7 @@ def get_outline_dp(section_data, top_sections, script_sentence_range):
     return outline, weights
 
 def get_outline_dp_mask(section_data, apply_heuristics, slide_info, top_sections, script_sentence_range, target_mask = None):
-    label_dict = sorted(list(set(section_data)))
+    label_dict = sort_section_data(section_data)
 
     for i, section in enumerate(label_dict):
         print(i, ":", section)

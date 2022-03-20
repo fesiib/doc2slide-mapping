@@ -12,6 +12,8 @@ from sklearn.metrics.pairwise import cosine_similarity
 
 from string import ascii_lowercase, punctuation, digits
 
+from __init__ import sort_section_data
+
 
 class Vectorizer(object):
     def __init__(self, method='tf-idf', ngram_range=(1, 4)):
@@ -128,7 +130,7 @@ def get_classifier_similarity(method, paper_data, script_data, section_data, pap
     top_k = 5
     val_threshold = 0.1
 
-    label_dict = sorted(list(set(section_data)))
+    label_dict = sort_section_data(section_data)
     label_categories = [ label_dict.index(section_data[sentence_id]) for sentence_id in paper_sentence_id ]
 
     model = RandomForestClassifier()
