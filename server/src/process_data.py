@@ -22,6 +22,8 @@ from evaluate_outline import evaluate_outline, evaluate_performance, GROUND_TRUT
 
 from annotation import scan_annotations, read_json
 
+from slides_segmentation import get_slides_segmentation
+
 from __init__ import sort_section_data
 
 SKIPPED_SECTIONS = [
@@ -189,9 +191,12 @@ def process(path, presentation_id, similarity_type, similarity_method, outlining
 
     section_data, paper_data = fix_section_titles(section_data, paper_data, paper_data_json)
 
+    slides_segmentation = get_slides_segmentation(path, slide_info)
+
     #result['title'] = "tempTitle"
     result['annotations'] = annotations
     result['sectionTitles'] = sort_section_data(section_data)
+    result['slidesSegmentation'] = slides_segmentation
 
     _paper_data = []
     _script_data = []
@@ -229,7 +234,7 @@ def process(path, presentation_id, similarity_type, similarity_method, outlining
         overall, top_sections, paper_keywords, script_keywords = get_keywords_similarity(similarity_method,
             _paper_data, _script_data, section_data, paper_sentence_id, script_sentence_range, apply_thresholding
         )
-        outline, weights = get_outline_generic(outlining_approach, apply_heuristics, slide_info, section_data, top_sections, script_sentence_range)
+        outline, weights = get_outline_generic(outlining_approach, apply_heuristics, slide_info, section_data, top_sections, slides_segmentation)
 
         result['topSections'] = top_sections
         result['outline'] = outline
@@ -241,7 +246,7 @@ def process(path, presentation_id, similarity_type, similarity_method, outlining
         overall, top_sections = get_cosine_similarity(similarity_method,
             _paper_data, _script_data, section_data, paper_sentence_id, script_sentence_range, apply_thresholding
         )
-        outline, weights = get_outline_generic(outlining_approach, apply_heuristics, slide_info, section_data, top_sections, script_sentence_range)
+        outline, weights = get_outline_generic(outlining_approach, apply_heuristics, slide_info, section_data, top_sections, slides_segmentation)
 
         result['topSections'] = top_sections
         result['outline'] = outline
@@ -253,7 +258,7 @@ def process(path, presentation_id, similarity_type, similarity_method, outlining
         overall, top_sections, paper_data_by_section = get_classifier_similarity(similarity_method,
             _paper_data, _script_data, section_data, paper_sentence_id, script_sentence_range, apply_thresholding
         )
-        outline, weights = get_outline_generic(outlining_approach, apply_heuristics, slide_info, section_data, top_sections, script_sentence_range)
+        outline, weights = get_outline_generic(outlining_approach, apply_heuristics, slide_info, section_data, top_sections, slides_segmentation)
         result['topSections'] = top_sections
         result['outline'] = outline
         result['weights'] = weights
@@ -344,5 +349,5 @@ if __name__ == "__main__":
 
     #print(json.dumps(output, indent=4))
 
-    output = process('slideMeta/slideData/50', 50, similarity_type="classifier", similarity_method="tf-idf", outlining_approach="dp_mask", apply_thresholding=False, apply_heuristics=True)
-    print(output["metaInfo"])
+    output = process('slideMeta/slideData/100017', 100017, similarity_type="classifier", similarity_method="tf-idf", outlining_approach="dp_mask", apply_thresholding=False, apply_heuristics=True)
+    print(output["outline"])

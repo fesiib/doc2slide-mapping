@@ -62,13 +62,17 @@ def __filter_data(data):
         data["sectionTitles"] = []
     if "evaluationData" not in data:
         data["evaluationData"] = []
+    if "slidesSegmentation" not in data:
+        data["slidesSegmentation"] = []
     return {
         "slideCnt": data["slideCnt"],
         "metaInfo": data["metaInfo"],
         "slideInfo": data["slideInfo"],
         "outline": data["outline"],
         "sectionTitles": data["sectionTitles"],
-        "evaluationData": data["evaluationData"]
+        "evaluationData": data["evaluationData"],
+        "slidesSegmentation": data["slidesSegmentation"]
+
     }
 def __process_presentation(
     presentation_id,

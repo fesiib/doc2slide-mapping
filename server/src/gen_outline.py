@@ -6,13 +6,14 @@ MIN_SEGMENTS = 3
 MIN_CNT_SLIDES_PER_SEGMENT = 3
 MIN_DURATION_PER_SEGMENT = 30 # seconds
 
-def get_outline_dp(section_data, top_sections, script_sentence_range):
+def get_outline_dp(section_data, top_sections, slide_info):
     label_dict = sort_section_data(section_data)
     
-    INF = (len(script_sentence_range) + 1) * 100
     n = len(label_dict)
+    m = len(slide_info)
+    INF = (m + 1) * 100
 
-    Table = [ [ (-INF, n, -1) for j in range(len(script_sentence_range))] for i in range(len(script_sentence_range)) ]
+    Table = [ [ (-INF, n, -1) for j in range(m)] for i in range(m) ]
 
     def getSegment(start, end):
         if end - start < 2:
@@ -32,32 +33,32 @@ def get_outline_dp(section_data, top_sections, script_sentence_range):
 
     Table[0][0] = (0, n, 0)
 
-    for i in range(1, len(script_sentence_range)):
+    for i in range(1, m):
         segment_result = getSegment(i, i + 1)
 
         Table[i][i] = (max(Table[i-1][i-1][0] + segment_result[0], Table[i][i][0]), segment_result[1], i)
 
-        for j in range(i+1, len(script_sentence_range)) :
+        for j in range(i+1, m) :
             for k in range(i-1, j) :
                 cost = getSegment(k+1, j+1)
                 if Table[i][j][0] < Table[i-1][k][0] + cost[0]:
                     Table[i][j] = (Table[i-1][k][0] + cost[0], cost[1], k + 1)
 
     weights = []
-    for i in range(len(script_sentence_range)) :
-        weights.append(Table[i][len(script_sentence_range) - 1][0])
+    for i in range(m) :
+        weights.append(Table[i][m - 1][0])
 
     max_value = -INF
     optimal_segments = -1
 
     for i in range(len(Table)) :
-        if max_value < Table[i][len(script_sentence_range) - 1][0]:
-            max_value = Table[i][len(script_sentence_range) - 1][0]
+        if max_value < Table[i][m - 1][0]:
+            max_value = Table[i][m - 1][0]
             optimal_segments = i
 
-    final_result = [ 0 for i in range(len(script_sentence_range)) ]
+    final_result = [ 0 for i in range(m) ]
 
-    cur_slide = len(script_sentence_range) - 1
+    cur_slide = m - 1
 
     while optimal_segments > 0:
         start = Table[optimal_segments][cur_slide][2]
@@ -92,34 +93,70 @@ def get_outline_dp(section_data, top_sections, script_sentence_range):
             outline[-1]['endSlideIndex'] = i
     return outline, weights
 
-def get_outline_dp_mask(section_data, apply_heuristics, slide_info, top_sections, script_sentence_range, target_mask = None):
+def get_outline_dp_mask(section_data, apply_heuristics, slide_info, top_sections, slides_segmentation, target_mask = None):
+    transitions = []
+    for slides_segment in slides_segmentation:
+        if slides_segment['endSlideIndex'] < 1:
+            continue
+        transitions.append(slides_segment['endSlideIndex'])
     label_dict = sort_section_data(section_data)
+
+    print(transitions)
 
     for i, section in enumerate(label_dict):
         print(i, ":", section)
 
     n = len(label_dict)
-    m = len(script_sentence_range)
+    m = len(slide_info)
     INF = (m + 1) * 100
 
-    dp = [[(-INF, n, -1) for j in range(m)] for i in range(1 << n)]
-    dp[0][1] = (0, n)
+    if len(transitions) < 2:
+        return [{
+            "sectionTitle": "PAPER",
+            "startSlideIndex": 1,
+            "endSlideIndex": m - 1,
+        }]
 
-    for i in range(m):
+    outline = [{
+        "sectionTitle": "END",
+        "startSlideIndex": transitions[-2] + 1,
+        "endSlideIndex": transitions[-1],
+    }]
+
+    if m < 3:
+        if m == 2:
+           outline.append({
+                "sectionTitle": "TITLE",
+                "startSlideIndex": 1,
+                "endSlideIndex": transitions[0],
+            })
+        return outline[::-1], [-1, 0]
+    
+    total_duration = slide_info[m-2]["endTime"] - slide_info[1]["startTime"]
+    
+    min_cnt_slides_per_segment = min(MIN_CNT_SLIDES_PER_SEGMENT, len(transitions) - 2)
+    min_segments = min(MIN_SEGMENTS, round((len(transitions) - 2) / min_cnt_slides_per_segment))
+    min_duration_per_segment = min(MIN_DURATION_PER_SEGMENT, total_duration / min_segments)
+
+    print(min_cnt_slides_per_segment, min_duration_per_segment, min_segments)
+
+    dp = [[(-INF, n, -1) for j in range(m)] for i in range(1 << n)]
+    dp[0][transitions[0]] = (0, n, -1)
+
+    for i in transitions[:-1]:
         scores = [0 for k in range(n)]
-        for j in range(i + 1, m):
+        for j in range(i + 1, transitions[-1]):
             for top_section in top_sections[j]:
                 pos = label_dict.index(top_section[0])
                 scores[pos] += top_section[1]
-            
+            if j not in transitions:
+                continue
             # Heuristics
             if apply_heuristics is True:
-                if j - i < MIN_CNT_SLIDES_PER_SEGMENT and m > 2 * MIN_CNT_SLIDES_PER_SEGMENT:
+                if j - i < min_cnt_slides_per_segment:
                     continue
-                if slide_info[j]["endTime"] - slide_info[i + 1]["startTime"] < MIN_DURATION_PER_SEGMENT \
-                    and slide_info[m - 1]["endTime"] - slide_info[0]["startTime"] > 2 * MIN_DURATION_PER_SEGMENT:
+                if slide_info[j]["endTime"] - slide_info[i + 1]["startTime"] < min_duration_per_segment:
                     continue
-
             for mask in range(0, (1 << n)):
                 if dp[mask][i][0] < 0:
                     continue
@@ -145,29 +182,23 @@ def get_outline_dp_mask(section_data, apply_heuristics, slide_info, top_sections
 
 
     recover_mask = 0
-    recover_slide_id = m-2
+    recover_slide_id = transitions[-2]
 
     weights = [-1 for i in range(n + 1)]
 
     for mask in range(1 << n):
         cnt_segments = bin(mask).count('1')
         weights[cnt_segments] = max(weights[cnt_segments], dp[mask][recover_slide_id][0])
-        if cnt_segments < MIN_SEGMENTS:
+        if cnt_segments < min_segments:
             continue
         if dp[mask][recover_slide_id][0] > dp[recover_mask][recover_slide_id][0]:
             recover_mask = mask
         if cnt_segments < bin(recover_mask).count('1') and dp[mask][recover_slide_id][0] == dp[recover_mask][recover_slide_id][0]:
             recover_mask = mask
-
     if target_mask is not None:
         recover_mask = target_mask
         print(bin(target_mask), bin(recover_mask), dp[target_mask][recover_slide_id][0])
     
-    outline = [{
-        "sectionTitle": "END",
-        "startSlideIndex": m-1,
-        "endSlideIndex": m-1,
-    }]
     while recover_mask > 0:
         print(recover_mask, recover_slide_id, dp[recover_mask][recover_slide_id])
         section_id = dp[recover_mask][recover_slide_id][1]
@@ -184,7 +215,7 @@ def get_outline_dp_mask(section_data, apply_heuristics, slide_info, top_sections
     outline.append({
         "sectionTitle": "TITLE",
         "startSlideIndex": 1,
-        "endSlideIndex": 1,
+        "endSlideIndex": transitions[0],
     })
 
     return outline[::-1], weights
@@ -213,10 +244,10 @@ def get_outline_simple(top_sections):
         weights.append(scores[section])
     return outline, weights
 
-def get_outline_generic(outlining_approach, apply_heuristics, slide_info, section_data, top_sections, script_sentence_range, target_mask = None):
+def get_outline_generic(outlining_approach, apply_heuristics, slide_info, section_data, top_sections, slides_segmentation, target_mask = None):
     if outlining_approach == 'dp_mask':
-        return get_outline_dp_mask(section_data, apply_heuristics, slide_info, top_sections, script_sentence_range, target_mask)
+        return get_outline_dp_mask(section_data, apply_heuristics, slide_info, top_sections, slides_segmentation, target_mask)
     if outlining_approach == 'simple':
         return get_outline_simple(top_sections)
     
-    return get_outline_dp(section_data, top_sections, script_sentence_range)
+    return get_outline_dp(section_data, top_sections)
