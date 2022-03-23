@@ -2,8 +2,9 @@ import axios from 'axios';
 import { useEffect, useState } from "react";
 import SlideThumbnails from '../components/SlideThumbnails';
 
-const INTERVAL = 10;
-const PRESENTATION_IDS_CNT = 745;
+const INTERVAL = 50;
+const SHORT_PRESENTATION_IDS_CNT = 745;
+const LONG_PRESENTATION_IDS_CNT = 172;
 
 function Experiments() {
     const [allPresentations, setAllPresentations] = useState([])
@@ -83,6 +84,7 @@ function Experiments() {
                     startIdx={1}
                     endIdx={data?.slideCnt}
                     outline={data?.outline}
+                    slidesSegmentation={data?.slidesSegmentation}
                 />
             </div>
         })
@@ -90,9 +92,23 @@ function Experiments() {
 
     const outputSelectorRanges = (interval) => {
         let output = []
-        for (let presentationId = 0; presentationId < PRESENTATION_IDS_CNT; presentationId += interval) {
+        for (let presentationId = 0; presentationId < SHORT_PRESENTATION_IDS_CNT; presentationId += interval) {
             const start = presentationId;
-            const end = Math.min(PRESENTATION_IDS_CNT, presentationId + interval);
+            const end = Math.min(SHORT_PRESENTATION_IDS_CNT, presentationId + interval);
+            output.push(
+                <option
+                    value={start.toString() + "-" + end.toString()}
+                    key={start.toString() + "-" + end.toString()}
+                >
+                    {start} - {end - 1}
+                </option>
+            );
+        }
+
+        for (let _presentationId = 0; _presentationId < LONG_PRESENTATION_IDS_CNT; _presentationId += interval) {
+            const presentationId = _presentationId + 100000;
+            const start = presentationId;
+            const end = Math.min(LONG_PRESENTATION_IDS_CNT + 100000, presentationId + interval);
             output.push(
                 <option
                     value={start.toString() + "-" + end.toString()}

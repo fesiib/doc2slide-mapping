@@ -3,9 +3,13 @@ import React from 'react';
 const WIDTH = 500;
 const HEIGHT = WIDTH * 9 / 16;
 
-function randomColor() {
-    return Math.random().toString(16).substring(2, 8);
-}
+const COLORS_LIST = [
+    '#91aaff',
+    '#ff9e9e',
+    '#8aff9c',
+    '#ff80c5',
+    '#7afbff',
+];
 
 function SlideThumbnails(props) {
     const presentationId = props?.presentationId;
@@ -15,12 +19,7 @@ function SlideThumbnails(props) {
     const endIdx = props?.endIdx;
 
     const outline = props?.outline;
-    let colors = [];
-    if (outline) {
-        for (let i = 0; i < outline.length; i++) {
-            colors.push(randomColor());
-        }
-    }
+    const slidesSegmentation = props?.slidesSegmentation;
 
     const output = slideInfo?.map((slide, idx) => {
         if (startIdx && startIdx > idx) {
@@ -41,6 +40,7 @@ function SlideThumbnails(props) {
 
         // Outline
         let curSectionTitleIdx = -1;
+        let curSegementIdx = -1
 
         if (outline) {
             for (let i = 0; i < outline.length; i++) {
@@ -49,11 +49,18 @@ function SlideThumbnails(props) {
                 }
             }
         }
+        if (slidesSegmentation) {
+            for (let i = 0; i < slidesSegmentation.length; i++) {
+                if (slidesSegmentation[i].startSlideIndex <= idx && slidesSegmentation[i].endSlideIndex >= idx) {
+                    curSegementIdx = i;
+                }
+            }
+        }
 
         return (
             <div key={idx} 
                 style={{
-                    backgroundColor: (curSectionTitleIdx < 0 ? null : '#' + colors[curSectionTitleIdx])
+                    backgroundColor: (curSectionTitleIdx < 0 ? null : COLORS_LIST[curSectionTitleIdx % COLORS_LIST.length])
                 }}
             >
                 <div style={{
@@ -71,7 +78,8 @@ function SlideThumbnails(props) {
                     }}/>
                 </div>
                 <div> 
-                    {idx} {" "}
+                    ({ curSegementIdx < 0 ? null : slidesSegmentation[curSegementIdx].sectionTitle } ) {" "}
+                    Page {idx} {" "}
                     ({startTime.getMinutes()}:{startTime.getSeconds()} - {endTime.getMinutes()}:{endTime.getSeconds()}) {" "}
                     {curSectionTitleIdx < 0 ? null : outline[curSectionTitleIdx].sectionTitle}
                 </div>	
