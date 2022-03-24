@@ -4,7 +4,7 @@ import numpy as np
 import pandas as pd
 import os
 
-flag = 0 # 1 : already created, 0: newly create
+flag = 1 # 1 : already created, 0: newly create
 datasetFile = "../chi2021/dataset_chi2021.csv"
 
 paperDataPath = "../chi2021/chi2021_papers/"
@@ -110,16 +110,13 @@ for index, row in dataFile.iterrows() :
     data_imported = row['data_imported']
 
 
-    if index > 5:
-        break
-
 
     if paper == '' or paper == 'nan' or data_imported == 'Y':
         continue
 
     print(index, title, paper, video, subtitle, videoURL)
     print("cp " + videoDataPath + video + " ./video.mp4")
-
+    
     valid_presentation_index.append(index)
 
     if flag == 0 :
@@ -175,14 +172,20 @@ for index, row in dataFile.iterrows() :
 
 
     elif flag == 1 :
+
         os.system("rm -rf slideImages")
 
         os.system("cp -rp ./slideData/" + str(index) + " ./slideImages")
 
-        os.system('cp ../papers/' + str(paper) + ' ./slideImages/paper.pdf')
+        os.system("cp " + videoDataPath + video + " ./video.mp4")
+        os.system("cp " + subtitleDataPath + subtitle + " ./subtitle.srt")
+        os.system('cp ' + paperDataPath + str(paper) + ' ./slideImages/paper.pdf')
 
-        getSectionStructure()
-        getKeyword()
+        os.system("sh genSlides.sh")
+        os.system("python getSubtitle.py")
+
+        # getSectionStructure()
+        # getKeyword()
 
         
 
@@ -192,14 +195,14 @@ for index, row in dataFile.iterrows() :
         os.system("rm -rf ./slideData/" + str(index))
         os.system("mv slideImages slideData/" + str(index))
 
-_f = open("./slideData/summary.json", "w")
+# _f = open("./slideData/summary.json", "w")
 
-_f.write(json.dumps({
-    "presentationCnt": len(valid_presentation_index),
-    "valid_presentation_index": valid_presentation_index
-}))
+# _f.write(json.dumps({
+#     "presentationCnt": len(valid_presentation_index),
+#     "valid_presentation_index": valid_presentation_index
+# }))
 
-_f.close()
+# _f.close()
 
 #os.system("rm -rf ../../public/slideData")
 #os.system("cp -rp ./slideData ../../public")

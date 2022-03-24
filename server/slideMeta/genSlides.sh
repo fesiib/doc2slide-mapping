@@ -1,2 +1,2 @@
-echo "python main.py -v video.mp4 -o slideImages/"
-python main.py -v video.mp4 -o slideImages/
+echo "python main.py -v video.mp4 -o slideImages/ --use-stored-mask"
+python main.py -v video.mp4 -o slideImages/ --use-stored-mask

@@ -127,17 +127,17 @@ class ChangeDetection:
                 prev_slide_frame = prev_frame
                 self.selected_frames.append(len(self.frames) - 1)
 
-                y_magn = original.shape[0] / gray.shape[0]
-                x_magn = original.shape[1] / gray.shape[1]
+                # y_magn = original.shape[0] / gray.shape[0]
+                # x_magn = original.shape[1] / gray.shape[1]
 
-                for mask_rect in mask_rects:
-                    x1 = int((mask_rect["left"]) * x_magn)
-                    y1 = int(mask_rect["top"] * y_magn)
-                    x2 = int((mask_rect["right"] + 1) * x_magn)
-                    y2 = int((mask_rect["bottom"] + 1) * y_magn)
+                # for mask_rect in mask_rects:
+                #     x1 = int((mask_rect["left"]) * x_magn)
+                #     y1 = int(mask_rect["top"] * y_magn)
+                #     x2 = int((mask_rect["right"] + 1) * x_magn)
+                #     y2 = int((mask_rect["bottom"] + 1) * y_magn)
 
-                    cv2.rectangle(original, (x1, y1), (x2, y2),
-                                  (0, 255, 0), 2)
+                #     cv2.rectangle(original, (x1, y1), (x2, y2),
+                #                   (0, 255, 0), 2)
                 self.onTrigger.fire(original)
                 idle_cnt = 0
 
