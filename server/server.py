@@ -121,7 +121,8 @@ def __presentation_data(presentation_id):
     summary_path = os.path.join(SLIDE_DATA_PATH, "summary.json")
     summary = read_json(summary_path)
 
-    if presentation_id in summary["all_presentation_index"]:
+    if presentation_id in summary["all_presentation_index"] \
+        and presentation_id not in summary["skipped_presentation_index"]:
         result_path = os.path.join(parent_path, "result.json")
         if os.path.isfile(result_path) is True and USE_SAVED:
             data = read_json(result_path)
@@ -184,7 +185,8 @@ def presentation_data_specific():
     summary_path = os.path.join(SLIDE_DATA_PATH, "summary.json")
     summary = read_json(summary_path)
 
-    if presentation_id in summary["all_presentation_index"]:
+    if presentation_id in summary["all_presentation_index"]\
+        and presentation_id not in summary["skipped_presentation_index"]:
         result_path = os.path.join(parent_path, "results", resultname)
         if os.path.isfile(result_path) is True and USE_SAVED:
             data = read_json(result_path)

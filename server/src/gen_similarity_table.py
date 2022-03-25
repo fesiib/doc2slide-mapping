@@ -134,7 +134,7 @@ def get_classifier_similarity(method, paper_data, script_data, section_data, pap
     label_categories = [ label_dict.index(section_data[sentence_id]) for sentence_id in paper_sentence_id ]
 
     model = RandomForestClassifier()
-    
+
     vectorizer = Vectorizer(method)
     X = vectorizer.fit_transform(list(map(preprocess_text, paper_data)))
     print(X.shape)

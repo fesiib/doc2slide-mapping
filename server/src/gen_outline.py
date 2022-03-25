@@ -115,7 +115,7 @@ def get_outline_dp_mask(section_data, apply_heuristics, slide_info, top_sections
             "sectionTitle": "PAPER",
             "startSlideIndex": 1,
             "endSlideIndex": m - 1,
-        }]
+        }], [-1, 0]
 
     outline = [{
         "sectionTitle": "END",
@@ -130,7 +130,7 @@ def get_outline_dp_mask(section_data, apply_heuristics, slide_info, top_sections
                 "startSlideIndex": 1,
                 "endSlideIndex": transitions[0],
             })
-        return outline[::-1], [-1, 0]
+        return outline[::-1], [-1, 0, 0]
     
     total_duration = slide_info[m-2]["endTime"] - slide_info[1]["startTime"]
     

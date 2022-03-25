@@ -349,5 +349,5 @@ if __name__ == "__main__":
 
     #print(json.dumps(output, indent=4))
 
-    output = process('slideMeta/slideData/100017', 100017, similarity_type="classifier", similarity_method="tf-idf", outlining_approach="dp_mask", apply_thresholding=False, apply_heuristics=True)
+    output = process('slideMeta/slideData/177', 177, similarity_type="classifier", similarity_method="tf-idf", outlining_approach="dp_mask", apply_thresholding=False, apply_heuristics=True)
     print(output["outline"])

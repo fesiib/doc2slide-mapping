@@ -2,6 +2,17 @@ import os
 
 SLIDE_DATA_PATH = "./slideData"
 TH_PATH = "./talkingHeads"
+SLIDE_IMAGES_PATH = "./slideDataImages"
+
+def paste_images():
+    for filename in os.listdir(SLIDE_IMAGES_PATH):
+        path = os.path.join(SLIDE_IMAGES_PATH, filename)
+        if os.path.isdir(path) is False:
+            continue
+
+        new_path = os.path.join(SLIDE_DATA_PATH, filename)
+        
+        os.system("cp " + path + "/* " + new_path + "/")
 
 def copy_ths():
     for filename in os.listdir(SLIDE_DATA_PATH):
