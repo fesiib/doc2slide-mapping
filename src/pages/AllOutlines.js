@@ -3,14 +3,9 @@ import {useState, useEffect} from 'react';
 import Outline from '../components/Outline';
 import AnnotationList from '../components/AnnotationList';
 import ModelConfig from '../components/ModelConfig';
-import { LONG_PRESENTATION_IDS } from './Annotation';
 
-const _LONG_PRESENTATION_IDS = [
-    //100000, 100004, 100006, 100007, 100009,
-    //100010, 100012, 100013, 100014, 100015, 100016, 100017, 100018, 100019,
-];
 const SHORT_PRESENTATION_IDS = [
-    0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10,
+    439, 510, 384, 589, 674, 689, 549, 13, 307, 477, 106, 161, 271, 214, 147, 318, 372, 46, 231, 504
     //11, 12, 13, 14, 15, 16,
 ];
 
@@ -26,8 +21,7 @@ function AllOutlines(props) {
 	useEffect(() => {
         let requests = [];
         const presentationIds = [
-            ...SHORT_PRESENTATION_IDS,
-            //...LONG_PRESENTATION_IDS
+            ...SHORT_PRESENTATION_IDS
         ];
         for (let presentationId of presentationIds) {
             requests.push(axios.post('http://server.hyungyu.com:7777/mapping/presentation_data_specific', {

@@ -28,11 +28,11 @@ const SUBMITTED = 4;
 
 const GOOGLE_FORM_LINK = "https://docs.google.com/forms/d/e/1FAIpQLSfMRNceok4P5pLvu9ofROTUcFr_AKYPBzv6lKu8CX3qBP3B9g/viewform?usp=sf_link"
 
-export const LONG_PRESENTATION_IDS = [100004, 100147, 100126, 100141, 100135, 100142, 1000094, 100154, 100118, 100027, 100092];
-/// 202, 185, 175 are bad
+const SHORT_PRESENTATION_IDS = [439, 510, 384, 589, 674, 689, 549, 13, 307, 477, 106, 161, 271, 214, 147, 318, 372, 46, 231, 504]
+
 
 const USER_PRESENTATION_IDS = [
-    LONG_PRESENTATION_IDS,
+    SHORT_PRESENTATION_IDS,
 ];
 
 function randomlyChoose(presentationIds, cnt) {
@@ -456,7 +456,7 @@ function RefAnnotations(props) {
 }
 
 function Annotation(props) {
-    //console.log(randomlyChoose(ALL_PRESENTATION_IDS_LONG, 10));
+    //console.log(randomlyChoose(ALL_PRESENTATION_IDS_SHORT, 20));
     //console.log(assignPresenationIds([147, 202, 185, 135, 142, 94, 175, 118, 27, 92], 3, 10, 3));
 
     const dispatch = useDispatch();
