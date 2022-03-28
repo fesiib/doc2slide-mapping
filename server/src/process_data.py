@@ -72,7 +72,11 @@ def fix_section_titles(section_data, paper_data, paper_data_json):
         if (title_parts[0] in digits) is False:
             return False
         for title_part in title_parts[1:]:
-            if title_part.isupper() is False or title_part in digits:
+            if len(title_part) < 2: 
+                continue
+            elif title_part.isupper() is True or title_part in digits:
+                break
+            else:
                 return False
         return True
 

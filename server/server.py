@@ -2,6 +2,8 @@ import os
 import sys
 from xml.etree.ElementTree import QName
 
+from src.annotation import scan_annotations
+
 
 sys.path.insert(0, './src/')
 
@@ -126,6 +128,7 @@ def __presentation_data(presentation_id):
         result_path = os.path.join(parent_path, "result.json")
         if os.path.isfile(result_path) is True and USE_SAVED:
             data = read_json(result_path)
+            data["annotations"] = scan_annotations(os.path.join(parent_path, "annotations"))
         else:
             data = __process_presentation(
                 presentation_id,
@@ -190,6 +193,7 @@ def presentation_data_specific():
         result_path = os.path.join(parent_path, "results", resultname)
         if os.path.isfile(result_path) is True and USE_SAVED:
             data = read_json(result_path)
+            data["annotations"] = scan_annotations(os.path.join(parent_path, "annotations"))
         else:
             data = __process_presentation(
                 presentation_id,

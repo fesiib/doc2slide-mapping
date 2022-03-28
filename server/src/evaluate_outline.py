@@ -1,3 +1,6 @@
+from doctest import SKIP
+
+
 SKIPPED_TITLES = ['title', 'end', "no_section"]
 GROUND_TRUTH_EXISTS = [100000, 100004, 100006, 100007, 100009]
 ACC_BOUNDARY_RANGE = 1
@@ -225,6 +228,8 @@ def _evaluate_structure(outline, gt_outline, slide_info):
 
 def _evaluate_mapping(outline, gt_outline, top_sections):
     '''
+        Calculate our mapping scores against ground truth
+
         What to do when ground truth mapping score is less than generated mapping score?
         - absolute?
         - give big penalty
@@ -261,12 +266,16 @@ def _evaluate_mapping(outline, gt_outline, top_sections):
 
         gen_score = 0
         gt_score = 0
+        mx_score = 0
 
         for top_section in slide_top_sections:
             title = top_section[0]
             title = process_title(title)
             
             score = top_section[1]
+            
+            mx_score = max(mx_score, score)
+
             if are_same_section_titles(title, gen_title):
                 gen_score = score
             if are_same_section_titles(title, gt_title):
@@ -276,18 +285,51 @@ def _evaluate_mapping(outline, gt_outline, top_sections):
         # print("\t", gen_title, "-", gen_score)
         # print("\t", gt_title, "-", gt_score)
 
-        total_score += gt_score
-        if gt_score > gen_score:
-            error += (gt_score - gen_score)
+        # total_score += gt_score
+        # if gt_score > gen_score:
+        #     error += (gt_score - gen_score)
+        total_score += mx_score
+        error += (mx_score - gt_score)
 
     if total_score == 0:
         return 50
     return round(100 - (error / total_score) * 100, 2)
 
+def _evaluate_overall(outline, gt_outline, slide_info):
+    total_time = 0
+    overlapped_time = 0
+
+    for gt_section in gt_outline:
+        gt_title = process_title(gt_section["sectionTitle"])
+        if gt_title in SKIPPED_TITLES:
+            continue
+        gt_start = slide_info[gt_section["startSlideIndex"]]["startTime"]
+        gt_end = slide_info[gt_section["endSlideIndex"]]["endTime"]
+        
+        total_time += gt_end - gt_start
+
+        for section in outline:
+            title = process_title(section["sectionTitle"])
+            if title in SKIPPED_TITLES:
+                continue
+            if are_same_section_titles(title, gt_title) is False:
+                continue
+
+            start = slide_info[section["startSlideIndex"]]["startTime"]
+            end = slide_info[section["endSlideIndex"]]["endTime"]
+            
+            if max(gt_start, start) < min(gt_end, end):
+                overlapped_time += min(gt_end, end) - max(gt_start, start)
+    
+    if total_time == 0:
+        return 0
+
+    return round((overlapped_time / total_time) * 100, 2)
+
 def evaluate_outline(outline, gt_outline, slide_info, top_sections):
     return {
         "boundariesAccuracy": _evaluate_boundaries(outline, gt_outline),
-        "timeAccuracy": _evaluate_time(outline, gt_outline, slide_info),
+        "timeAccuracy": _evaluate_overall(outline, gt_outline, slide_info),
         "structureAccuracy": _evaluate_structure(outline, gt_outline, slide_info),
         "mappingAccuracy": _evaluate_mapping(outline, gt_outline, top_sections),
     }
