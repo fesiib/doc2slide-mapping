@@ -1,6 +1,3 @@
-from doctest import SKIP
-
-
 SKIPPED_TITLES = ['title', 'end', "no_section"]
 GROUND_TRUTH_EXISTS = [100000, 100004, 100006, 100007, 100009]
 ACC_BOUNDARY_RANGE = 1

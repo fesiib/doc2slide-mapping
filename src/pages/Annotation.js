@@ -28,7 +28,7 @@ const SUBMITTED = 4;
 
 const GOOGLE_FORM_LINK = "https://docs.google.com/forms/d/e/1FAIpQLSfMRNceok4P5pLvu9ofROTUcFr_AKYPBzv6lKu8CX3qBP3B9g/viewform?usp=sf_link"
 
-const SHORT_PRESENTATION_IDS = [439, 510, 384, 589, 674, 689, 549, 13, 307, 477, 106, 161, 271, 214, 147, 318, 372, 46, 231, 504]
+const SHORT_PRESENTATION_IDS = [439, 510, 90, 589, 674, 689, 549, 13, 307, 477, 106, 161, 271, 214, 147, 318, 372, 46, 231, 504]
 
 
 const USER_PRESENTATION_IDS = [
@@ -242,11 +242,11 @@ function Motivation() {
                 
 
             <ol>
-                <li> Title Page (1 - 1) (30 seconds)</li>
+                <li> TITLE (1 - 1) (30 seconds)</li>
                 <li> Introduction (2 - 5) (1 minute)</li>
                 <li> System (6 - 20) (5 minutes)</li>
                 <li> Discussion (21 - 25) (3 minutes)</li>
-                <li> End (26 - 26) (20 seconds )</li>
+                <li> END (26 - 26) (20 seconds )</li>
             </ol>
 
             <div style={{color: "red"}}>

@@ -5,7 +5,7 @@ import AnnotationList from '../components/AnnotationList';
 import ModelConfig from '../components/ModelConfig';
 
 const SHORT_PRESENTATION_IDS = [
-    439, 510, 384, 589, 674, 689, 549, 13, 307, 477, 106, 161, 271, 214, 147, 318, 372, 46, 231, 504
+    439, 510, 90, 589, 674, 689, 549, 13, 307, 477, 106, 161, 271, 214, 147, 318, 372, 46, 231, 504
     //11, 12, 13, 14, 15, 16,
 ];
 
