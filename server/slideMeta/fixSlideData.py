@@ -1,6 +1,7 @@
 import os
 import json
 from string import digits
+import fitz
 
 SLIDE_DATA_PATH = "./slideData"
 TH_PATH = "./talkingHeads"
@@ -61,7 +62,48 @@ def fix_paper_data():
             continue
         if len(ids) != ids[-1]:
             bad_section.append((filename, section_ids))
-    print(bad_section[0])
+
+    def olTraversal(root):
+        nodes = [root]
+        while nodes:
+            node = nodes.pop()
+            print("[OUTLINE]- %s ==> %d" % (node.title, node.dest.page))
+            print()
+            next = node.next
+            if next:
+                nodes.append(next)
+            else:
+                print("[OUTLINE]<")
+            down = node.down
+            if down:
+                print("[OUTLINE]>")
+                nodes.append(down)
+
+    default_titles = ["ABSTRACT", "CCS CONCEPTS", "KEYWORDS"]
+
+    for id, ids in bad_section:
+        print(id)
+        path = os.path.join(SLIDE_DATA_PATH, id, "paper.pdf")
+        with fitz.open(path) as pdf:
+            toc = pdf.get_toc(simple=False)
+
+            for lvl, title, page_num, dest in toc:
+                print(title, dest["to"])
+                xref = dest["xref"]
+                for key in pdf.xref_get_keys(xref):
+                    print(key, "=" , pdf.xref_get_key(xref, key))
+
+            contents = [[] for i in range(len(toc))]
+            toc_idx = 0
+            pages = pdf.pages()
+            for page in pages:
+                if toc_idx == len(toc):
+                    break
+
+                blocks = page.get_text("blocks")
+                for block in blocks:
+                    print(block)
+        break
 
 def paste_images():
     for filename in os.listdir(SLIDE_IMAGES_PATH):

@@ -152,11 +152,11 @@ def get_outline_dp_mask(section_data, apply_heuristics, slide_info, top_sections
             if j not in transitions:
                 continue
             # Heuristics
-            if apply_heuristics is True:
-                if j - i < min_cnt_slides_per_segment:
-                    continue
-                if slide_info[j]["endTime"] - slide_info[i + 1]["startTime"] < min_duration_per_segment:
-                    continue
+            # if apply_heuristics is True:
+            #     if j - i < min_cnt_slides_per_segment:
+            #         continue
+            #     if slide_info[j]["endTime"] - slide_info[i + 1]["startTime"] < min_duration_per_segment:
+            #         continue
             for mask in range(0, (1 << n)):
                 if dp[mask][i][0] < 0:
                     continue
@@ -189,8 +189,8 @@ def get_outline_dp_mask(section_data, apply_heuristics, slide_info, top_sections
     for mask in range(1 << n):
         cnt_segments = bin(mask).count('1')
         weights[cnt_segments] = max(weights[cnt_segments], dp[mask][recover_slide_id][0])
-        if cnt_segments < min_segments:
-            continue
+        # if cnt_segments < min_segments:
+        #     continue
         if dp[mask][recover_slide_id][0] > dp[recover_mask][recover_slide_id][0]:
             recover_mask = mask
         if cnt_segments < bin(recover_mask).count('1') and dp[mask][recover_slide_id][0] == dp[recover_mask][recover_slide_id][0]:

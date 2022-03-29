@@ -111,11 +111,12 @@ def process(path, presentation_id, similarity_type, similarity_method, outlining
 
     script_data = read_txt(os.path.join(path, "scriptData.txt"))
 
+    gt_path = os.path.join(path, "groundTruth.json")
     gt_data = {
         'groundTruthSegments': [],
     }
-    if (presentation_id in GROUND_TRUTH_EXISTS):
-        gt_data = read_json(os.path.join(path, "groundTruth.json"))
+    if (os.path.isfile(gt_path)):
+        gt_data = read_json(gt_path)
 
     meta_info = {
         "keywords": ["empty"],
@@ -353,5 +354,6 @@ if __name__ == "__main__":
 
     #print(json.dumps(output, indent=4))
 
-    output = process('slideMeta/slideData/177', 177, similarity_type="classifier", similarity_method="tf-idf", outlining_approach="dp_mask", apply_thresholding=False, apply_heuristics=True)
-    print(output["outline"])
+    output = process('slideMeta/slideData/6', 6, similarity_type="classifier", similarity_method="tf-idf", outlining_approach="dp_mask", apply_thresholding=False, apply_heuristics=True)
+    #print(output["outline"])
+    print(json.dumps(output["slidesSegmentation"]))

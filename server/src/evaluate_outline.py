@@ -296,27 +296,37 @@ def _evaluate_overall(outline, gt_outline, slide_info):
     total_time = 0
     overlapped_time = 0
 
+    labels = ["empty1" for i in range(len(slide_info))]
+    gt_labels = ["empty2" for i in range(len(slide_info))]
+
     for gt_section in gt_outline:
         gt_title = process_title(gt_section["sectionTitle"])
-        if gt_title in SKIPPED_TITLES:
-            continue
-        gt_start = slide_info[gt_section["startSlideIndex"]]["startTime"]
-        gt_end = slide_info[gt_section["endSlideIndex"]]["endTime"]
-        
+        # if gt_title in SKIPPED_TITLES:
+        #     continue
+        start_slide = gt_section["startSlideIndex"]
+        end_slide = gt_section["endSlideIndex"]
+
+        for id in range(start_slide, end_slide + 1):
+            gt_labels[id] = gt_title
+
+        gt_start = slide_info[start_slide]["startTime"]
+        gt_end = slide_info[end_slide]["endTime"]
         total_time += gt_end - gt_start
 
-        for section in outline:
-            title = process_title(section["sectionTitle"])
-            if title in SKIPPED_TITLES:
-                continue
-            if are_same_section_titles(title, gt_title) is False:
-                continue
+    for section in outline:
+        title = process_title(section["sectionTitle"])
+        start_slide = section["startSlideIndex"]
+        end_slide = section["endSlideIndex"]
 
-            start = slide_info[section["startSlideIndex"]]["startTime"]
-            end = slide_info[section["endSlideIndex"]]["endTime"]
-            
-            if max(gt_start, start) < min(gt_end, end):
-                overlapped_time += min(gt_end, end) - max(gt_start, start)
+        for id in range(start_slide, end_slide + 1):
+            labels[id] = title
+
+    invalid = False
+    for idx in range(1, len(slide_info)):
+        if labels[idx] == "empty1" or gt_labels[idx] == "empty2":
+            invalid = True
+        if are_same_section_titles(labels[idx], gt_labels[idx]):
+            overlapped_time += slide_info[idx]["endTime"] - slide_info[idx]["startTime"]
     
     if total_time == 0:
         return 0
