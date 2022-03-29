@@ -179,12 +179,12 @@ function EvaluationTable(props) {
             },{
                 Header: 'Model Name',
                 accessor: MODEL_NAME,
+            },  {
+                Header: 'Overall Accuracy',
+                columns: generateInnerColumns("", "timeAccuracy"),
             }, {
                 Header: 'Video Overview',
                 columns: generateInnerColumns("", "boundariesAccuracy"),
-            }, {
-                Header: 'Time Accuracy',
-                columns: generateInnerColumns("", "timeAccuracy"),
             }, {
                 Header: 'Structural Accuracy',
                 columns: generateInnerColumns("", "structureAccuracy"),

@@ -1,3 +1,6 @@
+from math import floor
+
+
 SKIPPED_TITLES = ['title', 'end', "no_section"]
 GROUND_TRUTH_EXISTS = [100000, 100004, 100006, 100007, 100009]
 ACC_BOUNDARY_RANGE = 1
@@ -295,6 +298,8 @@ def _evaluate_mapping(outline, gt_outline, top_sections):
 def _evaluate_overall(outline, gt_outline, slide_info):
     total_time = 0
     overlapped_time = 0
+    separate_overlapped_times = [0, 0, 0]
+    separate_total_times = [0, 0, 0]
 
     labels = ["empty1" for i in range(len(slide_info))]
     gt_labels = ["empty2" for i in range(len(slide_info))]
@@ -323,36 +328,49 @@ def _evaluate_overall(outline, gt_outline, slide_info):
 
     invalid = False
     for idx in range(1, len(slide_info)):
+        cur_duration = slide_info[idx]["endTime"] - slide_info[idx]["startTime"]
         if labels[idx] == "empty1" or gt_labels[idx] == "empty2":
             invalid = True
+        pos = floor(idx / len(slide_info) * 3)
+        separate_total_times[pos] += cur_duration
         if are_same_section_titles(labels[idx], gt_labels[idx]):
-            overlapped_time += slide_info[idx]["endTime"] - slide_info[idx]["startTime"]
+            overlapped_time += cur_duration
+            separate_overlapped_times[pos] += cur_duration
     
     if total_time == 0:
-        return 0
+        return 0, [0, 0, 0]
 
-    return round((overlapped_time / total_time) * 100, 2)
+    for i in range(3):
+        if separate_total_times[i] > 0:
+            separate_overlapped_times[i] = round(separate_overlapped_times[i] / separate_total_times[i], 3)
+
+    return round((overlapped_time / total_time), 3), separate_overlapped_times
 
 def evaluate_outline(outline, gt_outline, slide_info, top_sections):
+    overall, separate_scores = _evaluate_overall(outline, gt_outline, slide_info)
     return {
         "boundariesAccuracy": _evaluate_boundaries(outline, gt_outline),
-        "timeAccuracy": _evaluate_overall(outline, gt_outline, slide_info),
+        "overallAccuracy": overall,
         "structureAccuracy": _evaluate_structure(outline, gt_outline, slide_info),
         "mappingAccuracy": _evaluate_mapping(outline, gt_outline, top_sections),
+        "separateAccuracy": separate_scores,
     }
 
 def evaluate_performance(evaluations, presentation_ids):
 
     boundaryAccs = []
     timeAccs = []
+    overallAccs = []
     structureAccs = []
     mappingAccs = []
+    separateAccs = []
 
     for evaluation in evaluations:
         boundaryAccs.append(evaluation["boundariesAccuracy"])
-        timeAccs.append(evaluation["timeAccuracy"])
+        overallAccs.append(evaluation["overallAccuracy"])
         structureAccs.append(evaluation["structureAccuracy"])
         mappingAccs.append(evaluation["mappingAccuracy"])
+        separateAccs.append(evaluation["separateAccuracy"])
 
     def calc_avg(lst):
         sum = 0
@@ -365,8 +383,9 @@ def evaluate_performance(evaluations, presentation_ids):
 
     return {
         "boundariesAccuracy": (boundaryAccs, calc_avg(boundaryAccs)),
-        "timeAccuracy": (timeAccs, calc_avg(timeAccs)),
+        "overallAccuracy": (overallAccs, calc_avg(overallAccs)),
         "structureAccuracy": (structureAccs, calc_avg(structureAccs)),
         "mappingAccuracy": (mappingAccs, calc_avg(mappingAccs)),
+        "separateAccuracy": (separateAccs, calc_avg(separateAccs)),
         "presentation_ids": presentation_ids
     }

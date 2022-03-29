@@ -2,7 +2,7 @@ import axios from 'axios';
 import { useEffect, useState } from "react";
 import SlideThumbnails from '../components/SlideThumbnails';
 
-const INTERVAL = 50;
+const INTERVAL = 7;
 const SHORT_PRESENTATION_IDS_CNT = 745;
 const LONG_PRESENTATION_IDS_CNT = 172;
 

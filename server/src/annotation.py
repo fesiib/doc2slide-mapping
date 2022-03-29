@@ -153,10 +153,10 @@ if __name__ == "__main__":
                 if ix == jx:
                     continue
                 evaluation_result = evaluate_outline(annotations[ix], annotations[jx], slide_info, [])
-                evaluation_sum[ix][jx] += evaluation_result["timeAccuracy"]
-                evaluation_max[ix][jx] = max(evaluation_max[ix][jx], evaluation_result["timeAccuracy"] / 100)
-                evaluation_min[ix][jx] = min(evaluation_min[ix][jx], evaluation_result["timeAccuracy"] / 100)
-                if evaluation_result["timeAccuracy"] / 100 < 0.8:
+                evaluation_sum[ix][jx] += evaluation_result["overallAccuracy"]
+                evaluation_max[ix][jx] = max(evaluation_max[ix][jx], evaluation_result["overallAccuracy"] / 100)
+                evaluation_min[ix][jx] = min(evaluation_min[ix][jx], evaluation_result["overallAccuracy"] / 100)
+                if evaluation_result["overallAccuracy"] / 100 < 0.8:
                     print(presentation_id)
 
     for i in range(3):
