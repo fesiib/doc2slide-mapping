@@ -1,6 +1,7 @@
 import React from "react";
 
 function PipelineAccuracy(props) {
+    const title = props?.title ? props.title : "Accuracy"
     const boundariesAccuracy = props?.evaluationData?.boundariesAccuracy;
     const timeAccuracy = props?.evaluationData?.timeAccuracy;
     const structureAccuracy = props?.evaluationData?.structureAccuracy;
@@ -13,7 +14,7 @@ function PipelineAccuracy(props) {
         fontSize: "12pt",
         margin: "2em"
     }}>
-        <h2> Accuracy: </h2>
+        <h2> {title}: </h2>
         <p> Overall F1-score: {overallAccuracy} </p>
         <ul>
             <li> Beginning score: {separateAccuracy[0]} </li>

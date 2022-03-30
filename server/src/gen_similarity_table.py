@@ -124,6 +124,18 @@ def get_top_sections(overall, section_data, script_sentence_range, paper_sentenc
         for (k, v) in map_sections.items():
             sections.append([k, v])
         top_sections.append(sections)
+
+    mx_score = 0
+
+    for idx in range(len(top_sections)):
+        for top_section in top_sections[idx]:
+            mx_score = max(mx_score, top_section[1])
+    
+    if mx_score > 0:
+        for idx in range(len(top_sections)):
+            for j in range(len(top_sections[idx])):
+                new_score = (top_sections[idx][j][0], top_sections[idx][j][1] / mx_score)
+                top_sections[idx][j] = new_score
     return top_sections
 
 def get_classifier_similarity(method, paper_data, script_data, section_data, paper_sentence_id, script_sentence_range, apply_thresholding):
@@ -184,6 +196,19 @@ def get_classifier_similarity(method, paper_data, script_data, section_data, pap
             sections.append((label_dict[section_id], overall[i][section_id]))
         top_sections.append(sections)
         script_sentence_start += script_sentence_range[i]
+
+    
+    mx_score = 0
+
+    for idx in range(len(top_sections)):
+        for top_section in top_sections[idx]:
+            mx_score = max(mx_score, top_section[1])
+    
+    if mx_score > 0:
+        for idx in range(len(top_sections)):
+            for j in range(len(top_sections[idx])):
+                new_score = (top_sections[idx][j][0], top_sections[idx][j][1] / mx_score)
+                top_sections[idx][j] = new_score
 
     return overall, top_sections, paper_data_by_section
 
@@ -282,5 +307,65 @@ def get_keywords_similarity(method, paper_data, script_data, section_data, paper
                 overall[i][j] = max(overall[i][j], overall_t[i][j])
 
     top_sections = get_top_sections(overall, section_data, script_sentence_range, paper_sentence_id, apply_thresholding, top_k)
+    
+    return overall, top_sections, paper_keywords, script_keywords
+
+def get_strong_similarity(method, paper_data, script_data, section_data, paper_sentence_id, script_sentence_range):
+    nlp = spacy.load("en_core_web_sm")
+    vectorizer = Vectorizer(method, (1, 1))
+
+    overall = numpy.zeros((len(paper_data), len(script_data)))
+
+    paper_keywords = []
+    script_keywords = []
+    
+    for paper_sentence in paper_data:
+        paper_keywords.append(get_keywords(paper_sentence, nlp))
+
+    for script_sentence in script_data:
+        script_keywords.append(get_keywords(script_sentence, nlp))
+
+    LOL = vectorizer.fit_transform(map(' '.join, paper_keywords))
+    vectorizer_features = vectorizer.get_feature_names()
+
+    #print(LOL.shape, vectorizer_features)
+
+    for j in range(len(script_keywords)):
+        X = vectorizer.transform([' '.join(script_keywords[j])])
+        unique_keywords = list(set(script_keywords[j]))
+        if len(unique_keywords) == 0:
+                continue
+        score_for_each = []
+        for word in unique_keywords:
+            score_for_each.append(1)
+            # try:
+            #     score_for_each.append(1.0 - X[0, vectorizer_features.index(word)])
+            # except:
+            #     score_for_each.append(0.0)
+        for i in range(len(paper_keywords)):
+            for k, word in enumerate(unique_keywords):
+                if word in paper_keywords[i]:
+                    overall[i][j] += score_for_each[k]
+
+        slide_idx = 0
+        sentence_cnt = j
+
+        while (slide_idx < len(script_sentence_range) and sentence_cnt > 0):
+            sentence_cnt -= script_sentence_range[slide_idx]
+            if sentence_cnt < 0:
+                break
+            slide_idx += 1
+
+        strong_mappings = []
+        for i in range(len(paper_keywords)):
+            if overall[i][j] == len(unique_keywords):
+                strong_mappings.append(i)
+
+        print("\t", j, "(", slide_idx, "):")
+        print(unique_keywords)
+        print(script_data[j])
+        print(strong_mappings)
+
+    top_sections = get_top_sections(overall, section_data, script_sentence_range, paper_sentence_id, False, 10)
     
     return overall, top_sections, paper_keywords, script_keywords

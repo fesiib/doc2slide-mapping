@@ -14,7 +14,7 @@ sys.path.insert(0, '../')
 
 from gen_similarity_table import \
     get_sentences, get_classifier_similarity,\
-    get_cosine_similarity, get_keywords_similarity
+    get_cosine_similarity, get_keywords_similarity, get_strong_similarity
 
 from gen_outline import get_outline_generic
 
@@ -247,6 +247,18 @@ def process(path, presentation_id, similarity_type, similarity_method, outlining
         result["similarityTable"] = numpy.float64(overall).tolist()
         result["scriptSentences"] = script_keywords
         result["paperSentences"] = paper_keywords
+    elif similarity_type == 'strong':
+        overall, top_sections, paper_keywords, script_keywords = get_strong_similarity(similarity_method,
+            _paper_data, _script_data, section_data, paper_sentence_id, script_sentence_range
+        )
+        outline, weights = get_outline_generic(outlining_approach, apply_heuristics, slide_info, section_data, top_sections, slides_segmentation)
+
+        result['topSections'] = top_sections
+        result['outline'] = outline
+        result['weights'] = weights
+        result["similarityTable"] = numpy.float64(overall).tolist()
+        result["scriptSentences"] = script_keywords
+        result["paperSentences"] = paper_keywords
     elif similarity_type == 'cosine':
         overall, top_sections = get_cosine_similarity(similarity_method,
             _paper_data, _script_data, section_data, paper_sentence_id, script_sentence_range, apply_thresholding
@@ -354,6 +366,7 @@ if __name__ == "__main__":
 
     #print(json.dumps(output, indent=4))
 
-    output = process('slideMeta/slideData/13', 13, similarity_type="classifier", similarity_method="tf-idf", outlining_approach="dp_mask", apply_thresholding=False, apply_heuristics=True)
-    #print(output["outline"])
+    #output = process('slideMeta/slideData/90', 90, similarity_type="cosine", similarity_method="embedding", outlining_approach="strong", apply_thresholding=False, apply_heuristics=True)
+    output = process('slideMeta/slideData/90', 90, similarity_type="strong", similarity_method="tf-idf", outlining_approach="strong", apply_thresholding=False, apply_heuristics=False)
+    
     print(json.dumps(output["outline"], indent=2))

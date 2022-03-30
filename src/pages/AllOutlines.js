@@ -3,11 +3,21 @@ import {useState, useEffect} from 'react';
 import Outline from '../components/Outline';
 import AnnotationList from '../components/AnnotationList';
 import ModelConfig from '../components/ModelConfig';
+import PipelineAccuracy from '../components/PipelineAccuracy';
 
 const SHORT_PRESENTATION_IDS = [
     439, 510, 90, 589, 674, 689, 549, 13, 307, 477, 106, 161, 271, 214, 147, 318, 372, 46, 231, 504
     //11, 12, 13, 14, 15, 16,
 ];
+
+const NULL_EVALUATION_DATA = {
+    boundariesAccuracy: 0,
+    timeAccuracy: 0,
+    structureAccuracy: 0,
+    overallAccuracy: 0,
+    mappingAccuracy: 0,
+    separateAccuracy: [0, 0, 0],
+};
 
 function AllOutlines(props) {
     const similarityType = props?.similarityType;
@@ -17,6 +27,8 @@ function AllOutlines(props) {
 	const applyHeuristics = props?.applyHeuristics;
 
 	const [data, setData] = useState({});
+
+    const [avgGTEvaluation, setAvgGTEvaluation] = useState({ ...NULL_EVALUATION_DATA });
 	
 	useEffect(() => {
         let requests = [];
@@ -35,14 +47,47 @@ function AllOutlines(props) {
         }
         Promise.all(requests).then( (responses) => {
             let curData = {};
+            let curAvgGTEvaluation = { ...NULL_EVALUATION_DATA }
+            let cnt = 0
+
             for (let response of responses) {
                 console.log(response);
+                const presentationId = response.data.presentationId;
+                const data = response.data.data;
                 curData = {
                     ...curData,
-                    [response.data.presentationId]: response.data.data,
+                    [presentationId]: data
                 };
+                const gtEvaluation = data?.evaluationData?.groundTruth;
+                if (gtEvaluation) {
+                    cnt++;
+                    for (let key in curAvgGTEvaluation) {
+                        if (key === "separateAccuracy") {
+                            for (let i = 0; i < 3; i++) {
+                                curAvgGTEvaluation[key][i] += gtEvaluation[key][i];
+                            }
+                        }
+                        else {
+                            curAvgGTEvaluation[key] += gtEvaluation[key];
+                        }
+                    }
+                }
+            }
+            if (cnt > 0) {
+                for (let key in curAvgGTEvaluation) {
+                    if (key === "separateAccuracy") {
+                        for (let i = 0; i < 3; i++) {
+                            curAvgGTEvaluation[key][i] = Math.round(curAvgGTEvaluation[key][i] / cnt * 1000) / 1000;
+                        }
+                    }
+                    else {
+                        curAvgGTEvaluation[key] = Math.round(curAvgGTEvaluation[key] / cnt * 1000) / 1000;
+                    }
+                }
             }
             setData(curData);
+            setAvgGTEvaluation(curAvgGTEvaluation);
+
         });
 	}, [similarityType, similarityMethod, outliningApproach, applyThresholding, applyHeuristics]);
 
@@ -80,6 +125,11 @@ function AllOutlines(props) {
                 outliningApproach={outliningApproach}
                 applyThresholding={applyThresholding}
                 applyHeuristics={applyHeuristics}
+            />
+            <PipelineAccuracy
+                title={"Average Accuracy"}
+                evaluationData={avgGTEvaluation}
+
             />
             {outputOutlines()}
 		</div>
