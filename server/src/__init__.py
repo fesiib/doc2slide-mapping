@@ -1,3 +1,16 @@
+BEG_PART = 2
+MID_PART = 5
+
+FREQ_WORDS_SECTION_TITLES = [
+    ['Introduction'],
+    ['Related work', 'Background', 'relatedwork'],
+    ['Evaluation', 'study'],
+    ['Method'],
+    ['Results', 'Findings'],
+    ['Discussion', 'Limitation', 'Future work', 'futurework'],
+    ['Conclusion'],
+]
+
 
 def sort_section_data(section_data):
     label_list = sorted(list(set(section_data)))

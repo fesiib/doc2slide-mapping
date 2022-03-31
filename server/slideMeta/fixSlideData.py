@@ -4,6 +4,7 @@ from string import digits
 import fitz
 
 SLIDE_DATA_PATH = "./slideData"
+SLIDE_DATA_2_PATH = "./slideData2"
 TH_PATH = "./talkingHeads"
 SLIDE_IMAGES_PATH = "./slideDataImages"
 
@@ -139,8 +140,17 @@ def paste_ths():
         
         os.system("cp " + th_path + " " + new_path + "/")
 
+def paste_slide_data_2():
+    for filename in os.listdir(SLIDE_DATA_2_PATH):
+        path = os.path.join(SLIDE_DATA_2_PATH, filename)
+
+        new_path = os.path.join(SLIDE_DATA_PATH, filename)
+        
+        os.system("cp -r " + path + "/* " + new_path + "/")
+
+
 def main():
-    fix_paper_data()    
+    paste_slide_data_2()
 
 if __name__ == "__main__":
     main()

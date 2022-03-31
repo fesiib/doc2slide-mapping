@@ -60,6 +60,7 @@ def add_sections_as_paragraphs(section_data, paper_data):
         if i == 0 or section_data[i] != section_data[i - 1]:
             ret_section_data.append(section_data[i])
             ret_paper_data.append(section_data[i] + ".")
+
         ret_section_data.append(section_data[i])
         ret_paper_data.append(paper_data[i])
     return ret_section_data, ret_paper_data
@@ -103,7 +104,44 @@ def fix_section_titles(section_data, paper_data, paper_data_json):
 
     return ret_section_data, ret_paper_data
 
+def shrink_slide_info(slide_info, transitions):
+    shrunk_slide_info = [{
+        "index": 0,
+        "left": 0,
+        "right": 0,
+        "startTime": slide_info[0]["startTime"],
+        "endTime": slide_info[0]["endTime"],
+        "script": slide_info[0]["script"],
+        "ocrResult": slide_info[0]["ocrResult"],
+    }]
+    start_slide = 1
+    for idx in transitions:
+        script = ""
+        for k in range(start_slide, idx + 1):
+            script += slide_info[k]["script"]
+        shrunk_slide_info.append({
+                "index": idx,
+                "left": start_slide,
+                "right": idx,
+                "startTime": slide_info[start_slide]["startTime"],
+                "endTime": slide_info[idx]["endTime"],
+                "script": script,
+                "ocrResult": slide_info[idx]["ocrResult"],
+        })
+        start_slide = idx + 1
+    return shrunk_slide_info
+
+def expand_top_sections(top_sections, shrunk_slide_info):
+    expanded_top_sections = []
+    for i, slide in enumerate(shrunk_slide_info):
+        for j in range(slide["left"], slide["right"] + 1):
+            expanded_top_sections.append(top_sections[i])
+    return expanded_top_sections
+
 def process(path, presentation_id, similarity_type, similarity_method, outlining_approach, apply_thresholding, apply_heuristics):
+    parent_path = '/'.join(path.split('/')[:-1])
+    freq_words_per_section = read_json(os.path.join(parent_path, "freqWordsPerSection.json"))
+    
     timestamp = open(os.path.join(path, "frameTimestamp.txt"), "r")
 
     timestamp_data = []
@@ -138,25 +176,36 @@ def process(path, presentation_id, similarity_type, similarity_method, outlining
 
     ocr_data = []
     for i in range(len(timestamp_data)) :
-        ocr_file_path = os.path.join(path, "ocr", str(i) + ".jpg.txt")
+        ocr_file_path = os.path.join(path, "ocr", str(i) + ".json")
         ocr_data.append('')
-        try:
-            with open(ocr_file_path, "r") as (ocr_file, err):
-                if err:
-                    print(err)
-                first_line = False
-                while True :
-                    line = ocr_file.readline()
-                    if not line :
-                        break
-                    if first_line is True:
-                        first_line = False
-                        continue
-                    res = line.split('\t')[-1].strip()
-                    if len(res) > 0 :
-                        ocr_data[-1] = ocr_data[-1] + ' ' + res
-        except:
-            continue
+        if os.path.isfile(ocr_file_path) is True:
+            with open(ocr_file_path, "r") as f:
+                ocr_results = json.load(f)
+                height = ocr_results["imageSize"]["height"]
+                width = ocr_results["imageSize"]["width"]
+
+                processed_ocr = []
+
+                for ocr_result in ocr_results["ocrResult"]:
+                    text = ocr_result["text"]
+                    conf = ocr_result["conf"]
+                    bboxes = ocr_result["boundingBox"]
+                    x1 = width + 1
+                    x2 = -1
+                    y1 = height + 1
+                    y2 = -1
+                    for bbox in bboxes:
+                        x1 = min(x1, bbox[0])
+                        x2 = max(x2, bbox[0])
+                        y1 = min(y1, bbox[1])
+                        y2 = max(y2, bbox[1])
+                    importance = conf * (x2 - x1) * (y2 - y1)
+                    processed_ocr.append((text, importance))
+                
+                for ocr_result in processed_ocr:
+                    ocr_data[-1] += ocr_result[0] + " "
+                #ocr_data[-1] += "."
+                
     result = {}
 
     slide_info = []
@@ -203,17 +252,27 @@ def process(path, presentation_id, similarity_type, similarity_method, outlining
     result['sectionTitles'] = sort_section_data(section_data)
     result['slidesSegmentation'] = slides_segmentation
 
+    transitions = []
+    for slides_segment in slides_segmentation:
+        if slides_segment['endSlideIndex'] < 1:
+            continue
+        transitions.append(slides_segment['endSlideIndex'])
+
+    print(transitions)
+
+    shrunk_slide_info = shrink_slide_info(slide_info, transitions)
+
     _paper_data = []
     _script_data = []
 
     script_sentence_range = []
-    for i in range(len(slide_info)):
-        script = slide_info[i]["script"]
-        ocr = slide_info[i]["ocrResult"]
+    for i in range(len(shrunk_slide_info)):
+        script = shrunk_slide_info[i]["script"]
+        ocr = shrunk_slide_info[i]["ocrResult"]
         sentences = []
         # if (len(ret_script_data) > 10):
         #     break
-        if i == 0 or i == len(slide_info) - 1:
+        if i == 0 or i == len(shrunk_slide_info) - 1:
             sentences = [""]
         elif (similarity_type == "classifier"):
             sentences = [script + " " + ocr]
@@ -233,15 +292,20 @@ def process(path, presentation_id, similarity_type, similarity_method, outlining
         _paper_data.extend(sentences)
 
     print("Sentences# {} Paragraphs# {}".format(len(_paper_data), len(paper_data)))
-    print("Sentences# {} Scripts# {}".format(len(_script_data), len(slide_info)))
+    print("Sentences# {} Scripts# {}".format(len(_script_data), len(shrunk_slide_info)))
+
+    print(len(shrunk_slide_info))
+    print(len(slide_info))
 
     if similarity_type == 'keywords':
         overall, top_sections, paper_keywords, script_keywords = get_keywords_similarity(similarity_method,
-            _paper_data, _script_data, section_data, paper_sentence_id, script_sentence_range, apply_thresholding
+            _paper_data, _script_data, section_data, paper_sentence_id, script_sentence_range,
+            freq_words_per_section,
+            apply_thresholding
         )
-        outline, weights = get_outline_generic(outlining_approach, apply_heuristics, slide_info, section_data, top_sections, slides_segmentation)
-
-        result['topSections'] = top_sections
+        outline, weights = get_outline_generic(outlining_approach, apply_heuristics, shrunk_slide_info, section_data, top_sections, transitions)
+        expanded_top_sections = expand_top_sections(top_sections, shrunk_slide_info)
+        result['topSections'] = expanded_top_sections
         result['outline'] = outline
         result['weights'] = weights
         result["similarityTable"] = numpy.float64(overall).tolist()
@@ -249,11 +313,14 @@ def process(path, presentation_id, similarity_type, similarity_method, outlining
         result["paperSentences"] = paper_keywords
     elif similarity_type == 'strong':
         overall, top_sections, paper_keywords, script_keywords = get_strong_similarity(similarity_method,
-            _paper_data, _script_data, section_data, paper_sentence_id, script_sentence_range
+            _paper_data, _script_data, section_data, paper_sentence_id, script_sentence_range, transitions,
+            freq_words_per_section
         )
-        outline, weights = get_outline_generic(outlining_approach, apply_heuristics, slide_info, section_data, top_sections, slides_segmentation)
+        outline, weights = get_outline_generic(outlining_approach, apply_heuristics, shrunk_slide_info, section_data, top_sections, transitions)
 
-        result['topSections'] = top_sections
+        expanded_top_sections = expand_top_sections(top_sections, shrunk_slide_info)
+        print(len(top_sections), len(expanded_top_sections))
+        result['topSections'] = expanded_top_sections
         result['outline'] = outline
         result['weights'] = weights
         result["similarityTable"] = numpy.float64(overall).tolist()
@@ -261,11 +328,14 @@ def process(path, presentation_id, similarity_type, similarity_method, outlining
         result["paperSentences"] = paper_keywords
     elif similarity_type == 'cosine':
         overall, top_sections = get_cosine_similarity(similarity_method,
-            _paper_data, _script_data, section_data, paper_sentence_id, script_sentence_range, apply_thresholding
+            _paper_data, _script_data, section_data, paper_sentence_id, script_sentence_range,
+            freq_words_per_section,
+            apply_thresholding
         )
-        outline, weights = get_outline_generic(outlining_approach, apply_heuristics, slide_info, section_data, top_sections, slides_segmentation)
+        outline, weights = get_outline_generic(outlining_approach, apply_heuristics, shrunk_slide_info, section_data, top_sections, transitions)
 
-        result['topSections'] = top_sections
+        expanded_top_sections = expand_top_sections(top_sections, shrunk_slide_info)
+        result['topSections'] = expanded_top_sections
         result['outline'] = outline
         result['weights'] = weights
         result["similarityTable"] = numpy.float64(overall).tolist()
@@ -273,10 +343,14 @@ def process(path, presentation_id, similarity_type, similarity_method, outlining
         result["paperSentences"] = _paper_data
     elif similarity_type == "classifier":
         overall, top_sections, paper_data_by_section = get_classifier_similarity(similarity_method,
-            _paper_data, _script_data, section_data, paper_sentence_id, script_sentence_range, apply_thresholding
+            _paper_data, _script_data, section_data, paper_sentence_id, script_sentence_range,
+            freq_words_per_section,
+            apply_thresholding,
         )
-        outline, weights = get_outline_generic(outlining_approach, apply_heuristics, slide_info, section_data, top_sections, slides_segmentation)
-        result['topSections'] = top_sections
+        outline, weights = get_outline_generic(outlining_approach, apply_heuristics, shrunk_slide_info, section_data, top_sections, transitions)
+        
+        expanded_top_sections = expand_top_sections(top_sections, shrunk_slide_info)
+        result['topSections'] = expanded_top_sections
         result['outline'] = outline
         result['weights'] = weights
         result["similarityTable"] = numpy.float64(overall).tolist()
@@ -367,6 +441,13 @@ if __name__ == "__main__":
     #print(json.dumps(output, indent=4))
 
     #output = process('slideMeta/slideData/90', 90, similarity_type="cosine", similarity_method="embedding", outlining_approach="strong", apply_thresholding=False, apply_heuristics=True)
-    output = process('slideMeta/slideData/90', 90, similarity_type="strong", similarity_method="tf-idf", outlining_approach="strong", apply_thresholding=False, apply_heuristics=False)
+    #output = process('slideMeta/slideData/13', 13, similarity_type="strong", similarity_method="tf-idf", outlining_approach="strong", apply_thresholding=False, apply_heuristics=False)
+    #output = process('slideMeta/slideData/477', 477, similarity_type="cosine", similarity_method="tf-idf", outlining_approach="strong", apply_thresholding=False, apply_heuristics=False)
+    output = process('slideMeta/slideData/674', 674, similarity_type="cosine", similarity_method="tf-idf", outlining_approach="strong", apply_thresholding=False, apply_heuristics=False)
+    #output = process('slideMeta/slideData/477', 477, similarity_type="strong", similarity_method="tf-idf", outlining_approach="strong", apply_thresholding=False, apply_heuristics=False)
     
+    #output = process('slideMeta/slideData/106', 106, similarity_type="cosine", similarity_method="tf-idf", outlining_approach="strong", apply_thresholding=False, apply_heuristics=False)
+    
+
     print(json.dumps(output["outline"], indent=2))
+    print(json.dumps(output["evaluationData"]["groundTruth"], indent=2))

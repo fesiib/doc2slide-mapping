@@ -1,4 +1,5 @@
-from __init__ import sort_section_data
+from math import floor
+from __init__ import BEG_PART, FREQ_WORDS_SECTION_TITLES, MID_PART, sort_section_data
 
 
 PENALTY = 0.5
@@ -100,13 +101,18 @@ def get_outline_dp(label_dict, top_sections, slide_info):
             outline[-1]['endSlideIndex'] = i
     return outline, weights
 
-def get_outline_strong(label_dict, apply_heuristics, slide_info, top_sections, transitions):
+def get_outline_strong(label_dict, apply_heuristics, slide_info, top_sections):
+    vicinity_sections = floor(len(label_dict) / 2) + 1
+    title_slide = 1
+    end_slide = len(slide_info) - 1
+
+
     weights = []
     outline = []
     outline.append({
         "sectionTitle": "TITLE",
-        "startSlideIndex": 1,
-        "endSlideIndex": transitions[0],
+        "startSlideIndex": slide_info[title_slide]["left"],
+        "endSlideIndex": slide_info[title_slide]["right"],
     })
 
     # for slide_idx in range(len(top_sections)):
@@ -131,8 +137,8 @@ def get_outline_strong(label_dict, apply_heuristics, slide_info, top_sections, t
 
     with open("./experiments.csv", "w") as f:
         print("title", end=",", file=f)
-        for idx in range(1, len(transitions) - 1):
-            print(str(transitions[idx - 1] + 1) + "-" + str(transitions[idx]), end=",", file=f)
+        for idx in range(title_slide, end_slide):
+            print(str(slide_info[idx]["left"]) + "-" + str(slide_info[idx]["right"]), end=",", file=f)
         print("", file=f)
 
         info = []
@@ -140,82 +146,164 @@ def get_outline_strong(label_dict, apply_heuristics, slide_info, top_sections, t
         new_label_dict = []
 
         for label in label_dict:
+            # if ("related" in label.lower() and "work" in label.lower()) or "background" in label.lower():
+            #    continue
+
+            # if ("related" in label.lower() and "work" in label.lower()):
+            #    continue
             # if should_skip_section(label):
             #     continue
-            new_label_dict.append(label)
-            scores_max = []
-            scores_avg = []
-            scores_total = []
+            new_label_dict.append(label) 
+            scores = []
 
-            for idx in range(1, len(transitions) - 1):
-                scores_total.append(0)
-                scores_avg.append(0)
-                scores_max.append(-1)
-                for i in range(transitions[idx - 1] + 1, transitions[idx] + 1):
-                    for top_section in top_sections[i]:
-                        if top_section[0] != label:
-                            continue
-                        scores_total[-1] += top_section[1]
-                        scores_max[-1] = max(scores_max[-1], top_section[1])
+            for idx in range(title_slide, end_slide):
+                score = 0
+                for top_section in top_sections[idx]:
+                    if top_section[0] == label:
+                        score = top_section[1]
                         break
-                if transitions[idx] > transitions[idx-1]:
-                    scores_avg[-1] = scores_total[-1] / (transitions[idx] - transitions[idx - 1])            
-            
+                scores.append(score)
             print(label, end=",", file=f)
-            for val in scores_max:
-                print(round(val, 2), end=",", file=f)
+            for score in scores:
+                print(round(score, 2), end=",", file=f)
             print("", file=f)
-            info.append(scores_max)
+            info.append(scores)
+
+        n = end_slide - title_slide
+
+        beginning_part = 0
+        middle_part = len(new_label_dict)
+        for i, label in enumerate(new_label_dict):
+            is_mid = False
+            for mid_id in range(BEG_PART, MID_PART):
+                for title in FREQ_WORDS_SECTION_TITLES[mid_id]:
+                    if title.lower() in label.lower():
+                        is_mid = True
+                        break
+            if is_mid:
+                continue
+            is_beg = False
+            for beg_id in range(BEG_PART):
+                for title in FREQ_WORDS_SECTION_TITLES[beg_id]:
+                    if title.lower() in label.lower():
+                        is_beg = True
+                        break
+            if is_beg:
+                beginning_part = i + 1
+                continue
+            
+            is_end = False
+            for end_id in range(MID_PART, len(FREQ_WORDS_SECTION_TITLES)):
+                for title in FREQ_WORDS_SECTION_TITLES[end_id]:
+                    if title.lower() in label.lower():
+                        is_end = True
+                        break
+            if is_end:
+                middle_part = i
+                break
         
-        dp = [[0 for i in range(len(transitions) - 1)]]
-        prevs = [[0 for i in range(len(transitions) - 1)]]
+        print("BOUNDARIES: ", new_label_dict[beginning_part - 1], new_label_dict[middle_part])
+
+        beginning_slide = 1
+        middle_slide = n
+        part_scores = []
+        right_part_scores = [0, 0, 0]
+        left_part_scores = [0, 0, 0]
+
+        for i in range(n):
+            part_scores.append([0, 0, 0])
+            for k in range(len(new_label_dict)):
+                if k < beginning_part:
+                    part_scores[-1][0] += info[k][i]
+                elif k < middle_part:
+                    part_scores[-1][1] += info[k][i]
+                else:
+                    part_scores[-1][2] += info[k][i]
+
+            if beginning_part > 0:
+                part_scores[-1][0] /= beginning_part
+            if middle_part - beginning_part > 0:
+                part_scores[-1][1] /= (middle_part - beginning_part)
+            if len(new_label_dict) - middle_part > 0:
+                part_scores[-1][2] /= (len(new_label_dict) - middle_part)
+
+            for k in range(3):
+                right_part_scores[k] += part_scores[-1][k]
+
+        for i in range(n + 1):
+            avg_left_part_scores = [0, 0, 0]
+            avg_right_part_scores = [0, 0, 0]
+            for k in range(3):
+                if i > 0:
+                    avg_left_part_scores[k] = left_part_scores[k] / i
+                if i < n:
+                    avg_right_part_scores[k] = right_part_scores[k] / (n - i)
+            
+            print("\t ->", i)
+            print("Beginning Part: ", round(avg_right_part_scores[0] - avg_left_part_scores[0] , 3))
+            print("Middle Part: ", round(avg_right_part_scores[1] - avg_left_part_scores[1] , 3))
+            print("End: Part", round(avg_right_part_scores[2] - avg_left_part_scores[2], 3))
+            print("")
+
+            if i < n:
+                for k in range(3):
+                    left_part_scores[k] += part_scores[i][k]
+                    right_part_scores[k] -= part_scores[i][k]
+
+        dp = []
+        prevs = []
 
         for i, label in enumerate(new_label_dict):
+
             dp.append([0])
             prevs.append([0])
             
             larger_thans = [0]
-            for j in range(1, len(transitions) - 1):
+            for j in range(1, n):
                 larger_thans.append(0)
-                if "introduction" in label.lower() or ("related" in label.lower() and "work" in label.lower()) or "background" in label.lower():
-                    if j > (len(transitions) - 1) / 2:
+                if i < beginning_part:
+                    if j > n / 2:
                         dp[-1].append(0)
                         prevs[-1].append(0)
                         continue
-                
-                if "discussion" in label.lower() or "conclusion" in label.lower():
-                    if j <= (len(transitions) - 1) / 2:
+                if i < middle_part:
+                    if j < 2:
+                        dp[-1].append(0)
+                        prevs[-1].append(0)
+                        continue
+                if i >= middle_part:
+                    if j < n / 2:
                         dp[-1].append(0)
                         prevs[-1].append(0)
                         continue
 
                 l = max(0, i + 1)
-                r = min(len(new_label_dict), i + 4)
+                r = min(len(new_label_dict), i + vicinity_sections + 1)
                 if r == len(new_label_dict):
-                    l = max(0, r - 3)
+                    l = max(0, r - vicinity_sections - 1)
 
                 for k in range(l, r):
                     if k == i:
                         continue
-                    if info[i][j - 1] >= info[k][j - 1] - ((k - i) / len(new_label_dict)):
+                    # if info[i][j] >= info[k][j] - ((k - i) / len(new_label_dict)):
+                    #     larger_thans[-1] += 1
+                    if info[i][j] >= info[k][j]:
                         larger_thans[-1] += 1
                 
-                dp[-1].append(dp[-2][j])
-                prevs[-1].append(j)
-
-                if dp[-1][-1] < dp[-1][-2] + larger_thans[-1]:
-                    dp[-1][-1] = dp[-1][-2] + larger_thans[-1]
-                    prevs[-1][-1] = prevs[-1][-2]
-
-                # sum_larger_thans = larger_thans[-1]
-                # for k in range(j - 1, 0, -1):
-                #     sum_larger_thans += larger_thans[k]
-                
-                # for k in range(1, j):
-                #     if dp[-1][-1] <= dp[-2][k] + sum_larger_thans:
-                #         dp[-1][-1] = dp[-2][k] + sum_larger_thans
-                #         prevs[-1][-1] = k
-                #     sum_larger_thans -= larger_thans[k]
+                dp[-1].append(dp[-1][-1] + larger_thans[-1])
+                prevs[-1].append(prevs[-1][-1])
+                if i > 0:
+                    if dp[-1][-1] < dp[-2][j]:
+                        dp[-1][-1] = dp[-2][j]
+                        prevs[-1][-1] = j
+                    sum_larger_thans = 0
+                    for k in range(j, 0, -1):
+                        sum_larger_thans += larger_thans[k]    
+                    for k in range(1, j + 1):
+                        if dp[-1][-1] <= dp[-2][k - 1] + sum_larger_thans:
+                            dp[-1][-1] = dp[-2][k - 1] + sum_larger_thans
+                            prevs[-1][-1] = k - 1
+                        sum_larger_thans -= larger_thans[k]
 
             print(label, ":", dp[-1])
             print(label, ":", prevs[-1])
@@ -255,63 +343,70 @@ def get_outline_strong(label_dict, apply_heuristics, slide_info, top_sections, t
 
         raw_outline = []
 
-        i = len(new_label_dict) - 1
-        j = len(transitions) - 2
-        while (i >= 0 and j >= 0):
-            raw_outline.append(j)
-            next_j = prevs[i][j]
-            i -= 1
+        label_idx = len(new_label_dict) - 1
+        j = n - 1
+
+        for i in range(len(new_label_dict)):
+            if dp[i][j] > dp[label_idx][j]:
+                label_idx = i
+
+        while (label_idx >= 0 and j >= 0):
+            #print(new_label_dict[label_idx], " -> ", j, "or", slide_info[j + title_slide]["right"])
+            raw_outline.append(j + title_slide)
+            next_j = prevs[label_idx][j]
+            label_idx -= 1
             j = next_j
 
+        while label_idx > -2:
+            raw_outline.append(title_slide)
+            label_idx -= 1
         raw_outline = raw_outline[::-1]
 
-        for i in range(len(raw_outline)):
-            if i == 0 or raw_outline[i] == raw_outline[i - 1]:
+        for i in range(1, len(raw_outline)):
+            if raw_outline[i] == raw_outline[i - 1]:
                 continue
             outline.append({
                 "sectionTitle": new_label_dict[i - 1],
-                "startSlideIndex": transitions[raw_outline[i-1]] + 1,
-                "endSlideIndex": transitions[raw_outline[i]],
+                "startSlideIndex": slide_info[raw_outline[i - 1] + 1]["left"],
+                "endSlideIndex": slide_info[raw_outline[i]]["right"],
             })
     outline.append({
         "sectionTitle": "END",
-        "startSlideIndex": transitions[-2] + 1,
-        "endSlideIndex": transitions[-1],
+        "startSlideIndex": slide_info[end_slide]["left"],
+        "endSlideIndex": slide_info[end_slide]["right"],
     })
 
     return outline, weights
 
 
-def get_outline_dp_mask(label_dict, apply_heuristics, slide_info, top_sections, transitions, target_mask = None):
+def get_outline_dp_mask(label_dict, apply_heuristics, slide_info, top_sections, target_mask = None):
     n = len(label_dict)
     m = len(slide_info)
     INF = (m + 1) * 100
 
     outline = [{
         "sectionTitle": "END",
-        "startSlideIndex": transitions[-2] + 1,
-        "endSlideIndex": transitions[-1],
+        "startSlideIndex": slide_info[-1]["left"],
+        "endSlideIndex": slide_info[-1]["right"],
     }]
     
     total_duration = slide_info[m-2]["endTime"] - slide_info[1]["startTime"]
     
-    min_cnt_slides_per_segment = min(MIN_CNT_SLIDES_PER_SEGMENT, len(transitions) - 2)
-    min_segments = min(MIN_SEGMENTS, round((len(transitions) - 2) / min_cnt_slides_per_segment))
+    min_cnt_slides_per_segment = min(MIN_CNT_SLIDES_PER_SEGMENT, len(slide_info) - 2)
+    min_segments = min(MIN_SEGMENTS, round((len(slide_info) - 2) / min_cnt_slides_per_segment))
     min_duration_per_segment = min(MIN_DURATION_PER_SEGMENT, total_duration / min_segments)
 
     print(min_cnt_slides_per_segment, min_duration_per_segment, min_segments)
 
     dp = [[(-INF, n, -1) for j in range(m)] for i in range(1 << n)]
-    dp[0][transitions[0]] = (0, n, -1)
+    dp[0][slide_info[1]["left"]] = (0, n, -1)
 
-    for i in transitions[:-1]:
+    for i in m:
         scores = [0 for k in range(n)]
-        for j in range(i + 1, transitions[-1]):
+        for j in range(i + 1, m):
             for top_section in top_sections[j]:
                 pos = label_dict.index(top_section[0])
                 scores[pos] += top_section[1]
-            if j not in transitions:
-                continue
             # Heuristics
             # if apply_heuristics is True:
             #     if j - i < min_cnt_slides_per_segment:
@@ -346,7 +441,7 @@ def get_outline_dp_mask(label_dict, apply_heuristics, slide_info, top_sections, 
 
 
     recover_mask = 0
-    recover_slide_id = transitions[-2]
+    recover_slide_id = slide_info[-2]["right"]
 
     weights = [-1 for i in range(n + 1)]
 
@@ -378,8 +473,8 @@ def get_outline_dp_mask(label_dict, apply_heuristics, slide_info, top_sections, 
     
     outline.append({
         "sectionTitle": "TITLE",
-        "startSlideIndex": 1,
-        "endSlideIndex": transitions[0],
+        "startSlideIndex": slide_info[1]["left"],
+        "endSlideIndex": slide_info[1]["right"],
     })
 
     return outline[::-1], weights
@@ -408,29 +503,23 @@ def get_outline_simple(top_sections):
         weights.append(scores[section])
     return outline, weights
 
-def get_outline_generic(outlining_approach, apply_heuristics, slide_info, section_data, top_sections, slides_segmentation, target_mask = None):
-    transitions = []
-    for slides_segment in slides_segmentation:
-        if slides_segment['endSlideIndex'] < 1:
-            continue
-        transitions.append(slides_segment['endSlideIndex'])
+def get_outline_generic(outlining_approach, apply_heuristics, slide_info, section_data, top_sections, transitions, target_mask = None):
     label_dict = sort_section_data(section_data)
     for i, label in enumerate(label_dict):
         print(i, ":", label)
-    print(transitions)
 
-    if len(transitions) < 2 or len(slide_info) < 3:
+    if len(slide_info) < 3:
         return [{
             "sectionTitle": "PAPER",
             "startSlideIndex": 1,
-            "endSlideIndex": len(slide_info) - 1,
+            "endSlideIndex": slide_info[-1]["right"],
         }], [-1, 0]
 
     if outlining_approach == 'strong':
-        return get_outline_strong(label_dict, apply_heuristics, slide_info, top_sections, transitions)
+        return get_outline_strong(label_dict, apply_heuristics, slide_info, top_sections)
 
     if outlining_approach == 'dp_mask':
-        return get_outline_dp_mask(label_dict, apply_heuristics, slide_info, top_sections, transitions, target_mask)
+        return get_outline_dp_mask(label_dict, apply_heuristics, slide_info, top_sections, target_mask)
     if outlining_approach == 'simple':
         return get_outline_simple(top_sections)
     

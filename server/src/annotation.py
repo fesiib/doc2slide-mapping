@@ -128,10 +128,20 @@ if __name__ == "__main__":
     #         with open(gt_path, 'w') as dst:
     #             json.dump(obj, dst, indent=2)
 
-    evaluation_sum = [[0 for j in range(3)] for i in range(3)]
-    evaluation_min = [[100 for j in range(3)] for i in range(3)]
-    evaluation_max = [[-1 for j in range(3)] for i in range(3)]
+    slides_evaluation_overall = [[[0, 100, -1] for j in range(3)] for i in range(3)]
+    slides_evaluation_separate = [[[[0, 100, -1] for k in range(3)] for j in range(3)] for i in range(3)]
 
+
+    time_evaluation_overall = [[[0, 100, -1] for j in range(3)] for i in range(3)]
+    time_evaluation_separate = [[[[0, 100, -1] for k in range(3)] for j in range(3)] for i in range(3)]
+
+
+    def update_sum_min_max(triplet, score):
+        triplet[0] += score
+        triplet[1] = min(triplet[1], score)
+        triplet[2] = max(triplet[2], score)
+        return triplet
+    
     for i, presentation_id in enumerate(lst):
         path = os.path.join("./slideMeta/slideData/", str(presentation_id))
 
@@ -153,22 +163,38 @@ if __name__ == "__main__":
                 if ix == jx:
                     continue
                 evaluation_result = evaluate_outline(annotations[ix], annotations[jx], slide_info, [])
-                evaluation_sum[ix][jx] += evaluation_result["overallAccuracy"]
-                evaluation_max[ix][jx] = max(evaluation_max[ix][jx], evaluation_result["overallAccuracy"] / 100)
-                evaluation_min[ix][jx] = min(evaluation_min[ix][jx], evaluation_result["overallAccuracy"] / 100)
-                if evaluation_result["overallAccuracy"] / 100 < 0.8:
-                    print(presentation_id)
+
+                slides_evaluation_overall[ix][jx] = update_sum_min_max(slides_evaluation_overall[ix][jx], evaluation_result["overallSlidesAccuracy"])
+                for k in range(3):
+                    slides_evaluation_separate[ix][jx][k] = update_sum_min_max(slides_evaluation_separate[ix][jx][k], evaluation_result["separateSlidesAccuracy"][k])
+                
+
+                time_evaluation_overall[ix][jx] = update_sum_min_max(time_evaluation_overall[ix][jx], evaluation_result["overallTimeAccuracy"])
+                for k in range(3):
+                    time_evaluation_separate[ix][jx][k] = update_sum_min_max(time_evaluation_separate[ix][jx][k], evaluation_result["separateTimeAccuracy"][k])
 
     for i in range(3):
         for j in range(3):
-            evaluation_sum[i][j] /= len(lst) * 100
-            print(evaluation_sum[i][j], end=" ")
-        print("")
+            slides_evaluation_overall[i][j][0] = round(slides_evaluation_overall[i][j][0] / len(lst), 3)
+            time_evaluation_overall[i][j][0] = round(time_evaluation_overall[i][j][0] / len(lst), 3)
+            for k in range(3):
+                slides_evaluation_separate[i][j][k][0] = round(slides_evaluation_separate[i][j][k][0] / len(lst), 3)
+                time_evaluation_separate[i][j][k][0] = round(time_evaluation_separate[i][j][k][0] / len(lst), 3)
 
-    print(evaluation_sum)
-    
-    print(evaluation_max)
-    print(evaluation_min)
-
+    for i in range(3):
+        for j in range(3):
+            if i == j:
+                continue
+            print("\t\t --> ", i, j)
+            print("Slides Score: ", slides_evaluation_overall[i][j][0])
+            print("\t Beginning Score:", slides_evaluation_separate[i][j][0][0])
+            print("\t Middle Score:", slides_evaluation_separate[i][j][1][0])
+            print("\t End Score:", slides_evaluation_separate[i][j][2][0])
+            print("")
+            print("Time Score: ", time_evaluation_overall[i][j][0])
+            print("\t Beginning Score:", time_evaluation_separate[i][j][0][0])
+            print("\t Middle Score:", time_evaluation_separate[i][j][1][0])
+            print("\t End Score:", time_evaluation_separate[i][j][2][0])
+            print("")
 
         

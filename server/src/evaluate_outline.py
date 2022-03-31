@@ -242,6 +242,9 @@ def _evaluate_mapping(outline, gt_outline, top_sections):
     total_score = 0
     error = 0
 
+    total_separate = [0, 0, 0]
+    error_separate = [0, 0, 0]
+
     for slide_idx, slide_top_sections in enumerate(top_sections):
         while section_idx < len(outline) and outline[section_idx]["endSlideIndex"] < slide_idx:
             section_idx += 1
@@ -291,15 +294,32 @@ def _evaluate_mapping(outline, gt_outline, top_sections):
         total_score += mx_score
         error += (mx_score - gt_score)
 
+        pos = floor(slide_idx / len(top_sections) * 3)
+        total_separate[pos] += mx_score
+        error_separate[pos] += (mx_score - gt_score)
+
     if total_score == 0:
-        return 50
-    return round(100 - (error / total_score) * 100, 2)
+        return 0, [0, 0, 0]
+
+    score = round(100 - (error / total_score) * 100, 3)
+    separate_scores = [0, 0, 0]
+
+    for i in range(3):
+        if total_separate[i] > 0:
+            separate_scores[i] = round(100 - (error_separate[i] / total_separate[i]) * 100, 3)
+    return score, separate_scores
 
 def _evaluate_overall(outline, gt_outline, slide_info):
     total_time = 0
     overlapped_time = 0
     separate_overlapped_times = [0, 0, 0]
     separate_total_times = [0, 0, 0]
+
+    total_slides = 0
+    overalapped_slides = 0
+
+    separate_overlapped_slides = [0, 0, 0]
+    separate_total_slides = [0, 0, 0]
 
     labels = ["empty1" for i in range(len(slide_info))]
     gt_labels = ["empty2" for i in range(len(slide_info))]
@@ -317,6 +337,7 @@ def _evaluate_overall(outline, gt_outline, slide_info):
         gt_start = slide_info[start_slide]["startTime"]
         gt_end = slide_info[end_slide]["endTime"]
         total_time += gt_end - gt_start
+        total_slides += end_slide - start_slide + 1
 
     for section in outline:
         title = process_title(section["sectionTitle"])
@@ -333,44 +354,75 @@ def _evaluate_overall(outline, gt_outline, slide_info):
             invalid = True
         pos = floor(idx / len(slide_info) * 3)
         separate_total_times[pos] += cur_duration
+        separate_total_slides[pos] += 1
         if are_same_section_titles(labels[idx], gt_labels[idx]):
             overlapped_time += cur_duration
             separate_overlapped_times[pos] += cur_duration
+
+            overalapped_slides += 1
+            separate_overlapped_slides[pos] += 1
     
     if total_time == 0:
-        return 0, [0, 0, 0]
+        return 0, [0, 0, 0], 0, [0, 0, 0]
 
     for i in range(3):
         if separate_total_times[i] > 0:
             separate_overlapped_times[i] = round(separate_overlapped_times[i] / separate_total_times[i], 3)
+        if separate_total_slides[i] > 0:
+            separate_overlapped_slides[i] = round(separate_overlapped_slides[i] / separate_total_slides[i], 3)
 
-    return round((overlapped_time / total_time), 3), separate_overlapped_times
+    return (
+        round((overlapped_time / total_time), 3),
+        separate_overlapped_times,
+        round((overalapped_slides / total_slides), 3),
+        separate_overlapped_slides
+    )
 
 def evaluate_outline(outline, gt_outline, slide_info, top_sections):
-    overall, separate_scores = _evaluate_overall(outline, gt_outline, slide_info)
+    (   
+        overall_time,
+        separate_scores_time,
+        overall_slides,
+        separate_scores_slides
+    ) = _evaluate_overall(outline, gt_outline, slide_info)
+
+    (
+        mapping_overall,
+        mapping_separate,
+    ) = _evaluate_mapping(outline, gt_outline, top_sections)
+
     return {
         "boundariesAccuracy": _evaluate_boundaries(outline, gt_outline),
-        "overallAccuracy": overall,
+        "overallTimeAccuracy": overall_time,
+        "overallSlidesAccuracy": overall_slides,
         "structureAccuracy": _evaluate_structure(outline, gt_outline, slide_info),
-        "mappingAccuracy": _evaluate_mapping(outline, gt_outline, top_sections),
-        "separateAccuracy": separate_scores,
+        "mappingAccuracy": mapping_overall,
+        "separateTimeAccuracy": separate_scores_time,
+        "separateSlidesAccuracy": separate_scores_slides,
+        "separateMappingAccuracy": mapping_separate,
     }
 
 def evaluate_performance(evaluations, presentation_ids):
 
     boundaryAccs = []
     timeAccs = []
-    overallAccs = []
+    overallTimeAccs = []
+    overallSlidesAccs = []
     structureAccs = []
     mappingAccs = []
-    separateAccs = []
+    separateTimeAccs = []
+    separateSlidesAccs = []
+    separateMappingAccs = []
 
     for evaluation in evaluations:
         boundaryAccs.append(evaluation["boundariesAccuracy"])
-        overallAccs.append(evaluation["overallAccuracy"])
+        overallTimeAccs.append(evaluation["overallTimeAccuracy"])
+        overallSlidesAccs.append(evaluation["overallSlidesAccuracy"])
         structureAccs.append(evaluation["structureAccuracy"])
         mappingAccs.append(evaluation["mappingAccuracy"])
-        separateAccs.append(evaluation["separateAccuracy"])
+        separateTimeAccs.append(evaluation["separateTimeAccuracy"])
+        separateSlidesAccs.append(evaluation["separateSlidesAccuracy"])
+        separateMappingAccs.append(evaluation["separateMappingAccuracy"])
 
     def calc_avg(lst):
         sum = 0
@@ -383,9 +435,25 @@ def evaluate_performance(evaluations, presentation_ids):
 
     return {
         "boundariesAccuracy": (boundaryAccs, calc_avg(boundaryAccs)),
-        "overallAccuracy": (overallAccs, calc_avg(overallAccs)),
+        "overallTimeAccuracy": (overallTimeAccs, calc_avg(overallTimeAccs)),
+        "overallSlidesAccuracy": (overallSlidesAccs, calc_avg(overallSlidesAccs)),
         "structureAccuracy": (structureAccs, calc_avg(structureAccs)),
         "mappingAccuracy": (mappingAccs, calc_avg(mappingAccs)),
-        "separateAccuracy": (separateAccs, calc_avg(separateAccs)),
+        "separateTimeAccuracy": (separateTimeAccs, [
+            calc_avg(map(lambda x: x[0], separateTimeAccs)),
+            calc_avg(map(lambda x: x[1], separateTimeAccs)),
+            calc_avg(map(lambda x: x[2], separateTimeAccs)),
+        ]),
+        "separateSlidesAccuracy": (separateSlidesAccs, [
+            calc_avg(map(lambda x: x[0], separateSlidesAccs)),
+            calc_avg(map(lambda x: x[1], separateSlidesAccs)),
+            calc_avg(map(lambda x: x[2], separateSlidesAccs)),
+        ]),
+        "separateMappingAccuracy": (separateMappingAccs, [
+            calc_avg(map(lambda x: x[0], separateMappingAccs)),
+            calc_avg(map(lambda x: x[1], separateMappingAccs)),
+            calc_avg(map(lambda x: x[2], separateMappingAccs)),
+        ]),
+
         "presentation_ids": presentation_ids
     }

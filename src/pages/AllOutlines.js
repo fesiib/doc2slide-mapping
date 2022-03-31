@@ -6,7 +6,26 @@ import ModelConfig from '../components/ModelConfig';
 import PipelineAccuracy from '../components/PipelineAccuracy';
 
 const SHORT_PRESENTATION_IDS = [
-    439, 510, 90, 589, 674, 689, 549, 13, 307, 477, 106, 161, 271, 214, 147, 318, 372, 46, 231, 504
+    13,
+    46,
+    90,
+    106,
+    147,
+    161,
+    214,
+    231,
+    271,
+    307,
+    318,
+    372,
+    439,
+    477,
+    504,
+    510,
+    549,
+    589,
+    674,
+    689
     //11, 12, 13, 14, 15, 16,
 ];
 
@@ -14,9 +33,12 @@ const NULL_EVALUATION_DATA = {
     boundariesAccuracy: 0,
     timeAccuracy: 0,
     structureAccuracy: 0,
-    overallAccuracy: 0,
+    overallTimeAccuracy: 0,
+    separateTimeAccuracy: [0, 0, 0],
+    overallSlidesAccuracy: 0,
+    separateSlidesAccuracy: [0, 0, 0],
     mappingAccuracy: 0,
-    separateAccuracy: [0, 0, 0],
+    separateMappingAccuracy: [0, 0, 0],
 };
 
 function AllOutlines(props) {
@@ -29,6 +51,15 @@ function AllOutlines(props) {
 	const [data, setData] = useState({});
 
     const [avgGTEvaluation, setAvgGTEvaluation] = useState({ ...NULL_EVALUATION_DATA });
+
+    const [badPresentationIds, setBadPresentationIds] = useState([]);
+
+    const isBadPresentation = (groundTruth) => {
+        if (groundTruth.hasOwnProperty("overallSlidesAccuracy")) {
+            return groundTruth.overallSlidesAccuracy < 0.5;
+        }
+        return false;
+    }
 	
 	useEffect(() => {
         let requests = [];
@@ -46,6 +77,7 @@ function AllOutlines(props) {
             }));
         }
         Promise.all(requests).then( (responses) => {
+            let curBadPresentationIds = []
             let curData = {};
             let curAvgGTEvaluation = { ...NULL_EVALUATION_DATA }
             let cnt = 0
@@ -59,10 +91,18 @@ function AllOutlines(props) {
                     [presentationId]: data
                 };
                 const gtEvaluation = data?.evaluationData?.groundTruth;
+
                 if (gtEvaluation) {
+                    if (isBadPresentation(gtEvaluation)) {
+                        curBadPresentationIds.push(presentationId);
+                    }
                     cnt++;
                     for (let key in curAvgGTEvaluation) {
-                        if (key === "separateAccuracy") {
+                        if (
+                            key === "separateTimeAccuracy"
+                            || key === "separateSlidesAccuracy"
+                            || key === "separateMappingAccuracy"
+                        ) {
                             for (let i = 0; i < 3; i++) {
                                 curAvgGTEvaluation[key][i] += gtEvaluation[key][i];
                             }
@@ -75,7 +115,11 @@ function AllOutlines(props) {
             }
             if (cnt > 0) {
                 for (let key in curAvgGTEvaluation) {
-                    if (key === "separateAccuracy") {
+                    if (
+                        key === "separateTimeAccuracy"
+                        || key === "separateSlidesAccuracy"
+                        || key === "separateMappingAccuracy"
+                    ) {
                         for (let i = 0; i < 3; i++) {
                             curAvgGTEvaluation[key][i] = Math.round(curAvgGTEvaluation[key][i] / cnt * 1000) / 1000;
                         }
@@ -87,6 +131,7 @@ function AllOutlines(props) {
             }
             setData(curData);
             setAvgGTEvaluation(curAvgGTEvaluation);
+            setBadPresentationIds(curBadPresentationIds);
 
         });
 	}, [similarityType, similarityMethod, outliningApproach, applyThresholding, applyHeuristics]);
@@ -129,8 +174,14 @@ function AllOutlines(props) {
             <PipelineAccuracy
                 title={"Average Accuracy"}
                 evaluationData={avgGTEvaluation}
-
             />
+            <div style={{
+                textAlign: "left",
+                margin: "2em",
+            }}>
+                <h3> Bad Presentation Ids: </h3>
+                <div> {badPresentationIds.map((val) => val + ", ")} </div>
+            </div>
             {outputOutlines()}
 		</div>
 	);
