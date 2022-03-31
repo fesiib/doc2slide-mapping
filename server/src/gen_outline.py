@@ -101,7 +101,7 @@ def get_outline_dp(label_dict, top_sections, slide_info):
             outline[-1]['endSlideIndex'] = i
     return outline, weights
 
-def get_outline_strong(label_dict, apply_heuristics, slide_info, top_sections):
+def get_outline_strong(label_dict, apply_heuristics, slide_info, top_sections, coarse_top_sections):
     vicinity_sections = floor(len(label_dict) / 2) + 1
     title_slide = 1
     end_slide = len(slide_info) - 1
@@ -135,6 +135,39 @@ def get_outline_strong(label_dict, apply_heuristics, slide_info, top_sections):
     #             if i == top_section[1]:
     #                 print("\t", top_section[0], ":", top_section[1])
 
+    beginning_part = 0
+    middle_part = len(label_dict)
+    for i, label in enumerate(label_dict):
+        is_mid = False
+        for mid_id in range(BEG_PART, MID_PART):
+            for title in FREQ_WORDS_SECTION_TITLES[mid_id]:
+                if title.lower() in label.lower():
+                    is_mid = True
+                    break
+        if is_mid:
+            continue
+        is_beg = False
+        for beg_id in range(BEG_PART):
+            for title in FREQ_WORDS_SECTION_TITLES[beg_id]:
+                if title.lower() in label.lower():
+                    is_beg = True
+                    break
+        if is_beg:
+            beginning_part = i + 1
+            continue
+        
+        is_end = False
+        for end_id in range(MID_PART, len(FREQ_WORDS_SECTION_TITLES)):
+            for title in FREQ_WORDS_SECTION_TITLES[end_id]:
+                if title.lower() in label.lower():
+                    is_end = True
+                    break
+        if is_end:
+            middle_part = i
+            break
+    
+    print("BOUNDARIES: ", label_dict[beginning_part - 1], label_dict[middle_part])
+
     with open("./experiments.csv", "w") as f:
         print("title", end=",", file=f)
         for idx in range(title_slide, end_slide):
@@ -145,20 +178,18 @@ def get_outline_strong(label_dict, apply_heuristics, slide_info, top_sections):
 
         new_label_dict = []
 
-        for label in label_dict:
-            # if ("related" in label.lower() and "work" in label.lower()) or "background" in label.lower():
-            #    continue
-
-            # if ("related" in label.lower() and "work" in label.lower()):
-            #    continue
-            # if should_skip_section(label):
-            #     continue
+        for i, label in enumerate(label_dict):
             new_label_dict.append(label) 
             scores = []
 
+            cur_top_sections = top_sections
+
+            if len(coarse_top_sections) > 0 and (i < beginning_part or i >= middle_part):
+                cur_top_sections = coarse_top_sections
+
             for idx in range(title_slide, end_slide):
                 score = 0
-                for top_section in top_sections[idx]:
+                for top_section in cur_top_sections[idx]:
                     if top_section[0] == label:
                         score = top_section[1]
                         break
@@ -171,84 +202,51 @@ def get_outline_strong(label_dict, apply_heuristics, slide_info, top_sections):
 
         n = end_slide - title_slide
 
-        beginning_part = 0
-        middle_part = len(new_label_dict)
-        for i, label in enumerate(new_label_dict):
-            is_mid = False
-            for mid_id in range(BEG_PART, MID_PART):
-                for title in FREQ_WORDS_SECTION_TITLES[mid_id]:
-                    if title.lower() in label.lower():
-                        is_mid = True
-                        break
-            if is_mid:
-                continue
-            is_beg = False
-            for beg_id in range(BEG_PART):
-                for title in FREQ_WORDS_SECTION_TITLES[beg_id]:
-                    if title.lower() in label.lower():
-                        is_beg = True
-                        break
-            if is_beg:
-                beginning_part = i + 1
-                continue
+        # beginning_slide = 1
+        # middle_slide = n
+        # part_scores = []
+        # right_part_scores = [0, 0, 0]
+        # left_part_scores = [0, 0, 0]
+
+        # for i in range(n):
+        #     part_scores.append([0, 0, 0])
+        #     for k in range(len(new_label_dict)):
+        #         if k < beginning_part:
+        #             part_scores[-1][0] += info[k][i]
+        #         elif k < middle_part:
+        #             part_scores[-1][1] += info[k][i]
+        #         else:
+        #             part_scores[-1][2] += info[k][i]
+
+        #     if beginning_part > 0:
+        #         part_scores[-1][0] /= beginning_part
+        #     if middle_part - beginning_part > 0:
+        #         part_scores[-1][1] /= (middle_part - beginning_part)
+        #     if len(new_label_dict) - middle_part > 0:
+        #         part_scores[-1][2] /= (len(new_label_dict) - middle_part)
+
+        #     for k in range(3):
+        #         right_part_scores[k] += part_scores[-1][k]
+
+        # for i in range(n + 1):
+        #     avg_left_part_scores = [0, 0, 0]
+        #     avg_right_part_scores = [0, 0, 0]
+        #     for k in range(3):
+        #         if i > 0:
+        #             avg_left_part_scores[k] = left_part_scores[k] / i
+        #         if i < n:
+        #             avg_right_part_scores[k] = right_part_scores[k] / (n - i)
             
-            is_end = False
-            for end_id in range(MID_PART, len(FREQ_WORDS_SECTION_TITLES)):
-                for title in FREQ_WORDS_SECTION_TITLES[end_id]:
-                    if title.lower() in label.lower():
-                        is_end = True
-                        break
-            if is_end:
-                middle_part = i
-                break
-        
-        print("BOUNDARIES: ", new_label_dict[beginning_part - 1], new_label_dict[middle_part])
+        #     # print("\t ->", i)
+        #     # print("Beginning Part: ", round(avg_left_part_scores[0], 3), round(avg_right_part_scores[0], 3))
+        #     # print("   Middle Part: ", round(avg_left_part_scores[1], 3), round(avg_right_part_scores[1], 3))
+        #     # print("   Ending Part: ", round(avg_left_part_scores[2], 3), round(avg_right_part_scores[2], 3))
+        #     # print("")
 
-        beginning_slide = 1
-        middle_slide = n
-        part_scores = []
-        right_part_scores = [0, 0, 0]
-        left_part_scores = [0, 0, 0]
-
-        for i in range(n):
-            part_scores.append([0, 0, 0])
-            for k in range(len(new_label_dict)):
-                if k < beginning_part:
-                    part_scores[-1][0] += info[k][i]
-                elif k < middle_part:
-                    part_scores[-1][1] += info[k][i]
-                else:
-                    part_scores[-1][2] += info[k][i]
-
-            if beginning_part > 0:
-                part_scores[-1][0] /= beginning_part
-            if middle_part - beginning_part > 0:
-                part_scores[-1][1] /= (middle_part - beginning_part)
-            if len(new_label_dict) - middle_part > 0:
-                part_scores[-1][2] /= (len(new_label_dict) - middle_part)
-
-            for k in range(3):
-                right_part_scores[k] += part_scores[-1][k]
-
-        for i in range(n + 1):
-            avg_left_part_scores = [0, 0, 0]
-            avg_right_part_scores = [0, 0, 0]
-            for k in range(3):
-                if i > 0:
-                    avg_left_part_scores[k] = left_part_scores[k] / i
-                if i < n:
-                    avg_right_part_scores[k] = right_part_scores[k] / (n - i)
-            
-            print("\t ->", i)
-            print("Beginning Part: ", round(avg_right_part_scores[0] - avg_left_part_scores[0] , 3))
-            print("Middle Part: ", round(avg_right_part_scores[1] - avg_left_part_scores[1] , 3))
-            print("End: Part", round(avg_right_part_scores[2] - avg_left_part_scores[2], 3))
-            print("")
-
-            if i < n:
-                for k in range(3):
-                    left_part_scores[k] += part_scores[i][k]
-                    right_part_scores[k] -= part_scores[i][k]
+        #     if i < n:
+        #         for k in range(3):
+        #             left_part_scores[k] += part_scores[i][k]
+        #             right_part_scores[k] -= part_scores[i][k]
 
         dp = []
         prevs = []
@@ -305,9 +303,9 @@ def get_outline_strong(label_dict, apply_heuristics, slide_info, top_sections):
                             prevs[-1][-1] = k - 1
                         sum_larger_thans -= larger_thans[k]
 
-            print(label, ":", dp[-1])
-            print(label, ":", prevs[-1])
-            print(label, ":", larger_thans)
+            # print(label, ":", dp[-1])
+            # print(label, ":", prevs[-1])
+            # print(label, ":", larger_thans)
             # if "introduction" in label.lower():
             #     raw_outline.append(1)
             #     for j in range(2, len(transitions) - 1):
@@ -503,7 +501,16 @@ def get_outline_simple(top_sections):
         weights.append(scores[section])
     return outline, weights
 
-def get_outline_generic(outlining_approach, apply_heuristics, slide_info, section_data, top_sections, transitions, target_mask = None):
+def get_outline_generic(
+    outlining_approach,
+    apply_heuristics,
+    slide_info,
+    section_data,
+    top_sections,
+    transitions,
+    target_mask = None,
+    coarse_top_sections = []
+):
     label_dict = sort_section_data(section_data)
     for i, label in enumerate(label_dict):
         print(i, ":", label)
@@ -516,7 +523,7 @@ def get_outline_generic(outlining_approach, apply_heuristics, slide_info, sectio
         }], [-1, 0]
 
     if outlining_approach == 'strong':
-        return get_outline_strong(label_dict, apply_heuristics, slide_info, top_sections)
+        return get_outline_strong(label_dict, apply_heuristics, slide_info, top_sections, coarse_top_sections)
 
     if outlining_approach == 'dp_mask':
         return get_outline_dp_mask(label_dict, apply_heuristics, slide_info, top_sections, target_mask)

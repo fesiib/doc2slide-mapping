@@ -309,6 +309,65 @@ def _evaluate_mapping(outline, gt_outline, top_sections):
             separate_scores[i] = round(100 - (error_separate[i] / total_separate[i]) * 100, 3)
     return score, separate_scores
 
+def _evaluate_mapping_rank(gt_outline, top_sections):
+    '''
+        Calculate our mapping scores against ground truth
+    '''
+
+    gt_section_idx = 0
+
+    total_score = 0
+    error = 0
+
+    total_separate = [0, 0, 0]
+    error_separate = [0, 0, 0]
+
+    for slide_idx, slide_top_sections in enumerate(top_sections):
+        while gt_section_idx < len(gt_outline) and gt_outline[gt_section_idx]["endSlideIndex"] < slide_idx:
+            gt_section_idx += 1
+        if gt_section_idx == len(gt_outline):
+            print("Not all slides are mapped in *ground_truth* outline???")
+            break
+
+        gt_title = gt_outline[gt_section_idx]["sectionTitle"]
+        gt_title = process_title(gt_title)
+
+        ranked_slide_top_sections = sorted(slide_top_sections, key=(lambda x: x[1]), reverse=True)
+        gt_rank = len(ranked_slide_top_sections) - 1
+
+        for i, top_section in enumerate(ranked_slide_top_sections):
+            title = top_section[0]
+            title = process_title(title)
+
+            if are_same_section_titles(title, gt_title):
+                gt_rank = i
+                break
+        
+        # print("Slide: ", slide_idx)
+        # print("\t", gen_title, "-", gen_score)
+        # print("\t", gt_title, "-", gt_score)
+
+        # total_score += gt_score
+        # if gt_score > gen_score:
+        #     error += (gt_score - gen_score)
+        if (len(ranked_slide_top_sections) - 1) > 0:
+            total_score += 1
+            error += gt_rank / (len(ranked_slide_top_sections) - 1)
+            pos = floor(slide_idx / len(top_sections) * 3)
+            total_separate[pos] += 1
+            error_separate[pos] += gt_rank / (len(ranked_slide_top_sections) - 1)
+
+    if total_score == 0:
+        return 0, [0, 0, 0]
+
+    score = round(100 - (error / total_score) * 100, 3)
+    separate_scores = [0, 0, 0]
+
+    for i in range(3):
+        if total_separate[i] > 0:
+            separate_scores[i] = round(100 - (error_separate[i] / total_separate[i]) * 100, 3)
+    return score, separate_scores
+
 def _evaluate_overall(outline, gt_outline, slide_info):
     total_time = 0
     overlapped_time = 0
@@ -389,7 +448,7 @@ def evaluate_outline(outline, gt_outline, slide_info, top_sections):
     (
         mapping_overall,
         mapping_separate,
-    ) = _evaluate_mapping(outline, gt_outline, top_sections)
+    ) = _evaluate_mapping_rank(gt_outline, top_sections)
 
     return {
         "boundariesAccuracy": _evaluate_boundaries(outline, gt_outline),

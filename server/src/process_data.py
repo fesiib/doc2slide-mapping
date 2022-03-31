@@ -46,6 +46,28 @@ def read_txt(path) :
             lines.append(line.strip())
     return lines  
 
+def store_processed_paper_data(path, section_data, paper_data):
+    with open(os.path.join(path, "processedPaperData.json"), "w") as f:
+        json.dump({
+            "sectionData": section_data,
+            "paperData": paper_data,
+        }, fp=f, indent=2)
+
+def get_all_processed_paper_data(parent_path, cur_presentation_id):
+    section_data = []
+    paper_data = []
+    for presentation_id in os.listdir(parent_path):
+        path = os.path.join(parent_path, presentation_id, "processedPaperData.json")
+        if os.path.isfile(path) is False:
+            continue
+        if int(presentation_id) == cur_presentation_id:
+            continue
+        with open(path, "r") as f:
+            json_obj = json.load(f)
+            section_data.extend(json_obj["sectionData"])
+            paper_data.extend(json_obj["paperData"])
+    return section_data, paper_data
+
 def is_section_skipped(section):
     for skipped_section in SKIPPED_SECTIONS:
         if skipped_section in section:
@@ -101,6 +123,20 @@ def fix_section_titles(section_data, paper_data, paper_data_json):
             continue
         ret_section_data.append(rev_mapping[section])
         ret_paper_data.append(paragraph)
+
+    ### Section-level
+    # all_paragraphs_per_section = {}
+
+    # for (section, paragraph) in zip(ret_section_data, ret_paper_data):
+    #     if section not in all_paragraphs_per_section:
+    #         all_paragraphs_per_section[section] = ""
+    #     all_paragraphs_per_section[section] += " " + paragraph
+    
+    # ret_section_data = []
+    # ret_paper_data = []
+
+    # ret_section_data = list(all_paragraphs_per_section.keys())
+    # ret_paper_data = list(all_paragraphs_per_section.values())
 
     return ret_section_data, ret_paper_data
 
@@ -212,13 +248,6 @@ def process(path, presentation_id, similarity_type, similarity_method, outlining
     start_time_stamp = 0
     for i in range(len(timestamp_data)):
         end_time_stamp = timestamp_data[i][1]
-
-        # if i > 1:
-        #     if (start_time_stamp - slide_info[1]["startTime"]) >= 16 * 60:
-        #         break
-        #     if (end_time_stamp - slide_info[1]["startTime"]) >= 16 * 60:
-        #         end_time_stamp = slide_info[1]["startTime"] + (16 * 60) + 1
-
         slide_info.append({
             "index": i,
             "startTime": start_time_stamp,
@@ -233,9 +262,6 @@ def process(path, presentation_id, similarity_type, similarity_method, outlining
     result['metaInfo'] = meta_info
     result['groundTruthOutline'] = gt_data['groundTruthSegments']
 
-    # if presentation_id < 100000:
-    #     return result
-
     paper_data_json = read_json(os.path.join(path, "paperData.json"))
     paper_data = read_txt(os.path.join(path, "paperData.txt"))
     section_data = read_txt(os.path.join(path, "sectionData.txt"))
@@ -244,6 +270,8 @@ def process(path, presentation_id, similarity_type, similarity_method, outlining
     section_data, paper_data = add_sections_as_paragraphs(section_data, paper_data)
 
     section_data, paper_data = fix_section_titles(section_data, paper_data, paper_data_json)
+
+    store_processed_paper_data(path, section_data, paper_data)
 
     slides_segmentation = get_slides_segmentation(path, slide_info)
 
@@ -262,16 +290,18 @@ def process(path, presentation_id, similarity_type, similarity_method, outlining
 
     shrunk_slide_info = shrink_slide_info(slide_info, transitions)
 
+    _coarse_paper_data = []
+    _coarse_script_data = []
+
     _paper_data = []
     _script_data = []
 
+    coarse_script_sentence_range = []
     script_sentence_range = []
     for i in range(len(shrunk_slide_info)):
         script = shrunk_slide_info[i]["script"]
         ocr = shrunk_slide_info[i]["ocrResult"]
         sentences = []
-        # if (len(ret_script_data) > 10):
-        #     break
         if i == 0 or i == len(shrunk_slide_info) - 1:
             sentences = [""]
         elif (similarity_type == "classifier"):
@@ -282,6 +312,15 @@ def process(path, presentation_id, similarity_type, similarity_method, outlining
         script_sentence_range.append(len(sentences))
         _script_data.extend(sentences)
 
+        coarse_sentences = []
+        if i == 0 or i == len(shrunk_slide_info) - 1:
+            coarse_sentences = [""]
+        else:
+            coarse_sentences = [script + " " + ocr]
+        coarse_script_sentence_range.append(len(coarse_sentences))
+        _coarse_script_data.extend(coarse_sentences)
+
+    coarse_paper_sentence_id = []
     paper_sentence_id = []
     for i, paragraph in enumerate(paper_data):
         if (len(word_tokenize(paragraph)) < MIN_PARAGRAPH_LENGTH):
@@ -291,11 +330,30 @@ def process(path, presentation_id, similarity_type, similarity_method, outlining
             paper_sentence_id.append(i)
         _paper_data.extend(sentences)
 
+        coarse_sentences = [paragraph]
+        for j in range(len(_coarse_paper_data), len(coarse_sentences) + len(_coarse_paper_data)):
+            coarse_paper_sentence_id.append(i)
+        _coarse_paper_data.extend(sentences)
+
+    
+    
+    # other_section_data, other_paper_data = get_all_processed_paper_data(parent_path, presentation_id)
+
+    # for i, paragraph in enumerate(other_paper_data):
+    #     if (len(word_tokenize(paragraph)) < MIN_PARAGRAPH_LENGTH):
+    #         continue
+    #     #sentences = get_sentences(paragraph)
+    #     sentences = [paragraph]
+    #     _paper_data.extend(sentences)
+    # print("Sentences# {} Paragraphs# {} Other# {}".format(len(_paper_data), len(paper_data), len(other_paper_data)))
+    
+
     print("Sentences# {} Paragraphs# {}".format(len(_paper_data), len(paper_data)))
     print("Sentences# {} Scripts# {}".format(len(_script_data), len(shrunk_slide_info)))
 
-    print(len(shrunk_slide_info))
-    print(len(slide_info))
+
+    print("Coarse Sentences# {} Paragraphs# {}".format(len(_coarse_paper_data), len(paper_data)))
+    print("Coarse Sentences# {} Scripts# {}".format(len(_coarse_script_data), len(shrunk_slide_info)))
 
     if similarity_type == 'keywords':
         overall, top_sections, paper_keywords, script_keywords = get_keywords_similarity(similarity_method,
@@ -303,7 +361,14 @@ def process(path, presentation_id, similarity_type, similarity_method, outlining
             freq_words_per_section,
             apply_thresholding
         )
-        outline, weights = get_outline_generic(outlining_approach, apply_heuristics, shrunk_slide_info, section_data, top_sections, transitions)
+        outline, weights = get_outline_generic(
+            outlining_approach,
+            apply_heuristics,
+            shrunk_slide_info,
+            section_data,
+            top_sections,
+            transitions
+        )
         expanded_top_sections = expand_top_sections(top_sections, shrunk_slide_info)
         result['topSections'] = expanded_top_sections
         result['outline'] = outline
@@ -316,7 +381,14 @@ def process(path, presentation_id, similarity_type, similarity_method, outlining
             _paper_data, _script_data, section_data, paper_sentence_id, script_sentence_range, transitions,
             freq_words_per_section
         )
-        outline, weights = get_outline_generic(outlining_approach, apply_heuristics, shrunk_slide_info, section_data, top_sections, transitions)
+        outline, weights = get_outline_generic(
+            outlining_approach,
+            apply_heuristics,
+            shrunk_slide_info,
+            section_data,
+            top_sections,
+            transitions
+        )
 
         expanded_top_sections = expand_top_sections(top_sections, shrunk_slide_info)
         print(len(top_sections), len(expanded_top_sections))
@@ -332,9 +404,25 @@ def process(path, presentation_id, similarity_type, similarity_method, outlining
             freq_words_per_section,
             apply_thresholding
         )
-        outline, weights = get_outline_generic(outlining_approach, apply_heuristics, shrunk_slide_info, section_data, top_sections, transitions)
+
+        # coarse_overall, coarse_top_sections = get_cosine_similarity(similarity_method,
+        #     _coarse_paper_data, _coarse_script_data, section_data, coarse_paper_sentence_id, coarse_script_sentence_range,
+        #     freq_words_per_section,
+        #     apply_thresholding
+        # )
+
+        outline, weights = get_outline_generic(
+            outlining_approach,
+            apply_heuristics,
+            shrunk_slide_info,
+            section_data,
+            top_sections,
+            transitions,
+            coarse_top_sections=[]
+        )
 
         expanded_top_sections = expand_top_sections(top_sections, shrunk_slide_info)
+        #expaned_coarse_top_sections = expand_top_sections(coarse_top_sections, shrunk_slide_info)
         result['topSections'] = expanded_top_sections
         result['outline'] = outline
         result['weights'] = weights
@@ -347,7 +435,14 @@ def process(path, presentation_id, similarity_type, similarity_method, outlining
             freq_words_per_section,
             apply_thresholding,
         )
-        outline, weights = get_outline_generic(outlining_approach, apply_heuristics, shrunk_slide_info, section_data, top_sections, transitions)
+        outline, weights = get_outline_generic(
+            outlining_approach,
+            apply_heuristics,
+            shrunk_slide_info,
+            section_data,
+            top_sections,
+            transitions
+        )
         
         expanded_top_sections = expand_top_sections(top_sections, shrunk_slide_info)
         result['topSections'] = expanded_top_sections
@@ -443,7 +538,7 @@ if __name__ == "__main__":
     #output = process('slideMeta/slideData/90', 90, similarity_type="cosine", similarity_method="embedding", outlining_approach="strong", apply_thresholding=False, apply_heuristics=True)
     #output = process('slideMeta/slideData/13', 13, similarity_type="strong", similarity_method="tf-idf", outlining_approach="strong", apply_thresholding=False, apply_heuristics=False)
     #output = process('slideMeta/slideData/477', 477, similarity_type="cosine", similarity_method="tf-idf", outlining_approach="strong", apply_thresholding=False, apply_heuristics=False)
-    output = process('slideMeta/slideData/674', 674, similarity_type="cosine", similarity_method="tf-idf", outlining_approach="strong", apply_thresholding=False, apply_heuristics=False)
+    output = process('slideMeta/slideData/689', 689, similarity_type="cosine", similarity_method="tf-idf", outlining_approach="strong", apply_thresholding=False, apply_heuristics=False)
     #output = process('slideMeta/slideData/477', 477, similarity_type="strong", similarity_method="tf-idf", outlining_approach="strong", apply_thresholding=False, apply_heuristics=False)
     
     #output = process('slideMeta/slideData/106', 106, similarity_type="cosine", similarity_method="tf-idf", outlining_approach="strong", apply_thresholding=False, apply_heuristics=False)

@@ -93,11 +93,13 @@ def get_top_sections(overall, section_data, script_sentence_range, paper_sentenc
 
     script_sentence_start = 0
 
+    cur_paper_data_sz = len(paper_sentence_id)
+
     for i in range(len(script_sentence_range)):
         all_scores_per_paragraph = [[] for i in range(paper_sentence_id[-1] + 1)]
         section_scores = numpy.zeros(len(section_data), dtype=numpy.float64)
         for j in range(script_sentence_start, script_sentence_start + script_sentence_range[i]):
-            args = numpy.argsort(overall[:, j])
+            args = numpy.argsort(overall[:cur_paper_data_sz, j])
             if apply_thresholding is True:
                 args = args[-top_k:]
             for pos in args:
@@ -266,45 +268,45 @@ def get_cosine_similarity(
 
     top_sections = get_top_sections(overall, section_data, script_sentence_range, paper_sentence_id, apply_thresholding, top_k)
 
-    script_start = 0
+    # script_start = 0
 
-    for slide_idx in range(len(top_sections)):
-        script_end = script_start + script_sentence_range[slide_idx]
-        for top_section_idx, top_section in enumerate(top_sections[slide_idx]):
-            improvements = 0
-            title = top_section[0]
-            rep_title = None
-            for freq_titles in FREQ_WORDS_SECTION_TITLES:
-                for freq_title in freq_titles:
-                    if freq_title.lower() in title.lower():
-                        rep_title = freq_titles[0]
-                        break
-                if rep_title is not None:
-                    break
-            if rep_title is None or FREQ_WORDS_SECTION_TITLES[0][0] == rep_title:
-                continue
-            for str_ngram in freq_words_per_section.keys():
-                ngram = int(str_ngram)
-                if ngram < 2:
-                    continue
-                total_ratios = 0
-                total_freqs = 0
-                for freq_entity in freq_words_per_section[str_ngram][rep_title]:
-                    text = freq_entity["text"]
-                    paper_ratio = freq_entity["ratio"]
-                    corpus_freq = freq_entity["count"]
+    # for slide_idx in range(len(top_sections)):
+    #     script_end = script_start + script_sentence_range[slide_idx]
+    #     for top_section_idx, top_section in enumerate(top_sections[slide_idx]):
+    #         improvements = 0
+    #         title = top_section[0]
+    #         rep_title = None
+    #         for freq_titles in FREQ_WORDS_SECTION_TITLES:
+    #             for freq_title in freq_titles:
+    #                 if freq_title.lower() in title.lower():
+    #                     rep_title = freq_titles[0]
+    #                     break
+    #             if rep_title is not None:
+    #                 break
+    #         if rep_title is None or FREQ_WORDS_SECTION_TITLES[0][0] == rep_title:
+    #             continue
+    #         for str_ngram in freq_words_per_section.keys():
+    #             ngram = int(str_ngram)
+    #             if ngram < 2:
+    #                 continue
+    #             total_ratios = 0
+    #             total_freqs = 0
+    #             for freq_entity in freq_words_per_section[str_ngram][rep_title]:
+    #                 text = freq_entity["text"]
+    #                 paper_ratio = freq_entity["ratio"]
+    #                 corpus_freq = freq_entity["count"]
 
-                    if paper_ratio == 1:
-                        paper_ratio = 10
-                    for script_idx in range(script_start, script_end):
-                        if text in script_data[script_idx]:
-                            total_ratios += paper_ratio
-                            total_freqs += corpus_freq
-                #top_sections[slide_idx][top_section_idx] = (top_section[0], top_section[1] + ngram * total_ratios)
-                improvements += ngram * total_ratios
-            if improvements > 0:
-                print(slide_idx, top_section[0], ":", round(top_section[1], 2), round(improvements, 2))
-        script_start = script_end
+    #                 if paper_ratio == 1:
+    #                     paper_ratio = 10
+    #                 for script_idx in range(script_start, script_end):
+    #                     if text in script_data[script_idx]:
+    #                         total_ratios += paper_ratio
+    #                         total_freqs += corpus_freq
+    #             #top_sections[slide_idx][top_section_idx] = (top_section[0], top_section[1] + ngram * total_ratios)
+    #             improvements += ngram * total_ratios
+    #         if improvements > 0:
+    #             print(slide_idx, top_section[0], ":", round(top_section[1], 2), round(improvements, 2))
+    #     script_start = script_end
     return overall, top_sections
 
 
