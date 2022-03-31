@@ -11,6 +11,7 @@ FREQ_WORDS_SECTION_TITLES = [
     ['Conclusion'],
 ]
 
+SECTION_TITLE_MARKER = "**** "
 
 def sort_section_data(section_data):
     label_list = sorted(list(set(section_data)))

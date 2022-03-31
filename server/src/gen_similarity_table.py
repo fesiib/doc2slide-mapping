@@ -12,7 +12,7 @@ from sklearn.metrics.pairwise import cosine_similarity
 
 from string import ascii_lowercase, punctuation, digits
 
-from __init__ import sort_section_data, FREQ_WORDS_SECTION_TITLES
+from __init__ import SECTION_TITLE_MARKER, sort_section_data, FREQ_WORDS_SECTION_TITLES
 
 class Vectorizer(object):
     def __init__(self, method='tf-idf', ngram_range=(1, 4)):
@@ -108,6 +108,10 @@ def get_top_sections(overall, section_data, script_sentence_range, paper_sentenc
                 # OCR Result
                 if j == script_sentence_start + script_sentence_range[i] - 1:
                     score_to_add *= 2
+                
+                if pos == 0 or section_data[paper_sentence_id[pos - 1]] != section_data[paper_sentence_id[pos]]:
+                    score_to_add *= 2
+
                 all_scores_per_paragraph[paper_sentence_id[pos]].append(score_to_add)
                 #section_scores[paper_sentence_id[pos]] = max(score_to_add, section_scores[paper_sentence_id[pos]])
         
@@ -268,12 +272,19 @@ def get_cosine_similarity(
 
     top_sections = get_top_sections(overall, section_data, script_sentence_range, paper_sentence_id, apply_thresholding, top_k)
 
+    for pos in range(len(paper_data)):
+        if pos == 0 or section_data[paper_sentence_id[pos - 1]] != section_data[paper_sentence_id[pos]]:
+            if paper_data[pos].startswith(SECTION_TITLE_MARKER) is False:
+                print("\tWRONG!!! ", paper_data[pos])
+
     # script_start = 0
 
     # for slide_idx in range(len(top_sections)):
     #     script_end = script_start + script_sentence_range[slide_idx]
+
+    #     per_top_section = []
+
     #     for top_section_idx, top_section in enumerate(top_sections[slide_idx]):
-    #         improvements = 0
     #         title = top_section[0]
     #         rep_title = None
     #         for freq_titles in FREQ_WORDS_SECTION_TITLES:
@@ -283,14 +294,18 @@ def get_cosine_similarity(
     #                     break
     #             if rep_title is not None:
     #                 break
-    #         if rep_title is None or FREQ_WORDS_SECTION_TITLES[0][0] == rep_title:
+    #         if rep_title is None:
     #             continue
+    #         # if FREQ_WORDS_SECTION_TITLES[0][0] == rep_title:
+    #         #     continue
+    #         per_top_section.append([])
     #         for str_ngram in freq_words_per_section.keys():
     #             ngram = int(str_ngram)
     #             if ngram < 2:
     #                 continue
     #             total_ratios = 0
     #             total_freqs = 0
+    #             texts = []
     #             for freq_entity in freq_words_per_section[str_ngram][rep_title]:
     #                 text = freq_entity["text"]
     #                 paper_ratio = freq_entity["ratio"]
@@ -300,12 +315,13 @@ def get_cosine_similarity(
     #                     paper_ratio = 10
     #                 for script_idx in range(script_start, script_end):
     #                     if text in script_data[script_idx]:
+    #                         texts.append(text)
     #                         total_ratios += paper_ratio
     #                         total_freqs += corpus_freq
+    #             if len(texts) > 0:
+    #                 per_top_section[-1].append((ngram, texts, total_ratios, total_freqs))
     #             #top_sections[slide_idx][top_section_idx] = (top_section[0], top_section[1] + ngram * total_ratios)
-    #             improvements += ngram * total_ratios
-    #         if improvements > 0:
-    #             print(slide_idx, top_section[0], ":", round(top_section[1], 2), round(improvements, 2))
+    #         print(slide_idx, top_section[0], ":", round(top_section[1], 2), per_top_section[-1])
     #     script_start = script_end
     return overall, top_sections
 

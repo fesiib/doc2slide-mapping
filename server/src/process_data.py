@@ -24,7 +24,7 @@ from annotation import scan_annotations, read_json
 
 from slides_segmentation import get_slides_segmentation
 
-from __init__ import sort_section_data
+from __init__ import sort_section_data, SECTION_TITLE_MARKER
 
 SKIPPED_SECTIONS = [
     "CCS CONCEPTS",
@@ -34,7 +34,6 @@ SKIPPED_SECTIONS = [
     "ACKNOWLEDGMENTS"
 ]
 MIN_PARAGRAPH_LENGTH = 10
-
     
 def read_txt(path) :
     lines = []
@@ -81,7 +80,7 @@ def add_sections_as_paragraphs(section_data, paper_data):
     for i in range(0, len(section_data)):
         if i == 0 or section_data[i] != section_data[i - 1]:
             ret_section_data.append(section_data[i])
-            ret_paper_data.append(section_data[i] + ".")
+            ret_paper_data.append(SECTION_TITLE_MARKER + section_data[i] + ".")
 
         ret_section_data.append(section_data[i])
         ret_paper_data.append(paper_data[i])
@@ -324,7 +323,8 @@ def process(path, presentation_id, similarity_type, similarity_method, outlining
     paper_sentence_id = []
     for i, paragraph in enumerate(paper_data):
         if (len(word_tokenize(paragraph)) < MIN_PARAGRAPH_LENGTH):
-            continue
+            if paragraph.startswith(SECTION_TITLE_MARKER) is False:
+                continue
         sentences = get_sentences(paragraph)
         for j in range(len(_paper_data), len(sentences) + len(_paper_data)):
             paper_sentence_id.append(i)
