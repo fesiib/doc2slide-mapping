@@ -2,18 +2,14 @@ import json
 import os
 import sys
 import numpy
+import spacy
 
 from string import digits
-
-from nltk.tokenize import word_tokenize
-
-import nltk
-nltk.download('punkt')
 
 sys.path.insert(0, '../')
 
 from gen_similarity_table import \
-    get_sentences, get_classifier_similarity,\
+    get_keywords, get_sentences, get_classifier_similarity,\
     get_cosine_similarity, get_keywords_similarity, get_strong_similarity
 
 from gen_outline import get_outline_generic
@@ -34,6 +30,8 @@ SKIPPED_SECTIONS = [
     "ACKNOWLEDGMENTS"
 ]
 MIN_PARAGRAPH_LENGTH = 10
+
+spacy_nlp = spacy.load("en_core_web_sm")
     
 def read_txt(path) :
     lines = []
@@ -47,8 +45,8 @@ def read_txt(path) :
 
 def store_processed_paper_data(path, section_data, paper_data):
     visualList = []
-    for section, paper in zip(section_data, paper_data):
-        visualList.append(section + " --> " + paper)
+    # for section, paper in zip(section_data, paper_data):
+    #     visualList.append(section + " --> " + paper)
 
     with open(os.path.join(path, "processedPaperData.json"), "w") as f:
         json.dump({
@@ -120,28 +118,42 @@ def get_section_paper_data(paper_data_json, toc_json):
                 if toc_idx >= len(toc):
                     continue
                 main_title = toc[toc_idx]["title"]
+                print(main_title)
                 if  main_title[0] not in digits or is_section_skipped(main_title) or "paragraphs" not in section:
                     continue
+                all_text = title
                 for paragraph in section["paragraphs"]:
                     if "text" not in paragraph:
                         continue
-                    text = paragraph["text"].strip()
-                    if (len(word_tokenize(text)) < MIN_PARAGRAPH_LENGTH):
-                        continue
-                    ret_section_data.append(main_title)
-                    ret_paper_data.append(text)
+                    all_text += " " + paragraph["text"].strip()
+                all_text = all_text.strip()
+                # sentences = get_sentences(all_text)
 
-    main_titles = sort_section_data(ret_section_data)
-    last_main_title = None
-    for i in range(len(toc)):
-        if toc[i]["level"] == 1:
-            if toc[i]["title"] in main_titles:
-                last_main_title = toc[i]["title"]
-            else:
-                last_main_title = None
-        if last_main_title is not None:
-            ret_section_data.append(last_main_title)
-            ret_paper_data.append(toc[i]["title"])
+                # fixed_text = ""
+                # for sentence in sentences:
+                #     # keywords = get_keywords(sentence.strip(), spacy_nlp)
+                #     # print(sentence)
+                #     # print("\t", keywords)
+                #     # if len(keywords) == 0:
+                #     #     print("Skipped: ", sentence)
+                #     #     continue
+                #     fixed_text += sentence.strip() + " "
+                fixed_text = all_text.strip()
+                if len(fixed_text) > 0:
+                    ret_section_data.append(main_title)
+                    ret_paper_data.append(fixed_text)
+
+    # main_titles = sort_section_data(ret_section_data)
+    # last_main_title = None
+    # for i in range(len(toc)):
+    #     if toc[i]["level"] == 1:
+    #         if toc[i]["title"] in main_titles:
+    #             last_main_title = toc[i]["title"]
+    #         else:
+    #             last_main_title = None
+    #     if last_main_title is not None:
+    #         ret_section_data.append(last_main_title)
+    #         ret_paper_data.append(SECTION_TITLE_MARKER + toc[i]["title"])
     return ret_section_data, ret_paper_data
 
 def fix_section_titles(section_data, paper_data, paper_data_json):
@@ -420,7 +432,8 @@ def process(path, presentation_id, similarity_type, similarity_method, outlining
     print("Coarse Sentences# {} Scripts# {}".format(len(_coarse_script_data), len(shrunk_slide_info)))
 
     if similarity_type == 'keywords':
-        overall, top_sections, paper_keywords, script_keywords = get_keywords_similarity(similarity_method,
+        overall, top_sections, paper_keywords, script_keywords = get_keywords_similarity(
+            similarity_method, spacy_nlp,
             _paper_data, _script_data, section_data, paper_sentence_id, script_sentence_range,
             freq_words_per_section,
             apply_thresholding
@@ -441,7 +454,8 @@ def process(path, presentation_id, similarity_type, similarity_method, outlining
         result["scriptSentences"] = script_keywords
         result["paperSentences"] = paper_keywords
     elif similarity_type == 'strong':
-        overall, top_sections, paper_keywords, script_keywords = get_strong_similarity(similarity_method,
+        overall, top_sections, paper_keywords, script_keywords = get_strong_similarity(
+            similarity_method, spacy_nlp,
             _paper_data, _script_data, section_data, paper_sentence_id, script_sentence_range, transitions,
             freq_words_per_section
         )
@@ -598,7 +612,7 @@ if __name__ == "__main__":
     #output = process('slideMeta/slideData2/90', 90, similarity_type="cosine", similarity_method="embedding", outlining_approach="strong", apply_thresholding=False, apply_heuristics=True)
     #output = process('slideMeta/slideData2/13', 13, similarity_type="strong", similarity_method="tf-idf", outlining_approach="strong", apply_thresholding=False, apply_heuristics=False)
     #output = process('slideMeta/slideData2/477', 477, similarity_type="cosine", similarity_method="tf-idf", outlining_approach="strong", apply_thresholding=False, apply_heuristics=False)
-    output = process('slideMeta/slideData2/307', 307, similarity_type="cosine", similarity_method="tf-idf", outlining_approach="strong", apply_thresholding=False, apply_heuristics=False)
+    output = process('slideMeta/slideData/1', 1, similarity_type="cosine", similarity_method="tf-idf", outlining_approach="strong", apply_thresholding=False, apply_heuristics=False)
     #output = process('slideMeta/slideData2/477', 477, similarity_type="strong", similarity_method="tf-idf", outlining_approach="strong", apply_thresholding=False, apply_heuristics=False)
     
     #output = process('slideMeta/slideData2/106', 106, similarity_type="cosine", similarity_method="tf-idf", outlining_approach="strong", apply_thresholding=False, apply_heuristics=False)

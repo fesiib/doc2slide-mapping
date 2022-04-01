@@ -71,7 +71,7 @@ function AllOutlines(props) {
             ...SHORT_PRESENTATION_IDS
         ];
         for (let presentationId of presentationIds) {
-            requests.push(axios.post('http://server.hyungyu.com:9382/mapping/presentation_data_specific', {
+            requests.push(axios.post('http://server.hyungyu.com:7777/mapping/presentation_data_specific', {
                 presentationId: presentationId,
                 similarityType: similarityType,
                 similarityMethod: similarityMethod,

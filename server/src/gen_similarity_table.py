@@ -15,7 +15,7 @@ from string import ascii_lowercase, punctuation, digits
 from __init__ import SECTION_TITLE_MARKER, sort_section_data, FREQ_WORDS_SECTION_TITLES
 
 class Vectorizer(object):
-    def __init__(self, method='tf-idf', ngram_range=(1, 4)):
+    def __init__(self, method='tf-idf', ngram_range=(1, 5)):
         self.method = method
         self.vectorizer = None
 
@@ -107,11 +107,11 @@ def get_top_sections(overall, paper_data, section_data, script_sentence_range, p
 
                 # OCR Result
                 if j == script_sentence_start + script_sentence_range[i] - 1:
-                    score_to_add *= 2
+                    score_to_add *= 1.95
                 
                 # Paper Section Title
-                if paper_data[pos].startswith(SECTION_TITLE_MARKER):
-                    score_to_add *= 2
+                if paper_data[pos].startswith(SECTION_TITLE_MARKER) and score_to_add > 0:
+                    score_to_add *= 1
 
                 all_scores_per_paragraph[paper_sentence_id[pos]].append(score_to_add)
                 #section_scores[paper_sentence_id[pos]] = max(score_to_add, section_scores[paper_sentence_id[pos]])
@@ -323,12 +323,11 @@ def get_cosine_similarity(
 
 
 def get_keywords_similarity(
-    method,
+    method, nlp,
     paper_data, script_data, section_data, paper_sentence_id, script_sentence_range,
     freq_words_per_section,
     apply_thresholding
 ):
-    nlp = spacy.load("en_core_web_sm")
     vectorizer = Vectorizer(method, (1, 1))
 
     overall = numpy.zeros((len(paper_data), len(script_data)))
@@ -398,11 +397,10 @@ def get_keywords_similarity(
     return overall, top_sections, paper_keywords, script_keywords
 
 def get_strong_similarity(
-    method,
+    method, nlp,
     paper_data, script_data, section_data, paper_sentence_id, script_sentence_range, transitions,
     freq_words_per_section
 ):
-    nlp = spacy.load("en_core_web_sm")
     vectorizer = Vectorizer(method, (1, 1))
 
     overall = numpy.zeros((len(paper_data), len(script_data)))

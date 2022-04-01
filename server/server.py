@@ -1,6 +1,5 @@
 import os
 import sys
-from xml.etree.ElementTree import QName
 
 from src.annotation import scan_annotations
 
@@ -8,18 +7,19 @@ from src.annotation import scan_annotations
 sys.path.insert(0, './src/')
 
 import json
+import pandas as pd
+from pathlib import Path
+
+import waitress
+
 from flask import Flask
 from flask_cors import CORS
 from flask import request, send_file
 
-import pandas as pd
-
 from process_data import process, read_txt
 from annotation import read_json
 
-from pathlib import Path
-
-SLIDE_DATA_PATH = "./slideMeta/slideData2"
+SLIDE_DATA_PATH = "./slideMeta/slideData"
 ZIP_SLIDE_DATA_PATH = "./slideMeta/slideData.zip"
 
 USE_SAVED = True
@@ -415,4 +415,5 @@ def fix_presentation_ids():
 if __name__ == "__main__":
     clear_results()
     #fix_presentation_ids()
-    app.run(host='0.0.0.0', port=9382)
+    #app.run(host='0.0.0.0', port=7777)
+    waitress.serve(app, host='0.0.0.0', port=7777)

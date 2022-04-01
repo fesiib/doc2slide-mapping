@@ -1,4 +1,4 @@
-from math import floor
+from math import ceil, floor
 from __init__ import BEG_PART, FREQ_WORDS_SECTION_TITLES, MID_PART, sort_section_data
 
 
@@ -102,7 +102,7 @@ def get_outline_dp(label_dict, top_sections, slide_info):
     return outline, weights
 
 def get_outline_strong(label_dict, apply_heuristics, slide_info, top_sections, coarse_top_sections):
-    vicinity_sections = floor(len(label_dict) / 2) + 1
+    vicinity_sections = ceil(len(label_dict) / 2)
     title_slide = 1
     end_slide = len(slide_info) - 1
 
@@ -259,21 +259,18 @@ def get_outline_strong(label_dict, apply_heuristics, slide_info, top_sections, c
             larger_thans = [0]
             for j in range(1, n):
                 larger_thans.append(0)
-                if i < beginning_part:
-                    if j > n / 2:
-                        dp[-1].append(0)
-                        prevs[-1].append(0)
-                        continue
-                if i < middle_part:
-                    if j < 2:
-                        dp[-1].append(0)
-                        prevs[-1].append(0)
-                        continue
-                if i >= middle_part:
-                    if j < n / 2:
-                        dp[-1].append(0)
-                        prevs[-1].append(0)
-                        continue
+                # if i < beginning_part and j > n / 1.5:
+                #     dp[-1].append(0)
+                #     prevs[-1].append(0)
+                #     continue
+                # if i >= beginning_part and i < middle_part and j < 2:
+                #     dp[-1].append(0)
+                #     prevs[-1].append(0)
+                #     continue
+                # if i >= middle_part and j < n / 3:
+                #     dp[-1].append(0)
+                #     prevs[-1].append(0)
+                #     continue
 
                 l = max(0, i + 1)
                 r = min(len(new_label_dict), i + vicinity_sections + 1)
@@ -285,7 +282,7 @@ def get_outline_strong(label_dict, apply_heuristics, slide_info, top_sections, c
                         continue
                     # if info[i][j] >= info[k][j] - ((k - i) / len(new_label_dict)):
                     #     larger_thans[-1] += 1
-                    if info[i][j] >= info[k][j]:
+                    if info[i][j] > info[k][j]:
                         larger_thans[-1] += 1
                 
                 dp[-1].append(dp[-1][-1] + larger_thans[-1])
