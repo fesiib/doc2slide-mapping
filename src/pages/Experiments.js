@@ -1,16 +1,26 @@
 import axios from 'axios';
 import { useEffect, useState } from "react";
+import { useDispatch, useSelector } from 'react-redux';
+import LineChart from '../components/LineChart';
 import SlideThumbnails from '../components/SlideThumbnails';
+import { alterState } from '../reducers/experimentsState';
 
-const INTERVAL = 7;
+const INTERVAL = 30;
 const SHORT_PRESENTATION_IDS_CNT = 745;
 const LONG_PRESENTATION_IDS_CNT = 172;
 
 function Experiments() {
+    const dispatch = useDispatch();
     const [allPresentations, setAllPresentations] = useState([])
     const [showAllSlides, setShowAllSlides] = useState(false);
     const [startPresentationId, setStartPresentationId] = useState(0);
     const [endPresentationId, setEndPresentationId] = useState(INTERVAL);
+
+    const { presentationExcluded } = useSelector(state => state.experimentsState);
+
+    const _alterState = (presentationId) => {
+        dispatch(alterState(presentationId));
+    }
 
     useEffect(() => {
         let presentationIds = []
@@ -86,6 +96,29 @@ function Experiments() {
                     outline={data?.outline}
                     slidesSegmentation={data?.slidesSegmentation}
                 />
+                {
+                    presentationExcluded[presentationId] ? 
+                        (<button
+                            style={{
+                                backgroundColor: "green",
+                                color: "white"
+                            }}
+                            onClick={(event) => _alterState(presentationId)}
+                        > Include </button>)
+                        :
+                        (<button
+                            style={{
+                                backgroundColor: "red",
+                                color: "white"
+                            }}
+                            onClick={(event) => _alterState(presentationId)}
+                        > Exclude </button>)
+                }
+                <LineChart
+                    data={data?.frameChanges}
+                    width={1200}
+                    height={300}
+                />
             </div>
         })
     }
@@ -157,6 +190,23 @@ function Experiments() {
                 value={showAllSlides}
                 onChange={(event) => setShowAllSlides(event.target.checked)}
             />
+            {
+                showAllSlides ?
+                <div style={{
+                    margin: "2em"
+                }}>
+                    <code> "excludedPresentationIds": {
+                        Object.keys(presentationExcluded).map((val, idx) => {
+                            if (presentationExcluded[val]) {
+                                return idx + ", ";
+                            }
+                            return "";
+                        })
+                    } </code>
+                </div>
+                :
+                null
+            }
         </div>
         {
             showAllSlides ?

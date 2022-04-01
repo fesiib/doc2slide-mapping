@@ -165,8 +165,8 @@ def get_outline_strong(label_dict, apply_heuristics, slide_info, top_sections, c
         if is_end:
             middle_part = i
             break
-    
-    print("BOUNDARIES: ", label_dict[beginning_part - 1], label_dict[middle_part])
+    if beginning_part > 0 and middle_part < len(label_dict):
+        print("BOUNDARIES: ", label_dict[beginning_part - 1], label_dict[middle_part])
 
     with open("./experiments.csv", "w") as f:
         print("title", end=",", file=f)

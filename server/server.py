@@ -66,6 +66,8 @@ def __filter_data(data):
         data["evaluationData"] = []
     if "slidesSegmentation" not in data:
         data["slidesSegmentation"] = []
+    if "frameChanges" not in data:
+        data["frameChanges"] = []
     return {
         "slideCnt": data["slideCnt"],
         "metaInfo": data["metaInfo"],
@@ -73,8 +75,8 @@ def __filter_data(data):
         "outline": data["outline"],
         "sectionTitles": data["sectionTitles"],
         "evaluationData": data["evaluationData"],
-        "slidesSegmentation": data["slidesSegmentation"]
-
+        "slidesSegmentation": data["slidesSegmentation"],
+        "frameChanges": data["frameChanges"]
     }
 def __process_presentation(
     presentation_id,
@@ -111,9 +113,9 @@ def __process_presentation(
     }
 
 def __presentation_data(presentation_id):
-    similarity_type = "classifier"
+    similarity_type = "cosine"
     similarity_method = "tf-idf"
-    outlining_approach = "dp_mask"
+    outlining_approach = "strong"
     apply_thresholding = False
     apply_heuristics = True
 

@@ -177,6 +177,10 @@ def process(path, presentation_id, similarity_type, similarity_method, outlining
     parent_path = '/'.join(path.split('/')[:-1])
     freq_words_per_section = read_json(os.path.join(parent_path, "freqWordsPerSection.json"))
     
+    frame_changes = []
+    if os.path.join(path, "frameChanges.json"):
+        json_obj = read_json(os.path.join(path, "frameChanges.json"))
+        frame_changes = json_obj["frameChanges"]
     timestamp = open(os.path.join(path, "frameTimestamp.txt"), "r")
 
     timestamp_data = []
@@ -260,6 +264,7 @@ def process(path, presentation_id, similarity_type, similarity_method, outlining
     result['slideCnt'] = len(slide_info)
     result['metaInfo'] = meta_info
     result['groundTruthOutline'] = gt_data['groundTruthSegments']
+    result['frameChanges'] = frame_changes
 
     paper_data_json = read_json(os.path.join(path, "paperData.json"))
     paper_data = read_txt(os.path.join(path, "paperData.txt"))

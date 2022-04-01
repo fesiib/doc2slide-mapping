@@ -2,11 +2,13 @@ import {combineReducers} from 'redux';
 import storage from 'redux-persist/lib/storage';
 
 import annotationState from './annotationState';
+import experimentsState from "./experimentsState";
 
 const RESET_APP = "RESET_APP";
 
 const appReducer = combineReducers({
     annotationState,
+    experimentsState,
 });
 
 export const resetApp = () => ({
