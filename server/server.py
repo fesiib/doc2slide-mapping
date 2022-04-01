@@ -19,7 +19,7 @@ from annotation import read_json
 
 from pathlib import Path
 
-SLIDE_DATA_PATH = "./slideMeta/slideData"
+SLIDE_DATA_PATH = "./slideMeta/slideData2"
 ZIP_SLIDE_DATA_PATH = "./slideMeta/slideData.zip"
 
 USE_SAVED = True
@@ -415,4 +415,4 @@ def fix_presentation_ids():
 if __name__ == "__main__":
     clear_results()
     #fix_presentation_ids()
-    app.run(host='0.0.0.0', port=7777)
+    app.run(host='0.0.0.0', port=9382)

@@ -46,8 +46,13 @@ def read_txt(path) :
     return lines  
 
 def store_processed_paper_data(path, section_data, paper_data):
+    visualList = []
+    for section, paper in zip(section_data, paper_data):
+        visualList.append(section + " --> " + paper)
+
     with open(os.path.join(path, "processedPaperData.json"), "w") as f:
         json.dump({
+            "visualList": visualList,
             "sectionData": section_data,
             "paperData": paper_data,
         }, fp=f, indent=2)
@@ -80,10 +85,63 @@ def add_sections_as_paragraphs(section_data, paper_data):
     for i in range(0, len(section_data)):
         if i == 0 or section_data[i] != section_data[i - 1]:
             ret_section_data.append(section_data[i])
-            #ret_paper_data.append(SECTION_TITLE_MARKER + section_data[i] + ".")
-            ret_paper_data.append(section_data[i] + ".")
+            ret_paper_data.append(SECTION_TITLE_MARKER + section_data[i])
+            #ret_paper_data.append(section_data[i] + ".")
         ret_section_data.append(section_data[i])
         ret_paper_data.append(paper_data[i])
+    return ret_section_data, ret_paper_data
+
+def get_section_paper_data(paper_data_json, toc_json):
+    ret_section_data = []
+    ret_paper_data = []
+
+    toc = toc_json["toc"]
+
+    for i in range(len(toc)):
+        toc[i]["title"] = toc[i]["title"].strip().upper()
+
+    toc_idx = 0
+    while (toc_idx < len(toc) and toc[toc_idx]["level"] != 1):
+        toc_idx += 1
+    
+
+    if "sections" in paper_data_json:
+        for section in paper_data_json["sections"]:
+            if "title" in section and "text" in section["title"]:
+                title = section["title"]["text"].strip()
+                main_toc_idx = toc_idx
+                for i in range(toc_idx, len(toc)):
+                    if toc[i]["level"] == 1:
+                        main_toc_idx = i
+                    if title.lower().replace(" ", "") in toc[i]["title"].lower().replace(" ", ""):
+                        toc_idx = main_toc_idx
+                        break
+
+                if toc_idx >= len(toc):
+                    continue
+                main_title = toc[toc_idx]["title"]
+                if  main_title[0] not in digits or is_section_skipped(main_title) or "paragraphs" not in section:
+                    continue
+                for paragraph in section["paragraphs"]:
+                    if "text" not in paragraph:
+                        continue
+                    text = paragraph["text"].strip()
+                    if (len(word_tokenize(text)) < MIN_PARAGRAPH_LENGTH):
+                        continue
+                    ret_section_data.append(main_title)
+                    ret_paper_data.append(text)
+
+    main_titles = sort_section_data(ret_section_data)
+    last_main_title = None
+    for i in range(len(toc)):
+        if toc[i]["level"] == 1:
+            if toc[i]["title"] in main_titles:
+                last_main_title = toc[i]["title"]
+            else:
+                last_main_title = None
+        if last_main_title is not None:
+            ret_section_data.append(last_main_title)
+            ret_paper_data.append(toc[i]["title"])
     return ret_section_data, ret_paper_data
 
 def fix_section_titles(section_data, paper_data, paper_data_json):
@@ -208,7 +266,7 @@ def process(path, presentation_id, similarity_type, similarity_method, outlining
 
     while True :
         line = timestamp.readline()
-        if not line :
+        if not line:
             break
         start_time, end_time = float(line.split('\t')[0]), float(line.split('\t')[1])
         timestamp_data.append([start_time, end_time])
@@ -267,13 +325,14 @@ def process(path, presentation_id, similarity_type, similarity_method, outlining
     result['frameChanges'] = frame_changes
 
     paper_data_json = read_json(os.path.join(path, "paperData.json"))
+    toc_json = read_json(os.path.join(path, "TOC.json"))
     paper_data = read_txt(os.path.join(path, "paperData.txt"))
     section_data = read_txt(os.path.join(path, "sectionData.txt"))
     annotations = scan_annotations(os.path.join(path, "annotations"))
 
-    section_data, paper_data = add_sections_as_paragraphs(section_data, paper_data)
-
-    section_data, paper_data = fix_section_titles(section_data, paper_data, paper_data_json)
+    # section_data, paper_data = add_sections_as_paragraphs(section_data, paper_data)
+    # section_data, paper_data = fix_section_titles(section_data, paper_data, paper_data_json, toc_json)
+    section_data, paper_data = get_section_paper_data(paper_data_json, toc_json)
 
     store_processed_paper_data(path, section_data, paper_data)
 
@@ -327,9 +386,9 @@ def process(path, presentation_id, similarity_type, similarity_method, outlining
     coarse_paper_sentence_id = []
     paper_sentence_id = []
     for i, paragraph in enumerate(paper_data):
-        if (len(word_tokenize(paragraph)) < MIN_PARAGRAPH_LENGTH):
-            if paragraph.startswith(SECTION_TITLE_MARKER) is False:
-                continue
+        # if (len(word_tokenize(paragraph)) < MIN_PARAGRAPH_LENGTH):
+        #     if paragraph.startswith(SECTION_TITLE_MARKER) is False:
+        #         continue
         sentences = get_sentences(paragraph)
         for j in range(len(_paper_data), len(sentences) + len(_paper_data)):
             paper_sentence_id.append(i)
@@ -536,17 +595,13 @@ if __name__ == "__main__":
 
     #evaluate_all_models()
 
-    #output = evaluate_model('slideMeta/slideData/', similarity_type="classifier", outlining_approach="dp_simple", apply_thresholding=True)
-
-    #print(json.dumps(output, indent=4))
-
-    #output = process('slideMeta/slideData/90', 90, similarity_type="cosine", similarity_method="embedding", outlining_approach="strong", apply_thresholding=False, apply_heuristics=True)
-    #output = process('slideMeta/slideData/13', 13, similarity_type="strong", similarity_method="tf-idf", outlining_approach="strong", apply_thresholding=False, apply_heuristics=False)
-    #output = process('slideMeta/slideData/477', 477, similarity_type="cosine", similarity_method="tf-idf", outlining_approach="strong", apply_thresholding=False, apply_heuristics=False)
-    output = process('slideMeta/slideData/510', 510, similarity_type="cosine", similarity_method="tf-idf", outlining_approach="strong", apply_thresholding=False, apply_heuristics=False)
-    #output = process('slideMeta/slideData/477', 477, similarity_type="strong", similarity_method="tf-idf", outlining_approach="strong", apply_thresholding=False, apply_heuristics=False)
+    #output = process('slideMeta/slideData2/90', 90, similarity_type="cosine", similarity_method="embedding", outlining_approach="strong", apply_thresholding=False, apply_heuristics=True)
+    #output = process('slideMeta/slideData2/13', 13, similarity_type="strong", similarity_method="tf-idf", outlining_approach="strong", apply_thresholding=False, apply_heuristics=False)
+    #output = process('slideMeta/slideData2/477', 477, similarity_type="cosine", similarity_method="tf-idf", outlining_approach="strong", apply_thresholding=False, apply_heuristics=False)
+    output = process('slideMeta/slideData2/307', 307, similarity_type="cosine", similarity_method="tf-idf", outlining_approach="strong", apply_thresholding=False, apply_heuristics=False)
+    #output = process('slideMeta/slideData2/477', 477, similarity_type="strong", similarity_method="tf-idf", outlining_approach="strong", apply_thresholding=False, apply_heuristics=False)
     
-    #output = process('slideMeta/slideData/106', 106, similarity_type="cosine", similarity_method="tf-idf", outlining_approach="strong", apply_thresholding=False, apply_heuristics=False)
+    #output = process('slideMeta/slideData2/106', 106, similarity_type="cosine", similarity_method="tf-idf", outlining_approach="strong", apply_thresholding=False, apply_heuristics=False)
     
 
     print(json.dumps(output["outline"], indent=2))

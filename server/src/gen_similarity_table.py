@@ -84,7 +84,7 @@ def apply_thresholds_2darray(array_2d, top_k, val_threshold):
     return ret_array
 
 
-def get_top_sections(overall, section_data, script_sentence_range, paper_sentence_id, apply_thresholding, top_k):
+def get_top_sections(overall, paper_data, section_data, script_sentence_range, paper_sentence_id, apply_thresholding, top_k):
     top_k_per_paragraph = 1
 
     overall = numpy.array(overall)
@@ -109,8 +109,9 @@ def get_top_sections(overall, section_data, script_sentence_range, paper_sentenc
                 if j == script_sentence_start + script_sentence_range[i] - 1:
                     score_to_add *= 2
                 
-                # if pos == 0 or section_data[paper_sentence_id[pos - 1]] != section_data[paper_sentence_id[pos]]:
-                #     score_to_add *= 2
+                # Paper Section Title
+                if paper_data[pos].startswith(SECTION_TITLE_MARKER):
+                    score_to_add *= 2
 
                 all_scores_per_paragraph[paper_sentence_id[pos]].append(score_to_add)
                 #section_scores[paper_sentence_id[pos]] = max(score_to_add, section_scores[paper_sentence_id[pos]])
@@ -270,12 +271,7 @@ def get_cosine_similarity(
             for j in range(len(overall[i])):
                 overall[i][j] = max(overall[i][j], overall_t[i][j])
 
-    top_sections = get_top_sections(overall, section_data, script_sentence_range, paper_sentence_id, apply_thresholding, top_k)
-
-    for pos in range(len(paper_data)):
-        if pos == 0 or section_data[paper_sentence_id[pos - 1]] != section_data[paper_sentence_id[pos]]:
-            if paper_data[pos].startswith(SECTION_TITLE_MARKER) is False:
-                print("\tWRONG!!! ", paper_data[pos])
+    top_sections = get_top_sections(overall, paper_data, section_data, script_sentence_range, paper_sentence_id, apply_thresholding, top_k)
 
     # script_start = 0
 
@@ -397,7 +393,7 @@ def get_keywords_similarity(
             for j in range(len(overall[i])):
                 overall[i][j] = max(overall[i][j], overall_t[i][j])
 
-    top_sections = get_top_sections(overall, section_data, script_sentence_range, paper_sentence_id, apply_thresholding, top_k)
+    top_sections = get_top_sections(overall, paper_data, section_data, script_sentence_range, paper_sentence_id, apply_thresholding, top_k)
     
     return overall, top_sections, paper_keywords, script_keywords
 
@@ -516,6 +512,6 @@ def get_strong_similarity(
                 print(round(val, 2), end=",", file=f)
             print("", file=f)
             
-    top_sections = get_top_sections(overall, section_data, script_sentence_range, paper_sentence_id, False, 10)
+    top_sections = get_top_sections(overall, paper_data, section_data, script_sentence_range, paper_sentence_id, False, 10)
     
     return overall, top_sections, paper_keywords, script_keywords

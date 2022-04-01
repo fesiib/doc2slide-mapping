@@ -22,17 +22,20 @@ def fix_paper_data():
                 return False
         return True
 
+    all_ids = []
     no_section = []
     bad_section = []
 
-    for filename in os.listdir(SLIDE_DATA_PATH):
-        path = os.path.join(SLIDE_DATA_PATH, filename, "paperData.json")
+    for filename in os.listdir(SLIDE_DATA_2_PATH):
+        path = os.path.join(SLIDE_DATA_2_PATH, filename, "paperData.json")
 
         if os.path.isfile(path) is False:
             continue
 
-        if (int(filename) >= 100000):
-            continue
+        # if (int(filename) >= 100000):
+        #     continue
+
+        all_ids.append(int(filename))
 
         paper_data_json = {}
 
@@ -59,52 +62,39 @@ def fix_paper_data():
 
         ids = sorted(section_ids.keys())
         if len(ids) == 0:
-            no_section.append(filename)
+            no_section.append(int(filename))
             continue
         if len(ids) != ids[-1]:
-            bad_section.append((filename, section_ids))
-
-    def olTraversal(root):
-        nodes = [root]
-        while nodes:
-            node = nodes.pop()
-            print("[OUTLINE]- %s ==> %d" % (node.title, node.dest.page))
-            print()
-            next = node.next
-            if next:
-                nodes.append(next)
-            else:
-                print("[OUTLINE]<")
-            down = node.down
-            if down:
-                print("[OUTLINE]>")
-                nodes.append(down)
+            bad_section.append(int(filename))
 
     default_titles = ["ABSTRACT", "CCS CONCEPTS", "KEYWORDS"]
 
-    for id, ids in bad_section:
+    no_section = sorted(no_section)
+    bad_section = sorted(bad_section)
+    all_ids = sorted(all_ids)
+
+    # with open(os.path.join(SLIDE_DATA_2_PATH, "badPresentation.json"), "w") as f:
+    #     json.dump({
+    #         "noSectionsPresentationIds": no_section,
+    #         "badSectionsPresentationIds": bad_section,
+    #     }, fp=f)
+
+    for id in all_ids:
         print(id)
-        path = os.path.join(SLIDE_DATA_PATH, id, "paper.pdf")
+        path = os.path.join(SLIDE_DATA_2_PATH, str(id), "paper.pdf")
         with fitz.open(path) as pdf:
-            toc = pdf.get_toc(simple=False)
-
-            for lvl, title, page_num, dest in toc:
-                print(title, dest["to"])
-                xref = dest["xref"]
-                for key in pdf.xref_get_keys(xref):
-                    print(key, "=" , pdf.xref_get_key(xref, key))
-
-            contents = [[] for i in range(len(toc))]
-            toc_idx = 0
-            pages = pdf.pages()
-            for page in pages:
-                if toc_idx == len(toc):
-                    break
-
-                blocks = page.get_text("blocks")
-                for block in blocks:
-                    print(block)
-        break
+            toc = pdf.get_toc(simple=True)
+            struct_toc = []
+            for lvl, title, page in toc:
+                struct_toc.append({
+                    "level": lvl,
+                    "title": title,
+                    "page": page,
+                })
+            with open(os.path.join(SLIDE_DATA_2_PATH, str(id), "TOC.json"), "w") as f:
+                json.dump({
+                    "toc": struct_toc,
+                }, fp=f, indent=2)
 
 def paste_images():
     for filename in os.listdir(SLIDE_IMAGES_PATH):
@@ -150,7 +140,7 @@ def paste_slide_data_2():
 
 
 def main():
-    paste_slide_data_2()
+    fix_paper_data()
 
 if __name__ == "__main__":
     main()
