@@ -109,8 +109,8 @@ def get_top_sections(overall, section_data, script_sentence_range, paper_sentenc
                 if j == script_sentence_start + script_sentence_range[i] - 1:
                     score_to_add *= 2
                 
-                if pos == 0 or section_data[paper_sentence_id[pos - 1]] != section_data[paper_sentence_id[pos]]:
-                    score_to_add *= 2
+                # if pos == 0 or section_data[paper_sentence_id[pos - 1]] != section_data[paper_sentence_id[pos]]:
+                #     score_to_add *= 2
 
                 all_scores_per_paragraph[paper_sentence_id[pos]].append(score_to_add)
                 #section_scores[paper_sentence_id[pos]] = max(score_to_add, section_scores[paper_sentence_id[pos]])

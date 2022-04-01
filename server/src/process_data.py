@@ -80,8 +80,8 @@ def add_sections_as_paragraphs(section_data, paper_data):
     for i in range(0, len(section_data)):
         if i == 0 or section_data[i] != section_data[i - 1]:
             ret_section_data.append(section_data[i])
-            ret_paper_data.append(SECTION_TITLE_MARKER + section_data[i] + ".")
-
+            #ret_paper_data.append(SECTION_TITLE_MARKER + section_data[i] + ".")
+            ret_paper_data.append(section_data[i] + ".")
         ret_section_data.append(section_data[i])
         ret_paper_data.append(paper_data[i])
     return ret_section_data, ret_paper_data
@@ -538,7 +538,7 @@ if __name__ == "__main__":
     #output = process('slideMeta/slideData/90', 90, similarity_type="cosine", similarity_method="embedding", outlining_approach="strong", apply_thresholding=False, apply_heuristics=True)
     #output = process('slideMeta/slideData/13', 13, similarity_type="strong", similarity_method="tf-idf", outlining_approach="strong", apply_thresholding=False, apply_heuristics=False)
     #output = process('slideMeta/slideData/477', 477, similarity_type="cosine", similarity_method="tf-idf", outlining_approach="strong", apply_thresholding=False, apply_heuristics=False)
-    output = process('slideMeta/slideData/689', 689, similarity_type="cosine", similarity_method="tf-idf", outlining_approach="strong", apply_thresholding=False, apply_heuristics=False)
+    output = process('slideMeta/slideData/510', 510, similarity_type="cosine", similarity_method="tf-idf", outlining_approach="strong", apply_thresholding=False, apply_heuristics=False)
     #output = process('slideMeta/slideData/477', 477, similarity_type="strong", similarity_method="tf-idf", outlining_approach="strong", apply_thresholding=False, apply_heuristics=False)
     
     #output = process('slideMeta/slideData/106', 106, similarity_type="cosine", similarity_method="tf-idf", outlining_approach="strong", apply_thresholding=False, apply_heuristics=False)

@@ -55,8 +55,12 @@ function AllOutlines(props) {
     const [badPresentationIds, setBadPresentationIds] = useState([]);
 
     const isBadPresentation = (groundTruth) => {
-        if (groundTruth.hasOwnProperty("separateSlidesAccuracy")) {
-            return groundTruth.separateSlidesAccuracy[2] < 0.4;
+        // if (groundTruth.hasOwnProperty("separateSlidesAccuracy")) {
+        //     return groundTruth.separateSlidesAccuracy[2] < 0.4;
+        // }
+
+        if (groundTruth.hasOwnProperty("overallSlidesAccuracy")) {
+            return groundTruth.overallSlidesAccuracy < 0.5;
         }
         return false;
     }

@@ -351,11 +351,16 @@ def _evaluate_mapping_rank(gt_outline, top_sections):
         # if gt_score > gen_score:
         #     error += (gt_score - gen_score)
         if (len(ranked_slide_top_sections) - 1) > 0:
+            # cur_error = gt_rank / (len(ranked_slide_top_sections) - 1)
+            # cur_error = int(gt_rank != 0)
+            actual_score = ((len(ranked_slide_top_sections) - 1) - gt_rank) / (len(ranked_slide_top_sections) - 1) * max(0, 1 - gt_rank*0.2)
+            cur_error = 1 - actual_score
+            
             total_score += 1
-            error += gt_rank / (len(ranked_slide_top_sections) - 1)
+            error += cur_error
             pos = floor(slide_idx / len(top_sections) * 3)
             total_separate[pos] += 1
-            error_separate[pos] += gt_rank / (len(ranked_slide_top_sections) - 1)
+            error_separate[pos] += cur_error
 
     if total_score == 0:
         return 0, [0, 0, 0]
