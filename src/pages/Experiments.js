@@ -198,7 +198,7 @@ function Experiments() {
                     <code> "excludedPresentationIds": {
                         Object.keys(presentationExcluded).map((val, idx) => {
                             if (presentationExcluded[val]) {
-                                return idx + ", ";
+                                return val + ", ";
                             }
                             return "";
                         })

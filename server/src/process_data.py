@@ -155,6 +155,19 @@ def get_section_paper_data(paper_data_json, toc_json):
     #         ret_paper_data.append(SECTION_TITLE_MARKER + toc[i]["title"])
     return ret_section_data, ret_paper_data
 
+def get_section_paper_data_reader(reader_data_json):
+    ret_section_data = []
+    ret_paper_data = []
+
+    for (s_data, p_data) in zip(reader_data_json["sectionData"], reader_data_json["paperData"]):
+        num = s_data.strip().split(" ")[0]
+        if num[0].isnumeric() is False:
+            continue
+        ret_section_data.append(s_data)
+        ret_paper_data.append(p_data)
+
+    return ret_section_data, ret_paper_data
+
 def fix_section_titles(section_data, paper_data, paper_data_json):
     rev_mapping = {}
 
@@ -245,6 +258,7 @@ def expand_top_sections(top_sections, shrunk_slide_info):
 def process(path, presentation_id, similarity_type, similarity_method, outlining_approach, apply_thresholding, apply_heuristics):
     parent_path = '/'.join(path.split('/')[:-1])
     freq_words_per_section = read_json(os.path.join(parent_path, "freqWordsPerSection.json"))
+    bad_paper_data_presentation_ids = read_json(os.path.join(parent_path, "badPresentation.json"))
     
     frame_changes = []
     if os.path.join(path, "frameChanges.json"):
@@ -335,23 +349,29 @@ def process(path, presentation_id, similarity_type, similarity_method, outlining
     result['groundTruthOutline'] = gt_data['groundTruthSegments']
     result['frameChanges'] = frame_changes
 
+    annotations = scan_annotations(os.path.join(path, "annotations"))
+    result['annotations'] = annotations
+    
     paper_data_json = read_json(os.path.join(path, "paperData.json"))
     toc_json = read_json(os.path.join(path, "TOC.json"))
-    paper_data = read_txt(os.path.join(path, "paperData.txt"))
-    section_data = read_txt(os.path.join(path, "sectionData.txt"))
-    annotations = scan_annotations(os.path.join(path, "annotations"))
-
-    # section_data, paper_data = add_sections_as_paragraphs(section_data, paper_data)
-    # section_data, paper_data = fix_section_titles(section_data, paper_data, paper_data_json, toc_json)
     section_data, paper_data = get_section_paper_data(paper_data_json, toc_json)
 
-    store_processed_paper_data(path, section_data, paper_data)
+    if presentation_id in bad_paper_data_presentation_ids["noPaperData"]\
+        or presentation_id in bad_paper_data_presentation_ids["badPaperData"]\
+        or presentation_id in bad_paper_data_presentation_ids["noSectionsPresentationIds"]\
+    :
+        reader_data = read_json(os.path.join(path, "readerData.json"))
+        section_data, paper_data = get_section_paper_data_reader(reader_data)
 
-    slides_segmentation = get_slides_segmentation(path, slide_info)
-
-    #result['title'] = "tempTitle"
-    result['annotations'] = annotations
     result['sectionTitles'] = sort_section_data(section_data)
+
+    # paper_data = read_txt(os.path.join(path, "paperData.txt"))
+    # section_data = read_txt(os.path.join(path, "sectionData.txt"))
+    # section_data, paper_data = add_sections_as_paragraphs(section_data, paper_data)
+    # section_data, paper_data = fix_section_titles(section_data, paper_data, paper_data_json, toc_json)
+    store_processed_paper_data(path, section_data, paper_data)
+    
+    slides_segmentation = get_slides_segmentation(path, slide_info)
     result['slidesSegmentation'] = slides_segmentation
 
     transitions = []
@@ -611,7 +631,7 @@ if __name__ == "__main__":
     #output = process('slideMeta/slideData2/90', 90, similarity_type="cosine", similarity_method="embedding", outlining_approach="strong", apply_thresholding=False, apply_heuristics=True)
     #output = process('slideMeta/slideData2/13', 13, similarity_type="strong", similarity_method="tf-idf", outlining_approach="strong", apply_thresholding=False, apply_heuristics=False)
     #output = process('slideMeta/slideData2/477', 477, similarity_type="cosine", similarity_method="tf-idf", outlining_approach="strong", apply_thresholding=False, apply_heuristics=False)
-    output = process('slideMeta/slideData2/46', 46, similarity_type="cosine", similarity_method="tf-idf", outlining_approach="strong_rev", apply_thresholding=False, apply_heuristics=False)
+    output = process('slideMeta/slideData/177', 177, similarity_type="cosine", similarity_method="tf-idf", outlining_approach="strong", apply_thresholding=False, apply_heuristics=False)
     #output = process('slideMeta/slideData2/477', 477, similarity_type="strong", similarity_method="tf-idf", outlining_approach="strong", apply_thresholding=False, apply_heuristics=False)
     
     #output = process('slideMeta/slideData2/106', 106, similarity_type="cosine", similarity_method="tf-idf", outlining_approach="strong", apply_thresholding=False, apply_heuristics=False)
