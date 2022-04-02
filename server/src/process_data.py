@@ -118,7 +118,6 @@ def get_section_paper_data(paper_data_json, toc_json):
                 if toc_idx >= len(toc):
                     continue
                 main_title = toc[toc_idx]["title"]
-                print(main_title)
                 if  main_title[0] not in digits or is_section_skipped(main_title) or "paragraphs" not in section:
                     continue
                 all_text = title

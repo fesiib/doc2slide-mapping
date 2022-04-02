@@ -5,7 +5,7 @@ import LineChart from '../components/LineChart';
 import SlideThumbnails from '../components/SlideThumbnails';
 import { alterState } from '../reducers/experimentsState';
 
-const INTERVAL = 30;
+const INTERVAL = 50;
 const SHORT_PRESENTATION_IDS_CNT = 745;
 const LONG_PRESENTATION_IDS_CNT = 172;
 

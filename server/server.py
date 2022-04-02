@@ -25,7 +25,10 @@ ZIP_SLIDE_DATA_PATH = "./slideMeta/slideData.zip"
 USE_SAVED = True
 
 app = Flask(__name__)
-CORS(app)
+CORS(
+    app,
+    origins = ["http://server.hyungyu.com:9383", "http://localhost:3000"]
+)
 
 def read_csv(path):
     lines = []
@@ -260,6 +263,7 @@ def bulk_data():
 
     for presentation_id in presentation_ids:
         if presentation_id in all_presentation_ids:
+            print("\tCURRENTLY: ", presentation_id)
             data = __presentation_data(presentation_id)
             bulk_data.append({
                 "presentationId": presentation_id,
