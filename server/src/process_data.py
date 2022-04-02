@@ -611,7 +611,7 @@ if __name__ == "__main__":
     #output = process('slideMeta/slideData2/90', 90, similarity_type="cosine", similarity_method="embedding", outlining_approach="strong", apply_thresholding=False, apply_heuristics=True)
     #output = process('slideMeta/slideData2/13', 13, similarity_type="strong", similarity_method="tf-idf", outlining_approach="strong", apply_thresholding=False, apply_heuristics=False)
     #output = process('slideMeta/slideData2/477', 477, similarity_type="cosine", similarity_method="tf-idf", outlining_approach="strong", apply_thresholding=False, apply_heuristics=False)
-    output = process('slideMeta/slideData/1', 1, similarity_type="cosine", similarity_method="tf-idf", outlining_approach="strong", apply_thresholding=False, apply_heuristics=False)
+    output = process('slideMeta/slideData2/46', 46, similarity_type="cosine", similarity_method="tf-idf", outlining_approach="strong_rev", apply_thresholding=False, apply_heuristics=False)
     #output = process('slideMeta/slideData2/477', 477, similarity_type="strong", similarity_method="tf-idf", outlining_approach="strong", apply_thresholding=False, apply_heuristics=False)
     
     #output = process('slideMeta/slideData2/106', 106, similarity_type="cosine", similarity_method="tf-idf", outlining_approach="strong", apply_thresholding=False, apply_heuristics=False)
